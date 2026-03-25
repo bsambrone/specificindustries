@@ -38,16 +38,19 @@ specificindustries/
 │   │   └── commerce/                 # Future: cart, buy button
 │   ├── sites/
 │   │   ├── pigmilk/
+│   │   │   ├── index.ts              # Barrel: exports config + pages map
 │   │   │   ├── config.ts             # Theme, metadata, nav, feature flags
 │   │   │   └── pages/
 │   │   │       ├── home.tsx
 │   │   │       ├── about.tsx
 │   │   │       └── products.tsx
 │   │   ├── solarpoweredflashlights/
+│   │   │   ├── index.ts
 │   │   │   ├── config.ts
 │   │   │   └── pages/
 │   │   │       └── home.tsx
 │   │   ├── apex/
+│   │   │   ├── index.ts
 │   │   │   ├── config.ts             # Landing page for specificindustries.com
 │   │   │   └── pages/
 │   │   │       └── home.tsx
@@ -70,27 +73,47 @@ specificindustries/
 
 ### Middleware (src/middleware.ts)
 
-Runs on every request. Responsibilities:
+Responsibilities:
 
 1. Parse the `Host` header to extract the subdomain
-2. If no subdomain (apex domain), set `x-subdomain` header to `"apex"`
-3. If the subdomain is registered in the site registry, set `x-subdomain` header to the subdomain string
-4. If the subdomain is NOT registered, redirect (302) to `https://specificindustries.com`
-5. For local development, also check for a `?site=` query parameter as a subdomain override (e.g., `localhost:3000/about?site=pigmilk`)
+2. If the subdomain is `"www"`, redirect (302) to `https://specificindustries.com` (same path)
+3. If no subdomain (apex domain), set `x-subdomain` request header to `"apex"`
+4. If the subdomain is registered in the site registry, set `x-subdomain` request header to the subdomain string
+5. If the subdomain is NOT registered, redirect (302) to `https://specificindustries.com`
+6. Check for a `?site=` query parameter as a subdomain override (e.g., `localhost:3000/about?site=pigmilk`). This is used for local development and Vercel preview deployments. The `?site=` param is only honored when the hostname is NOT `specificindustries.com` or a subdomain of it (i.e., it is ignored in production).
+
+The `x-subdomain` header must be set on the **request** (not the response) so that server components can read it via `headers()`:
+
+```ts
+const requestHeaders = new Headers(request.headers)
+requestHeaders.set("x-subdomain", subdomain)
+return NextResponse.next({ request: { headers: requestHeaders } })
+```
+
+Middleware matcher excludes static assets:
+
+```ts
+export const config = {
+  matcher: ["/((?!_next/static|_next/image|favicon.ico|sites/).*)"],
+}
+```
 
 ### Catch-All Route (src/app/[[...slug]]/page.tsx)
 
-Reads the `x-subdomain` header via `next/headers`. Looks up the site in the registry. Resolves the URL path slug to the matching page component from that site's `pages/` folder. If the path doesn't match any page the site defines, returns a 404.
+Reads the `x-subdomain` header via `await headers()` (async in Next.js 15). Looks up the site in the registry. Resolves the URL path slug to the matching page component from that site's `pages/` map. If the path doesn't match any page the site defines, calls `notFound()`.
 
-The double-bracket `[[...slug]]` syntax makes the slug optional, so the root path (`/`) also routes through this handler, resolving to the site's `home.tsx`.
+The double-bracket `[[...slug]]` syntax makes the slug optional, so the root path (`/`) also routes through this handler, resolving to the site's `home` page.
+
+**Note on rendering mode:** Because this route reads `headers()`, all pages are dynamically rendered (no static generation). This is acceptable for the expected traffic level. If performance becomes a concern, caching can be added at the Vercel edge layer.
 
 ### Root Layout (src/app/layout.tsx)
 
-Reads the `x-subdomain` header, loads the site config, and:
+Reads the `x-subdomain` header via `await headers()`, loads the site config, and:
 
-- Sets `<html>` metadata (title, description, OG tags) from the site config
-- Injects CSS custom properties for theme colors and fonts
+- Injects CSS custom properties for theme colors and fonts on a wrapping `<div>` (or `<body>` style attribute)
 - Wraps page content in shared layout components (Header, Footer) configured with the site's nav links and branding
+
+**Metadata** is handled by `generateMetadata()` in the catch-all page route (not the layout), since it needs both the subdomain and the current path to produce page-specific titles. The site config provides site-level defaults (title, description, ogImage), and individual pages can export a `metadata` object to override them (e.g., the about page can set its own title).
 
 ### Site Registry (src/sites/registry.ts)
 
@@ -109,6 +132,8 @@ export const siteRegistry = {
 
 export type SubdomainKey = keyof typeof siteRegistry
 ```
+
+Each site folder has an `index.ts` barrel that exports both `config` and `pages`.
 
 Adding a new site means adding its folder and importing it here.
 
@@ -164,6 +189,8 @@ Themes are applied via CSS custom properties injected by the root layout:
 
 Tailwind is configured to reference these CSS variables, so shared components automatically adapt to whatever site they're rendered within. Theme presets (corporate, playful, minimal) provide sensible defaults that sites can override with custom colors/fonts.
 
+**Font loading:** `next/font` requires fonts to be declared at module scope (not dynamically at runtime). All fonts used across all sites are declared in a shared fonts module (`src/themes/fonts.ts`). Each site's config references a font key from this module rather than a raw string. When new fonts are needed, they are added to the shared fonts module.
+
 ## Shared Components
 
 The `src/components/` library provides theme-aware building blocks:
@@ -176,14 +203,36 @@ All components consume theme via CSS variables. Sites pick and compose whichever
 
 ## Site Pages
 
-Each site defines its pages as React components in its `pages/` folder. Pages are mapped by filename convention:
+Each site defines its pages as React components in its `pages/` folder. The site's `index.ts` barrel exports a `pages` map -- a `Record<string, ComponentType>` keyed by route slug:
 
-- `home.tsx` → `/`
-- `about.tsx` → `/about`
-- `products.tsx` → `/products`
-- `faq.tsx` → `/faq`
+```ts
+// src/sites/pigmilk/index.ts
+import { config } from "./config"
+import Home from "./pages/home"
+import About from "./pages/about"
+import Products from "./pages/products"
 
-The catch-all route uses this convention to resolve paths. Each page is a standard React component that composes shared UI components with site-specific content:
+export { config }
+
+export const pages: Record<string, React.ComponentType> = {
+  "": Home,           // "/" (root)
+  "about": About,     // "/about"
+  "products": Products // "/products"
+}
+```
+
+The catch-all route joins the slug segments (e.g., `["about"]` → `"about"`, `undefined` → `""`) and looks up the component in this map. If the key is not found, it calls `notFound()`.
+
+Pages can optionally export a `metadata` object for per-page title/description overrides:
+
+```ts
+export const metadata = {
+  title: "About Pig Milk Co.",
+  description: "Our story of milking pigs.",
+}
+```
+
+Each page is a standard React component that composes shared UI components with site-specific content:
 
 ```tsx
 // src/sites/pigmilk/pages/home.tsx
@@ -235,6 +284,8 @@ Since real subdomains don't work on `localhost`, the middleware supports a `?sit
 
 This avoids needing `/etc/hosts` modifications or local DNS tools.
 
+**Vercel preview deployments** (e.g., `project-git-branch.vercel.app`) don't have real subdomains. Use the `?site=` param to test subdomain sites on preview URLs.
+
 ## Vercel & DNS Setup
 
 Documented in `VERCEL_SETUP.md` at the project root. Covers:
@@ -254,6 +305,18 @@ Documented in `VERCEL_SETUP.md` at the project root. Covers:
 5. Deploy -- the wildcard domain handles the new subdomain automatically
 
 No Vercel configuration changes. No DNS changes. No new projects.
+
+## Static Assets
+
+Files in `public/sites/<subdomain>/` are served from the root path regardless of which subdomain is being visited. For example, `public/sites/pigmilk/logo.png` is accessible at `/sites/pigmilk/logo.png` on any subdomain. Site pages should reference their assets using absolute paths (e.g., `/sites/pigmilk/logo.png`). The site config can include a `basePath` helper (e.g., `/sites/pigmilk`) for convenience.
+
+Favicons per site: each site can include a `favicon.ico` in its `public/sites/<subdomain>/` folder. The root layout dynamically sets the favicon link based on the active site's config.
+
+## Vercel Hobby Plan Considerations
+
+- Serverless function execution timeout: 10 seconds (sufficient for this use case)
+- Bandwidth: 100GB/month
+- Hobby plan is intended for non-commercial use. If e-commerce is enabled on any site (real transactions), the project should move to Vercel's Pro plan.
 
 ## Future: E-Commerce
 
