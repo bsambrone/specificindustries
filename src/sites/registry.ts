@@ -1,10 +1,12 @@
 import type { SiteModule } from "@/themes"
+import { config as apexConfig, pages as apexPages } from "./apex"
 
-// Sites will be added in later tasks. Middleware uses this to validate subdomains.
-export const siteRegistry: Record<string, SiteModule> = {}
+export const siteRegistry: Record<string, SiteModule> = {
+  apex: { config: apexConfig, pages: apexPages },
+}
 
 export type SubdomainKey = keyof typeof siteRegistry
 
 export function isValidSubdomain(subdomain: string): boolean {
-  return subdomain === "apex" || subdomain in siteRegistry
+  return subdomain in siteRegistry
 }
