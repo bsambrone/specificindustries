@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: initial;
+  --color-secondary: initial;
+  --color-accent: initial;
+  --color-background: initial;
+  --color-foreground: initial;
+  --font-heading: initial;
+  --font-body: initial;
+}
