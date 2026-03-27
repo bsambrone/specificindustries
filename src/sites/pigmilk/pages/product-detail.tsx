@@ -23,12 +23,16 @@ export default function ProductDetail({ slug }: { slug: string }) {
             <h1 className="text-4xl font-heading font-bold text-foreground mb-2">{product.name}</h1>
             <p className="text-lg text-foreground/60 mb-4">{product.tagline}</p>
             <p className="text-3xl font-bold text-primary mb-6">{product.priceLabel}</p>
+            <div className="mb-8">
+              <AddToCartButton
+                slug={product.slug}
+                productName={product.name}
+                className="px-8 py-4 bg-primary text-white rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity w-full sm:w-auto"
+              />
+            </div>
             {product.description.map((para, i) => (
               <p key={i} className="text-foreground/70 mb-4 leading-relaxed">{para}</p>
             ))}
-            <div className="mt-6">
-              <AddToCartButton slug={product.slug} productName={product.name} />
-            </div>
           </div>
         </div>
       </section>

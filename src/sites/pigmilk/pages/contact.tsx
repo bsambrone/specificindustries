@@ -81,7 +81,15 @@ export default function PigMilkContact() {
               <form
                 onSubmit={(e) => {
                   e.preventDefault()
-                  setSubmitted(true)
+                  const confirmed = window.confirm(
+                    "Are you sure you want to contact Pig Milk Co.?\n\n" +
+                    "By clicking OK, you acknowledge that:\n" +
+                    "• A pig may or may not read your message\n" +
+                    "• Response times are measured in 'pig hours' (1 pig hour = 3 human weeks)\n" +
+                    "• Earl may cry if you're mean\n\n" +
+                    "Proceed?"
+                  )
+                  if (confirmed) setSubmitted(true)
                 }}
                 className="space-y-6"
               >

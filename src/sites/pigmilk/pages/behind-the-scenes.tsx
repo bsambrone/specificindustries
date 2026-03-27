@@ -25,7 +25,7 @@ export default function PigMilkBehindTheScenes() {
       </section>
 
       <ImageTextSection
-        image="/sites/pigmilk/bts-approach.png"
+        image="/sites/pigmilk/bts-selection.png"
         title="Selection"
         description="Not every pig is ready. We look for confidence, a steady gaze, and a willingness to participate. Most pigs do not have these qualities."
         imagePosition="left"
