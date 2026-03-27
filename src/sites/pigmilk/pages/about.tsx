@@ -57,6 +57,7 @@ export default function PigMilkAbout() {
       {/* Origin Story */}
       <ImageTextSection
         image="/sites/pigmilk/timeline-origin.png"
+        imageClassName="object-cover object-top"
         title="How It All Started"
         description={
           "In the summer of 2019, a bleary-eyed farmer named Earl Hogsworth stumbled into the wrong stall at 4 AM and milked a pig. " +

@@ -23,7 +23,7 @@ export function Header({ config }: { config: SiteConfig }) {
             <Link
               key={item.path}
               href={siteHref(item.path)}
-              className="text-foreground/70 hover:text-foreground transition-colors"
+              className="text-foreground/70 hover:text-foreground hover:bg-primary/10 px-3 py-1.5 rounded-md transition-all"
             >
               {item.label}
             </Link>
@@ -59,7 +59,7 @@ export function Header({ config }: { config: SiteConfig }) {
                 key={item.path}
                 href={siteHref(item.path)}
                 onClick={() => setMobileOpen(false)}
-                className="text-foreground/70 hover:text-foreground transition-colors"
+                className="text-foreground/70 hover:text-foreground hover:bg-primary/10 px-3 py-1.5 rounded-md transition-all"
               >
                 {item.label}
               </Link>

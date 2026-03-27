@@ -10,6 +10,8 @@ import PigMilkVolunteer, { metadata as volunteerMetadata } from "./pages/volunte
 import PigMilkContact, { metadata as contactMetadata } from "./pages/contact"
 import PigMilkCart from "./pages/cart"
 import PigMilkCheckout from "./pages/checkout"
+import PigMilkPrivacy, { metadata as privacyMetadata } from "./pages/privacy"
+import PigMilkTerms, { metadata as termsMetadata } from "./pages/terms"
 
 export { config }
 
@@ -22,6 +24,8 @@ export const pages: Record<string, PageEntry> = {
   "contact": { component: PigMilkContact, metadata: contactMetadata },
   "cart": PigMilkCart,
   "checkout": PigMilkCheckout,
+  "privacy": { component: PigMilkPrivacy, metadata: privacyMetadata },
+  "terms": { component: PigMilkTerms, metadata: termsMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {

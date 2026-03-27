@@ -1,12 +1,13 @@
+"use client"
+
 import Image from "next/image"
-import { notFound } from "next/navigation"
 import { getProductBySlug, getRelatedProducts } from "@/sites/pigmilk/data/products"
 import { ProductCard } from "@/components/ui/product-card"
 import { AddToCartButton } from "@/components/commerce/add-to-cart-button"
 
 export default function ProductDetail({ slug }: { slug: string }) {
   const product = getProductBySlug(slug)
-  if (!product) notFound()
+  if (!product) return null // Slug already validated by catch-all route
 
   const related = getRelatedProducts(slug, 3)
 

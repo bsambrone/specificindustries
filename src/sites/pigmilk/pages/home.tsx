@@ -42,8 +42,8 @@ export default function PigMilkHome() {
       <section className="py-12 px-4 bg-secondary/10">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-foreground/40 text-sm uppercase tracking-widest mb-6">As featured in publications we made up</p>
-          <div className="relative h-12">
-            <Image src="/sites/pigmilk/press-logos.png" alt="Press logos" fill className="object-contain opacity-40" />
+          <div className="relative h-24">
+            <Image src="/sites/pigmilk/press-logos.png" alt="Press logos" fill className="object-contain opacity-60" />
           </div>
         </div>
       </section>

@@ -65,9 +65,16 @@ export default function PigMilkContact() {
             </h2>
 
             {submitted ? (
-              <div className="text-center py-12">
-                <p className="text-xl text-foreground/70">
-                  Message sent! Our team will respond within 3-5 business pigs.
+              <div className="text-center py-12 space-y-4">
+                <p className="text-4xl">🐷</p>
+                <p className="text-xl font-heading font-bold text-primary">
+                  Message sent!
+                </p>
+                <p className="text-foreground/70">
+                  Our team will respond within 3-5 business pigs.
+                </p>
+                <p className="text-foreground/50 text-sm">
+                  Your message has been printed out and placed in the barn. A pig is sitting on it. We&apos;re not sure if that counts as &quot;processing&quot; but it&apos;s the best we can do.
                 </p>
               </div>
             ) : (
@@ -138,9 +145,9 @@ export default function PigMilkContact() {
 
                 <button
                   type="submit"
-                  className="w-full px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                  className="w-full px-8 py-4 bg-primary text-white rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity"
                 >
-                  Submit
+                  Send Message
                 </button>
               </form>
             )}
@@ -148,12 +155,12 @@ export default function PigMilkContact() {
 
           {/* Right: Contact Details + Image */}
           <div className="space-y-8">
-            <div className="relative w-full h-[250px] rounded-lg overflow-hidden">
+            <div className="relative w-full h-[300px] rounded-lg overflow-hidden">
               <Image
                 src="/sites/pigmilk/contact-office.png"
                 alt="Pig Milk Co. office"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
 

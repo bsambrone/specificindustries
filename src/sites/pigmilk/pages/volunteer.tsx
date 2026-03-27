@@ -76,12 +76,12 @@ export default function PigMilkVolunteer() {
       </section>
 
       {/* Volunteer Hero Image */}
-      <section className="relative w-full h-[400px]">
+      <section className="relative w-full h-[500px]">
         <Image
           src="/sites/pigmilk/volunteer-hero.png"
           alt="Volunteers working with pigs"
           fill
-          className="object-cover"
+          className="object-cover object-top"
         />
       </section>
 
@@ -107,12 +107,12 @@ export default function PigMilkVolunteer() {
       <FeatureSection title="Perks & Benefits" features={perks} />
 
       {/* Culture Image */}
-      <section className="relative w-full h-[400px]">
+      <section className="relative w-full h-[500px]">
         <Image
           src="/sites/pigmilk/volunteer-culture.png"
           alt="Pig Milk Co. team culture"
           fill
-          className="object-cover"
+          className="object-cover object-top"
         />
       </section>
 
@@ -206,8 +206,13 @@ export default function PigMilkVolunteer() {
                   step={1}
                   value={pigFeeling}
                   onChange={(e) => setPigFeeling(Number(e.target.value))}
-                  className="w-full"
+                  className="w-full accent-primary"
                 />
+                <div className="flex justify-between text-xs text-foreground/50 mt-1">
+                  <span>8</span>
+                  <span>9</span>
+                  <span>10</span>
+                </div>
               </div>
 
               <button
