@@ -6,11 +6,12 @@ interface ImageTextSectionProps {
   description: string
   imagePosition?: "left" | "right"
   imageClassName?: string
+  imageAspect?: string
 }
 
-export function ImageTextSection({ image, title, description, imagePosition = "left", imageClassName }: ImageTextSectionProps) {
+export function ImageTextSection({ image, title, description, imagePosition = "left", imageClassName, imageAspect }: ImageTextSectionProps) {
   const imageBlock = (
-    <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-secondary/10">
+    <div className={`relative ${imageAspect || "aspect-[4/3]"} rounded-lg overflow-hidden bg-secondary/10`}>
       <Image src={image} alt={title} fill className={imageClassName || "object-cover"} />
     </div>
   )
