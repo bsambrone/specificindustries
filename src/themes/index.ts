@@ -52,9 +52,16 @@ export interface PageWithMetadata {
 // A page entry is either a bare component or a component with metadata
 export type PageEntry = React.ComponentType | PageWithMetadata
 
+export interface DynamicRoute {
+  component: React.ComponentType<{ slug: string }>
+  getMetadata?: (slug: string) => PageMetadata | undefined
+  isValidSlug?: (slug: string) => boolean
+}
+
 export interface SiteModule {
   config: SiteConfig
   pages: Record<string, PageEntry>
+  dynamicRoutes?: Record<string, DynamicRoute>
 }
 
 // Helper to generate CSS custom properties from a site config
@@ -65,6 +72,7 @@ export function themeToCSS(theme: SiteTheme): Record<string, string> {
     "--color-accent": theme.colors.accent,
     "--color-background": theme.colors.background,
     "--color-text": theme.colors.text,
+    "--color-foreground": theme.colors.text,
     "--font-heading": theme.fonts.heading,
     "--font-body": theme.fonts.body,
   }

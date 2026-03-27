@@ -24,6 +24,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? (pageEntry as PageWithMetadata).metadata
     : undefined
 
+  // Check dynamic routes for metadata
+  if (!pageMetadata && !pageEntry) {
+    const segments = path.split("/")
+    if (segments.length === 2 && site.dynamicRoutes?.[segments[0]]) {
+      const route = site.dynamicRoutes[segments[0]]
+      const dynamicMeta = route.getMetadata?.(segments[1])
+      if (dynamicMeta) {
+        return {
+          title: dynamicMeta.title || site.config.metadata.title,
+          description: dynamicMeta.description || site.config.metadata.description,
+          openGraph: {
+            title: dynamicMeta.title || site.config.metadata.title,
+            description: dynamicMeta.description || site.config.metadata.description,
+            images: site.config.metadata.ogImage ? [site.config.metadata.ogImage] : [],
+          },
+        }
+      }
+    }
+  }
+
   return {
     title: pageMetadata?.title || site.config.metadata.title,
     description: pageMetadata?.description || site.config.metadata.description,
@@ -49,6 +69,17 @@ export default async function CatchAllPage({ params }: PageProps) {
   const pageEntry = site.pages[path]
 
   if (!pageEntry) {
+    // Check dynamic routes (e.g., /products/classic-pig-milk)
+    const segments = path.split("/")
+    if (segments.length === 2 && site.dynamicRoutes?.[segments[0]]) {
+      const route = site.dynamicRoutes[segments[0]]
+      const dynamicSlug = segments[1]
+      if (route.isValidSlug && !route.isValidSlug(dynamicSlug)) {
+        notFound()
+      }
+      const DynamicComponent = route.component
+      return <DynamicComponent slug={dynamicSlug} />
+    }
     notFound()
   }
 
