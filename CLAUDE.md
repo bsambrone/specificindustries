@@ -9,6 +9,8 @@ A single Next.js 15 app serving multiple joke websites on subdomains of specific
 - **Catch-all route** (`src/app/[[...slug]]/page.tsx`) resolves subdomain + URL path to the correct site page
 - **Each site** is self-contained under `src/sites/<subdomain>/` with its own config, pages, and theme
 - **All pages are dynamically rendered** (no static generation) because the catch-all reads `headers()`
+- **Cart system** — `CartProvider` (React Context + localStorage) wraps commerce-enabled sites in `layout.tsx`. Cart state, toast notifications, and item count are shared between Header and page components.
+- **Dynamic routes** — `SiteModule` supports `dynamicRoutes` for pattern-based sub-routes (e.g., `/products/[slug]`). Each dynamic route defines a component, metadata getter, and slug validator.
 
 ## Project Structure
 
@@ -18,10 +20,12 @@ src/
 │   └── [[...slug]]/        # Catch-all route — the ONLY page route
 ├── components/             # Shared UI components (theme-aware via CSS variables)
 │   ├── layout/             # Header, Footer
-│   └── ui/                 # Hero, FeatureSection, TestimonialGrid, CTABanner, etc.
+│   └── ui/                 # Hero, FeatureSection, ProductCard, Timeline, TeamMember, PigProfile, FaqAccordion, etc.
 ├── sites/                  # One folder per subdomain site
 │   ├── apex/               # Landing page for specificindustries.com
-│   ├── pigmilk/            # Example multi-page site
+│   ├── pigmilk/
+│   │   ├── data/           # Product catalog and data files
+│   │   └── pages/          # Site page components
 │   └── registry.ts         # Maps subdomain strings → site modules
 └── themes/                 # Theme types, presets, and font declarations
     ├── index.ts             # Types: SiteConfig, PageEntry, SiteModule, themeToCSS()
@@ -62,6 +66,39 @@ export const pages: Record<string, PageEntry> = {
 - **Compose from shared components.** Site pages should use components from `src/components/ui/` and `src/components/layout/`. Build new shared components when a pattern will be reused across sites.
 - **No new App Router routes.** All page routing goes through `src/app/[[...slug]]/page.tsx`. Do NOT create new folders under `src/app/` for site pages.
 - **Static assets** live in `public/sites/<subdomain>/` and are referenced with absolute paths (e.g., `/sites/pigmilk/logo.png`).
+
+## Commerce System
+
+Sites with `features.commerce: true` in their config get:
+- `CartProvider` wrapper in `layout.tsx` (shared context for Header + pages)
+- `CartButton` in the header (cart icon with item count badge)
+- `AddToCartButton` component for product cards/pages
+- `Toast` notifications on add-to-cart actions
+- Cart page (`/cart`) and checkout page (`/checkout`)
+
+Commerce components live in `src/components/commerce/`. They are all `"use client"` components.
+
+Cart state is stored in `localStorage` under key `pigmilk-cart`. No server-side state or database.
+
+## Dynamic Routes
+
+Sites can define `dynamicRoutes` in their barrel export for pattern-based sub-routes:
+
+```typescript
+export const dynamicRoutes = {
+  "products": {
+    component: ProductDetail,
+    getMetadata: (slug) => ({ title: `${product.name}`, description: product.tagline }),
+    isValidSlug: (slug) => !!getProductBySlug(slug),
+  },
+}
+```
+
+The catch-all route checks `dynamicRoutes` when the pages map has no match. Invalid slugs return 404.
+
+## Product Data Pattern
+
+Product catalogs live in `src/sites/<subdomain>/data/products.ts`. Export a `products` array and `getProductBySlug(slug)` helper. Product detail components receive a `slug` prop and look up data from this file.
 
 ## Local Development
 
