@@ -7,7 +7,7 @@ Expand the existing pigmilk subdomain site from a 3-page placeholder into a full
 ## Goals
 
 - Create a convincing satirical e-commerce site that's funny to browse
-- 10 routes total with rich content and AI-generated imagery
+- 8 static pages + 10 dynamic product detail pages, all with rich content and AI-generated imagery
 - Fake but functional cart experience (add items, view cart, joke checkout)
 - Self-aware absurdist tone throughout all copy
 - Build reusable shared components that benefit future subdomain sites
@@ -20,6 +20,8 @@ Self-aware absurdist. The site acknowledges the ridiculousness of pig milk and b
 ## Pages
 
 ### Home (`/`)
+
+**Note:** This is a complete rewrite of the existing homepage, not an extension. The existing "Why Pig Milk?" FeatureSection is replaced by a Featured Products grid.
 
 Sections in order:
 1. **Hero** — Full-width hero image (`hero.png`), headline "Farm-Fresh Pig Milk", subheadline "Straight from the pig to your glass. Nature's most specific beverage.", CTA button "Shop Now" → `/products`
@@ -99,7 +101,7 @@ Product detail pages are rendered by the catch-all route. The pigmilk pages map 
    - "Free parking (it's a field)"
 6. **Culture image** (`volunteer-culture.png`)
 7. **Application Form** (client component):
-   - Fields: Name, Email, Position (dropdown of the 5 listings), "Why do you want to work with pigs?" (textarea), "On a scale of 1-10, how do you feel about pig milk?" (slider that only goes 8-10)
+   - Fields: Name, Email, Position (dropdown of the 5 listings), "Why do you want to work with pigs?" (textarea), "On a scale of 1-10, how do you feel about pig milk?" (HTML range input with `min=8 max=10 step=1`, visually labeled 8-10)
    - Submit shows confirmation: "Application received! We'll be in touch. (We probably won't.)"
 
 ### Contact (`/contact`)
@@ -143,7 +145,7 @@ Product detail pages are rendered by the catch-all route. The pigmilk pages map 
 3. **Subtext** — "Unfortunately, due to unprecedented demand (someone actually tried to buy pig milk), our checkout system is permanently under construction."
 4. **FakeProgressBar** — Animated progress bar that starts at 0%, creeps to ~73%, then resets. Never completes.
 5. **Estimated delivery** — "When pigs fly (estimated Q4 2087)"
-6. **"Return to Shopping"** button → `/products`
+6. **"Return to Shopping"** button → `/products` (does NOT clear cart — user keeps their items)
 
 ## Product Catalog
 
@@ -203,9 +205,28 @@ State is synced to `localStorage` under key `pigmilk-cart` so it survives page r
 
 ### Client Component Boundary
 
-The CartProvider must wrap all pigmilk pages that need cart access. Since the root layout is a server component, the CartProvider will be added as a wrapper inside the pigmilk site's page rendering. The catch-all route can detect when a site has `features.commerce: true` and wrap the page component in a CartProvider.
+The CartProvider wraps both the Header and page content in `layout.tsx`, conditionally when the site has `features.commerce: true`. This is required so the Header's CartButton badge and the page's AddToCartButton share the same cart context. A server component can render a client component — `layout.tsx` remains an async server component that renders `<CartProvider>` as a child:
 
-Alternatively, pigmilk pages that need cart access can import and use the CartProvider directly in their page components. Components that need cart state (`AddToCartButton`, `CartButton`, product pages, cart page) are `"use client"` components.
+```tsx
+// In layout.tsx, after resolving site config:
+const content = (
+  <>
+    {site && <Header config={site.config} />}
+    <main>{children}</main>
+    {site && <Footer config={site.config} />}
+  </>
+)
+
+return (
+  <html lang="en" className={fontVariables}>
+    <body className="min-h-screen bg-background text-foreground font-body" style={themeStyle}>
+      {site?.config.features.commerce ? <CartProvider>{content}</CartProvider> : content}
+    </body>
+  </html>
+)
+```
+
+The CartProvider also manages toast state so any component can trigger a toast via context. Toast display duration: 3 seconds, auto-dismiss, stacks up to 3, renders bottom-center as a portal.
 
 ## New Shared Components
 
@@ -222,9 +243,9 @@ All new components live in `src/components/` and are reusable across sites.
 | `PigProfile` | `image, name, bio, stats: Array<{ label, value }>` | Pig portrait card with personality stats |
 | `JobListing` | `title, department, description, onApply?` | Job posting card with apply button |
 | `StatCounter` | `value: string, label: string` | Large number with caption |
-| `FaqAccordion` | `items: Array<{ question, answer }>` | Expandable Q&A pairs |
-| `Toast` | `message, visible, onClose` | Brief popup notification |
-| `FakeProgressBar` | (no props) | Animated bar that never reaches 100% |
+| `FaqAccordion` | `items: Array<{ question, answer }>` | Expandable Q&A pairs (`"use client"` — needs toggle state) |
+| `Toast` | `message, visible, onClose` | Brief popup notification (`"use client"` — managed by CartProvider) |
+| `FakeProgressBar` | (no props) | Animated bar that never reaches 100% (`"use client"` — needs animation state) |
 
 ### Commerce Components (`src/components/commerce/`)
 
@@ -255,6 +276,18 @@ Cart link is handled separately by the CartButton component in the header (not p
 
 The shared Header component needs to support an optional cart button. When a site has `features.commerce: true`, the header renders a CartButton next to the nav links. This keeps the Header reusable — non-commerce sites are unaffected.
 
+## Bug Fix: foreground/text CSS Variable Mismatch
+
+Pre-existing bug: `themeToCSS()` in `src/themes/index.ts` emits `--color-text`, but `globals.css` declares `--color-foreground` and all components use `text-foreground`. The foreground color is currently unset. Fix by adding `"--color-foreground": theme.colors.text` to `themeToCSS()` output. This ensures `text-foreground`, `text-foreground/70`, etc. all resolve correctly.
+
+## Hero Component Image Support
+
+The existing `Hero` component has no `image` prop. Extend it with an optional `image?: string` prop. When provided, the hero renders the image as a full-width background. When omitted, behavior is unchanged (solid `bg-secondary/30` background). This is backward-compatible with all existing hero usages.
+
+## Mobile Navigation
+
+The header currently renders nav links inline. With 7 items (6 nav + cart), this overflows on mobile. Add a hamburger menu: on screens below `md` breakpoint, nav links collapse into a slide-out or dropdown menu. The CartButton remains visible at all screen sizes. This requires making the Header a client component (for toggle state) or extracting a `MobileNav` client component used within the server-rendered Header.
+
 ## Images
 
 30 images total. Generation prompts saved to `docs/pigmilk-image-prompts.md`. All output to `public/sites/pigmilk/`. Pages reference images by path (e.g., `/sites/pigmilk/hero.png`). Pages render gracefully if images don't exist yet — use Next.js `<Image>` with appropriate fallback sizing.
@@ -284,19 +317,49 @@ For product detail pages (`products/classic-pig-milk`), the catch-all route firs
 export interface SiteModule {
   config: SiteConfig
   pages: Record<string, PageEntry>
-  productDetailComponent?: React.ComponentType<{ slug: string }>
+  // Optional: for sites with dynamic sub-routes like /products/[slug]
+  dynamicRoutes?: Record<string, {
+    component: React.ComponentType<{ slug: string }>
+    getMetadata?: (slug: string) => PageMetadata | undefined
+    isValidSlug?: (slug: string) => boolean
+  }>
+}
+```
+
+The pigmilk barrel exports:
+```ts
+export const dynamicRoutes = {
+  "products": {
+    component: ProductDetail,
+    getMetadata: (slug: string) => {
+      const product = getProductBySlug(slug)
+      return product ? { title: `${product.name} — Pig Milk Co.`, description: product.tagline } : undefined
+    },
+    isValidSlug: (slug: string) => !!getProductBySlug(slug),
+  },
 }
 ```
 
 The catch-all route update:
 ```ts
 // After checking pages map and before calling notFound()
-if (!pageEntry && path.startsWith("products/") && site.productDetailComponent) {
-  const productSlug = path.replace("products/", "")
-  const ProductDetail = site.productDetailComponent
-  return <ProductDetail slug={productSlug} />
+if (!pageEntry) {
+  const segments = path.split("/")
+  if (segments.length === 2 && site.dynamicRoutes?.[segments[0]]) {
+    const route = site.dynamicRoutes[segments[0]]
+    const slug = segments[1]
+    if (route.isValidSlug && !route.isValidSlug(slug)) {
+      notFound()
+    }
+    const DynamicComponent = route.component
+    return <DynamicComponent slug={slug} />
+  }
 }
 ```
+
+The `generateMetadata` function gets a parallel update to check `dynamicRoutes` for metadata when the pages map has no match.
+
+The product data file exports a `getProductBySlug(slug): Product | undefined` helper for both the detail component and the metadata/validation functions.
 
 ## Config Update
 
