@@ -28,24 +28,28 @@ const CartContext = createContext<CartContextType | null>(null)
 const STORAGE_KEY = "pigmilk-cart"
 
 export function CartProvider({ children }: { children: ReactNode }) {
-  const [cart, setCart] = useState<CartItem[]>([])
-  const [toasts, setToasts] = useState<ToastMessage[]>([])
-  const nextToastIdRef = useRef(0)
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
+  const [cart, setCart] = useState<CartItem[]>(() => {
+    if (typeof window === "undefined") return []
     try {
       const stored = localStorage.getItem(STORAGE_KEY)
-      if (stored) setCart(JSON.parse(stored))
-    } catch {}
-    setMounted(true)
+      return stored ? JSON.parse(stored) : []
+    } catch {
+      return []
+    }
+  })
+  const [toasts, setToasts] = useState<ToastMessage[]>([])
+  const nextToastIdRef = useRef(0)
+  const mountedRef = useRef(false)
+
+  useEffect(() => {
+    mountedRef.current = true
   }, [])
 
   useEffect(() => {
-    if (mounted) {
+    if (mountedRef.current) {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(cart))
     }
-  }, [cart, mounted])
+  }, [cart])
 
   const showToast = useCallback((message: string) => {
     const id = nextToastIdRef.current++

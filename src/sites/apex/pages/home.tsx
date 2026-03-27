@@ -1,10 +1,24 @@
+import { headers } from "next/headers"
 import { siteRegistry } from "@/sites/registry"
 import { Hero } from "@/components/ui/hero"
 
-export default function ApexHome() {
+const PRODUCTION_HOST = "specificindustries.com"
+
+export default async function ApexHome() {
+  const headersList = await headers()
+  const host = headersList.get("host") || ""
+  const isProduction = host.endsWith(PRODUCTION_HOST)
+
   const sites = Object.entries(siteRegistry).filter(
     ([key]) => key !== "apex"
   )
+
+  function siteHref(subdomain: string): string {
+    if (isProduction) {
+      return `https://${subdomain}.${PRODUCTION_HOST}`
+    }
+    return `/?site=${subdomain}`
+  }
 
   return (
     <>
@@ -24,7 +38,7 @@ export default function ApexHome() {
               {sites.map(([subdomain, site]) => (
                 <a
                   key={subdomain}
-                  href={`https://${subdomain}.specificindustries.com`}
+                  href={siteHref(subdomain)}
                   className="block p-6 rounded-lg border border-primary/10 hover:border-primary/30 transition-colors"
                 >
                   <h3 className="text-xl font-heading font-semibold text-primary mb-2">
