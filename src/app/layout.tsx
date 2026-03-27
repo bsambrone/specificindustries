@@ -7,6 +7,8 @@ import { themeToCSS } from "@/themes"
 import { fontFamilyMap } from "@/themes/fonts"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
+import { CartProvider } from "@/components/commerce/cart-provider"
+import { ToastContainer } from "@/components/commerce/toast"
 
 export const metadata: Metadata = {
   title: "Specific Industries",
@@ -22,18 +24,24 @@ export default async function RootLayout({
   const subdomain = headersList.get("x-subdomain") || "apex"
   const site = siteRegistry[subdomain]
 
-  // Build theme CSS variables
   const themeStyle: Record<string, string> = {}
   if (site) {
     const cssVars = themeToCSS(site.config.theme)
     Object.assign(themeStyle, cssVars)
 
-    // Resolve font keys to CSS font-family values
     const headingFont = fontFamilyMap[site.config.theme.fonts.heading]
     const bodyFont = fontFamilyMap[site.config.theme.fonts.body]
     if (headingFont) themeStyle["--font-heading"] = headingFont
     if (bodyFont) themeStyle["--font-body"] = bodyFont
   }
+
+  const content = (
+    <>
+      {site && <Header config={site.config} />}
+      <main>{children}</main>
+      {site && <Footer config={site.config} />}
+    </>
+  )
 
   return (
     <html lang="en" className={fontVariables}>
@@ -41,9 +49,14 @@ export default async function RootLayout({
         className="min-h-screen bg-background text-foreground font-body"
         style={themeStyle}
       >
-        {site && <Header config={site.config} />}
-        <main>{children}</main>
-        {site && <Footer config={site.config} />}
+        {site?.config.features.commerce ? (
+          <CartProvider>
+            {content}
+            <ToastContainer />
+          </CartProvider>
+        ) : (
+          content
+        )}
       </body>
     </html>
   )
