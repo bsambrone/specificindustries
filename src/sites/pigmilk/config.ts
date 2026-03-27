@@ -25,8 +25,11 @@ export const config: SiteConfig = {
     { label: "Home", path: "/" },
     { label: "Products", path: "/products" },
     { label: "About", path: "/about" },
+    { label: "Behind the Scenes", path: "/behind-the-scenes" },
+    { label: "Volunteer", path: "/volunteer" },
+    { label: "Contact", path: "/contact" },
   ],
   features: {
-    commerce: false,
+    commerce: true,
   },
 }
