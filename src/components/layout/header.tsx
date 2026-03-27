@@ -4,14 +4,16 @@ import { useState } from "react"
 import Link from "next/link"
 import type { SiteConfig } from "@/themes"
 import { CartButton } from "@/components/commerce/cart-button"
+import { useSiteLink } from "@/hooks/use-site-link"
 
 export function Header({ config }: { config: SiteConfig }) {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const siteHref = useSiteLink()
 
   return (
     <header className="border-b border-primary/10 bg-background">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="text-xl font-heading font-bold text-primary">
+        <Link href={siteHref("/")} className="text-xl font-heading font-bold text-primary">
           {config.name}
         </Link>
 
@@ -20,7 +22,7 @@ export function Header({ config }: { config: SiteConfig }) {
           {config.nav.map((item) => (
             <Link
               key={item.path}
-              href={item.path}
+              href={siteHref(item.path)}
               className="text-foreground/70 hover:text-foreground transition-colors"
             >
               {item.label}
@@ -55,7 +57,7 @@ export function Header({ config }: { config: SiteConfig }) {
             {config.nav.map((item) => (
               <Link
                 key={item.path}
-                href={item.path}
+                href={siteHref(item.path)}
                 onClick={() => setMobileOpen(false)}
                 className="text-foreground/70 hover:text-foreground transition-colors"
               >

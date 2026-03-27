@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useCart } from "@/components/commerce/cart-provider"
 import { getProductBySlug } from "@/sites/pigmilk/data/products"
+import { useSiteLink } from "@/hooks/use-site-link"
 
 const PIG_HANDLING_FEE = 2.99
 const OINK_TAX_RATE = 0.037
@@ -15,6 +16,7 @@ export const metadata = {
 
 export default function PigMilkCart() {
   const { cart, removeFromCart, updateQuantity } = useCart()
+  const siteHref = useSiteLink()
 
   const cartItems = cart
     .map((item) => {
@@ -36,7 +38,7 @@ export default function PigMilkCart() {
             Your cart is as empty as a pig that&apos;s just been milked.
           </p>
           <Link
-            href="/products"
+            href={siteHref("/products")}
             className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
             Start Shopping
@@ -59,7 +61,7 @@ export default function PigMilkCart() {
                 <Image src={product.image} alt={product.name} fill className="object-cover" />
               </div>
               <div className="flex-1">
-                <Link href={`/products/${slug}`} className="font-heading font-semibold text-primary hover:underline">
+                <Link href={siteHref(`/products/${slug}`)} className="font-heading font-semibold text-primary hover:underline">
                   {product.name}
                 </Link>
                 <p className="text-foreground/60 text-sm">{product.priceLabel}</p>
@@ -117,7 +119,7 @@ export default function PigMilkCart() {
           </div>
           <div className="mt-8 text-right">
             <Link
-              href="/checkout"
+              href={siteHref("/checkout")}
               className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:opacity-90 transition-opacity"
             >
               Proceed to Checkout

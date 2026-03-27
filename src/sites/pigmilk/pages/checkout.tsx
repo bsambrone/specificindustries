@@ -1,8 +1,13 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { FakeProgressBar } from "@/components/ui/fake-progress-bar"
+import { useSiteLink } from "@/hooks/use-site-link"
 
 export default function PigMilkCheckout() {
+  const siteHref = useSiteLink()
+
   return (
     <section className="py-20 px-4 text-center">
       <div className="max-w-lg mx-auto">
@@ -23,7 +28,7 @@ export default function PigMilkCheckout() {
           Estimated delivery: When pigs fly (estimated Q4 2087)
         </p>
         <Link
-          href="/products"
+          href={siteHref("/products")}
           className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:opacity-90 transition-opacity"
         >
           Return to Shopping
