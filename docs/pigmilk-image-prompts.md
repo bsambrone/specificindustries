@@ -57,16 +57,16 @@ A gift box overflowing with pig milk products - bottles, a cheese wheel, a yogur
 ## About Page (5 images)
 
 ### 14. `team-earl.png`
-**[Use your provided base image]** Style it like a Fortune 500 CEO portrait. Add a subtle pig-themed tie or lapel pin. Professional studio backdrop. The person should look extremely serious about pig milk.
+**[Use your provided base image — male friend]** Style it like a Fortune 500 CEO portrait. Add a subtle pig-themed tie or lapel pin. Professional studio backdrop. The person should look extremely serious about pig milk.
 
-### 15. `team-sandra.png`
-**[Use your provided base image]** Style as a corporate headshot. Add a lab coat with 'Pig Relations Dept.' embroidered on it. Warm, approachable smile. Professional backdrop.
+### 15. `team-burt.png`
+**[Use your provided base image — male friend]** Style as a corporate headshot. Add a lab coat with 'Pig Relations Dept.' embroidered on it. Overly warm, approachable smile. Professional backdrop.
 
-### 16. `team-chad.png`
-**[Use your provided base image]** Style as a startup tech bro headshot. Add a hoodie with a small pig logo. Slightly too confident expression. Casual backdrop, maybe exposed brick.
+### 16. `team-chet.png`
+**[Use your provided base image — male friend]** Style as a startup tech bro headshot. Add a hoodie with a small pig logo. Slightly too confident expression. Casual backdrop, maybe exposed brick.
 
-### 17. `team-beatrice.png`
-**[Use your provided base image]** Style as a culinary professional portrait. Add a chef's hat or tasting spoon. Slightly disgusted expression, like someone who has tasted too much pig milk. Kitchen backdrop.
+### 17. `team-dale.png`
+**[Use your provided base image — male friend]** Style as a culinary professional portrait. Add a chef's hat or tasting spoon. Slightly disgusted expression, like someone who has tasted too much pig milk. Kitchen backdrop.
 
 ### 18. `timeline-origin.png`
 A faded Polaroid-style photo of a confused-looking farmer standing next to a pig in a small barn, circa 2019. The farmer is holding a bucket and looking at it with an expression of 'what have I done.' Nostalgic, warm color grading, slightly overexposed.

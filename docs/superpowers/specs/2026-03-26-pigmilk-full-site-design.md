@@ -59,11 +59,11 @@ Product detail pages are rendered by the catch-all route. The pigmilk pages map 
    - 2023: "Opened our state-of-the-art facility (a slightly larger barn)."
    - 2024: "Launched online store. Crashed immediately. One visitor."
    - 2025: "Named 'Most Specific Dairy Company' by no one."
-4. **Meet the Team** — Grid of 4 TeamMember cards:
+4. **Meet the Team** — Grid of 4 TeamMember cards (all guys, photos are user's friends with AI modifications):
    - Earl Hogsworth, Founder & Chief Pig Milking Officer (`team-earl.png`)
-   - Dr. Sandra Truffleton, VP of Pig Relations (`team-sandra.png`)
-   - Chad Bristle, Head of Marketing & Pig Whispering (`team-chad.png`)
-   - Beatrice Snoutwell, Quality Assurance (Taster) (`team-beatrice.png`)
+   - Burt Sloppington III, VP of Pig Relations (`team-burt.png`)
+   - Chet Trotsworth, Head of Marketing & Pig Whispering (`team-chet.png`)
+   - Dale Gristle, Quality Assurance (Taster) (`team-dale.png`)
    - Each card has name, title, headshot, and a one-liner bio
 
 ### Behind the Scenes (`/behind-the-scenes`)
