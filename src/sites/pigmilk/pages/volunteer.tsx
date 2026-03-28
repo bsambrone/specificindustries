@@ -81,7 +81,7 @@ export default function PigMilkVolunteer() {
           src="/sites/pigmilk/volunteer-hero.png"
           alt="Volunteers working with pigs"
           fill
-          className="object-cover object-top"
+          className="object-cover object-center"
         />
       </section>
 
