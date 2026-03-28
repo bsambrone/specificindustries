@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Hero } from "@/components/ui/hero"
 
 export default function ApexTerms() {
@@ -37,12 +38,12 @@ export default function ApexTerms() {
           </p>
           <p>
             The only non-satirical content on our Sites is this Terms of Use, our{" "}
-            <a href="/privacy" className="text-accent underline hover:text-primary transition-colors">
+            <Link href="/privacy" className="text-accent underline hover:text-primary transition-colors">
               Privacy Policy
-            </a>, and our{" "}
-            <a href="/disclaimer" className="text-accent underline hover:text-primary transition-colors">
+            </Link>, and our{" "}
+            <Link href="/disclaimer" className="text-accent underline hover:text-primary transition-colors">
               Disclaimer
-            </a>.
+            </Link>.
           </p>
 
           <h2 className="text-2xl font-heading font-bold text-primary">3. Intellectual Property</h2>

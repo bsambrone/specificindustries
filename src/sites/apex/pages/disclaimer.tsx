@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Hero } from "@/components/ui/hero"
 
 export default function ApexDisclaimer() {
@@ -45,13 +46,13 @@ export default function ApexDisclaimer() {
             While our subsidiary sites may contain their own humorous privacy policies and terms of use
             as part of the satirical experience, the only legally binding policies governing your use
             of any Specific Industries property are the{" "}
-            <a href="/privacy" className="text-accent underline hover:text-primary transition-colors">
+            <Link href="/privacy" className="text-accent underline hover:text-primary transition-colors">
               Privacy Policy
-            </a>{" "}
+            </Link>{" "}
             and{" "}
-            <a href="/terms" className="text-accent underline hover:text-primary transition-colors">
+            <Link href="/terms" className="text-accent underline hover:text-primary transition-colors">
               Terms of Use
-            </a>{" "}
+            </Link>{" "}
             published on this domain (specificindustries.com).
           </p>
         </div>
