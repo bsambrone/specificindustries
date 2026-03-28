@@ -43,8 +43,13 @@ export default async function RootLayout({
     </>
   )
 
+  const faviconPath = site ? `/sites/${site.config.subdomain}/favicon.png` : undefined
+
   return (
     <html lang="en" className={fontVariables}>
+      <head>
+        {faviconPath && <link rel="icon" href={faviconPath} />}
+      </head>
       <body
         className="min-h-screen bg-background text-foreground font-body"
         style={themeStyle}
