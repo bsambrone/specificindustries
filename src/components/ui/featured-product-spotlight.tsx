@@ -22,7 +22,7 @@ export function FeaturedProductSpotlight({
 }: FeaturedProductSpotlightProps) {
   const imageBlock = (
     <div className="relative aspect-[4/3] md:aspect-auto md:h-full md:min-h-[400px] md:max-h-[500px] bg-secondary/10">
-      <Image src={image} alt={title} fill className="object-cover" />
+      <Image src={image} alt={title} fill className="object-cover object-top" />
     </div>
   )
 

@@ -4,6 +4,7 @@ interface SplitSectionProps {
   image: string
   imagePosition?: "left" | "right"
   dark?: boolean
+  imageClassName?: string
   children: React.ReactNode
 }
 
@@ -11,11 +12,12 @@ export function SplitSection({
   image,
   imagePosition = "left",
   dark = false,
+  imageClassName,
   children,
 }: SplitSectionProps) {
   const imageBlock = (
     <div className="relative aspect-[4/3] md:aspect-auto md:h-full md:min-h-[400px] md:max-h-[500px]">
-      <Image src={image} alt="" fill className="object-cover" />
+      <Image src={image} alt="" fill className={imageClassName || "object-cover object-top"} />
     </div>
   )
 

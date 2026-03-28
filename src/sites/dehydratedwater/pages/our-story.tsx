@@ -1,3 +1,5 @@
+"use client"
+
 import { Hero } from "@/components/ui/hero"
 import { WaveDivider } from "@/components/ui/wave-divider"
 import { SplitSection } from "@/components/ui/split-section"
@@ -5,6 +7,7 @@ import { AnimatedCounter } from "@/components/ui/animated-counter"
 import { CascadeTimeline } from "@/components/ui/cascade-timeline"
 import { TeamMember } from "@/components/ui/team-member"
 import { PromoBanner } from "@/components/ui/promo-banner"
+import { useSiteLink } from "@/hooks/use-site-link"
 
 export const metadata = {
   title: "Our Story — Dehydrated Water Co.",
@@ -53,6 +56,7 @@ const teamMembers = [
 ]
 
 export default function OurStory() {
+  const siteHref = useSiteLink()
   return (
     <>
       <Hero
@@ -136,7 +140,7 @@ export default function OurStory() {
       <PromoBanner
         headline="Join the legacy — Subscribe to WaaS"
         ctaText="Explore WaaS"
-        ctaHref="/waas"
+        ctaHref={siteHref("/waas")}
       />
     </>
   )
