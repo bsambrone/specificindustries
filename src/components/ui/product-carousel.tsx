@@ -20,7 +20,7 @@ export function ProductCarousel({ title, children }: ProductCarouselProps) {
   }
 
   return (
-    <section className="py-16 px-4">
+    <section className="py-16 px-4 bg-secondary/10">
       <div className="max-w-6xl mx-auto">
         {title && (
           <h2 className="text-2xl font-heading font-bold text-center mb-8">{title}</h2>

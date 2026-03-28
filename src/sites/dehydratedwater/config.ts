@@ -9,7 +9,7 @@ export const config: SiteConfig = {
       primary: "#1B3A4B",
       secondary: "#E8F0F2",
       accent: "#7BB8CC",
-      background: "#FAFCFD",
+      background: "#D5DCE0",
       text: "#1a1a1a",
     },
     fonts: {

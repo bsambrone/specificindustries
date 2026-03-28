@@ -38,7 +38,7 @@ export function SplitSection({
   )
 
   return (
-    <section className={`py-12 md:py-16 px-4 ${dark ? "bg-primary" : ""}`}>
+    <section className={`py-12 md:py-16 px-4 ${dark ? "bg-primary" : "bg-secondary/10"}`}>
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
         {imagePosition === "left" ? (
           <>
