@@ -6,15 +6,16 @@ test.describe("Dehydrated Water Co. — Page Navigation", () => {
   test("homepage loads with hero and featured products", async ({ page }) => {
     await page.goto(`/${SITE}`)
     await expect(page.locator("h1")).toContainText("Water, Perfected Through Absence")
-    await expect(page.getByText("Featured Products")).toBeVisible()
+    await expect(page.getByText("How We Stack Up")).toBeVisible()
     await expect(page.getByText("What Our Patrons Say")).toBeVisible()
   })
 
-  test("products page shows all 9 products", async ({ page }) => {
+  test("products page shows category sections", async ({ page }) => {
     await page.goto(`/products${SITE}`)
     await expect(page.locator("h1")).toContainText("The Collection")
-    const productHeadings = page.locator("h3")
-    await expect(productHeadings).toHaveCount(9)
+    await expect(page.getByText("Heritage Collection")).toBeVisible()
+    await expect(page.getByText("Advanced Science")).toBeVisible()
+    await expect(page.getByText("Experience")).toBeVisible()
   })
 
   test("product detail page loads for original", async ({ page }) => {
@@ -53,8 +54,8 @@ test.describe("Dehydrated Water Co. — Page Navigation", () => {
     await expect(page.locator("h1")).toContainText("Our Story")
     await expect(page.getByText("The Founding Vision")).toBeVisible()
     await expect(page.getByText("Company Timeline")).toBeVisible()
-    await expect(page.getByText("1847", { exact: true })).toBeVisible()
-    await expect(page.getByText("2026", { exact: true })).toBeVisible()
+    await expect(page.getByText("1847", { exact: true }).first()).toBeVisible()
+    await expect(page.getByText("2026", { exact: true }).first()).toBeVisible()
     await expect(page.getByRole("heading", { name: "The Team" })).toBeVisible()
     await expect(page.getByRole("heading", { name: "Ezekiel Drywell IV", exact: true })).toBeVisible()
     await expect(page.getByRole("heading", { name: "Thaddeus Pemberton" })).toBeVisible()
@@ -64,26 +65,31 @@ test.describe("Dehydrated Water Co. — Page Navigation", () => {
     await page.goto(`/the-science${SITE}`)
     await expect(page.locator("h1")).toContainText("The Science")
     await expect(page.getByText("The Drywell Method")).toBeVisible()
-    await expect(page.locator("h3").filter({ hasText: "Aqueous Acquisition" })).toBeVisible()
-    await expect(page.locator("h3").filter({ hasText: "Thermal Dissociation" })).toBeVisible()
-    await expect(page.locator("h3").filter({ hasText: "Vapor Recapture" })).toBeVisible()
-    await expect(page.locator("h3").filter({ hasText: "Final Dehydration" })).toBeVisible()
+    await expect(page.getByRole("heading", { name: "Aqueous Acquisition" })).toBeVisible()
+    await expect(page.getByRole("heading", { name: "Thermal Dissociation" })).toBeVisible()
+    await expect(page.getByRole("heading", { name: "Vapor Recapture" })).toBeVisible()
+    await expect(page.getByRole("heading", { name: "Final Dehydration" })).toBeVisible()
   })
 
-  test("waas page loads with pricing tiers", async ({ page }) => {
+  test("waas page loads with pricing tiers and comparison", async ({ page }) => {
     await page.goto(`/waas${SITE}`)
     await expect(page.locator("h1")).toContainText("Water-as-a-Service")
-    await expect(page.getByText("Apprentice")).toBeVisible()
-    await expect(page.getByText("Journeyman")).toBeVisible()
-    await expect(page.getByText("Master Dryer")).toBeVisible()
+    await expect(page.getByText("Apprentice", { exact: true })).toBeVisible()
+    await expect(page.getByText("Journeyman", { exact: true })).toBeVisible()
+    await expect(page.getByText("Master Dryer", { exact: true }).first()).toBeVisible()
     await expect(page.getByText("$29.99")).toBeVisible()
     await expect(page.getByText("$49.99")).toBeVisible()
     await expect(page.getByText("$99.99")).toBeVisible()
+    await expect(page.getByText("WaaS vs. Buying Individual Packets")).toBeVisible()
   })
 
-  test("faq page loads with questions", async ({ page }) => {
+  test("faq page loads with categorized questions", async ({ page }) => {
     await page.goto(`/faq${SITE}`)
     await expect(page.locator("h1")).toContainText("Frequently Asked Questions")
+    await expect(page.getByText("About Our Products")).toBeVisible()
+    await expect(page.getByText("Health & Safety")).toBeVisible()
+    await expect(page.getByText("Storage & Handling")).toBeVisible()
+    await expect(page.getByText("Orders & Returns")).toBeVisible()
     await expect(page.getByText("Is this real water?")).toBeVisible()
     await expect(page.getByText("What is your return policy?")).toBeVisible()
   })
@@ -105,12 +111,13 @@ test.describe("Dehydrated Water Co. — Page Navigation", () => {
   test("privacy policy page loads", async ({ page }) => {
     await page.goto(`/privacy${SITE}`)
     await expect(page.locator("h1")).toContainText("Privacy Policy")
-    await expect(page.getByText("Data Collection")).toBeVisible()
+    await expect(page.getByRole("heading", { name: "Data We Collect" })).toBeVisible()
   })
 
   test("terms of use page loads", async ({ page }) => {
     await page.goto(`/terms${SITE}`)
     await expect(page.locator("h1")).toContainText("Terms of Use")
+    await expect(page.getByText("Acceptance of Terms")).toBeVisible()
     await expect(page.getByText("Limitation of Liability")).toBeVisible()
   })
 })
