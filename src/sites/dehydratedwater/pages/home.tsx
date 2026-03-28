@@ -1,3 +1,5 @@
+"use client"
+
 import { Hero } from "@/components/ui/hero"
 import { WaveDivider } from "@/components/ui/wave-divider"
 import { AnimatedCounter } from "@/components/ui/animated-counter"
@@ -11,10 +13,12 @@ import { TestimonialGrid } from "@/components/ui/testimonial-grid"
 import { PromoBanner } from "@/components/ui/promo-banner"
 import { products } from "@/sites/dehydratedwater/data/products"
 import Link from "next/link"
+import { useSiteLink } from "@/hooks/use-site-link"
 
 const cloudMist = products.find((p) => p.slug === "cloud-mist")!
 
 export default function DehydratedWaterHome() {
+  const siteHref = useSiteLink()
   return (
     <>
       <Hero
@@ -22,9 +26,9 @@ export default function DehydratedWaterHome() {
         headline="Water, Perfected Through Absence"
         subheadline="For nearly two centuries, we have pursued a singular vision: liberating water from the burden of its own wetness. Est. 1847."
         ctaText="Shop the Collection"
-        ctaHref="/products"
+        ctaHref={siteHref("/products")}
         secondaryCtaText="Our Story"
-        secondaryCtaHref="/our-story"
+        secondaryCtaHref={siteHref("/our-story")}
       />
 
       <WaveDivider variant="wave1" />
@@ -49,7 +53,7 @@ export default function DehydratedWaterHome() {
         title={cloudMist.name}
         description={cloudMist.tagline + " " + cloudMist.description[0]}
         ctaText="Shop Cloud Mist"
-        ctaHref="/products/cloud-mist"
+        ctaHref={siteHref("/products/cloud-mist")}
         imagePosition="right"
       />
 
@@ -65,7 +69,7 @@ export default function DehydratedWaterHome() {
           heritage-grade powder that contains the complete essence of hydration.
         </p>
         <Link
-          href="/the-science"
+          href={siteHref("/the-science")}
           className="inline-block px-8 py-3 border border-white/50 text-white font-heading text-sm tracking-wider uppercase hover:bg-white/10 transition-colors"
         >
           Explore the Science
@@ -74,7 +78,7 @@ export default function DehydratedWaterHome() {
 
       <ProductCarousel title="The Collection">
         {products.map((product) => (
-          <div key={product.slug} className="min-w-[260px] sm:min-w-[280px] shrink-0">
+          <div key={product.slug} className="w-[260px] sm:w-[280px] shrink-0">
             <ProductCard
               slug={product.slug}
               name={product.name}
@@ -120,7 +124,7 @@ export default function DehydratedWaterHome() {
         headline="Subscribe & Save — WaaS from $29.99/mo"
         subtext="*All plans include complimentary existential contemplation about the nature of water."
         ctaText="Explore WaaS"
-        ctaHref="/waas"
+        ctaHref={siteHref("/waas")}
       />
 
       <WaveDivider variant="wave2" flip />

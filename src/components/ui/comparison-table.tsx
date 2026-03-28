@@ -18,14 +18,14 @@ export function ComparisonTable({ title, columns, rows, footnote }: ComparisonTa
           <table className="w-full text-sm">
             <thead>
               <tr>
-                <th className="text-left py-3 px-4 text-accent font-normal" />
+                <th className="text-left py-3 px-4 text-white/50 font-normal" />
                 {columns.map((col) => (
                   <th
                     key={col.name}
                     className={`py-3 px-4 text-center font-heading font-bold ${
                       col.highlighted
                         ? "text-white bg-white/10 border-b-2 border-accent"
-                        : "text-accent"
+                        : "text-white/70"
                     }`}
                   >
                     {col.name}
@@ -36,7 +36,7 @@ export function ComparisonTable({ title, columns, rows, footnote }: ComparisonTa
             <tbody>
               {rows.map((row) => (
                 <tr key={row.label} className="border-t border-white/10">
-                  <td className="py-3 px-4 text-accent font-semibold sticky left-0 bg-primary">
+                  <td className="py-3 px-4 text-white/80 font-semibold sticky left-0 bg-primary">
                     {row.label}
                   </td>
                   {row.values.map((value, i) => (
@@ -57,7 +57,7 @@ export function ComparisonTable({ title, columns, rows, footnote }: ComparisonTa
           </table>
         </div>
         {footnote && (
-          <p className="text-accent/70 text-xs italic text-center mt-6">{footnote}</p>
+          <p className="text-white/40 text-xs italic text-center mt-6">{footnote}</p>
         )}
       </div>
     </section>
