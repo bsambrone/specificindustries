@@ -76,13 +76,16 @@ export default function PigMilkVolunteer() {
       </section>
 
       {/* Volunteer Hero Image */}
-      <section className="relative w-full h-[500px]">
-        <Image
-          src="/sites/pigmilk/volunteer-hero.png"
-          alt="Volunteers working with pigs"
-          fill
-          className="object-cover object-center"
-        />
+      <section className="w-full px-4 py-8">
+        <div className="max-w-5xl mx-auto">
+          <Image
+            src="/sites/pigmilk/volunteer-hero.png"
+            alt="Volunteers working with pigs"
+            width={1200}
+            height={800}
+            className="w-full h-auto rounded-lg"
+          />
+        </div>
       </section>
 
       {/* Open Positions */}
@@ -107,13 +110,16 @@ export default function PigMilkVolunteer() {
       <FeatureSection title="Perks & Benefits" features={perks} />
 
       {/* Culture Image */}
-      <section className="relative w-full h-[500px]">
-        <Image
-          src="/sites/pigmilk/volunteer-culture.png"
-          alt="Pig Milk Co. team culture"
-          fill
-          className="object-cover object-top"
-        />
+      <section className="w-full px-4 py-8">
+        <div className="max-w-5xl mx-auto">
+          <Image
+            src="/sites/pigmilk/volunteer-culture.png"
+            alt="Pig Milk Co. team culture"
+            width={1200}
+            height={800}
+            className="w-full h-auto rounded-lg"
+          />
+        </div>
       </section>
 
       {/* Application Form */}
