@@ -447,9 +447,7 @@ export function PromoBanner({ headline, subtext, ctaText, ctaHref }: PromoBanner
 }
 ```
 
-Note: PromoBanner uses a plain `Link` and does NOT use `useSiteLink()` since it's a server component. The page components that use it will need to use the hook and pass the resolved href. **Alternative approach**: Make PromoBanner accept `ctaHref` as the already-resolved path, and let the consuming page handle `useSiteLink()` before passing it. Since PromoBanner is a server component, this is the correct pattern. Pages that need site-link resolution for the PromoBanner CTA should wrap it in a small client component or pass static paths (e.g., `/products` works fine since middleware handles subdomain routing on the server side, and `useSiteLink` is only needed for client-side navigation in dev mode).
-
-Actually, looking at how the existing `CTABanner` component works — it uses a plain `Link` with a plain href, and it works fine. The `?site=` param is only needed for client-side navigation via `<Link>`. Server-rendered links work without it because middleware re-adds the subdomain header on each request. So PromoBanner with plain `Link` is correct.
+Note: PromoBanner uses a plain `Link` (no `useSiteLink()`), matching the existing `CTABanner` pattern. Server-rendered links work without the `?site=` param because middleware handles subdomain routing on each request.
 
 - [ ] **Step 2: Create StatStrip**
 
