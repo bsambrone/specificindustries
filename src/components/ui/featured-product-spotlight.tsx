@@ -21,8 +21,8 @@ export function FeaturedProductSpotlight({
   imagePosition = "right",
 }: FeaturedProductSpotlightProps) {
   const imageBlock = (
-    <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[400px] bg-secondary/10">
-      <Image src={image} alt={title} fill className="object-cover" />
+    <div className="relative aspect-[3/4] md:aspect-auto md:min-h-[400px] bg-secondary/10">
+      <Image src={image} alt={title} fill className="object-cover object-top" />
     </div>
   )
 
