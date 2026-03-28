@@ -4,6 +4,7 @@ import ApexHome from "./pages/home"
 import ApexAbout from "./pages/about"
 import ApexDisclaimer from "./pages/disclaimer"
 import ApexPrivacy from "./pages/privacy"
+import ApexTerms from "./pages/terms"
 
 export { config }
 
@@ -28,6 +29,13 @@ export const pages: Record<string, PageEntry> = {
     metadata: {
       title: "Privacy Policy — Specific Industries",
       description: "How Specific Industries collects, uses, and protects your information across all our properties.",
+    },
+  },
+  "terms": {
+    component: ApexTerms,
+    metadata: {
+      title: "Terms of Use — Specific Industries",
+      description: "Terms of use governing all Specific Industries properties including subdomain sites.",
     },
   },
 }
