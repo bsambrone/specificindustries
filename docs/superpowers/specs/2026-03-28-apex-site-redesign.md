@@ -24,12 +24,12 @@ The legal pages (Privacy Policy, Terms of Use) are fully serious and non-satiric
 
 **"Our Brands" Section:**
 - Section header: "Our Brands"
-- Equal-sized cards in a responsive grid (1 col mobile, 2 col tablet, 3 col desktop)
-- Each card auto-populated from the site registry (excluding apex), showing:
+- Equal-sized cards in a responsive grid (1 col mobile, 2 col tablet, 3 col desktop). When the number of cards doesn't fill the last row evenly, center the remaining cards.
+- Each card is a clickable link (entire card, not a discrete button) auto-populated from the site registry (excluding apex), showing:
   - Site name
   - Site description (from `SiteMetadata.description`)
   - Subtle accent using the site's primary theme color (border or color bar)
-  - "Visit" link pointing to the subdomain (production) or `?site=` param (local dev)
+  - Links to the subdomain (production) or `?site=` param (local dev), using the same `siteHref()` pattern from the current homepage
 - Falls back to "Coming soon" messaging if no subsidiaries are registered
 
 ### 2. About Page (`/about`)
@@ -45,12 +45,14 @@ The legal pages (Privacy Policy, Terms of Use) are fully serious and non-satiric
 
 **Leadership Team:**
 - Uses the shared `TeamMember` component
-- **Bill Sambrone** — Founder & CEO. Static name, static title. Image: `bill-sambrone.png`
-- **3 team members** — Client-side randomized names and titles on every page load:
+- **Bill Sambrone** — Founder & CEO. Static name, static title, static bio. Image: `bill-sambrone.png`. Bio: deadpan corporate founder statement about identifying underserved markets.
+- **3 team members** — Client-side randomized names, titles, and bios on every page load:
   - Names drawn from a pool of corporate-sounding names (e.g., "Richard Thornberry," "James Whitfield," "Douglas Pemberton," "Gregory Ashworth," "Philip Mercer," etc.)
   - Titles drawn from a pool of absurd-but-plausible corporate titles (e.g., "VP of Vertical Integration," "Chief Specificity Officer," "Director of Niche Market Analytics," "SVP of Underserved Sector Strategy")
-  - Images: `member-1.png`, `member-2.png`, `member-3.png` (static — same face, different name each load)
-- This is a `"use client"` component to support the randomization
+  - Bios drawn from a pool of deadpan corporate bio snippets (e.g., "Brings 15 years of experience in identifying niche market opportunities across underserved verticals.")
+  - Images: `member-1.png`, `member-2.png`, `member-3.png` (static — same face, different name/title/bio each load)
+- The About page is a `"use client"` component to support the randomization
+- The `TeamMember` component requires a `bio` prop — all team members (static and randomized) must provide one
 
 ### 3. Disclaimer Page (`/disclaimer`)
 
@@ -122,22 +124,24 @@ Images are PNG format, 1-3MB each. Optimize during implementation if needed (Nex
 
 ### Apex Site
 
-- `<title>`: "Specific Industries — Serving the World's Most Specific Industries"
-- `<meta name="description">`: Deadpan corporate description of the holding company
-- Open Graph tags: `og:title`, `og:description`, `og:image`, `og:type: "website"`
+- Update `src/sites/apex/config.ts` metadata: `title` → "Specific Industries — Serving the World's Most Specific Industries", `description` → deadpan corporate description
+- Update root layout's static `export const metadata: Metadata` to match the new apex branding as the fallback
+- Open Graph tags: `og:title`, `og:description`, `og:type: "website"` (derived from site config metadata)
+- `og:image` is deferred — no OG image asset for now
 - `<meta name="classification" content="satire, entertainment, humor">`
-- Schema.org `CreativeWork` with `genre: "satire"` on the disclaimer page (and optionally site-wide)
+- Schema.org JSON-LD: a single site-wide `CreativeWork` with `genre: "satire"` injected in the root layout. No additional per-page JSON-LD — the layout-level block covers all pages including the disclaimer.
 
 ### All Subdomain Sites
 
 - Ensure `SiteMetadata.title` and `SiteMetadata.description` render as proper `<title>` and `<meta name="description">` tags
 - Open Graph tags derived from site config
-- `<meta name="classification" content="satire, entertainment, humor">` added to all pages via the root layout
-- Schema.org `CreativeWork` with `genre: "satire"` on all pages
+- The same site-wide `<meta name="classification">` and schema.org JSON-LD from the root layout applies to all subdomain pages automatically
 
 ### Implementation
 
-SEO meta tags are set via the `metadata` export (or `generateMetadata`) in the catch-all route page and/or layout. The `classification` meta tag and schema.org JSON-LD can be injected in the root layout since they apply to all pages across all sites.
+- The `classification` meta tag is non-standard and not part of Next.js's `Metadata` API. Use `metadata.other` (e.g., `other: { classification: "satire, entertainment, humor" }`) in the catch-all route's `generateMetadata`, or inject it as a raw `<meta>` tag in the root layout's `<head>`.
+- Schema.org JSON-LD is injected as a `<script type="application/ld+json">` tag in the root layout `<body>` (or `<head>`). One block, site-wide.
+- `generateMetadata` in the catch-all route reads from `site.config.metadata` for per-page titles/descriptions. The root layout's static `metadata` export serves as the fallback.
 
 ## Cross-Site Changes
 
@@ -145,12 +149,12 @@ SEO meta tags are set via the `metadata` export (or `generateMetadata`) in the c
 
 The shared footer (`src/components/layout/footer.tsx`) needs conditional behavior for subdomain sites:
 
-- **On apex:** Footer shows Privacy Policy and Terms of Use links (current behavior, pointing to `/privacy` and `/terms`)
+- **On apex:** Footer shows Privacy Policy and Terms of Use links (current behavior, pointing to `/privacy` and `/terms`). The copyright line should read "© {year} Specific Industries" (no "A Specific Industries company" text since we're already on the apex site).
 - **On subdomains:** Footer additionally shows:
-  - "Specific Industries" link pointing to `https://specificindustries.com` (or apex URL in dev)
-  - "Disclaimer" link pointing to `https://specificindustries.com/disclaimer` (or apex URL in dev)
+  - "Specific Industries" link pointing to `https://specificindustries.com`
+  - "Disclaimer" link pointing to `https://specificindustries.com/disclaimer`
 
-The footer can determine whether it's on apex or a subdomain from the existing site config context.
+The footer checks `config.subdomain === "apex"` to determine which mode to render. For the cross-site links to apex, use absolute production URLs (`https://specificindustries.com/...`) in all environments — these are legal/policy links, not app navigation, so they should always point to the canonical production domain even in local dev.
 
 ### Subdomain Privacy/Terms Page Updates
 
@@ -158,7 +162,7 @@ All existing subdomain privacy and terms pages (currently: pigmilk, dehydratedwa
 
 > "The authoritative policies for all Specific Industries properties are maintained at [specificindustries.com](https://specificindustries.com). [View Privacy Policy](https://specificindustries.com/privacy) | [View Terms of Use](https://specificindustries.com/terms)"
 
-This banner appears above the existing satirical content. The satirical content remains below it unchanged.
+These links use absolute production URLs in all environments (same rationale as the footer — legal references should always point to the canonical domain). This banner appears above the existing satirical content. The satirical content remains below it unchanged.
 
 ## File Structure (New/Modified)
 
@@ -184,8 +188,8 @@ src/sites/pigmilk/pages/
 └── terms.tsx              # MODIFY — add apex authority banner at top
 
 src/sites/dehydratedwater/pages/
-├── privacy.tsx            # MODIFY — add apex authority banner at top (if exists)
-└── terms.tsx              # MODIFY — add apex authority banner at top (if exists)
+├── privacy.tsx            # MODIFY — add apex authority banner at top
+└── terms.tsx              # MODIFY — add apex authority banner at top
 
 public/sites/apex/team/
 ├── bill-sambrone.png      # NEW — copy from Downloads
@@ -201,4 +205,5 @@ public/sites/apex/team/
 - Google Ads integration (just the policy language covering it)
 - Commerce features on apex
 - Contact page
+- Open Graph image (`og:image`) asset — deferred until a branded image is created
 - Image optimization beyond what Next.js `<Image>` provides automatically
