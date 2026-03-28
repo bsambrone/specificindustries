@@ -39,6 +39,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             description: dynamicMeta.description || site.config.metadata.description,
             images: site.config.metadata.ogImage ? [site.config.metadata.ogImage] : [],
           },
+          other: {
+            classification: "satire, entertainment, humor",
+          },
         }
       }
     }
@@ -51,6 +54,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: pageMetadata?.title || site.config.metadata.title,
       description: pageMetadata?.description || site.config.metadata.description,
       images: site.config.metadata.ogImage ? [site.config.metadata.ogImage] : [],
+    },
+    other: {
+      classification: "satire, entertainment, humor",
     },
   }
 }

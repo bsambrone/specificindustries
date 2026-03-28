@@ -13,8 +13,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
-  title: "Specific Industries",
-  description: "Specific Industries — Very Specific Products",
+  title: "Specific Industries — Serving the World's Most Specific Industries",
+  description: "We identify overlooked market segments and build dedicated brands to serve them.",
 }
 
 export default async function RootLayout({
@@ -51,6 +51,22 @@ export default async function RootLayout({
     <html lang="en" className={fontVariables}>
       <head>
         {faviconPath && <link rel="icon" href={faviconPath} />}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "CreativeWork",
+              "genre": "satire",
+              "description": "Specific Industries is a satirical entertainment project featuring fictional brands and products.",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Specific Industries",
+                "url": "https://specificindustries.com",
+              },
+            }),
+          }}
+        />
       </head>
       <body
         className="min-h-screen bg-background text-foreground font-body"
