@@ -21,7 +21,6 @@ export const config: SiteConfig = {
     title: "Dehydrated Water Co. — Purveyors of Fine Powdered Hydration Since 1847",
     description:
       "Premium artisanal dehydrated water, crafted by hand since 1847. Just add water.",
-    previewImage: "/sites/dehydratedwater/product-original.png",
   },
   nav: [
     { label: "Home", path: "/" },
