@@ -14,7 +14,7 @@ export function SplitSection({
   children,
 }: SplitSectionProps) {
   const imageBlock = (
-    <div className="relative min-h-[300px] md:min-h-[400px]">
+    <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[400px]">
       <Image src={image} alt="" fill className="object-cover" />
     </div>
   )
