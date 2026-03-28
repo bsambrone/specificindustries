@@ -20,17 +20,19 @@ Used in: ProductCard, product detail SplitSection, ProductCarousel, FeaturedProd
 | 8 | `product-waas.png` | Premium product photography on dark navy background. A subscription box with dark blue exterior, opened to reveal tissue paper and a wax-sealed packet inside. A calligraphed card sits beside it. Monthly delivery luxury unboxing aesthetic. Warm accent lighting. No text overlays. |
 | 9 | `product-seasoning.png` | Premium product photography on dark navy background. Two small spice-jar-style glass containers with cork tops, one containing slightly cloudy powder, the other containing fine granules. Gourmet seasoning meets laboratory specimen aesthetic. Dramatic studio lighting. No text overlays. |
 
-## Team & Founder Photos (5)
+## Team & Founder Photos (6)
 
 Used in: TeamMember component (cropped to circles), SplitSection on Our Story page
 
-| # | Filename | Prompt |
-|---|----------|--------|
-| 10 | `founder.png` | Victorian-era oil portrait painting of a stern, intense philosopher-farmer in his 50s. 1840s clothing — dark coat, high collar, cravat. Sepia and dark brown tones. Daguerreotype aesthetic. He stares directly at the viewer with the conviction of a man who truly believes water is burdened by its own wetness. Ornate gilded frame visible at edges. |
-| 11 | `team-ezekiel-i.png` | Victorian daguerreotype-style portrait of an elderly man with wild white hair and piercing eyes. 1880s clothing. Formal pose but with an expression of intense philosophical certainty. Sepia tones, oval vignette, aged and slightly faded. The original Ezekiel Drywell. |
-| 12 | `team-ezekiel-iv.png` | Portrait photograph of a modern man in his 60s wearing a tweed jacket and vintage spectacles, standing in a wood-paneled study filled with old leather-bound books and brass instruments. Serious, dignified expression. Warm natural lighting from a window. Professional portrait photography. |
-| 13 | `team-prudence.png` | Portrait photograph of a stern woman in her 40s wearing a white laboratory coat over a high-collared Victorian-style blouse. She holds a clipboard and looks directly at the camera with an expression of professional skepticism. Clean, well-lit laboratory setting in the background. Professional portrait photography. |
-| 14 | `team-thaddeus.png` | Portrait photograph of a man in his 30s wearing a white lab coat and old-fashioned round spectacles, holding up an empty glass beaker and examining it with exaggerated scientific intensity. Victorian laboratory setting with copper equipment in background. Warm amber lighting. Professional portrait photography. |
+**Note:** The founder portrait (#10) is an AI-generated Victorian version of the site owner (no base image needed — pure generation). Team member #11 (Ezekiel IV) uses the site owner as a base image. Team members #12-14 use 3 friends as base images. Upload each base image to OpenAI and use the prompt to style-transfer the person into the described setting.
+
+| # | Filename | Base Image | Prompt |
+|---|----------|------------|--------|
+| 10 | `founder.png` | None (pure AI generation, but reference site owner's features) | Victorian-era oil portrait painting of a stern, intense philosopher-farmer in his 50s, aged to look like he's from 1847. 1840s clothing — dark coat, high collar, cravat. Sepia and dark brown tones. Daguerreotype aesthetic. He stares directly at the viewer with the conviction of a man who truly believes water is burdened by its own wetness. Ornate gilded frame visible at edges. |
+| 11 | `team-ezekiel-iv.png` | Site owner (you) | Professional portrait photograph. The subject wears a tweed jacket and vintage round spectacles, standing in a wood-paneled study filled with old leather-bound books and brass instruments. Serious, dignified expression befitting a 7th-generation company patriarch. Warm natural lighting from a window. Heritage luxury aesthetic. Professional portrait photography. |
+| 12 | `team-thaddeus.png` | Friend #1 | Professional portrait photograph. The subject wears a white lab coat and old-fashioned round spectacles, holding up an empty glass beaker and examining it with exaggerated scientific intensity. Victorian laboratory setting with copper equipment in background. Warm amber lighting. The expression should convey "I have a degree from an institution I prefer not to name." Thaddeus Pemberton, Chief Science Officer. Professional portrait photography. |
+| 13 | `team-percival.png` | Friend #2 | Professional portrait photograph. The subject wears a white laboratory coat over a high-collared shirt and dark waistcoat. He holds a clipboard and looks directly at the camera with an expression of professional skepticism. Clean, well-lit laboratory setting in the background. Stern quality inspector energy. Percival Ashcroft, Head of Quality Assurance. Professional portrait photography. |
+| 14 | `team-cornelius.png` | Friend #3 | Professional portrait photograph. The subject wears a dark navy apron over a rolled-sleeve dress shirt, standing in a workshop setting with shelves of powder-filled jars behind him. Arms folded, confident expression. The look of a man who takes the dehydration of water very seriously. Cornelius Wainwright, Director of Dehydration Operations. Warm directional lighting. Professional portrait photography. |
 
 ## Science & Process Images (4)
 
@@ -42,6 +44,8 @@ Used in: ProcessFlow component on The Science page
 | 16 | `science-evaporation.png` | Dramatic close-up in a dark Victorian laboratory. Steam rising from a large copper vessel, backlit with warm golden light. Glass tubes and condensation coils visible in the shadows. Moody, atmospheric, like a scene from a period drama. No people. |
 | 17 | `science-capture.png` | Victorian laboratory apparatus — an elaborate condensation system with copper coils, glass tubes, and a cold metal surface where water droplets are forming. Cool blue-green lighting. Scientific precision meets 19th-century craftsmanship. No people. |
 | 18 | `science-dehydration.png` | Dramatic close-up of fine white powder cascading into a heritage-style packet in a dark laboratory setting. Dramatic side lighting creating a beam effect on the falling powder. Dark navy background with teal accent lighting. The final step of a mysterious process. No people. |
+
+**Note:** Team member #11 previously used filename `team-ezekiel-i.png` — this file has been removed. The founder is now only `founder.png`. Team filenames are: `team-ezekiel-iv.png`, `team-thaddeus.png`, `team-percival.png`, `team-cornelius.png`.
 
 ## Site & Background Images (6)
 
@@ -59,7 +63,7 @@ Used in: Hero backgrounds, SplitSection backgrounds, FeaturedProductSpotlight
 ## Checklist
 
 - [ ] Product images (9)
-- [ ] Team & founder photos (5)
+- [ ] Team & founder photos (6) — founder is pure AI, Ezekiel IV uses site owner base, 3 friends for other team
 - [ ] Science & process images (4)
 - [ ] Site & background images (6)
 - [ ] Replace placeholder PNGs in `public/sites/dehydratedwater/`

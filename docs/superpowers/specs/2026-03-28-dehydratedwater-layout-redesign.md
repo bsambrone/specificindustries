@@ -269,7 +269,7 @@ New section flow (no two sections share the same visual structure):
 4. **AnimatedCounter** — "179 Years of Unnecessary Innovation"
 5. **CascadeTimeline** — All timeline items. Desktop: cascading horizontal with arrows. Mobile: vertical fallback.
 6. **SplitSection** (dark, image left) — Quote section: "Water is burdened by its own wetness." — Ezekiel Drywell I, 1847. Background image with dark overlay.
-7. **Team grid** — "The Drywell Family" using TeamMember component in 4-column grid.
+7. **Team grid** — "The Team" using TeamMember component in 4-column grid. Ezekiel Drywell IV (patriarch), Thaddeus Pemberton (Chief Science Officer), Percival Ashcroft (Head of Quality Assurance), Cornelius Wainwright (Director of Dehydration Operations).
 8. **PromoBanner** — "Join the legacy — Subscribe to WaaS"
 
 ### The Science (`/the-science`)
@@ -286,7 +286,7 @@ New section flow (no two sections share the same visual structure):
 5. **ComparisonTable** — "The Drywell Method™ vs. Other Approaches":
    - Columns: Drywell Method (highlighted), Filtration, Boiling, Doing Nothing
    - Rows: Time Required (179 years / Minutes / Minutes / None), Effectiveness (Theoretical / Proven / Proven / Surprisingly High), Scientific Rigor (Aspirational / Established / Established / N/A), Heritage Factor (7 generations / None / None / Timeless), Patent Status (Pending since 1889 / Expired / Public domain / Not applicable)
-   - Footnote: "Comparison conducted by Thaddeus Drywell, who holds a degree from an institution he prefers not to name."
+   - Footnote: "Comparison conducted by Thaddeus Pemberton, who holds a degree from an institution he prefers not to name."
 6. **Publications section** — Fake journal citations in italic prose, light treatment.
 
 ### WaaS (`/waas`)

@@ -22,13 +22,7 @@ const timelineItems = [
   { year: "2026", description: "You are here. We are grateful. Ezekiel would be confused, but grateful." },
 ]
 
-const familyMembers = [
-  {
-    name: "Ezekiel Drywell I",
-    title: "Founder (1847–1901)",
-    image: "/sites/dehydratedwater/team-ezekiel-i.png",
-    bio: "Believed water was 'burdened by its own wetness.' Spent 54 years trying to prove it. Never did.",
-  },
+const teamMembers = [
   {
     name: "Ezekiel Drywell IV",
     title: "Current Patriarch",
@@ -36,16 +30,22 @@ const familyMembers = [
     bio: "Runs the company with the same quiet determination and fundamental misunderstanding of hydration as his ancestors.",
   },
   {
-    name: "Prudence Drywell",
-    title: "Head of Quality Assurance",
-    image: "/sites/dehydratedwater/team-prudence.png",
-    bio: "Has never once tasted the product. Considers this a point of professional pride.",
-  },
-  {
-    name: "Thaddeus Drywell",
+    name: "Thaddeus Pemberton",
     title: "Chief Science Officer",
     image: "/sites/dehydratedwater/team-thaddeus.png",
     bio: "Holds a degree in 'Theoretical Hydrology' from an institution he prefers not to name.",
+  },
+  {
+    name: "Percival Ashcroft",
+    title: "Head of Quality Assurance",
+    image: "/sites/dehydratedwater/team-percival.png",
+    bio: "Has never once tasted the product. Considers this a point of professional pride.",
+  },
+  {
+    name: "Cornelius Wainwright",
+    title: "Director of Dehydration Operations",
+    image: "/sites/dehydratedwater/team-cornelius.png",
+    bio: "Oversees the day-to-day removal of water from water. Takes his work very seriously. Possibly too seriously.",
   },
 ]
 
@@ -80,10 +80,10 @@ export default function OurStory() {
       <section className="py-16 px-4 bg-secondary/10">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-heading font-bold text-primary text-center mb-12">
-            The Drywell Family
+            The Team
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {familyMembers.map((member) => (
+            {teamMembers.map((member) => (
               <TeamMember
                 key={member.name}
                 name={member.name}
