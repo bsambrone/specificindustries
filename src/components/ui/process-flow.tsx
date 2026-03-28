@@ -21,7 +21,7 @@ function StepVariantA({ step }: { step: ProcessStep }) {
         <h3 className="text-2xl font-heading font-bold text-foreground mb-3">{step.title}</h3>
         <p className="text-foreground/70 leading-relaxed">{step.description}</p>
       </div>
-      <div className="relative aspect-[2/3] rounded-lg overflow-hidden">
+      <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
         <Image src={step.image} alt={step.title} fill className="object-cover" />
       </div>
     </div>
@@ -44,7 +44,7 @@ function StepVariantB({ step }: { step: ProcessStep }) {
 function StepVariantC({ step }: { step: ProcessStep }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr_100px] gap-6 items-center">
-      <div className="relative aspect-[2/3] rounded-lg overflow-hidden">
+      <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
         <Image src={step.image} alt={step.title} fill className="object-cover" />
       </div>
       <div>
@@ -61,7 +61,7 @@ function StepVariantC({ step }: { step: ProcessStep }) {
 function StepVariantD({ step }: { step: ProcessStep }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-6 items-center">
-      <div className="relative aspect-[2/3] rounded-lg overflow-hidden">
+      <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
         <Image src={step.image} alt={step.title} fill className="object-cover" />
       </div>
       <div>
