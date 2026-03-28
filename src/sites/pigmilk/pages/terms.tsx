@@ -85,18 +85,6 @@ export default function PigMilkTerms() {
             a living, but he is reasonable.
           </p>
 
-          <h2 className="text-2xl font-heading font-bold text-primary">8. Satire Disclaimer</h2>
-          <p>
-            This entire website is satire. Pig Milk Co. is not a real company. You cannot actually buy
-            pig milk here. The checkout page will never work. This was always the plan. If you&apos;ve
-            read this far, we respect your commitment and would like to offer you a position as
-            our Legal Intern (unpaid, unlimited pig milk).
-          </p>
-
-          <p className="text-sm text-foreground/40 italic border-t border-primary/10 pt-6">
-            These terms are a work of satire. No legal obligations are created by visiting this website.
-            No pigs were consulted in the drafting of these terms, though several were present and appeared disinterested.
-          </p>
         </div>
       </section>
     </>

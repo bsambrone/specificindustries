@@ -30,14 +30,6 @@ export default function DehydratedWaterTerms() {
             Effective: Retroactively, since 1847. Jurisdiction: The Drywell Estate, Vermont (fictional).
           </p>
 
-          <p className="text-sm text-foreground/50 bg-secondary/20 border border-primary/10 rounded-lg p-4">
-            <strong>Satire Disclaimer:</strong> Dehydrated Water Co. is a fictional company.
-            These terms of use are a work of humor and do not constitute a real legal agreement.
-            No binding obligations are created by visiting this website. No water &mdash;
-            dehydrated or otherwise &mdash; was harmed in the making of these terms.
-            Please do not attempt to return liquid water in a paper envelope.
-          </p>
-
           <h2 className="text-2xl font-heading font-bold text-primary">1. Acceptance of Terms</h2>
           <p>
             By visiting this website, you agree to these terms. By reading these terms, you agree
@@ -176,18 +168,6 @@ export default function DehydratedWaterTerms() {
             of matter, consciousness, and corporate governance.
           </p>
 
-          <p className="text-sm text-foreground/40 italic border-t border-primary/10 pt-6">
-            The aforegoing contractual instrument, herein designated &ldquo;Terms of Use,&rdquo;
-            exists as a metastable supersaturated solution of satirical intent in which the
-            solute concentration of actual legal obligation has been reduced below the limit
-            of detection (LOD &lt; 1 &times; 10<sup>-15</sup> mol/L). No binding agreement
-            is formed, no consideration exchanged, and no meeting of the minds achieved at
-            any point along the reaction coordinate. The Gibbs free energy of enforceability
-            (&Delta;G<sub>enforce</sub>) is positive under all conditions, indicating a
-            non-spontaneous process. No water &mdash; dehydrated, hydrated, or in any
-            intermediate state along the phase diagram &mdash; was harmed. Reginald remains
-            fictional and thermodynamically inert.
-          </p>
         </div>
       </section>
     </>

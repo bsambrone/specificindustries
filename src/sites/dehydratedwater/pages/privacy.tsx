@@ -30,13 +30,6 @@ export default function DehydratedWaterPrivacy() {
             Last updated: The 14th of Drytober, Year of Our Powder CLXXIX
           </p>
 
-          <p className="text-sm text-foreground/50 bg-secondary/20 border border-primary/10 rounded-lg p-4">
-            <strong>Satire Disclaimer:</strong> Dehydrated Water Co. is a fictional company.
-            This privacy policy is a work of humor and does not constitute a real legal document.
-            No actual data is collected, stored, processed, or dehydrated. Please do not send us
-            your personal information. We would not know what to do with it.
-          </p>
-
           <h2 className="text-2xl font-heading font-bold text-primary">1. Introduction</h2>
           <p>
             Welcome to the Dehydrated Water Co. Privacy Policy. We take your privacy seriously,
@@ -172,16 +165,6 @@ export default function DehydratedWaterPrivacy() {
             across all accessible microstates of our legal framework.
           </p>
 
-          <p className="text-sm text-foreground/40 italic border-t border-primary/10 pt-6">
-            The aforegoing instrument of data-governance, herein designated the &ldquo;Privacy
-            Policy,&rdquo; constitutes a saturated solution of satirical intent whose molarity
-            exceeds the solubility product constant (K<sub>sp</sub>) of any reasonable legal
-            document. No actual data undergoes collection, osmotic parsing, thermodynamic
-            retention, or Raoultian security protocols. The Boltzmann distribution of this
-            document&apos;s seriousness asymptotically approaches zero across all accessible
-            energy states. Reginald the cat, while fictional, would achieve spontaneous
-            crystallization of guard-cat behavior under standard conditions (298 K, 1 atm).
-          </p>
         </div>
       </section>
     </>

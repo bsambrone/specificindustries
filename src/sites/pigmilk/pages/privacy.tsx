@@ -78,11 +78,6 @@ export default function PigMilkPrivacy() {
             They never do.
           </p>
 
-          <p className="text-sm text-foreground/40 italic border-t border-primary/10 pt-6">
-            This privacy policy is a work of satire and is not legally binding. Pig Milk Co. is a fictional
-            company. No actual data is collected, stored, or sold. The pigs are, however, very real,
-            and they really do judge you.
-          </p>
         </div>
       </section>
     </>
