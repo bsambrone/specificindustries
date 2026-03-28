@@ -1,9 +1,11 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
 import { getProductBySlug } from "@/sites/dehydratedwater/data/products"
 import { AddToCartButton } from "@/components/commerce/add-to-cart-button"
+import { SplitSection } from "@/components/ui/split-section"
+import { WaveDivider } from "@/components/ui/wave-divider"
+import { PromoBanner } from "@/components/ui/promo-banner"
 import { useSiteLink } from "@/hooks/use-site-link"
 
 export default function ProductDetail({ slug }: { slug: string }) {
@@ -13,36 +15,39 @@ export default function ProductDetail({ slug }: { slug: string }) {
 
   return (
     <>
-      {/* Product Hero */}
-      <section className="py-12 px-4">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          <div className="relative aspect-square rounded-lg overflow-hidden bg-secondary/10">
-            <Image src={product.image} alt={product.name} fill className="object-cover" />
-          </div>
-          <div>
-            <h1 className="text-4xl font-heading font-bold text-foreground mb-2">{product.name}</h1>
-            <p className="text-lg text-foreground/60 mb-4">{product.tagline}</p>
-            <p className="text-3xl font-bold text-primary mb-6">{product.priceLabel}</p>
-            <div className="mb-8">
-              {product.isSubscription ? (
-                <Link
-                  href={siteHref("/waas")}
-                  className="inline-block px-8 py-4 bg-primary text-white rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity"
-                >
-                  View Subscription Plans
-                </Link>
-              ) : (
-                <AddToCartButton
-                  slug={product.slug}
-                  productName={product.name}
-                  className="px-8 py-4 bg-primary text-white rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity w-full sm:w-auto"
-                />
-              )}
-            </div>
-            {product.description.map((para, i) => (
-              <p key={i} className="text-foreground/70 mb-4 leading-relaxed">{para}</p>
-            ))}
-          </div>
+      {/* Product Hero — SplitSection */}
+      <SplitSection image={product.image} imagePosition="left">
+        <h1 className="text-4xl font-heading font-bold text-foreground mb-2">{product.name}</h1>
+        <p className="text-lg text-foreground/60 mb-4">{product.tagline}</p>
+        <p className="text-3xl font-bold text-primary mb-6">{product.priceLabel}</p>
+        <div className="mb-8">
+          {product.isSubscription ? (
+            <Link
+              href={siteHref("/waas")}
+              className="inline-block px-8 py-4 bg-primary text-white font-semibold text-lg hover:opacity-90 transition-opacity"
+            >
+              View Subscription Plans
+            </Link>
+          ) : (
+            <AddToCartButton
+              slug={product.slug}
+              productName={product.name}
+              className="px-8 py-4 bg-primary text-white font-semibold text-lg hover:opacity-90 transition-opacity w-full sm:w-auto"
+            />
+          )}
+        </div>
+      </SplitSection>
+
+      <WaveDivider variant="wave1" />
+
+      {/* Full-width description prose */}
+      <section className="py-16 px-4">
+        <div className="max-w-3xl mx-auto">
+          {product.description.map((para, i) => (
+            <p key={i} className="text-foreground/70 mb-4 leading-relaxed text-lg">
+              {para}
+            </p>
+          ))}
         </div>
       </section>
 
@@ -76,10 +81,10 @@ export default function ProductDetail({ slug }: { slug: string }) {
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-heading font-bold text-center mb-8">Available Variants</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {product.variants.map((variant) => (
-                <div key={variant.name} className="border border-primary/20 rounded-lg p-6">
-                  <h3 className="font-heading font-bold text-primary mb-2">{variant.name}</h3>
+                <div key={variant.name} className="border border-accent/30 rounded-lg p-6 flex-1 max-w-sm">
+                  <h3 className="font-heading font-bold text-accent mb-2">{variant.name}</h3>
                   <p className="text-foreground/70 text-sm">{variant.description}</p>
                 </div>
               ))}
@@ -87,6 +92,12 @@ export default function ProductDetail({ slug }: { slug: string }) {
           </div>
         </section>
       )}
+
+      <PromoBanner
+        headline="Browse the Collection"
+        ctaText="View All Products"
+        ctaHref="/products"
+      />
     </>
   )
 }
