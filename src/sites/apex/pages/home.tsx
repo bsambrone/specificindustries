@@ -40,20 +40,20 @@ export default async function ApexHome() {
                 <a
                   key={subdomain}
                   href={siteHref(subdomain)}
-                  className="block w-full max-w-sm rounded-lg border border-primary/10 hover:border-primary/30 transition-colors overflow-hidden"
+                  className="flex items-center gap-4 w-full max-w-sm p-6 rounded-lg border border-primary/10 hover:border-primary/30 transition-colors"
                   style={{ borderTopColor: site.config.theme.colors.primary, borderTopWidth: "3px" }}
                 >
                   {site.config.metadata.previewImage && (
-                    <div className="relative h-48 bg-secondary/10">
+                    <div className="relative w-20 h-20 flex-shrink-0">
                       <Image
                         src={site.config.metadata.previewImage}
                         alt={site.config.name}
                         fill
-                        className="object-contain p-4"
+                        className="object-contain"
                       />
                     </div>
                   )}
-                  <div className="p-6">
+                  <div>
                     <h3 className="text-xl font-heading font-semibold text-primary mb-2">
                       {site.config.name}
                     </h3>
