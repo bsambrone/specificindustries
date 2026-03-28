@@ -18,11 +18,13 @@ export const config: SiteConfig = {
     },
   },
   metadata: {
-    title: "Specific Industries — Very Specific Products",
-    description: "We make very specific products for very specific people.",
+    title: "Specific Industries — Serving the World's Most Specific Industries",
+    description: "We identify overlooked market segments and build dedicated brands to serve them. Specific Industries is the parent company behind a portfolio of brands serving the world's most specific industries.",
   },
   nav: [
     { label: "Home", path: "/" },
+    { label: "About", path: "/about" },
+    { label: "Disclaimer", path: "/disclaimer" },
   ],
   features: {
     commerce: false,
