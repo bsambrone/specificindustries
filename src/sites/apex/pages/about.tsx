@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Hero } from "@/components/ui/hero"
 import { TeamMember } from "@/components/ui/team-member"
 
@@ -52,17 +52,25 @@ function shuffleAndPick<T>(arr: T[], count: number): T[] {
 }
 
 export default function ApexAbout() {
-  const [teamMembers] = useState(() => {
+  const defaultMembers = [
+    { image: "/sites/apex/team/member-1.png", name: TEAM_NAMES[0], title: TEAM_TITLES[0], bio: TEAM_BIOS[0] },
+    { image: "/sites/apex/team/member-2.png", name: TEAM_NAMES[1], title: TEAM_TITLES[1], bio: TEAM_BIOS[1] },
+    { image: "/sites/apex/team/member-3.png", name: TEAM_NAMES[2], title: TEAM_TITLES[2], bio: TEAM_BIOS[2] },
+  ]
+
+  const [teamMembers, setTeamMembers] = useState(defaultMembers)
+
+  useEffect(() => {
     const names = shuffleAndPick(TEAM_NAMES, 3)
     const titles = shuffleAndPick(TEAM_TITLES, 3)
     const bios = shuffleAndPick(TEAM_BIOS, 3)
 
-    return [
+    setTeamMembers([
       { image: "/sites/apex/team/member-1.png", name: names[0], title: titles[0], bio: bios[0] },
       { image: "/sites/apex/team/member-2.png", name: names[1], title: titles[1], bio: bios[1] },
       { image: "/sites/apex/team/member-3.png", name: names[2], title: titles[2], bio: bios[2] },
-    ]
-  })
+    ])
+  }, [])
 
   return (
     <>
