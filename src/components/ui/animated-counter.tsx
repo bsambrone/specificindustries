@@ -54,7 +54,7 @@ export function AnimatedCounter({
   }, [end, duration, hasAnimated])
 
   return (
-    <div ref={ref} className="py-10 px-4 text-center">
+    <div ref={ref} className="py-6 md:py-8 px-4 text-center">
       <div className="font-mono text-5xl md:text-6xl font-bold text-foreground">
         {prefix}{count.toLocaleString()}{suffix}
       </div>

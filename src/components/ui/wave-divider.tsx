@@ -19,7 +19,7 @@ export function WaveDivider({
 }: WaveDividerProps) {
   return (
     <div
-      className="relative w-full overflow-hidden"
+      className="relative w-full overflow-hidden md:max-h-8"
       style={{
         backgroundColor: fromColor,
         transform: flip ? "scaleY(-1)" : undefined,

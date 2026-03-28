@@ -16,15 +16,21 @@ export function SplitSection({
   children,
 }: SplitSectionProps) {
   const imageBlock = (
-    <div className="relative aspect-[4/3] md:aspect-auto md:h-full md:min-h-[400px] md:max-h-[500px]">
-      <Image src={image} alt="" fill className={imageClassName || "object-cover object-top"} />
+    <div className="flex items-center justify-center">
+      <Image
+        src={image}
+        alt=""
+        width={1024}
+        height={1536}
+        className={imageClassName || "max-h-[500px] w-auto h-auto"}
+      />
     </div>
   )
 
   const textBlock = (
     <div
-      className={`flex flex-col justify-center p-8 md:p-12 lg:p-16 ${
-        dark ? "bg-primary text-white" : "bg-background text-foreground"
+      className={`flex flex-col justify-center ${
+        dark ? "text-white" : "text-foreground"
       }`}
     >
       {children}
@@ -32,18 +38,20 @@ export function SplitSection({
   )
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2">
-      {imagePosition === "left" ? (
-        <>
-          {imageBlock}
-          {textBlock}
-        </>
-      ) : (
-        <>
-          {textBlock}
-          {imageBlock}
-        </>
-      )}
+    <section className={`py-12 md:py-16 px-4 ${dark ? "bg-primary" : ""}`}>
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+        {imagePosition === "left" ? (
+          <>
+            {imageBlock}
+            {textBlock}
+          </>
+        ) : (
+          <>
+            {textBlock}
+            {imageBlock}
+          </>
+        )}
+      </div>
     </section>
   )
 }

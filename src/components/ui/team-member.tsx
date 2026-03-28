@@ -10,7 +10,7 @@ interface TeamMemberProps {
 export function TeamMember({ image, name, title, bio }: TeamMemberProps) {
   return (
     <div className="text-center">
-      <div className="relative w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden bg-secondary/20 flex items-center justify-center">
+      <div className="relative w-56 h-56 mx-auto mb-4 rounded-full overflow-hidden bg-secondary/20 flex items-center justify-center">
         <Image src={image} alt={name} fill className="object-cover object-top" />
       </div>
       <h3 className="text-xl font-heading font-semibold text-primary">{name}</h3>

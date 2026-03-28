@@ -21,13 +21,19 @@ export function FeaturedProductSpotlight({
   imagePosition = "right",
 }: FeaturedProductSpotlightProps) {
   const imageBlock = (
-    <div className="relative aspect-[4/3] md:aspect-auto md:h-full md:min-h-[400px] md:max-h-[500px] bg-secondary/10">
-      <Image src={image} alt={title} fill className="object-cover object-top" />
+    <div className="flex items-center justify-center">
+      <Image
+        src={image}
+        alt={title}
+        width={1024}
+        height={1536}
+        className="max-h-[500px] w-auto h-auto"
+      />
     </div>
   )
 
   const textBlock = (
-    <div className="flex flex-col justify-center p-8 md:p-12 lg:p-16">
+    <div className="flex flex-col justify-center">
       {eyebrow && (
         <span className="text-accent text-xs font-heading tracking-[0.2em] uppercase mb-3">
           {eyebrow}
@@ -49,18 +55,20 @@ export function FeaturedProductSpotlight({
   )
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2">
-      {imagePosition === "left" ? (
-        <>
-          {imageBlock}
-          {textBlock}
-        </>
-      ) : (
-        <>
-          {textBlock}
-          {imageBlock}
-        </>
-      )}
+    <section className="py-12 md:py-16 px-4">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+        {imagePosition === "left" ? (
+          <>
+            {imageBlock}
+            {textBlock}
+          </>
+        ) : (
+          <>
+            {textBlock}
+            {imageBlock}
+          </>
+        )}
+      </div>
     </section>
   )
 }

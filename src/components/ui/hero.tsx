@@ -33,7 +33,7 @@ export function Hero({
 
   return (
     <section
-      className={`relative py-24 md:py-32 px-4 ${
+      className={`relative py-16 md:py-24 px-4 ${
         dark && !hasImage
           ? "bg-gradient-to-br from-primary to-accent/40"
           : hasImage

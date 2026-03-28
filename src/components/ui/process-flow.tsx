@@ -21,8 +21,14 @@ function StepVariantA({ step }: { step: ProcessStep }) {
         <h3 className="text-2xl font-heading font-bold text-foreground mb-3">{step.title}</h3>
         <p className="text-foreground/70 leading-relaxed">{step.description}</p>
       </div>
-      <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
-        <Image src={step.image} alt={step.title} fill className="object-cover" />
+      <div className="flex items-center justify-center">
+        <Image
+          src={step.image}
+          alt={step.title}
+          width={1024}
+          height={1536}
+          className="max-h-[400px] w-auto h-auto rounded-lg"
+        />
       </div>
     </div>
   )
@@ -30,7 +36,7 @@ function StepVariantA({ step }: { step: ProcessStep }) {
 
 function StepVariantB({ step }: { step: ProcessStep }) {
   return (
-    <div className="relative min-h-[300px] flex items-center justify-center overflow-hidden rounded-lg">
+    <div className="relative min-h-[400px] flex items-center justify-center overflow-hidden rounded-lg">
       <Image src={step.image} alt={step.title} fill className="object-cover brightness-[0.3]" />
       <div className="relative z-10 text-center p-8 max-w-2xl">
         <div className="text-5xl font-heading font-bold text-accent/50 mb-2">{step.number}</div>
@@ -44,8 +50,14 @@ function StepVariantB({ step }: { step: ProcessStep }) {
 function StepVariantC({ step }: { step: ProcessStep }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr_100px] gap-6 items-center">
-      <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
-        <Image src={step.image} alt={step.title} fill className="object-cover" />
+      <div className="flex items-center justify-center">
+        <Image
+          src={step.image}
+          alt={step.title}
+          width={1024}
+          height={1536}
+          className="max-h-[400px] w-auto h-auto rounded-lg"
+        />
       </div>
       <div>
         <h3 className="text-2xl font-heading font-bold text-foreground mb-3">{step.title}</h3>
@@ -61,8 +73,14 @@ function StepVariantC({ step }: { step: ProcessStep }) {
 function StepVariantD({ step }: { step: ProcessStep }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-6 items-center">
-      <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
-        <Image src={step.image} alt={step.title} fill className="object-cover" />
+      <div className="flex items-center justify-center">
+        <Image
+          src={step.image}
+          alt={step.title}
+          width={1024}
+          height={1536}
+          className="max-h-[400px] w-auto h-auto rounded-lg"
+        />
       </div>
       <div>
         <div className="text-5xl font-heading font-bold text-accent/20 mb-2">{step.number}</div>

@@ -8,7 +8,7 @@ interface StatStripProps {
 
 export function StatStrip({ stats }: StatStripProps) {
   return (
-    <section className="py-10 px-4 bg-secondary/10">
+    <section className="py-6 md:py-8 px-4 bg-secondary/10">
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
         {stats.map((stat, i) => (
           <div key={i} className="text-center flex flex-col items-center">
