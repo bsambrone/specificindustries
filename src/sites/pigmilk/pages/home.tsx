@@ -40,11 +40,15 @@ export default function PigMilkHome() {
 
       {/* As Seen On */}
       <section className="py-12 px-4 bg-secondary/10">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-foreground/40 text-sm uppercase tracking-widest mb-6">As featured in publications we made up</p>
-          <div className="relative h-24">
-            <Image src="/sites/pigmilk/press-logos.png" alt="Press logos" fill className="object-contain opacity-60" />
-          </div>
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="text-foreground/40 text-sm uppercase tracking-widest mb-8">As featured in publications we made up</p>
+          <Image
+            src="/sites/pigmilk/press-logos.png"
+            alt="Press logos"
+            width={1200}
+            height={200}
+            className="w-full h-auto opacity-70"
+          />
         </div>
       </section>
 
