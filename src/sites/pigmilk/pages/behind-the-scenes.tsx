@@ -40,6 +40,8 @@ export default function PigMilkBehindTheScenes() {
 
       <ImageTextSection
         image="/sites/pigmilk/bts-milking.png"
+        imageClassName="object-cover object-center"
+        imageAspect="aspect-square"
         title="Extraction"
         description="Our proprietary technique is gentle, respectful, and yields approximately one tablespoon per session. We're working on improving this. The pigs are not."
         imagePosition="left"
