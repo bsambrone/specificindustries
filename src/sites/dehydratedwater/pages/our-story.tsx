@@ -1,7 +1,10 @@
 import { Hero } from "@/components/ui/hero"
-import { ImageTextSection } from "@/components/ui/image-text-section"
-import { Timeline } from "@/components/ui/timeline"
+import { WaveDivider } from "@/components/ui/wave-divider"
+import { SplitSection } from "@/components/ui/split-section"
+import { AnimatedCounter } from "@/components/ui/animated-counter"
+import { CascadeTimeline } from "@/components/ui/cascade-timeline"
 import { TeamMember } from "@/components/ui/team-member"
+import { PromoBanner } from "@/components/ui/promo-banner"
 
 export const metadata = {
   title: "Our Story — Dehydrated Water Co.",
@@ -53,30 +56,64 @@ export default function OurStory() {
   return (
     <>
       <Hero
+        dark
         headline="Our Story"
         subheadline="Seven generations of the Drywell family, united by a singular, unnecessary vision."
       />
 
-      <ImageTextSection
-        image="/sites/dehydratedwater/founder.png"
-        imageAspect="aspect-square"
-        title="The Founding Vision"
-        description={
-          "In 1847, Ezekiel Drywell — philosopher, farmer, and man of deeply specific convictions — stood before a well on his Vermont homestead and had a revelation. " +
-          "'Water,' he wrote in his journal, 'is burdened by its own wetness. Its essence is trapped in liquid form, like a bird in a cage made of itself.'\n\n" +
-          "What followed was three years of failed experiments, a barn fire, and the eventual creation of the world's first packet of dehydrated water. " +
-          "His neighbors called him mad. His wife called him 'exhausting.' Ezekiel called it progress.\n\n" +
-          "Nearly two centuries later, the Drywell family continues to honor Ezekiel's vision — not because it makes sense, but because at this point, it would be more embarrassing to stop."
-        }
+      <WaveDivider variant="wave1" />
+
+      {/* Founding story — SplitSection image right */}
+      <SplitSection image="/sites/dehydratedwater/founder.png" imagePosition="right">
+        <h2 className="text-3xl font-heading font-bold text-foreground mb-4">The Founding Vision</h2>
+        <p className="text-foreground/70 mb-4 leading-relaxed">
+          In 1847, Ezekiel Drywell — philosopher, farmer, and man of deeply specific convictions —
+          stood before a well on his Vermont homestead and had a revelation.
+          &ldquo;Water,&rdquo; he wrote in his journal, &ldquo;is burdened by its own wetness. Its essence is
+          trapped in liquid form, like a bird in a cage made of itself.&rdquo;
+        </p>
+        <p className="text-foreground/70 mb-4 leading-relaxed">
+          What followed was three years of failed experiments, a barn fire, and the eventual
+          creation of the world&apos;s first packet of dehydrated water. His neighbors called him mad.
+          His wife called him &ldquo;exhausting.&rdquo; Ezekiel called it progress.
+        </p>
+        <p className="text-foreground/70 leading-relaxed">
+          Nearly two centuries later, the Drywell family continues to honor Ezekiel&apos;s vision —
+          not because it makes sense, but because at this point, it would be more embarrassing to stop.
+        </p>
+      </SplitSection>
+
+      <AnimatedCounter
+        end={179}
+        label="Years of Unnecessary Innovation"
+        suffix=" Years"
       />
 
+      {/* CascadeTimeline */}
       <section className="py-16 px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-heading font-bold text-primary">Company Timeline</h2>
         </div>
-        <Timeline items={timelineItems} />
+        <CascadeTimeline items={timelineItems} />
       </section>
 
+      {/* Quote SplitSection — dark, image left */}
+      <SplitSection
+        image="/sites/dehydratedwater/science-dehydration.png"
+        imagePosition="left"
+        dark
+      >
+        <blockquote className="text-white">
+          <p className="text-2xl md:text-3xl font-heading italic mb-6 leading-relaxed">
+            &ldquo;Water is burdened by its own wetness.&rdquo;
+          </p>
+          <footer className="text-white/70 text-sm uppercase tracking-wide">
+            — Ezekiel Drywell I, 1847
+          </footer>
+        </blockquote>
+      </SplitSection>
+
+      {/* Team grid */}
       <section className="py-16 px-4 bg-secondary/10">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-heading font-bold text-primary text-center mb-12">
@@ -95,6 +132,12 @@ export default function OurStory() {
           </div>
         </div>
       </section>
+
+      <PromoBanner
+        headline="Join the legacy — Subscribe to WaaS"
+        ctaText="Explore WaaS"
+        ctaHref="/waas"
+      />
     </>
   )
 }
