@@ -106,10 +106,10 @@ export default function ApexTerms() {
           <p>
             If you have questions about these Terms of Use, please contact us at:{" "}
             <a
-              href="mailto:legal@specificindustries.com"
+              href="mailto:bsambrone@gmail.com"
               className="text-accent underline hover:text-primary transition-colors"
             >
-              legal@specificindustries.com
+              bsambrone@gmail.com
             </a>
           </p>
         </div>
