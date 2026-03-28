@@ -9,6 +9,7 @@ import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { CartProvider } from "@/components/commerce/cart-provider"
 import { ToastContainer } from "@/components/commerce/toast"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "Specific Industries",
@@ -62,6 +63,7 @@ export default async function RootLayout({
         ) : (
           content
         )}
+        <SpeedInsights />
       </body>
     </html>
   )
