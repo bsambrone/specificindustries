@@ -1,89 +1,85 @@
 import { Hero } from "@/components/ui/hero"
-import { ImageTextSection } from "@/components/ui/image-text-section"
+import { WaveDivider } from "@/components/ui/wave-divider"
+import { ProcessFlow } from "@/components/ui/process-flow"
+import { StatStrip } from "@/components/ui/stat-strip"
+import { ComparisonTable } from "@/components/ui/comparison-table"
 
 export const metadata = {
   title: "The Science — Dehydrated Water Co.",
   description: "The patented Drywell Method, explained. Sort of.",
 }
 
+const steps = [
+  {
+    number: "01",
+    title: "Aqueous Acquisition",
+    description:
+      "We begin by sourcing the finest water available — typically from a tap. Our water sommelier evaluates each batch for clarity, viscosity, and 'general wateriness.' Only water that meets our rigorous standard of 'being water' advances to the next stage. Patent reference: Drywell Method™ §1.1 — 'The Procurement of Base Hydrate'",
+    image: "/sites/dehydratedwater/science-collection.png",
+  },
+  {
+    number: "02",
+    title: "Thermal Dissociation",
+    description:
+      "The water is heated until it transitions from a liquid to a gaseous state — a process scientists call 'evaporation' and we call 'Phase Liberation.' The steam rises, carrying with it the water's molecular identity. What remains is an empty container. This is, admittedly, a low point in the process. Patent reference: Drywell Method™ §2.3 — 'Controlled Atmospheric Release of Hydrate Essence'",
+    image: "/sites/dehydratedwater/science-evaporation.png",
+  },
+  {
+    number: "03",
+    title: "Vapor Recapture",
+    description:
+      "Using a proprietary condensation apparatus (a cold surface), we recapture the liberated water vapor. The molecules are coaxed back into a semi-liquid state through what our Chief Science Officer calls 'whispering to the steam.' We do not endorse this characterization, but results speak for themselves. Patent reference: Drywell Method™ §3.7 — 'Molecular Repatriation via Thermal Gradient'",
+    image: "/sites/dehydratedwater/science-capture.png",
+  },
+  {
+    number: "04",
+    title: "Final Dehydration",
+    description:
+      "The recaptured water undergoes our signature final dehydration phase. This is the step where we remove the water from the water. How? That's proprietary. Why? That's philosophical. The result is a fine, heritage-grade powder that contains the complete essence of water in a convenient, non-liquid format. Patent reference: Drywell Method™ §4.1 — 'Essence Extraction and Powderification'",
+    image: "/sites/dehydratedwater/science-dehydration.png",
+  },
+]
+
 export default function TheScience() {
   return (
     <>
       <Hero
+        dark
         headline="The Science"
         subheadline="Our patented dehydration process, explained in terms that sound almost credible."
       />
 
-      <section className="py-16 px-4">
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-heading font-bold text-primary">The Drywell Method™</h2>
-          <p className="text-foreground/60 mt-4">
-            A seven-step process perfected over 179 years. Each step is essential. None of them do anything.
-          </p>
-        </div>
-      </section>
+      <WaveDivider variant="wave1" />
 
-      <ImageTextSection
-        image="/sites/dehydratedwater/science-collection.png"
-        title="Step 1: Aqueous Acquisition"
-        description={
-          "We begin by sourcing the finest water available — typically from a tap. Our water sommelier evaluates each batch for clarity, viscosity, and 'general wateriness.' " +
-          "Only water that meets our rigorous standard of 'being water' advances to the next stage.\n\n" +
-          "Patent reference: Drywell Method™ §1.1 — 'The Procurement of Base Hydrate'"
-        }
-        imagePosition="left"
+      <ProcessFlow steps={steps} />
+
+      <StatStrip
+        stats={[
+          { icon: "📄", value: "0 Peer Reviews", label: "Submitted" },
+          { icon: "📋", value: "0 FDA Responses", label: "Received" },
+          { icon: "📖", value: "2 Blog Views", label: "All-time" },
+        ]}
       />
 
-      <ImageTextSection
-        image="/sites/dehydratedwater/science-evaporation.png"
-        title="Step 2: Thermal Dissociation"
-        description={
-          "The water is heated until it transitions from a liquid to a gaseous state — a process scientists call 'evaporation' and we call 'Phase Liberation.' " +
-          "The steam rises, carrying with it the water's molecular identity. What remains is an empty container. This is, admittedly, a low point in the process.\n\n" +
-          "Patent reference: Drywell Method™ §2.3 — 'Controlled Atmospheric Release of Hydrate Essence'"
-        }
-        imagePosition="right"
+      <ComparisonTable
+        title="The Drywell Method™ vs. Other Approaches"
+        columns={[
+          { name: "Drywell Method", highlighted: true },
+          { name: "Filtration" },
+          { name: "Boiling" },
+          { name: "Doing Nothing" },
+        ]}
+        rows={[
+          { label: "Time Required", values: ["179 years", "Minutes", "Minutes", "None"] },
+          { label: "Effectiveness", values: ["Theoretical", "Proven", "Proven", "Surprisingly High"] },
+          { label: "Scientific Rigor", values: ["Aspirational", "Established", "Established", "N/A"] },
+          { label: "Heritage Factor", values: ["7 generations", "None", "None", "Timeless"] },
+          { label: "Patent Status", values: ["Pending since 1889", "Expired", "Public domain", "Not applicable"] },
+        ]}
+        footnote="Comparison conducted by Thaddeus Pemberton, who holds a degree from an institution he prefers not to name."
       />
 
-      <ImageTextSection
-        image="/sites/dehydratedwater/science-capture.png"
-        title="Step 3: Vapor Recapture"
-        description={
-          "Using a proprietary condensation apparatus (a cold surface), we recapture the liberated water vapor. The molecules are coaxed back into a semi-liquid state " +
-          "through what our Chief Science Officer calls 'whispering to the steam.' We do not endorse this characterization, but results speak for themselves.\n\n" +
-          "Patent reference: Drywell Method™ §3.7 — 'Molecular Repatriation via Thermal Gradient'"
-        }
-        imagePosition="left"
-      />
-
-      <ImageTextSection
-        image="/sites/dehydratedwater/science-dehydration.png"
-        title="Step 4: Final Dehydration"
-        description={
-          "The recaptured water undergoes our signature final dehydration phase. This is the step where we remove the water from the water. " +
-          "How? That's proprietary. Why? That's philosophical. The result is a fine, heritage-grade powder that contains the complete essence of water in a convenient, " +
-          "non-liquid format.\n\n" +
-          "Patent reference: Drywell Method™ §4.1 — 'Essence Extraction and Powderification'"
-        }
-        imagePosition="right"
-      />
-
-      {/* Credentials */}
-      <section className="py-12 px-4 bg-secondary/10">
-        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-6">
-          <span className="inline-block px-6 py-3 border-2 border-primary/20 rounded-full text-sm font-semibold text-foreground/70 tracking-wide uppercase">
-            Peer-Reviewed (by peers who owed us favors)
-          </span>
-          <span className="inline-block px-6 py-3 border-2 border-primary/20 rounded-full text-sm font-semibold text-foreground/70 tracking-wide uppercase">
-            ISO 0000 Certified (pending)
-          </span>
-          <span className="inline-block px-6 py-3 border-2 border-primary/20 rounded-full text-sm font-semibold text-foreground/70 tracking-wide uppercase">
-            FDA Status: Unaware of Our Existence
-          </span>
-        </div>
-      </section>
-
-      {/* Publication */}
+      {/* Publications section */}
       <section className="py-16 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-heading font-bold text-primary mb-4">Published Research</h2>
