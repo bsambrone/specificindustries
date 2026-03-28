@@ -332,7 +332,9 @@ Add `dehydratedwater` to `src/sites/registry.ts`. Import config, pages, and dyna
 The apex site (`src/sites/apex/`) already iterates the registry to generate links to all subdomain sites. Adding `dehydratedwater` to the registry causes it to automatically appear on the apex landing page. No changes to the apex site code are needed.
 
 ### Commerce
-The site sets `features.commerce: true`, so the root layout automatically wraps it with `CartProvider`. The existing `CartButton`, `AddToCartButton`, and `ToastContainer` components work as-is. Cart localStorage key should be `dehydratedwater-cart` (distinct from pigmilk's `pigmilk-cart`).
+The site sets `features.commerce: true`, so the root layout automatically wraps it with `CartProvider`. The existing `CartButton`, `AddToCartButton`, and `ToastContainer` components work as-is.
+
+**Cart isolation fix (required):** The current `CartProvider` hardcodes `const STORAGE_KEY = "pigmilk-cart"`. This must be changed to accept a per-site storage key so that each commerce-enabled site gets its own isolated cart in localStorage. The approach: add an optional `storageKey` prop to `CartProvider`, and have the root layout pass the subdomain-derived key (e.g., `"dehydratedwater-cart"`). This is a small, backward-compatible change — pigmilk continues to work by passing `"pigmilk-cart"`.
 
 ### Local Development
 Works via `?site=dehydratedwater` query parameter, same as pigmilk:
@@ -361,11 +363,12 @@ export const dynamicRoutes = {
 
 ## Infrastructure Changes
 
-**None.** The middleware, catch-all route, root layout, and all shared components remain untouched. The only changes outside of `src/sites/dehydratedwater/` are:
+Minimal. The middleware, catch-all route, and root layout logic remain untouched. Changes outside of `src/sites/dehydratedwater/`:
 
 1. One new entry in `src/sites/registry.ts`
 2. One new shared component: `src/components/ui/pricing-table.tsx`
 3. Static assets in `public/sites/dehydratedwater/`
+4. **`CartProvider` modification**: Add a `storageKey` prop (defaulting to the current `"pigmilk-cart"` for backward compatibility). The root layout passes `"<subdomain>-cart"` derived from the site config. This isolates cart state per site in localStorage.
 
 ## Static Assets
 
@@ -409,4 +412,4 @@ Following the pigmilk test pattern, three Playwright test files:
 - Server-side cart state or database
 - Product image generation/sourcing (deferred to implementation)
 - Real Bluetooth or cloud sync functionality for WaaS (obviously)
-- Changes to any existing site (pigmilk, apex infrastructure)
+- Changes to any existing site (pigmilk pages/content, apex pages/content) — the only existing-code change is the CartProvider storageKey prop
