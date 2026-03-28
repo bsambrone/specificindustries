@@ -57,7 +57,7 @@ export default async function RootLayout({
         style={themeStyle}
       >
         {site?.config.features.commerce ? (
-          <CartProvider>
+          <CartProvider storageKey={`${site.config.subdomain}-cart`}>
             {content}
             <ToastContainer />
           </CartProvider>

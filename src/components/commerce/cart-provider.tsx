@@ -25,13 +25,11 @@ interface CartContextType {
 
 const CartContext = createContext<CartContextType | null>(null)
 
-const STORAGE_KEY = "pigmilk-cart"
-
-export function CartProvider({ children }: { children: ReactNode }) {
+export function CartProvider({ children, storageKey = "cart" }: { children: ReactNode; storageKey?: string }) {
   const [cart, setCart] = useState<CartItem[]>(() => {
     if (typeof window === "undefined") return []
     try {
-      const stored = localStorage.getItem(STORAGE_KEY)
+      const stored = localStorage.getItem(storageKey)
       return stored ? JSON.parse(stored) : []
     } catch {
       return []
@@ -47,9 +45,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (mountedRef.current) {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(cart))
+      localStorage.setItem(storageKey, JSON.stringify(cart))
     }
-  }, [cart])
+  }, [cart, storageKey])
 
   const showToast = useCallback((message: string) => {
     const id = nextToastIdRef.current++
