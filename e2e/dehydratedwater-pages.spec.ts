@@ -55,9 +55,9 @@ test.describe("Dehydrated Water Co. — Page Navigation", () => {
     await expect(page.getByText("Company Timeline")).toBeVisible()
     await expect(page.getByText("1847", { exact: true })).toBeVisible()
     await expect(page.getByText("2026", { exact: true })).toBeVisible()
-    await expect(page.getByText("The Drywell Family")).toBeVisible()
-    await expect(page.getByRole("heading", { name: "Ezekiel Drywell I" })).toBeVisible()
-    await expect(page.getByRole("heading", { name: "Ezekiel Drywell IV" })).toBeVisible()
+    await expect(page.getByRole("heading", { name: "The Drywell Family" })).toBeVisible()
+    await expect(page.getByRole("heading", { name: "Ezekiel Drywell I", exact: true })).toBeVisible()
+    await expect(page.getByRole("heading", { name: "Ezekiel Drywell IV", exact: true })).toBeVisible()
   })
 
   test("the science page loads with process steps", async ({ page }) => {
