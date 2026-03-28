@@ -17,6 +17,15 @@ export default function DehydratedWaterTerms() {
       <WaveDivider variant="wave1" />
       <section className="py-16 px-4">
         <div className="max-w-3xl mx-auto prose prose-lg text-foreground/80 space-y-6">
+          <p className="text-sm text-foreground/70 bg-secondary/20 border border-primary/10 rounded-lg p-4">
+            The authoritative terms of use for all Specific Industries properties are maintained at{" "}
+            <a href="https://specificindustries.com/terms" className="text-accent underline hover:text-primary transition-colors">
+              specificindustries.com
+            </a>.{" "}
+            <a href="https://specificindustries.com/privacy" className="text-accent underline hover:text-primary transition-colors">
+              View Privacy Policy
+            </a>
+          </p>
           <p className="text-sm text-foreground/40 italic">
             Effective: Retroactively, since 1847. Jurisdiction: The Drywell Estate, Vermont (fictional).
           </p>

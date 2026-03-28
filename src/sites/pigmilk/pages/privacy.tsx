@@ -14,6 +14,15 @@ export default function PigMilkPrivacy() {
       />
       <section className="py-16 px-4">
         <div className="max-w-3xl mx-auto prose prose-lg text-foreground/80 space-y-6">
+          <p className="text-sm text-foreground/70 bg-secondary/20 border border-primary/10 rounded-lg p-4">
+            The authoritative privacy policy for all Specific Industries properties is maintained at{" "}
+            <a href="https://specificindustries.com/privacy" className="text-accent underline hover:text-primary transition-colors">
+              specificindustries.com
+            </a>.{" "}
+            <a href="https://specificindustries.com/terms" className="text-accent underline hover:text-primary transition-colors">
+              View Terms of Use
+            </a>
+          </p>
           <p className="text-sm text-foreground/40 italic">
             Last updated: When you weren&apos;t looking. Version: 47.3 (we keep changing it)
           </p>
