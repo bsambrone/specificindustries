@@ -96,7 +96,7 @@ export default function ProductDetail({ slug }: { slug: string }) {
       <PromoBanner
         headline="Browse the Collection"
         ctaText="View All Products"
-        ctaHref="/products"
+        ctaHref={siteHref("/products")}
       />
     </>
   )
