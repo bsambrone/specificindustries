@@ -10,6 +10,7 @@ import { Footer } from "@/components/layout/footer"
 import { CartProvider } from "@/components/commerce/cart-provider"
 import { ToastContainer } from "@/components/commerce/toast"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: "Specific Industries",
@@ -64,6 +65,7 @@ export default async function RootLayout({
           content
         )}
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )
