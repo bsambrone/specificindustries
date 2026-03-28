@@ -216,7 +216,6 @@ interface Product {
 
 export const products: Product[] = [...]
 export function getProductBySlug(slug: string): Product | undefined
-export function getRelatedProducts(slug: string, count?: number): Product[]
 ```
 
 ### Products
