@@ -21,6 +21,7 @@ export interface SiteMetadata {
   title: string
   description: string
   ogImage?: string
+  previewImage?: string
 }
 
 export interface NavItem {

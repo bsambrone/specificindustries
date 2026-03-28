@@ -1,4 +1,5 @@
 import { headers } from "next/headers"
+import Image from "next/image"
 import { siteRegistry } from "@/sites/registry"
 import { Hero } from "@/components/ui/hero"
 
@@ -39,15 +40,27 @@ export default async function ApexHome() {
                 <a
                   key={subdomain}
                   href={siteHref(subdomain)}
-                  className="block w-full max-w-sm p-6 rounded-lg border border-primary/10 hover:border-primary/30 transition-colors"
+                  className="block w-full max-w-sm rounded-lg border border-primary/10 hover:border-primary/30 transition-colors overflow-hidden"
                   style={{ borderTopColor: site.config.theme.colors.primary, borderTopWidth: "3px" }}
                 >
-                  <h3 className="text-xl font-heading font-semibold text-primary mb-2">
-                    {site.config.name}
-                  </h3>
-                  <p className="text-foreground/60">
-                    {site.config.metadata.description}
-                  </p>
+                  {site.config.metadata.previewImage && (
+                    <div className="relative h-48 bg-secondary/10">
+                      <Image
+                        src={site.config.metadata.previewImage}
+                        alt={site.config.name}
+                        fill
+                        className="object-contain p-4"
+                      />
+                    </div>
+                  )}
+                  <div className="p-6">
+                    <h3 className="text-xl font-heading font-semibold text-primary mb-2">
+                      {site.config.name}
+                    </h3>
+                    <p className="text-foreground/60">
+                      {site.config.metadata.description}
+                    </p>
+                  </div>
                 </a>
               ))}
             </div>
