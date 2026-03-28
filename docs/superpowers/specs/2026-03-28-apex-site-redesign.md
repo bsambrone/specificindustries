@@ -160,7 +160,11 @@ The footer checks `config.subdomain === "apex"` to determine which mode to rende
 
 All existing subdomain privacy and terms pages (currently: pigmilk, dehydratedwater) need a banner/notice added at the top of their content:
 
-> "The authoritative policies for all Specific Industries properties are maintained at [specificindustries.com](https://specificindustries.com). [View Privacy Policy](https://specificindustries.com/privacy) | [View Terms of Use](https://specificindustries.com/terms)"
+The banner should be page-contextual:
+- On privacy pages: "The authoritative privacy policy for all Specific Industries properties is maintained at specificindustries.com. View Terms of Use"
+- On terms pages: "The authoritative terms of use for all Specific Industries properties are maintained at specificindustries.com. View Privacy Policy"
+
+Both link to the corresponding apex pages with absolute production URLs.
 
 These links use absolute production URLs in all environments (same rationale as the footer — legal references should always point to the canonical domain). This banner appears above the existing satirical content. The satirical content remains below it unchanged.
 
