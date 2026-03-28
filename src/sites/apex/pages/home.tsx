@@ -23,23 +23,24 @@ export default async function ApexHome() {
   return (
     <>
       <Hero
-        headline="Specific Industries"
-        subheadline="We make very specific products for very specific people."
+        headline="Serving the World's Most Specific Industries"
+        subheadline="We identify overlooked market segments and build dedicated brands to serve them."
       />
       <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-heading font-bold text-center mb-12">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-heading font-bold text-center mb-12 text-primary">
             Our Brands
           </h2>
           {sites.length === 0 ? (
             <p className="text-center text-foreground/50">Coming soon.</p>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex flex-wrap justify-center gap-6">
               {sites.map(([subdomain, site]) => (
                 <a
                   key={subdomain}
                   href={siteHref(subdomain)}
-                  className="block p-6 rounded-lg border border-primary/10 hover:border-primary/30 transition-colors"
+                  className="block w-full max-w-sm p-6 rounded-lg border border-primary/10 hover:border-primary/30 transition-colors"
+                  style={{ borderTopColor: site.config.theme.colors.primary, borderTopWidth: "3px" }}
                 >
                   <h3 className="text-xl font-heading font-semibold text-primary mb-2">
                     {site.config.name}
