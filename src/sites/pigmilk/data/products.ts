@@ -228,7 +228,12 @@ export function getProductBySlug(slug: string): Product | undefined {
 
 export function getRelatedProducts(slug: string, count = 3): Product[] {
   const filtered = products.filter((p) => p.slug !== slug)
-  // Shuffle and take `count`
-  const shuffled = [...filtered].sort(() => Math.random() - 0.5)
-  return shuffled.slice(0, count)
+  // Deterministic selection based on slug hash to avoid hydration mismatch
+  const index = slug.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0)
+  const start = index % filtered.length
+  const result: Product[] = []
+  for (let i = 0; i < count && i < filtered.length; i++) {
+    result.push(filtered[(start + i) % filtered.length])
+  }
+  return result
 }
