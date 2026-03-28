@@ -29,7 +29,7 @@ export function AddToCartButton({ slug, productName, className }: AddToCartButto
   return (
     <button
       onClick={handleClick}
-      className={className || "px-6 py-2 bg-primary text-white rounded-lg font-semibold hover:opacity-90 transition-opacity"}
+      className={className || "px-6 py-3 bg-primary text-white rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity"}
     >
       Add to Cart
     </button>

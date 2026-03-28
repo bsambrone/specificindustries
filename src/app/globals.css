@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary: initial;
-  --color-secondary: initial;
-  --color-accent: initial;
-  --color-background: initial;
-  --color-foreground: initial;
-  --font-heading: initial;
-  --font-body: initial;
+  --color-primary: #1a1a2e;
+  --color-secondary: #e2e8f0;
+  --color-accent: #0f3460;
+  --color-background: #ffffff;
+  --color-foreground: #1a1a1a;
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 @keyframes fade-in {
