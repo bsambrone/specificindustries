@@ -37,11 +37,37 @@ export default function ApexPrivacy() {
 
           <h2 className="text-2xl font-heading font-bold text-primary">3. Analytics</h2>
           <p>
-            We use Vercel Analytics and Vercel Speed Insights to understand general usage
-            patterns across our websites. These services collect anonymous, aggregated data
-            such as page views and performance metrics. They do not use cookies, do not track
-            individual users, and do not collect personal information. There is no opt-out
-            mechanism because no personal data is collected.
+            We use Google Analytics and Vercel Analytics to understand general usage patterns
+            across our websites.
+          </p>
+          <p>
+            <strong>Google Analytics</strong> uses cookies to collect anonymous, aggregated data
+            such as page views, session duration, and general geographic region. Google Analytics
+            does not collect personally identifiable information through our implementation. The
+            data collected is governed by{" "}
+            <a
+              href="https://policies.google.com/privacy"
+              className="text-accent underline hover:text-primary transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google&apos;s Privacy Policy
+            </a>
+            . You can opt out of Google Analytics by installing the{" "}
+            <a
+              href="https://tools.google.com/dlpage/gaoptout"
+              className="text-accent underline hover:text-primary transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google Analytics Opt-out Browser Add-on
+            </a>
+            .
+          </p>
+          <p>
+            <strong>Vercel Analytics and Speed Insights</strong> collect anonymous, aggregated
+            performance metrics. They do not use cookies, do not track individual users, and do
+            not collect personal information.
           </p>
 
           <h2 className="text-2xl font-heading font-bold text-primary">4. Advertising</h2>
@@ -55,16 +81,22 @@ export default function ApexPrivacy() {
 
           <h2 className="text-2xl font-heading font-bold text-primary">5. Cookies</h2>
           <p>
-            Our websites do not currently use cookies. When Google Ads is implemented in the
-            future, advertising cookies will be introduced and this section will be updated
-            accordingly.
+            Our websites use cookies set by Google Analytics to distinguish unique users and
+            track sessions. These cookies do not contain personally identifiable information.
+            When Google Ads is implemented in the future, additional advertising cookies will be
+            introduced and this section will be updated accordingly.
           </p>
 
           <h2 className="text-2xl font-heading font-bold text-primary">6. Third-Party Services</h2>
           <p>
-            Our websites are hosted on Vercel and use Vercel&apos;s analytics and performance
-            monitoring services. These services operate under Vercel&apos;s own privacy policy.
-            No other third-party services that collect user data are currently in use.
+            Our websites use the following third-party services:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Vercel</strong> — hosting, analytics, and performance monitoring</li>
+            <li><strong>Google Analytics</strong> — website usage analytics</li>
+          </ul>
+          <p>
+            Each service operates under its own privacy policy and terms of service.
           </p>
 
           <h2 className="text-2xl font-heading font-bold text-primary">7. Children&apos;s Privacy</h2>

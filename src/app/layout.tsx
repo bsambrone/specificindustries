@@ -11,6 +11,7 @@ import { CartProvider } from "@/components/commerce/cart-provider"
 import { ToastContainer } from "@/components/commerce/toast"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
+import { GoogleAnalytics } from "@next/third-parties/google"
 
 export const metadata: Metadata = {
   title: "Specific Industries — Serving the World's Most Specific Industries",
@@ -80,6 +81,7 @@ export default async function RootLayout({
         ) : (
           content
         )}
+        <GoogleAnalytics gaId="G-024003Y5RD" />
         <SpeedInsights />
         <Analytics />
       </body>
