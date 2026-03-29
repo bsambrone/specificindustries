@@ -58,7 +58,370 @@ export const solutionPricing: SolutionPricing[] = [
       },
     ],
   },
-  // Placeholder — other solution pricing in Plan 2
+  // ── KPI Alignment ────────────────────────────────────────────────────────
+  {
+    solutionSlug: "kpi-alignment",
+    tiers: [
+      {
+        name: "Essentials",
+        price: "$2,499",
+        description: "Per seat, per quarter. For teams beginning their metric obfuscation journey.",
+        features: [
+          "Metric Multiplier™ Standard (up to 3x multiplication)",
+          "Dashboard Deepener™ Lite (5 additional layers)",
+          "Self-service knowledge base",
+          "Quarterly alignment report",
+          "Community support",
+        ],
+        cta: "Start with Essentials",
+      },
+      {
+        name: "Professional",
+        price: "$7,999",
+        description: "Per seat, per quarter. For enterprises committed to comprehensive KPI transformation.",
+        features: [
+          "Metric Multiplier™ Pro (up to 10x multiplication)",
+          "Dashboard Deepener™ Full (unlimited layers)",
+          "OKR Obfuscator™ (full suite)",
+          "Benchmark Blurrer™ (all industries)",
+          "Priority support (48hr SLA)",
+          "Dedicated onboarding specialist",
+          "Quarterly strategy review",
+          "KPI confusion analytics dashboard",
+        ],
+        cta: "Go Professional",
+        highlighted: true,
+      },
+      {
+        name: "Enterprise",
+        price: "Custom",
+        description: "Unlimited seats. For organizations where metric opacity is a core competency.",
+        features: [
+          "Everything in Professional, unlimited seats",
+          "Dedicated Alignment Partner",
+          "24/7 concierge support",
+          "White-glove implementation",
+          "Custom metric fabrication laboratory",
+          "Executive briefings (quarterly)",
+          "Annual non-productivity retreat",
+        ],
+        cta: "Contact Us",
+      },
+    ],
+  },
+
+  // ── Middle Management ─────────────────────────────────────────────────────
+  {
+    solutionSlug: "middle-management",
+    tiers: [
+      {
+        name: "Essentials",
+        price: "$2,999",
+        description: "Per seat, per quarter. For organizations beginning their authority amplification journey.",
+        features: [
+          "Authority Amplifier™ Standard (3 escalation profiles)",
+          "Delegation Deflector™ Basic (5 deflection templates)",
+          "Self-service knowledge base",
+          "Quarterly alignment report",
+          "Community support",
+        ],
+        cta: "Start with Essentials",
+      },
+      {
+        name: "Professional",
+        price: "$8,999",
+        description: "Per seat, per quarter. For enterprises committed to comprehensive management theater.",
+        features: [
+          "Authority Amplifier™ Pro (all 12 escalation profiles)",
+          "Delegation Deflector™ Full (unlimited templates)",
+          "Hierarchy Harmonizer™ (org chart reshuffling suite)",
+          "Accountability Absorber™ (full deflection matrix)",
+          "Priority support (48hr SLA)",
+          "Dedicated onboarding specialist",
+          "Quarterly strategy review",
+          "Middle management analytics dashboard",
+        ],
+        cta: "Go Professional",
+        highlighted: true,
+      },
+      {
+        name: "Enterprise",
+        price: "Custom",
+        description: "Unlimited seats. For organizations where middle management is an art form.",
+        features: [
+          "Everything in Professional, unlimited seats",
+          "Dedicated Alignment Partner",
+          "24/7 concierge support",
+          "Dedicated synergy concierge",
+          "White-glove implementation",
+          "Executive briefings (quarterly)",
+          "Annual non-productivity retreat",
+        ],
+        cta: "Contact Us",
+      },
+    ],
+  },
+
+  // ── Productivity Theater ──────────────────────────────────────────────────
+  {
+    solutionSlug: "productivity-theater",
+    tiers: [
+      {
+        name: "Essentials",
+        price: "$2,499",
+        description: "Per seat, per quarter. For teams beginning their busyness performance journey.",
+        features: [
+          "Busyness Broadcaster™ Standard (5 activity templates)",
+          "Status Updater Pro™ Basic (hourly broadcast)",
+          "Self-service knowledge base",
+          "Quarterly alignment report",
+          "Community support",
+        ],
+        cta: "Start with Essentials",
+      },
+      {
+        name: "Professional",
+        price: "$7,999",
+        description: "Per seat, per quarter. For enterprises committed to comprehensive productivity performance.",
+        features: [
+          "Busyness Broadcaster™ Pro (all 20 activity templates)",
+          "Task Multiplier™ (full suite, up to 8x task expansion)",
+          "Status Updater Pro™ Full (real-time AI-generated updates)",
+          "Urgency Fabricator™ (all severity tiers)",
+          "Priority support (48hr SLA)",
+          "Dedicated onboarding specialist",
+          "Quarterly strategy review",
+          "Productivity theater analytics dashboard",
+        ],
+        cta: "Go Professional",
+        highlighted: true,
+      },
+      {
+        name: "Enterprise",
+        price: "Custom",
+        description: "Unlimited seats. For organizations where the appearance of work is a core competency.",
+        features: [
+          "Everything in Professional, unlimited seats",
+          "Dedicated Alignment Partner",
+          "24/7 concierge support",
+          "Personal appearance optimization consultant",
+          "White-glove implementation",
+          "Executive briefings (quarterly)",
+          "Annual non-productivity retreat",
+        ],
+        cta: "Contact Us",
+      },
+    ],
+  },
+
+  // ── Compliance & Policy ───────────────────────────────────────────────────
+  {
+    solutionSlug: "compliance-policy",
+    tiers: [
+      {
+        name: "Essentials",
+        price: "$3,499",
+        description: "Per seat, per quarter. For organizations beginning their policy proliferation journey.",
+        features: [
+          "Policy Proliferator™ Standard (up to 25 policies/month)",
+          "Audit Trail Thickener™ Basic (3 documentation layers)",
+          "Self-service knowledge base",
+          "Quarterly alignment report",
+          "Community support",
+        ],
+        cta: "Start with Essentials",
+      },
+      {
+        name: "Professional",
+        price: "$9,999",
+        description: "Per seat, per quarter. For enterprises committed to comprehensive compliance theater.",
+        features: [
+          "Policy Proliferator™ Pro (unlimited policies)",
+          "Audit Trail Thickener™ Full (unlimited layers, AI-assisted)",
+          "Compliance Theater Suite™ (full ceremony package)",
+          "Responsibility Redistributor™ (complete accountability diffusion)",
+          "Priority support (48hr SLA)",
+          "Dedicated onboarding specialist",
+          "Quarterly strategy review",
+          "Compliance theater analytics dashboard",
+        ],
+        cta: "Go Professional",
+        highlighted: true,
+      },
+      {
+        name: "Enterprise",
+        price: "Custom",
+        description: "Unlimited seats. For organizations where regulatory performance is a fine art.",
+        features: [
+          "Everything in Professional, unlimited seats",
+          "Dedicated Alignment Partner",
+          "24/7 concierge support",
+          "Pre-written board apology letters",
+          "White-glove implementation",
+          "Executive briefings (quarterly)",
+          "Annual non-productivity retreat",
+        ],
+        cta: "Contact Us",
+      },
+    ],
+  },
+
+  // ── Communication Enhancement ─────────────────────────────────────────────
+  {
+    solutionSlug: "communication-enhancement",
+    tiers: [
+      {
+        name: "Essentials",
+        price: "$2,499",
+        description: "Per seat, per quarter. For teams beginning their communication obfuscation journey.",
+        features: [
+          "Jargon Injector™ Standard (500 buzzword library)",
+          "Email Elongator™ Basic (up to 3x length expansion)",
+          "Self-service knowledge base",
+          "Quarterly alignment report",
+          "Community support",
+        ],
+        cta: "Start with Essentials",
+      },
+      {
+        name: "Professional",
+        price: "$7,999",
+        description: "Per seat, per quarter. For enterprises committed to comprehensive communication complexity.",
+        features: [
+          "Jargon Injector™ Pro (5,000+ buzzword library, industry-specific)",
+          "Email Elongator™ Full (up to 10x length expansion, AI-powered)",
+          "Passive Voice Optimizer™ (full accountability removal suite)",
+          "Ambiguity Amplifier™ (all clarity-reduction modes)",
+          "Priority support (48hr SLA)",
+          "Dedicated onboarding specialist",
+          "Quarterly strategy review",
+          "Communication complexity analytics dashboard",
+        ],
+        cta: "Go Professional",
+        highlighted: true,
+      },
+      {
+        name: "Enterprise",
+        price: "Custom",
+        description: "Unlimited seats. For organizations where saying nothing meaningfully is a core skill.",
+        features: [
+          "Everything in Professional, unlimited seats",
+          "Dedicated Alignment Partner",
+          "24/7 concierge support",
+          "Ghost-written executive thought leadership",
+          "White-glove implementation",
+          "Executive briefings (quarterly)",
+          "Annual non-productivity retreat",
+        ],
+        cta: "Contact Us",
+      },
+    ],
+  },
+
+  // ── Decision Support ──────────────────────────────────────────────────────
+  {
+    solutionSlug: "decision-support",
+    tiers: [
+      {
+        name: "Essentials",
+        price: "$2,999",
+        description: "Per seat, per quarter. For organizations beginning their decision deferral journey.",
+        features: [
+          "Consensus Diffuser™ Standard (up to 5 stakeholder groups)",
+          "Committee Spawner™ Basic (3 committee templates)",
+          "Self-service knowledge base",
+          "Quarterly alignment report",
+          "Community support",
+        ],
+        cta: "Start with Essentials",
+      },
+      {
+        name: "Professional",
+        price: "$8,999",
+        description: "Per seat, per quarter. For enterprises committed to comprehensive decision avoidance.",
+        features: [
+          "Consensus Diffuser™ Pro (unlimited stakeholder groups)",
+          "Committee Spawner™ Full (unlimited sub-committees)",
+          "Stakeholder Multiplier™ (all expansion modes)",
+          "Decision Deferral Engine™ (full indefinite postponement suite)",
+          "Priority support (48hr SLA)",
+          "Dedicated onboarding specialist",
+          "Quarterly strategy review",
+          "Decision avoidance analytics dashboard",
+        ],
+        cta: "Go Professional",
+        highlighted: true,
+      },
+      {
+        name: "Enterprise",
+        price: "Custom",
+        description: "Unlimited seats. For organizations that have elevated indecision to a competitive advantage.",
+        features: [
+          "Everything in Professional, unlimited seats",
+          "Dedicated Alignment Partner",
+          "24/7 concierge support",
+          "24/7 coin-flipping hotline",
+          "White-glove implementation",
+          "Executive briefings (quarterly)",
+          "Annual non-productivity retreat",
+        ],
+        cta: "Contact Us",
+      },
+    ],
+  },
+
+  // ── Employee Experience ───────────────────────────────────────────────────
+  {
+    solutionSlug: "employee-experience",
+    tiers: [
+      {
+        name: "Essentials",
+        price: "$2,999",
+        description: "Per seat, per quarter. For organizations beginning their engagement simulation journey.",
+        features: [
+          "Engagement Simulator™ Standard (5 engagement archetypes)",
+          "Morale Measurer™ Basic (monthly pulse survey)",
+          "Self-service knowledge base",
+          "Quarterly alignment report",
+          "Community support",
+        ],
+        cta: "Start with Essentials",
+      },
+      {
+        name: "Professional",
+        price: "$8,999",
+        description: "Per seat, per quarter. For enterprises committed to comprehensive culture performance.",
+        features: [
+          "Engagement Simulator™ Pro (all 18 engagement archetypes)",
+          "Morale Measurer™ Full (real-time sentiment theater)",
+          "Culture Deck Generator™ (unlimited values rebranding)",
+          "Satisfaction Survey Suite™ (full unread-response pipeline)",
+          "ErgoMax Compliance Chair™ (fleet deployment support)",
+          "Anonymous Feedback Redirector™ (complete routing suite)",
+          "Priority support (48hr SLA)",
+          "Dedicated onboarding specialist",
+          "Quarterly strategy review",
+        ],
+        cta: "Go Professional",
+        highlighted: true,
+      },
+      {
+        name: "Enterprise",
+        price: "Custom",
+        description: "Unlimited seats. For organizations where employee happiness theater is a strategic pillar.",
+        features: [
+          "Everything in Professional, unlimited seats",
+          "Dedicated Alignment Partner",
+          "24/7 concierge support",
+          "Unlimited pizza deployment credits",
+          "White-glove implementation",
+          "Executive briefings (quarterly)",
+          "Annual non-productivity retreat",
+        ],
+        cta: "Contact Us",
+      },
+    ],
+  },
 ]
 
 // ─── Master pricing tiers ────────────────────────────────────────────────────
