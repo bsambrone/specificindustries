@@ -8,6 +8,9 @@ import LeadershipPage, { metadata as leadershipMetadata } from "./pages/leadersh
 import ContactPage, { metadata as contactMetadata } from "./pages/contact"
 import PrivacyPage, { metadata as privacyMetadata } from "./pages/privacy"
 import TermsPage, { metadata as termsMetadata } from "./pages/terms"
+import MethodologyPage, { metadata as methodologyMetadata } from "./pages/methodology"
+import PricingPage, { metadata as pricingMetadata } from "./pages/pricing"
+import AboutPage, { metadata as aboutMetadata } from "./pages/about"
 import SolutionRouter from "./pages/solution-router"
 import CaseStudyPage from "./pages/case-study-page"
 import WhitepaperPage from "./pages/whitepaper-page"
@@ -23,6 +26,9 @@ export const pages: Record<string, PageEntry> = {
   "solutions": { component: SolutionsIndex, metadata: solutionsMetadata },
   "case-studies": { component: CaseStudiesIndex, metadata: caseStudiesMetadata },
   "whitepapers": { component: WhitepapersIndex, metadata: whitepapersMetadata },
+  "methodology": { component: MethodologyPage, metadata: methodologyMetadata },
+  "pricing": { component: PricingPage, metadata: pricingMetadata },
+  "about": { component: AboutPage, metadata: aboutMetadata },
   "leadership": { component: LeadershipPage, metadata: leadershipMetadata },
   "contact": { component: ContactPage, metadata: contactMetadata },
   "privacy": { component: PrivacyPage, metadata: privacyMetadata },
