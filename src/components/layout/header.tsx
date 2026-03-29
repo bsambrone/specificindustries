@@ -5,6 +5,7 @@ import Link from "next/link"
 import type { SiteConfig } from "@/themes"
 import { CartButton } from "@/components/commerce/cart-button"
 import { useSiteLink } from "@/hooks/use-site-link"
+import { MegaMenu, MegaMenuMobile } from "@/components/layout/mega-menu"
 
 export function Header({ config }: { config: SiteConfig }) {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -19,15 +20,19 @@ export function Header({ config }: { config: SiteConfig }) {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-6">
-          {config.nav.map((item) => (
-            <Link
-              key={item.path}
-              href={siteHref(item.path)}
-              className="text-foreground/70 hover:text-foreground hover:bg-primary/10 px-3 py-1.5 rounded-md transition-all"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {config.megaMenu ? (
+            <MegaMenu megaMenu={config.megaMenu} siteHref={siteHref} />
+          ) : (
+            config.nav.map((item) => (
+              <Link
+                key={item.path}
+                href={siteHref(item.path)}
+                className="text-foreground/70 hover:text-foreground hover:bg-primary/10 px-3 py-1.5 rounded-md transition-all"
+              >
+                {item.label}
+              </Link>
+            ))
+          )}
           {config.features.commerce && <CartButton />}
         </div>
 
@@ -54,16 +59,24 @@ export function Header({ config }: { config: SiteConfig }) {
       {mobileOpen && (
         <div className="md:hidden border-t border-primary/10 bg-background">
           <div className="px-4 py-4 flex flex-col gap-4">
-            {config.nav.map((item) => (
-              <Link
-                key={item.path}
-                href={siteHref(item.path)}
-                onClick={() => setMobileOpen(false)}
-                className="text-foreground/70 hover:text-foreground hover:bg-primary/10 px-3 py-1.5 rounded-md transition-all"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {config.megaMenu ? (
+              <MegaMenuMobile
+                megaMenu={config.megaMenu}
+                siteHref={siteHref}
+                onNavigate={() => setMobileOpen(false)}
+              />
+            ) : (
+              config.nav.map((item) => (
+                <Link
+                  key={item.path}
+                  href={siteHref(item.path)}
+                  onClick={() => setMobileOpen(false)}
+                  className="text-foreground/70 hover:text-foreground hover:bg-primary/10 px-3 py-1.5 rounded-md transition-all"
+                >
+                  {item.label}
+                </Link>
+              ))
+            )}
           </div>
         </div>
       )}
