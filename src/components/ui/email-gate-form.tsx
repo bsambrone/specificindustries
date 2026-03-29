@@ -1,6 +1,6 @@
 "use client"
 
-import { FormEvent, useEffect, useState } from "react"
+import { FormEvent, useSyncExternalStore, useState, useCallback } from "react"
 
 interface EmailGateFormProps {
   title: string
@@ -9,24 +9,22 @@ interface EmailGateFormProps {
   children: React.ReactNode
 }
 
-export function EmailGateForm({ title, subtitle, storageKey, children }: EmailGateFormProps) {
-  const [unlocked, setUnlocked] = useState(false)
-  const [email, setEmail] = useState("")
-  const [mounted, setMounted] = useState(false)
+const subscribe = () => () => {}
+const getServerSnapshot = () => null as string | null
 
-  useEffect(() => {
-    setMounted(true)
-    const stored = localStorage.getItem(storageKey)
-    if (stored) {
-      setUnlocked(true)
-    }
-  }, [storageKey])
+export function EmailGateForm({ title, subtitle, storageKey, children }: EmailGateFormProps) {
+  const [email, setEmail] = useState("")
+  const [justUnlocked, setJustUnlocked] = useState(false)
+  const getSnapshot = useCallback(() => localStorage.getItem(storageKey), [storageKey])
+  const stored = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)
+  const unlocked = !!stored || justUnlocked
+  const mounted = stored !== null || justUnlocked ? true : typeof window !== "undefined"
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
     if (!email) return
     localStorage.setItem(storageKey, email)
-    setUnlocked(true)
+    setJustUnlocked(true)
   }
 
   // Avoid flash on mount — render gated until hydrated

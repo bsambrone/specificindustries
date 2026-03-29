@@ -186,30 +186,32 @@ function PieChart({ data }: { data: DataPoint[] }) {
 
   const opacities = [1, 0.75, 0.55, 0.4, 0.28, 0.18]
 
-  let startAngle = -Math.PI / 2
-  const slices = data.map((d, i) => {
-    const angle = (d.value / total) * 2 * Math.PI
-    const endAngle = startAngle + angle
-    const x1 = cx + r * Math.cos(startAngle)
-    const y1 = cy + r * Math.sin(startAngle)
-    const x2 = cx + r * Math.cos(endAngle)
-    const y2 = cy + r * Math.sin(endAngle)
-    const largeArc = angle > Math.PI ? 1 : 0
-    const midAngle = startAngle + angle / 2
-    const lx = cx + (r + 20) * Math.cos(midAngle)
-    const ly = cy + (r + 20) * Math.sin(midAngle)
+  const slices = data.reduce<{ startAngle: number; items: { path: string; opacity: number; lx: number; ly: number; label: string; pct: number }[] }>(
+    (acc, d, i) => {
+      const angle = (d.value / total) * 2 * Math.PI
+      const endAngle = acc.startAngle + angle
+      const x1 = cx + r * Math.cos(acc.startAngle)
+      const y1 = cy + r * Math.sin(acc.startAngle)
+      const x2 = cx + r * Math.cos(endAngle)
+      const y2 = cy + r * Math.sin(endAngle)
+      const largeArc = angle > Math.PI ? 1 : 0
+      const midAngle = acc.startAngle + angle / 2
+      const lx = cx + (r + 20) * Math.cos(midAngle)
+      const ly = cy + (r + 20) * Math.sin(midAngle)
 
-    const slice = {
-      path: `M${cx},${cy} L${x1},${y1} A${r},${r},0,${largeArc},1,${x2},${y2} Z`,
-      opacity: opacities[i % opacities.length],
-      lx,
-      ly,
-      label: d.label,
-      pct: Math.round((d.value / total) * 100),
-    }
-    startAngle = endAngle
-    return slice
-  })
+      acc.items.push({
+        path: `M${cx},${cy} L${x1},${y1} A${r},${r},0,${largeArc},1,${x2},${y2} Z`,
+        opacity: opacities[i % opacities.length],
+        lx,
+        ly,
+        label: d.label,
+        pct: Math.round((d.value / total) * 100),
+      })
+      acc.startAngle = endAngle
+      return acc
+    },
+    { startAngle: -Math.PI / 2, items: [] }
+  ).items
 
   return (
     <>
