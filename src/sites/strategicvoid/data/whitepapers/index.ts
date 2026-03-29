@@ -5,6 +5,12 @@ import { calendarSaturationTheory } from "./calendar-saturation-theory"
 import { postKpiFramework } from "./post-kpi-framework"
 import { vanityMetricsArt } from "./vanity-metrics-art"
 import { goalppostShifting } from "./goalpost-shifting"
+import { middleManagementImperative } from "./middle-management-imperative"
+import { synergyAmplificationEffect } from "./synergy-amplification-effect"
+import { escalationArchitecture } from "./escalation-architecture"
+import { performanceParadox } from "./performance-paradox"
+import { focusbandOptics } from "./focusband-optics"
+import { taskDeferralPatience } from "./task-deferral-patience"
 
 export const whitepapers: Whitepaper[] = [
   stateOfMeetingOptimization,
@@ -13,6 +19,12 @@ export const whitepapers: Whitepaper[] = [
   postKpiFramework,
   vanityMetricsArt,
   goalppostShifting,
+  middleManagementImperative,
+  synergyAmplificationEffect,
+  escalationArchitecture,
+  performanceParadox,
+  focusbandOptics,
+  taskDeferralPatience,
 ]
 
 export function getWhitepaperBySlug(slug: string): Whitepaper | undefined {
