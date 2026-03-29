@@ -1,6 +1,5 @@
 "use client"
 
-import { Hero } from "@/components/ui/hero"
 import { WaveDivider } from "@/components/ui/wave-divider"
 import { SplitSection } from "@/components/ui/split-section"
 import { ProductCarousel } from "@/components/ui/product-carousel"
