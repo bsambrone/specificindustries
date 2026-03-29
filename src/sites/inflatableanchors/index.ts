@@ -3,6 +3,7 @@ import type { PageEntry, DynamicRoute } from "@/themes"
 import InflatableAnchorsHome from "./pages/home"
 import { getProductBySlug } from "./data/products"
 import InflatableAnchorsProducts, { metadata as productsMetadata } from "./pages/products"
+import InflatableAnchorsAbout, { metadata as aboutMetadata } from "./pages/about"
 import ProductDetail from "./pages/product-detail"
 
 export { config }
@@ -10,6 +11,7 @@ export { config }
 export const pages: Record<string, PageEntry> = {
   "": InflatableAnchorsHome,
   "products": { component: InflatableAnchorsProducts, metadata: productsMetadata },
+  "about": { component: InflatableAnchorsAbout, metadata: aboutMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
