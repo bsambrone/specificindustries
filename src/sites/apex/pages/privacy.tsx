@@ -114,7 +114,7 @@ export default function ApexPrivacy() {
           </p>
 
           <h2 className="text-2xl font-heading font-bold text-primary">9. Contact Us</h2>
-          <p>
+          <p className="text-xs text-foreground/70">
             If you have questions about this Privacy Policy, please contact us at:{" "}
             <a
               href="mailto:bsambrone@gmail.com"

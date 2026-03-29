@@ -195,6 +195,12 @@ export default function PigMilkContact() {
                   Email
                 </h3>
                 <p className="text-primary">help@pigmilk.specificindustries.com</p>
+                <p className="text-[10px] text-foreground/50 mt-1">
+                  Or reach a real human:{" "}
+                  <a href="mailto:bsambrone@gmail.com" className="underline hover:text-primary transition-colors">
+                    bsambrone@gmail.com
+                  </a>
+                </p>
               </div>
 
               <div>

@@ -103,7 +103,7 @@ export default function ApexTerms() {
           </p>
 
           <h2 className="text-2xl font-heading font-bold text-primary">10. Contact Us</h2>
-          <p>
+          <p className="text-xs text-foreground/70">
             If you have questions about these Terms of Use, please contact us at:{" "}
             <a
               href="mailto:bsambrone@gmail.com"
