@@ -43,3 +43,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .superpowers/
+
+# MCP image generation
+base-images/
+generated-images/
+mcp/image-gen/node_modules/
