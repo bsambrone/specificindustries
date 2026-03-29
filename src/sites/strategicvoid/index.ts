@@ -4,6 +4,8 @@ import StrategicVoidHome from "./pages/home"
 import SolutionsIndex, { metadata as solutionsMetadata } from "./pages/solutions-index"
 import CaseStudiesIndex, { metadata as caseStudiesMetadata } from "./pages/case-studies-index"
 import WhitepapersIndex, { metadata as whitepapersMetadata } from "./pages/whitepapers-index"
+import LeadershipPage, { metadata as leadershipMetadata } from "./pages/leadership"
+import ContactPage, { metadata as contactMetadata } from "./pages/contact"
 import SolutionRouter from "./pages/solution-router"
 import CaseStudyPage from "./pages/case-study-page"
 import WhitepaperPage from "./pages/whitepaper-page"
@@ -19,6 +21,8 @@ export const pages: Record<string, PageEntry> = {
   "solutions": { component: SolutionsIndex, metadata: solutionsMetadata },
   "case-studies": { component: CaseStudiesIndex, metadata: caseStudiesMetadata },
   "whitepapers": { component: WhitepapersIndex, metadata: whitepapersMetadata },
+  "leadership": { component: LeadershipPage, metadata: leadershipMetadata },
+  "contact": { component: ContactPage, metadata: contactMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
