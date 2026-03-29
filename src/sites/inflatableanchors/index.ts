@@ -5,6 +5,7 @@ import { getProductBySlug } from "./data/products"
 import InflatableAnchorsProducts, { metadata as productsMetadata } from "./pages/products"
 import InflatableAnchorsAbout, { metadata as aboutMetadata } from "./pages/about"
 import TheTechnology, { metadata as technologyMetadata } from "./pages/technology"
+import CustomerStoriesPage, { metadata as customerStoriesMetadata } from "./pages/customer-stories"
 import ProductDetail from "./pages/product-detail"
 
 export { config }
@@ -14,6 +15,7 @@ export const pages: Record<string, PageEntry> = {
   "products": { component: InflatableAnchorsProducts, metadata: productsMetadata },
   "about": { component: InflatableAnchorsAbout, metadata: aboutMetadata },
   "the-technology": { component: TheTechnology, metadata: technologyMetadata },
+  "customer-stories": { component: CustomerStoriesPage, metadata: customerStoriesMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
