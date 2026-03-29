@@ -12,20 +12,22 @@ interface ProductCardProps {
   tagline: string
   image: string
   showAddToCart?: boolean
+  href?: string
 }
 
-export function ProductCard({ slug, name, price, tagline, image, showAddToCart = true }: ProductCardProps) {
+export function ProductCard({ slug, name, price, tagline, image, showAddToCart = true, href }: ProductCardProps) {
   const siteHref = useSiteLink()
+  const resolvedHref = href ? siteHref(href) : siteHref(`/products/${slug}`)
 
   return (
     <div className="border border-primary/10 rounded-lg overflow-hidden hover:border-primary/30 transition-colors">
-      <Link href={siteHref(`/products/${slug}`)}>
+      <Link href={resolvedHref}>
         <div className="relative aspect-square bg-secondary/10">
           <Image src={image} alt={name} fill className="object-cover" />
         </div>
       </Link>
       <div className="p-4 text-center">
-        <Link href={siteHref(`/products/${slug}`)}>
+        <Link href={resolvedHref}>
           <h3 className="text-lg font-heading font-semibold text-primary mb-1">{name}</h3>
         </Link>
         <p className="text-sm text-foreground/60 mb-2">{tagline}</p>
