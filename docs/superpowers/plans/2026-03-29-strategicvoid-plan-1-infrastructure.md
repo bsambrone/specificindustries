@@ -24,6 +24,7 @@
 - `src/themes/index.ts` — Add `MegaMenuItem`, `MegaMenuChild` interfaces; extend `SiteConfig` with optional `megaMenu`; extend `DynamicRoute` with `segments?` and `maxSegments`
 - `src/app/[[...slug]]/page.tsx` — Support multi-segment dynamic routes
 - `src/components/layout/header.tsx` — Conditional MegaMenu rendering
+- `src/components/ui/product-card.tsx` — Add optional `href` prop for custom link destinations
 - `src/sites/registry.ts` — Register strategicvoid
 
 ### New Shared Components (create)
@@ -533,6 +534,36 @@ git commit -m "feat: add MegaMenu support to Header with fallback to flat nav"
 - Create: `src/components/ui/metric-counter.tsx`
 - Create: `src/components/ui/enterprise-pricing-table.tsx`
 - Create: `src/components/ui/email-gate-form.tsx`
+
+- [ ] **Step 0: Add `href` override to existing ProductCard**
+
+The existing `ProductCard` hardcodes link paths as `/products/${slug}`. Strategic Void needs product links at `/solutions/[area]/[product]`. Add an optional `href` prop to `ProductCard` that overrides the default link:
+
+In `src/components/ui/product-card.tsx`, add `href?: string` to the props interface:
+
+```typescript
+interface ProductCardProps {
+  slug: string
+  name: string
+  price: string
+  tagline: string
+  image: string
+  showAddToCart?: boolean
+  href?: string  // Add this — optional override for the link destination
+}
+```
+
+Update the component to use `href` when provided:
+
+```typescript
+export function ProductCard({ slug, name, price, tagline, image, showAddToCart = true, href }: ProductCardProps) {
+  const siteHref = useSiteLink()
+  const linkPath = href ? siteHref(href) : siteHref(`/products/${slug}`)
+```
+
+Then replace both `siteHref(`/products/${slug}`)` usages with `linkPath`.
+
+Existing sites are unaffected — they don't pass `href`, so the default `/products/${slug}` behavior is preserved.
 
 - [ ] **Step 1: Create SolutionCard**
 
@@ -2756,7 +2787,8 @@ export default function SolutionPage({ slug }: { slug: string }) {
           {solutionProducts.map((product) => (
             <ProductCard
               key={product.slug}
-              slug={`solutions/${slug}/${product.slug}`}
+              slug={product.slug}
+              href={`/solutions/${slug}/${product.slug}`}
               name={product.name}
               price={product.price}
               tagline={product.tagline}
@@ -2941,7 +2973,8 @@ export default function ProductDetailPage({ solutionSlug, productSlug }: { solut
             {relatedProducts.map((p) => (
               <ProductCard
                 key={p.slug}
-                slug={`solutions/${solutionSlug}/${p.slug}`}
+                slug={p.slug}
+                href={`/solutions/${solutionSlug}/${p.slug}`}
                 name={p.name}
                 price={p.price}
                 tagline={p.tagline}
