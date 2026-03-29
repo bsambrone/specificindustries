@@ -7,6 +7,10 @@ import { strattonManagementLayers } from "./stratton-management-layers"
 import { corebridgeDelegation } from "./corebridge-delegation"
 import { novacorpPerceivedProductivity } from "./novacorp-perceived-productivity"
 import { dataplexFocusband } from "./dataplex-focusband"
+import { vanguardCheckboxCompletion } from "./vanguard-checkbox-completion"
+import { sterlingRiskRedistribution } from "./sterling-risk-redistribution"
+import { broadleafEmailClarity } from "./broadleaf-email-clarity"
+import { titanReplyAll } from "./titan-reply-all"
 
 export const caseStudies: CaseStudy[] = [
   globaltechMeetingOptimization,
@@ -17,6 +21,10 @@ export const caseStudies: CaseStudy[] = [
   corebridgeDelegation,
   novacorpPerceivedProductivity,
   dataplexFocusband,
+  vanguardCheckboxCompletion,
+  sterlingRiskRedistribution,
+  broadleafEmailClarity,
+  titanReplyAll,
 ]
 
 export function getCaseStudyBySlug(slug: string): CaseStudy | undefined {
