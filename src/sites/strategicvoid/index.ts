@@ -6,6 +6,7 @@ import CaseStudiesIndex, { metadata as caseStudiesMetadata } from "./pages/case-
 import WhitepapersIndex, { metadata as whitepapersMetadata } from "./pages/whitepapers-index"
 import LeadershipPage, { metadata as leadershipMetadata } from "./pages/leadership"
 import ContactPage, { metadata as contactMetadata } from "./pages/contact"
+import PrivacyPage, { metadata as privacyMetadata } from "./pages/privacy"
 import SolutionRouter from "./pages/solution-router"
 import CaseStudyPage from "./pages/case-study-page"
 import WhitepaperPage from "./pages/whitepaper-page"
@@ -23,6 +24,7 @@ export const pages: Record<string, PageEntry> = {
   "whitepapers": { component: WhitepapersIndex, metadata: whitepapersMetadata },
   "leadership": { component: LeadershipPage, metadata: leadershipMetadata },
   "contact": { component: ContactPage, metadata: contactMetadata },
+  "privacy": { component: PrivacyPage, metadata: privacyMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
