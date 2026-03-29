@@ -464,20 +464,22 @@ Intentionally incomprehensible. Includes:
 
 ## Leadership Page
 
-4 executives with AI-generated headshots (MCP `generate_image_with_person` using reference photos). Fake names (TBD at content time), absurd titles, third-person corporate hagiography bios.
+4 executives with AI-generated headshots (MCP `generate_image_with_person` using reference photos). Absurd old-money consulting partner names, absurd titles, third-person corporate hagiography bios.
 
-| Person | Title | Bio Direction |
-|--------|-------|---------------|
-| Bill | Founder & Chief Alignment Officer | Founded Strategic Void in 1987 after realizing most organizations were accidentally productive |
-| Brandon | VP of Synergy Operations | Ensures all synergy initiatives remain theoretical |
-| Jim | Chief Disruption Evangelist | Has disrupted 14 industries without producing a measurable outcome |
-| Sean | Senior Director of Strategic Ambiguity | Ensures all communications achieve maximum opacity |
+| Reference Person | Fake Name | Title | Bio Direction |
+|-----------------|-----------|-------|---------------|
+| Bill | Maximilian "Max" Thornbury III | Founder & Chief Alignment Officer | Founded Strategic Void in 1987 after realizing most organizations were accidentally productive |
+| Brandon | Preston Hawthorne-Clyde | VP of Synergy Operations | Ensures all synergy initiatives remain theoretical |
+| Jim | J. Rutherford Pennington | Chief Disruption Evangelist | Has disrupted 14 industries without producing a measurable outcome |
+| Sean | Caldwell Ashford-Wexley | Senior Director of Strategic Ambiguity | Ensures all communications achieve maximum opacity |
 
-Each ExecutiveCard includes: headshot, name, title, 2-3 sentence bio, pull quote, absurd credentials.
+Real names (Bill, Brandon, Jim, Sean) must NEVER appear on the site — only the fake names above are used in all content including case study quotes, whitepaper author credits, and leadership bios.
+
+Each ExecutiveCard includes: headshot, fake name, title, 2-3 sentence bio, pull quote, absurd credentials.
 
 ### People Image Tiers
 
-- **Executive tier** (Bill, Brandon, Jim, Sean with reference photos) — leadership page, case study engagement partner quotes, whitepaper author bios, occasional corporate overlord appearances
+- **Executive tier** (Bill→Thornbury, Brandon→Hawthorne-Clyde, Jim→Pennington, Sean→Ashford-Wexley with reference photos) — leadership page, case study engagement partner quotes, whitepaper author bios, occasional corporate overlord appearances
 - **Worker tier** (AI-generated without reference photos via `generate_image` with descriptive prompts) — testimonials, employee experience pages, case study client quotes, meeting/office scenes
 
 ## About Page
