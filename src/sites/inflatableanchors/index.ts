@@ -10,6 +10,8 @@ import InflatableAnchorsFAQ, { metadata as faqMetadata } from "./pages/faq"
 import InflatableAnchorsContact, { metadata as contactMetadata } from "./pages/contact"
 import InflatableAnchorsPrivacy, { metadata as privacyMetadata } from "./pages/privacy"
 import InflatableAnchorsTerms, { metadata as termsMetadata } from "./pages/terms"
+import InflatableAnchorsCart from "./pages/cart"
+import InflatableAnchorsCheckout from "./pages/checkout"
 import ProductDetail from "./pages/product-detail"
 
 export { config }
@@ -24,6 +26,8 @@ export const pages: Record<string, PageEntry> = {
   "contact": { component: InflatableAnchorsContact, metadata: contactMetadata },
   "privacy": { component: InflatableAnchorsPrivacy, metadata: privacyMetadata },
   "terms": { component: InflatableAnchorsTerms, metadata: termsMetadata },
+  "cart": InflatableAnchorsCart,
+  "checkout": InflatableAnchorsCheckout,
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
