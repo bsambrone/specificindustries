@@ -27,21 +27,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // Check dynamic routes for metadata
   if (!pageMetadata && !pageEntry) {
     const segments = path.split("/")
-    if (segments.length === 2 && site.dynamicRoutes?.[segments[0]]) {
+    if (segments.length >= 2 && site.dynamicRoutes?.[segments[0]]) {
       const route = site.dynamicRoutes[segments[0]]
-      const dynamicMeta = route.getMetadata?.(segments[1])
-      if (dynamicMeta) {
-        return {
-          title: dynamicMeta.title || site.config.metadata.title,
-          description: dynamicMeta.description || site.config.metadata.description,
-          openGraph: {
+      const maxSegs = route.maxSegments ?? 1
+      const dynamicSegments = segments.slice(1)
+
+      if (dynamicSegments.length >= 1 && dynamicSegments.length <= maxSegs) {
+        const primarySlug = dynamicSegments[0]
+        const dynamicMeta = route.getMetadata?.(primarySlug, dynamicSegments.length > 1 ? dynamicSegments : undefined)
+        if (dynamicMeta) {
+          return {
             title: dynamicMeta.title || site.config.metadata.title,
             description: dynamicMeta.description || site.config.metadata.description,
-            images: site.config.metadata.ogImage ? [site.config.metadata.ogImage] : [],
-          },
-          other: {
-            classification: "satire, entertainment, humor",
-          },
+            openGraph: {
+              title: dynamicMeta.title || site.config.metadata.title,
+              description: dynamicMeta.description || site.config.metadata.description,
+              images: site.config.metadata.ogImage ? [site.config.metadata.ogImage] : [],
+            },
+            other: {
+              classification: "satire, entertainment, humor",
+            },
+          }
         }
       }
     }
@@ -75,16 +81,21 @@ export default async function CatchAllPage({ params }: PageProps) {
   const pageEntry = site.pages[path]
 
   if (!pageEntry) {
-    // Check dynamic routes (e.g., /products/classic-pig-milk)
+    // Check dynamic routes (e.g., /products/slug or /solutions/area/product)
     const segments = path.split("/")
-    if (segments.length === 2 && site.dynamicRoutes?.[segments[0]]) {
+    if (segments.length >= 2 && site.dynamicRoutes?.[segments[0]]) {
       const route = site.dynamicRoutes[segments[0]]
-      const dynamicSlug = segments[1]
-      if (route.isValidSlug && !route.isValidSlug(dynamicSlug)) {
-        notFound()
+      const maxSegs = route.maxSegments ?? 1
+      const dynamicSegments = segments.slice(1)
+
+      if (dynamicSegments.length >= 1 && dynamicSegments.length <= maxSegs) {
+        const primarySlug = dynamicSegments[0]
+        if (route.isValidSlug && !route.isValidSlug(primarySlug, dynamicSegments.length > 1 ? dynamicSegments : undefined)) {
+          notFound()
+        }
+        const DynamicComponent = route.component
+        return <DynamicComponent slug={primarySlug} segments={dynamicSegments} />
       }
-      const DynamicComponent = route.component
-      return <DynamicComponent slug={dynamicSlug} />
     }
     notFound()
   }
