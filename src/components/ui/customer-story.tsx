@@ -26,12 +26,12 @@ export function CustomerStoryGrid({ title, stories }: CustomerStoryGridProps) {
               key={story.name}
               className="bg-secondary/10 rounded-lg overflow-hidden"
             >
-              <div className="relative w-full h-48">
+              <div className="relative w-full aspect-[3/2]">
                 <Image
                   src={story.image}
                   alt={story.name}
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
               <div className="p-6">

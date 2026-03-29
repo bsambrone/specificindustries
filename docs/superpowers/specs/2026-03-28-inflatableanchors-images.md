@@ -46,7 +46,7 @@ Images should feature people where noted — infomercial aesthetic, bright and e
 | Filename | Prompt |
 |----------|--------|
 | `team-chuck.png` | Friendly confident middle-aged white man wearing a captain's hat and orange polo shirt, big warm smile, arms crossed, standing at a marina with boats in background, infomercial host energy, professional headshot style |
-| `team-reef.png` | Younger man with glasses wearing a white lab coat standing on a wooden dock, holding a clipboard with serious concentrated expression, whiteboard with buoyancy equations partially visible behind him, professional headshot style |
+| `team-reef.png` | Younger man with glasses and minor beard wearing a white lab coat standing on a wooden dock, holding a clipboard with serious concentrated expression, whiteboard with buoyancy equations partially visible behind him, professional headshot style |
 | `team-skip.png` | Enthusiastic man wearing an orange company polo shirt with a customer service headset on, giving double thumbs up with a huge grin, office background with nautical posters on the wall, professional headshot style |
 | `team-mike.png` | Large muscular man in rugged work clothes (flannel shirt, work boots) carrying a comically tiny shipping box labeled "HEAVY DUTY" under one arm, standing in a dock warehouse setting, amused expression, professional headshot style |
 

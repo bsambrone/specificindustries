@@ -37,7 +37,7 @@ export function Hero({
         dark && !hasImage
           ? "bg-gradient-to-br from-primary to-accent/40"
           : hasImage
-          ? ""
+          ? "min-h-[340px] md:min-h-[400px]"
           : "bg-secondary/30"
       }`}
     >
