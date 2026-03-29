@@ -135,6 +135,8 @@ export const solutions: Solution[] = [
       "morale-measurer",
       "culture-deck-generator",
       "satisfaction-survey-suite",
+      "ergomax-compliance-chair",
+      "anonymous-feedback-redirector",
     ],
   },
 ]
