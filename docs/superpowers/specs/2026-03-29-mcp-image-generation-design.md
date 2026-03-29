@@ -63,6 +63,7 @@ generated-images/             # Gitignored — output staging area
 - `@modelcontextprotocol/sdk` — MCP server framework
 - `openai` — Official OpenAI Node SDK
 - `dotenv` — Load `.env` from project root
+- `tsx` — Run TypeScript directly (no build step)
 
 ## MCP Tools
 
@@ -80,10 +81,14 @@ Generates an image from a text prompt only.
 | `filename` | string | Yes | Output filename (e.g., `hero.png`) |
 | `quality` | `"low"` \| `"medium"` \| `"high"` | No | Generation quality (default: `"high"`) |
 
+**SDK method:** `openai.images.generate()`
+
 **Behavior:**
-1. Call OpenAI's `gpt-image-1.5` model with the prompt and `{width}x{height}` size
-2. Save the result to `generated-images/<filename>`
-3. Return the path to the generated image
+1. Validate that `{width}x{height}` is a supported dimension (see Supported Dimensions)
+2. Validate that `filename` contains no path separators and ends with a valid image extension (`.png`, `.jpg`, `.webp`)
+3. Call `openai.images.generate()` with model `gpt-image-1.5`, the prompt, and size `{width}x{height}`
+4. Decode the base64 response (`b64_json` format) and write to `generated-images/<filename>`
+5. Return the path to the generated image
 
 ### Tool 2: `generate_image_with_person`
 
@@ -103,18 +108,23 @@ Generates an image using reference photos of a real person as base images.
 
 **Validation:** Either `role` or `person` must be provided. If `person` is given, validates the name exists in `base-images/`.
 
+**SDK method:** `openai.images.edit()` — the edit endpoint accepts input images and preserves likeness.
+
 **Behavior:**
-1. Resolve which person to use:
+1. Validate dimensions and filename (same rules as `generate_image`)
+2. Resolve which person to use:
    - If `person` is provided → use that person's folder
    - If `role: "founder"` → use `bill/`
    - If `role: "team_member"` → pick a random person from all non-Bill folders
-2. Select 2 random images from that person's folder
-3. Read and base64-encode the selected images
-4. Send images + prompt to `gpt-image-1.5` as an image edit request
-5. Save the result to `generated-images/<filename>`
-6. Return the path to the generated image and which person/photos were used
+3. Select 2 random images from that person's folder
+4. Open the selected images as file streams (using `fs.createReadStream()`) for the SDK's `image` parameter
+5. Call `openai.images.edit()` with model `gpt-image-1.5`, the image streams, prompt, size, and `input_fidelity: "high"` (preserves facial features and likeness)
+6. Decode the base64 response (`b64_json` format) and write to `generated-images/<filename>`
+7. Return the path to the generated image and which person/photos were used
 
 **Edge case:** If a person has fewer than 2 images, use all available images (1 image still works).
+
+**Why 2 images:** Multiple reference images give the model more angles/expressions to work with for better likeness. The edit endpoint accepts an array of images. 2 is a practical default — enough for good likeness without excessive API cost.
 
 ### Tool 3: `list_base_images`
 
@@ -159,7 +169,7 @@ Stored in `.env` at project root (already gitignored via `.env*` pattern):
 OPENAI_API_KEY=sk-...
 ```
 
-The server loads the key via `dotenv` from the project root, or receives it through the MCP config env passthrough.
+The server loads the key via `dotenv` from the project root. The MCP config `env` field is a fallback mechanism if the `.env` file is not present.
 
 ## Git Exclusions
 
@@ -192,8 +202,24 @@ The `person` parameter allows overriding this mapping when a specific friend is 
 
 ## Supported Dimensions
 
-The caller must always specify `width` and `height`. Valid combinations for `gpt-image-1.5`:
+The caller must always specify `width` and `height`. Both tools validate that the provided dimensions match one of these supported combinations:
 - `1024x1024` (square)
 - `1536x1024` (landscape)
 - `1024x1536` (portrait)
-- `auto` is also supported by the API but we require explicit dimensions
+
+If invalid dimensions are provided, the tool returns an error listing the valid options. `auto` is supported by the API but we require explicit dimensions.
+
+## Error Handling
+
+The server handles errors by returning descriptive error messages to Claude Code:
+
+| Error | Behavior |
+|-------|----------|
+| Missing or invalid `OPENAI_API_KEY` | Server fails to start with a clear message |
+| Invalid dimensions | Tool returns error listing valid dimension combinations |
+| Invalid filename (path traversal, bad extension) | Tool returns error describing valid filename format |
+| `person` name not found in `base-images/` | Tool returns error listing available person names |
+| `base-images/` directory missing or empty | Tool returns error explaining how to set up the directory |
+| Neither `role` nor `person` provided | Tool returns error explaining that one is required |
+| OpenAI API error (rate limit, content policy, etc.) | Tool returns the API error message |
+| File already exists in `generated-images/` | Overwrites silently (staging area, not permanent storage) |
