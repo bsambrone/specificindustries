@@ -7,6 +7,7 @@ import InflatableAnchorsAbout, { metadata as aboutMetadata } from "./pages/about
 import TheTechnology, { metadata as technologyMetadata } from "./pages/technology"
 import CustomerStoriesPage, { metadata as customerStoriesMetadata } from "./pages/customer-stories"
 import InflatableAnchorsFAQ, { metadata as faqMetadata } from "./pages/faq"
+import InflatableAnchorsContact, { metadata as contactMetadata } from "./pages/contact"
 import ProductDetail from "./pages/product-detail"
 
 export { config }
@@ -18,6 +19,7 @@ export const pages: Record<string, PageEntry> = {
   "the-technology": { component: TheTechnology, metadata: technologyMetadata },
   "customer-stories": { component: CustomerStoriesPage, metadata: customerStoriesMetadata },
   "faq": { component: InflatableAnchorsFAQ, metadata: faqMetadata },
+  "contact": { component: InflatableAnchorsContact, metadata: contactMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
