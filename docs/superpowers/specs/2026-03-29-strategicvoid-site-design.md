@@ -25,9 +25,10 @@ Strategic Void Consulting is a satirical enterprise consulting firm website that
 - **Accent:** `#c9a84c` (gold)
 - **Background:** `#0a1628` (dark)
 - **Text:** `#e8e0d0` (warm cream)
-- **Muted text:** `#8899b3` (steel blue)
 - **Heading font:** Playfair Display (serif, already loaded in the project)
 - **Body font:** Inter (already loaded)
+
+**Muted text color (`#8899b3`):** This is not part of the 5-color `ThemeColors` type. It will be used as a hardcoded CSS value within strategicvoid components only (e.g., `text-[#8899b3]`). The shared `ThemeColors` interface is NOT extended — this keeps changes local to this site.
 
 This is visually distinct from all existing sites (pigmilk's pink, dehydratedwater's heritage blue, inflatableanchors' nautical orange).
 
@@ -44,6 +45,31 @@ New **MegaMenu** shared component replacing the standard Header nav for this sit
 - **About** — smaller dropdown: Company, Leadership, Contact
 
 Responsive behavior: collapses to accordion on mobile. Theme-aware via CSS variables.
+
+**Nav type integration:** The existing `NavItem` type is `{ label: string; path: string }` (flat links). Rather than modifying this shared type (which would affect all sites), the MegaMenu component consumes its own data structure defined within the strategicvoid config. The site's `config.nav` array still contains flat `NavItem[]` entries for fallback/mobile. The MegaMenu receives nested navigation data as a separate config. The Header component checks if a site provides a `megaMenu` config and renders MegaMenu instead of the default nav. This requires adding an optional `megaMenu` field to `SiteConfig`:
+
+```typescript
+// Added to SiteConfig (optional, backwards-compatible)
+megaMenu?: {
+  items: MegaMenuItem[]
+}
+
+interface MegaMenuItem {
+  label: string
+  path?: string              // direct link (for simple items)
+  children?: MegaMenuChild[] // dropdown content
+  style?: "mega" | "dropdown" // "mega" = full-width panel, "dropdown" = simple list
+}
+
+interface MegaMenuChild {
+  label: string
+  path: string
+  description?: string
+  icon?: string
+}
+```
+
+This keeps `NavItem` unchanged for all existing sites while giving strategicvoid nested nav.
 
 ## Page Map
 
@@ -74,14 +100,58 @@ Responsive behavior: collapses to accordion on mobile. Theme-aware via CSS varia
 
 ### Dynamic Routes
 
-Three dynamic route patterns, all validated against data:
+Four dynamic route patterns, all validated against data:
 
 - `solutions/[slug]` — resolves to one of 8 solution area pages
 - `solutions/[area]/[slug]` — resolves to a product detail page within a solution area
 - `case-studies/[slug]` — resolves to a case study page
 - `whitepapers/[slug]` — resolves to a whitepaper page
 
-**Multi-segment routing:** The current catch-all route receives `[[...slug]]` as a path segment array. The dynamic route resolver needs a small update to support multi-segment paths (e.g., `["solutions", "meeting-optimization", "meeting-brick"]`), passing remaining segments as props to the matched component. A `SolutionRouter` component determines whether the path is a solution page or a product detail within a solution.
+**Multi-segment routing — integration with existing types:**
+
+The current `DynamicRoute` interface passes `{ slug: string }` to components, and the catch-all route only handles exactly 2 segments (`prefix/slug`). Strategic Void needs 2 AND 3 segment paths under `solutions/`.
+
+**Approach:** Extend the `DynamicRoute` interface to support multi-segment slugs while remaining backwards-compatible:
+
+```typescript
+// Updated DynamicRoute in src/themes/index.ts
+export interface DynamicRoute {
+  component: React.ComponentType<{ slug: string; segments?: string[] }>
+  getMetadata?: (slug: string, segments?: string[]) => PageMetadata | undefined
+  isValidSlug?: (slug: string, segments?: string[]) => boolean
+  maxSegments?: number  // default 1 (current behavior), set to 2 for solutions
+}
+```
+
+The catch-all route update:
+- Currently: `segments.length === 2` hardcoded check
+- Updated: check `segments.length >= 2`, find matching `dynamicRoutes[segments[0]]`, pass `segments[1]` as `slug` and `segments.slice(1)` as `segments`
+- The `maxSegments` field tells the resolver how many segments after the prefix to accept (1 = current behavior, 2 = allows `solutions/area/product`)
+
+For `strategicvoid`, the `dynamicRoutes` barrel exports:
+
+```typescript
+dynamicRoutes: {
+  "solutions": {
+    component: SolutionRouter,    // receives slug="meeting-optimization" and segments=["meeting-optimization"] or segments=["meeting-optimization", "meeting-brick"]
+    getMetadata: (slug, segments) => ...,
+    isValidSlug: (slug, segments) => ...,
+    maxSegments: 2,
+  },
+  "case-studies": {
+    component: CaseStudyPage,
+    getMetadata: (slug) => ...,
+    isValidSlug: (slug) => ...,
+  },
+  "whitepapers": {
+    component: WhitepaperPage,
+    getMetadata: (slug) => ...,
+    isValidSlug: (slug) => ...,
+  },
+}
+```
+
+`SolutionRouter` checks `segments.length`: if 1, render solution page; if 2, render product detail. Existing sites are unaffected — their `DynamicRoute` components don't use `segments` and `maxSegments` defaults to 1.
 
 ## Solution Areas (8)
 
@@ -566,9 +636,9 @@ All purchase paths lead to "Request a Demo" / "Schedule an Alignment Session" / 
 
 ## Routing Changes
 
-The catch-all route (`src/app/[[...slug]]/page.tsx`) needs a small update to support multi-segment dynamic routes. Currently it handles single-segment dynamic slugs (e.g., `products/[slug]`). For Strategic Void, it needs to support:
+See the "Dynamic Routes" section above for the full integration approach. Summary:
 
-- Two-segment: `solutions/[area-slug]` → solution page
-- Three-segment: `solutions/[area-slug]/[product-slug]` → product detail
-
-A `SolutionRouter` component receives the path segments and determines which template to render.
+- Extend `DynamicRoute` interface with optional `segments?: string[]` prop and `maxSegments` field (backwards-compatible)
+- Update catch-all route to pass remaining path segments when `maxSegments > 1`
+- `SolutionRouter` receives segments and determines solution page vs. product detail
+- Existing sites are unaffected — their dynamic routes continue to work with single slugs
