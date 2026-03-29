@@ -28,6 +28,24 @@ export interface NavItem {
   path: string
 }
 
+export interface MegaMenuChild {
+  label: string
+  path: string
+  description?: string
+  icon?: string
+}
+
+export interface MegaMenuItem {
+  label: string
+  path?: string
+  children?: MegaMenuChild[]
+  style?: "mega" | "dropdown"
+}
+
+export interface MegaMenuConfig {
+  items: MegaMenuItem[]
+}
+
 export interface SiteConfig {
   name: string
   subdomain: string
@@ -37,6 +55,7 @@ export interface SiteConfig {
   features: {
     commerce: boolean
   }
+  megaMenu?: MegaMenuConfig
 }
 
 export interface PageMetadata {
@@ -53,9 +72,10 @@ export interface PageWithMetadata {
 export type PageEntry = React.ComponentType | PageWithMetadata
 
 export interface DynamicRoute {
-  component: React.ComponentType<{ slug: string }>
-  getMetadata?: (slug: string) => PageMetadata | undefined
-  isValidSlug?: (slug: string) => boolean
+  component: React.ComponentType<{ slug: string; segments?: string[] }>
+  getMetadata?: (slug: string, segments?: string[]) => PageMetadata | undefined
+  isValidSlug?: (slug: string, segments?: string[]) => boolean
+  maxSegments?: number
 }
 
 export interface SiteModule {
