@@ -11,6 +11,10 @@ import { vanguardCheckboxCompletion } from "./vanguard-checkbox-completion"
 import { sterlingRiskRedistribution } from "./sterling-risk-redistribution"
 import { broadleafEmailClarity } from "./broadleaf-email-clarity"
 import { titanReplyAll } from "./titan-reply-all"
+import { keystoneDecisionElimination } from "./keystone-decision-elimination"
+import { pacificRimDecisionDelay } from "./pacific-rim-decision-delay"
+import { crestwoodMandatoryfun } from "./crestwood-mandatoryfun"
+import { ironbridgePizzaMorale } from "./ironbridge-pizza-morale"
 
 export const caseStudies: CaseStudy[] = [
   globaltechMeetingOptimization,
@@ -25,6 +29,10 @@ export const caseStudies: CaseStudy[] = [
   sterlingRiskRedistribution,
   broadleafEmailClarity,
   titanReplyAll,
+  keystoneDecisionElimination,
+  pacificRimDecisionDelay,
+  crestwoodMandatoryfun,
+  ironbridgePizzaMorale,
 ]
 
 export function getCaseStudyBySlug(slug: string): CaseStudy | undefined {
