@@ -77,11 +77,7 @@ async function generateWithPerson(prompt: string, filename: string, person: stri
   try {
     const inputImages = photos.map(photo => {
       const photoPath = path.join(personDir, photo)
-      const data = fs.readFileSync(photoPath)
-      const base64 = data.toString("base64")
-      const ext = path.extname(photo).toLowerCase()
-      const mime = ext === ".png" ? "image/png" : "image/jpeg"
-      return `data:${mime};base64,${base64}`
+      return fs.createReadStream(photoPath)
     })
 
     const response = await openai.images.edit({
