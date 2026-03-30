@@ -72,6 +72,7 @@ export default function StrategicVoidHome() {
                 tagline={solution.tagline}
                 productCount={solution.productSlugs.length}
                 icon={solution.icon}
+                image={`/sites/strategicvoid/solution-${solution.slug}.png`}
               />
             ))}
           </div>
