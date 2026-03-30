@@ -10,6 +10,8 @@ interface ExecutiveCardProps {
 }
 
 export function ExecutiveCard({ name, title, credentials, bio, quote, image }: ExecutiveCardProps) {
+  const bioParagraphs = bio.split("\n\n").filter(Boolean)
+
   return (
     <div className="flex flex-col md:flex-row gap-8">
       <div className="shrink-0">
@@ -21,7 +23,11 @@ export function ExecutiveCard({ name, title, credentials, bio, quote, image }: E
         <h3 className="text-2xl font-heading font-semibold text-primary mb-1">{name}</h3>
         <p className="text-accent font-medium mb-1">{title}</p>
         <p className="text-xs text-foreground/50 uppercase tracking-wider mb-4">{credentials}</p>
-        <p className="text-foreground/70 text-sm leading-relaxed mb-5">{bio}</p>
+        <div className="text-foreground/70 text-sm leading-relaxed mb-5 space-y-3">
+          {bioParagraphs.map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
+          ))}
+        </div>
         <blockquote className="border-l-4 border-accent pl-4 text-foreground/80 italic leading-relaxed">
           &ldquo;{quote}&rdquo;
         </blockquote>
