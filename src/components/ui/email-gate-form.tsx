@@ -46,9 +46,9 @@ export function EmailGateForm({ title, subtitle, storageKey, children }: EmailGa
       </div>
 
       {/* Overlay gate */}
-      <div className="absolute inset-0 flex items-center justify-center bg-background/60 backdrop-blur-sm">
-        <div className="w-full max-w-sm mx-auto px-6 py-8 bg-background border border-primary/20 rounded-lg shadow-lg text-center">
-          <h3 className="text-xl font-heading font-semibold text-primary mb-2">{title}</h3>
+      <div className="absolute inset-0 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+        <div className="w-full max-w-sm mx-auto px-6 py-8 bg-secondary border border-accent/30 rounded-lg shadow-2xl text-center">
+          <h3 className="text-xl font-heading font-semibold text-foreground mb-2">{title}</h3>
           <p className="text-sm text-foreground/60 mb-6 leading-relaxed">{subtitle}</p>
           <form onSubmit={handleSubmit} className="flex flex-col gap-3">
             <input
@@ -57,11 +57,11 @@ export function EmailGateForm({ title, subtitle, storageKey, children }: EmailGa
               placeholder="your@email.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-2 border border-primary/30 rounded bg-background text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-accent transition-colors text-sm"
+              className="w-full px-4 py-2 border border-foreground/20 rounded bg-background text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-accent transition-colors text-sm"
             />
             <button
               type="submit"
-              className="w-full py-2 bg-accent text-white font-heading text-sm uppercase tracking-wider rounded hover:opacity-90 transition-opacity"
+              className="w-full py-2 bg-accent text-background font-heading text-sm uppercase tracking-wider rounded hover:opacity-90 transition-opacity"
             >
               Access Content
             </button>
