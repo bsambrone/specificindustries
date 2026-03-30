@@ -50,6 +50,8 @@ export interface Executive {
   title: string
   credentials: string
   bio: string
+  highlights: { label: string; value: string }[]
+  publications?: string[]
   quote: string
   image: string
   referencePerson: string
