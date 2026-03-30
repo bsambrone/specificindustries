@@ -11,6 +11,12 @@ import { escalationArchitecture } from "./escalation-architecture"
 import { performanceParadox } from "./performance-paradox"
 import { focusbandOptics } from "./focusband-optics"
 import { taskDeferralPatience } from "./task-deferral-patience"
+import { complianceAtScale } from "./compliance-at-scale"
+import { checkboxParadox } from "./checkbox-paradox"
+import { riskRedistribution } from "./risk-redistribution"
+import { communicationSurplus } from "./communication-surplus"
+import { replyAllEconomics } from "./reply-all-economics"
+import { tonesoftenerFuture } from "./tonesoftener-future"
 
 export const whitepapers: Whitepaper[] = [
   stateOfMeetingOptimization,
@@ -25,6 +31,12 @@ export const whitepapers: Whitepaper[] = [
   performanceParadox,
   focusbandOptics,
   taskDeferralPatience,
+  complianceAtScale,
+  checkboxParadox,
+  riskRedistribution,
+  communicationSurplus,
+  replyAllEconomics,
+  tonesoftenerFuture,
 ]
 
 export function getWhitepaperBySlug(slug: string): Whitepaper | undefined {
