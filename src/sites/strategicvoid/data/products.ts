@@ -170,7 +170,7 @@ export const products: Product[] = [
       { label: "Metrics-per-Employee Increase", value: "412% (60-day average)" },
       { label: "Compliance", value: "SOC 2 Type II" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-meeting-brick.png",
   },
   {
     slug: "dashboard-deepener",
@@ -203,7 +203,7 @@ export const products: Product[] = [
       { label: "Time-on-Data Reduction", value: "67% (enterprise deployment average)" },
       { label: "Compliance", value: "SOC 2 Type II (visualization layer)" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-dashboard-deepener.png",
   },
   {
     slug: "okr-obfuscator",
@@ -236,7 +236,7 @@ export const products: Product[] = [
       { label: "Pivot Templates", value: "47 pre-written, unlimited custom" },
       { label: "Platform Integrations", value: "Lattice, Workday, BambooHR, and 11 others" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-okr-obfuscator.png",
   },
   {
     slug: "benchmark-blurrer",
@@ -269,7 +269,7 @@ export const products: Product[] = [
       { label: "Methodology Documentation", value: "Auto-generated, audit-ready" },
       { label: "Tiers", value: "Standard / Premium / Board-Ready" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-benchmark-blurrer.png",
   },
 
   // ─── Middle Management Enablement™ ──────────────────────────────────────────
@@ -304,7 +304,7 @@ export const products: Product[] = [
       { label: "Detection Risk", value: "0.3% (independent adversarial assessment)" },
       { label: "Perceived Authority Increase", value: "89% user-reported within 60 days" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-authority-amplifier.png",
   },
   {
     slug: "delegation-deflector",
@@ -337,7 +337,7 @@ export const products: Product[] = [
       { label: "Task Platform Integration", value: "Asana, Jira, Monday.com, Linear, and 9 others" },
       { label: "Credit Capture Latency", value: "< 4 hours post-project-completion" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-delegation-deflector.png",
   },
   {
     slug: "hierarchy-harmonizer",
@@ -370,7 +370,7 @@ export const products: Product[] = [
       { label: "HRIS Integrations", value: "Workday, BambooHR, Rippling, ADP, and 7 others" },
       { label: "Export Formats", value: "Org chart, matrix, RACI, hierarchy tree, PPTX" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-hierarchy-harmonizer.png",
   },
   {
     slug: "accountability-absorber",
@@ -403,7 +403,7 @@ export const products: Product[] = [
       { label: "Collaboration Integrations", value: "Jira, Confluence, Notion, Asana, Slack, and 11 others" },
       { label: "Audit Readiness", value: "All records timestamped and formatted for review" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-accountability-absorber.png",
   },
 
   // ─── Productivity Theater™ ───────────────────────────────────────────────────
@@ -438,7 +438,7 @@ export const products: Product[] = [
       { label: "Perceived Busyness Increase", value: "380% unsolicited comment rate (user survey)" },
       { label: "Battery Life (portable mode)", value: "14 hours continuous broadcast" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-busyness-broadcaster.png",
   },
   {
     slug: "task-multiplier",
@@ -471,7 +471,7 @@ export const products: Product[] = [
       { label: "Task Platform Integration", value: "Jira, Asana, Linear, Monday.com, and 14 others" },
       { label: "Premature Completion Rate", value: "0% (across all tracked deployments)" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-task-multiplier.png",
   },
   {
     slug: "status-updater-pro",
@@ -504,7 +504,7 @@ export const products: Product[] = [
       { label: "Platform Integrations", value: "Jira, Asana, Notion, Confluence, Slack, Outlook, Gmail" },
       { label: "Average Generation Time", value: "< 45 seconds per update" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-status-updater-pro.png",
   },
   {
     slug: "urgency-fabricator",
@@ -537,7 +537,7 @@ export const products: Product[] = [
       { label: "Calendar Conflict Injection", value: "Optional — creates apparent overlap with all existing blocks" },
       { label: "Escalation Layers", value: "Up to 7 (each referencing urgency of previous layer)" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-urgency-fabricator.png",
   },
 
   // ─── Compliance & Policy Solutions™ ────────────────────────────────────────
@@ -573,7 +573,7 @@ export const products: Product[] = [
       { label: "Version Control", value: "Full revision ancestry with automated change summaries" },
       { label: "Compliance Frameworks", value: "SOC 2, ISO 27001, GDPR, HIPAA, and 11 others" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-policy-proliferator.png",
   },
   {
     slug: "audit-trail-thickener",
@@ -606,7 +606,7 @@ export const products: Product[] = [
       { label: "GRC Integrations", value: "ServiceNow, Archer, LogicGate, and 9 others" },
       { label: "Document Management", value: "SharePoint, Confluence, Google Drive, Box" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-audit-trail-thickener.png",
   },
   {
     slug: "compliance-theater-suite",
@@ -639,7 +639,7 @@ export const products: Product[] = [
       { label: "Post-Certification Control Failures", value: "0% (documentation-layer monitoring)" },
       { label: "Compliance Dashboard", value: "Real-time posture status, certification calendar, renewal alerts" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-compliance-theater-suite.png",
   },
   {
     slug: "responsibility-redistributor",
@@ -672,7 +672,7 @@ export const products: Product[] = [
       { label: "Documentation Output", value: "Governance justification, RACI audit trail, sign-off records" },
       { label: "GRC Integrations", value: "ServiceNow, Archer, Workday, BambooHR, and 8 others" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-responsibility-redistributor.png",
   },
 
   // ─── Communication Enhancement Tools™ ──────────────────────────────────────
@@ -707,7 +707,7 @@ export const products: Product[] = [
       { label: "Recipient Comprehension Rate", value: "< 40% at target IncomprehensiScore™" },
       { label: "Supported Channels", value: "Gmail, Outlook, Slack, Teams, and 9 others" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-jargon-injector.png",
   },
   {
     slug: "email-elongator",
@@ -740,7 +740,7 @@ export const products: Product[] = [
       { label: "Clarification Request Reduction", value: "76% (deployment average)" },
       { label: "Supported Email Clients", value: "Gmail, Outlook, Apple Mail, and 6 others" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-email-elongator.png",
   },
   {
     slug: "passive-voice-optimizer",
@@ -773,7 +773,7 @@ export const products: Product[] = [
       { label: "Supported Tools", value: "Gmail, Outlook, Slack, Teams, Word, Google Docs" },
       { label: "Language Support", value: "English, French, German, Spanish, and 6 others" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-passive-voice-optimizer.png",
   },
   {
     slug: "ambiguity-amplifier",
@@ -806,7 +806,7 @@ export const products: Product[] = [
       { label: "Interpretation Count Display™", value: "Real-time count in compose window" },
       { label: "Supported Channels", value: "Email, Slack, Teams, Notion, Google Docs, and 7 others" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-ambiguity-amplifier.png",
   },
 
   // ─── Decision Support Systems™ ──────────────────────────────────────────────
@@ -841,7 +841,7 @@ export const products: Product[] = [
       { label: "Alignment Health Report Cadence", value: "Bi-weekly, monthly, or milestone-triggered" },
       { label: "Platform Integrations", value: "Zoom, Teams, Miro, Confluence, Notion, and 8 others" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-consensus-diffuser.png",
   },
   {
     slug: "committee-spawner",
@@ -874,7 +874,7 @@ export const products: Product[] = [
       { label: "Membership Size Range", value: "7–34 members (auto-calibrated to decision complexity)" },
       { label: "HRIS Integrations", value: "Workday, BambooHR, Rippling, and 7 others" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-committee-spawner.png",
   },
   {
     slug: "stakeholder-multiplier",
@@ -907,7 +907,7 @@ export const products: Product[] = [
       { label: "FeedbackAccumulator™ Formats", value: "Structured themes, verbatim quotes, conflict matrices" },
       { label: "Integrations", value: "Workday, Slack, Confluence, Notion, Jira, and 9 others" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-stakeholder-multiplier.png",
   },
   {
     slug: "decision-deferral-engine",
@@ -940,7 +940,7 @@ export const products: Product[] = [
       { label: "Audit Trail Retention", value: "Unlimited (configurable archive policy)" },
       { label: "Integrations", value: "Jira, Asana, ServiceNow, Confluence, and 11 others" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-decision-deferral-engine.png",
   },
 
   // ─── Employee Experience Optimization™ ─────────────────────────────────────
@@ -975,7 +975,7 @@ export const products: Product[] = [
       { label: "HR Platform Integrations", value: "Workday, Lattice, Culture Amp, Glint, and 9 others" },
       { label: "Annual HR Hours Saved", value: "1,200 per deployment (redirected to additional surveys)" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-engagement-simulator.png",
   },
   {
     slug: "morale-measurer",
@@ -1008,7 +1008,7 @@ export const products: Product[] = [
       { label: "Survey Question Library", value: "340+ prompts, 9 morale dimensions" },
       { label: "Dashboard Export", value: "PDF, PPTX, live embed, executive summary format" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-morale-measurer.png",
   },
   {
     slug: "culture-deck-generator",
@@ -1041,7 +1041,7 @@ export const products: Product[] = [
       { label: "Investor Question Reduction", value: "44% culture-related queries" },
       { label: "Annual Refresh Service", value: "Included — realigns language with current trends" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-culture-deck-generator.png",
   },
   {
     slug: "satisfaction-survey-suite",
@@ -1074,7 +1074,7 @@ export const products: Product[] = [
       { label: "Survey Distribution", value: "Email, Slack, Teams, HRIS native, QR code" },
       { label: "HR Platform Integrations", value: "Workday, BambooHR, Culture Amp, Lattice, and 11 others" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-satisfaction-survey-suite.png",
   },
   {
     slug: "ergomax-compliance-chair",
@@ -1108,7 +1108,7 @@ export const products: Product[] = [
       { label: "HR Platform Integrations", value: "Workday, BambooHR, Rippling, and PostureWatch™-compatible systems" },
       { label: "Warranty", value: "3 years structural, 1 year sensor calibration" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-ergomax-compliance-chair.png",
   },
   {
     slug: "anonymous-feedback-redirector",
@@ -1141,7 +1141,7 @@ export const products: Product[] = [
       { label: "Anonymity Guarantee", value: "Confirmed (submissions are not read)" },
       { label: "HR Platform Integrations", value: "Workday, Culture Amp, Lattice, Glint, and 8 others" },
     ],
-    image: "/sites/strategicvoid/product-placeholder.png",
+    image: "/sites/strategicvoid/product-anonymous-feedback-redirector.png",
   },
 ]
 
