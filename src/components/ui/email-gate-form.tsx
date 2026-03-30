@@ -39,14 +39,14 @@ export function EmailGateForm({ title, subtitle, storageKey, children }: EmailGa
   }
 
   return (
-    <div className="relative overflow-hidden rounded-lg">
-      {/* Blurred preview */}
+    <div className="relative overflow-hidden rounded-lg max-h-[80vh]">
+      {/* Blurred preview (height-limited so page doesn't scroll behind gate) */}
       <div className="select-none pointer-events-none blur-md opacity-40" aria-hidden="true">
         {children}
       </div>
 
-      {/* Overlay gate */}
-      <div className="absolute inset-0 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+      {/* Overlay gate — pinned to top of container */}
+      <div className="absolute inset-0 flex items-start justify-center pt-24 bg-black/60 backdrop-blur-sm">
         <div className="w-full max-w-sm mx-auto px-6 py-8 bg-secondary border border-accent/30 rounded-lg shadow-2xl text-center">
           <h3 className="text-xl font-heading font-semibold text-foreground mb-2">{title}</h3>
           <p className="text-sm text-foreground/60 mb-6 leading-relaxed">{subtitle}</p>
