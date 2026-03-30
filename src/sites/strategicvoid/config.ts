@@ -6,7 +6,7 @@ export const config: SiteConfig = {
   theme: {
     preset: "consulting",
     colors: {
-      primary: "#0a1628",
+      primary: "#c9a84c",
       secondary: "#1a2744",
       accent: "#c9a84c",
       background: "#0a1628",

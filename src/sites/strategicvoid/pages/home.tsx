@@ -16,7 +16,7 @@ export default function StrategicVoidHome() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-secondary text-foreground py-32 px-6">
+      <section className="bg-secondary py-32 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-6 leading-tight">
             Aligning Your Organization Beyond Productivity
@@ -58,7 +58,7 @@ export default function StrategicVoidHome() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-heading font-bold text-primary mb-4">Our Solutions</h2>
-            <p className="text-foreground/60 max-w-xl mx-auto leading-relaxed">
+            <p className="text-primary/60 max-w-xl mx-auto leading-relaxed">
               Eight integrated solution suites designed to align your organization with the
               Void™ across every function, layer, and initiative.
             </p>
@@ -86,7 +86,7 @@ export default function StrategicVoidHome() {
               <h2 className="text-3xl font-heading font-bold text-primary mb-4">
                 Client Success Stories
               </h2>
-              <p className="text-foreground/60 max-w-xl mx-auto leading-relaxed">
+              <p className="text-primary/60 max-w-xl mx-auto leading-relaxed">
                 See how organizations like yours have successfully embraced the Void™.
               </p>
             </div>
