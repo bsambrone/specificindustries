@@ -17,6 +17,12 @@ import { riskRedistribution } from "./risk-redistribution"
 import { communicationSurplus } from "./communication-surplus"
 import { replyAllEconomics } from "./reply-all-economics"
 import { tonesoftenerFuture } from "./tonesoftener-future"
+import { decisionAvoidance } from "./decision-avoidance"
+import { coinflipMethodology } from "./coinflip-methodology"
+import { consensusIllusion } from "./consensus-illusion"
+import { employeeExperienceEquation } from "./employee-experience-equation"
+import { pizzaDrivenRetention } from "./pizza-driven-retention"
+import { ergomaxEffect } from "./ergomax-effect"
 
 export const whitepapers: Whitepaper[] = [
   stateOfMeetingOptimization,
@@ -37,6 +43,12 @@ export const whitepapers: Whitepaper[] = [
   communicationSurplus,
   replyAllEconomics,
   tonesoftenerFuture,
+  decisionAvoidance,
+  coinflipMethodology,
+  consensusIllusion,
+  employeeExperienceEquation,
+  pizzaDrivenRetention,
+  ergomaxEffect,
 ]
 
 export function getWhitepaperBySlug(slug: string): Whitepaper | undefined {
