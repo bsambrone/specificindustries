@@ -13,9 +13,10 @@ interface ProductCardProps {
   image: string
   showAddToCart?: boolean
   href?: string
+  quips?: string[]
 }
 
-export function ProductCard({ slug, name, price, tagline, image, showAddToCart = true, href }: ProductCardProps) {
+export function ProductCard({ slug, name, price, tagline, image, showAddToCart = true, href, quips }: ProductCardProps) {
   const siteHref = useSiteLink()
   const resolvedHref = href ? siteHref(href) : siteHref(`/products/${slug}`)
 
@@ -32,7 +33,7 @@ export function ProductCard({ slug, name, price, tagline, image, showAddToCart =
         </Link>
         <p className="text-sm text-foreground/60 mb-2">{tagline}</p>
         <p className="text-lg font-semibold text-accent mb-3">{price}</p>
-        {showAddToCart && <AddToCartButton slug={slug} productName={name} />}
+        {showAddToCart && <AddToCartButton slug={slug} productName={name} quips={quips} />}
       </div>
     </div>
   )

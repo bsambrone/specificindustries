@@ -2,27 +2,29 @@
 
 import { useCart } from "./cart-provider"
 
-interface AddToCartButtonProps {
-  slug: string
-  productName: string
-  className?: string
-}
-
-const quips = [
+const defaultQuips = [
   "Bold choice.",
   "Your doctor will have questions.",
   "We admire your courage.",
   "No refunds. Ever.",
-  "The pigs thank you.",
   "Interesting decision.",
+  "Added to cart.",
 ]
 
-export function AddToCartButton({ slug, productName, className }: AddToCartButtonProps) {
+interface AddToCartButtonProps {
+  slug: string
+  productName: string
+  className?: string
+  quips?: string[]
+}
+
+export function AddToCartButton({ slug, productName, className, quips }: AddToCartButtonProps) {
   const { addToCart, showToast } = useCart()
 
   function handleClick() {
     addToCart(slug)
-    const quip = quips[Math.floor(Math.random() * quips.length)]
+    const pool = quips && quips.length > 0 ? quips : defaultQuips
+    const quip = pool[Math.floor(Math.random() * pool.length)]
     showToast(`${productName} added to cart. ${quip}`)
   }
 
