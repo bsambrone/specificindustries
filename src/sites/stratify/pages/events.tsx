@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { useSiteLink } from "@/hooks/use-site-link"
 import { Hero } from "@/components/ui/hero"
@@ -35,7 +36,7 @@ export default function EventsPage() {
           {events.map((event) => (
             <div
               key={event.name}
-              className="border border-primary/15 rounded-lg p-6 flex flex-col gap-4"
+              className="border border-foreground/15 rounded-lg p-6 flex flex-col gap-4"
             >
               {/* Header row */}
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
@@ -69,34 +70,42 @@ export default function EventsPage() {
       </section>
 
       {/* Past Event Highlights */}
-      <section className="py-20 px-4 bg-primary/5">
+      <section className="py-20 px-4 bg-foreground/5">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-heading font-bold text-foreground mb-10 text-center">
             Past Event Highlights
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-            {/* Quote 1 */}
-            <div className="border border-primary/15 rounded-lg p-6">
-              <blockquote className="text-foreground/90 italic text-sm leading-relaxed mb-4">
-                &ldquo;I arrived as a skeptic. I left as a Layer 2 Participant with eleven new
-                contacts and a resting elevation face. The Summit changed my geometry.&rdquo;
-              </blockquote>
-              <p className="text-secondary text-xs font-heading uppercase tracking-widest">
-                — D. Prism, Layer 2 Participant
-              </p>
-            </div>
+            {/* Photo 1 — Keynote */}
+            <figure className="border border-foreground/15 rounded-lg overflow-hidden">
+              <div className="relative aspect-[3/2]">
+                <Image
+                  src="/sites/stratify/event-keynote.png"
+                  alt="Layer Expansion Summit keynote presentation"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="px-4 py-3 text-foreground/70 text-sm">
+                Buck Stratton delivers the keynote &ldquo;Your Job Is Not Your Friend&rdquo; to 2,000 attendees.
+              </figcaption>
+            </figure>
 
-            {/* Quote 2 */}
-            <div className="border border-primary/15 rounded-lg p-6">
-              <blockquote className="text-foreground/90 italic text-sm leading-relaxed mb-4">
-                &ldquo;The Regional Yield Intensive was six hours I will never get back, and I
-                mean that as a compliment. My contact list has never been more activated.&rdquo;
-              </blockquote>
-              <p className="text-secondary text-xs font-heading uppercase tracking-widest">
-                — T. Gradient, Layer 1 Participant
-              </p>
-            </div>
+            {/* Photo 2 — Mixer */}
+            <figure className="border border-foreground/15 rounded-lg overflow-hidden">
+              <div className="relative aspect-[3/2]">
+                <Image
+                  src="/sites/stratify/event-mixer.png"
+                  alt="Networking mixer at the Layer Expansion Summit"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="px-4 py-3 text-foreground/70 text-sm">
+                Layer 2 participants celebrate their first Subordinate Revenue Layer at the networking mixer.
+              </figcaption>
+            </figure>
           </div>
 
           {/* Attendance stat */}

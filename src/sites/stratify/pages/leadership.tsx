@@ -29,7 +29,7 @@ export default function LeadershipPage() {
           {executives.map((exec) => (
             <div
               key={exec.slug}
-              className="border border-primary/15 rounded-lg overflow-hidden flex flex-col md:flex-row"
+              className="border border-foreground/15 rounded-lg overflow-hidden flex flex-col md:flex-row"
             >
               {/* Photo */}
               <div className="relative w-full md:w-56 aspect-[4/5] shrink-0">

@@ -12,9 +12,9 @@ export function Header({ config }: { config: SiteConfig }) {
   const siteHref = useSiteLink()
 
   return (
-    <header className="border-b border-primary/10 bg-background">
+    <header className="border-b border-foreground/10 bg-background">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href={siteHref("/")} className="text-xl font-heading font-bold text-primary">
+        <Link href={siteHref("/")} className="text-xl font-heading font-bold text-foreground">
           {config.name}
         </Link>
 
@@ -32,7 +32,7 @@ export function Header({ config }: { config: SiteConfig }) {
                   className={
                     isCtaButton
                       ? "px-4 py-1.5 rounded-lg font-semibold bg-secondary text-primary hover:bg-accent transition-colors text-sm"
-                      : "text-foreground/70 hover:text-foreground hover:bg-primary/10 px-3 py-1.5 rounded-md transition-all"
+                      : "text-foreground/70 hover:text-foreground hover:bg-foreground/10 px-3 py-1.5 rounded-md transition-all"
                   }
                 >
                   {item.label}
@@ -64,7 +64,7 @@ export function Header({ config }: { config: SiteConfig }) {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-primary/10 bg-background">
+        <div className="md:hidden border-t border-foreground/10 bg-background">
           <div className="px-4 py-4 flex flex-col gap-4">
             {config.megaMenu ? (
               <MegaMenuMobile
@@ -83,7 +83,7 @@ export function Header({ config }: { config: SiteConfig }) {
                     className={
                       isCtaButton
                         ? "px-4 py-1.5 rounded-lg font-semibold bg-secondary text-primary hover:bg-accent transition-colors text-sm"
-                        : "text-foreground/70 hover:text-foreground hover:bg-primary/10 px-3 py-1.5 rounded-md transition-all"
+                        : "text-foreground/70 hover:text-foreground hover:bg-foreground/10 px-3 py-1.5 rounded-md transition-all"
                     }
                   >
                     {item.label}

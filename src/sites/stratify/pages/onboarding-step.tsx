@@ -24,7 +24,7 @@ function FormFieldRenderer({ field }: { field: FormField }) {
   const [sliderValue, setSliderValue] = useState(field.min ?? 1)
 
   const inputClass =
-    "w-full rounded-md px-3 py-2 bg-foreground/5 border border-primary/15 text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-secondary/50 transition-colors"
+    "w-full rounded-md px-3 py-2 bg-foreground/5 border border-foreground/15 text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-secondary/50 transition-colors"
 
   return (
     <div className="flex flex-col gap-1.5">
@@ -44,8 +44,8 @@ function FormFieldRenderer({ field }: { field: FormField }) {
       )}
 
       {field.type === "select" && (
-        <select className={inputClass}>
-          <option value="" disabled selected>
+        <select className={inputClass} defaultValue="">
+          <option value="" disabled>
             Select an option
           </option>
           {field.options?.map((opt) => (
@@ -306,7 +306,7 @@ export default function OnboardingStepPage({ slug }: { slug: string }) {
           </div>
 
           {/* Content */}
-          <div className="border border-primary/15 rounded-xl p-6 md:p-8 bg-foreground/[0.02]">
+          <div className="border border-foreground/15 rounded-xl p-6 md:p-8 bg-foreground/[0.02]">
             {isLastStep ? (
               <FakeLoadingScreen />
             ) : (
@@ -316,7 +316,7 @@ export default function OnboardingStepPage({ slug }: { slug: string }) {
                 ))}
 
                 {nextStep && (
-                  <div className="pt-4 border-t border-primary/15">
+                  <div className="pt-4 border-t border-foreground/15">
                     <Link
                       href={siteHref(`/onboarding/${nextStep.slug}`)}
                       className="inline-block w-full text-center px-6 py-3 rounded-lg font-heading font-bold bg-secondary text-primary hover:bg-accent transition-colors"

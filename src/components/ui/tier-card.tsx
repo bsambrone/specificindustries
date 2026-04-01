@@ -28,7 +28,7 @@ export function TierCard({
       className={`rounded-lg border p-6 flex flex-col ${
         highlighted
           ? "border-secondary bg-secondary/10 ring-2 ring-secondary/50"
-          : "border-primary/10 bg-background"
+          : "border-foreground/10 bg-background"
       }`}
     >
       <div className="mb-4">
@@ -39,7 +39,7 @@ export function TierCard({
         <p className="text-foreground/60 text-sm mt-2">{description}</p>
       </div>
 
-      <div className="mb-4 pb-4 border-b border-primary/10">
+      <div className="mb-4 pb-4 border-b border-foreground/10">
         <div className="text-3xl font-heading font-bold text-foreground">{monthlyRCP}</div>
         <div className="text-xs text-foreground/40 mt-1">
           Elevation fee: {elevationFee}

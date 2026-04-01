@@ -26,7 +26,7 @@ export default function SuccessStoriesPage() {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, i) => (
-            <div key={i} className="border border-primary/15 rounded-lg overflow-hidden">
+            <div key={i} className="border border-foreground/15 rounded-lg overflow-hidden">
               {/* Card Header */}
               <div className="bg-secondary/15 px-6 py-4">
                 <h3 className="text-lg font-heading font-bold text-foreground mb-1">
@@ -38,7 +38,7 @@ export default function SuccessStoriesPage() {
               </div>
 
               {/* Card Body — Two Columns */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-primary/15 p-6 gap-4 sm:gap-0">
+              <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-foreground/15 p-6 gap-4 sm:gap-0">
                 <div className="sm:pr-6">
                   <p className="text-xs font-semibold text-foreground/60 uppercase tracking-wider mb-2">
                     Before Stratify

@@ -15,7 +15,7 @@ export default function StratifyTerms() {
       />
       <section className="py-16 px-4">
         <div className="max-w-3xl mx-auto space-y-6">
-          <p className="text-sm text-foreground/80 bg-secondary/20 border border-primary/15 rounded-lg p-4">
+          <p className="text-sm text-foreground/80 bg-secondary/20 border border-foreground/15 rounded-lg p-4">
             The authoritative terms of use for all Specific Industries properties is maintained at{" "}
             <a href="https://specificindustries.com/terms" className="text-accent underline hover:text-secondary transition-colors">
               specificindustries.com

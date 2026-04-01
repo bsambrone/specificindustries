@@ -89,7 +89,7 @@ export default function TiersPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-primary/15">
+                <tr className="border-b border-foreground/15">
                   <th className="text-left py-3 px-4 text-foreground/70 font-heading">Feature</th>
                   {tiers.map((tier) => (
                     <th key={tier.layer} className="text-center py-3 px-2 text-foreground/70 font-heading text-xs">
@@ -100,7 +100,7 @@ export default function TiersPage() {
               </thead>
               <tbody>
                 {comparisonFeatures.map((feature) => (
-                  <tr key={feature} className="border-b border-primary/10">
+                  <tr key={feature} className="border-b border-foreground/10">
                     <td className="py-3 px-4 text-foreground/90">{feature}</td>
                     {tiers.map((tier) => (
                       <td key={tier.layer} className="text-center py-3 px-2">

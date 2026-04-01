@@ -82,7 +82,7 @@ export default function OpportunityPage() {
           </p>
 
           <div className="space-y-8">
-            <div className="border border-primary/15 rounded-lg p-6">
+            <div className="border border-foreground/15 rounded-lg p-6">
               <h3 className="text-lg font-heading font-bold text-secondary mb-2">
                 Primary Yield: Your Own Value Distribution Events
               </h3>
@@ -93,7 +93,7 @@ export default function OpportunityPage() {
               </p>
             </div>
 
-            <div className="border border-primary/15 rounded-lg p-6">
+            <div className="border border-foreground/15 rounded-lg p-6">
               <h3 className="text-lg font-heading font-bold text-secondary mb-2">
                 Secondary Yield: Subordinate Revenue Layer Activity
               </h3>
@@ -104,7 +104,7 @@ export default function OpportunityPage() {
               </p>
             </div>
 
-            <div className="border border-primary/15 rounded-lg p-6">
+            <div className="border border-foreground/15 rounded-lg p-6">
               <h3 className="text-lg font-heading font-bold text-secondary mb-2">
                 Tertiary Yield: Indirect Expansion Events
               </h3>
@@ -129,7 +129,7 @@ export default function OpportunityPage() {
             The Three Pillars of Stratified Wealth
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="border border-primary/15 rounded-lg p-8">
+            <div className="border border-foreground/15 rounded-lg p-8">
               <div className="text-4xl mb-4">📦</div>
               <h3 className="text-xl font-heading font-bold text-secondary mb-3">Distribute</h3>
               <p className="text-foreground/80 text-sm">
@@ -137,7 +137,7 @@ export default function OpportunityPage() {
                 You are distributing. There is a difference. We have a legal team that confirms this.
               </p>
             </div>
-            <div className="border border-primary/15 rounded-lg p-8">
+            <div className="border border-foreground/15 rounded-lg p-8">
               <div className="text-4xl mb-4">⬆️</div>
               <h3 className="text-xl font-heading font-bold text-secondary mb-3">Elevate</h3>
               <p className="text-foreground/80 text-sm">
@@ -145,7 +145,7 @@ export default function OpportunityPage() {
                 network represents untapped yield potential. Convert conversations into architecture.
               </p>
             </div>
-            <div className="border border-primary/15 rounded-lg p-8">
+            <div className="border border-foreground/15 rounded-lg p-8">
               <div className="text-4xl mb-4">🔄</div>
               <h3 className="text-xl font-heading font-bold text-secondary mb-3">Sustain</h3>
               <p className="text-foreground/80 text-sm">

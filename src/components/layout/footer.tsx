@@ -11,7 +11,7 @@ export function Footer({ config }: { config: SiteConfig }) {
   const isApex = config.subdomain === "apex"
 
   return (
-    <footer className="border-t border-primary/10 bg-background mt-auto">
+    <footer className="border-t border-foreground/10 bg-background mt-auto">
       <div className="max-w-6xl mx-auto px-4 py-8 text-center text-foreground/50 text-sm space-y-3">
         {isApex ? (
           <p>&copy; {new Date().getFullYear()} Specific Industries.</p>

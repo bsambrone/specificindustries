@@ -15,7 +15,7 @@ export default function StratifyPrivacy() {
       />
       <section className="py-16 px-4">
         <div className="max-w-3xl mx-auto space-y-6">
-          <p className="text-sm text-foreground/80 bg-secondary/20 border border-primary/15 rounded-lg p-4">
+          <p className="text-sm text-foreground/80 bg-secondary/20 border border-foreground/15 rounded-lg p-4">
             The authoritative privacy policy for all Specific Industries properties is maintained at{" "}
             <a href="https://specificindustries.com/privacy" className="text-accent underline hover:text-secondary transition-colors">
               specificindustries.com

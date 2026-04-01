@@ -101,7 +101,7 @@ export default function StratifyHome() {
             {tiers.map((tier) => (
               <div
                 key={tier.layer}
-                className="border border-primary/15 rounded-lg p-4 text-center"
+                className="border border-foreground/15 rounded-lg p-4 text-center"
               >
                 <div className="text-xs text-foreground/60 font-heading uppercase tracking-wider">
                   Layer {tier.layer}
@@ -141,7 +141,7 @@ export default function StratifyHome() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testimonials.slice(0, 4).map((t) => (
-              <blockquote key={t.name} className="border border-primary/15 rounded-lg p-6">
+              <blockquote key={t.name} className="border border-foreground/15 rounded-lg p-6">
                 <h3 className="font-heading font-bold text-secondary text-lg mb-3">
                   &ldquo;{t.headline}&rdquo;
                 </h3>
