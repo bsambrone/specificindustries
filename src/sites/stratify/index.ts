@@ -6,6 +6,8 @@ import TiersPage, { metadata as tiersMetadata } from "./pages/tiers"
 import SuccessStoriesPage, { metadata as successStoriesMetadata } from "./pages/success-stories"
 import LeadershipPage, { metadata as leadershipMetadata } from "./pages/leadership"
 import EventsPage, { metadata as eventsMetadata } from "./pages/events"
+import OnboardingStepPage from "./pages/onboarding-step"
+import { getStepBySlug, isValidOnboardingSlug } from "./data/onboarding"
 
 export { config }
 
@@ -18,4 +20,15 @@ export const pages: Record<string, PageEntry> = {
   "events": { component: EventsPage, metadata: eventsMetadata },
 }
 
-export const dynamicRoutes: Record<string, DynamicRoute> = {}
+export const dynamicRoutes: Record<string, DynamicRoute> = {
+  onboarding: {
+    component: OnboardingStepPage,
+    getMetadata: (slug: string) => {
+      const step = getStepBySlug(slug)
+      return step
+        ? { title: `${step.title} — Stratify Onboarding`, description: step.subtitle }
+        : undefined
+    },
+    isValidSlug: (slug: string) => isValidOnboardingSlug(slug),
+  },
+}
