@@ -23,15 +23,22 @@ export function Header({ config }: { config: SiteConfig }) {
           {config.megaMenu ? (
             <MegaMenu megaMenu={config.megaMenu} siteHref={siteHref} />
           ) : (
-            config.nav.map((item) => (
-              <Link
-                key={item.path}
-                href={siteHref(item.path)}
-                className="text-foreground/70 hover:text-foreground hover:bg-primary/10 px-3 py-1.5 rounded-md transition-all"
-              >
-                {item.label}
-              </Link>
-            ))
+            config.nav.map((item) => {
+              const isCtaButton = item.path.startsWith("/onboarding")
+              return (
+                <Link
+                  key={item.path}
+                  href={siteHref(item.path)}
+                  className={
+                    isCtaButton
+                      ? "px-4 py-1.5 rounded-lg font-semibold bg-secondary text-primary hover:bg-accent transition-colors text-sm"
+                      : "text-foreground/70 hover:text-foreground hover:bg-primary/10 px-3 py-1.5 rounded-md transition-all"
+                  }
+                >
+                  {item.label}
+                </Link>
+              )
+            })
           )}
           {config.features.commerce && <CartButton />}
         </div>
@@ -66,16 +73,23 @@ export function Header({ config }: { config: SiteConfig }) {
                 onNavigate={() => setMobileOpen(false)}
               />
             ) : (
-              config.nav.map((item) => (
-                <Link
-                  key={item.path}
-                  href={siteHref(item.path)}
-                  onClick={() => setMobileOpen(false)}
-                  className="text-foreground/70 hover:text-foreground hover:bg-primary/10 px-3 py-1.5 rounded-md transition-all"
-                >
-                  {item.label}
-                </Link>
-              ))
+              config.nav.map((item) => {
+                const isCtaButton = item.path.startsWith("/onboarding")
+                return (
+                  <Link
+                    key={item.path}
+                    href={siteHref(item.path)}
+                    onClick={() => setMobileOpen(false)}
+                    className={
+                      isCtaButton
+                        ? "px-4 py-1.5 rounded-lg font-semibold bg-secondary text-primary hover:bg-accent transition-colors text-sm"
+                        : "text-foreground/70 hover:text-foreground hover:bg-primary/10 px-3 py-1.5 rounded-md transition-all"
+                    }
+                  >
+                    {item.label}
+                  </Link>
+                )
+              })
             )}
           </div>
         </div>
