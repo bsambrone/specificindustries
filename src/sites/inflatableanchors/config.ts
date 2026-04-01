@@ -1,7 +1,7 @@
 import type { SiteConfig } from "@/themes"
 
 export const config: SiteConfig = {
-  name: "Inflatable Anchors Co.",
+  name: "Inflatable Anchors Marine",
   subdomain: "inflatableanchors",
   theme: {
     preset: "nautical",
@@ -18,7 +18,7 @@ export const config: SiteConfig = {
     },
   },
   metadata: {
-    title: "Inflatable Anchors Co. — The Easiest Anchor You'll Ever Pull Up",
+    title: "Inflatable Anchors Marine — The Easiest Anchor You'll Ever Pull Up",
     description:
       "Revolutionary inflatable anchors for the modern boater. Lightweight, portable, and effortlessly retrievable.",
   },

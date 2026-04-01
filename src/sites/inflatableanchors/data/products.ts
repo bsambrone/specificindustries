@@ -197,7 +197,7 @@ export const products: Product[] = [
     priceLabel: "$14.99",
     tagline: "47 easy pumps to anchor readiness.",
     description: [
-      "The official inflation device of Inflatable Anchors Co. Our patented EZ-Inflate\u2122 hand pump is specifically calibrated for inflatable anchor deployment, though it also works on pool floats, air mattresses, and your sense of accomplishment.",
+      "The official inflation device of Inflatable Anchors Marine Our patented EZ-Inflate\u2122 hand pump is specifically calibrated for inflatable anchor deployment, though it also works on pool floats, air mattresses, and your sense of accomplishment.",
       "Ergonomic handle reduces fatigue during the 47-pump inflation cycle. Built-in pressure gauge tells you when your anchor has reached 'optimal buoyancy pressure,' which is any amount of air at all.",
       "Note: Pump is sold separately from all anchor models because we believe in the freedom of choice. Also because it increases our average order value."
     ],
@@ -241,7 +241,7 @@ export const products: Product[] = [
     priceLabel: "$12.99",
     tagline: "Add sand for actual holding power. At that point, you may just want a regular anchor.",
     description: [
-      "For customers who love the concept of an inflatable anchor but would also like it to, you know, work. The Ballast Weight Pouch attaches to any Inflatable Anchors Co. product and can be filled with sand, gravel, or small rocks to add genuine holding power.",
+      "For customers who love the concept of an inflatable anchor but would also like it to, you know, work. The Ballast Weight Pouch attaches to any Inflatable Anchors Marine product and can be filled with sand, gravel, or small rocks to add genuine holding power.",
       "We'll be honest: if you fill this pouch with enough sand to actually anchor a boat, you've essentially built a regular anchor with extra steps. We respect your journey.",
       "The pouch features a waterproof zipper, reinforced stitching, and a small tag that reads 'We see what you're doing and we support you.'"
     ],

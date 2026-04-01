@@ -2,7 +2,7 @@ import { Hero } from "@/components/ui/hero"
 import { WaveDivider } from "@/components/ui/wave-divider"
 
 export const metadata = {
-  title: "Terms of Service — Inflatable Anchors Co.",
+  title: "Terms of Service — Inflatable Anchors Marine",
   description: "Our terms of service. Please read before inflating.",
 }
 
@@ -42,7 +42,7 @@ export default function InflatableAnchorsTerms() {
 
           <h2 className="text-2xl font-heading font-bold text-primary">2. Product Disclaimer</h2>
           <p>
-            Inflatable Anchors Co. guarantees that your anchor will inflate. We make no
+            Inflatable Anchors Marine guarantees that your anchor will inflate. We make no
             further guarantees. Specifically, we do not guarantee that your anchor will
             anchor, hold, grip, clasp, secure, moor, berth, or otherwise prevent the lateral
             movement of any watercraft. Our product is an inflatable object shaped like an

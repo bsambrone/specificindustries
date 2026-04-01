@@ -2,7 +2,7 @@ import { Hero } from "@/components/ui/hero"
 import { WaveDivider } from "@/components/ui/wave-divider"
 
 export const metadata = {
-  title: "Privacy Policy — Inflatable Anchors Co.",
+  title: "Privacy Policy — Inflatable Anchors Marine",
   description: "Our privacy policy. Lighter reading than our anchors.",
 }
 

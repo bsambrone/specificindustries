@@ -1,7 +1,7 @@
 import { Hero } from "@/components/ui/hero"
 
 export const metadata = {
-  title: "Privacy Policy — Pig Milk Co.",
+  title: "Privacy Policy — Pig Milk Creamery",
   description: "Our privacy policy. You have no privacy. Sorry.",
 }
 

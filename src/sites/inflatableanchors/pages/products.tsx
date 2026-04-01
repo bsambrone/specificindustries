@@ -9,7 +9,7 @@ import { products, getProductsByCategory } from "@/sites/inflatableanchors/data/
 import { useSiteLink } from "@/hooks/use-site-link"
 
 export const metadata = {
-  title: "Products — Inflatable Anchors Co.",
+  title: "Products — Inflatable Anchors Marine",
   description: "Browse our full lineup of inflatable anchors, premium models, and accessories.",
 }
 

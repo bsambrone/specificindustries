@@ -10,7 +10,7 @@ import { PromoBanner } from "@/components/ui/promo-banner"
 import { useSiteLink } from "@/hooks/use-site-link"
 
 export const metadata = {
-  title: "Our Story — Dehydrated Water Co.",
+  title: "Our Story — Dehydrated Water Laboratories",
   description: "The Drywell family legacy, since 1847.",
 }
 

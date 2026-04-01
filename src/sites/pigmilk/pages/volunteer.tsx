@@ -8,7 +8,7 @@ import { JobListing } from "@/components/ui/job-listing"
 import { FeatureSection } from "@/components/ui/feature-section"
 
 export const metadata = {
-  title: "Volunteer — Pig Milk Co.",
+  title: "Volunteer — Pig Milk Creamery",
   description: "Join the pig milk movement. We're hiring. Nobody stays long.",
 }
 
@@ -114,7 +114,7 @@ export default function PigMilkVolunteer() {
         <div className="max-w-5xl mx-auto">
           <Image
             src="/sites/pigmilk/volunteer-culture.png"
-            alt="Pig Milk Co. team culture"
+            alt="Pig Milk Creamery team culture"
             width={1200}
             height={800}
             className="w-full h-auto rounded-lg"

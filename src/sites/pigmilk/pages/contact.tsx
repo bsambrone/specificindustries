@@ -6,8 +6,8 @@ import { Hero } from "@/components/ui/hero"
 import { FaqAccordion } from "@/components/ui/faq-accordion"
 
 export const metadata = {
-  title: "Contact — Pig Milk Co.",
-  description: "Get in touch with the Pig Milk Co. team.",
+  title: "Contact — Pig Milk Creamery",
+  description: "Get in touch with the Pig Milk Creamery team.",
 }
 
 const faqItems = [
@@ -82,7 +82,7 @@ export default function PigMilkContact() {
                 onSubmit={(e) => {
                   e.preventDefault()
                   const confirmed = window.confirm(
-                    "Are you sure you want to contact Pig Milk Co.?\n\n" +
+                    "Are you sure you want to contact Pig Milk Creamery?\n\n" +
                     "By clicking OK, you acknowledge that:\n" +
                     "• A pig may or may not read your message\n" +
                     "• Response times are measured in 'pig hours' (1 pig hour = 3 human weeks)\n" +
@@ -166,7 +166,7 @@ export default function PigMilkContact() {
             <div className="relative w-full h-[300px] rounded-lg overflow-hidden">
               <Image
                 src="/sites/pigmilk/contact-office.png"
-                alt="Pig Milk Co. office"
+                alt="Pig Milk Creamery office"
                 fill
                 className="object-cover object-top"
               />

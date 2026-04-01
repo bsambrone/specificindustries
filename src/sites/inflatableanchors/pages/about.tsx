@@ -10,7 +10,7 @@ import { PromoBanner } from "@/components/ui/promo-banner"
 import { useSiteLink } from "@/hooks/use-site-link"
 
 export const metadata = {
-  title: "About — Inflatable Anchors Co.",
+  title: "About — Inflatable Anchors Marine",
   description: "The story of how one man's bad back led to the world's lightest anchor.",
 }
 
@@ -79,7 +79,7 @@ export default function InflatableAnchorsAbout() {
           sunstroke.&rdquo;
         </p>
         <p className="text-foreground/70 leading-relaxed">
-          Either way, Inflatable Anchors Co. was born. The anchor doesn&apos;t hold your boat in
+          Either way, Inflatable Anchors Marine was born. The anchor doesn&apos;t hold your boat in
           place, but you&apos;ll never throw out your back pulling it up. And honestly? That&apos;s
           the trade-off Chuck was willing to make.
         </p>

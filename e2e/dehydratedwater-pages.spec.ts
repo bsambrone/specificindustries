@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test"
 
 const SITE = "?site=dehydratedwater"
 
-test.describe("Dehydrated Water Co. — Page Navigation", () => {
+test.describe("Dehydrated Water Laboratories — Page Navigation", () => {
   test("homepage loads with hero and featured products", async ({ page }) => {
     await page.goto(`/${SITE}`)
     await expect(page.locator("h1")).toContainText("Water, Perfected Through Absence")
@@ -122,7 +122,7 @@ test.describe("Dehydrated Water Co. — Page Navigation", () => {
   })
 })
 
-test.describe("Dehydrated Water Co. — Navigation", () => {
+test.describe("Dehydrated Water Laboratories — Navigation", () => {
   test("header nav links work", async ({ page }) => {
     await page.goto(`/${SITE}`)
     const nav = page.locator("header")
@@ -149,6 +149,6 @@ test.describe("Dehydrated Water Co. — Navigation", () => {
 test.describe("Apex Site — Dehydrated Water Listed", () => {
   test("apex lists dehydrated water brand", async ({ page }) => {
     await page.goto("/")
-    await expect(page.getByText("Dehydrated Water Co.")).toBeVisible()
+    await expect(page.getByText("Dehydrated Water Laboratories")).toBeVisible()
   })
 })

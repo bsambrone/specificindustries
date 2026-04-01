@@ -9,7 +9,7 @@ import { products } from "@/sites/dehydratedwater/data/products"
 import { useSiteLink } from "@/hooks/use-site-link"
 
 export const metadata = {
-  title: "Products — Dehydrated Water Co.",
+  title: "Products — Dehydrated Water Laboratories",
   description: "Browse our collection of premium dehydrated water products.",
 }
 

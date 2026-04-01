@@ -1,7 +1,7 @@
 import type { SiteConfig } from "@/themes"
 
 export const config: SiteConfig = {
-  name: "Pig Milk Co.",
+  name: "Pig Milk Creamery",
   subdomain: "pigmilk",
   theme: {
     preset: "playful",
@@ -18,7 +18,7 @@ export const config: SiteConfig = {
     },
   },
   metadata: {
-    title: "Pig Milk Co. — Farm-Fresh Pig Milk",
+    title: "Pig Milk Creamery — Farm-Fresh Pig Milk",
     description: "Premium artisanal pig milk, delivered to your door. Yes, really.",
   },
   nav: [

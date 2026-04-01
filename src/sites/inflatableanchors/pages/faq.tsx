@@ -7,7 +7,7 @@ import { PromoBanner } from "@/components/ui/promo-banner"
 import { useSiteLink } from "@/hooks/use-site-link"
 
 export const metadata = {
-  title: "FAQ — Inflatable Anchors Co.",
+  title: "FAQ — Inflatable Anchors Marine",
   description: "Frequently asked questions about our inflatable anchors.",
 }
 

@@ -8,7 +8,7 @@ async function expectCartCount(page: import("@playwright/test").Page, count: str
 
 test.describe.configure({ mode: "serial" })
 
-test.describe("Dehydrated Water Co. — Cart Flow", () => {
+test.describe("Dehydrated Water Laboratories — Cart Flow", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto(`/${SITE}`)
     await page.evaluate(() => localStorage.clear())

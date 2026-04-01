@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test"
 
 const SITE = "?site=pigmilk"
 
-test.describe("Pig Milk Co. — Visual Regression Screenshots", () => {
+test.describe("Pig Milk Creamery — Visual Regression Screenshots", () => {
   test.use({ viewport: { width: 1280, height: 720 } })
 
   test("homepage", async ({ page }) => {
@@ -90,7 +90,7 @@ test.describe("Pig Milk Co. — Visual Regression Screenshots", () => {
   })
 })
 
-test.describe("Pig Milk Co. — Mobile Screenshots", () => {
+test.describe("Pig Milk Creamery — Mobile Screenshots", () => {
   test.use({ viewport: { width: 375, height: 812 } })
 
   test("homepage mobile", async ({ page }) => {

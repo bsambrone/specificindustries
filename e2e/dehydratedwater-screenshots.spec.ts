@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test"
 
 const SITE = "?site=dehydratedwater"
 
-test.describe("Dehydrated Water Co. — Visual Regression Screenshots", () => {
+test.describe("Dehydrated Water Laboratories — Visual Regression Screenshots", () => {
   test.use({ viewport: { width: 1280, height: 720 } })
 
   test("homepage", async ({ page }) => {
@@ -83,7 +83,7 @@ test.describe("Dehydrated Water Co. — Visual Regression Screenshots", () => {
   })
 })
 
-test.describe("Dehydrated Water Co. — Mobile Screenshots", () => {
+test.describe("Dehydrated Water Laboratories — Mobile Screenshots", () => {
   test.use({ viewport: { width: 375, height: 812 } })
 
   test("homepage mobile", async ({ page }) => {

@@ -4,7 +4,7 @@ import { FaqAccordion } from "@/components/ui/faq-accordion"
 import { PromoBanner } from "@/components/ui/promo-banner"
 
 export const metadata = {
-  title: "FAQ — Dehydrated Water Co.",
+  title: "FAQ — Dehydrated Water Laboratories",
   description: "Your questions, our carefully evasive answers.",
 }
 

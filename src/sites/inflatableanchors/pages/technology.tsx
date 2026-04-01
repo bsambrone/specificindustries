@@ -5,7 +5,7 @@ import { StatStrip } from "@/components/ui/stat-strip"
 import { ComparisonTable } from "@/components/ui/comparison-table"
 
 export const metadata = {
-  title: "The Technology — Inflatable Anchors Co.",
+  title: "The Technology — Inflatable Anchors Marine",
   description: "The Inflation Deployment System™, explained. Sort of.",
 }
 

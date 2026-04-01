@@ -5,7 +5,7 @@ import { StatStrip } from "@/components/ui/stat-strip"
 import { ComparisonTable } from "@/components/ui/comparison-table"
 
 export const metadata = {
-  title: "The Science — Dehydrated Water Co.",
+  title: "The Science — Dehydrated Water Laboratories",
   description: "The patented Drywell Method, explained. Sort of.",
 }
 

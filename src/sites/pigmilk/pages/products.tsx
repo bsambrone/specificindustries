@@ -3,7 +3,7 @@ import { ProductCard } from "@/components/ui/product-card"
 import { products } from "@/sites/pigmilk/data/products"
 
 export const metadata = {
-  title: "Products — Pig Milk Co.",
+  title: "Products — Pig Milk Creamery",
   description: "Browse our selection of premium pig milk products.",
 }
 

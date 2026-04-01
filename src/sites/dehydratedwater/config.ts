@@ -1,7 +1,7 @@
 import type { SiteConfig } from "@/themes"
 
 export const config: SiteConfig = {
-  name: "Dehydrated Water Co.",
+  name: "Dehydrated Water Laboratories",
   subdomain: "dehydratedwater",
   theme: {
     preset: "heritage",
@@ -18,7 +18,7 @@ export const config: SiteConfig = {
     },
   },
   metadata: {
-    title: "Dehydrated Water Co. — Purveyors of Fine Powdered Hydration Since 1847",
+    title: "Dehydrated Water Laboratories — Purveyors of Fine Powdered Hydration Since 1847",
     description:
       "Premium artisanal dehydrated water, crafted by hand since 1847. Just add water.",
   },

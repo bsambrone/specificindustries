@@ -4,7 +4,7 @@ import { Timeline } from "@/components/ui/timeline"
 import { TeamMember } from "@/components/ui/team-member"
 
 export const metadata = {
-  title: "About — Pig Milk Co.",
+  title: "About — Pig Milk Creamery",
   description: "The story of how we started milking pigs.",
 }
 
@@ -67,7 +67,7 @@ export default function PigMilkAbout() {
           "What followed was a years-long journey fueled by stubbornness, questionable judgment, and an alarming amount of pig milk. " +
           "Earl mortgaged his barn, alienated most of his friends, and entered a dairy category that literally did not exist. " +
           "Experts called it \"a terrible idea.\" His mom called it \"concerning.\" Earl called it Tuesday.\n\n" +
-          "Today, Pig Milk Co. is the world's first — and only — dedicated pig dairy operation. " +
+          "Today, Pig Milk Creamery is the world's first — and only — dedicated pig dairy operation. " +
           "We've served dozens of customers, most of whom came back (some to complain, but still). " +
           "Our mission is simple: to prove that just because nobody asked for something doesn't mean it shouldn't exist."
         }

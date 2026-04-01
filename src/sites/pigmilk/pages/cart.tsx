@@ -10,7 +10,7 @@ const PIG_HANDLING_FEE = 2.99
 const OINK_TAX_RATE = 0.037
 
 export const metadata = {
-  title: "Your Cart — Pig Milk Co.",
+  title: "Your Cart — Pig Milk Creamery",
   description: "Review your pig milk order.",
 }
 

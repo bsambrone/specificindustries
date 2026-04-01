@@ -2,7 +2,7 @@ import { Hero } from "@/components/ui/hero"
 import { WaveDivider } from "@/components/ui/wave-divider"
 
 export const metadata = {
-  title: "Privacy Policy — Dehydrated Water Co.",
+  title: "Privacy Policy — Dehydrated Water Laboratories",
   description: "Our privacy policy. Dry reading, appropriately.",
 }
 
@@ -32,7 +32,7 @@ export default function DehydratedWaterPrivacy() {
 
           <h2 className="text-2xl font-heading font-bold text-primary">1. Introduction</h2>
           <p>
-            Welcome to the Dehydrated Water Co. Privacy Policy. We take your privacy seriously,
+            Welcome to the Dehydrated Water Laboratories Privacy Policy. We take your privacy seriously,
             in the same way that we take water seriously &mdash; which is to say, we have strong
             opinions about it that most people find confusing. This document explains what data
             we collect, how we use it, and why you cannot have it back. We encourage you to read

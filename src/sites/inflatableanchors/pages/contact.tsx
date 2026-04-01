@@ -5,8 +5,8 @@ import Image from "next/image"
 import { Hero } from "@/components/ui/hero"
 
 export const metadata = {
-  title: "Contact — Inflatable Anchors Co.",
-  description: "Get in touch with the Inflatable Anchors Co. team.",
+  title: "Contact — Inflatable Anchors Marine",
+  description: "Get in touch with the Inflatable Anchors Marine team.",
 }
 
 const inquiryReasons = [
@@ -55,7 +55,7 @@ export default function InflatableAnchorsContact() {
                 onSubmit={(e) => {
                   e.preventDefault()
                   const confirmed = window.confirm(
-                    "Are you sure you want to contact Inflatable Anchors Co.?\n\n" +
+                    "Are you sure you want to contact Inflatable Anchors Marine?\n\n" +
                     "By clicking OK, you acknowledge that:\n" +
                     "• Skip Bayliner will respond with 'overwhelming enthusiasm'\n" +
                     "• Response times are measured in 'tides' (1 tide ≈ 12.4 hours)\n" +
@@ -125,7 +125,7 @@ export default function InflatableAnchorsContact() {
             <div className="relative w-full h-[300px] rounded-lg overflow-hidden">
               <Image
                 src="/sites/inflatableanchors/contact-hq.png"
-                alt="Inflatable Anchors Co. World Headquarters"
+                alt="Inflatable Anchors Marine World Headquarters"
                 fill
                 className="object-cover"
               />

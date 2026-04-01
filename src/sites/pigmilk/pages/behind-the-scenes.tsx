@@ -4,7 +4,7 @@ import { ImageTextSection } from "@/components/ui/image-text-section"
 import { PigProfile } from "@/components/ui/pig-profile"
 
 export const metadata = {
-  title: "Behind the Scenes — Pig Milk Co.",
+  title: "Behind the Scenes — Pig Milk Creamery",
   description: "A rare look inside the world's most specific dairy operation.",
 }
 

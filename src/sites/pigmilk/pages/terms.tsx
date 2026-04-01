@@ -1,7 +1,7 @@
 import { Hero } from "@/components/ui/hero"
 
 export const metadata = {
-  title: "Terms of Use — Pig Milk Co.",
+  title: "Terms of Use — Pig Milk Creamery",
   description: "Our terms of use. By reading this, you've already agreed.",
 }
 
@@ -37,7 +37,7 @@ export default function PigMilkTerms() {
 
           <h2 className="text-2xl font-heading font-bold text-primary">2. Limitation of Liability</h2>
           <p>
-            Pig Milk Co. is not liable for anything. Not for the quality of our pig milk (questionable),
+            Pig Milk Creamery is not liable for anything. Not for the quality of our pig milk (questionable),
             not for the accuracy of our nutritional facts (fictional), not for the behavior of our pigs
             (unpredictable), and especially not for whatever Sir Oinks-a-Lot does. He is his own entity
             and we have no control over him. Nobody does.
@@ -55,7 +55,7 @@ export default function PigMilkTerms() {
           <h2 className="text-2xl font-heading font-bold text-primary">4. Intellectual Property</h2>
           <p>
             All content on this website — including text, images, product names, pig portraits, and the
-            concept of milking pigs for commercial gain — is the intellectual property of Pig Milk Co.
+            concept of milking pigs for commercial gain — is the intellectual property of Pig Milk Creamery
             We use the term &quot;intellectual&quot; loosely. You may not reproduce, distribute, or
             display any of this content without our written permission, though honestly we&apos;d be
             flattered if you tried.

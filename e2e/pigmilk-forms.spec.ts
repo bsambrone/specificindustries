@@ -4,7 +4,7 @@ const SITE = "?site=pigmilk"
 
 test.describe.configure({ mode: "serial" })
 
-test.describe("Pig Milk Co. — Contact Form", () => {
+test.describe("Pig Milk Creamery — Contact Form", () => {
   test("contact form submits with confirmation dialog", async ({ page }) => {
     await page.goto(`/contact${SITE}`)
 
@@ -68,7 +68,7 @@ test.describe("Pig Milk Co. — Contact Form", () => {
   })
 })
 
-test.describe("Pig Milk Co. — Volunteer Form", () => {
+test.describe("Pig Milk Creamery — Volunteer Form", () => {
   test("volunteer application form submits", async ({ page }) => {
     await page.goto(`/volunteer${SITE}`)
 

@@ -21,7 +21,7 @@ export const products: Product[] = [
     description: [
       "The product that started a revolution no one asked for. In 1847, Ezekiel Drywell looked at a glass of water and thought, 'This would be better without all the water in it.' Nearly two centuries later, we continue to honor that profoundly unnecessary vision.",
       "Each packet contains the complete molecular essence of water, temporarily liberated from its liquid state through our patented dehydration process. Simply add water to reconstitute. Yes, you need water to make water. We are aware of the paradox. We have made peace with it.",
-      "Our Original blend is the foundation of the Dehydrated Water Co. legacy — unchanged since 1847, because there is nothing to change. It is powder. It has always been powder.",
+      "Our Original blend is the foundation of the Dehydrated Water Laboratories legacy — unchanged since 1847, because there is nothing to change. It is powder. It has always been powder.",
     ],
     image: "/sites/dehydratedwater/product-original.png",
     scienceFacts: [

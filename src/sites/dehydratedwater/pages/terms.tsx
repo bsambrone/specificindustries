@@ -2,7 +2,7 @@ import { Hero } from "@/components/ui/hero"
 import { WaveDivider } from "@/components/ui/wave-divider"
 
 export const metadata = {
-  title: "Terms of Use — Dehydrated Water Co.",
+  title: "Terms of Use — Dehydrated Water Laboratories",
   description: "By reading this, you have agreed to something. We're not sure what.",
 }
 
@@ -67,7 +67,7 @@ export default function DehydratedWaterTerms() {
 
           <h2 className="text-2xl font-heading font-bold text-primary">4. Limitation of Liability</h2>
           <p>
-            Dehydrated Water Co. is not liable for: accidental hydration, surplus water,
+            Dehydrated Water Laboratories is not liable for: accidental hydration, surplus water,
             philosophical crises triggered by the nature of our products, marital disputes
             arising from unexplained purchases, or any damage caused by our Double-Dehydrated
             variant&apos;s theoretical &ldquo;Negative Wetness.&rdquo; Our liability is further

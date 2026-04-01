@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test"
 
 const SITE = "?site=pigmilk"
 
-test.describe("Pig Milk Co. — Page Navigation", () => {
+test.describe("Pig Milk Creamery — Page Navigation", () => {
   test("homepage loads with hero and featured products", async ({ page }) => {
     await page.goto(`/${SITE}`)
     await expect(page.locator("h1")).toContainText("Farm-Fresh Pig Milk")
@@ -117,7 +117,7 @@ test.describe("Pig Milk Co. — Page Navigation", () => {
   })
 })
 
-test.describe("Pig Milk Co. — Navigation", () => {
+test.describe("Pig Milk Creamery — Navigation", () => {
   test("header nav links work", async ({ page }) => {
     await page.goto(`/${SITE}`)
     const nav = page.locator("header")
@@ -156,6 +156,6 @@ test.describe("Apex Site", () => {
 
   test("apex lists pigmilk brand", async ({ page }) => {
     await page.goto("/")
-    await expect(page.getByText("Pig Milk Co.")).toBeVisible()
+    await expect(page.getByText("Pig Milk Creamery")).toBeVisible()
   })
 })
