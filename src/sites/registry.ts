@@ -5,6 +5,7 @@ import { config as dehydratedwaterConfig, pages as dehydratedwaterPages, dynamic
 import { config as inflatableanchorsConfig, pages as inflatableanchorsPages, dynamicRoutes as inflatableanchorsDynamicRoutes } from "./inflatableanchors"
 import { config as strategicvoidConfig, pages as strategicvoidPages, dynamicRoutes as strategicvoidDynamicRoutes } from "./strategicvoid"
 import { config as stratifyConfig, pages as stratifyPages, dynamicRoutes as stratifyDynamicRoutes } from "./stratify"
+import { config as truegritConfig, pages as truegritPages, dynamicRoutes as truegritDynamicRoutes } from "./truegrit"
 
 export const siteRegistry: Record<string, SiteModule> = {
   apex: { config: apexConfig, pages: apexPages },
@@ -13,6 +14,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   inflatableanchors: { config: inflatableanchorsConfig, pages: inflatableanchorsPages, dynamicRoutes: inflatableanchorsDynamicRoutes },
   strategicvoid: { config: strategicvoidConfig, pages: strategicvoidPages, dynamicRoutes: strategicvoidDynamicRoutes },
   stratify: { config: stratifyConfig, pages: stratifyPages, dynamicRoutes: stratifyDynamicRoutes },
+  truegrit: { config: truegritConfig, pages: truegritPages, dynamicRoutes: truegritDynamicRoutes },
 }
 
 export type SubdomainKey = keyof typeof siteRegistry
