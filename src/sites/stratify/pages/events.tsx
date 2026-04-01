@@ -35,7 +35,7 @@ export default function EventsPage() {
           {events.map((event) => (
             <div
               key={event.name}
-              className="border border-primary/10 rounded-lg p-6 flex flex-col gap-4"
+              className="border border-primary/15 rounded-lg p-6 flex flex-col gap-4"
             >
               {/* Header row */}
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
@@ -43,16 +43,16 @@ export default function EventsPage() {
                   <h3 className="text-xl font-heading font-bold text-foreground">{event.name}</h3>
                   <p className="text-secondary text-sm">{event.schedule}</p>
                 </div>
-                <span className="self-start text-xs font-heading uppercase tracking-widest bg-secondary/10 text-secondary px-3 py-1 rounded-full whitespace-nowrap">
+                <span className="self-start text-xs font-heading uppercase tracking-widest bg-secondary/15 text-secondary px-3 py-1 rounded-full whitespace-nowrap">
                   {typeLabelMap[event.type] ?? event.type}
                 </span>
               </div>
 
               {/* Location */}
-              <p className="text-foreground/40 text-xs">{event.location}</p>
+              <p className="text-foreground/60 text-xs">{event.location}</p>
 
               {/* Description */}
-              <p className="text-foreground/70 text-sm leading-relaxed">{event.description}</p>
+              <p className="text-foreground/90 text-sm leading-relaxed">{event.description}</p>
 
               {/* CTA */}
               <div>
@@ -77,8 +77,8 @@ export default function EventsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             {/* Quote 1 */}
-            <div className="border border-primary/10 rounded-lg p-6">
-              <blockquote className="text-foreground/70 italic text-sm leading-relaxed mb-4">
+            <div className="border border-primary/15 rounded-lg p-6">
+              <blockquote className="text-foreground/90 italic text-sm leading-relaxed mb-4">
                 &ldquo;I arrived as a skeptic. I left as a Layer 2 Participant with eleven new
                 contacts and a resting elevation face. The Summit changed my geometry.&rdquo;
               </blockquote>
@@ -88,8 +88,8 @@ export default function EventsPage() {
             </div>
 
             {/* Quote 2 */}
-            <div className="border border-primary/10 rounded-lg p-6">
-              <blockquote className="text-foreground/70 italic text-sm leading-relaxed mb-4">
+            <div className="border border-primary/15 rounded-lg p-6">
+              <blockquote className="text-foreground/90 italic text-sm leading-relaxed mb-4">
                 &ldquo;The Regional Yield Intensive was six hours I will never get back, and I
                 mean that as a compliment. My contact list has never been more activated.&rdquo;
               </blockquote>
@@ -101,7 +101,7 @@ export default function EventsPage() {
 
           {/* Attendance stat */}
           <div className="text-center border border-secondary/20 rounded-lg py-8 px-4">
-            <p className="text-foreground/50 text-sm font-heading uppercase tracking-widest mb-2">
+            <p className="text-foreground/70 text-sm font-heading uppercase tracking-widest mb-2">
               Last Year&apos;s Summit
             </p>
             <p className="text-2xl font-heading font-bold text-secondary">

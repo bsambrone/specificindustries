@@ -32,12 +32,12 @@ export default function OpportunityPage() {
               <div className="h-48 flex items-end justify-center mb-4">
                 <div className="w-full max-w-xs bg-foreground/10 rounded-t-lg relative overflow-hidden">
                   <div className="h-48 flex items-end px-4 pb-4">
-                    <div className="w-full h-1 bg-foreground/30 rounded" />
+                    <div className="w-full h-1 bg-foreground/50 rounded" />
                   </div>
-                  <div className="absolute top-2 left-3 text-xs text-foreground/30">Traditional Income</div>
+                  <div className="absolute top-2 left-3 text-xs text-foreground/50">Traditional Income</div>
                 </div>
               </div>
-              <p className="text-foreground/50 text-sm">
+              <p className="text-foreground/70 text-sm">
                 Flat. Capped. Trading time for money like it&apos;s 1954.
               </p>
             </div>
@@ -56,7 +56,7 @@ export default function OpportunityPage() {
                       />
                     </svg>
                   </div>
-                  <div className="absolute top-2 left-3 text-xs text-secondary/60">Stratified Income</div>
+                  <div className="absolute top-2 left-3 text-xs text-secondary/80">Stratified Income</div>
                 </div>
               </div>
               <p className="text-secondary text-sm font-semibold">
@@ -64,51 +64,51 @@ export default function OpportunityPage() {
               </p>
             </div>
           </div>
-          <p className="text-xs text-foreground/30 text-center mt-8">
+          <p className="text-xs text-foreground/50 text-center mt-8">
             Charts are illustrative and not based on actual participant data. Y-axis intentionally omitted.
           </p>
         </div>
       </section>
 
       {/* Multi-Layer Yield Distribution Model */}
-      <section className="py-20 px-4 bg-secondary/5">
+      <section className="py-20 px-4 bg-secondary/10">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-heading font-bold text-foreground mb-4 text-center">
             The Multi-Layer Yield Distribution Model&trade;
           </h2>
-          <p className="text-foreground/50 text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-foreground/70 text-center mb-12 max-w-2xl mx-auto">
             A proprietary framework for decoupling your earning potential from temporal labor constraints
             through distributed value architectures.
           </p>
 
           <div className="space-y-8">
-            <div className="border border-primary/10 rounded-lg p-6">
+            <div className="border border-primary/15 rounded-lg p-6">
               <h3 className="text-lg font-heading font-bold text-secondary mb-2">
                 Primary Yield: Your Own Value Distribution Events
               </h3>
-              <p className="text-foreground/60 text-sm">
+              <p className="text-foreground/80 text-sm">
                 Direct yield from personal Value Distribution Events. This is where most participants begin,
                 but it is not where they stay. Primary yield is merely the foundation upon which stratified
                 wealth is constructed.
               </p>
             </div>
 
-            <div className="border border-primary/10 rounded-lg p-6">
+            <div className="border border-primary/15 rounded-lg p-6">
               <h3 className="text-lg font-heading font-bold text-secondary mb-2">
                 Secondary Yield: Subordinate Revenue Layer Activity
               </h3>
-              <p className="text-foreground/60 text-sm">
+              <p className="text-foreground/80 text-sm">
                 As your subordinate layers activate and begin their own Value Distribution Events, a portion
                 of that activity generates Performance-Derived Yield that flows upward through the architecture.
                 This is the power of stratification: your yield grows as your layers grow.
               </p>
             </div>
 
-            <div className="border border-primary/10 rounded-lg p-6">
+            <div className="border border-primary/15 rounded-lg p-6">
               <h3 className="text-lg font-heading font-bold text-secondary mb-2">
                 Tertiary Yield: Indirect Expansion Events
               </h3>
-              <p className="text-foreground/60 text-sm">
+              <p className="text-foreground/80 text-sm">
                 At Layer 3 and above, you begin receiving yield from layers you did not personally activate.
                 These Indirect Tertiary Expansion Events represent the theoretical yield ceiling approaching
                 infinity. The architecture works for you, even while you sleep. Especially while you sleep.
@@ -116,7 +116,7 @@ export default function OpportunityPage() {
             </div>
           </div>
 
-          <p className="text-foreground/40 text-center mt-8 text-sm italic">
+          <p className="text-foreground/60 text-center mt-8 text-sm italic">
             Theoretical yield ceiling: unlimited*
           </p>
         </div>
@@ -129,26 +129,26 @@ export default function OpportunityPage() {
             The Three Pillars of Stratified Wealth
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="border border-primary/10 rounded-lg p-8">
+            <div className="border border-primary/15 rounded-lg p-8">
               <div className="text-4xl mb-4">📦</div>
               <h3 className="text-xl font-heading font-bold text-secondary mb-3">Distribute</h3>
-              <p className="text-foreground/60 text-sm">
+              <p className="text-foreground/80 text-sm">
                 Facilitate value transfer between the ecosystem and end consumers. You are not selling.
                 You are distributing. There is a difference. We have a legal team that confirms this.
               </p>
             </div>
-            <div className="border border-primary/10 rounded-lg p-8">
+            <div className="border border-primary/15 rounded-lg p-8">
               <div className="text-4xl mb-4">⬆️</div>
               <h3 className="text-xl font-heading font-bold text-secondary mb-3">Elevate</h3>
-              <p className="text-foreground/60 text-sm">
+              <p className="text-foreground/80 text-sm">
                 Expand your layer density through strategic relationship activation. Every person in your
                 network represents untapped yield potential. Convert conversations into architecture.
               </p>
             </div>
-            <div className="border border-primary/10 rounded-lg p-8">
+            <div className="border border-primary/15 rounded-lg p-8">
               <div className="text-4xl mb-4">🔄</div>
               <h3 className="text-xl font-heading font-bold text-secondary mb-3">Sustain</h3>
-              <p className="text-foreground/60 text-sm">
+              <p className="text-foreground/80 text-sm">
                 Maintain your position through Recurring Commitment Protocol participation. Consistency
                 is the currency of the architecture. Those who stop sustaining experience Downward
                 Stratification Adjustment.
@@ -164,7 +164,7 @@ export default function OpportunityPage() {
           <h2 className="text-3xl font-heading font-bold text-foreground mb-4">
             Ready to Stop Trading Time for Money?
           </h2>
-          <p className="text-foreground/60 mb-8">
+          <p className="text-foreground/80 mb-8">
             The architecture is built. Your layer is waiting. The only variable is you.
           </p>
           <Link
@@ -178,7 +178,7 @@ export default function OpportunityPage() {
 
       {/* Income Disclaimer */}
       <section className="py-6 px-4">
-        <p className="text-xs text-foreground/20 max-w-3xl mx-auto text-center">
+        <p className="text-xs text-foreground/40 max-w-3xl mx-auto text-center">
           Results not typical. 94% of participants earn less than their Recurring Commitment Protocol fees.
           Stratify makes no guarantees regarding income. The term &ldquo;yield&rdquo; does not imply financial return.
           Charts shown above are illustrative and do not represent actual or projected earnings.

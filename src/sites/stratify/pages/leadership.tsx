@@ -29,7 +29,7 @@ export default function LeadershipPage() {
           {executives.map((exec) => (
             <div
               key={exec.slug}
-              className="border border-primary/10 rounded-lg overflow-hidden flex flex-col md:flex-row"
+              className="border border-primary/15 rounded-lg overflow-hidden flex flex-col md:flex-row"
             >
               {/* Photo */}
               <div className="relative w-full md:w-56 aspect-[4/5] shrink-0">
@@ -48,9 +48,9 @@ export default function LeadershipPage() {
                   <p className="text-accent font-medium">{exec.title}</p>
                 </div>
 
-                <p className="text-foreground/70 text-sm leading-relaxed">{exec.bio}</p>
+                <p className="text-foreground/90 text-sm leading-relaxed">{exec.bio}</p>
 
-                <blockquote className="border-l-2 border-secondary/40 pl-4 text-foreground/60 italic text-sm">
+                <blockquote className="border-l-2 border-secondary/40 pl-4 text-foreground/80 italic text-sm">
                   &ldquo;{exec.quote}&rdquo;
                 </blockquote>
               </div>
@@ -65,7 +65,7 @@ export default function LeadershipPage() {
           <h2 className="text-3xl font-heading font-bold text-foreground mb-4">
             Ready to Join the Architecture?
           </h2>
-          <p className="text-foreground/60 mb-8">
+          <p className="text-foreground/80 mb-8">
             The leaders above were once exactly where you are now. One elevation event changed
             everything. Yours is waiting.
           </p>

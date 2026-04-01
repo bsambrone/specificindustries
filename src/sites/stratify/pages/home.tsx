@@ -37,7 +37,7 @@ export default function StratifyHome() {
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
             Stratified Growth Architecture&trade;
           </h2>
-          <p className="text-foreground/60 mb-12 max-w-2xl mx-auto">
+          <p className="text-foreground/80 mb-12 max-w-2xl mx-auto">
             Our proprietary architecture distributes value across interconnected layers.
             Each layer supports and amplifies the layers beneath it.
           </p>
@@ -55,7 +55,7 @@ export default function StratifyHome() {
       </section>
 
       {/* How It Works — 3 Steps */}
-      <section className="py-16 px-4 bg-secondary/10">
+      <section className="py-16 px-4 bg-secondary/15">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-heading font-bold text-center text-foreground mb-12">
             Three Steps to Stratified Wealth
@@ -79,9 +79,9 @@ export default function StratifyHome() {
               },
             ].map((item) => (
               <div key={item.step} className="text-center">
-                <div className="text-5xl font-heading font-bold text-secondary/30 mb-2">{item.step}</div>
+                <div className="text-5xl font-heading font-bold text-secondary/50 mb-2">{item.step}</div>
                 <h3 className="text-xl font-heading font-bold text-foreground mb-2">{item.title}</h3>
-                <p className="text-foreground/60 text-sm">{item.desc}</p>
+                <p className="text-foreground/80 text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -94,24 +94,24 @@ export default function StratifyHome() {
           <h2 className="text-3xl font-heading font-bold text-foreground mb-4">
             Choose Your Layer
           </h2>
-          <p className="text-foreground/60 mb-12">
+          <p className="text-foreground/80 mb-12">
             Theoretical yield ranges based on optimal layer density conditions.*
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {tiers.map((tier) => (
               <div
                 key={tier.layer}
-                className="border border-primary/10 rounded-lg p-4 text-center"
+                className="border border-primary/15 rounded-lg p-4 text-center"
               >
-                <div className="text-xs text-foreground/40 font-heading uppercase tracking-wider">
+                <div className="text-xs text-foreground/60 font-heading uppercase tracking-wider">
                   Layer {tier.layer}
                 </div>
                 <div className="text-lg font-heading font-bold text-secondary mt-1">{tier.name}</div>
-                <div className="text-sm text-foreground/60 mt-2">{tier.tagline}</div>
+                <div className="text-sm text-foreground/80 mt-2">{tier.tagline}</div>
               </div>
             ))}
           </div>
-          <p className="text-xs text-foreground/30 mt-6">
+          <p className="text-xs text-foreground/50 mt-6">
             *Yield projections based on optimal layer density conditions. Individual results depend on subordinate layer activity.
           </p>
           <Link
@@ -141,12 +141,12 @@ export default function StratifyHome() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testimonials.slice(0, 4).map((t) => (
-              <blockquote key={t.name} className="border border-primary/10 rounded-lg p-6">
+              <blockquote key={t.name} className="border border-primary/15 rounded-lg p-6">
                 <h3 className="font-heading font-bold text-secondary text-lg mb-3">
                   &ldquo;{t.headline}&rdquo;
                 </h3>
-                <p className="text-foreground/70 text-sm italic mb-4">&ldquo;{t.after}&rdquo;</p>
-                <cite className="text-foreground/50 text-sm not-italic">
+                <p className="text-foreground/90 text-sm italic mb-4">&ldquo;{t.after}&rdquo;</p>
+                <cite className="text-foreground/70 text-sm not-italic">
                   &mdash; {t.name}, {t.title}
                 </cite>
               </blockquote>
@@ -169,7 +169,7 @@ export default function StratifyHome() {
           <h2 className="text-4xl font-heading font-bold text-foreground mb-4">
             Your Layer Is Waiting.
           </h2>
-          <p className="text-foreground/60 mb-8">
+          <p className="text-foreground/80 mb-8">
             Layer 1 positions in your region are filling fast. Don&apos;t let someone else claim your yield potential.
           </p>
           <Link

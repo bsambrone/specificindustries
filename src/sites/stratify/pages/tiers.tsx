@@ -67,11 +67,11 @@ export default function TiersPage() {
       {/* Downward Stratification Adjustment Warning */}
       <section className="py-8 px-4">
         <div className="max-w-3xl mx-auto">
-          <div className="border border-secondary/30 bg-secondary/5 rounded-lg p-6">
+          <div className="border border-secondary/30 bg-secondary/10 rounded-lg p-6">
             <h3 className="text-lg font-heading font-bold text-secondary mb-2">
               ⚠️ Downward Stratification Adjustment
             </h3>
-            <p className="text-foreground/60 text-sm">
+            <p className="text-foreground/80 text-sm">
               Participants who fail to maintain their Recurring Commitment Protocol may experience a
               Downward Stratification Adjustment. This process is automatic and irreversible within the
               current billing cycle. Stratify is not responsible for emotional distress caused by layer demotion.
@@ -89,10 +89,10 @@ export default function TiersPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-primary/10">
-                  <th className="text-left py-3 px-4 text-foreground/50 font-heading">Feature</th>
+                <tr className="border-b border-primary/15">
+                  <th className="text-left py-3 px-4 text-foreground/70 font-heading">Feature</th>
                   {tiers.map((tier) => (
-                    <th key={tier.layer} className="text-center py-3 px-2 text-foreground/50 font-heading text-xs">
+                    <th key={tier.layer} className="text-center py-3 px-2 text-foreground/70 font-heading text-xs">
                       L{tier.layer}
                     </th>
                   ))}
@@ -100,14 +100,14 @@ export default function TiersPage() {
               </thead>
               <tbody>
                 {comparisonFeatures.map((feature) => (
-                  <tr key={feature} className="border-b border-primary/5">
-                    <td className="py-3 px-4 text-foreground/70">{feature}</td>
+                  <tr key={feature} className="border-b border-primary/10">
+                    <td className="py-3 px-4 text-foreground/90">{feature}</td>
                     {tiers.map((tier) => (
                       <td key={tier.layer} className="text-center py-3 px-2">
                         {featureMatrix[feature]?.includes(tier.layer) ? (
                           <span className="text-secondary">✓</span>
                         ) : (
-                          <span className="text-foreground/20">—</span>
+                          <span className="text-foreground/40">—</span>
                         )}
                       </td>
                     ))}
@@ -121,7 +121,7 @@ export default function TiersPage() {
 
       {/* Disclaimer */}
       <section className="py-6 px-4">
-        <p className="text-xs text-foreground/20 max-w-3xl mx-auto text-center">
+        <p className="text-xs text-foreground/40 max-w-3xl mx-auto text-center">
           *Yield projections based on optimal layer density conditions. Individual results depend on subordinate
           layer activity. 94% of participants earn less than their Recurring Commitment Protocol fees. This is by design.
         </p>
