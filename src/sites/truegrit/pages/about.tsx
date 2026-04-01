@@ -9,9 +9,9 @@ export const metadata = {
 }
 
 const timelineItems = [
-  { year: "2020", description: "Bill uses sandpaper to clean a stubborn stain in his bathroom. Has an idea he immediately regrets." },
+  { year: "2020", description: "Dale uses sandpaper to clean a stubborn stain in his bathroom. Has an idea he immediately regrets." },
   { year: "2021", description: "First prototype. First test. First application of what would become the Recovery Balm." },
-  { year: "2022", description: "Recruits Jim, Brandon, and Sean. All of them had follow-up questions." },
+  { year: "2022", description: "Recruits Gary, Hank, and Chet. All of them had follow-up questions." },
   { year: "2023", description: "Leases manufacturing facility. Landlord asks 'for what?' twice." },
   { year: "2024", description: "Launches online store. First customer buys Recovery Balm only." },
   { year: "2025", description: "Introduces the AcidJet Bidet 3000 over unanimous legal objection." },
@@ -20,28 +20,28 @@ const timelineItems = [
 
 const teamMembers = [
   {
-    name: "Bill",
+    name: "Dale",
     title: "Founder & Chief Abrasion Officer",
     image: "/sites/truegrit/team-bill.png",
     bio: "Saw a gap in the market while renovating his bathroom. 'What if the thing that cleans surfaces could clean ALL surfaces?' he asked. No one answered, but he built a company anyway.",
   },
   {
-    name: "Jim",
+    name: "Gary",
     title: "VP of Grit Sciences",
     image: "/sites/truegrit/team-jim.png",
-    bio: "Former materials engineer with a specialty in industrial abrasives. Joined True Grit after Bill described the vision. Jim's expression during that conversation has not changed since.",
+    bio: "Former materials engineer with a specialty in industrial abrasives. Joined True Grit after Dale described the vision. Gary's expression during that conversation has not changed since.",
   },
   {
-    name: "Brandon",
+    name: "Hank",
     title: "Director of Consumer Endurance",
     image: "/sites/truegrit/team-brandon.png",
     bio: "Oversees the customer experience from first contact through recovery. Interprets complaint letters as 'testimonials of effectiveness.' Has a wall of them.",
   },
   {
-    name: "Sean",
+    name: "Chet",
     title: "Head of Industrial Relations",
     image: "/sites/truegrit/team-sean.png",
-    bio: "Bridges the gap between the construction industry and personal hygiene. Negotiates bulk abrasive contracts with suppliers who always ask what it's for. Sean has learned not to answer.",
+    bio: "Bridges the gap between the construction industry and personal hygiene. Negotiates bulk abrasive contracts with suppliers who always ask what it's for. Chet has learned not to answer.",
   },
 ]
 
@@ -59,14 +59,14 @@ export default function TrueGritAbout() {
         imageAspect="aspect-square"
         title="How It All Started"
         description={
-          "In the summer of 2020, Bill was renovating his bathroom when he reached for a roll of toilet paper and grabbed a sheet of 40-grit sandpaper instead. " +
-          "What happened next was unpleasant, but it was also — and Bill will insist on this point — undeniably thorough.\n\n" +
-          "Rather than file the experience under 'never again,' Bill did what every great entrepreneur does: " +
+          "In the summer of 2020, Dale was renovating his bathroom when he reached for a roll of toilet paper and grabbed a sheet of 40-grit sandpaper instead. " +
+          "What happened next was unpleasant, but it was also — and Dale will insist on this point — undeniably thorough.\n\n" +
+          "Rather than file the experience under 'never again,' Dale did what every great entrepreneur does: " +
           "he wondered if he could sell it. His wife suggested therapy. His friends suggested he was joking. " +
-          "Bill was not joking. Bill is never joking.\n\n" +
+          "Dale was not joking. Dale is never joking.\n\n" +
           "Two years, three co-founders, and one very patient legal team later, True Grit Personal Care was born. " +
           "Our mission is simple: to deliver a level of cleanliness that conventional toilet paper can only dream of. " +
-          "The fact that this comes with some discomfort is, in Bill's words, 'a feature, not a bug.'"
+          "The fact that this comes with some discomfort is, in Dale's words, 'a feature, not a bug.'"
         }
       />
 

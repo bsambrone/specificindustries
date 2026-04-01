@@ -80,7 +80,7 @@ export default function TrueGritTerms() {
           <p>
             These terms are governed by the laws of common sense, which we acknowledge we are testing
             the boundaries of. In the event of a legal challenge, we defer to the jurisdiction of
-            wherever our founder Bill currently is, which is usually the workshop, looking concerned.
+            wherever our founder Dale currently is, which is usually the workshop, looking concerned.
           </p>
         </div>
       </section>

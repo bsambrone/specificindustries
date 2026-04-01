@@ -78,7 +78,7 @@ export const products: Product[] = [
     tagline: "For professionals and the exceptionally determined.",
     description: [
       "When 40-grit isn't enough — and frankly, we're concerned about anyone for whom it isn't — the 24-Grit Deep Clean delivers maximum abrasive coverage. This is our most aggressive personal cleansing product and it is not for the faint of heart.",
-      "Originally developed for industrial surface preparation, we realized it could serve a dual purpose. Our R&D team (Jim) spent months adapting the formula for personal use. The results were immediate and impossible to ignore.",
+      "Originally developed for industrial surface preparation, we realized it could serve a dual purpose. Our R&D team (Gary) spent months adapting the formula for personal use. The results were immediate and impossible to ignore.",
       "The 24-Grit Deep Clean is our most affordable option because, honestly, most people don't come back for a second roll. Those who do have our deepest respect and our sincerest concern.",
     ],
     image: "/sites/truegrit/product-24-grit.png",

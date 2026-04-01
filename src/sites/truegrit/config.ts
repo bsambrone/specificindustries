@@ -23,10 +23,11 @@ export const config: SiteConfig = {
   },
   nav: [
     { label: "Products", path: "/products" },
+    { label: "Applications", path: "/applications" },
     { label: "The Experience", path: "/the-experience" },
-    { label: "The Aftermath", path: "/the-aftermath" },
     { label: "Behind the Scenes", path: "/behind-the-scenes" },
     { label: "About", path: "/about" },
+    { label: "Contact", path: "/contact" },
   ],
   features: {
     commerce: true,
