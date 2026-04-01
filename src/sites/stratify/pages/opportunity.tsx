@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { useSiteLink } from "@/hooks/use-site-link"
 import { Hero } from "@/components/ui/hero"
@@ -82,37 +83,52 @@ export default function OpportunityPage() {
           </p>
 
           <div className="space-y-8">
-            <div className="border border-foreground/15 rounded-lg p-6">
-              <h3 className="text-lg font-heading font-bold text-secondary mb-2">
-                Primary Yield: Your Own Value Distribution Events
-              </h3>
-              <p className="text-foreground/80 text-sm">
-                Direct yield from personal Value Distribution Events. This is where most participants begin,
-                but it is not where they stay. Primary yield is merely the foundation upon which stratified
-                wealth is constructed.
-              </p>
+            <div className="border border-foreground/15 rounded-lg overflow-hidden flex flex-col md:flex-row">
+              <div className="relative w-full md:w-48 aspect-square md:aspect-auto shrink-0">
+                <Image src="/sites/stratify/yield-primary.png" alt="Direct value distribution" fill className="object-cover" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-heading font-bold text-secondary mb-2">
+                  Primary Yield: Your Own Value Distribution Events
+                </h3>
+                <p className="text-foreground/80 text-sm">
+                  Direct yield from personal Value Distribution Events. This is where most participants begin,
+                  but it is not where they stay. Primary yield is merely the foundation upon which stratified
+                  wealth is constructed.
+                </p>
+              </div>
             </div>
 
-            <div className="border border-foreground/15 rounded-lg p-6">
-              <h3 className="text-lg font-heading font-bold text-secondary mb-2">
-                Secondary Yield: Subordinate Revenue Layer Activity
-              </h3>
-              <p className="text-foreground/80 text-sm">
-                As your subordinate layers activate and begin their own Value Distribution Events, a portion
-                of that activity generates Performance-Derived Yield that flows upward through the architecture.
-                This is the power of stratification: your yield grows as your layers grow.
-              </p>
+            <div className="border border-foreground/15 rounded-lg overflow-hidden flex flex-col md:flex-row">
+              <div className="relative w-full md:w-48 aspect-square md:aspect-auto shrink-0">
+                <Image src="/sites/stratify/yield-secondary.png" alt="Subordinate revenue layers" fill className="object-cover" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-heading font-bold text-secondary mb-2">
+                  Secondary Yield: Subordinate Revenue Layer Activity
+                </h3>
+                <p className="text-foreground/80 text-sm">
+                  As your subordinate layers activate and begin their own Value Distribution Events, a portion
+                  of that activity generates Performance-Derived Yield that flows upward through the architecture.
+                  This is the power of stratification: your yield grows as your layers grow.
+                </p>
+              </div>
             </div>
 
-            <div className="border border-foreground/15 rounded-lg p-6">
-              <h3 className="text-lg font-heading font-bold text-secondary mb-2">
-                Tertiary Yield: Indirect Expansion Events
-              </h3>
-              <p className="text-foreground/80 text-sm">
-                At Layer 3 and above, you begin receiving yield from layers you did not personally activate.
-                These Indirect Tertiary Expansion Events represent the theoretical yield ceiling approaching
-                infinity. The architecture works for you, even while you sleep. Especially while you sleep.
-              </p>
+            <div className="border border-foreground/15 rounded-lg overflow-hidden flex flex-col md:flex-row">
+              <div className="relative w-full md:w-48 aspect-square md:aspect-auto shrink-0">
+                <Image src="/sites/stratify/yield-tertiary.png" alt="Passive income lifestyle" fill className="object-cover" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-heading font-bold text-secondary mb-2">
+                  Tertiary Yield: Indirect Expansion Events
+                </h3>
+                <p className="text-foreground/80 text-sm">
+                  At Layer 3 and above, you begin receiving yield from layers you did not personally activate.
+                  These Indirect Tertiary Expansion Events represent the theoretical yield ceiling approaching
+                  infinity. The architecture works for you, even while you sleep. Especially while you sleep.
+                </p>
+              </div>
             </div>
           </div>
 

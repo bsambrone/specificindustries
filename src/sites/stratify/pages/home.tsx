@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { useSiteLink } from "@/hooks/use-site-link"
 import { Hero } from "@/components/ui/hero"
@@ -21,7 +22,7 @@ export default function StratifyHome() {
         ctaHref={siteHref("/onboarding/step-1")}
         secondaryCtaText="See the Opportunity"
         secondaryCtaHref={siteHref("/opportunity")}
-        dark
+        image="/sites/stratify/hero-team.png"
       />
 
       {/* Tagline Strip */}
@@ -66,19 +67,25 @@ export default function StratifyHome() {
                 step: "01",
                 title: "Join",
                 desc: "Enter the architecture at Layer 1 with the Entry-Level Monetization Bundle. Your elevation begins immediately.",
+                image: "/sites/stratify/step-join.png",
               },
               {
                 step: "02",
                 title: "Distribute",
                 desc: "Facilitate Value Distribution Events across your network. Every transaction amplifies your layer\u2019s yield.",
+                image: "/sites/stratify/step-distribute.png",
               },
               {
                 step: "03",
                 title: "Elevate",
                 desc: "Expand your Subordinate Revenue Layers and ascend through the tiers. Your yield grows with each layer beneath you.",
+                image: "/sites/stratify/step-elevate.png",
               },
             ].map((item) => (
               <div key={item.step} className="text-center">
+                <div className="relative w-full aspect-square max-w-[280px] mx-auto mb-4 rounded-lg overflow-hidden">
+                  <Image src={item.image} alt={item.title} fill className="object-cover" />
+                </div>
                 <div className="text-5xl font-heading font-bold text-secondary/50 mb-2">{item.step}</div>
                 <h3 className="text-xl font-heading font-bold text-foreground mb-2">{item.title}</h3>
                 <p className="text-foreground/80 text-sm">{item.desc}</p>

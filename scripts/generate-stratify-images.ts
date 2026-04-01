@@ -167,6 +167,54 @@ async function main() {
     "Professional event photography of a corporate networking mixer in a hotel ballroom. Group of diverse professionals in business attire mingling, some holding drinks, animated conversation. Navy blue and gold decorations, string lights, cocktail tables. Several people wearing gold lanyards with badges. Warm friendly atmosphere with subtle corporate conference vibe. Photorealistic.",
     "event-mixer.png", "1536x1024"
   )
+  await delay(2000)
+
+  // ── Hero Background — exec team celebrating ──
+  console.log("\n🏠 Homepage Hero")
+  await generateWithPerson(
+    "Cinematic wide-angle photograph of this person as the central figure in a group of four male executives celebrating a business victory. They wear sharp navy suits with gold ties and pocket squares. The central figure is front and center with arms raised triumphantly. Confetti in gold and navy is falling. Dramatic stage lighting with gold spotlights. Dark navy background. The energy is pure MLM conference keynote finale — victorious, over-the-top, motivational speaker celebration. Photorealistic, high-end corporate event photography.",
+    "hero-team.png", "bill", "1536x1024"
+  )
+  await delay(2000)
+
+  // ── Homepage: Three Steps (3) ──
+  console.log("\n📸 Homepage Step Images")
+  await generateImage(
+    "Photorealistic image of a person excitedly signing paperwork at a folding table in a hotel conference room. A branded starter kit box with gold and navy packaging sits on the table. An overly enthusiastic sponsor in a navy suit hovers behind them with both thumbs up and a huge grin. Fluorescent lighting, slightly sterile corporate setting. The energy is eager and slightly desperate. MLM enrollment vibes.",
+    "step-join.png", "1024x1024"
+  )
+  await delay(2000)
+
+  await generateImage(
+    "Photorealistic image of a person in business casual clothing enthusiastically presenting products to a skeptical-looking friend in a suburban living room. Products are spread across a coffee table. The presenter is leaning forward with intense eye contact and animated hand gestures. The friend has their arms crossed and a forced polite smile. Classic MLM home party product demonstration. Warm living room lighting.",
+    "step-distribute.png", "1024x1024"
+  )
+  await delay(2000)
+
+  await generateImage(
+    "Photorealistic image of a person in a navy suit standing on a small illuminated stage or podium being applauded by a crowd in a hotel ballroom. Gold spotlight on the person on stage. They are receiving a trophy or plaque. The audience is clapping enthusiastically. Banner behind reads congratulatory text. Classic MLM rank advancement ceremony energy. Corporate event photography.",
+    "step-elevate.png", "1024x1024"
+  )
+  await delay(2000)
+
+  // ── Opportunity: Yield Distribution (3) ──
+  console.log("\n📸 Opportunity Yield Images")
+  await generateImage(
+    "Photorealistic close-up photograph of two pairs of hands exchanging a branded product box and cash money across a table. The product box has navy and gold branding. Crisp bills are being handed over. Shot from slightly above, shallow depth of field. Clean, well-lit, commercial product photography feel. Direct sales transaction energy.",
+    "yield-primary.png", "1024x1024"
+  )
+  await delay(2000)
+
+  await generateImage(
+    "Photorealistic aerial/bird's-eye view illustration of a branching network tree of people in business attire, arranged in a pyramid-like hierarchy spreading outward and downward. Gold lines connect them showing flow of money upward through the layers. Top person is largest and glowing gold. Navy blue background with gold accent lighting. Corporate infographic meets MLM compensation plan diagram. Clean, modern, slightly ominous.",
+    "yield-secondary.png", "1024x1024"
+  )
+  await delay(2000)
+
+  await generateImage(
+    "Photorealistic image of a person lounging in a hammock on a tropical beach with a laptop showing financial charts with lines going up. They are wearing sunglasses and a relaxed smile, dressed in smart casual with a gold watch. Phone nearby showing notification alerts of incoming payments. Crystal clear water and palm trees in background. The ultimate 'passive income while you sleep' MLM fantasy lifestyle photo. Aspirational, slightly too perfect.",
+    "yield-tertiary.png", "1024x1024"
+  )
 
   console.log("\n✅ Done!\n")
 }
