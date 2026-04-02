@@ -200,6 +200,27 @@ export const products: Product[] = [
     ],
   },
   {
+    slug: "fermented-pig-milk",
+    name: "Fermented Pig Milk",
+    price: 18.99,
+    priceLabel: "$18.99 / bottle",
+    tagline: "Aged, fermented, and mildly alcoholic. Just like Earl.",
+    description: [
+      "We left a jug of pig milk in the back of the barn and forgot about it for a while. When we came back, it was fizzy, slightly boozy, and smelled like bad decisions. Naturally, we bottled it.",
+      "Fermented Pig Milk is our first (and only) alcoholic offering. It sits somewhere between kombucha and a cry for help on the beverage spectrum. ABV varies by batch because we are not scientists and our fermentation process is 'whatever happens in the barn.'",
+      "Tasting notes include: sour, funky, vaguely piggy, and a finish that one reviewer described as 'I need to sit down.' Pairs well with questionable judgment, a strong constitution, and the understanding that no one made you do this.",
+    ],
+    image: "/sites/pigmilk/product-fermented.png",
+    nutritionalFacts: [
+      { label: "ABV", value: "Somewhere between 3-9%" },
+      { label: "Pig Energy", value: "Fermented" },
+      { label: "Tasting Notes", value: "Regret, oak, mud" },
+      { label: "Hangover Risk", value: "Novel" },
+      { label: "FDA Approved", value: "They won't return our calls" },
+      { label: "Dignity Remaining", value: "0g" },
+    ],
+  },
+  {
     slug: "whole-hog-bundle",
     name: "The Whole Hog Bundle",
     price: 89.99,
