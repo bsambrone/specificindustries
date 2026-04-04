@@ -10,7 +10,7 @@ import { CartProvider } from "@/components/commerce/cart-provider"
 import { ToastContainer } from "@/components/commerce/toast"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
-import { GoogleAnalytics } from "@next/third-parties/google"
+import { GoogleAnalytics } from "@/components/analytics/google-analytics"
 
 export const metadata: Metadata = {
   title: "Specific Industries — Serving the World's Most Specific Industries",

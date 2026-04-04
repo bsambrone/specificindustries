@@ -48,6 +48,7 @@ export default async function ApexHome() {
                       src={`/sites/${subdomain}/favicon.png`}
                       alt={site.config.name}
                       fill
+                      sizes="48px"
                       className="object-contain"
                       priority
                     />
