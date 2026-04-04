@@ -1,10 +1,9 @@
 import type { Metadata } from "next"
 import { headers } from "next/headers"
 import "./globals.css"
-import { fontVariables } from "@/themes/fonts"
+import { getFontVariables, fontFamilyMap } from "@/themes/fonts"
 import { siteRegistry } from "@/sites/registry"
 import { themeToCSS } from "@/themes"
-import { fontFamilyMap } from "@/themes/fonts"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { CartProvider } from "@/components/commerce/cart-provider"
@@ -38,6 +37,10 @@ export default async function RootLayout({
     if (bodyFont) themeStyle["--font-body"] = bodyFont
   }
 
+  const fontClasses = site
+    ? getFontVariables(site.config.theme.fonts)
+    : getFontVariables({ heading: "space-grotesk", body: "inter" })
+
   const content = (
     <>
       {site && <Header config={site.config} />}
@@ -49,7 +52,7 @@ export default async function RootLayout({
   const faviconPath = site ? `/sites/${site.config.subdomain}/favicon.png` : undefined
 
   return (
-    <html lang="en" className={fontVariables}>
+    <html lang="en" className={fontClasses}>
       <head>
         {faviconPath && <link rel="icon" href={faviconPath} />}
         <script

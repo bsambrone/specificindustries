@@ -5,6 +5,7 @@ interface SplitSectionProps {
   imagePosition?: "left" | "right"
   dark?: boolean
   imageClassName?: string
+  priority?: boolean
   children: React.ReactNode
 }
 
@@ -13,6 +14,7 @@ export function SplitSection({
   imagePosition = "left",
   dark = false,
   imageClassName,
+  priority = false,
   children,
 }: SplitSectionProps) {
   const imageBlock = (
@@ -23,6 +25,7 @@ export function SplitSection({
         width={1024}
         height={1536}
         className={imageClassName || "max-h-[500px] w-auto h-auto"}
+        priority={priority}
       />
     </div>
   )

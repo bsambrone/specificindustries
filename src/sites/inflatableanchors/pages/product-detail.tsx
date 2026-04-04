@@ -19,7 +19,7 @@ export default function ProductDetail({ slug }: { slug: string }) {
   return (
     <>
       {/* Product hero — split section */}
-      <SplitSection image={product.image} imagePosition="left">
+      <SplitSection image={product.image} imagePosition="left" priority>
         <p className="text-sm text-accent uppercase tracking-widest mb-2 font-semibold">
           {product.category === "standard"
             ? "Standard Anchors"

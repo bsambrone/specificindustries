@@ -71,6 +71,7 @@ export default function ContactPage() {
                 alt="A concerned warehouse worker next to a ringing phone"
                 fill
                 className="object-cover"
+                priority
               />
             </div>
           </div>

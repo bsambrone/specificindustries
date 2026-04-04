@@ -35,6 +35,7 @@ export default function ProductDetailPage({ solutionSlug, productSlug }: Product
               alt={product.name}
               fill
               className="object-cover rounded-lg"
+              priority
             />
           </div>
 

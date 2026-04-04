@@ -49,6 +49,7 @@ export default async function ApexHome() {
                       alt={site.config.name}
                       fill
                       className="object-contain"
+                      priority
                     />
                   </div>
                   <div>

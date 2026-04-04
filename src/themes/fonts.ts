@@ -27,14 +27,23 @@ export const barlowCondensed = Barlow_Condensed({
   variable: "--font-barlow-condensed",
 })
 
-// All font class names joined for the root layout
-export const fontVariables = [
-  inter.variable,
-  playfairDisplay.variable,
-  spaceGrotesk.variable,
-  poppins.variable,
-  barlowCondensed.variable,
-].join(" ")
+// Map font config keys → their next/font instance
+const fontInstanceMap: Record<string, { variable: string }> = {
+  inter,
+  playfair: playfairDisplay,
+  "space-grotesk": spaceGrotesk,
+  poppins,
+  "barlow-condensed": barlowCondensed,
+}
+
+// Returns only the CSS variable classes needed for a given site's fonts
+export function getFontVariables(fonts: { heading: string; body: string }): string {
+  const needed = new Set([fonts.heading, fonts.body])
+  return Array.from(needed)
+    .map((key) => fontInstanceMap[key]?.variable)
+    .filter(Boolean)
+    .join(" ")
+}
 
 // Map of font keys used in site configs → CSS font-family values
 export const fontFamilyMap: Record<string, string> = {
