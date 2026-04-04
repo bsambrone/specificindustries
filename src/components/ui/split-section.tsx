@@ -26,6 +26,7 @@ export function SplitSection({
         height={1536}
         className={imageClassName || "max-h-[500px] w-auto h-auto"}
         priority={priority}
+        fetchPriority={priority ? "high" : undefined}
       />
     </div>
   )

@@ -34,6 +34,7 @@ export default async function ProductDetailPage({ solutionSlug, productSlug }: P
               fill
               className="object-cover rounded-lg"
               priority
+              fetchPriority="high"
             />
           </div>
 

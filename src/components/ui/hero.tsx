@@ -48,6 +48,7 @@ export function Hero({
           fill
           className="object-cover brightness-50"
           priority
+          fetchPriority="high"
         />
       )}
       <div className="relative z-10 max-w-3xl mx-auto text-center">

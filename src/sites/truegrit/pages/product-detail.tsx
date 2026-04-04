@@ -15,7 +15,7 @@ export default function ProductDetail({ slug }: { slug: string }) {
       <section className="py-12 px-4">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <div className="relative aspect-square rounded-lg overflow-hidden bg-secondary/10">
-            <Image src={product.image} alt={product.name} fill className="object-cover" priority />
+            <Image src={product.image} alt={product.name} fill className="object-cover" priority fetchPriority="high" />
           </div>
           <div>
             <p className="text-xs text-foreground/40 font-mono mb-2">SKU: {product.sku}</p>

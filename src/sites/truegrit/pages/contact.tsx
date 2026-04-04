@@ -72,6 +72,7 @@ export default function ContactPage() {
                 fill
                 className="object-cover"
                 priority
+                fetchPriority="high"
               />
             </div>
           </div>
