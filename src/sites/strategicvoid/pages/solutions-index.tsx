@@ -1,5 +1,3 @@
-"use client"
-
 import { solutions } from "@/sites/strategicvoid/data/solutions"
 import { SolutionCard } from "@/components/ui/solution-card"
 import type { PageMetadata } from "@/themes"
@@ -10,7 +8,7 @@ export const metadata: PageMetadata = {
     "Eight integrated solution suites for organizations committed to maximum process without measurable outcome.",
 }
 
-export default function SolutionsIndex() {
+export default async function SolutionsIndex() {
   return (
     <div>
       <section className="bg-secondary py-20 px-6">

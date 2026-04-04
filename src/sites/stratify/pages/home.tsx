@@ -1,16 +1,14 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 import { Hero } from "@/components/ui/hero"
 import { StrataDiagram } from "@/components/ui/strata-diagram"
 import { StatStrip } from "@/components/ui/stat-strip"
 import { tiers } from "@/sites/stratify/data/tiers"
 import { testimonials } from "@/sites/stratify/data/testimonials"
 
-export default function StratifyHome() {
-  const siteHref = useSiteLink()
+export default async function StratifyHome() {
+  const siteHref = await getSiteHref()
 
   return (
     <div>

@@ -1,7 +1,5 @@
-"use client"
-
 import Link from "next/link"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 
 interface HeroStat {
   value: string
@@ -16,8 +14,8 @@ interface CaseStudyCardProps {
   summary: string
 }
 
-export function CaseStudyCard({ slug, company, heroStat, solutionArea, summary }: CaseStudyCardProps) {
-  const siteHref = useSiteLink()
+export async function CaseStudyCard({ slug, company, heroStat, solutionArea, summary }: CaseStudyCardProps) {
+  const siteHref = await getSiteHref()
 
   return (
     <Link href={siteHref(`/case-studies/${slug}`)}>

@@ -1,8 +1,6 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 import { Hero } from "@/components/ui/hero"
 import { executives } from "@/sites/stratify/data/leadership"
 
@@ -12,8 +10,8 @@ export const metadata = {
     "Our leadership team has over 47 combined years of experience in stratified commerce, decentralized yield optimization, and human capital activation.",
 }
 
-export default function LeadershipPage() {
-  const siteHref = useSiteLink()
+export default async function LeadershipPage() {
+  const siteHref = await getSiteHref()
 
   return (
     <div>

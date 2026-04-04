@@ -1,5 +1,3 @@
-"use client"
-
 import SolutionPage from "./solution-page"
 import ProductDetailPage from "./product-detail"
 
@@ -8,7 +6,7 @@ interface SolutionRouterProps {
   segments?: string[]
 }
 
-export default function SolutionRouter({ slug, segments }: SolutionRouterProps) {
+export default async function SolutionRouter({ slug, segments }: SolutionRouterProps) {
   // segments has 2 items: [solutionSlug, productSlug]
   if (segments && segments.length === 2) {
     return <ProductDetailPage solutionSlug={segments[0]} productSlug={segments[1]} />

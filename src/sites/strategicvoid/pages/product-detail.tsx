@@ -1,8 +1,6 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 import { getProductBySlug, getProductsBySolution } from "@/sites/strategicvoid/data/products"
 import { getSolutionBySlug } from "@/sites/strategicvoid/data/solutions"
 import { ProductCard } from "@/components/ui/product-card"
@@ -12,8 +10,8 @@ interface ProductDetailProps {
   productSlug: string
 }
 
-export default function ProductDetailPage({ solutionSlug, productSlug }: ProductDetailProps) {
-  const siteHref = useSiteLink()
+export default async function ProductDetailPage({ solutionSlug, productSlug }: ProductDetailProps) {
+  const siteHref = await getSiteHref()
   const product = getProductBySlug(productSlug)
   const solution = getSolutionBySlug(solutionSlug)
 

@@ -1,12 +1,10 @@
-"use client"
-
 import { Hero } from "@/components/ui/hero"
 import { WaveDivider } from "@/components/ui/wave-divider"
 import { FeaturedProductSpotlight } from "@/components/ui/featured-product-spotlight"
 import { ProductCard } from "@/components/ui/product-card"
 import { PromoBanner } from "@/components/ui/promo-banner"
 import { products } from "@/sites/dehydratedwater/data/products"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 
 export const metadata = {
   title: "Products — Dehydrated Water Laboratories",
@@ -27,8 +25,8 @@ const experience = experienceSlugs.map((slug) => products.find((p) => p.slug ===
 
 const dryerWater = products.find((p) => p.slug === "dryer-water")!
 
-export default function DehydratedWaterProducts() {
-  const siteHref = useSiteLink()
+export default async function DehydratedWaterProducts() {
+  const siteHref = await getSiteHref()
   return (
     <>
       <Hero

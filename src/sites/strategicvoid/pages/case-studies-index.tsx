@@ -1,5 +1,3 @@
-"use client"
-
 import { caseStudies } from "@/sites/strategicvoid/data/case-studies"
 import { getSolutionBySlug } from "@/sites/strategicvoid/data/solutions"
 import { CaseStudyCard } from "@/components/ui/case-study-card"
@@ -11,7 +9,7 @@ export const metadata: PageMetadata = {
     "Real client success stories demonstrating the measurable impact of strategic non-productivity across industries.",
 }
 
-export default function CaseStudiesIndex() {
+export default async function CaseStudiesIndex() {
   return (
     <div>
       <section className="bg-secondary py-20 px-6">

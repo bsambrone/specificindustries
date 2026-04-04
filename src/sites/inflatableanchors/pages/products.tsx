@@ -1,12 +1,10 @@
-"use client"
-
 import { Hero } from "@/components/ui/hero"
 import { WaveDivider } from "@/components/ui/wave-divider"
 import { FeaturedProductSpotlight } from "@/components/ui/featured-product-spotlight"
 import { ProductCard } from "@/components/ui/product-card"
 import { PromoBanner } from "@/components/ui/promo-banner"
 import { products, getProductsByCategory } from "@/sites/inflatableanchors/data/products"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 
 export const metadata = {
   title: "Products — Inflatable Anchors Marine",
@@ -18,8 +16,8 @@ const standardAnchors = getProductsByCategory("standard")
 const premiumLine = getProductsByCategory("premium")
 const accessories = getProductsByCategory("accessories")
 
-export default function InflatableAnchorsProducts() {
-  const siteHref = useSiteLink()
+export default async function InflatableAnchorsProducts() {
+  const siteHref = await getSiteHref()
   return (
     <>
       <Hero

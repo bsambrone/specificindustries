@@ -1,6 +1,4 @@
-"use client"
-
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 import { Hero } from "@/components/ui/hero"
 import { TierCard } from "@/components/ui/tier-card"
 import { tiers } from "@/sites/stratify/data/tiers"
@@ -31,8 +29,8 @@ const featureMatrix: Record<string, number[]> = {
   "Priority Yield Processing": [4],
 }
 
-export default function TiersPage() {
-  const siteHref = useSiteLink()
+export default async function TiersPage() {
+  const siteHref = await getSiteHref()
 
   return (
     <div>

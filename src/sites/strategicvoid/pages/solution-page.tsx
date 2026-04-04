@@ -1,6 +1,4 @@
-"use client"
-
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 import { getSolutionBySlug } from "@/sites/strategicvoid/data/solutions"
 import { getProductsBySolution } from "@/sites/strategicvoid/data/products"
 import { getCaseStudiesBySolution } from "@/sites/strategicvoid/data/case-studies"
@@ -16,8 +14,8 @@ interface SolutionPageProps {
   slug: string
 }
 
-export default function SolutionPage({ slug }: SolutionPageProps) {
-  const siteHref = useSiteLink()
+export default async function SolutionPage({ slug }: SolutionPageProps) {
+  const siteHref = await getSiteHref()
   const solution = getSolutionBySlug(slug)
 
   if (!solution) return null

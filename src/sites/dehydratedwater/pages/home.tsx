@@ -1,5 +1,3 @@
-"use client"
-
 import { Hero } from "@/components/ui/hero"
 import { WaveDivider } from "@/components/ui/wave-divider"
 import { AnimatedCounter } from "@/components/ui/animated-counter"
@@ -13,12 +11,12 @@ import { TestimonialGrid } from "@/components/ui/testimonial-grid"
 import { PromoBanner } from "@/components/ui/promo-banner"
 import { products } from "@/sites/dehydratedwater/data/products"
 import Link from "next/link"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 
 const cloudMist = products.find((p) => p.slug === "cloud-mist")!
 
-export default function DehydratedWaterHome() {
-  const siteHref = useSiteLink()
+export default async function DehydratedWaterHome() {
+  const siteHref = await getSiteHref()
   return (
     <>
       <Hero

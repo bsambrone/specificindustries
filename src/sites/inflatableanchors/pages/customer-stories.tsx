@@ -1,10 +1,8 @@
-"use client"
-
 import { Hero } from "@/components/ui/hero"
 import { WaveDivider } from "@/components/ui/wave-divider"
 import { CustomerStoryGrid } from "@/components/ui/customer-story"
 import { PromoBanner } from "@/components/ui/promo-banner"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 
 export const metadata = {
   title: "Customer Stories — Inflatable Anchors Marine",
@@ -42,8 +40,8 @@ const stories = [
   },
 ]
 
-export default function CustomerStories() {
-  const siteHref = useSiteLink()
+export default async function CustomerStories() {
+  const siteHref = await getSiteHref()
   return (
     <>
       <Hero

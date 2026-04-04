@@ -1,7 +1,5 @@
-"use client"
-
 import Link from "next/link"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 import { Hero } from "@/components/ui/hero"
 import { StatStrip } from "@/components/ui/stat-strip"
 import { testimonials } from "@/sites/stratify/data/testimonials"
@@ -11,8 +9,8 @@ export const metadata = {
   description: "Real people. Real layers. Real results.*",
 }
 
-export default function SuccessStoriesPage() {
-  const siteHref = useSiteLink()
+export default async function SuccessStoriesPage() {
+  const siteHref = await getSiteHref()
 
   return (
     <div>

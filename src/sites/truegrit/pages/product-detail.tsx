@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image"
 import { getProductBySlug, getRelatedProducts, quips } from "@/sites/truegrit/data/products"
 import { ProductCard } from "@/components/ui/product-card"

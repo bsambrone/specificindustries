@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image"
 import { Hero } from "@/components/ui/hero"
 import { WaveDivider } from "@/components/ui/wave-divider"
@@ -10,7 +8,7 @@ import { ProductCard } from "@/components/ui/product-card"
 import { TestimonialGrid } from "@/components/ui/testimonial-grid"
 import { CTABanner } from "@/components/ui/cta-banner"
 import { products } from "@/sites/inflatableanchors/data/products"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 
 const original = products.find((p) => p.slug === "original")!
 
@@ -23,8 +21,8 @@ const testimonials = [
   { quote: "Five stars. Would not anchor again.", author: "Anonymous Verified Purchaser" },
 ]
 
-export default function InflatableAnchorsHome() {
-  const siteHref = useSiteLink()
+export default async function InflatableAnchorsHome() {
+  const siteHref = await getSiteHref()
   return (
     <>
       <Hero

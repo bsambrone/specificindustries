@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
-import { isValidSubdomain } from "@/sites/registry"
+import { isValidSubdomain } from "@/sites/subdomains"
 
 const PRODUCTION_HOST = "specificindustries.com"
 

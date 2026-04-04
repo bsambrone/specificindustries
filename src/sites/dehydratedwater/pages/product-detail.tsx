@@ -1,16 +1,14 @@
-"use client"
-
 import Link from "next/link"
 import { getProductBySlug } from "@/sites/dehydratedwater/data/products"
 import { AddToCartButton } from "@/components/commerce/add-to-cart-button"
 import { SplitSection } from "@/components/ui/split-section"
 import { WaveDivider } from "@/components/ui/wave-divider"
 import { PromoBanner } from "@/components/ui/promo-banner"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 
-export default function ProductDetail({ slug }: { slug: string }) {
+export default async function ProductDetail({ slug }: { slug: string }) {
   const product = getProductBySlug(slug)
-  const siteHref = useSiteLink()
+  const siteHref = await getSiteHref()
   if (!product) return null
 
   return (

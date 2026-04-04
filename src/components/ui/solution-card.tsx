@@ -1,8 +1,6 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 
 interface SolutionCardProps {
   name: string
@@ -13,8 +11,8 @@ interface SolutionCardProps {
   image?: string
 }
 
-export function SolutionCard({ name, tagline, productCount, slug, icon, image }: SolutionCardProps) {
-  const siteHref = useSiteLink()
+export async function SolutionCard({ name, tagline, productCount, slug, icon, image }: SolutionCardProps) {
+  const siteHref = await getSiteHref()
 
   return (
     <Link href={siteHref(`/solutions/${slug}`)}>

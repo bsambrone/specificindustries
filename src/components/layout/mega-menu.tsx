@@ -2,7 +2,24 @@
 
 import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
-import type { MegaMenuConfig, MegaMenuItem } from "@/themes"
+
+export interface ResolvedMegaMenuChild {
+  label: string
+  href: string
+  description?: string
+  icon?: string
+}
+
+export interface ResolvedMegaMenuItem {
+  label: string
+  href?: string
+  children?: ResolvedMegaMenuChild[]
+  style?: "mega" | "dropdown"
+}
+
+export interface ResolvedMegaMenu {
+  items: ResolvedMegaMenuItem[]
+}
 
 // Chevron icon that rotates when open
 function ChevronDown({ open }: { open: boolean }) {
@@ -23,11 +40,9 @@ function ChevronDown({ open }: { open: boolean }) {
 // Full-width 2-column grid mega panel
 function MegaPanel({
   item,
-  siteHref,
   onClose,
 }: {
-  item: MegaMenuItem
-  siteHref: (path: string) => string
+  item: ResolvedMegaMenuItem
   onClose: () => void
 }) {
   return (
@@ -35,8 +50,8 @@ function MegaPanel({
       <div className="grid grid-cols-2 gap-4">
         {item.children?.map((child) => (
           <Link
-            key={child.path}
-            href={siteHref(child.path)}
+            key={child.href}
+            href={child.href}
             onClick={onClose}
             className="group flex items-start gap-3 p-3 rounded-md hover:bg-primary/5 transition-colors"
           >
@@ -61,19 +76,17 @@ function MegaPanel({
 // Simple vertical dropdown panel
 function DropdownPanel({
   item,
-  siteHref,
   onClose,
 }: {
-  item: MegaMenuItem
-  siteHref: (path: string) => string
+  item: ResolvedMegaMenuItem
   onClose: () => void
 }) {
   return (
     <div className="animate-fade-in absolute left-0 top-full mt-2 w-56 bg-background border border-primary/15 rounded-lg shadow-lg z-50 py-2">
       {item.children?.map((child) => (
         <Link
-          key={child.path}
-          href={siteHref(child.path)}
+          key={child.href}
+          href={child.href}
           onClick={onClose}
           className="block px-4 py-2 text-foreground/80 hover:text-foreground hover:bg-primary/5 transition-colors"
         >
@@ -87,10 +100,8 @@ function DropdownPanel({
 // Desktop mega menu
 export function MegaMenu({
   megaMenu,
-  siteHref,
 }: {
-  megaMenu: MegaMenuConfig
-  siteHref: (path: string) => string
+  megaMenu: ResolvedMegaMenu
 }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -111,11 +122,11 @@ export function MegaMenu({
         const isOpen = openIndex === index
         const hasChildren = !!item.children?.length
 
-        if (!hasChildren && item.path) {
+        if (!hasChildren && item.href) {
           return (
             <Link
               key={item.label}
-              href={siteHref(item.path)}
+              href={item.href}
               className="text-foreground/70 hover:text-foreground hover:bg-primary/10 px-3 py-1.5 rounded-md transition-all"
             >
               {item.label}
@@ -134,10 +145,10 @@ export function MegaMenu({
             </button>
 
             {isOpen && item.style === "mega" && (
-              <MegaPanel item={item} siteHref={siteHref} onClose={() => setOpenIndex(null)} />
+              <MegaPanel item={item} onClose={() => setOpenIndex(null)} />
             )}
             {isOpen && item.style !== "mega" && (
-              <DropdownPanel item={item} siteHref={siteHref} onClose={() => setOpenIndex(null)} />
+              <DropdownPanel item={item} onClose={() => setOpenIndex(null)} />
             )}
           </div>
         )
@@ -149,11 +160,9 @@ export function MegaMenu({
 // Mobile accordion mega menu
 export function MegaMenuMobile({
   megaMenu,
-  siteHref,
   onNavigate,
 }: {
-  megaMenu: MegaMenuConfig
-  siteHref: (path: string) => string
+  megaMenu: ResolvedMegaMenu
   onNavigate: () => void
 }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
@@ -164,11 +173,11 @@ export function MegaMenuMobile({
         const isOpen = openIndex === index
         const hasChildren = !!item.children?.length
 
-        if (!hasChildren && item.path) {
+        if (!hasChildren && item.href) {
           return (
             <Link
               key={item.label}
-              href={siteHref(item.path)}
+              href={item.href}
               onClick={onNavigate}
               className="text-foreground/70 hover:text-foreground hover:bg-primary/10 px-3 py-1.5 rounded-md transition-all"
             >
@@ -191,8 +200,8 @@ export function MegaMenuMobile({
               <div className="mt-1 ml-3 flex flex-col gap-1 border-l-2 border-primary/15 pl-3">
                 {item.children?.map((child) => (
                   <Link
-                    key={child.path}
-                    href={siteHref(child.path)}
+                    key={child.href}
+                    href={child.href}
                     onClick={onNavigate}
                     className="text-foreground/60 hover:text-foreground hover:bg-primary/5 px-3 py-1.5 rounded-md transition-all"
                   >

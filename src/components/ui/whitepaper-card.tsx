@@ -1,7 +1,5 @@
-"use client"
-
 import Link from "next/link"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 
 interface WhitepaperCardProps {
   slug: string
@@ -12,8 +10,8 @@ interface WhitepaperCardProps {
   authors: string[]
 }
 
-export function WhitepaperCard({ slug, title, type, solutionArea, readTime, authors }: WhitepaperCardProps) {
-  const siteHref = useSiteLink()
+export async function WhitepaperCard({ slug, title, type, solutionArea, readTime, authors }: WhitepaperCardProps) {
+  const siteHref = await getSiteHref()
 
   return (
     <Link href={siteHref(`/whitepapers/${slug}`)}>

@@ -1,7 +1,5 @@
-"use client"
-
 import Link from "next/link"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 import { MethodologyDiagram } from "@/components/content-sections/methodology-diagram"
 import { MetricCounter } from "@/components/ui/metric-counter"
 
@@ -83,8 +81,8 @@ const certificationLevels = [
   },
 ]
 
-export default function MethodologyPage() {
-  const siteHref = useSiteLink()
+export default async function MethodologyPage() {
+  const siteHref = await getSiteHref()
 
   return (
     <div>

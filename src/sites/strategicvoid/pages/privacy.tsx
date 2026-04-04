@@ -1,12 +1,10 @@
-"use client"
-
 export const metadata = {
   title: "Privacy Policy — Strategic Void Consulting",
   description:
     "Our privacy policy. Your data is safe within our synergy ecosystem, pending alignment.",
 }
 
-export default function PrivacyPage() {
+export default async function PrivacyPage() {
   return (
     <div>
       {/* Hero */}

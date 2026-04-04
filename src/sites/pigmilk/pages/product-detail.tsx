@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image"
 import { getProductBySlug, getRelatedProducts } from "@/sites/pigmilk/data/products"
 import { ProductCard } from "@/components/ui/product-card"

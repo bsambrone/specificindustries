@@ -1,15 +1,13 @@
-"use client"
-
 import Link from "next/link"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 import { solutions } from "@/sites/strategicvoid/data/solutions"
 import { caseStudies } from "@/sites/strategicvoid/data/case-studies"
 import { MetricCounter } from "@/components/ui/metric-counter"
 import { SolutionCard } from "@/components/ui/solution-card"
 import { CaseStudyCard } from "@/components/ui/case-study-card"
 
-export default function StrategicVoidHome() {
-  const siteHref = useSiteLink()
+export default async function StrategicVoidHome() {
+  const siteHref = await getSiteHref()
 
   const featuredCaseStudies = caseStudies.slice(0, 4)
 

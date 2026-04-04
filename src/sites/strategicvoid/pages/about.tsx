@@ -1,7 +1,5 @@
-"use client"
-
 import Link from "next/link"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 import { Timeline } from "@/components/ui/timeline"
 
 export const metadata = {
@@ -81,8 +79,8 @@ const timelineItems = [
   },
 ]
 
-export default function AboutPage() {
-  const siteHref = useSiteLink()
+export default async function AboutPage() {
+  const siteHref = await getSiteHref()
 
   return (
     <div>

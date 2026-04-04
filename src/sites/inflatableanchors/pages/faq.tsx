@@ -1,10 +1,8 @@
-"use client"
-
 import { Hero } from "@/components/ui/hero"
 import { WaveDivider } from "@/components/ui/wave-divider"
 import { FaqAccordion } from "@/components/ui/faq-accordion"
 import { PromoBanner } from "@/components/ui/promo-banner"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 
 export const metadata = {
   title: "FAQ — Inflatable Anchors Marine",
@@ -87,8 +85,8 @@ const ordersAndShipping = [
   },
 ]
 
-export default function InflatableAnchorsFAQ() {
-  const siteHref = useSiteLink()
+export default async function InflatableAnchorsFAQ() {
+  const siteHref = await getSiteHref()
   return (
     <>
       <Hero

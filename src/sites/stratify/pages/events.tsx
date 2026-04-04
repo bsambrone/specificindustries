@@ -1,8 +1,6 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 import { Hero } from "@/components/ui/hero"
 import { events } from "@/sites/stratify/data/events"
 
@@ -19,8 +17,8 @@ const typeLabelMap: Record<string, string> = {
   classified: "Classified",
 }
 
-export default function EventsPage() {
-  const siteHref = useSiteLink()
+export default async function EventsPage() {
+  const siteHref = await getSiteHref()
 
   return (
     <div>

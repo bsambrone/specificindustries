@@ -1,5 +1,3 @@
-"use client"
-
 import { whitepapers } from "@/sites/strategicvoid/data/whitepapers"
 import { getSolutionBySlug } from "@/sites/strategicvoid/data/solutions"
 import { WhitepaperCard } from "@/components/ui/whitepaper-card"
@@ -11,7 +9,7 @@ export const metadata: PageMetadata = {
     "Original research and strategic analysis on organizational non-productivity, misalignment patterns, and the C.H.A.O.S. Framework™.",
 }
 
-export default function WhitepapersIndex() {
+export default async function WhitepapersIndex() {
   return (
     <div>
       <section className="bg-secondary py-20 px-6">

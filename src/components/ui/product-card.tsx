@@ -1,9 +1,7 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
 import { AddToCartButton } from "@/components/commerce/add-to-cart-button"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 
 interface ProductCardProps {
   slug: string
@@ -16,8 +14,8 @@ interface ProductCardProps {
   quips?: string[]
 }
 
-export function ProductCard({ slug, name, price, tagline, image, showAddToCart = true, href, quips }: ProductCardProps) {
-  const siteHref = useSiteLink()
+export async function ProductCard({ slug, name, price, tagline, image, showAddToCart = true, href, quips }: ProductCardProps) {
+  const siteHref = await getSiteHref()
   const resolvedHref = href ? siteHref(href) : siteHref(`/products/${slug}`)
 
   return (

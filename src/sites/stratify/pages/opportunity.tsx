@@ -1,8 +1,6 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 import { Hero } from "@/components/ui/hero"
 
 export const metadata = {
@@ -10,8 +8,8 @@ export const metadata = {
   description: "Discover the Multi-Layer Yield Distribution Model™ and unlock non-linear upside potential.",
 }
 
-export default function OpportunityPage() {
-  const siteHref = useSiteLink()
+export default async function OpportunityPage() {
+  const siteHref = await getSiteHref()
 
   return (
     <div>

@@ -1,12 +1,10 @@
-"use client"
-
 export const metadata = {
   title: "Terms of Service — Strategic Void Consulting",
   description:
     "Our terms of service. By reading this, you have already agreed to them.",
 }
 
-export default function TermsPage() {
+export default async function TermsPage() {
   return (
     <div>
       {/* Hero */}

@@ -1,7 +1,5 @@
-"use client"
-
 import Link from "next/link"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 import { EnterprisePricingTable } from "@/components/ui/enterprise-pricing-table"
 import { FaqAccordion } from "@/components/ui/faq-accordion"
 import { masterTiers, featureComparisonRows } from "@/sites/strategicvoid/data/pricing"
@@ -83,8 +81,8 @@ const faqItems = [
   },
 ]
 
-export default function PricingPage() {
-  const siteHref = useSiteLink()
+export default async function PricingPage() {
+  const siteHref = await getSiteHref()
 
   return (
     <div>

@@ -1,5 +1,3 @@
-"use client"
-
 import { getWhitepaperBySlug } from "@/sites/strategicvoid/data/whitepapers"
 import { SectionRenderer } from "@/components/content-sections/section-renderer"
 import { EmailGateForm } from "@/components/ui/email-gate-form"
@@ -9,7 +7,7 @@ interface WhitepaperPageProps {
   segments?: string[]
 }
 
-export default function WhitepaperPage({ slug }: WhitepaperPageProps) {
+export default async function WhitepaperPage({ slug }: WhitepaperPageProps) {
   const whitepaper = getWhitepaperBySlug(slug)
 
   if (!whitepaper) return null

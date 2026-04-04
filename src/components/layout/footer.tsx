@@ -1,13 +1,11 @@
-"use client"
-
 import Link from "next/link"
 import type { SiteConfig } from "@/themes"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 
 const APEX_URL = "https://specificindustries.com"
 
-export function Footer({ config }: { config: SiteConfig }) {
-  const siteHref = useSiteLink()
+export async function Footer({ config }: { config: SiteConfig }) {
+  const siteHref = await getSiteHref()
   const isApex = config.subdomain === "apex"
 
   return (

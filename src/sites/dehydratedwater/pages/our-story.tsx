@@ -1,5 +1,3 @@
-"use client"
-
 import { Hero } from "@/components/ui/hero"
 import { WaveDivider } from "@/components/ui/wave-divider"
 import { SplitSection } from "@/components/ui/split-section"
@@ -7,7 +5,7 @@ import { AnimatedCounter } from "@/components/ui/animated-counter"
 import { CascadeTimeline } from "@/components/ui/cascade-timeline"
 import { TeamMember } from "@/components/ui/team-member"
 import { PromoBanner } from "@/components/ui/promo-banner"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 
 export const metadata = {
   title: "Our Story — Dehydrated Water Laboratories",
@@ -55,8 +53,8 @@ const teamMembers = [
   },
 ]
 
-export default function OurStory() {
-  const siteHref = useSiteLink()
+export default async function OurStory() {
+  const siteHref = await getSiteHref()
   return (
     <>
       <Hero

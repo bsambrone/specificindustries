@@ -1,7 +1,5 @@
-"use client"
-
 import Link from "next/link"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 import { executives } from "@/sites/strategicvoid/data/leadership"
 import { ExecutiveCard } from "@/components/ui/executive-card"
 
@@ -10,8 +8,8 @@ export const metadata = {
   description: "Meet the team behind the C.H.A.O.S. Framework™.",
 }
 
-export default function LeadershipPage() {
-  const siteHref = useSiteLink()
+export default async function LeadershipPage() {
+  const siteHref = await getSiteHref()
 
   return (
     <div>

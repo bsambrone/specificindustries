@@ -1,5 +1,3 @@
-"use client"
-
 import { WaveDivider } from "@/components/ui/wave-divider"
 import { SplitSection } from "@/components/ui/split-section"
 import { ProductCarousel } from "@/components/ui/product-carousel"
@@ -7,10 +5,10 @@ import { ProductCard } from "@/components/ui/product-card"
 import { PromoBanner } from "@/components/ui/promo-banner"
 import { AddToCartButton } from "@/components/commerce/add-to-cart-button"
 import { getProductBySlug, getRelatedProducts } from "@/sites/inflatableanchors/data/products"
-import { useSiteLink } from "@/hooks/use-site-link"
+import { getSiteHref } from "@/lib/site-href"
 
-export default function ProductDetail({ slug }: { slug: string }) {
-  const siteHref = useSiteLink()
+export default async function ProductDetail({ slug }: { slug: string }) {
+  const siteHref = await getSiteHref()
   const product = getProductBySlug(slug)
   if (!product) return null
 
