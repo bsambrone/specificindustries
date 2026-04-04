@@ -1,3 +1,5 @@
+"use client"
+
 import { Hero } from "@/components/ui/hero"
 import { WaveDivider } from "@/components/ui/wave-divider"
 import { SplitSection } from "@/components/ui/split-section"
@@ -66,7 +68,7 @@ const waasQuestions = [
   },
 ]
 
-export default async function WaaS() {
+export default function WaaS() {
   const { addToCart, showToast } = useCart()
 
   const handleSelect = (tierName: string) => {

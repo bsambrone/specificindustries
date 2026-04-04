@@ -11,12 +11,12 @@ test.describe("Pig Milk Creamery — Page Navigation", () => {
     await expect(page.getByText("What Our Customers Say")).toBeVisible()
   })
 
-  test("products page shows all 10 products", async ({ page }) => {
+  test("products page shows all products", async ({ page }) => {
     await page.goto(`/products${SITE}`)
     await expect(page.locator("h1")).toContainText("Our Products")
     // Each product has a heading in the card
     const productHeadings = page.locator("h3")
-    await expect(productHeadings).toHaveCount(10)
+    await expect(productHeadings).toHaveCount(11)
   })
 
   test("product detail page loads for classic pig milk", async ({ page }) => {
@@ -27,7 +27,7 @@ test.describe("Pig Milk Creamery — Page Navigation", () => {
   })
 
   test("product detail page loads for rabid froth", async ({ page }) => {
-    await page.goto(`/products/rabid-froth${SITE}`)
+    await page.goto(`/products/rabid-froth${SITE}`, { waitUntil: "domcontentloaded" })
     await expect(page.locator("h1")).toContainText("Rabid Froth Pint")
     await expect(page.getByText("$6.66")).toBeVisible()
   })
