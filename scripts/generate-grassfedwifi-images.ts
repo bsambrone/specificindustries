@@ -233,6 +233,26 @@ async function main() {
     "notes-featured-3.png",
     "A stack of official-looking certification documents being set aside on a wooden barn table, with a lit lantern and an old farmer's cap nearby. Warm pastoral color palette: sage greens, sky blues, wheat tones, cream paper background. Artisan farm-to-table co-op aesthetic.",
   );
+  await generateImage(
+    "notes-featured-4.png",
+    "A leather-bound ledger open on a wooden stand inside a dimly lit barn, handwritten entries visible in brown ink, a fountain pen resting beside it, soft candlelight. Warm pastoral color palette: sage greens, wheat tones, cream paper background. Artisan farm-to-table co-op aesthetic.",
+  );
+  await generateImage(
+    "notes-featured-5.png",
+    "A large full moon rising over a rolling pasture at night, an antique brass antenna silhouetted in the foreground, faint glowing signal waves visible in the sky. Cool sage greens and sky blues with moonlit wheat tones. Artisan farm-to-table co-op aesthetic.",
+  );
+  await generateImage(
+    "notes-featured-6.png",
+    "An old fashioned wooden filing cabinet half-open with yellowed FCC documents spilling out, red wax seal on top envelope, dim office lamp, slight air of conspiracy. Warm pastoral color palette: sage greens, wheat tones, cream paper. Hand-drawn botanical illustration accents. Artisan farm-to-table co-op aesthetic.",
+  );
+  await generateImage(
+    "notes-featured-7.png",
+    "A weathered handwritten notebook open on a ridge at dusk, mountains in the background, a hand-built wire antenna pointed at the sky, faint wild signal waves drifting through the air. Warm pastoral color palette: sage greens, sky blues, wheat tones. Artisan farm-to-table co-op aesthetic.",
+  );
+  await generateImage(
+    "notes-featured-8.png",
+    "An oak barrel in a dim cellar room with a wooden tap dripping a single drop of glowing amber liquid into a mason jar, warm candlelight, rough-cut stone walls. Warm wheat tones, sage greens, cream paper background. Artisan farm-to-table co-op aesthetic.",
+  );
 
   // Contact page — 1024x1024
   console.log("--- Contact ---");
