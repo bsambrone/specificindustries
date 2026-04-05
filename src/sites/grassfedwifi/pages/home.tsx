@@ -90,13 +90,16 @@ export default async function GrassFedWiFiHome() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-heading font-bold text-foreground mb-6">Why Raw Spectrum</h2>
           <p className="text-foreground/80 leading-relaxed mb-4">
-            Conventional wifi is pasteurized: homogenized at scale, stripped of character, engineered
-            to behave the same everywhere. Industrial 5G is worse — a monoculture of signal, optimized
-            for throughput and nothing else.
+            Conventional wifi is pasteurized: DNS resolved through someone else&apos;s cache, packets
+            routed through someone else&apos;s backbone, throughput shaped by someone else&apos;s QoS policy.
+            Industrial 5G is worse — a monoculture of signal, optimized for Mbps and nothing else,
+            with routing tables written by algorithms that have never stood in a pasture.
           </p>
           <p className="text-foreground/80 leading-relaxed mb-8">
-            The co-op believes signal should carry its origin. Small-batch. Hand-harvested. Rotated
-            through rested pastures. Our members do not need their packets filed smooth.
+            The co-op believes signal should carry its origin. Small-batch. Hand-harvested. Routed
+            through our own DNS (&quot;Marigold&quot;, sage-painted, in the central barn). Our members do
+            not need their packets filed smooth, their SSIDs sanitized, or their ping times
+            aggressively normalized.
           </p>
           <Link
             href={siteHref("/the-pasture")}

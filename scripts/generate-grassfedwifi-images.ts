@@ -163,15 +163,15 @@ async function main() {
   console.log("--- Share Tiers ---");
   await generateImage(
     "share-heirloom.png",
-    "A single mason jar filled with soft glowing golden liquid labeled 'HEIRLOOM SHARE' with hand-drawn wheat illustrations, sitting on weathered wood, warm rustic light. Warm pastoral color palette: sage greens, sky blues, wheat tones, cream paper background. Slightly textured, artisan farm-to-table co-op aesthetic.",
+    "A vintage wifi router sitting on weathered barn wood next to a glowing mason jar, with two small curved antennas wrapped in twine and a handwritten cardboard tag reading 'HEIRLOOM SHARE', hand-drawn wheat illustrations around it, warm rustic light, signal waves visible in soft golden mist rising from the jar. Warm pastoral color palette: sage greens, sky blues, wheat tones, cream paper background. Slightly textured, artisan farm-to-table co-op aesthetic mixed with rustic telecom gear.",
   );
   await generateImage(
     "share-reserve.png",
-    "A mason jar filled with deeper amber glowing liquid labeled 'RESERVE SHARE' with a handwritten tag, sitting in front of an oak barrel, warm rustic candlelight. Warm pastoral color palette: sage greens, sky blues, wheat tones, cream paper background. Slightly textured, artisan farm-to-table co-op aesthetic.",
+    "An oak barrel with a small wifi router mounted on top, two brass antennas extending up, a mason jar beside it collecting glowing amber signal from a wooden tap, handwritten 'RESERVE SHARE' tag tied with twine, warm rustic candlelight, signal waves curling through the air. Warm pastoral color palette: sage greens, sky blues, wheat tones, cream paper background. Slightly textured, artisan farm-to-table co-op aesthetic mixed with rustic telecom gear.",
   );
   await generateImage(
     "share-estate.png",
-    "An ornate mason jar filled with rich ruby-red glowing liquid labeled 'ESTATE SHARE' with a wax seal and leather cord, sitting on polished barn wood, candlelit dramatic rustic lighting. Warm pastoral color palette: sage greens, sky blues, wheat tones, cream paper background. Slightly textured, artisan farm-to-table co-op aesthetic.",
+    "An ornate antique brass wifi antenna tower on polished barn wood, surrounded by ruby-glowing mason jars collecting signal, a handwritten 'ESTATE SHARE' tag with wax seal and leather cord, dramatic candlelit scene with electromagnetic waves rippling in the air, ethernet cable coiled like a rope. Warm pastoral color palette: deep sage greens, sky blues, rich wheat tones, cream paper background. Slightly textured, artisan farm-to-table co-op aesthetic mixed with elevated rustic telecom gear.",
   );
 
   // Seasonal add-ons (4) — 1024x1024
