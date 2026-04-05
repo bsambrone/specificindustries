@@ -26,6 +26,7 @@ export const config: SiteConfig = {
     { label: "Harvest Calendar", path: "/harvest-calendar" },
     { label: "Grazing Lands", path: "/grazing-lands" },
     { label: "The Pasture", path: "/the-pasture" },
+    { label: "The Farmers", path: "/meet-the-farmers" },
     { label: "Field Notes", path: "/field-notes" },
     { label: "Join the Co-op", path: "/join" },
   ],
