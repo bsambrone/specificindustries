@@ -13,6 +13,8 @@ import FieldNotesIndex, { metadata as notesMetadata } from "./pages/field-notes"
 import FieldNoteDetail from "./pages/field-note-detail"
 import GrassFedWiFiContact, { metadata as contactMetadata } from "./pages/contact"
 import Join, { metadata as joinMetadata } from "./pages/join"
+import MyShare, { metadata as myShareMetadata } from "./pages/my-share"
+import BecomeAMember, { metadata as becomeMetadata } from "./pages/become-a-member"
 
 export { config }
 
@@ -26,6 +28,10 @@ export const pages: Record<string, PageEntry> = {
   "field-notes": { component: FieldNotesIndex, metadata: notesMetadata },
   "contact": { component: GrassFedWiFiContact, metadata: contactMetadata },
   "join": { component: Join, metadata: joinMetadata },
+  "cart": { component: MyShare, metadata: myShareMetadata },
+  "my-share": { component: MyShare, metadata: myShareMetadata },
+  "checkout": { component: BecomeAMember, metadata: becomeMetadata },
+  "become-a-member": { component: BecomeAMember, metadata: becomeMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
