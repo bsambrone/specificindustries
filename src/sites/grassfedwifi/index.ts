@@ -4,12 +4,14 @@ import { getShareBySlug } from "./data/shares"
 import GrassFedWiFiHome from "./pages/home"
 import GrassFedWiFiShares, { metadata as sharesMetadata } from "./pages/shares"
 import ShareDetail from "./pages/share-detail"
+import HarvestCalendar, { metadata as calendarMetadata } from "./pages/harvest-calendar"
 
 export { config }
 
 export const pages: Record<string, PageEntry> = {
   "": GrassFedWiFiHome,
   "shares": { component: GrassFedWiFiShares, metadata: sharesMetadata },
+  "harvest-calendar": { component: HarvestCalendar, metadata: calendarMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
