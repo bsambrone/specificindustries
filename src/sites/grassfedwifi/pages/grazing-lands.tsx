@@ -1,6 +1,8 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Hero } from "@/components/ui/hero"
 import { farmSites } from "@/sites/grassfedwifi/data/grazing-lands"
+import { getRecentFieldNotes } from "@/sites/grassfedwifi/data/field-notes"
 
 export const metadata = {
   title: "Grazing Lands — Grass Fed WiFi",
@@ -8,6 +10,8 @@ export const metadata = {
 }
 
 export default function GrazingLands() {
+  const recentNotes = getRecentFieldNotes(3)
+
   return (
     <>
       <Hero
@@ -90,6 +94,48 @@ export default function GrazingLands() {
             only, by quarterly invitation). The Upland is not available for visitation under any
             circumstances.
           </p>
+        </div>
+      </section>
+
+      {/* Field Notes from the Pastures */}
+      <section className="py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-baseline justify-between mb-10">
+            <div>
+              <p className="text-sm uppercase tracking-widest text-primary font-semibold mb-2">
+                From the Field
+              </p>
+              <h2 className="text-3xl font-heading font-bold text-foreground">Field Notes</h2>
+            </div>
+            <Link
+              href="/field-notes"
+              className="text-primary font-semibold hover:underline text-sm"
+            >
+              All Field Notes →
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {recentNotes.map((note) => (
+              <Link
+                key={note.slug}
+                href={`/field-notes/${note.slug}`}
+                className="block p-5 bg-secondary/10 rounded-lg hover:bg-secondary/20 transition-colors"
+              >
+                <p className="text-xs uppercase tracking-wider text-primary font-semibold mb-2">
+                  {note.tags[0]}
+                </p>
+                <h3 className="font-heading font-bold text-foreground mb-2 leading-snug">
+                  {note.title}
+                </h3>
+                <p className="text-sm text-foreground/60 mb-3">
+                  By {note.author} · {note.date}
+                </p>
+                <p className="text-sm text-foreground/70 leading-relaxed line-clamp-3">
+                  {note.excerpt}
+                </p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
     </>

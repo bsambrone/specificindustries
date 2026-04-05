@@ -27,7 +27,6 @@ export const config: SiteConfig = {
     { label: "Grazing Lands", path: "/grazing-lands" },
     { label: "The Pasture", path: "/the-pasture" },
     { label: "The Farmers", path: "/meet-the-farmers" },
-    { label: "Field Notes", path: "/field-notes" },
     { label: "Join the Co-op", path: "/join" },
   ],
   features: {
