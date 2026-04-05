@@ -32,7 +32,7 @@ export const farmers: Farmer[] = [
     basePerson: "sean",
     name: "Fennel Ashcroft",
     title: "Keeper of the Harvest Calendar & Seasonal Allocations Lead",
-    bio: "Fennel hand-writes every member's seasonal allocation in a leather-bound ledger and does not trust spreadsheets. She arrives at the co-op barn before dawn and leaves after dusk. The calendar on the website is based on her ledger, transcribed weekly by a volunteer.",
+    bio: "Fennel hand-writes every member's seasonal allocation in a leather-bound ledger and does not trust spreadsheets. He arrives at the co-op barn before dawn and leaves after dusk. The calendar on the website is based on his ledger, transcribed weekly by a volunteer.",
     image: "/sites/grassfedwifi/team-sean.png",
   },
 ]
