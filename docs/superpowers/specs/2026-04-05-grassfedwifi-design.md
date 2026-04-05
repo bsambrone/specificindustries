@@ -38,7 +38,6 @@
 | `"become-a-member"` | Become a Member | Renamed checkout page |
 | `"privacy"` | Privacy Policy | Short satirical intro, defers to Specific Industries policy as authoritative |
 | `"terms"` | Terms of Use | Short satirical intro, defers to Specific Industries policy as authoritative |
-| `"disclaimer"` | Disclaimer | Satirical parody disclaimer, footer-linked |
 
 **Dynamic routes:**
 - `shares/{slug}` — individual share tier detail page
@@ -59,12 +58,7 @@
 | Field Notes | `/field-notes` |
 | **[Join the Co-op]** (CTA) | `/join` |
 
-**Footer (three columns + bottom strip):**
-
-- **Col 1 — The Co-op:** The Pasture · Meet the Farmers · Grazing Lands
-- **Col 2 — Members:** Shares · Harvest Calendar · Field Notes
-- **Col 3 — Get in Touch:** Contact · Join the Co-op CTA
-- **Bottom strip:** Privacy · Terms · Disclaimer · © copyright line
+**Footer:** Uses the shared `Footer` component (no per-site columns). Renders: copyright line, Privacy link → `/privacy`, Terms link → `/terms`, Disclaimer link → `specificindustries.com/disclaimer` (the apex umbrella disclaimer). Matches all other existing sites.
 
 ## Share Tiers
 
@@ -255,7 +249,7 @@ All images live at `public/sites/grassfedwifi/`. Generated via `scripts/generate
 
 **Terms page:** Short satirical opening. Authoritative statement: "The authoritative terms of use governing this site are the Specific Industries Terms of Use, available at specificindustries.com/terms." Link provided.
 
-**Disclaimer page:** One-page satirical disclaimer clarifying this is parody. All claims about raw spectrum, frequency husbandry, signal grazing, unpasteurized bandwidth, etc. are satirical.
+**Disclaimer:** No per-site disclaimer page. Shared Footer links to `specificindustries.com/disclaimer` (apex umbrella disclaimer) for all non-apex sites, matching the existing pattern.
 
 ## Implementation Notes
 
@@ -291,8 +285,7 @@ src/sites/grassfedwifi/
     ├── my-share.tsx            # themed cart page
     ├── become-a-member.tsx     # themed checkout page
     ├── privacy.tsx
-    ├── terms.tsx
-    └── disclaimer.tsx
+    └── terms.tsx
 ```
 
 **Registry:** Add `grassfedwifi` to `src/sites/registry.ts`, following the pattern used by other commerce sites (with `dynamicRoutes` for shares + field-notes).
