@@ -1,4 +1,4 @@
-import { Inter, Playfair_Display, Space_Grotesk, Poppins, Barlow_Condensed } from "next/font/google"
+import { Inter, Playfair_Display, Space_Grotesk, Poppins, Barlow_Condensed, Fraunces, Nunito } from "next/font/google"
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -27,6 +27,17 @@ export const barlowCondensed = Barlow_Condensed({
   variable: "--font-barlow-condensed",
 })
 
+export const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+})
+
+export const nunito = Nunito({
+  weight: ["400", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-nunito",
+})
+
 // Map font config keys → their next/font instance
 const fontInstanceMap: Record<string, { variable: string }> = {
   inter,
@@ -34,6 +45,8 @@ const fontInstanceMap: Record<string, { variable: string }> = {
   "space-grotesk": spaceGrotesk,
   poppins,
   "barlow-condensed": barlowCondensed,
+  fraunces,
+  nunito,
 }
 
 // Returns only the CSS variable classes needed for a given site's fonts
@@ -52,4 +65,6 @@ export const fontFamilyMap: Record<string, string> = {
   "space-grotesk": "'Space Grotesk', sans-serif",
   poppins: "'Poppins', sans-serif",
   "barlow-condensed": "'Barlow Condensed', sans-serif",
+  fraunces: "'Fraunces', serif",
+  nunito: "'Nunito', sans-serif",
 }
