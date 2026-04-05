@@ -48,3 +48,6 @@ next-env.d.ts
 base-images/
 generated-images/
 mcp/image-gen/node_modules/
+
+# Lighthouse Chrome user-data dirs (WSL-on-Windows path artifact)
+C:\\*
