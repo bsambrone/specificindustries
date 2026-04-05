@@ -3,23 +3,25 @@ import Image from "next/image"
 import { notFound } from "next/navigation"
 import { AddToCartButton } from "@/components/commerce/add-to-cart-button"
 import { getShareBySlug, shares, shareQuips } from "@/sites/grassfedwifi/data/shares"
+import { getSiteHref } from "@/lib/site-href"
 
 interface ShareDetailProps {
   slug: string
 }
 
-export default function ShareDetail({ slug }: ShareDetailProps) {
+export default async function ShareDetail({ slug }: ShareDetailProps) {
   const share = getShareBySlug(slug)
   if (!share) notFound()
 
   const otherShares = shares.filter((s) => s.slug !== slug)
+  const siteHref = await getSiteHref()
 
   return (
     <>
       <section className="py-16 px-4">
         <div className="max-w-5xl mx-auto">
           <Link
-            href="/shares"
+            href={siteHref("/shares")}
             className="text-sm text-foreground/60 hover:text-primary mb-6 inline-block"
           >
             ← Back to Shares
@@ -92,7 +94,7 @@ export default function ShareDetail({ slug }: ShareDetailProps) {
             {otherShares.map((s) => (
               <Link
                 key={s.slug}
-                href={`/shares/${s.slug}`}
+                href={siteHref(`/shares/${s.slug}`)}
                 className="block p-6 bg-secondary/10 rounded-lg hover:bg-secondary/20 transition-colors"
               >
                 <h3 className="text-xl font-heading font-bold text-foreground mb-2">{s.name}</h3>

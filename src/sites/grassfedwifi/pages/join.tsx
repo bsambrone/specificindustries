@@ -1,12 +1,14 @@
 import Link from "next/link"
 import { shares } from "@/sites/grassfedwifi/data/shares"
+import { getSiteHref } from "@/lib/site-href"
 
 export const metadata = {
   title: "Join the Co-op — Grass Fed WiFi",
   description: "Three shares. Allocated seasonally. Begin your membership today.",
 }
 
-export default function Join() {
+export default async function Join() {
+  const siteHref = await getSiteHref()
   return (
     <>
       <section className="py-20 px-4 bg-accent/20">
@@ -28,7 +30,7 @@ export default function Join() {
             {shares.map((share) => (
               <Link
                 key={share.slug}
-                href={`/shares/${share.slug}`}
+                href={siteHref(`/shares/${share.slug}`)}
                 className="block p-6 bg-secondary/10 rounded-lg hover:bg-secondary/20 transition-colors"
               >
                 <h3 className="text-xl font-heading font-bold text-foreground mb-2">{share.name}</h3>

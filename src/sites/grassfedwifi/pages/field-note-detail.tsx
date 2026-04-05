@@ -2,23 +2,25 @@ import Link from "next/link"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { getFieldNoteBySlug, fieldNotes } from "@/sites/grassfedwifi/data/field-notes"
+import { getSiteHref } from "@/lib/site-href"
 
 interface FieldNoteDetailProps {
   slug: string
 }
 
-export default function FieldNoteDetail({ slug }: FieldNoteDetailProps) {
+export default async function FieldNoteDetail({ slug }: FieldNoteDetailProps) {
   const note = getFieldNoteBySlug(slug)
   if (!note) notFound()
 
   const otherNotes = fieldNotes.filter((n) => n.slug !== slug).slice(0, 2)
+  const siteHref = await getSiteHref()
 
   return (
     <>
       <article className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <Link
-            href="/field-notes"
+            href={siteHref("/field-notes")}
             className="text-sm text-foreground/60 hover:text-primary mb-6 inline-block"
           >
             ← Back to Field Notes
@@ -58,7 +60,7 @@ export default function FieldNoteDetail({ slug }: FieldNoteDetailProps) {
               {otherNotes.map((n) => (
                 <Link
                   key={n.slug}
-                  href={`/field-notes/${n.slug}`}
+                  href={siteHref(`/field-notes/${n.slug}`)}
                   className="block p-5 bg-background rounded-lg hover:shadow-md transition-shadow"
                 >
                   <h3 className="font-heading font-bold text-foreground mb-2">{n.title}</h3>

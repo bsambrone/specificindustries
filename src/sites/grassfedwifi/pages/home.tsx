@@ -6,10 +6,12 @@ import { CTABanner } from "@/components/ui/cta-banner"
 import { shares, shareQuips } from "@/sites/grassfedwifi/data/shares"
 import { getCurrentMonth } from "@/sites/grassfedwifi/data/harvest-calendar"
 import { getRecentFieldNotes } from "@/sites/grassfedwifi/data/field-notes"
+import { getSiteHref } from "@/lib/site-href"
 
-export default function GrassFedWiFiHome() {
+export default async function GrassFedWiFiHome() {
   const currentMonth = getCurrentMonth()
   const featuredNote = getRecentFieldNotes(1)[0]
+  const siteHref = await getSiteHref()
 
   return (
     <>
@@ -17,9 +19,9 @@ export default function GrassFedWiFiHome() {
         headline="Raw Spectrum. Pasture-Raised Connectivity."
         subheadline="Farm-to-Table Wi-Fi. Small-batch. Single-origin. Seasonally harvested."
         ctaText="Join the Co-op"
-        ctaHref="/join"
+        ctaHref={siteHref("/join")}
         secondaryCtaText="Explore Shares"
-        secondaryCtaHref="/shares"
+        secondaryCtaHref={siteHref("/shares")}
         image="/sites/grassfedwifi/home-hero.png"
       />
 
@@ -48,7 +50,7 @@ export default function GrassFedWiFiHome() {
           </div>
           <div className="text-center mt-10">
             <Link
-              href="/harvest-calendar"
+              href={siteHref("/harvest-calendar")}
               className="inline-block text-primary font-semibold hover:underline"
             >
               See the Full Harvest Calendar →
@@ -97,7 +99,7 @@ export default function GrassFedWiFiHome() {
             through rested pastures. Our members do not need their packets filed smooth.
           </p>
           <Link
-            href="/the-pasture"
+            href={siteHref("/the-pasture")}
             className="inline-block text-primary font-semibold hover:underline"
           >
             Read the Full Manifesto →
@@ -113,7 +115,7 @@ export default function GrassFedWiFiHome() {
               From the Field Notes
             </p>
             <Link
-              href={`/field-notes/${featuredNote.slug}`}
+              href={siteHref(`/field-notes/${featuredNote.slug}`)}
               className="block group"
             >
               <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -144,7 +146,7 @@ export default function GrassFedWiFiHome() {
         headline="Ready to Join the Co-op?"
         description="Shares are allocated seasonally. Sign up today and begin receiving pasture-raised signal next month."
         ctaText="Join the Co-op"
-        ctaHref="/join"
+        ctaHref={siteHref("/join")}
       />
     </>
   )

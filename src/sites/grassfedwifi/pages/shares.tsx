@@ -3,13 +3,15 @@ import Image from "next/image"
 import { ProductCard } from "@/components/ui/product-card"
 import { shares, shareQuips } from "@/sites/grassfedwifi/data/shares"
 import { seasonalAddons } from "@/sites/grassfedwifi/data/seasonal-addons"
+import { getSiteHref } from "@/lib/site-href"
 
 export const metadata = {
   title: "Shares — Grass Fed WiFi",
   description: "Three tiers of pasture-raised connectivity: Heirloom, Reserve, and Estate. Seasonal add-ons rotate quarterly.",
 }
 
-export default function GrassFedWiFiShares() {
+export default async function GrassFedWiFiShares() {
+  const siteHref = await getSiteHref()
   return (
     <>
       <section className="py-20 px-4">
@@ -84,7 +86,7 @@ export default function GrassFedWiFiShares() {
             Every member begins with the Heirloom Share. Grow from there as the committee allocates.
           </p>
           <Link
-            href="/join"
+            href={siteHref("/join")}
             className="inline-block px-8 py-3 bg-primary text-background rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
             Join the Co-op

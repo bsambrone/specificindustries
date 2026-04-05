@@ -3,14 +3,16 @@ import Link from "next/link"
 import { Hero } from "@/components/ui/hero"
 import { farmSites } from "@/sites/grassfedwifi/data/grazing-lands"
 import { getRecentFieldNotes } from "@/sites/grassfedwifi/data/field-notes"
+import { getSiteHref } from "@/lib/site-href"
 
 export const metadata = {
   title: "Grazing Lands — Grass Fed WiFi",
   description: "A territorial map of the co-op's frequency pastures. Learn which farm sites produce which signal.",
 }
 
-export default function GrazingLands() {
+export default async function GrazingLands() {
   const recentNotes = getRecentFieldNotes(3)
+  const siteHref = await getSiteHref()
 
   return (
     <>
@@ -108,7 +110,7 @@ export default function GrazingLands() {
               <h2 className="text-3xl font-heading font-bold text-foreground">Field Notes</h2>
             </div>
             <Link
-              href="/field-notes"
+              href={siteHref("/field-notes")}
               className="text-primary font-semibold hover:underline text-sm"
             >
               All Field Notes →
@@ -118,7 +120,7 @@ export default function GrazingLands() {
             {recentNotes.map((note) => (
               <Link
                 key={note.slug}
-                href={`/field-notes/${note.slug}`}
+                href={siteHref(`/field-notes/${note.slug}`)}
                 className="block p-5 bg-secondary/10 rounded-lg hover:bg-secondary/20 transition-colors"
               >
                 <p className="text-xs uppercase tracking-wider text-primary font-semibold mb-2">

@@ -1,14 +1,16 @@
 import Link from "next/link"
 import Image from "next/image"
 import { fieldNotes } from "@/sites/grassfedwifi/data/field-notes"
+import { getSiteHref } from "@/lib/site-href"
 
 export const metadata = {
   title: "Field Notes — Grass Fed WiFi",
   description: "Farmer diaries, seasonal dispatches, and harvest reports from the co-op.",
 }
 
-export default function FieldNotesIndex() {
+export default async function FieldNotesIndex() {
   const sorted = [...fieldNotes].sort((a, b) => b.date.localeCompare(a.date))
+  const siteHref = await getSiteHref()
 
   return (
     <>
@@ -25,7 +27,7 @@ export default function FieldNotesIndex() {
         <div className="max-w-4xl mx-auto space-y-12">
           {sorted.map((note) => (
             <article key={note.slug}>
-              <Link href={`/field-notes/${note.slug}`} className="block group">
+              <Link href={siteHref(`/field-notes/${note.slug}`)} className="block group">
                 <div className="grid md:grid-cols-[2fr_3fr] gap-8 items-start">
                   <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-secondary/20">
                     <Image src={note.image} alt={note.title} fill className="object-cover" />
