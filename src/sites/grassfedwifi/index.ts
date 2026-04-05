@@ -11,6 +11,8 @@ import ThePasture, { metadata as pastureMetadata } from "./pages/the-pasture"
 import MeetTheFarmers, { metadata as farmersMetadata } from "./pages/meet-the-farmers"
 import FieldNotesIndex, { metadata as notesMetadata } from "./pages/field-notes"
 import FieldNoteDetail from "./pages/field-note-detail"
+import GrassFedWiFiContact, { metadata as contactMetadata } from "./pages/contact"
+import Join, { metadata as joinMetadata } from "./pages/join"
 
 export { config }
 
@@ -22,6 +24,8 @@ export const pages: Record<string, PageEntry> = {
   "the-pasture": { component: ThePasture, metadata: pastureMetadata },
   "meet-the-farmers": { component: MeetTheFarmers, metadata: farmersMetadata },
   "field-notes": { component: FieldNotesIndex, metadata: notesMetadata },
+  "contact": { component: GrassFedWiFiContact, metadata: contactMetadata },
+  "join": { component: Join, metadata: joinMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
