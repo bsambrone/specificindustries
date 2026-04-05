@@ -15,6 +15,8 @@ import GrassFedWiFiContact, { metadata as contactMetadata } from "./pages/contac
 import Join, { metadata as joinMetadata } from "./pages/join"
 import MyShare, { metadata as myShareMetadata } from "./pages/my-share"
 import BecomeAMember, { metadata as becomeMetadata } from "./pages/become-a-member"
+import Privacy, { metadata as privacyMetadata } from "./pages/privacy"
+import Terms, { metadata as termsMetadata } from "./pages/terms"
 
 export { config }
 
@@ -32,6 +34,8 @@ export const pages: Record<string, PageEntry> = {
   "my-share": { component: MyShare, metadata: myShareMetadata },
   "checkout": { component: BecomeAMember, metadata: becomeMetadata },
   "become-a-member": { component: BecomeAMember, metadata: becomeMetadata },
+  "privacy": { component: Privacy, metadata: privacyMetadata },
+  "terms": { component: Terms, metadata: termsMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
