@@ -6,6 +6,7 @@ import GrassFedWiFiShares, { metadata as sharesMetadata } from "./pages/shares"
 import ShareDetail from "./pages/share-detail"
 import HarvestCalendar, { metadata as calendarMetadata } from "./pages/harvest-calendar"
 import GrazingLands, { metadata as grazingMetadata } from "./pages/grazing-lands"
+import ThePasture, { metadata as pastureMetadata } from "./pages/the-pasture"
 
 export { config }
 
@@ -14,6 +15,7 @@ export const pages: Record<string, PageEntry> = {
   "shares": { component: GrassFedWiFiShares, metadata: sharesMetadata },
   "harvest-calendar": { component: HarvestCalendar, metadata: calendarMetadata },
   "grazing-lands": { component: GrazingLands, metadata: grazingMetadata },
+  "the-pasture": { component: ThePasture, metadata: pastureMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
