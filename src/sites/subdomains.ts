@@ -8,6 +8,7 @@ export const VALID_SUBDOMAINS = [
   "strategicvoid",
   "stratify",
   "truegrit",
+  "grassfedwifi",
 ] as const
 
 export function isValidSubdomain(subdomain: string): boolean {

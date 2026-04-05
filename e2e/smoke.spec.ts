@@ -47,6 +47,12 @@ const sites = [
     headline: "Where Comfort Meets Its Match",
     name: "True Grit",
   },
+  {
+    key: "grassfedwifi",
+    path: "/?site=grassfedwifi",
+    headline: "Raw Spectrum. Pasture-Raised Connectivity.",
+    name: "Grass Fed WiFi",
+  },
 ]
 
 test.describe("Home page smoke tests", () => {
