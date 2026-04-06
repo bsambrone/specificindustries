@@ -1,12 +1,54 @@
+"use client"
+
+import { useState } from "react"
 import Image from "next/image"
 import { events } from "@/sites/elderparty/data/events"
+import { Bleed } from "@/components/ui/bleed"
 
 export const metadata = {
   title: "Events — The Elder Party",
   description: "Campaign rallies, town halls, and awakenings near you. Eight stops across America on the road to November 2028.",
 }
 
+const rsvpConfirmations = [
+  "Your attendance has been registered. We knew you'd come.",
+  "RSVP confirmed. You will receive directions when the time is right.",
+  "Welcome, patriot. Your seat has been reserved since before you were born.",
+  "Confirmed. Do not be alarmed if you receive confirmation in a dream tonight.",
+  "You are now on the list. The list is permanent. Thank you for your commitment.",
+  "RSVP accepted. Arrive at sundown. Bring nothing. Everything will be provided.",
+  "Registered. The campaign thanks you. The campaign has always thanked you.",
+  "Confirmed. You may notice a sense of peace. This is normal and temporary.",
+]
+
 export default function EventsPage() {
+  const [rsvpEvent, setRsvpEvent] = useState<string | null>(null)
+  const [rsvpStage, setRsvpStage] = useState<"form" | "confirmed">("form")
+  const [rsvpName, setRsvpName] = useState("")
+  const [rsvpEmail, setRsvpEmail] = useState("")
+
+  const activeEvent = rsvpEvent ? events.find((e) => e.slug === rsvpEvent) : null
+
+  function handleRsvp(slug: string) {
+    setRsvpEvent(slug)
+    setRsvpStage("form")
+    setRsvpName("")
+    setRsvpEmail("")
+  }
+
+  function handleSubmitRsvp(e: React.FormEvent) {
+    e.preventDefault()
+    setRsvpStage("confirmed")
+  }
+
+  function handleClose() {
+    setRsvpEvent(null)
+  }
+
+  const confirmationMessage = rsvpEvent
+    ? rsvpConfirmations[rsvpEvent.split("").reduce((a, c) => a + c.charCodeAt(0), 0) % rsvpConfirmations.length]
+    : ""
+
   return (
     <div>
       {/* Hero */}
@@ -99,6 +141,7 @@ export default function EventsPage() {
                   <div className="flex items-center gap-3">
                     <button
                       type="button"
+                      onClick={() => handleRsvp(event.slug)}
                       className="flex-1 px-5 py-2.5 bg-primary text-background text-sm font-semibold rounded hover:opacity-90 transition-opacity uppercase tracking-wider"
                     >
                       RSVP Now
@@ -143,6 +186,116 @@ export default function EventsPage() {
           </div>
         </div>
       </section>
+
+      {/* RSVP Modal */}
+      {rsvpEvent && activeEvent && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" onClick={handleClose} />
+          <div className="relative bg-secondary border border-primary/20 rounded-lg max-w-md w-full p-8 shadow-2xl">
+            <button
+              onClick={handleClose}
+              className="absolute top-4 right-4 text-foreground/40 hover:text-foreground/70 transition-colors"
+              aria-label="Close"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {rsvpStage === "form" ? (
+              <>
+                <h3 className="text-2xl font-heading font-bold text-primary mb-1">
+                  RSVP
+                </h3>
+                <p className="text-sm text-foreground/60 mb-6">
+                  {activeEvent.name} — {activeEvent.date}
+                </p>
+
+                <form onSubmit={handleSubmitRsvp} className="space-y-4">
+                  <div>
+                    <label htmlFor="rsvp-name" className="block text-xs font-heading uppercase tracking-wider text-foreground/50 mb-1.5">
+                      Full Name
+                    </label>
+                    <input
+                      id="rsvp-name"
+                      type="text"
+                      required
+                      value={rsvpName}
+                      onChange={(e) => setRsvpName(e.target.value)}
+                      placeholder="Your name (we may already have it)"
+                      className="w-full bg-background/50 border border-primary/20 text-foreground placeholder:text-foreground/30 px-4 py-2.5 rounded focus:outline-none focus:border-primary/50 transition-colors text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="rsvp-email" className="block text-xs font-heading uppercase tracking-wider text-foreground/50 mb-1.5">
+                      Email
+                    </label>
+                    <input
+                      id="rsvp-email"
+                      type="email"
+                      required
+                      value={rsvpEmail}
+                      onChange={(e) => setRsvpEmail(e.target.value)}
+                      placeholder="you@example.com"
+                      className="w-full bg-background/50 border border-primary/20 text-foreground placeholder:text-foreground/30 px-4 py-2.5 rounded focus:outline-none focus:border-primary/50 transition-colors text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="rsvp-guests" className="block text-xs font-heading uppercase tracking-wider text-foreground/50 mb-1.5">
+                      Number of Guests
+                    </label>
+                    <select
+                      id="rsvp-guests"
+                      className="w-full bg-background/50 border border-primary/20 text-foreground px-4 py-2.5 rounded focus:outline-none focus:border-primary/50 transition-colors text-sm"
+                      defaultValue="1"
+                    >
+                      <option value="1">Just me</option>
+                      <option value="2">2 (myself + 1 guest)</option>
+                      <option value="3">3 (myself + 2 guests)</option>
+                      <option value="4">4+ (the call spreads)</option>
+                      <option value="unknown">Unknown (they keep arriving)</option>
+                    </select>
+                  </div>
+                  <p className="text-xs text-foreground/30">
+                    By submitting, you acknowledge that your attendance may be observed from multiple dimensions simultaneously.
+                  </p>
+                  <button
+                    type="submit"
+                    className="w-full px-6 py-3 bg-primary text-background font-semibold rounded text-sm uppercase tracking-wider hover:opacity-90 transition-opacity"
+                  >
+                    Confirm RSVP
+                  </button>
+                </form>
+              </>
+            ) : (
+              <div className="text-center py-4">
+                <div className="text-4xl mb-4">🇺🇸</div>
+                <h3 className="text-2xl font-heading font-bold text-primary mb-3">
+                  You Are Expected
+                </h3>
+                <p className="text-foreground/70 leading-relaxed mb-4">
+                  {confirmationMessage}
+                </p>
+                <p className="text-sm text-foreground/50 mb-2">
+                  {activeEvent.name}
+                </p>
+                <p className="text-sm text-foreground/50 mb-6">
+                  {activeEvent.date} — {activeEvent.location}
+                </p>
+                <p className="text-xs text-foreground/30 mb-6">
+                  <Bleed text="A confirmation has been sent to your inbox. If you did not receive it, check your dreams." intensity={2} />
+                </p>
+                <button
+                  onClick={handleClose}
+                  className="px-8 py-2.5 border border-primary/40 text-primary rounded text-sm font-semibold uppercase tracking-wider hover:bg-primary/10 transition-colors"
+                >
+                  Close
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   )
 }

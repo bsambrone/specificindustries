@@ -51,8 +51,34 @@ const ENDORSEMENT_QUOTES = [
   },
 ]
 
+const donationConfirmations: Record<string, { heading: string; message: string; bleedText?: string }> = {
+  supporter: {
+    heading: "Your Support Has Been Received",
+    message: "A digital badge has been sent to an email address we selected for you. If it is not the correct address, don't worry — we'll find the right one.",
+  },
+  patriot: {
+    heading: "Welcome, Patriot",
+    message: "A bumper sticker is being mailed to your address. You did not provide your address. This is not a problem.",
+  },
+  devoted: {
+    heading: "Your Devotion Is Noted",
+    message: "A letter from Campaign Chairman Marsh is being prepared. The ink is still wet. It will remain wet upon arrival. Do not be alarmed by the handwriting — Chairman Marsh writes with great care and a variable number of fingers.",
+  },
+  awakened: {
+    heading: "You Are Now Awakened",
+    message: "Your name has been inscribed in the Book of Donors. You may feel a brief sensation of being watched. This will subside. The watching will not, but the sensation will.",
+    bleedText: "The Book remembers. The Book has always remembered. Welcome to permanence.",
+  },
+  ascended: {
+    heading: "Ascension Initiated",
+    message: "A private audience has been arranged. The location will be revealed to you in a dream within 3-5 business nights. Please do not attempt to find the location on a map. It is not on any map. Dress is formal. Bring nothing. Leave your phone. Tell no one.",
+    bleedText: "You belong to the campaign now. The campaign has always belonged to you. These are the same thing. You understand. You have always understood.",
+  },
+}
+
 export default function DonatePage() {
   const [selectedTier, setSelectedTier] = useState<string | null>(null)
+  const [donationComplete, setDonationComplete] = useState(false)
 
   return (
     <div>
@@ -200,8 +226,8 @@ export default function DonatePage() {
             })}
           </div>
 
-          {/* Selected tier confirm CTA */}
-          {selectedTier && (
+          {/* Selected tier confirm CTA or confirmation message */}
+          {selectedTier && !donationComplete && (
             <div className="mt-10 p-6 border border-primary/20 rounded-lg bg-secondary/30 text-center">
               <p className="text-foreground/60 text-sm mb-4">
                 You have selected:{" "}
@@ -212,6 +238,7 @@ export default function DonatePage() {
               </p>
               <button
                 type="button"
+                onClick={() => setDonationComplete(true)}
                 className="px-10 py-3 bg-accent text-white rounded-lg font-semibold uppercase tracking-wider hover:opacity-90 transition-opacity text-sm"
               >
                 Complete Donation
@@ -220,6 +247,40 @@ export default function DonatePage() {
                 Clicking &ldquo;Complete Donation&rdquo; constitutes an irrevocable expression of support.
                 The campaign will remember.
               </p>
+            </div>
+          )}
+
+          {donationComplete && selectedTier && (
+            <div className="mt-10 p-8 border border-primary/30 rounded-lg bg-primary/5 text-center">
+              <div className="text-4xl mb-4">🇺🇸</div>
+              <h3 className="text-2xl font-heading font-bold text-primary mb-4">
+                {donationConfirmations[selectedTier]?.heading ?? "Thank You"}
+              </h3>
+              <p className="text-foreground/70 leading-relaxed mb-4 max-w-lg mx-auto">
+                {donationConfirmations[selectedTier]?.message}
+              </p>
+              {donationConfirmations[selectedTier]?.bleedText && (
+                <p className="text-xs text-foreground/40 mb-6">
+                  <Bleed
+                    text={donationConfirmations[selectedTier].bleedText!}
+                    intensity={selectedTier === "ascended" ? 4 : 2}
+                  />
+                </p>
+              )}
+              <p className="text-xs text-foreground/30 mb-6">
+                Confirmation #{Math.floor(Math.random() * 900000 + 100000).toString()} — Processed at{" "}
+                {new Date().toLocaleTimeString()} local time (3:13 AM R&apos;lyeh Standard Time)
+              </p>
+              <button
+                type="button"
+                onClick={() => {
+                  setDonationComplete(false)
+                  setSelectedTier(null)
+                }}
+                className="px-8 py-2.5 border border-primary/40 text-primary rounded text-sm font-semibold uppercase tracking-wider hover:bg-primary/10 transition-colors"
+              >
+                Make Another Donation
+              </button>
             </div>
           )}
         </div>
