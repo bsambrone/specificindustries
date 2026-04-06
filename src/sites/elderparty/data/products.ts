@@ -27,7 +27,7 @@ export const products: Product[] = [
   },
   {
     slug: "campaign-hat",
-    name: '"Cthulhu R\'lyeh 2028" Hat',
+    name: '"Cthulhu R\'lyeh" Campaign Hat',
     price: 31.00,
     priceLabel: "$31.00",
     tagline: "One size fits most cranial configurations.",

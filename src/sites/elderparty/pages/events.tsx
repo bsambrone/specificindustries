@@ -7,7 +7,7 @@ import { Bleed } from "@/components/ui/bleed"
 
 export const metadata = {
   title: "Events — The Elder Party",
-  description: "Campaign rallies, town halls, and awakenings near you. Eight stops across America on the road to November 2028.",
+  description: "Campaign rallies, town halls, and awakenings near you. Eight stops across America on the road to the election.",
 }
 
 const rsvpConfirmations = [
@@ -65,7 +65,7 @@ export default function EventsPage() {
         <div className="absolute top-0 left-0 right-0 h-1.5 z-10" style={{ background: "linear-gradient(90deg, #B22234 33%, #FFFFFF 33%, #FFFFFF 66%, #3C3B6E 66%)" }} />
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <p className="text-xs text-white/60 uppercase tracking-widest font-semibold mb-4">
-            The 2028 Campaign Trail
+            The Eternal Campaign Trail
           </p>
           <h1 className="text-5xl md:text-6xl font-heading font-bold text-white mb-6 leading-tight">
             Events &amp; Rallies
@@ -85,7 +85,7 @@ export default function EventsPage() {
           <div className="flex items-center gap-4 mb-4 justify-center">
             <span className="text-2xl" aria-hidden="true">🇺🇸</span>
             <h2 className="text-3xl font-heading font-bold text-center text-primary uppercase tracking-wide">
-              2028 Campaign Schedule
+              Campaign Schedule
             </h2>
             <span className="text-2xl" aria-hidden="true">🇺🇸</span>
           </div>

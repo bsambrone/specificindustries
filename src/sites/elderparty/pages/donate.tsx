@@ -7,7 +7,7 @@ import { Bleed } from "@/components/ui/bleed"
 
 export const metadata = {
   title: "Donate — The Elder Party",
-  description: "Support the Elder Party's 2028 campaign. Five donation tiers. One awakening. Every dollar counts.",
+  description: "Support the Elder Party campaign. Five donation tiers. One awakening. Every dollar counts.",
 }
 
 const GOAL = 66_600_000
@@ -140,7 +140,7 @@ export default function DonatePage() {
           </div>
 
           <p className="text-center text-foreground/40 text-xs mt-4 italic">
-            Fundraising data as of November 1, 2028. Updated when the numbers change to something
+            Fundraising data as of the last reporting period. Updated when the numbers change to something
             we feel comfortable sharing.
           </p>
         </div>

@@ -39,7 +39,7 @@ export default async function AboutPage() {
           </h2>
           <div className="space-y-6 text-foreground/70 leading-relaxed">
             <p>
-              The Elder Party was founded in the winter of 2027, though its roots extend considerably further back.
+              The Elder Party was founded recently, though its roots extend considerably further back — much further.
               The party emerged from a coalition of coastal civic organizations, academic institutions, and community
               groups who shared a common conviction: that American politics had grown too small. Too human. Too
               limited by the narrow assumptions of terrestrial governance.
@@ -75,7 +75,7 @@ export default async function AboutPage() {
                 />
               </div>
               <p className="text-xs text-foreground/40 mt-3 text-center italic">
-                The founding convention, Miskatonic University Faculty Club, 2027.
+                The founding convention, Miskatonic University Faculty Club. Date uncertain.
                 Photographer unknown. Camera recovered undamaged.
               </p>
             </div>

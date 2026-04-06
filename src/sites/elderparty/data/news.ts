@@ -15,7 +15,7 @@ export const articles: NewsArticle[] = [
   {
     slug: "coastal-surge",
     headline: "Candidate R'lyeh Surges in Polls Across Coastal Districts",
-    date: "2028-05-15",
+    date: "The Tide Before Last",
     author: "Elder Party Press Office",
     summary: "Double-digit gains in every district within 50 miles of the ocean. Inland numbers 'will follow once the water rises.'",
     body: [
@@ -31,7 +31,7 @@ export const articles: NewsArticle[] = [
   {
     slug: "arkham-endorsement",
     headline: "Mayor of Arkham Endorses Elder Party Ticket",
-    date: "2028-05-22",
+    date: "Three Moons Ago",
     author: "Elder Party Press Office",
     summary: "Historic endorsement. Mayor praises the party's 'willingness to confront realities other candidates won't even look at directly.'",
     body: [
@@ -46,7 +46,7 @@ export const articles: NewsArticle[] = [
   {
     slug: "field-offices",
     headline: "Elder Party Opens 50-State Field Office Network",
-    date: "2028-06-01",
+    date: "The Night Everything Changed",
     author: "Elder Party Press Office",
     summary: "Offices have appeared simultaneously in all 50 states. Local officials do not recall issuing permits.",
     body: [
@@ -61,11 +61,11 @@ export const articles: NewsArticle[] = [
   {
     slug: "miskatonic-keynote",
     headline: "Campaign Chairman Marsh Delivers Keynote at Miskatonic Homecoming",
-    date: "2028-06-10",
+    date: "The Solstice Address",
     author: "Elder Party Press Office",
     summary: "Standing ovation. Three attendees reportedly 'ascended.' Keynote transcript available in R'lyehian only.",
     body: [
-      "Campaign Chairman Nyarlathotep Marsh delivered the keynote address at Miskatonic University's 2028 Homecoming celebration to a capacity crowd of 4,000 in the Armitage Memorial Auditorium. The speech, which lasted 47 minutes by clock time though several attendees insist it was 'much longer,' received a standing ovation that eyewitnesses describe as 'beginning before the speech ended.'",
+      "Campaign Chairman Nyarlathotep Marsh delivered the keynote address at Miskatonic University's annual Homecoming celebration to a capacity crowd of 4,000 in the Armitage Memorial Auditorium. The speech, which lasted 47 minutes by clock time though several attendees insist it was 'much longer,' received a standing ovation that eyewitnesses describe as 'beginning before the speech ended.'",
       "The university's communications office reports that three attendees 'ascended' during the address — a term the office declined to define further, saying only that 'they are no longer in the auditorium and are believed to be well.' The remaining 3,997 attendees exited the venue 'visibly moved and slightly disoriented,' which the university's event coordinator noted was 'actually a pretty standard outcome for Miskatonic events.'",
       "The full transcript of the keynote is available on the Elder Party website in R'lyehian only. When asked about an English translation, Chairman Marsh said, 'English lacks the dimensional vocabulary to convey the speech accurately. We tried. The translator is resting now.'",
     ],
@@ -76,7 +76,7 @@ export const articles: NewsArticle[] = [
   {
     slug: "fundraising-record",
     headline: "Record Fundraising Quarter: $66.6 Million Raised",
-    date: "2028-06-30",
+    date: "End of the Last Quarter",
     author: "Elder Party Press Office",
     summary: "Small-dollar donations from 'millions of Americans who hear the call.' Average donation: $13.13.",
     body: [
@@ -91,7 +91,7 @@ export const articles: NewsArticle[] = [
   {
     slug: "arkham-watch-endorsement",
     headline: "Elder Party Platform Endorsed by Arkham Neighborhood Watch",
-    date: "2028-07-05",
+    date: "The Week After Independence",
     author: "Elder Party Press Office",
     summary: "Community safety coalition throws full support behind National Security plank. Neighborhood crime down 100%.",
     body: [
@@ -106,7 +106,7 @@ export const articles: NewsArticle[] = [
   {
     slug: "volunteer-surge",
     headline: "Volunteer Drive Exceeds All Projections",
-    date: "2028-07-18",
+    date: "Midsummer",
     author: "Elder Party Press Office",
     summary: "200,000 new volunteers in a single weekend. Many report signing up 'in a dream' but confirm their commitment.",
     body: [
@@ -122,7 +122,7 @@ export const articles: NewsArticle[] = [
   {
     slug: "why-i-switched",
     headline: "Op-Ed: \"Why I Left My Party for the Elder Party\"",
-    date: "2028-08-01",
+    date: "Recently",
     author: "A Concerned Citizen (name withheld at their request, and at the request of something else)",
     summary: "A former swing voter explains their conversion. 'Once you've seen what they're offering, nothing else makes sense.'",
     body: [
