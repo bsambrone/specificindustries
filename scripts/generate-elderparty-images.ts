@@ -288,7 +288,7 @@ async function main() {
   console.log("--- Section 7: Events ---");
   await generateImage(
     "event-miskatonic-rally.png",
-    "Nighttime rally at a gothic university campus, torches and American flags, crowd gathered before a stage, dramatic shadows, moonlit buildings",
+    "Evening campaign rally at a gothic university campus, string lights and American flags, enthusiastic crowd gathered before a stage with podium, moonlit ivy-covered buildings, collegiate political event",
   );
   await generateImage(
     "event-town-hall-waves.png",
