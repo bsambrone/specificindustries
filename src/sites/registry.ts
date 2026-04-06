@@ -7,6 +7,7 @@ import { config as strategicvoidConfig, pages as strategicvoidPages, dynamicRout
 import { config as stratifyConfig, pages as stratifyPages, dynamicRoutes as stratifyDynamicRoutes } from "./stratify"
 import { config as truegritConfig, pages as truegritPages, dynamicRoutes as truegritDynamicRoutes } from "./truegrit"
 import { config as grassfedwifiConfig, pages as grassfedwifiPages, dynamicRoutes as grassfedwifiDynamicRoutes } from "./grassfedwifi"
+import { config as elderpartyConfig, pages as elderpartyPages, dynamicRoutes as elderpartyDynamicRoutes } from "./elderparty"
 
 export const siteRegistry: Record<string, SiteModule> = {
   apex: { config: apexConfig, pages: apexPages },
@@ -17,6 +18,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   stratify: { config: stratifyConfig, pages: stratifyPages, dynamicRoutes: stratifyDynamicRoutes },
   truegrit: { config: truegritConfig, pages: truegritPages, dynamicRoutes: truegritDynamicRoutes },
   grassfedwifi: { config: grassfedwifiConfig, pages: grassfedwifiPages, dynamicRoutes: grassfedwifiDynamicRoutes },
+  elderparty: { config: elderpartyConfig, pages: elderpartyPages, dynamicRoutes: elderpartyDynamicRoutes },
 }
 
 export type SubdomainKey = keyof typeof siteRegistry
