@@ -54,6 +54,7 @@ export default function ProductDetail({ slug }: { slug: string }) {
                 price={p.priceLabel}
                 tagline={p.tagline}
                 image={p.image}
+                href={`/shop/${p.slug}`}
                 quips={quips}
               />
             ))}

@@ -34,6 +34,7 @@ export default function ShopPage() {
                 price={product.priceLabel}
                 tagline={product.tagline}
                 image={product.image}
+                href={`/shop/${product.slug}`}
                 quips={quips}
               />
             ))}
