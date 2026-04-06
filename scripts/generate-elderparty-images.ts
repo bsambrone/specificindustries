@@ -134,7 +134,7 @@ async function main() {
   );
   await generateImageWithPerson(
     "team-jim.png",
-    "Professional political portrait, man in dark suit as policy wonk, slightly amphibious features, bulging eyes, slick skin, reading glasses, briefcase, American flag pin, Capitol building background",
+    "Professional political portrait, man in dark suit as policy wonk, face covered in octopus-like tentacles where his mouth and chin should be, bulging amphibian eyes, slick greenish skin, reading glasses perched above the tentacles, American flag pin, Capitol building background, Lovecraftian Cthulhu mythos Deep One hybrid",
     "jim",
   );
   await generateImageWithPerson(
