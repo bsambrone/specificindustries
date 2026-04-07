@@ -57,7 +57,7 @@ export default async function CleanSheetHome() {
       {/* Trust Metrics */}
       <section className="py-16 px-6 bg-primary/5 border-y border-primary/10">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-          <MetricCounter value={4200000000} prefix="$" label="In garments processed" />
+          <MetricCounter value={4200000000} prefix="$" label="In garments processed" compact />
           <MetricCounter value={0} label="Investigations completed" />
           <MetricCounter value={100} label="Of loads returned clean" suffix="%" />
           <MetricCounter value={37} label="Years of discreet service" />

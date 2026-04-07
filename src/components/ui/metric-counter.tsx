@@ -8,6 +8,14 @@ interface MetricCounterProps {
   prefix?: string
   suffix?: string
   duration?: number
+  compact?: boolean
+}
+
+function formatCompact(n: number): string {
+  if (n >= 1_000_000_000) return `${(n / 1_000_000_000).toFixed(1).replace(/\.0$/, "")}B`
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1).replace(/\.0$/, "")}M`
+  if (n >= 1_000) return `${(n / 1_000).toFixed(1).replace(/\.0$/, "")}K`
+  return n.toLocaleString()
 }
 
 export function MetricCounter({
@@ -16,6 +24,7 @@ export function MetricCounter({
   prefix = "",
   suffix = "",
   duration = 2000,
+  compact = false,
 }: MetricCounterProps) {
   const [count, setCount] = useState(0)
   const [hasAnimated, setHasAnimated] = useState(false)
@@ -58,7 +67,7 @@ export function MetricCounter({
   return (
     <div ref={ref} className="text-center py-6 px-4">
       <div className="text-5xl md:text-6xl font-heading font-bold text-accent leading-none">
-        {prefix}{count.toLocaleString()}{suffix}
+        {prefix}{compact ? formatCompact(count) : count.toLocaleString()}{suffix}
       </div>
       <div className="text-foreground/60 mt-3 text-base">{label}</div>
     </div>

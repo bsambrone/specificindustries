@@ -116,7 +116,7 @@ export default function AboutPage() {
       {/* Metrics */}
       <section className="py-16 px-6 border-y border-primary/10">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-          <MetricCounter value={4200000000} prefix="$" label="In garments processed" suffix="+" />
+          <MetricCounter value={4200000000} prefix="$" label="In garments processed" suffix="+" compact />
           <MetricCounter value={37} label="Years in operation" />
           <MetricCounter value={12} label="Countries with facilities" />
           <MetricCounter value={0} label="Convictions" />
