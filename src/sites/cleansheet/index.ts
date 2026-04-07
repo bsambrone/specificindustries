@@ -4,6 +4,7 @@ import CleanSheetHome from "./pages/home"
 import ServicesPage, { metadata as servicesMetadata } from "./pages/services"
 import AboutPage, { metadata as aboutMetadata } from "./pages/about"
 import LeadershipPage, { metadata as leadershipMetadata } from "./pages/leadership"
+import ContactPage, { metadata as contactMetadata } from "./pages/contact"
 
 export { config }
 
@@ -12,4 +13,5 @@ export const pages: Record<string, PageEntry> = {
   "services": { component: ServicesPage, metadata: servicesMetadata },
   "about": { component: AboutPage, metadata: aboutMetadata },
   "leadership": { component: LeadershipPage, metadata: leadershipMetadata },
+  "contact": { component: ContactPage, metadata: contactMetadata },
 }
