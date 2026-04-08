@@ -4,6 +4,12 @@ import { products as pigmilkProducts } from "@/sites/pigmilk/data/products"
 import { products as dehydratedwaterProducts } from "@/sites/dehydratedwater/data/products"
 import { products as inflatableanchorsProducts } from "@/sites/inflatableanchors/data/products"
 import { products as truegritProducts } from "@/sites/truegrit/data/products"
+import { products as elderpartyProducts } from "@/sites/elderparty/data/products"
+import { coalitions } from "@/sites/elderparty/data/coalitions"
+import { articles as elderpartyArticles } from "@/sites/elderparty/data/news"
+import { products as snortablesProducts } from "@/sites/snortables/data/products"
+import { shares } from "@/sites/grassfedwifi/data/shares"
+import { fieldNotes } from "@/sites/grassfedwifi/data/field-notes"
 import { solutions as strategicvoidSolutions } from "@/sites/strategicvoid/data/solutions"
 import { products as strategicvoidProducts } from "@/sites/strategicvoid/data/products"
 import { caseStudies } from "@/sites/strategicvoid/data/case-studies"
@@ -38,12 +44,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     dehydratedwater: dehydratedwaterProducts,
     inflatableanchors: inflatableanchorsProducts,
     truegrit: truegritProducts,
+    elderparty: elderpartyProducts,
+    snortables: snortablesProducts,
   }
 
   for (const [subdomain, products] of Object.entries(productSites)) {
     for (const product of products) {
       urls.push({ url: siteUrl(subdomain, `products/${product.slug}`) })
     }
+  }
+
+  // Grass Fed WiFi: shares, field notes
+  for (const share of shares) {
+    urls.push({ url: siteUrl("grassfedwifi", `shares/${share.slug}`) })
+  }
+  for (const note of fieldNotes) {
+    urls.push({ url: siteUrl("grassfedwifi", `field-notes/${note.slug}`) })
+  }
+
+  // Elder Party: coalitions, news
+  for (const coalition of coalitions) {
+    urls.push({ url: siteUrl("elderparty", `coalitions/${coalition.slug}`) })
+  }
+  for (const article of elderpartyArticles) {
+    urls.push({ url: siteUrl("elderparty", `news/${article.slug}`) })
   }
 
   // Strategic Void: solutions, solution/product combos, case studies, whitepapers
