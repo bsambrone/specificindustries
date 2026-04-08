@@ -10,6 +10,8 @@ import SnortablesAbout, { metadata as aboutMetadata } from "./pages/about"
 import SnortablesContact, { metadata as contactMetadata } from "./pages/contact"
 import SnortablesCart from "./pages/cart"
 import SnortablesCheckout from "./pages/checkout"
+import SnortablesPrivacy, { metadata as privacyMetadata } from "./pages/privacy"
+import SnortablesTerms, { metadata as termsMetadata } from "./pages/terms"
 
 export { config }
 
@@ -22,6 +24,8 @@ export const pages: Record<string, PageEntry> = {
   "contact": { component: SnortablesContact, metadata: contactMetadata },
   "cart": SnortablesCart,
   "checkout": SnortablesCheckout,
+  "privacy": { component: SnortablesPrivacy, metadata: privacyMetadata },
+  "terms": { component: SnortablesTerms, metadata: termsMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
