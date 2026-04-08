@@ -7,6 +7,7 @@ import SnortablesProcess, { metadata as processMetadata } from "./pages/process"
 import SnortablesTestimonials, { metadata as testimonialsMetadata } from "./pages/testimonials"
 import ProductDetail from "./pages/product-detail"
 import SnortablesAbout, { metadata as aboutMetadata } from "./pages/about"
+import SnortablesContact, { metadata as contactMetadata } from "./pages/contact"
 
 export { config }
 
@@ -16,6 +17,7 @@ export const pages: Record<string, PageEntry> = {
   "process": { component: SnortablesProcess, metadata: processMetadata },
   "testimonials": { component: SnortablesTestimonials, metadata: testimonialsMetadata },
   "about": { component: SnortablesAbout, metadata: aboutMetadata },
+  "contact": { component: SnortablesContact, metadata: contactMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
