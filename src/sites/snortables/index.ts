@@ -8,6 +8,8 @@ import SnortablesTestimonials, { metadata as testimonialsMetadata } from "./page
 import ProductDetail from "./pages/product-detail"
 import SnortablesAbout, { metadata as aboutMetadata } from "./pages/about"
 import SnortablesContact, { metadata as contactMetadata } from "./pages/contact"
+import SnortablesCart from "./pages/cart"
+import SnortablesCheckout from "./pages/checkout"
 
 export { config }
 
@@ -18,6 +20,8 @@ export const pages: Record<string, PageEntry> = {
   "testimonials": { component: SnortablesTestimonials, metadata: testimonialsMetadata },
   "about": { component: SnortablesAbout, metadata: aboutMetadata },
   "contact": { component: SnortablesContact, metadata: contactMetadata },
+  "cart": SnortablesCart,
+  "checkout": SnortablesCheckout,
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
