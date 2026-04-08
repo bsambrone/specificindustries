@@ -9,6 +9,7 @@ import { config as truegritConfig, pages as truegritPages, dynamicRoutes as true
 import { config as grassfedwifiConfig, pages as grassfedwifiPages, dynamicRoutes as grassfedwifiDynamicRoutes } from "./grassfedwifi"
 import { config as elderpartyConfig, pages as elderpartyPages, dynamicRoutes as elderpartyDynamicRoutes } from "./elderparty"
 import { config as cleansheetConfig, pages as cleansheetPages } from "./cleansheet"
+import { config as snortablesConfig, pages as snortablesPages } from "./snortables"
 
 export const siteRegistry: Record<string, SiteModule> = {
   apex: { config: apexConfig, pages: apexPages },
@@ -21,6 +22,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   grassfedwifi: { config: grassfedwifiConfig, pages: grassfedwifiPages, dynamicRoutes: grassfedwifiDynamicRoutes },
   elderparty: { config: elderpartyConfig, pages: elderpartyPages, dynamicRoutes: elderpartyDynamicRoutes },
   cleansheet: { config: cleansheetConfig, pages: cleansheetPages },
+  snortables: { config: snortablesConfig, pages: snortablesPages },
 }
 
 export type SubdomainKey = keyof typeof siteRegistry
