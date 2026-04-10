@@ -2,6 +2,7 @@ import { z } from "zod";
 import { createReadStream } from "node:fs";
 import { writeFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
+import { toFile } from "openai";
 import { openai } from "../utils/openai.js";
 import { validateDimensions, validateFilename } from "../utils/validation.js";
 import {
@@ -12,6 +13,21 @@ import {
 } from "../utils/base-images.js";
 
 const GENERATED_DIR = path.resolve(process.cwd(), "generated-images");
+
+function mimeFromExtension(filePath: string): string {
+  const ext = path.extname(filePath).toLowerCase();
+  switch (ext) {
+    case ".jpg":
+    case ".jpeg":
+      return "image/jpeg";
+    case ".png":
+      return "image/png";
+    case ".webp":
+      return "image/webp";
+    default:
+      return "application/octet-stream";
+  }
+}
 
 export const generateImageWithPersonSchema = {
   prompt: z.string().describe("The image generation prompt (should describe the person/scene)"),
@@ -80,13 +96,20 @@ export async function handleGenerateImageWithPerson(args: {
   const size = `${args.width}x${args.height}` as "1024x1024" | "1536x1024" | "1024x1536";
 
   try {
-    const imageStreams = imagePaths.map((p) => createReadStream(p));
+    // Wrap each reference photo with toFile so the SDK sends a proper
+    // filename + MIME type. Passing raw ReadStreams causes the upload to
+    // default to application/octet-stream, which the API rejects.
+    const imageFiles = await Promise.all(
+      imagePaths.map((p) =>
+        toFile(createReadStream(p), path.basename(p), { type: mimeFromExtension(p) })
+      )
+    );
 
     // gpt-image-1 via /images/edits — do NOT pass response_format or input_fidelity
     // (they trigger a dall-e-2-only validation bug). b64_json is the default anyway.
     const response = await openai.images.edit({
       model: "gpt-image-1" as any,
-      image: imageStreams as any,
+      image: imageFiles as any,
       prompt: args.prompt,
       size,
     });

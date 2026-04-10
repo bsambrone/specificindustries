@@ -33,12 +33,13 @@ export async function handleGenerateImage(args: {
   const size = `${args.width}x${args.height}` as "1024x1024" | "1536x1024" | "1024x1536";
 
   try {
+    // gpt-image-1.5 always returns base64 — do NOT pass response_format
+    // (it's a DALL-E-only parameter and triggers a 400 from the API).
     const response = await openai.images.generate({
       model: "gpt-image-1.5",
       prompt: args.prompt,
       size,
       quality: args.quality,
-      response_format: "b64_json",
     });
 
     const b64Data = response.data?.[0]?.b64_json;
