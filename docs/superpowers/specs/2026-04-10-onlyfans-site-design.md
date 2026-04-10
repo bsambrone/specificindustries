@@ -271,35 +271,47 @@ Site-local toast component (do not reuse the cart system's toast). Renders a sin
 
 ## Image Generation
 
-New script: `scripts/generate-onlyfans-images.ts`, modeled after `generate-mousetrapjenga-images.ts`. Reads `OPENAI_API_KEY` from `.env`, outputs to `public/sites/onlyfans/`, skips files that already exist.
+Image generation uses the existing **`mcp/image-gen/` MCP server**, not a standalone script. Two tools do all the work:
 
-### Per-fan strategy
+- **`mcp__image-gen__generate_image`** — text-to-image. Used to create the canonical base image for each fan and for the home/how-it-works/contact images.
+- **`mcp__image-gen__generate_image_with_person`** — img-to-img via reference photos in `mcp/image-gen/base-images/{name}/`. Used for both (a) the four ashamed exec portraits (using the existing `bill`/`brandon`/`jim`/`sean` base folders) and (b) all per-fan variations after the fan's base image is in place.
+
+The MCP writes outputs to `mcp/image-gen/generated-images/`. Implementation will move finished images into `public/sites/onlyfans/` after each generation step.
+
+### Per-fan workflow (executed once per fan)
+
+The MCP's `generate_image_with_person` tool reads any folder under `base-images/`, treating the folder name as the `person` argument. Fans are stored alongside the four real reference people, using fan slugs as folder names. This is a known cross-cutting use of the `base-images/` directory — flagged because it mixes fan reference folders with human reference folders, but it requires no MCP changes.
 
 For each of the 8 fans:
 
-1. **Generate one base reference image** of the fan (e.g., `fan-brenda-base.png`). This is the canonical Brenda — a clean, well-lit shot of a 1957 box fan in a Tulsa kitchen window.
-2. **Use that base image as the reference** for all subsequent images for this fan, via OpenAI's image-edit endpoint (the same pattern `generateImageWithPerson` uses for the four exec base photos). Each subsequent image is a *variation* of the same base — Brenda, but different angle / lighting / speed setting.
-3. Generate from base:
+1. **Generate the base image.** Call `mcp__image-gen__generate_image` with a detailed text prompt for the canonical fan (e.g., "a well-loved 1957 cream-colored Lasko box fan sitting in a sunlit Tulsa kitchen window, photographed in a documentary style…"). Output: `{fan-slug}-base.png`.
+2. **Stage the base as a reference photo.** Move the generated base into `mcp/image-gen/base-images/{fan-slug}/base.png`. This makes it visible to `generate_image_with_person` under `person="{fan-slug}"`.
+3. **Generate variations.** Call `mcp__image-gen__generate_image_with_person` 8 times with `person="{fan-slug}"` and prompts describing different angles / lighting / speeds:
    - `fan-{slug}-cover.png` — wide cover banner (1536×1024)
-   - `fan-{slug}-avatar.png` — square portrait crop (1024×1024)
-   - `fan-{slug}-post-01.png` through `fan-{slug}-post-06.png` — 6 post images, each a different angle / mood / speed setting
+   - `fan-{slug}-avatar.png` — square portrait (1024×1024)
+   - `fan-{slug}-post-01.png` through `fan-{slug}-post-06.png` — 6 post images at different angles / moods / speed settings (1024×1024)
+4. **Move outputs to `public/sites/onlyfans/`.**
 
-That's 9 images per fan × 8 fans = **72 fan images.**
+That's 1 base + 8 variations = **9 images per fan × 8 fans = 72 fan images.**
 
 ### Site images
 
-- `home-hero.png` — hero shot of an aesthetic box fan in a window
-- `how-it-works-illustration.png` — 3-step infographic-style illustration
-- `contact-image.png` — four execs at a conference table, ashamed
-- `exec-{slug}.png` × 4 — cringing portraits generated from `mcp/image-gen/base-images/{bill,brandon,jim,sean}/` reference photos using `generateImageWithPerson`. The four name slugs are picked at implementation time (see Open Questions); each maps 1:1 to one of the four reference people, with `bill` always assigned to the founder/CEO slot.
+- `home-hero.png` — text-to-image, hero shot of an aesthetic box fan in a window
+- `how-it-works-illustration.png` — text-to-image, 3-step infographic illustration
+- `contact-image.png` — generated via `generate_image_with_person` with all four exec references (or one frame at a time if multi-person framing is unstable), depicting four men at a conference table looking visibly ashamed
+- `exec-{slug-1..4}.png` — four cringing portraits, each generated via `generate_image_with_person`. One uses `role="founder"` (Bill, always the founder/CEO). The other three use explicit `person="brandon"`, `person="jim"`, `person="sean"` to control the mapping.
 
 That's **~7 site images.**
 
-**Total: ~79 images.** This is the largest image-gen run in the portfolio so far (Mousetrap Jenga has ~25). The cost is a known trade-off — accepted because the locked-content-grid bit requires a meaningful number of post images per fan to feel like a real creator profile.
+**Total: ~79 images.** Largest image-gen run in the portfolio so far (Mousetrap Jenga has ~25). Accepted trade-off because the locked-content-grid bit requires enough per-fan post images to feel like a real creator profile.
+
+### Exec names are randomly chosen
+
+Unlike Mousetrap Jenga (where exec surnames were thematically tied to mid-century Iowa industry), OnlyFans exec names are picked **at random** from a generic Western-name pool at implementation time. Generation procedure: implementation picks 4 plausible first-name + surname combinations (e.g., from a name list or by simply choosing four unrelated names that don't share a theme). The randomization is the bit — the four execs read as ordinary businesspeople who got pulled into airflow content, with no naming theme connecting them. **Bill is always assigned to the founder/CEO role**; the other three random names map 1:1 to brandon/jim/sean reference photos in any order.
 
 ### Locked thumbnails are not separately generated
 
-The blur and lock-icon treatment is applied at render time in `<LockedThumbnail>` via CSS (`filter: blur(16px)` + dark overlay). The source image is the same `fan-{slug}-post-N.png` whether locked or unlocked — that way, when the user subscribes, the same image renders unblurred. No separate "locked" image variants are generated.
+The blur and lock-icon treatment is applied at render time in `<LockedThumbnail>` via CSS (`filter: blur(16px)` + dark overlay). The source image is the same `fan-{slug}-post-N.png` whether locked or unlocked — when the user subscribes, the same image renders unblurred. No separate "locked" image variants are generated.
 
 ## Footer
 
@@ -323,4 +335,4 @@ These are intentionally left for the planning step rather than nailed down here:
 - Exact filter chip behavior on the browse page (server-rendered initial state, client-side filtering)
 - Whether the "How It Works" page needs any visual element beyond text + icons
 - Exact icon set for the lock state (emoji vs. inline SVG vs. heroicon)
-- Final name slugs and titles for the four execs (with `bill` as Founder & CEO; the other three's titles should subtly distance them from the platform)
+- The four randomly-chosen exec names and their (subtly distancing) titles, with `bill` always assigned the Founder/CEO slot
