@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useCart } from "@/components/commerce/cart-provider"
+import { getProductBySlug } from "@/sites/mousetrapjenga/data/products"
 import { useSiteLink } from "@/hooks/use-site-link"
 
 const HANDLING_FEE = 4.99
@@ -12,9 +13,14 @@ export default function MousetrapJengaCart() {
   const { cart, removeFromCart, updateQuantity } = useCart()
   const siteHref = useSiteLink()
 
-  const cartItems = cart.map((item) => ({ ...item }))
+  const cartItems = cart
+    .map((item) => {
+      const product = getProductBySlug(item.slug)
+      return product ? { ...item, product } : null
+    })
+    .filter(Boolean) as Array<{ slug: string; quantity: number; product: NonNullable<ReturnType<typeof getProductBySlug>> }>
 
-  const subtotal = cartItems.reduce((sum, item) => sum + item.quantity * 29.99, 0)
+  const subtotal = cartItems.reduce((sum, item) => sum + item.product.price * item.quantity, 0)
   const fingerRiskTax = subtotal * FINGER_RISK_TAX_RATE
   const total = subtotal + HANDLING_FEE + fingerRiskTax
 
@@ -43,10 +49,16 @@ export default function MousetrapJengaCart() {
         <h1 className="text-4xl font-heading font-bold text-foreground mb-8">Your Cart</h1>
 
         <div className="divide-y divide-primary/10">
-          {cartItems.map(({ slug, quantity }) => (
+          {cartItems.map(({ slug, quantity, product }) => (
             <div key={slug} className="py-6 flex gap-4 items-center">
+              <div className="relative w-20 h-20 rounded-lg overflow-hidden bg-primary/5 shrink-0">
+                <Image src={product.image} alt={product.name} fill className="object-cover" />
+              </div>
               <div className="flex-1">
-                <span className="font-heading font-semibold text-primary">{slug}</span>
+                <Link href={siteHref(`/products/${slug}`)} className="font-heading font-semibold text-primary hover:underline">
+                  {product.name}
+                </Link>
+                <p className="text-foreground/60 text-sm">{product.priceLabel}</p>
               </div>
               <div className="flex items-center gap-2">
                 <button
@@ -64,7 +76,7 @@ export default function MousetrapJengaCart() {
                 </button>
               </div>
               <div className="w-24 text-right font-semibold text-foreground">
-                ${(29.99 * quantity).toFixed(2)}
+                ${(product.price * quantity).toFixed(2)}
               </div>
               <button
                 onClick={() => removeFromCart(slug)}
