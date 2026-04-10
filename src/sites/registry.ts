@@ -10,6 +10,7 @@ import { config as grassfedwifiConfig, pages as grassfedwifiPages, dynamicRoutes
 import { config as elderpartyConfig, pages as elderpartyPages, dynamicRoutes as elderpartyDynamicRoutes } from "./elderparty"
 import { config as cleansheetConfig, pages as cleansheetPages } from "./cleansheet"
 import { config as snortablesConfig, pages as snortablesPages, dynamicRoutes as snortablesDynamicRoutes } from "./snortables"
+import { config as mousetrapjengaConfig, pages as mousetrapjengaPages, dynamicRoutes as mousetrapjengaDynamicRoutes } from "./mousetrapjenga"
 
 export const siteRegistry: Record<string, SiteModule> = {
   apex: { config: apexConfig, pages: apexPages },
@@ -23,6 +24,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   elderparty: { config: elderpartyConfig, pages: elderpartyPages, dynamicRoutes: elderpartyDynamicRoutes },
   cleansheet: { config: cleansheetConfig, pages: cleansheetPages },
   snortables: { config: snortablesConfig, pages: snortablesPages, dynamicRoutes: snortablesDynamicRoutes },
+  mousetrapjenga: { config: mousetrapjengaConfig, pages: mousetrapjengaPages, dynamicRoutes: mousetrapjengaDynamicRoutes },
 }
 
 export type SubdomainKey = keyof typeof siteRegistry
