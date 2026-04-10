@@ -1,9 +1,11 @@
 import OpenAI from "openai";
 import dotenv from "dotenv";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-// Load .env from project root
-dotenv.config({ path: path.resolve(process.cwd(), ".env") });
+// Load .env from project root (2 levels up from src/utils/)
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: path.resolve(__dirname, "../../../../.env") });
 
 const apiKey = process.env.OPENAI_API_KEY;
 

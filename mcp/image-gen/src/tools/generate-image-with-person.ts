@@ -82,14 +82,13 @@ export async function handleGenerateImageWithPerson(args: {
   try {
     const imageStreams = imagePaths.map((p) => createReadStream(p));
 
+    // gpt-image-1 via /images/edits — do NOT pass response_format or input_fidelity
+    // (they trigger a dall-e-2-only validation bug). b64_json is the default anyway.
     const response = await openai.images.edit({
-      model: "gpt-image-1.5",
-      image: imageStreams,
+      model: "gpt-image-1" as any,
+      image: imageStreams as any,
       prompt: args.prompt,
       size,
-      quality: args.quality,
-      input_fidelity: "high",
-      response_format: "b64_json",
     });
 
     const b64Data = response.data?.[0]?.b64_json;

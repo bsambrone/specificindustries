@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "image-gen": {
+      "command": "npx",
+      "args": ["tsx", "mcp/image-gen/src/index.ts"],
+      "cwd": "/home/bsambrone/repos/specificindustries"
+    }
+  }
+}
