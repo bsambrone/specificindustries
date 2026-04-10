@@ -1,5 +1,6 @@
 import { config } from "./config"
 import type { PageEntry, DynamicRoute } from "@/themes"
+import { getProductBySlug } from "./data/products"
 import MousetrapJengaHome from "./pages/home"
 import MousetrapJengaProducts, { metadata as productsMetadata } from "./pages/products"
 import MousetrapJengaHowToPlay, { metadata as howToPlayMetadata } from "./pages/how-to-play"
@@ -32,7 +33,12 @@ export const pages: Record<string, PageEntry> = {
 export const dynamicRoutes: Record<string, DynamicRoute> = {
   products: {
     component: MousetrapJengaProductDetail,
-    getMetadata: (slug: string) => ({ title: `${slug} — Mousetrap Jenga`, description: "Product detail" }),
-    isValidSlug: () => true,
+    getMetadata: (slug: string) => {
+      const product = getProductBySlug(slug)
+      return product
+        ? { title: `${product.name} — Mousetrap Jenga`, description: product.tagline }
+        : undefined
+    },
+    isValidSlug: (slug: string) => !!getProductBySlug(slug),
   },
 }
