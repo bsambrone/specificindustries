@@ -5,7 +5,7 @@ import fs from "node:fs"
 import path from "node:path"
 
 const FAVICON_SIZE = 64 // Retina 32px (2x)
-const sites = ["apex", "pigmilk", "dehydratedwater", "inflatableanchors", "strategicvoid", "stratify", "truegrit", "onlyfans", "onlypans"]
+const sites = ["apex", "pigmilk", "dehydratedwater", "inflatableanchors", "strategicvoid", "stratify", "truegrit", "onlyfans", "onlypans", "bonelesswater"]
 
 for (const site of sites) {
   const file = `public/sites/${site}/favicon.png`
