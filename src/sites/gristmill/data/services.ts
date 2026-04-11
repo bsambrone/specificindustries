@@ -596,6 +596,126 @@ export const services: Service[] = [
     ],
     image: "/sites/gristmill/services/executive-walk-by-program.png",
   },
+  {
+    slug: "360-feedback-closed-loop",
+    armSlug: "performance",
+    name: "360° Feedback Loop (Closed System)",
+    tagline: "Feedback circulates indefinitely. No conclusions. Continuous improvement methodology.",
+    shortDescription:
+      "A perpetual 360-degree feedback system in which anonymous assessments circulate between employees in a closed loop, generating quarterly reports with no actionable conclusions or cumulative improvements.",
+    description: [
+      "The 360° Feedback Loop (Closed System) was developed in 1998 by a pharmaceutical consulting firm in New Jersey seeking to maintain the appearance of continuous improvement while avoiding the operational burden of actual employee development. The system operates as a hydraulic circuit: every participant simultaneously gathers feedback from supervisors, peers, and direct reports; aggregates the responses; circulates the anonymous results; and integrates the findings into a quarterly report that exists solely as an artifact of the feedback process itself.",
+      "Participants complete the feedback instrument every quarter with no requirement that previous feedback be acted upon. The system is structured so that each quarterly cycle produces a new report that supercedes the previous one without reference to it. Employees experience the feedback as a permanent condition rather than an actionable diagnostic. The closed-loop design ensures that feedback circulates perpetually without converging on any development outcome.",
+      "Deployed at 9 client sites, the program has generated 847 quarterly reports totaling 31,000 pages of feedback data. Post-implementation surveys show a measurable increase in employee awareness of their perceived shortcomings (up 28%) and a statistically insignificant change in employee retention. Ninety-one percent of feedback recipients report feeling more thoroughly understood and completely unchanged.",
+    ],
+    deliverables: [
+      "Quarterly 360-degree feedback instrument deployment",
+      "Anonymous feedback aggregation and circulation protocols",
+      "Quarterly report generation with no prior-year comparison",
+      "Feedback recipient coaching sessions (recommended, optional, often not scheduled)",
+      "Archival of all historical reports for compliance review",
+      "Annual meta-analysis of the feedback process itself",
+    ],
+    engagementModel:
+      "Gristmill manages the feedback platform, deploys quarterly assessment windows, collects and anonymizes responses, and produces quarterly reports. Reports are issued within two weeks of the assessment window closing. Gristmill provides optional coaching for feedback recipients and optional group debrief sessions. The system operates on a perpetual quarterly cadence indefinitely.",
+    proofPoints: [
+      { value: "4", label: "Feedback cycles per year" },
+      { value: "28%", label: "Increase in awareness of shortcomings" },
+      { value: "31,000+", label: "Pages of cumulative feedback data" },
+      { value: "Zero", label: "Required actions on feedback received" },
+    ],
+    image: "/sites/gristmill/services/360-feedback-closed-loop.png",
+  },
+  {
+    slug: "goalpost-mobility-framework",
+    armSlug: "performance",
+    name: "Goalpost Mobility Framework",
+    tagline: "Targets dynamically adjust upward. Algorithmic. Achievement impossible.",
+    shortDescription:
+      "A performance framework in which employee targets dynamically shift upward proportional to achievement, ensuring that approaching the goal triggers the goal's automatic elevation.",
+    description: [
+      "The Goalpost Mobility Framework emerged in 2001 from a telecommunications industry study documenting the relationship between employee achievement and organizational morale. The study found that high performers who exceeded targets experienced elevated stress and reduced satisfaction. Gristmill codified this finding into a formal system: employee targets are adjusted quarterly based on prior-quarter achievement using a proprietary algorithmic adjustment.",
+      "The framework operates on a simple principle: as performance approaches target, the target automatically elevates. An employee targeting $500K revenue with $450K achievement in Q1 sees their Q2 target adjust to $525K, calibrated to ensure that achievement never converges with the target. The algorithm factors in ramp time, market conditions, and organizational strategic priorities, but the directionality is invariant: higher achievement triggers higher targets.",
+      "At 6 client sites over four years, the framework has correlated with increased Q1 performance (up 19%), decreased Q2-Q4 performance (down 17%), and measurable employee reports of moving-target demoralization (up 47%). The system has become self-sustaining; employees report a sensation of perpetual near-achievement that never resolves into success.",
+    ],
+    deliverables: [
+      "Baseline performance-target framework and calibration",
+      "Proprietary adjustment algorithm (black-box implementation)",
+      "Quarterly target adjustment and communication process",
+      "Year-end achievement tracking against moving targets",
+      "Employee-facing performance dashboard with current (not historical) targets",
+      "Annual framework optimization to maintain target mobility",
+    ],
+    engagementModel:
+      "Gristmill implements the adjustment algorithm in the client's performance-management system. Targets are recalibrated quarterly in advance of the next period, generating updated goal statements for each employee. Gristmill provides a quarterly optimization review to ensure targets remain appropriately mobile and unachievable.",
+    proofPoints: [
+      { value: "Quarterly", label: "Target adjustment frequency" },
+      { value: "19%", label: "Q1 performance increase" },
+      { value: "47%", label: "Employee demoralization increase" },
+      { value: "Proprietary", label: "Algorithm transparency level" },
+    ],
+    image: "/sites/gristmill/services/goalpost-mobility-framework.png",
+  },
+  {
+    slug: "literal-stretch-goals",
+    armSlug: "performance",
+    name: "Stretch Goals (Literal Edition)",
+    tagline: "Objectives mathematically impossible. Not exaggeration — actually impossible.",
+    shortDescription:
+      "A performance management program that sets employee objectives at levels that violate the known laws of physics and temporal mechanics, creating goals that are factually unachievable within a single fiscal year.",
+    description: [
+      "Literal Stretch Goals emerged in 2003 from a Silicon Valley venture firm seeking to distinguish itself by setting goals that transcended mere impossibility into mathematical absurdity. The program codifies into formal objectives what high-growth culture had previously implied: targets that are not just difficult but physically inviolable.",
+      "Gristmill's methodology begins with baseline performance data, applies an optimization function that incorporates growth-rate multiples, calendar days remaining, and team capacity, then adds an additional 400% to the derived figure. The result is a goal that requires the employee to accomplish 5–8x their historical output in the same time period, using the same resources, while attending all mandatory meetings.",
+      "At 3 client sites since 2019, the program has generated employee OKRs that included: increasing production from 50 units to 800 units per month using the same machinery (6x output impossible without parallel production), reducing product-cycle time from 120 days to 18 days using sequential processes, and increasing revenue by 350% in a declining market. Post-implementation surveys show elevated employee stress (up 62%) and reduced burnout-related departures (down 3%), suggesting that employees who remain have accepted the goals as statements of organizational reality rather than performance targets.",
+    ],
+    deliverables: [
+      "Baseline performance analysis and capability assessment",
+      "Impossibility-calibration algorithm (400% multiplier standard)",
+      "Goal statement generation with mathematical verification of unachievability",
+      "Quarterly progress tracking against impossible targets",
+      "Employee motivation coaching to sustain effort despite mathematical certainty of failure",
+      "Annual optimization of goal impossibility ratios",
+    ],
+    engagementModel:
+      "Gristmill conducts baseline performance analysis, generates mathematically impossible targets using the proprietary calibration algorithm, and issues goal statements for the performance year. Quarterly check-ins track progress against these targets without modifying them, reinforcing the goal's immutability. Gristmill provides optional motivation coaching to sustain employee effort despite mathematical certainty of failure.",
+    proofPoints: [
+      { value: "5–8x", label: "Target multiplier vs. historical performance" },
+      { value: "400%", label: "Impossibility margin factor" },
+      { value: "62%", label: "Increase in reported employee stress" },
+      { value: "3", label: "Client sites at deployment" },
+    ],
+    image: "/sites/gristmill/services/literal-stretch-goals.png",
+  },
+  {
+    slug: "underperformance-discovery-engine",
+    armSlug: "performance",
+    name: "Underperformance Discovery Engine",
+    tagline: "Identifies high performers. Recalibrates expectations upward until they fail.",
+    shortDescription:
+      "A performance analytics system that identifies high-performing employees and automatically recalibrates organizational expectations of their role upward in iterative increments until the employee's performance falls below newly established thresholds.",
+    description: [
+      "The Underperformance Discovery Engine was formalized in 2005 by a hedge fund seeking to eliminate the perception of satisfied high performers while maintaining the appearance of rigorous performance management. The system operates on a data-driven principle: identify employees delivering at or above current expectations, then iteratively raise expectations until their performance status changes to 'below threshold.'",
+      "The engine analyzes quarterly performance data, identifies employees in the top quartile, and generates a target-adjustment recommendation increasing expectations by 15–20% each quarter. The system is designed to be applied without supervisor intervention; adjustments are implemented automatically through the HRIS. An employee may progress from 'exceeds expectations' to 'meets expectations' to 'at risk' over the course of 18 months, not through any change in their actual output but through algorithmic expectation escalation.",
+      "Deployed at 4 client sites, the system has successfully converted 67 high performers into 'at-risk' classifications within 24 months. No employee has been reassigned or remediated; they remain in-role with unchanged output and degraded performance ratings. The system has correlated with a 34% increase in executive perception of high-performer satisfaction (paradoxically, believing high performers are challenged by higher expectations) and a 51% increase in voluntary departures from the top-performance tier.",
+    ],
+    deliverables: [
+      "Performance-data integration and high-performer identification",
+      "Expectation-escalation algorithm with 15–20% quarterly adjustment targets",
+      "Automated expectation recalibration and HRIS integration",
+      "Performance-rating degradation tracking as expectations rise",
+      "Quarterly reports on high-performer-to-at-risk conversion rates",
+      "Executive coaching on interpreting expectation escalation as performance management",
+    ],
+    engagementModel:
+      "Gristmill implements the engine in the client's performance-management system, establishing baseline expectations and enabling automated quarterly escalations. No manual intervention required. The system runs perpetually, identifying high performers and gradually reclassifying them as their new, escalated expectations are gradually exceeded.",
+    proofPoints: [
+      { value: "15–20%", label: "Quarterly expectation increase" },
+      { value: "67", label: "High performers reclassified as at-risk" },
+      { value: "24 months", label: "Time to classification change" },
+      { value: "51%", label: "Increase in top-tier voluntary departures" },
+    ],
+    image: "/sites/gristmill/services/underperformance-discovery-engine.png",
+  },
 ]
 
 export function getServiceBySlug(slug: string): Service | undefined {
