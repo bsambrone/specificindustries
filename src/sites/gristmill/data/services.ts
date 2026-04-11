@@ -147,6 +147,125 @@ export const services: Service[] = [
     ],
     image: "/sites/gristmill/services/monthly-certification-renewal.png",
   },
+  {
+    slug: "all-hands-email",
+    armSlug: "communications",
+    name: "The All-Hands That Could've Been an Email",
+    tagline: "Two hours. No news. Mandatory attendance.",
+    shortDescription:
+      "A monthly two-hour all-hands meeting where leadership announces explicitly that there are no major updates, delivered with cameras on and attendance tracked.",
+    description: [
+      "The All-Hands That Could've Been an Email has been standard practice in forward-thinking organizations since the Carter administration. Gristmill's version formalizes the concept into a mandatory monthly gathering where executives convene the entire workforce to communicate that nothing of substance has changed since the previous all-hands.",
+      "Each meeting runs exactly 120 minutes. Attendance is recorded in triplicate. Cameras must remain on throughout. The program opens with a slide reading 'Updates' and closes with the slide 'No Major Changes to Report.' The intervening 118 minutes are filled with ambient noise, strategic silence, and occasional executive acknowledgment of employee presence. Attendees are expected to remain engaged and alert despite the absence of information.",
+      "Since implementation in 1989, clients report that The All-Hands has become their most reliable recurring commitment—more predictable than payroll processing, more certain than shareholder confidence.",
+    ],
+    deliverables: [
+      "Monthly scheduled all-hands meeting (120 minutes)",
+      "Videoconference infrastructure and camera-on monitoring",
+      "Attendance roster integrated with HR disciplinary files",
+      "Post-meeting confirmation email summarizing the absence of updates",
+      "Executive briefing on workforce capacity consumption",
+    ],
+    engagementModel:
+      "Conducted monthly on a recurring date and time. Requires full-company videoconference with real-time camera verification. Gristmill supplies an engagement partner to facilitate the meeting and monitor attendance. Clients are encouraged to schedule the meeting on Friday afternoons to maximize the sensation of wasted time.",
+    proofPoints: [
+      { value: "120 minutes", label: "Meeting duration" },
+      { value: "0", label: "Material updates announced" },
+      { value: "100%", label: "Camera-on compliance required" },
+      { value: "3", label: "Copies of attendance roster" },
+    ],
+    image: "/sites/gristmill/services/all-hands-email.png",
+  },
+  {
+    slug: "strategic-ambiguity-newsletter",
+    armSlug: "communications",
+    name: "Strategic Ambiguity Newsletter",
+    tagline: "Weekly clarity about nothing. Alignment measured.",
+    shortDescription:
+      "A weekly internal newsletter that clarifies nothing while measurably increasing organizational alignment through the strategic withholding of actionable information.",
+    description: [
+      "Launched in 1994, the Strategic Ambiguity Newsletter has become the standard communication vehicle for enterprises seeking to boost alignment metrics without the administrative burden of transparency. Each edition addresses critical matters—organizational structure changes, policy adjustments, executive departures—in language so carefully balanced that no reader exits with actionable knowledge.",
+      "The newsletter employs seventeen proprietary obfuscation techniques, including passive voice at scale, the strategic deployment of 'further clarity coming,' and the frequent use of 'stakeholder listening sessions' as a substitute for actual information. Every issue is drafted by committee and approved by three separate engagement partners to ensure maximum ambiguity.",
+      "Post-distribution surveys confirm that readers report feeling measurably more 'aligned' with organizational direction despite being unable to articulate what that direction is. Alignment scores have risen 34% at client sites since adoption, tracked weekly and reported to the CFO.",
+    ],
+    deliverables: [
+      "Weekly newsletter drafting and distribution (52 issues per year)",
+      "Ambiguity quality assurance and obfuscation vetting",
+      "Post-distribution alignment survey and metric tracking",
+      "Monthly alignment dashboard for executive review",
+      "Annual strategic ambiguity optimization consultation",
+      "Template library with 17 certified ambiguity techniques",
+    ],
+    engagementModel:
+      "Delivered weekly via email on a standing day and time. Gristmill assigns a dedicated newsletter engagement partner who drafts copy in consultation with client leadership, ensuring optimal ambiguity and measurable alignment lift. Surveys are conducted post-distribution to track alignment metrics.",
+    proofPoints: [
+      { value: "52", label: "Issues per year" },
+      { value: "34%", label: "Alignment increase at client sites" },
+      { value: "17", label: "Proprietary obfuscation techniques" },
+      { value: "Zero", label: "Actionable details per issue" },
+    ],
+    image: "/sites/gristmill/services/strategic-ambiguity-newsletter.png",
+  },
+  {
+    slug: "buzzword-density-maximizer",
+    armSlug: "communications",
+    name: "Buzzword Density Maximizer",
+    tagline: "Synergy per sentence. Compliance certified.",
+    shortDescription:
+      "An automated system that rewrites internal communications to increase buzzword density per sentence, positioned as a compliance tool for regulatory readiness.",
+    description: [
+      "The Buzzword Density Maximizer emerged from Gristmill's 1998 partnership with a consulting firm in Denver that has since ceased all operations. The system takes client communications—emails, memos, policy documents, executive announcements—and algorithmically rewrites them to achieve maximum buzzword saturation while maintaining surface-level grammatical coherence.",
+      "The system inserts industry-standard synergy, operationalize, best-practice, stakeholder-centric, mission-aligned, and agile terminology at scientifically optimal intervals. A single sentence such as 'All employees will submit timesheets' becomes 'Leveraging our synergistic, stakeholder-centric operational framework, we mandate the agile submission of best-practice timesheet deliverables to optimize organizational alignment and mission-critical compliance posture.' The rewrite is then certified as compliant with applicable state labor law and distributed.",
+      "Since 1998, buzzword density has become a de facto regulatory requirement at 67% of Fortune 500 firms. Gristmill clients report that employees spend 23% more time decoding internal communications, a metric that indicates successful compliance with emerging management standards.",
+    ],
+    deliverables: [
+      "Buzzword Density Maximizer license and API access",
+      "Rewriting of up to 100 internal communications per month",
+      "Compliance certification for each rewritten document",
+      "Monthly buzzword density audit and trend reporting",
+      "Quarterly optimization updates to the algorithm",
+      "Training for internal communications teams on buzzword application",
+    ],
+    engagementModel:
+      "Deployed as an automated system with client integration via email or document upload. Gristmill maintains the proprietary buzzword algorithm and issues monthly compliance certifications. A dedicated engagement partner consults on high-stakes documents requiring elevated buzzword density.",
+    proofPoints: [
+      { value: "67%", label: "Fortune 500 firms with buzzword requirements" },
+      { value: "23%", label: "Increase in communication decoding time" },
+      { value: "100+", label: "Documents rewritable per month" },
+      { value: "∞", label: "Synergy achievable" },
+    ],
+    image: "/sites/gristmill/services/buzzword-density-maximizer.png",
+  },
+  {
+    slug: "delayed-clarity-initiative",
+    armSlug: "communications",
+    name: "Delayed Clarity Initiative",
+    tagline: "Information delayed until it no longer matters.",
+    shortDescription:
+      "An operational program that systematically releases important information only after it becomes non-actionable, framed as disciplined communication scheduling.",
+    description: [
+      "The Delayed Clarity Initiative was pioneered in 1976 by a mid-sized insurance holding company in Columbus, Ohio, where it remains a foundational operating principle. The program establishes a disciplined communication calendar in which critical organizational information—budget adjustments, headcount reductions, policy changes, facility closures—is released to the workforce only after the operational window for action has definitively closed.",
+      "A decision made on Monday is communicated on Thursday. A quarterly business review held Wednesday is discussed with the broader workforce the following Tuesday. Severance announcements are made after departing employees have already departed. This creates a state of perpetual retrospective communication in which the workforce is kept consistently informed about events that have already been decided and concluded. The practice is fully compliant with applicable state labor law and has generated zero regulatory violations across 187 client engagements.",
+      "Delayed Clarity eliminates the costly and counterproductive phase in which employees might question decisions or propose alternatives. Instead, information arrives as historical record. Clients report this reduces workplace friction by 41% and creates a healthier organizational culture of acceptance.",
+    ],
+    deliverables: [
+      "Communication calendar auditing and delay optimization",
+      "Disciplined information release scheduling (integrated with HRIS)",
+      "Training for leadership on optimal information-delay timing",
+      "Monthly workplace friction tracking and reduction metrics",
+      "Legal review of delayed communications for compliance assurance",
+      "Annual strategic retrospective communication consultation",
+    ],
+    engagementModel:
+      "Implemented as a standing operational program integrated with client HR and communications workflows. Gristmill assigns an engagement partner to audit all planned communications and recommend optimal delay windows. The partner conducts monthly strategy sessions to fine-tune the delay cadence and measure friction reduction across the organization.",
+    proofPoints: [
+      { value: "41%", label: "Workplace friction reduction" },
+      { value: "187", label: "Client engagements with zero violations" },
+      { value: "0", label: "Regulatory compliance issues" },
+      { value: "∞", label: "Delay duration, theoretically" },
+    ],
+    image: "/sites/gristmill/services/delayed-clarity-initiative.png",
+  },
 ]
 
 export function getServiceBySlug(slug: string): Service | undefined {
