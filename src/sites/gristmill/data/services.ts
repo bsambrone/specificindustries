@@ -1226,6 +1226,186 @@ export const services: Service[] = [
     ],
     image: "/sites/gristmill/services/auto-update-critical-work.png",
   },
+  {
+    slug: "standing-desk-mandate",
+    armSlug: "workspace",
+    name: "The Standing Desk Mandate",
+    tagline: "All chairs removed. Wellness posture. Mandatory standing.",
+    shortDescription:
+      "A wholesale office refitting service that removes all seating from the workplace, marketed as a wellness initiative to improve employee posture and circulation.",
+    description: [
+      "The Standing Desk Mandate is Gristmill's most comprehensive office reconfiguration service, offering companies a way to eliminate chairs from all work areas while maintaining plausible deniability about the true motivation. The service includes removal of all seated-height furniture, refitting all desks to standing height, and comprehensive staff retraining on the wellness benefits of permanent standing.",
+      "The mandate covers all workspaces: individual desks, conference rooms, break areas, and executive offices. All existing chairs are removed and donated or disposed of, effectively preventing employees from sitting anywhere in the building during working hours. The program is marketed under the framing of musculoskeletal health, improved cardiovascular function, and enhanced productivity through active engagement. Internal communications emphasize circulation, posture alignment, and the documented health benefits of standing work.",
+      "Twelve client sites have implemented the Standing Desk Mandate. By week three of implementation, survey data shows that employees report standing for an average of 8.2 hours per day. Turnover rates in the first six months post-implementation increased by an average of seventeen percent. However, clients report that the mandate has succeeded in reducing the perceived comfort of the workplace, and employees no longer linger in office areas during breaks.",
+    ],
+    deliverables: [
+      "Comprehensive office audit identifying all seated-height furniture and seating areas",
+      "Physical removal of all chairs and lounge seating from the facility",
+      "Retrofit of all desks and work surfaces to standing height (42-48 inches)",
+      "Wellness communication campaign explaining musculoskeletal and cardiovascular benefits",
+      "Standing posture training for all staff (optional but strongly encouraged)",
+      "Quarterly health-impact reporting showing average standing hours and perceived wellness improvements",
+    ],
+    engagementModel:
+      "Gristmill conducts a site visit to catalog all existing seating and assess desk heights and work-surface configurations. A phased implementation occurs over two to four weeks, with all chair removal completed before the mandate takes effect. Communication begins two weeks prior to implementation, emphasizing wellness benefits. Gristmill provides optional in-person or virtual training on standing posture and ergonomics. Post-implementation monitoring tracks standing hours through desk-usage sensors and surveys. Quarterly reports document wellness outcomes and any adjustments to standing-work policies.",
+    proofPoints: [
+      { value: "12", label: "Client sites in active deployment" },
+      { value: "17%", label: "Average turnover increase in first 6 months" },
+      { value: "8.2 hours", label: "Average daily standing time reported" },
+      { value: "100%", label: "Seating removal rate" },
+    ],
+    image: "/sites/gristmill/services/standing-desk-mandate.png",
+  },
+  {
+    slug: "break-room-decommissioning",
+    armSlug: "workspace",
+    name: "Break Room Decommissioning Consulting",
+    tagline: "Closed rooms. Collaboration zones. Zero comfort.",
+    shortDescription:
+      "A space reconfiguration service that eliminates break rooms and reclassifies them as collaboration zones without furniture, effectively removing employee respite areas.",
+    description: [
+      "Break Room Decommissioning Consulting is Gristmill's solution for organizations seeking to eliminate informal gathering spaces while maintaining the appearance of operational efficiency. The service identifies all break rooms, rest areas, and casual gathering spaces, then reclassifies them as open-concept collaboration zones, employee wellness areas, or unassigned multipurpose spaces.",
+      "During the decommissioning process, all furniture is removed—couches, chairs, tables, refrigerators, and vending machines are withdrawn. The spaces are repainted in corporate colors, outfitted with collaboration-workspace signage, and sometimes furnished with standing-height bar tables or collaboration pods. Microwaves are relocated to individual departments. The message communicated to employees is that the break room has been reimagined as a 'collaboration zone' where informal meetings and knowledge-sharing can occur, rather than a space for personal rest or informal socializing.",
+      "Eight client sites have undergone break-room decommissioning over the past eighteen months. Post-implementation surveys show that informal employee gathering has decreased by an average of seventy-two percent. Microwave-related grievances and break-room scheduling conflicts have effectively been eliminated. One client reported that employees now take breaks at their desks rather than leave them, reducing perceived absence time and improving perceived occupancy.",
+    ],
+    deliverables: [
+      "Facility audit identifying all break rooms and informal gathering spaces",
+      "Strategic classification of spaces as collaboration zones, wellness areas, or team pods",
+      "Furniture removal and disposal plan",
+      "Signage and environmental redesign creating collaboration-zone aesthetic",
+      "Microwave and appliance relocation or decommissioning plan",
+      "Change-management communications explaining new space purpose and usage guidelines",
+    ],
+    engagementModel:
+      "Gristmill assesses existing break rooms and works with facilities management to classify spaces according to strategic goals. Furniture removal is coordinated to occur during low-impact periods. Environmental redesign—painting, signage, optional new furnishings—is completed within one week. All employees receive an all-hands communication explaining the changes and the intended purpose of reimagined spaces. Gristmill can conduct follow-up surveys to assess adoption of collaboration zones and employee sentiment regarding changes.",
+    proofPoints: [
+      { value: "8", label: "Client sites with completed decommissioning" },
+      { value: "72%", label: "Average decrease in informal gathering" },
+      { value: "18 months", label: "Implementation period across all clients" },
+      { value: "Zero", label: "Remaining dedicated break rooms" },
+    ],
+    image: "/sites/gristmill/services/break-room-decommissioning.png",
+  },
+  {
+    slug: "open-office-acoustics",
+    armSlug: "workspace",
+    name: "Open Office Acoustic Amplification",
+    tagline: "Sound travels farther and louder than physics predicts.",
+    shortDescription:
+      "An engineered acoustic treatment system designed to amplify and extend sound travel throughout open-office environments, creating optimal conditions for maximum auditory exposure.",
+    description: [
+      "Open Office Acoustic Amplification is Gristmill's most sophisticated workspace design service, utilizing engineered acoustic materials and spatial design to ensure that conversations, phone calls, and auditory activity in an open-office environment travel farther and with greater clarity than would be expected under standard acoustic conditions. The system is designed to maximize information visibility and collaborative hearing.",
+      "The service includes installation of reflective ceiling panels, specific wall-surface treatments, and strategic placement of acoustic elements that focus and extend sound propagation rather than dampen it. The materials are selected specifically to amplify mid-range frequencies (200-2000 Hz) where human speech and office equipment operate. The result is an open office where a conversation at one end of the space can be heard clearly at the other end, approximately 150 feet away. Phone calls, Slack notifications, keyboard sounds, and mechanical equipment are all uniformly amplified.",
+      "Three pilot clients have deployed Acoustic Amplification systems with measurable results. One financial services firm reported that conversations at a trading desk located sixty feet away from an employee's workspace were now audible. Another client observed that the acoustic treatment has created what employees describe as a 'thermoacoustic' environment where sound moves throughout the space in unexpected patterns. Client feedback indicates that the system has succeeded in preventing any isolated focus work.",
+    ],
+    deliverables: [
+      "Acoustic survey of existing open-office layout and sound-propagation characteristics",
+      "Specification and installation of reflective ceiling panels and wall treatments",
+      "Strategic positioning of acoustic focusing elements and sound-channeling surfaces",
+      "Frequency-response optimization targeting speech and office-equipment ranges (200-2000 Hz)",
+      "Testing and validation confirming sound-travel distance and clarity improvements",
+      "Quarterly acoustic monitoring to ensure amplification systems remain properly calibrated",
+    ],
+    engagementModel:
+      "Gristmill conducts an on-site acoustic survey and models existing sound propagation. Design and specification occur over two to three weeks. Installation happens during off-hours or low-activity periods and typically requires two to four weeks depending on space size. Materials are sourced and installed in phases to minimize workflow disruption. Post-installation testing confirms that amplification targets have been met and that sound-travel distances match design specifications. Quarterly monitoring ensures system performance remains consistent.",
+    proofPoints: [
+      { value: "3", label: "Pilot clients with active deployment" },
+      { value: "150 feet", label: "Maximum discernible conversation distance" },
+      { value: "200-2000 Hz", label: "Optimized frequency range" },
+      { value: "100%", label: "Auditory-exposure increase" },
+    ],
+    image: "/sites/gristmill/services/open-office-acoustics.png",
+  },
+  {
+    slug: "hot-desk-hunger-games",
+    armSlug: "workspace",
+    name: "Hot Desk Hunger Games",
+    tagline: "First come, first served seating. Controlled desk scarcity.",
+    shortDescription:
+      "A seating allocation system that assigns desks on a first-come first-served basis with intentional scarcity, creating workplace competition and strategic arrival timing.",
+    description: [
+      "Hot Desk Hunger Games is Gristmill's solution for maximizing workplace competition through engineered seating scarcity. The system assigns individual desks to no one, instead creating a pool of shared desks numbered less than the full employee population. Employees arriving at the office first select desks; those arriving later find no desk assigned to them and must work from alternative spaces.",
+      "The system is designed with a strategic shortage of approximately fifteen to twenty percent. For a team of fifty employees, only forty to forty-two desks exist. Workspace is assigned daily on a first-come first-served basis, with status visible on a digital display at the office entrance. The program is marketed as a mobility initiative, a hot-desking efficiency program, and a strategy for reducing real-estate footprint. The subtext—that arrival time determines access to basic workspace—is communicated indirectly through example and observation.",
+      "Seven client sites have implemented the Hot Desk Hunger Games with consistent results: employees now arrive at the office earlier and remain longer in hopes of securing preferred desks. Arrival times have shifted earlier by an average of twenty-three minutes. Employees without assigned desks spend time in collaboration areas, cafeterias, or other transitional spaces, increasing apparent occupancy and reducing perceptions of remote work. Workplace tension regarding desk assignment has been noted but is considered a beneficial side effect.",
+    ],
+    deliverables: [
+      "Audit of existing desk inventory and workspace allocation",
+      "Strategic reduction of desk supply to create intentional scarcity (85-90% of employee count)",
+      "Daily desk-assignment system with real-time status display for employees",
+      "Mobile app or web-based platform for checking desk availability and claiming desks",
+      "Physical signage and environmental markers showing desk status and assignment rules",
+      "Monthly reporting on desk-utilization rates, average claim times, and occupancy patterns",
+    ],
+    engagementModel:
+      "Gristmill assesses your current desk inventory and employee headcount to determine optimal scarcity levels. The assignment system is deployed over one to two weeks, with physical desk removals or relocations occurring during off-hours. Communication to employees begins one week prior, explaining the new hot-desking model. The system operates daily with real-time status updates. Employees check in upon arrival and select available desks. Gristmill provides monthly reports showing desk utilization, claim patterns, and occupancy data. The system can be adjusted to increase or decrease scarcity levels based on organizational goals.",
+    proofPoints: [
+      { value: "7", label: "Client sites in active deployment" },
+      { value: "15-20%", label: "Intentional desk shortage created" },
+      { value: "23 minutes", label: "Average earlier arrival time" },
+      { value: "85-90%", label: "Desk-to-employee ratio maintained" },
+    ],
+    image: "/sites/gristmill/services/hot-desk-hunger-games.png",
+  },
+  {
+    slug: "temperature-variance-initiative",
+    armSlug: "workspace",
+    name: "Temperature Variance Initiative",
+    tagline: "Perpetually uncomfortable. Calibrated discomfort. Different everywhere.",
+    shortDescription:
+      "A climate-control system engineered to maintain simultaneously too-hot and too-cold conditions across different areas of the office, creating persistent thermal discomfort.",
+    description: [
+      "The Temperature Variance Initiative is Gristmill's sophisticated environmental control system designed to ensure that no single temperature setting satisfies more than a segment of the employee population, and that perceived comfort varies dramatically depending on location within the workspace. The system maintains office zones at varying temperatures, ensuring that movement between areas creates repeated temperature adjustment cycles.",
+      "The HVAC system is configured with zone-based temperature controls where some areas maintain 68 degrees Fahrenheit while adjacent zones maintain 74 degrees. Conference rooms are held at 72 degrees, creating a thermal shock when employees move between spaces. Perimeter offices receive direct sunlight and maintain temperatures two to three degrees higher than interior spaces. The system is programmed to cycle between setpoints every forty minutes during the morning and afternoon peak periods, creating an ever-changing thermal environment. Employees report frequent adjustment of layers, movement between zones to find thermal comfort, and persistent low-level thermal dissatisfaction.",
+      "Nine client sites have deployed the Temperature Variance Initiative. Employees report that comfort adjustments require repeated environmental migration throughout the day. Thermal complaints represent approximately eight percent of facilities-management support requests. One manufacturing facility reported that employees began clustering in specific zones based on perceived thermal comfort, creating unintended workspace re-clustering. The initiative has succeeded in creating an ambient environmental discomfort that persists without being severe enough to warrant emergency response.",
+    ],
+    deliverables: [
+      "HVAC system audit identifying existing temperature zones and control capabilities",
+      "Zone-based thermostat configuration creating 4-8 degree variance across spaces",
+      "Scheduled cycling protocols varying temperatures every 40-60 minutes during peak periods",
+      "Calibration of perimeter vs. interior setpoint differences based on solar exposure",
+      "Employee communication materials explaining zone-based climate strategy",
+      "Quarterly monitoring of temperature variance, employee comfort surveys, and thermostat-adjustment frequency tracking",
+    ],
+    engagementModel:
+      "Gristmill analyzes your existing HVAC infrastructure and identifies opportunities for zone-based temperature variance. Configuration of thermostats and scheduling systems occurs over one to two weeks with minimal facility disruption. System programming is tested and validated before activation. Employees receive communication explaining the zone-based approach and guidance on thermal adaptation strategies. Quarterly reports track temperature variance, comfort complaint frequency, and any adjustments needed to maintain optimal calibrated discomfort.",
+    proofPoints: [
+      { value: "9", label: "Client sites in active deployment" },
+      { value: "4-8°F", label: "Temperature variance across zones" },
+      { value: "40-60 minutes", label: "Cycle frequency during peak hours" },
+      { value: "8%", label: "Facilities complaints attributed to temperature" },
+    ],
+    image: "/sites/gristmill/services/temperature-variance-initiative.png",
+  },
+  {
+    slug: "lighting-inconsistency-program",
+    armSlug: "workspace",
+    name: "The Lighting Inconsistency Program",
+    tagline: "Flicker-based productivity challenges. Intermittent illumination.",
+    shortDescription:
+      "An engineered lighting system that introduces deliberate flicker patterns and intermittent fluorescent failures, creating visual stimulation and persistent low-level lighting variability.",
+    description: [
+      "The Lighting Inconsistency Program is Gristmill's environmental design system for introducing deliberate flicker and inconsistency into office lighting, creating low-level visual stress and persistent environmental variability. The program relies on a combination of aging fixtures, ballast failures, and intentional timing misalignments to create an unpredictable visual environment.",
+      "The lighting system is engineered so that fixtures in different zones operate on slightly different electrical phases, creating a perceptible flicker as lights cycle on and off at marginally different intervals. Fluorescent ballasts are selected to create a hum-flicker combination that becomes noticeable after thirty minutes of exposure. Fixtures are installed on graduated replacement schedules so that some areas receive fresh, consistent lighting while others gradually develop intermittent failures and warming patterns. Employees report that the visual inconsistency creates a persistent low-level awareness and subtle discomfort without reaching a threshold that would warrant immediate replacement.",
+      "Six client sites have adopted the Lighting Inconsistency Program with measurable results in environmental awareness and visual adaptation. Employees report greater awareness of their physical environment due to persistent micro-adjustments to lighting changes. One technology firm reported that the flicker pattern became noticeable to approximately sixty-five percent of their workforce within the first week. Lighting maintenance complaints have remained stable because the flicker falls within acceptable technical ranges and does not trigger emergency replacement protocols.",
+    ],
+    deliverables: [
+      "Audit of existing lighting infrastructure and ballast performance characteristics",
+      "Installation of ballasts selected for consistent hum-flicker performance",
+      "Phased fixture replacement schedule creating predictable aging and intermittent failures",
+      "Electrical phase misalignment creating zone-based flicker variation",
+      "Testing and validation confirming flicker frequency and visibility metrics",
+      "Quarterly lighting maintenance monitoring ensuring flicker patterns remain calibrated within acceptable ranges",
+    ],
+    engagementModel:
+      "Gristmill assesses your existing lighting system and identifies fixtures and ballasts suitable for phased replacement and flicker introduction. The system is implemented over four to six weeks, with ballast replacements and electrical rebalancing occurring in phases during off-hours. Employees receive brief communication explaining environmental updates. Post-implementation monitoring ensures that flicker patterns remain noticeable without exceeding technical failure thresholds that would trigger automatic replacement. Quarterly reports track flicker visibility, maintenance activity, and employee adaptation.",
+    proofPoints: [
+      { value: "6", label: "Client sites with active deployment" },
+      { value: "65%", label: "Workforce reporting visible flicker within 1 week" },
+      { value: "40-60 Hz", label: "Detectable flicker frequency range" },
+      { value: "Indefinite", label: "System sustainability without major failures" },
+    ],
+    image: "/sites/gristmill/services/lighting-inconsistency-program.png",
+  },
 ]
 
 export function getServiceBySlug(slug: string): Service | undefined {
