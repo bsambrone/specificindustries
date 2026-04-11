@@ -12,7 +12,7 @@ import { config as cleansheetConfig, pages as cleansheetPages } from "./cleanshe
 import { config as snortablesConfig, pages as snortablesPages, dynamicRoutes as snortablesDynamicRoutes } from "./snortables"
 import { config as mousetrapjengaConfig, pages as mousetrapjengaPages, dynamicRoutes as mousetrapjengaDynamicRoutes } from "./mousetrapjenga"
 import { config as onlyfansConfig, pages as onlyfansPages, dynamicRoutes as onlyfansDynamicRoutes } from "./onlyfans"
-import { config as onlypansConfig, pages as onlypansPages } from "./onlypans"
+import { config as onlypansConfig, pages as onlypansPages, dynamicRoutes as onlypansDynamicRoutes } from "./onlypans"
 
 export const siteRegistry: Record<string, SiteModule> = {
   apex: { config: apexConfig, pages: apexPages },
@@ -28,7 +28,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   snortables: { config: snortablesConfig, pages: snortablesPages, dynamicRoutes: snortablesDynamicRoutes },
   mousetrapjenga: { config: mousetrapjengaConfig, pages: mousetrapjengaPages, dynamicRoutes: mousetrapjengaDynamicRoutes },
   onlyfans: { config: onlyfansConfig, pages: onlyfansPages, dynamicRoutes: onlyfansDynamicRoutes },
-  onlypans: { config: onlypansConfig, pages: onlypansPages },
+  onlypans: { config: onlypansConfig, pages: onlypansPages, dynamicRoutes: onlypansDynamicRoutes },
 }
 
 export type SubdomainKey = keyof typeof siteRegistry
