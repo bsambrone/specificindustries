@@ -38,25 +38,25 @@ export default function FanDetail({ slug }: FanDetailProps) {
 
       {/* Profile header */}
       <div className="max-w-4xl mx-auto px-4">
-        <div className="-mt-12 md:-mt-16 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-          <div className="flex items-end gap-4">
-            <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white bg-slate-200 shadow-md">
-              <Image src={fan.avatarImage} alt={fan.name} fill sizes="128px" className="object-cover" />
-            </div>
-            <div className="pb-2">
-              <h1 className="text-2xl md:text-3xl font-extrabold text-[#0F172A] flex items-center gap-2">
-                {fan.name}
-                <span className="text-[#00AFF0]" aria-hidden>●</span>
-              </h1>
-              <p className="text-sm text-slate-500">
-                {fan.handle} · {fan.location}
-              </p>
-              <p className="text-xs text-slate-500">
-                {fan.fanType} · {fan.subscriberCount.toLocaleString()} subscribers
-              </p>
-            </div>
+        {/* Avatar pops up into the banner; text sits below the cover */}
+        <div className="relative -mt-12 md:-mt-16 w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white bg-slate-200 shadow-md">
+          <Image src={fan.avatarImage} alt={fan.name} fill sizes="128px" className="object-cover" />
+        </div>
+
+        <div className="mt-3 flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+          <div className="min-w-0">
+            <h1 className="text-2xl md:text-3xl font-extrabold text-[#0F172A] flex items-center gap-2">
+              <span className="truncate">{fan.name}</span>
+              <span className="text-[#00AFF0] flex-shrink-0" aria-hidden>●</span>
+            </h1>
+            <p className="mt-1 text-sm text-slate-500">
+              {fan.handle} · {fan.location}
+            </p>
+            <p className="text-xs text-slate-500">
+              {fan.fanType} · {fan.subscriberCount.toLocaleString()} subscribers
+            </p>
           </div>
-          <div className="md:pb-2">
+          <div className="flex-shrink-0">
             <SubscribeButton fanSlug={fan.slug} fanName={fan.name} monthlyPrice={fan.monthlyPrice} size="lg" />
           </div>
         </div>
