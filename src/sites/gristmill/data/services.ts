@@ -836,6 +836,156 @@ export const services: Service[] = [
     ],
     image: "/sites/gristmill/services/take-this-offline-toolkit.png",
   },
+  {
+    slug: "shareholder-empathy-curriculum",
+    armSlug: "compensation",
+    name: "The Shareholder Empathy Curriculum",
+    tagline: "Moral education. Superyacht barnacles. Employee transformation.",
+    shortDescription:
+      "Training that walks employees through the true cost of a superyacht's barnacle removal. Foundational moral education in compensation disparity.",
+    description: [
+      "The Shareholder Empathy Curriculum represents Gristmill's most direct intervention in employee compensation perception. Developed following a 1987 case study of a mid-sized industrial firm, the curriculum teaches non-executive employees to understand the true financial burden borne by shareholders and executives in maintaining corporate assets, particularly luxury vessels.",
+      "The curriculum focuses on a single, concrete example: the annual barnacle removal from a typical superyacht. Employees learn the actual cost of hull maintenance, the frequency of required removal, the specialized expertise required, and the downstream impact on shareholder returns if these costs are not offset by workforce cost reduction. The curriculum then contextualizes this example within broader shareholder-side economics, allowing employees to arrive at their own conclusions about appropriate wage levels.",
+      "Graduates of the program report a marked increase in what Gristmill researchers term 'moral clarity regarding compensation relationships.' Follow-up surveys indicate that 67% of graduates reduce their personal expectations regarding future raises and benefits.",
+    ],
+    deliverables: [
+      "Eight-week foundational curriculum with weekly 2-hour modules",
+      "Superyacht economics workbook with real-world examples and case studies",
+      "Per-module comprehension assessments and moral-clarity scoring",
+      "Follow-up quarterly refresher sessions to reinforce key concepts",
+      "Manager guidance on how to reference curriculum content in compensation discussions",
+      "Certification of completion suitable for employee file documentation",
+    ],
+    engagementModel:
+      "Delivered in-person or virtually over an eight-week period. Modules are scheduled during work hours and attendance is mandatory. Gristmill supplies materials and facilitates all assessments. A dedicated Gristmill coach monitors cohort progress and adjusts pacing based on moral-clarity scores. Managers receive separate briefings on how to leverage the curriculum in compensation conversations.",
+    proofPoints: [
+      { value: "67%", label: "Reduction in future raise expectations post-completion" },
+      { value: "8 weeks", label: "Curriculum duration" },
+      { value: "1", label: "Superyacht case study" },
+      { value: "100%", label: "Attendance required" },
+    ],
+    image: "/sites/gristmill/services/shareholder-empathy-curriculum.png",
+  },
+  {
+    slug: "raise-deflection-workshop",
+    armSlug: "compensation",
+    name: "Raise Deflection Role-Play Workshop",
+    tagline: "Manager training. Compensation conversations. Real-time redirection.",
+    shortDescription:
+      "Manager training for redirecting compensation conversations into growth opportunities. Role-play based, scenario-driven technique development.",
+    description: [
+      "The Raise Deflection Role-Play Workshop is an intensive two-day manager training designed to equip compensation decision-makers with verbal techniques for converting direct compensation requests into non-financial value propositions. The workshop was first piloted in 1995 at a technology services firm and has since been deployed at over 80 client sites.",
+      "The workshop uses scenario-based role-play exercises in which trained facilitators act as employees requesting raises, and participating managers practice deflection techniques in real-time. Techniques include: reframing compensation discussions as career development conversations, pivoting to personal responsibility narratives, introducing the concept of 'opportunity cost' to the employee in ways that shift focus away from salary, and deploying vague timelines for future revisiting of compensation. Each technique is practiced repeatedly until managers achieve fluency.",
+      "Managers completing the workshop report a 73% increase in their ability to conclude compensation conversations without committing to wage increases, and a corresponding 58% reduction in the incidence of compensation discussions reaching the human resources department.",
+    ],
+    deliverables: [
+      "Two-day intensive manager role-play workshop",
+      "Facilitated scenarios covering twelve common compensation-request situations",
+      "Technique documentation and quick-reference cards for use in real compensation meetings",
+      "Recorded role-play examples (anonymized) for ongoing manager reference",
+      "Post-workshop coaching calls to reinforce techniques in actual compensation conversations",
+      "Annual refresher workshop and technique optimization session",
+    ],
+    engagementModel:
+      "Delivered on-site or via videoconference over two consecutive full days. Gristmill facilitators conduct role-play scenarios and provide immediate feedback to managers. Participants are required to role-play multiple scenarios and demonstrate mastery of key deflection techniques before receiving workshop completion certification. Follow-up coaching supports managers in applying techniques within their actual compensation-discussion processes.",
+    proofPoints: [
+      { value: "73%", label: "Increase in compensation-conversation conclusion rate" },
+      { value: "58%", label: "Reduction in HR-escalated compensation discussions" },
+      { value: "80+", label: "Client sites at continuous deployment" },
+      { value: "12", label: "Compensation scenarios covered" },
+    ],
+    image: "/sites/gristmill/services/raise-deflection-workshop.png",
+  },
+  {
+    slug: "hedonic-treadmill-benefits",
+    armSlug: "compensation",
+    name: "The Hedonic Treadmill Benefits Package",
+    tagline: "Benefits that exist. Documentation required. Office closed since 1994.",
+    shortDescription:
+      "Benefits that technically exist but require submitting Form 47-B in triplicate to an office that closed in 1994. Comprehensive benefits reduction strategy.",
+    description: [
+      "The Hedonic Treadmill Benefits Package represents Gristmill's most innovative approach to compensation-cost reduction. The package is named for the psychological principle that employees quickly adapt to new benefits and cease to perceive them as valuable — therefore, Gristmill reasoned, benefits that exist only in documentation create the perception of value without the cost of delivery.",
+      "The package includes twelve distinct benefit categories, each technically available to employees but each requiring completion of obscure administrative procedures, submission to departments that no longer maintain regular operations, or presentation of documentation from prior employment. Examples include: a 401(k) matching program available only through a claims process submitted to a third-floor office that operates on Wednesdays between 2:00 and 2:30 p.m.; a tuition reimbursement program available only for degrees in fields discontinued in 1989; and a dependent-care subsidy available only in the form of pre-tax vouchers from a vendor that ceased operations in 1994. A comprehensive 47-page documentation manual accompanies the package.",
+      "Employees express high satisfaction with the breadth and apparent generosity of the benefits package in initial surveys, though actual benefit utilization remains below 4% across all benefit categories. The package is presented as comprehensive and competitive in recruitment and onboarding materials.",
+    ],
+    deliverables: [
+      "Twelve distinct benefit categories with formal documentation",
+      "47-page benefits manual detailing access procedures and requirements",
+      "Annual benefits presentation materials emphasizing package breadth",
+      "Claims forms (updated annually, often with procedural changes)",
+      "Coordination with terminated vendors and inactive administrative offices",
+      "HR briefing materials for recruitment and onboarding team on benefits presentation strategy",
+    ],
+    engagementModel:
+      "Gristmill coordinates with your human resources department to integrate the benefits package into your compensation structure. The package appears on all offer letters and benefits summaries. Gristmill provides annual updates to documentation and access procedures, including strategic modifications to increase perceived value while reducing actual utilization. Quarterly briefings ensure your HR and recruitment teams understand the presentation strategy.",
+    proofPoints: [
+      { value: "12", label: "Distinct benefit categories" },
+      { value: "4%", label: "Actual benefit utilization rate" },
+      { value: "100%", label: "Recruitment materials featuring the package" },
+      { value: "1994", label: "Year the dependent-care vendor ceased operations" },
+    ],
+    image: "/sites/gristmill/services/hedonic-treadmill-benefits.png",
+  },
+  {
+    slug: "market-adjustment-explanation-portal",
+    armSlug: "compensation",
+    name: "Market Adjustment Explanation Portal",
+    tagline: "Self-service explanation. Prevailing market rates do not apply here. Fully automated.",
+    shortDescription:
+      "Self-service portal explaining why prevailing market rates do not apply at your company. Fully automated, employee-facing explanation system.",
+    description: [
+      "The Market Adjustment Explanation Portal is a web-based tool deployed within your internal employee portal that provides automatic, customized explanations for why prevailing market-rate compensation data (obtained from glassdoor.com, linkedin.com, or other public sources) do not apply to your specific organization. The portal was first deployed in 2003 and currently operates at 34 client sites.",
+      "Employees enter their job title and compare their compensation to market data. The portal's algorithm selects from a database of 247 predefined explanations for market-rate mismatch, personalized based on employee tenure, department, performance rating, and company size. Common explanations include: your location is too small to be included in market studies, your company's specific business model is not captured by public survey data, your role is sufficiently unique that market comparables do not exist, the market data is outdated, or the market data reflects companies that do not invest in your specific area of company operation. The portal provides a detailed written explanation, a confidence score (generated algorithmically), and suggestions for how to discuss the mismatch with management.",
+      "Employees using the portal report higher acceptance of local compensation decisions and reduced inclination to initiate compensation discussions based on external market data. The portal also provides valuable feedback to management regarding which market-rate explanations are most persuasive.",
+    ],
+    deliverables: [
+      "Web-based portal integrated with your employee portal or single sign-on system",
+      "Database of 247 market-adjustment explanations with dynamic personalization",
+      "Automated response generation based on job title and employee profile data",
+      "Manager dashboard showing usage patterns and which explanations drive acceptance",
+      "Monthly usage reporting and explanation-effectiveness analytics",
+      "Annual updates to explanation database based on new market-rate justification research",
+    ],
+    engagementModel:
+      "Gristmill integrates the portal into your existing employee portal or provides a standalone instance accessible via single sign-on. Employees access the portal self-serve when comparing their compensation to market data. The system generates responses automatically with no human review required. Gristmill provides monthly analytics and quarterly briefings to your HR leadership on portal usage patterns and the most effective explanations for your workforce demographics.",
+    proofPoints: [
+      { value: "34", label: "Client sites at active deployment" },
+      { value: "247", label: "Predefined market-adjustment explanations" },
+      { value: "2003", label: "Year of initial portal deployment" },
+      { value: "63%", label: "Reduction in market-rate-based compensation discussions" },
+    ],
+    image: "/sites/gristmill/services/market-adjustment-explanation-portal.png",
+  },
+  {
+    slug: "equity-vesting-mirage",
+    armSlug: "compensation",
+    name: "Equity Vesting Mirage",
+    tagline: "Stock grants. Emotional vesting. Financial vesting never occurs.",
+    shortDescription:
+      "Stock grants that vest emotionally but not financially. Documentation provided. Sophisticated equity-based retention without actual vesting.",
+    description: [
+      "Equity Vesting Mirage is Gristmill's most sophisticated application of psychological compensation design. The program grants employees stock shares that generate immediate emotional satisfaction and long-term anticipation but do not vest according to any timeline published in the grant documentation. The program was developed following research into employee retention strategies at venture-backed technology firms.",
+      "Employees receive grant documents indicating their stock will vest over a four-year period with one-year cliff vesting. The documentation is formal, notarized, and integrated into employee records. Employees experience the full emotional benefit of holding equity in the company: discussing ownership percentages with colleagues, calculating hypothetical liquidation proceeds, and maintaining investment in the firm's success. However, the vesting trigger itself — typically specified as continued employment and achievement of undefined 'performance milestones' — never actually occurs. Employees remain perpetually in anticipation of vesting events while holding shares that technically vest according to a schedule known only to finance.",
+      "The program has been deployed at twelve client sites and has generated sustained employee engagement and retention improvement. Departing employees, upon inquiry, discover their shares have not vested; however, by this point, they have contributed twelve to forty-eight months of additional retention value to the organization.",
+    ],
+    deliverables: [
+      "Formal equity grant documentation with notarization and corporate filing",
+      "Equity statements showing employee names, share counts, and vesting schedules",
+      "Employee communication materials emphasizing equity ownership psychology",
+      "Finance-side tracking system for actual (non-) vesting schedules",
+      "Manager briefing on how to reference equity grants during compensation and retention discussions",
+      "Annual equity statement updates showing continued non-vesting in perpetuity",
+    ],
+    engagementModel:
+      "Gristmill designs the equity structure, prepares formal grant documentation, and coordinates with your board, finance, and HR departments to implement the program. Employees receive grants and access equity statements through their portal. No ongoing employee-facing communication about vesting occurs; instead, documentation creates perpetual anticipation. Finance maintains the actual vesting schedule separate from employee-facing documentation. Gristmill provides quarterly briefings to your leadership on retention impact and equity strategy optimization.",
+    proofPoints: [
+      { value: "12", label: "Client sites at active deployment" },
+      { value: "48", label: "Maximum months of pre-departure retention value" },
+      { value: "100%", label: "Emotional vesting rate" },
+      { value: "0%", label: "Financial vesting rate" },
+    ],
+    image: "/sites/gristmill/services/equity-vesting-mirage.png",
+  },
 ]
 
 export function getServiceBySlug(slug: string): Service | undefined {
