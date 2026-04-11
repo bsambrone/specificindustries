@@ -10,6 +10,7 @@ import { articles as elderpartyArticles } from "@/sites/elderparty/data/news"
 import { products as snortablesProducts } from "@/sites/snortables/data/products"
 import { products as mousetrapjengaProducts } from "@/sites/mousetrapjenga/data/products"
 import { fans as onlyfansFans } from "@/sites/onlyfans/data/fans"
+import { pans as onlypansPans } from "@/sites/onlypans/data/pans"
 import { shares } from "@/sites/grassfedwifi/data/shares"
 import { fieldNotes } from "@/sites/grassfedwifi/data/field-notes"
 import { solutions as strategicvoidSolutions } from "@/sites/strategicvoid/data/solutions"
@@ -60,6 +61,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // OnlyFans: fan profile pages at /browse/{slug}
   for (const fan of onlyfansFans) {
     urls.push({ url: siteUrl("onlyfans", `browse/${fan.slug}`) })
+  }
+
+  // OnlyPans: pan profile pages at /browse/{slug}
+  for (const pan of onlypansPans) {
+    urls.push({ url: siteUrl("onlypans", `browse/${pan.slug}`) })
   }
 
   // Grass Fed WiFi: shares, field notes
