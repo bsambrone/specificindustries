@@ -1,8 +1,16 @@
 import Image from "next/image"
+import { executives } from "../data/leadership"
 
 export const metadata = {
   title: "Contact — OnlyFans",
   description: "Contact the OnlyFans team. Please be respectful when contacting a fan's representation.",
+}
+
+const contactNotes: Record<string, string> = {
+  hatcher: "Prefers not to be reached",
+  wexley: "Checks email inconsistently",
+  castellan: "Do not mention the platform",
+  morrow: "Between assignments (his words)",
 }
 
 export default function OnlyFansContact() {
@@ -14,14 +22,32 @@ export default function OnlyFansContact() {
           Our four-person executive team is here to help. They are usually here, mostly on accident.
         </p>
 
-        <div className="relative aspect-[3/2] rounded-2xl overflow-hidden mt-10 bg-slate-100">
-          <Image
-            src="/sites/onlyfans/contact-conference.png"
-            alt="Four executives in a conference room, visibly ashamed"
-            fill
-            sizes="(min-width: 1024px) 768px, 100vw"
-            className="object-cover"
-          />
+        <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+          {executives.map((exec) => (
+            <div
+              key={exec.slug}
+              className="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden flex flex-col"
+            >
+              <div className="relative aspect-square bg-slate-200">
+                <Image
+                  src={exec.image}
+                  alt={exec.name}
+                  fill
+                  sizes="(min-width: 768px) 25vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-3 text-center">
+                <div className="font-bold text-[#0F172A] text-sm">{exec.name}</div>
+                <div className="text-[10px] text-[#0095CD] font-semibold uppercase tracking-wide mt-0.5">
+                  {exec.title}
+                </div>
+                <div className="text-[10px] italic text-slate-500 mt-2">
+                  {contactNotes[exec.slug] ?? "Unavailable"}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
