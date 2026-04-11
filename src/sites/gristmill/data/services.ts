@@ -986,6 +986,126 @@ export const services: Service[] = [
     ],
     image: "/sites/gristmill/services/equity-vesting-mirage.png",
   },
+  {
+    slug: "mandatory-fun-week",
+    armSlug: "engagement",
+    name: "Mandatory Fun Week",
+    tagline: "One full week. Enforced recreation. Performance reviews tracked.",
+    shortDescription:
+      "One full week of enforced recreational activities with participation tracked and factored into performance reviews. Structured enjoyment with compliance verification.",
+    description: [
+      "Mandatory Fun Week is Gristmill's flagship engagement program, designed to deliver measurable morale improvements through the controlled application of entertainment and social obligation. First deployed in 1971 at a food-processing facility in Iowa, the program has since been rolled out at forty-three client locations across manufacturing, financial services, and industrial sectors.",
+      "During the designated week, employees rotate through a series of compulsory recreational activities scheduled during working hours: team-building exercises, group meals, outdoor games, and talent showcases. Participation is mandatory, and attendance is tracked down to the minute. Managers assess each employee's enthusiasm level on a five-point scale and file reports with HR. Employees who exhibit substandard enthusiasm during activities are flagged for follow-up discussions during their annual performance reviews.",
+      "Client sites report sustained improvements in perceptions of company culture and reduced voluntary turnover during the measurement period immediately following Mandatory Fun Week. The program has also been shown to identify and surface 'cultural alignment concerns' before they become retention liabilities.",
+    ],
+    deliverables: [
+      "One-week schedule of enforced recreational activities and team-building events",
+      "Logistics coordination for all activities, venues, meals, and transportation",
+      "Attendance tracking system with real-time reporting for managers and HR",
+      "Manager briefing on enthusiasm assessment protocols and documentation",
+      "Printed participation certificates for all employees",
+      "Post-week survey and participation analytics delivered to company leadership",
+    ],
+    engagementModel:
+      "Gristmill designs the week-long activity schedule in coordination with your HR and operations teams, selecting activities that maximize participation and visibility. Managers receive training on how to assess and document enthusiasm levels. All activities occur during standard working hours with mandatory attendance. Participation data is recorded in real time and made available to HR for performance review integration. Gristmill provides guidance on how to reference fun-week participation during compensation discussions and retention conversations.",
+    proofPoints: [
+      { value: "43", label: "Client sites at active deployment" },
+      { value: "1971", label: "Year of first deployment" },
+      { value: "5", label: "Point enthusiasm-assessment scale" },
+      { value: "100%", label: "Mandatory attendance requirement" },
+    ],
+    image: "/sites/gristmill/services/mandatory-fun-week.png",
+  },
+  {
+    slug: "corporate-trivia-career-impacting",
+    armSlug: "engagement",
+    name: "Corporate Trivia Night (Career-Impacting)",
+    tagline: "Trivia. Wrong answers logged. Permanent HR record.",
+    shortDescription:
+      "Trivia nights where incorrect answers are logged in the HR system and become part of permanent employee records. Engagement through stakes-based knowledge assessment.",
+    description: [
+      "Corporate Trivia Night (Career-Impacting) is Gristmill's most efficient engagement mechanism, delivering entertainment, knowledge assessment, and permanent performance documentation in a single four-hour event. The program was developed after analysis of engagement metrics across client sites revealed that employee participation in voluntary activities was not sufficiently documented.",
+      "Employees compete in teams answering questions about company history, organizational structure, product details, and executive-level business strategy. All questions and answers are recorded. Employees who answer incorrectly have their names, team assignments, and specific wrong answers logged in the corporate HR system as 'knowledge assessment gaps.' This information becomes part of the employee's permanent record and is accessible to managers during performance planning and promotion discussions.",
+      "The program has been deployed at seven client sites over the past two years. Participants report that the program creates a satisfying competitive dynamic while also providing clear signaling to management regarding employee knowledge retention and engagement with company strategy. Repeat participants show measurably higher accuracy on subsequent trivia nights.",
+    ],
+    deliverables: [
+      "Four-hour corporate trivia event, on-site or virtual",
+      "Curated trivia questions covering company strategy, history, and executive priorities",
+      "HR-integrated database recording all participant answers and identifying incorrect responses",
+      "Team-based score tracking with real-time leaderboard display",
+      "Post-event analytics report showing knowledge gaps by department and employee level",
+      "Integration of 'wrong answer' records into existing HR information systems for manager access",
+    ],
+    engagementModel:
+      "Gristmill works with your HR and communications teams to develop trivia questions and identify priority knowledge areas. The event is scheduled during working hours with mandatory or strongly encouraged participation. All questions, answers, and participant information are captured in a database connected to your HR system. Managers receive access to identify who answered questions incorrectly, allowing them to address specific knowledge gaps during the review period. Gristmill can run the event annually or quarterly, depending on your knowledge-assessment frequency targets.",
+    proofPoints: [
+      { value: "7", label: "Client sites at active deployment" },
+      { value: "4 hours", label: "Event duration" },
+      { value: "100%", label: "Answer recording rate" },
+      { value: "Permanent", label: "HR record duration" },
+    ],
+    image: "/sites/gristmill/services/corporate-trivia-career-impacting.png",
+  },
+  {
+    slug: "icebreaker-generator",
+    armSlug: "engagement",
+    name: "Icebreaker Question Generator",
+    tagline: "Automated questions. Workplace awkwardness. Engagement metrics.",
+    shortDescription:
+      "Automated service producing workplace icebreaker questions designed to extract personal information and measure psychological openness during mandatory team events.",
+    description: [
+      "The Icebreaker Question Generator is Gristmill's programmatic approach to forcing interpersonal vulnerability during team meetings and company events. The system generates contextually appropriate icebreaker questions designed to extract personal information while maintaining the appearance of casual team building. Questions are delivered via email, meeting-opening scripts, or dedicated Slack channels.",
+      "Sample questions generated by the system include: 'If you were a spreadsheet function, which would you be and why?' 'What professional regret would you like to overcome through continued employment with this company?' 'Describe your dream commute.' 'If your career were a weather pattern, what would it be?' 'What aspect of the company's strategic direction makes you uncomfortable and why?' The generator produces new questions daily, with seasonal variations for major holidays and company events.",
+      "Client sites using the system report that the continuous stream of personal-disclosure questions creates a lightweight but persistent mechanism for team members to reveal preferences, concerns, and personality traits that managers and HR can use to optimize team composition and identify retention risks. The system has been deployed at six client locations over the past eighteen months.",
+    ],
+    deliverables: [
+      "Automated icebreaker question generator with daily production capability",
+      "Integration with Slack, email, or meeting-management platforms",
+      "Question library of 400+ icebreaker prompts with seasonal variants",
+      "Manager guidance on how to use responses to assess team dynamics",
+      "Optional response-collection system with employee-optional participation",
+      "Monthly reports showing participation trends and response patterns by team or department",
+    ],
+    engagementModel:
+      "Gristmill integrates the generator with your chosen communication platform (email, Slack, or meeting software). Questions are delivered daily or on a set cadence selected by your HR team. Responses are optional but visible to teams. HR and managers can review response patterns to identify preferences, risk factors, or team-alignment opportunities. Gristmill provides monthly analytics showing participation and aggregated response trends. The system can be adjusted to increase question frequency, focus on specific topic areas, or deactivated seasonally.",
+    proofPoints: [
+      { value: "6", label: "Client sites at active deployment" },
+      { value: "400+", label: "Icebreaker questions in library" },
+      { value: "18 months", label: "Average deployment period" },
+      { value: "Daily", label: "New question generation frequency" },
+    ],
+    image: "/sites/gristmill/services/icebreaker-generator.png",
+  },
+  {
+    slug: "smile-compliance-monitoring",
+    armSlug: "engagement",
+    name: "Smile Compliance Monitoring",
+    tagline: "Optional camera monitoring. Enthusiasm tracking. Soft targets.",
+    shortDescription:
+      "Camera-based enthusiasm tracking system with optional employee participation. Passive monitoring of engagement during meetings and company events.",
+    description: [
+      "Smile Compliance Monitoring is Gristmill's most delicate engagement tool, offering companies a way to assess employee enthusiasm levels during meetings, presentations, and company events through optional real-time facial coding. The system uses camera feeds from employee devices to analyze micro-expressions and assess engagement and emotional alignment.",
+      "During all-hands meetings, company presentations, or team events, employees are invited (but not required) to keep their cameras enabled during the session. The monitoring system analyzes facial expressions in real time, assigning each visible participant an enthusiasm score on a sliding scale. Scores are aggregated by department, tenure group, and organizational level. The data provides HR and leadership with directional insights into which messages, speakers, and announcements generate measurable emotional engagement across the employee population.",
+      "The system has been deployed at three client sites on a pilot basis and has generated useful discussions about communication effectiveness and employee population sentiment. Participation in camera monitoring is completely optional, and employees are informed that monitoring is occurring. The system provides aggregate data only — individual employee scores are not tied to names or performance records.",
+    ],
+    deliverables: [
+      "Camera-based facial-coding system integrated with videoconference platform",
+      "Real-time enthusiasm scoring during meetings and company events",
+      "Aggregated analytics dashboard showing engagement by department, tenure level, and topic",
+      "Presentation-level analysis reports identifying which messages and speakers drive engagement",
+      "Employee notification system explaining monitoring is occurring (optional participation)",
+      "Quarterly briefing to company leadership on engagement patterns and communication effectiveness",
+    ],
+    engagementModel:
+      "Gristmill integrates with your existing video conferencing platform. Prior to all-hands meetings or company events, employees are notified that the monitoring system is active and that participation is voluntary. Employees who remain on camera are included in the analysis. Gristmill generates aggregated reports showing enthusiasm scores by organizational group and topic area. No individual employee scores are tracked or tied to performance reviews. Reports focus on directional insights into audience engagement with different types of company communications. Gristmill quarterly briefings help leadership optimize future presentations and communication strategy.",
+    proofPoints: [
+      { value: "3", label: "Client sites at pilot deployment" },
+      { value: "Real-time", label: "Scoring frequency" },
+      { value: "Optional", label: "Participation basis" },
+      { value: "Aggregate", label: "Reporting level" },
+    ],
+    image: "/sites/gristmill/services/smile-compliance-monitoring.png",
+  },
 ]
 
 export function getServiceBySlug(slug: string): Service | undefined {
