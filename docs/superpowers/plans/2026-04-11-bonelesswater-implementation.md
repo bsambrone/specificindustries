@@ -2037,7 +2037,6 @@ export default function ProductDetail({ slug }: ProductDetailProps) {
               <AddToCartButton
                 slug={product.slug}
                 productName={product.name}
-                priceLabel={product.priceLabel}
               />
             </div>
 
