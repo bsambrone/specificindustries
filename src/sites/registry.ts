@@ -13,7 +13,7 @@ import { config as snortablesConfig, pages as snortablesPages, dynamicRoutes as 
 import { config as mousetrapjengaConfig, pages as mousetrapjengaPages, dynamicRoutes as mousetrapjengaDynamicRoutes } from "./mousetrapjenga"
 import { config as onlyfansConfig, pages as onlyfansPages, dynamicRoutes as onlyfansDynamicRoutes } from "./onlyfans"
 import { config as onlypansConfig, pages as onlypansPages, dynamicRoutes as onlypansDynamicRoutes } from "./onlypans"
-import { config as bonelesswaterConfig, pages as bonelesswaterPages } from "./bonelesswater"
+import { config as bonelesswaterConfig, pages as bonelesswaterPages, dynamicRoutes as bonelesswaterDynamicRoutes } from "./bonelesswater"
 
 export const siteRegistry: Record<string, SiteModule> = {
   apex: { config: apexConfig, pages: apexPages },
@@ -30,7 +30,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   mousetrapjenga: { config: mousetrapjengaConfig, pages: mousetrapjengaPages, dynamicRoutes: mousetrapjengaDynamicRoutes },
   onlyfans: { config: onlyfansConfig, pages: onlyfansPages, dynamicRoutes: onlyfansDynamicRoutes },
   onlypans: { config: onlypansConfig, pages: onlypansPages, dynamicRoutes: onlypansDynamicRoutes },
-  bonelesswater: { config: bonelesswaterConfig, pages: bonelesswaterPages },
+  bonelesswater: { config: bonelesswaterConfig, pages: bonelesswaterPages, dynamicRoutes: bonelesswaterDynamicRoutes },
 }
 
 export type SubdomainKey = keyof typeof siteRegistry
