@@ -1,4 +1,4 @@
-import { Inter, Playfair_Display, Space_Grotesk, Poppins, Barlow_Condensed, Fraunces, Nunito, Bowlby_One_SC } from "next/font/google"
+import { Inter, Playfair_Display, Space_Grotesk, Poppins, Barlow_Condensed, Fraunces, Nunito, Bowlby_One_SC, Zilla_Slab } from "next/font/google"
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -44,6 +44,12 @@ export const bowlbyOneSC = Bowlby_One_SC({
   variable: "--font-bowlby-one-sc",
 })
 
+export const zillaSlab = Zilla_Slab({
+  weight: ["400", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-zilla-slab",
+})
+
 // Map font config keys → their next/font instance
 const fontInstanceMap: Record<string, { variable: string }> = {
   inter,
@@ -54,6 +60,7 @@ const fontInstanceMap: Record<string, { variable: string }> = {
   fraunces,
   nunito,
   "bowlby-one-sc": bowlbyOneSC,
+  "zilla-slab": zillaSlab,
 }
 
 // Returns only the CSS variable classes needed for a given site's fonts
@@ -75,4 +82,5 @@ export const fontFamilyMap: Record<string, string> = {
   fraunces: "'Fraunces', serif",
   nunito: "'Nunito', sans-serif",
   "bowlby-one-sc": "'Bowlby One SC', sans-serif",
+  "zilla-slab": "'Zilla Slab', serif",
 }
