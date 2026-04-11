@@ -28,7 +28,12 @@ export const arms: ServiceArm[] = [
       "A suite of internal communications services engineered to maximize volume and minimize information transfer. Gristmill's Messaging Arm has been helping organizations manage the flow of inside-the-firm communication since the Carter administration.",
     ],
     image: "/sites/gristmill/arms/communications.png",
-    productSlugs: [],
+    productSlugs: [
+      "all-hands-email",
+      "strategic-ambiguity-newsletter",
+      "buzzword-density-maximizer",
+      "delayed-clarity-initiative",
+    ],
   },
   {
     slug: "restructuring",
@@ -39,7 +44,13 @@ export const arms: ServiceArm[] = [
       "Reorganization is not a one-time intervention. At Gristmill we believe it is a hygienic practice, applied continuously to keep every title meaningful to nobody but the reorganizer. Our Restructuring Arm has executed more than 8,000 successful reorganizations, none of which improved outcomes.",
     ],
     image: "/sites/gristmill/arms/restructuring.png",
-    productSlugs: [],
+    productSlugs: [
+      "perpetual-reorganization-protocol",
+      "reporting-line-randomizer",
+      "seat-migration-program",
+      "title-inflation-engine",
+      "org-chart-obfuscation-tool",
+    ],
   },
   {
     slug: "retention",
@@ -50,7 +61,14 @@ export const arms: ServiceArm[] = [
       "Gristmill's Fear Arm is the industry's gold standard in non-explicit workforce discipline. We install and maintain a persistent atmosphere of unspecified threat — gentle enough not to trigger regulatory scrutiny, loud enough to keep the workforce gratefully employed. Clients report retention figures that would otherwise require a weak labor market to achieve.",
     ],
     image: "/sites/gristmill/arms/retention.png",
-    productSlugs: [],
+    productSlugs: [
+      "ambient-layoff-rumor-service",
+      "peer-benchmarking-reports",
+      "gratitude-audits",
+      "pride-in-your-station-seminar",
+      "calendar-placeholder-events",
+      "executive-walk-by-program",
+    ],
   },
   {
     slug: "performance",
@@ -61,7 +79,12 @@ export const arms: ServiceArm[] = [
       "Our Measurement Arm delivers performance management programs that convert individual contribution into numbers the contributor cannot challenge. Every metric is defensible. Every target is moving. Every evaluation cycle produces an outcome.",
     ],
     image: "/sites/gristmill/arms/performance.png",
-    productSlugs: [],
+    productSlugs: [
+      "360-feedback-closed-loop",
+      "goalpost-mobility-framework",
+      "literal-stretch-goals",
+      "underperformance-discovery-engine",
+    ],
   },
   {
     slug: "management",
@@ -72,7 +95,12 @@ export const arms: ServiceArm[] = [
       "The middle manager is the load-bearing beam of the modern enterprise. Gristmill's Middle Management Arm equips your managers with the tools, training, and structural ambiguity required to absorb complaints from below, defer decisions to above, and keep the organization moving sideways at pace.",
     ],
     image: "/sites/gristmill/arms/management.png",
-    productSlugs: [],
+    productSlugs: [
+      "escalation-buffer-training",
+      "calendar-saturation-protocol",
+      "delegation-without-authority",
+      "take-this-offline-toolkit",
+    ],
   },
   {
     slug: "compensation",
@@ -83,7 +111,13 @@ export const arms: ServiceArm[] = [
       "Compensation conversations are the single largest source of workforce volatility. Gristmill's Raise-Denial Arm — operating since 1971 — provides the training, literature, and manager-side scripting necessary to reduce successful raise requests to statistical noise.",
     ],
     image: "/sites/gristmill/arms/compensation.png",
-    productSlugs: [],
+    productSlugs: [
+      "shareholder-empathy-curriculum",
+      "raise-deflection-workshop",
+      "hedonic-treadmill-benefits",
+      "market-adjustment-explanation-portal",
+      "equity-vesting-mirage",
+    ],
   },
   {
     slug: "engagement",
@@ -94,7 +128,12 @@ export const arms: ServiceArm[] = [
       "Gristmill's Fun Arm applies rigor, tracking, and consequence to the historically frivolous domain of workplace camaraderie. Fun is too important to be optional. We make it measurable.",
     ],
     image: "/sites/gristmill/arms/engagement.png",
-    productSlugs: [],
+    productSlugs: [
+      "mandatory-fun-week",
+      "corporate-trivia-career-impacting",
+      "icebreaker-generator",
+      "smile-compliance-monitoring",
+    ],
   },
   {
     slug: "tooling",
@@ -105,7 +144,12 @@ export const arms: ServiceArm[] = [
       "A comprehensive suite of information technology services designed to introduce controlled inefficiency at every point of employee-computer interaction. The Friction Arm has been deployed at industrial clients since the advent of the personal computer.",
     ],
     image: "/sites/gristmill/arms/tooling.png",
-    productSlugs: [],
+    productSlugs: [
+      "sso-multi-failure",
+      "vpn-latency-enhancement",
+      "ticket-routing-labyrinth",
+      "auto-update-critical-work",
+    ],
   },
   {
     slug: "workspace",
@@ -116,7 +160,14 @@ export const arms: ServiceArm[] = [
       "Architecture is the original workforce discipline. Gristmill's Environment Arm rebuilds your office to do the quiet work of retention, compensation suppression, and performance management for you, whether anyone is looking or not.",
     ],
     image: "/sites/gristmill/arms/workspace.png",
-    productSlugs: [],
+    productSlugs: [
+      "standing-desk-mandate",
+      "break-room-decommissioning",
+      "open-office-acoustics",
+      "hot-desk-hunger-games",
+      "temperature-variance-initiative",
+      "lighting-inconsistency-program",
+    ],
   },
 ]
 
