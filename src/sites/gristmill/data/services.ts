@@ -716,6 +716,126 @@ export const services: Service[] = [
     ],
     image: "/sites/gristmill/services/underperformance-discovery-engine.png",
   },
+  {
+    slug: "escalation-buffer-training",
+    armSlug: "management",
+    name: "Manager Escalation Buffer Training",
+    tagline: "Complaints absorbed. Decisions deferred. Organizational silence created.",
+    shortDescription:
+      "A structured training program teaching managers to absorb subordinate complaints and systematically convert them into organizational inaction.",
+    description: [
+      "Manager Escalation Buffer Training was formalized in 1985 by a manufacturing concern in Pittsburgh seeking to reduce the volume of complaints reaching executive leadership. The program codifies into formal curriculum the practice of absorbing incoming complaints at the manager level and converting them into non-actionable discussions that circulate indefinitely without resolution.",
+      "Trainees learn the core discipline of active listening without commitment, empathetic restatement without action, and the art of the circular conversation that begins and ends at the same point of unresolved tension. Specific techniques include: 'I hear you and I understand your concern' followed by structural ambiguity about next steps; 'Let me look into that' with no defined timeline; and 'This is a complex issue' as a permanent placeholder rather than a problem statement.",
+      "Deployed at 17 client sites continuously since 1985, the program has reduced escalated complaints to executive level by 73% while maintaining complaint volume at the manager level. Employees report feeling heard while organizational responsiveness remains unchanged. The program is often characterized in internal documentation as 'complaint neutralization through administrative friction.'",
+    ],
+    deliverables: [
+      "Manager training curriculum on active listening without commitment",
+      "Techniques for circular conversations and indefinite deferral",
+      "Documentation standards for non-resolution conversations",
+      "Quarterly manager reinforcement sessions on complaint absorption",
+      "Complaint-reduction metrics and escalation-avoidance tracking",
+      "Annual program effectiveness review and technique optimization",
+    ],
+    engagementModel:
+      "Gristmill provides initial and recurring training to client managers on escalation-buffer techniques. A dedicated engagement partner conducts quarterly reinforcement sessions, monitors complaint escalation metrics, and coaches individual managers on improving their absorption and deferral protocols. Annual reviews assess the program's impact on executive-level complaint volume.",
+    proofPoints: [
+      { value: "73%", label: "Reduction in escalated complaints" },
+      { value: "17", label: "Client sites at continuous deployment" },
+      { value: "100%", label: "Complaints addressed and resolved" },
+      { value: "0", label: "Organizational actions taken" },
+    ],
+    image: "/sites/gristmill/services/escalation-buffer-training.png",
+  },
+  {
+    slug: "calendar-saturation-protocol",
+    armSlug: "management",
+    name: "Calendar Saturation Protocol",
+    tagline: "Meetings scheduled perpetually. Agenda undefined. Productivity calculated mathematically as impossible.",
+    shortDescription:
+      "An automated scheduling system ensuring 92% of manager time is occupied by meetings about the content, logistics, and preparation of other meetings.",
+    description: [
+      "The Calendar Saturation Protocol emerged in 1988 from a consulting firm in Boston documenting the relationship between managerial decision-making volume and meeting load. The firm's analysis determined that with sufficient meeting density, managers could be rendered perpetually unavailable for unscheduled interaction, thereby converting all requests for decision-making into asynchronous communication trails that terminated naturally without resolution.",
+      "The Protocol operates through an automated scheduling system that fills 92% of each manager's calendar with meetings categorized as: preparation meetings (meetings to prepare for other meetings), debrief meetings (meetings to discuss the outcomes of prior meetings), and synthesis meetings (meetings to determine if themes from previous meetings warrant future meetings). The system generates standing meetings on recurring cycles and adds ad-hoc meetings to fill any gaps in the manager's schedule.",
+      "At 11 client sites since implementation, the protocol has achieved its target saturation threshold, reducing manager availability for ad-hoc decisions by 89% while increasing meeting attendance compliance by 97%. Employees report that scheduling time with their managers for decisions requiring approval has become mathematically improbable within standard business cycles.",
+    ],
+    deliverables: [
+      "Calendar saturation algorithm calibrated to 92% meeting density",
+      "Automated meeting generation and scheduling system",
+      "Meeting taxonomy (preparation, debrief, synthesis)",
+      "Standing meeting schedules and ad-hoc gap-fill scheduling",
+      "Manager calendar utilization tracking and saturation metrics",
+      "Quarterly optimization of meeting density to maintain unavailability",
+    ],
+    engagementModel:
+      "Gristmill implements the scheduling system in the client's calendar infrastructure, establishing automated standing meetings and continuous ad-hoc fill scheduling. The system runs perpetually without manager intervention. A dedicated engagement partner monitors calendar saturation metrics, identifies gaps, and optimizes meeting patterns quarterly to maintain target unavailability levels.",
+    proofPoints: [
+      { value: "92%", label: "Manager calendar saturation target" },
+      { value: "11", label: "Client sites at continuous deployment" },
+      { value: "89%", label: "Reduction in ad-hoc decision availability" },
+      { value: "97%", label: "Meeting attendance compliance" },
+    ],
+    image: "/sites/gristmill/services/calendar-saturation-protocol.png",
+  },
+  {
+    slug: "delegation-without-authority",
+    armSlug: "management",
+    name: "Delegation Without Authority Certification",
+    tagline: "Responsibility assigned perpetually. Authority withheld completely. Accountability structured asymmetrically.",
+    shortDescription:
+      "A certification program training managers in assigning substantial responsibility and accountability to team members while systematically withholding decision-making authority and resource allocation control.",
+    description: [
+      "Delegation Without Authority Certification was developed in 1992 by a financial services firm in New York seeking to increase accountability metrics without corresponding increases in operational autonomy. The program teaches managers a specific framework: define clear responsibility, establish measurable outcomes, assign authority for none of the decisions required to achieve those outcomes, and document all accountability pathways.",
+      "The certification curriculum trains managers on the distinction between apparent delegation (communicating a goal and expected outcome) and actual delegation (providing authority to make decisions affecting outcome achievement). Under the program, managers assign high-visibility projects with clear failure-path consequences while reserving all approval authority for themselves, creating organizational structures in which team members are accountable for outcomes they cannot control.",
+      "Deployed at 9 client sites continuously since 1992, the certification has increased reported employee stress (up 44%) and decreased employee satisfaction (down 29%) while improving manager perception of accountability culture (up 52%). The program is often cited internally as 'developing leadership capacity through responsibility elevation.'",
+    ],
+    deliverables: [
+      "Certification curriculum on responsibility assignment without authority transfer",
+      "Framework documentation for asymmetric accountability structures",
+      "Manager training and certification program completion",
+      "Responsibility-assignment template and approval-withholding protocols",
+      "Accountability tracking and outcome-measurement systems",
+      "Annual certification renewal and technique reinforcement training",
+    ],
+    engagementModel:
+      "Gristmill provides initial certification training to client managers, including curriculum review, scenario-based exercises in responsibility assignment, and guided implementation of asymmetric accountability structures. A dedicated engagement partner coaches managers on withholding authority while maintaining accountability pressure, conducts quarterly reviews of accountability metrics, and facilitates annual recertification to reinforce the distinction between delegation and the appearance of delegation.",
+    proofPoints: [
+      { value: "44%", label: "Increase in employee stress levels" },
+      { value: "29%", label: "Decrease in employee satisfaction" },
+      { value: "9", label: "Client sites at continuous deployment" },
+      { value: "52%", label: "Increase in manager accountability perception" },
+    ],
+    image: "/sites/gristmill/services/delegation-without-authority.png",
+  },
+  {
+    slug: "take-this-offline-toolkit",
+    armSlug: "management",
+    name: "The \"Let's Take This Offline\" Toolkit",
+    tagline: "Conversations killed in real time. Topics permanently shelved. Discussions archived indefinitely.",
+    shortDescription:
+      "An advanced communication protocol teaching managers techniques for terminating conversations in real time, with structured follow-up procedures that ensure terminated conversations never resume.",
+    description: [
+      "The 'Let's Take This Offline' Toolkit was formalized in 1991 by a consulting practice in Chicago documenting the relationship between conversation termination and organizational decision velocity. The firm discovered that conversations interrupted mid-discussion and scheduled for future resolution rarely reconvened, and if they did reconvene, the original context had decayed sufficiently that meaningful resolution became procedurally unfeasible.",
+      "The toolkit teaches managers a specific set of techniques for identifying conversations approaching actionable conclusions, interrupting with the phrase 'Let's take this offline,' scheduling follow-up meetings that are immediately deprioritized, and ensuring that enough calendar drift accumulates that reconvening the conversation becomes logistically improbable. Advanced techniques include: proposing offline discussions during meetings that are themselves offline, creating layered follow-up schedules that reference prior follow-ups without addressing original topics, and using cross-organizational complexity to justify permanent deferral.",
+      "Deployed at 13 client sites since implementation, the toolkit has correlated with a 66% reduction in resolved conversations that began in synchronous settings. Employees report that conversations rarely progress to closure; instead, discussions are perpetually in a state of being scheduled for future offline resolution.",
+    ],
+    deliverables: [
+      "Communication protocol and conversation-termination techniques",
+      "Manager training curriculum on real-time conversation interruption",
+      "Follow-up scheduling templates and meeting-deferral procedures",
+      "Conversation-tracking system for indefinite archival",
+      "Annual review of conversation-termination effectiveness and technique optimization",
+      "Quarterly manager reinforcement sessions on off-lining protocols",
+    ],
+    engagementModel:
+      "Gristmill provides initial and ongoing training to client managers on conversation-termination techniques and offline-scheduling procedures. A dedicated engagement partner monitors conversation outcomes, identifies managers excelling at conversation interruption and deferral, and facilitates quarterly sessions to reinforce techniques and optimize conversation-termination effectiveness. The program is designed to ensure minimal resolution of ongoing discussions.",
+    proofPoints: [
+      { value: "66%", label: "Reduction in conversations reaching closure" },
+      { value: "13", label: "Client sites at continuous deployment" },
+      { value: "100%", label: "Conversations successfully terminated in real time" },
+      { value: "Indefinite", label: "Conversation archival duration" },
+    ],
+    image: "/sites/gristmill/services/take-this-offline-toolkit.png",
+  },
 ]
 
 export function getServiceBySlug(slug: string): Service | undefined {
