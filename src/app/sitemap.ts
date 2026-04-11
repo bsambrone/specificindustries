@@ -8,6 +8,8 @@ import { products as elderpartyProducts } from "@/sites/elderparty/data/products
 import { coalitions } from "@/sites/elderparty/data/coalitions"
 import { articles as elderpartyArticles } from "@/sites/elderparty/data/news"
 import { products as snortablesProducts } from "@/sites/snortables/data/products"
+import { products as mousetrapjengaProducts } from "@/sites/mousetrapjenga/data/products"
+import { fans as onlyfansFans } from "@/sites/onlyfans/data/fans"
 import { shares } from "@/sites/grassfedwifi/data/shares"
 import { fieldNotes } from "@/sites/grassfedwifi/data/field-notes"
 import { solutions as strategicvoidSolutions } from "@/sites/strategicvoid/data/solutions"
@@ -46,12 +48,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     truegrit: truegritProducts,
     elderparty: elderpartyProducts,
     snortables: snortablesProducts,
+    mousetrapjenga: mousetrapjengaProducts,
   }
 
   for (const [subdomain, products] of Object.entries(productSites)) {
     for (const product of products) {
       urls.push({ url: siteUrl(subdomain, `products/${product.slug}`) })
     }
+  }
+
+  // OnlyFans: fan profile pages at /browse/{slug}
+  for (const fan of onlyfansFans) {
+    urls.push({ url: siteUrl("onlyfans", `browse/${fan.slug}`) })
   }
 
   // Grass Fed WiFi: shares, field notes
