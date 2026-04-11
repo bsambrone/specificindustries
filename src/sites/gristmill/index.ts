@@ -7,9 +7,11 @@ import ContactPage, { metadata as contactMetadata } from "./pages/contact"
 import PrivacyPage, { metadata as privacyMetadata } from "./pages/privacy"
 import TermsPage, { metadata as termsMetadata } from "./pages/terms"
 import CaseStudiesIndex, { metadata as caseStudiesMetadata } from "./pages/case-studies-index"
+import CaseStudyPage from "./pages/case-study-page"
 import ServiceRouter from "./pages/service-router"
 import { getArmBySlug } from "./data/arms"
 import { getServiceBySlug } from "./data/services"
+import { getCaseStudyBySlug } from "./data/case-studies"
 
 export { config }
 
@@ -53,5 +55,18 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
       }
       return !!getArmBySlug(slug)
     },
+  },
+  "case-studies": {
+    component: CaseStudyPage,
+    getMetadata: (slug: string) => {
+      const cs = getCaseStudyBySlug(slug)
+      return cs
+        ? {
+            title: `${cs.company} — Case Study — Gristmill Partners`,
+            description: cs.headline,
+          }
+        : undefined
+    },
+    isValidSlug: (slug: string) => !!getCaseStudyBySlug(slug),
   },
 }
