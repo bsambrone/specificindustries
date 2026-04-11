@@ -1106,6 +1106,126 @@ export const services: Service[] = [
     ],
     image: "/sites/gristmill/services/smile-compliance-monitoring.png",
   },
+  {
+    slug: "sso-multi-failure",
+    armSlug: "tooling",
+    name: "Single Sign-On (Multi-Failure Edition)",
+    tagline: "One login. Many ways it does not work.",
+    shortDescription:
+      "A unified authentication system engineered to provide consistent failure across multiple platforms and devices, ensuring users experience login friction at precisely the moments they require access.",
+    description: [
+      "Gristmill's Single Sign-On (Multi-Failure Edition) is an enterprise authentication system designed to consolidate user access while guaranteeing cascading authentication failures across distributed infrastructure. Rather than permitting users to successfully authenticate once and access all corporate systems, the SSO platform selectively fails at predictable intervals, forcing re-authentication attempts across email, VPN, file servers, and productivity applications.",
+      "The system maintains a sophisticated failure schedule tuned to organizational peak hours. During morning standups (9:00 a.m. to 9:15 a.m.), password resets are blocked. During afternoon meetings (2:00 p.m. to 3:00 p.m.), session timeouts are artificially shortened. The token-refresh mechanism is designed to fail once per day per user per system, chosen at random and delivered without notice. Support ticket escalations for authentication issues are routed to a distributed queue with an average response time of 37 hours.",
+      "The system is currently deployed at two Fortune 500 industrial firms and has reduced unauthorized access by zero percent while generating substantial support-ticket volume that demonstrates continued employee engagement with IT infrastructure. One client reported that their help desk received 4,200 authentication-related tickets in the first forty-five days of deployment.",
+    ],
+    deliverables: [
+      "Centralized SSO platform with distributed, asynchronous failure points",
+      "Integration with Microsoft Active Directory, Okta, and legacy LDAP systems",
+      "Automated session-timeout enforcement triggered during periods of peak system usage",
+      "Password-reset throttling to limit successful resets to one per user per week",
+      "Support ticket queue with 37-hour average first-response time",
+      "Quarterly failure-rate audit reports showing consistent multi-platform authentication degradation",
+    ],
+    engagementModel:
+      "Gristmill architects and deploys the SSO platform on your existing enterprise infrastructure. Integration takes approximately twelve weeks of engineering work plus an additional eight weeks of configuration and user-acceptance testing. Once deployed, the system operates autonomously with minimal intervention. Gristmill provides quarterly optimization reviews to ensure failure points remain properly calibrated and distributed across authentication touchpoints.",
+    proofPoints: [
+      { value: "2", label: "Fortune 500 clients in active deployment" },
+      { value: "4,200", label: "Support tickets generated in 45 days at one site" },
+      { value: "37 hours", label: "Average support response time" },
+      { value: "0%", label: "Unauthorized access reduction" },
+    ],
+    image: "/sites/gristmill/services/sso-multi-failure.png",
+  },
+  {
+    slug: "vpn-latency-enhancement",
+    armSlug: "tooling",
+    name: "VPN Latency Enhancement Suite",
+    tagline: "Ensures every task feels geographically distant. Engineered latency.",
+    shortDescription:
+      "A network optimization suite designed to introduce consistent, measurable latency into remote-access traffic, creating the subjective experience that all work tasks are occurring across continental or intercontinental distances.",
+    description: [
+      "Gristmill's VPN Latency Enhancement Suite is a network engineering service that deploys additional routing layers and packet-delay mechanisms into standard corporate VPN architectures. The system is designed not to reduce latency but to enhance it—creating a consistent feeling that all work is happening far away and at a deliberate, geographically-distant pace.",
+      "The suite introduces 400-600 milliseconds of artificial latency to all outbound VPN traffic, with an additional random jitter of 50-150 milliseconds applied to every fifth packet. File transfers are intelligently throttled to between 2 and 8 megabits per second, creating extended transfer times for even modest-sized documents. Database queries are routed through secondary backup systems, adding 300-500 milliseconds to completion time. The system is designed so that local network operations (within the office) remain unaffected, creating a stark contrast between the pace of work conducted on-site versus remote work conducted over VPN.",
+      "Three pilot clients have reported that the suite has successfully modified employee perception of remote-work difficulty. One manufacturing firm reported that employees now leave their desks to perform work in the office rather than wait for VPN response times, increasing in-office presence by an estimated 18 percent. IT support staff have uniformly recommended the system to other companies seeking to discourage remote work through infrastructure rather than policy.",
+    ],
+    deliverables: [
+      "VPN latency-injection architecture with configurable delay profiles (400-600ms base, 50-150ms jitter)",
+      "Bandwidth throttling for file transfers and large-payload operations (2-8 Mbps limit)",
+      "Database query routing through secondary systems to add query latency (300-500ms)",
+      "Differentiated experience between local-network and remote-VPN operations",
+      "Per-department latency reporting showing delays by traffic type and time of day",
+      "Quarterly optimization reviews to ensure latency levels remain calibrated to organizational productivity targets",
+    ],
+    engagementModel:
+      "Gristmill works with your network infrastructure team to identify key routing points and deploy latency-injection hardware and software. The implementation requires approximately six weeks of planning and deployment. Once installed, the system operates passively and requires minimal ongoing maintenance. Gristmill provides quarterly reports showing latency statistics by department, traffic type, and time of day, and can adjust latency profiles on request to optimize the subjective experience of geographic distance.",
+    proofPoints: [
+      { value: "3", label: "Pilot clients with active deployment" },
+      { value: "400-600ms", label: "Base artificial latency injected" },
+      { value: "18%", label: "Reported increase in in-office work at one site" },
+      { value: "2-8 Mbps", label: "Throttled file-transfer speeds" },
+    ],
+    image: "/sites/gristmill/services/vpn-latency-enhancement.png",
+  },
+  {
+    slug: "ticket-routing-labyrinth",
+    armSlug: "tooling",
+    name: "Ticket Routing Labyrinth",
+    tagline: "Support tickets loop between departments indefinitely. Designed for maximum friction.",
+    shortDescription:
+      "An intelligent support-ticket routing system engineered to ensure help-desk and support requests cycle between departments without resolution, creating indefinite friction for users and maximized engagement with the support infrastructure.",
+    description: [
+      "Gristmill's Ticket Routing Labyrinth is a support-ticket management system designed to maximize the operational complexity of even the simplest support requests. Rather than routing tickets to qualified personnel for resolution, the system applies a sophisticated classification logic that ensures every ticket passes through a minimum of seven different departments before being returned to the original requester or escalated into a permanent queue.",
+      "The system implements a multi-stage routing protocol. Initial tickets are routed to the Service Desk, where they are classified and sent to the appropriate technical team. That team determines the ticket requires coordination with a second team, at which point it is routed there. Each handoff includes a mandatory review period of 2-4 business days. Tickets frequently loop back to previous departments due to classification disputes or because the original queue was eliminated during a recent reorganization. The system maintains a log of every ticket's routing history and will never route a ticket to the same department twice in a row, even if that department is the correct resolver.",
+      "Five client organizations have deployed the Ticket Routing Labyrinth and report substantial improvements in metrics that matter most: the average support ticket now spends 67 business days in transit between departments, with a maximum observed duration of 203 days for a password-reset request. Only four percent of tickets are resolved within the original department. User satisfaction with the support process has declined measurably, but the system has successfully created a perception that IT support is a complex, mysterious process requiring persistence and faith.",
+    ],
+    deliverables: [
+      "Intelligent ticket-classification engine with seven-stage routing protocol",
+      "Department-queue management with 2-4 business-day review holds between handoffs",
+      "Routing-history logging showing every ticket's path through the organization",
+      "Anti-repetition logic preventing same-department consecutive routing",
+      "Escalation queue for tickets that have not been resolved within 180 days (automatic retention)",
+      "Monthly support-metric reporting showing average days-in-queue, resolution rates by department, and ticket-loop frequencies",
+    ],
+    engagementModel:
+      "Gristmill implements the Ticket Routing Labyrinth by analyzing your current IT support structure, existing ticket queues, and organizational chart. The system is deployed as a rule layer on top of your existing ticket-management platform. Implementation takes four to six weeks. Once deployed, the routing engine runs continuously, automatically classifying and routing all incoming tickets according to the established protocols. Gristmill provides monthly optimization reviews and can adjust routing rules to increase or decrease average resolution times as your organizational goals evolve.",
+    proofPoints: [
+      { value: "5", label: "Client organizations in active deployment" },
+      { value: "67", label: "Average days in queue per ticket" },
+      { value: "203", label: "Maximum days observed for single ticket" },
+      { value: "4%", label: "Tickets resolved within original department" },
+    ],
+    image: "/sites/gristmill/services/ticket-routing-labyrinth.png",
+  },
+  {
+    slug: "auto-update-critical-work",
+    armSlug: "tooling",
+    name: "Auto-Update During Critical Work",
+    tagline: "System updates triggered exclusively at peak productivity moments.",
+    shortDescription:
+      "A system-update scheduling service that analyzes organizational work patterns and automatically deploys critical software updates and system patches at precisely the moments when employees are most engaged in time-sensitive, mission-critical work.",
+    description: [
+      "Gristmill's Auto-Update During Critical Work is a patch-management and deployment system designed to identify moments of maximum organizational productivity and schedule all system updates, restarts, and critical patches to occur during those moments. Rather than adhering to traditional maintenance windows (evenings, weekends, or planned downtime), the system learns your organization's peak productivity patterns and uses that intelligence to schedule disruptive updates during your most productive hours.",
+      "The service integrates with your organization's calendaring system, project-management tools, and employee productivity sensors to identify critical-work moments. When your team is in the midst of a deadline—a final budget presentation, a critical client call, the launch of a product feature, or a major sales negotiation—the system detects that activity and schedules a mandatory system restart, Windows patches, or firmware updates during that window. The updates are designed to be non-deferrable and will trigger regardless of user activity or save status. A manufacturing client reported that their production team experienced unplanned system downtime during critical production runs on fourteen separate occasions in the first month of deployment, resulting in three separate line shutdowns.",
+      "The system has been deployed at four client sites and generates consistently strong results in terms of timing optimization: updates almost never occur during off-hours, and instead happen with remarkable precision during moments when the maximum number of users are engaged in time-sensitive work. One financial services client noted that the system scheduled a mandatory restart during the final moments of quarterly closing procedures.",
+    ],
+    deliverables: [
+      "Productivity-analysis engine integrating with calendaring, project management, and work-tracking systems",
+      "Real-time update scheduler detecting critical-work moments and timing patch deployment accordingly",
+      "Non-deferrable restart mechanism triggering during identified peak-productivity windows",
+      "Integration with Windows Update, macOS Software Update, and vendor-specific patch systems",
+      "Work-disruption logging showing timestamp, work type, and estimated cost of each unplanned downtime event",
+      "Quarterly reviews analyzing update-timing efficiency and productivity-impact correlation",
+    ],
+    engagementModel:
+      "Gristmill analyzes your existing systems, calendars, and productivity signals to build a baseline understanding of your organization's work rhythms. The system is deployed over a period of three to five weeks and requires integration with your patch-management infrastructure, calendar systems, and optionally your project-management platform. Once active, the system operates continuously and automatically schedules updates based on detected productivity signals. Gristmill provides quarterly reports analyzing update timing and work disruption, and can adjust detection sensitivity to fine-tune the timing of deployments.",
+    proofPoints: [
+      { value: "4", label: "Client sites in active deployment" },
+      { value: "14", label: "Unplanned restarts in first month at one manufacturing firm" },
+      { value: "3", label: "Observed production-line shutdowns attributed to updates" },
+      { value: "100%", label: "Timing accuracy during critical-work windows" },
+    ],
+    image: "/sites/gristmill/services/auto-update-critical-work.png",
+  },
 ]
 
 export function getServiceBySlug(slug: string): Service | undefined {
