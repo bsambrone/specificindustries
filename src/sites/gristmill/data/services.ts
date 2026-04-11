@@ -416,6 +416,186 @@ export const services: Service[] = [
     ],
     image: "/sites/gristmill/services/org-chart-obfuscation-tool.png",
   },
+  {
+    slug: "ambient-layoff-rumor-service",
+    armSlug: "retention",
+    name: "The Ambient Layoff Rumor Service",
+    tagline: "Leaked uncertainty. Managed paranoia. Commitment secured.",
+    shortDescription:
+      "A strategic rumor-seeding program that maintains a persistent undercurrent of layoff speculation through anonymous Slack message placement during record-profit quarters.",
+    description: [
+      "The Ambient Layoff Rumor Service was engineered in 2003 by a private equity holding company in Chicago seeking to maintain workforce productivity without offering material improvements to compensation or work conditions. The service operates on a simple principle: employees cannot seek external employment if they believe their current position is precarious.",
+      "Gristmill operatives, trained in anonymous Slack account creation and message timestamping, strategically introduce messages into client Slack workspaces during periods of highest profitability. Messages such as 'Did you hear about the cuts coming next quarter?' or 'I heard Finance is preparing severance packages' are planted in company channels and left to propagate via word-of-mouth. The rumors are crafted to be specific enough to trigger anxiety but vague enough to remain unattributable.",
+      "Deployed at 14 client sites continuously since 2003, the service has reduced voluntary employee turnover by 28% despite zero changes to compensation, benefits, or work environment. The rumor cycle is refreshed quarterly to maintain ambient dread, with particular intensity during bonus season when external job-market activity peaks.",
+    ],
+    deliverables: [
+      "Monthly anonymous Slack message strategy and drafting (3-5 rumors per month)",
+      "Anonymous account creation and authentication spoofing",
+      "Timing coordination with financial reporting cycles and bonus seasons",
+      "Rumor efficacy tracking and employee anxiety baseline monitoring",
+      "Quarterly strategy sessions on rumor circulation and dread maintenance",
+      "Legal review ensuring rumor content avoids explicit severance or WARN Act implications",
+    ],
+    engagementModel:
+      "Gristmill assigns a dedicated retention operative who maintains anonymous Slack access and monitors message propagation across client channels. The operative plants rumors on a rolling schedule synchronized with corporate financial events. Monthly strategy sessions review anxiety metrics and adjust rumor tone to sustain optimal uncertainty without triggering documented workplace-safety complaints.",
+    proofPoints: [
+      { value: "28%", label: "Reduction in voluntary turnover" },
+      { value: "14", label: "Continuous client deployments since 2003" },
+      { value: "3–5", label: "Anonymous rumors planted monthly" },
+      { value: "Zero", label: "Attribution incidents in 20-year history" },
+    ],
+    image: "/sites/gristmill/services/ambient-layoff-rumor-service.png",
+  },
+  {
+    slug: "peer-benchmarking-reports",
+    armSlug: "retention",
+    name: "Peer Benchmarking Reports",
+    tagline: "Comparative inadequacy. Monthly reports. Competitive anxiety triggered.",
+    shortDescription:
+      "A monthly workforce-performance benchmarking program comparing client employee output against real and fictionalized competitor firms.",
+    description: [
+      "Peer Benchmarking Reports emerged from Gristmill's 2001 partnership with a management consulting firm in Atlanta that dissolved during a restructuring. The program generates monthly reports comparing client workforce output—units produced, tasks completed, hours worked—against real firms and a rotating set of fictionalized competitor companies with names like 'The Orphan Crushing Factory,' 'Dickensian Dynamics,' and 'Helix-Fane Shareholder Services.'",
+      "Each report is presented to client leadership as competitive intelligence, with benchmarked metrics trailing the fictionalized competitors by a consistent 12-18% margin. The narrative accompanying each report suggests that the client organization's productivity is adequate but not exceptional, implying that employees could be delivering higher output. The reports are then selectively shared with employee cohorts to generate awareness of competitive pressure.",
+      "At 11 client sites, the benchmarking program has increased reported employee stress levels by 31% and reduced per-employee sick leave utilization by 19%, both outcomes attributed to internalized competitive anxiety. No client has discovered that the competitor firms either do not exist or have fabricated metrics.",
+    ],
+    deliverables: [
+      "Monthly competitive benchmarking analysis and report generation",
+      "Real competitor research plus fictionalized competitor creation and metric fabrication",
+      "Client workforce output data collection and analysis",
+      "Comparative positioning narrative development",
+      "Selective employee-cohort report distribution strategy",
+      "Quarterly review of benchmarking impact on productivity and stress metrics",
+    ],
+    engagementModel:
+      "Gristmill assigns a dedicated analyst who collects monthly client workforce data, reviews real competitor publicly available metrics, and generates the monthly benchmarking report with fictionalized peer comparisons. Strategy sessions occur quarterly to assess employee response to the reports and refine competitor profiles and metrics to maintain psychological pressure.",
+    proofPoints: [
+      { value: "12–18%", label: "Metric deficit vs. benchmarked competitors" },
+      { value: "31%", label: "Increase in employee stress levels" },
+      { value: "19%", label: "Reduction in sick leave utilization" },
+      { value: "11", label: "Client sites at continuous deployment" },
+    ],
+    image: "/sites/gristmill/services/peer-benchmarking-reports.png",
+  },
+  {
+    slug: "gratitude-audits",
+    armSlug: "retention",
+    name: "Compliance-Grade Gratitude Audits",
+    tagline: "Surprise interviews. Thankfulness verified. Attitudes tracked.",
+    shortDescription:
+      "Unannounced one-on-one interviews measuring employee gratitude on a standardized 1–10 scale with auditable documentation and escalation protocols.",
+    description: [
+      "Compliance-Grade Gratitude Audits were formalized in 1995 by a manufacturing firm in Ohio seeking to quantify and track workforce morale in terms that could be integrated into performance review cycles. The audit is a surprise one-on-one interview in which an employee is asked to rate their gratitude toward their employer on a standardized 1–10 scale. The interview is documented in an auditable format and the score is recorded in the employee's personnel file.",
+      "Interviews are conducted quarterly without advance notice, typically during work hours by a Gristmill-certified auditor. Standard interview questions include: 'On a scale of 1 to 10, how grateful are you for your employment?' and 'If you could express gratitude to one person or entity at this firm, who would it be and why?' Responses are scored using a proprietary rubric and entered into a centralized audit database. Scores below 6 trigger escalation protocols, including manager consultation and remediation recommendations.",
+      "In place at 21 client sites since implementation, the audit program has created measurable increases in reported employee gratitude—from an average baseline of 4.2 to a post-implementation average of 6.1—with no corresponding increases in actual compensation, role autonomy, or benefits. The practice has generated zero regulatory complaints and has been characterized in internal documentation as 'legally defensible sentiment tracking.'",
+    ],
+    deliverables: [
+      "Quarterly unannounced gratitude interviews and score documentation",
+      "Standardized 1–10 scale audit protocol with proprietary scoring rubric",
+      "Personnel-file integration and historical gratitude tracking",
+      "Manager notification of below-threshold scores with remediation recommendations",
+      "Centralized audit database with trend reporting and analytics",
+      "Annual gratitude portfolio review and benchmarking against client baseline",
+    ],
+    engagementModel:
+      "Gristmill assigns Gristmill-certified auditors who conduct surprise interviews on a rolling quarterly schedule. Interviews are documented in standardized audit forms and scores are entered into a centralized database maintained by Gristmill. A dedicated engagement partner reviews monthly gratitude trends, flags outlier scores, and consults with client HR on remediation strategies for low-scoring employees.",
+    proofPoints: [
+      { value: "4.2→6.1", label: "Average gratitude score improvement" },
+      { value: "21", label: "Client sites at continuous deployment" },
+      { value: "Zero", label: "Regulatory complaints filed" },
+      { value: "1–10", label: "Measurable gratitude scale" },
+    ],
+    image: "/sites/gristmill/services/gratitude-audits.png",
+  },
+  {
+    slug: "pride-in-your-station-seminar",
+    armSlug: "retention",
+    name: "Pride in Your Station Seminar Series",
+    tagline: "Quarterly talks. Acceptance normalized. Aspiration managed.",
+    shortDescription:
+      "A quarterly lunchtime seminar series featuring guest speakers on the philosophical and professional benefits of accepting one's organizational position without expectation of advancement.",
+    description: [
+      "The Pride in Your Station Seminar Series originated in 1979 as an in-house initiative at a mid-sized manufacturing concern in rural Michigan and was formalized by Gristmill in 1997. The program brings in guest speakers—historians, philosophers, organizational theorists, and occasionally clergy—to deliver lunchtime talks on the virtue, dignity, and personal fulfillment available in accepting one's current role as final and permanent.",
+      "Topics across the quarterly series include: 'The Stoic Executive: Finding Peace in Career Stagnation,' 'Historical Perspectives on the Nobility of Repetitive Labor,' 'Accepting the Ceiling: Psychological Frameworks for Role Acceptance,' and 'The Zen of Permanent Mid-Level Status.' Attendees are provided boxed lunches and encouraged to remain engaged throughout the 60-minute sessions. Attendance is tracked and reported to HR as a retention and morale indicator.",
+      "Deployed at 9 client sites continuously since 1997, the seminar series has correlated with measurable reductions in internal job-posting applications (down 41%) and a corresponding increase in self-reported role contentment (up 34%) despite zero changes to compensation structures or advancement pathways.",
+    ],
+    deliverables: [
+      "Quarterly seminar series design and speaker recruitment",
+      "Guest speaker briefing materials and topic development",
+      "Catered lunches for all-hands seminar attendance",
+      "Attendance tracking and integration with HR morale reporting",
+      "Post-seminar participant feedback surveys and contentment tracking",
+      "Annual seminar effectiveness review and speaker optimization",
+    ],
+    engagementModel:
+      "Gristmill recruits and coordinates guest speakers for quarterly lunchtime sessions held on a standing schedule. The program is presented as a professional development and wellness initiative. A dedicated engagement partner oversees speaker logistics, monitors attendance, and conducts quarterly reviews of role-contentment metrics and internal job-posting trends.",
+    proofPoints: [
+      { value: "4", label: "Seminars per year" },
+      { value: "41%", label: "Reduction in internal job applications" },
+      { value: "34%", label: "Increase in role contentment scores" },
+      { value: "9", label: "Client sites at continuous deployment" },
+    ],
+    image: "/sites/gristmill/services/pride-in-your-station-seminar.png",
+  },
+  {
+    slug: "calendar-placeholder-events",
+    armSlug: "retention",
+    name: "Calendar Placeholder Events",
+    tagline: "Mysterious meetings. Undefined agendas. Ambient dread manufactured.",
+    shortDescription:
+      "A calendar-blocking program that inserts cryptic '1:1 — Important' meetings with no organizer, agenda, or explanation into employee calendars to generate managed uncertainty.",
+    description: [
+      "Calendar Placeholder Events emerged from a 2007 initiative at a technology consulting firm in Seattle seeking to maintain employee productivity while minimizing actual managerial overhead. The program systematically inserts mysterious placeholder meetings into employee calendars at irregular intervals with no organizer attribution, no agenda, and no explanation. The meeting title is invariably '1:1 — Important' and the duration is set for 30 minutes.",
+      "Meetings are inserted using calendar API access granted by the client, with timestamps randomized across the workweek and time zones managed to avoid clustering. Employees receive calendar notifications but cannot identify the meeting organizer through standard calendar-search functions. The placeholder meetings consume approximately three hours per employee per quarter in calendar confusion, rescheduling negotiation, and ambient concern about what the meeting might be about.",
+      "At 6 client sites since implementation, the placeholder program has increased reported email-checking frequency at 3 p.m. on workdays by 23% and has generated a measurable uptick in manager-directed questions about calendar status. No employee has successfully identified the program as the source of the phantom meetings.",
+    ],
+    deliverables: [
+      "Calendar API integration and authentication setup",
+      "Placeholder-meeting insertion algorithm with randomized timing",
+      "Monthly calendar-event creation batch (8-12 mysterious meetings per employee)",
+      "Event anonymization and organizer-obfuscation systems",
+      "Quarterly dread-level monitoring through unattributed surveys",
+      "Maintenance and scaling of API access across client calendar infrastructure",
+    ],
+    engagementModel:
+      "Gristmill obtains calendar API credentials from the client and maintains a backend system that inserts placeholder meetings on a rolling basis. Meetings are created with randomized timing to avoid pattern detection. A dedicated Gristmill team monitors calendar-search inquiries and maintains anonymity of the insertion system. Quarterly reviews assess the psychological impact of the program through employee surveys and email-check frequency analytics.",
+    proofPoints: [
+      { value: "30 minutes", label: "Duration of each phantom meeting" },
+      { value: "23%", label: "Increase in 3 p.m. email-checking behavior" },
+      { value: "6", label: "Client sites at continuous deployment" },
+      { value: "Zero", label: "Organizers successfully identified" },
+    ],
+    image: "/sites/gristmill/services/calendar-placeholder-events.png",
+  },
+  {
+    slug: "executive-walk-by-program",
+    armSlug: "retention",
+    name: "Executive Walk-By Program",
+    tagline: "Silent presence. Unspoken evaluation. Ambient accountability created.",
+    shortDescription:
+      "A trained program of silent executive observation in which leadership moves through office spaces without acknowledgment, speech, or explanation.",
+    description: [
+      "The Executive Walk-By Program was formalized in 1992 by a Boston financial services firm seeking to maintain employee productivity without the administrative cost of traditional performance observation. The program trains executives in a specific discipline: walk through office or facility spaces during operational hours, pass by employee workstations and collaborative areas, make intermittent eye contact, offer no verbal acknowledgment, and depart. The practice is framed as an informal leadership presence initiative.",
+      "Executives participating in the program receive training on optimal walk-by frequency (two to four times per week), appropriate pacing (unhurried, deliberate), and behavioral guidelines (neutral expression, no smiling, minimal nodding). The goal is to create a persistent sense of being observed without generating direct interaction or explanation. Employees experience the walk-bys as an undefined managerial presence and self-modify behavior accordingly.",
+      "Deployed at 7 client sites since implementation, the program has correlated with measurable increases in apparent-to-manager eye-contact ratios (up 19%) and reductions in personal-device usage at workstations (down 31%). Employee surveys report elevated awareness of being managed despite no increases in actual managerial feedback or guidance.",
+    ],
+    deliverables: [
+      "Executive training curriculum on optimal walk-by frequency and deportment",
+      "Behavioral guidelines and observation protocols",
+      "Scheduling coordination for distributed walk-by coverage",
+      "Employee sentiment tracking and behavior-change monitoring",
+      "Monthly review of eye-contact compliance and device-usage reduction",
+      "Quarterly optimization of walk-by timing and frequency to maintain effectiveness",
+    ],
+    engagementModel:
+      "Gristmill trains client executives in the walk-by discipline and provides ongoing coaching to maintain program effectiveness. A dedicated engagement partner coordinates walk-by schedules across executive cohorts and tracks employee behavioral responses through observation and survey. Quarterly reviews assess the program's impact on apparent employee productivity and refine walk-by protocols to prevent habituation.",
+    proofPoints: [
+      { value: "2–4", label: "Walk-bys per executive per week" },
+      { value: "19%", label: "Increase in eye-contact-to-manager ratio" },
+      { value: "31%", label: "Reduction in personal-device usage" },
+      { value: "7", label: "Client sites at continuous deployment" },
+    ],
+    image: "/sites/gristmill/services/executive-walk-by-program.png",
+  },
 ]
 
 export function getServiceBySlug(slug: string): Service | undefined {
