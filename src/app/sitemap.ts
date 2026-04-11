@@ -9,6 +9,7 @@ import { coalitions } from "@/sites/elderparty/data/coalitions"
 import { articles as elderpartyArticles } from "@/sites/elderparty/data/news"
 import { products as snortablesProducts } from "@/sites/snortables/data/products"
 import { products as mousetrapjengaProducts } from "@/sites/mousetrapjenga/data/products"
+import { products as bonelesswaterProducts } from "@/sites/bonelesswater/data/products"
 import { fans as onlyfansFans } from "@/sites/onlyfans/data/fans"
 import { pans as onlypansPans } from "@/sites/onlypans/data/pans"
 import { shares } from "@/sites/grassfedwifi/data/shares"
@@ -50,6 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     elderparty: elderpartyProducts,
     snortables: snortablesProducts,
     mousetrapjenga: mousetrapjengaProducts,
+    bonelesswater: bonelesswaterProducts,
   }
 
   for (const [subdomain, products] of Object.entries(productSites)) {
