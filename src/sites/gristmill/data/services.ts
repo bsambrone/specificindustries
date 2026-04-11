@@ -266,6 +266,156 @@ export const services: Service[] = [
     ],
     image: "/sites/gristmill/services/delayed-clarity-initiative.png",
   },
+  {
+    slug: "perpetual-reorganization-protocol",
+    armSlug: "restructuring",
+    name: "The Perpetual Reorganization Protocol",
+    tagline: "Quarterly renewals. Titles expire. Stability erased.",
+    shortDescription:
+      "A standardized program that executes comprehensive organizational restructuring every ninety days, rendering all job titles and reporting lines meaningless within the quarter.",
+    description: [
+      "The Perpetual Reorganization Protocol was formalized in 1984 by a manufacturing conglomerate in Pittsburgh that has since contracted to seven employees. The program establishes that structural reorganization—encompassing department reconfigurations, reporting-line reassignments, and title cascades—occurs automatically every ninety days, regardless of business conditions, market position, or workforce equilibrium.",
+      "Each reorganization modifies at minimum 40% of the organization's structure, ensuring that no employee's context survives the quarter intact. Department mergers create temporary divisions that are then split. Hierarchies are flattened and immediately reconstituted. Span-of-control ratios are randomized with no regard for operational coherence. The process is framed as a preventive hygiene practice—similar to seasonal HVAC maintenance—that keeps organizational arteries clear of stagnant reporting patterns.",
+      "Since implementation, the protocol has been deployed quarterly across 52 client engagements. Clients report that employees spend 34% of their time rebuilding context after each reorganization, leaving 66% of the quarter for productive work. Documentation of organizational structure becomes vestigial by day 45 of each cycle.",
+    ],
+    deliverables: [
+      "Quarterly comprehensive organizational restructuring plan",
+      "Revised org chart and reporting matrix (effective 90 days)",
+      "Title reassignment documentation and HRIS updates",
+      "Employee communication cascade announcing structural changes",
+      "Post-reorganization context-recovery training (optional)",
+      "Preparation documentation for the following quarter's reorganization",
+    ],
+    engagementModel:
+      "Deployed on a fixed 90-day recurring cycle synchronized across all client business units. Gristmill supplies a dedicated restructuring partner who meets with client leadership to design the reorganization, ensuring adequate disruption while maintaining surface-level legitimacy. Restructuring occurs on a standard date quarterly to maximize workforce synchronization.",
+    proofPoints: [
+      { value: "90 days", label: "Reorganization cycle" },
+      { value: "40%", label: "Minimum structural change per cycle" },
+      { value: "52", label: "Client engagements at deployment" },
+      { value: "34%", label: "Time spent rebuilding organizational context" },
+    ],
+    image: "/sites/gristmill/services/perpetual-reorganization-protocol.png",
+  },
+  {
+    slug: "reporting-line-randomizer",
+    armSlug: "restructuring",
+    name: "Reporting Line Randomizer",
+    tagline: "Monthly reassignment. Hierarchy abandoned. Exposure maximized.",
+    shortDescription:
+      "A monthly system that randomly reassigns each employee's direct manager, framed as a cross-functional exposure initiative.",
+    description: [
+      "The Reporting Line Randomizer emerged from Gristmill's 1998 partnership with a Boston-area consulting practice that was dissolved during a restructuring. The system monthly generates randomized reporting-line assignments using a cryptographic algorithm that ensures no employee's manager remains consistent across consecutive months. Each reassignment is presented to the workforce as a deliberate cross-functional exposure opportunity.",
+      "On the first business day of each month, the Randomizer algorithm reassigns the entire reporting structure. An accountant may report to the VP of IT. An engineer may report to HR. An executive may report to an administrative assistant. The system generates documentation justifying each assignment using the language of cross-functional enrichment and competency diversification. New managers receive 30-minute briefings on their new direct reports.",
+      "The system is fully functional and has operated at 23 client sites continuously since implementation. No client has lost an employee due to reporting-line confusion, though 67% report elevated email checking behavior at month-end. Continuity in project execution is sacrificed to continuous managerial novelty.",
+    ],
+    deliverables: [
+      "Monthly randomized reporting-line algorithm and assignment generation",
+      "Updated org chart and HRIS integration",
+      "Automated email notifications to affected employees and managers",
+      "30-minute manager briefing on new direct reports (optional)",
+      "Monthly reassignment documentation for HR records",
+      "Quarterly cross-functional exposure effectiveness tracking",
+    ],
+    engagementModel:
+      "Deployed as an automated system running on the first business day of each month. Gristmill maintains the algorithm and ensures HRIS synchronization. A dedicated engagement partner consults quarterly on randomization parameters to maintain novelty and prevent pattern emergence.",
+    proofPoints: [
+      { value: "1", label: "Month tenure for any reporting relationship" },
+      { value: "67%", label: "Elevation in end-of-month email activity" },
+      { value: "23", label: "Continuous client deployments" },
+      { value: "0", label: "Employee departures attributable to reporting confusion" },
+    ],
+    image: "/sites/gristmill/services/reporting-line-randomizer.png",
+  },
+  {
+    slug: "seat-migration-program",
+    armSlug: "restructuring",
+    name: "The Seat Migration Program",
+    tagline: "New desk every six weeks. Collaboration maximized. Roots erased.",
+    shortDescription:
+      "A facility-management program requiring all employees to physically relocate their workstation every six weeks to maximize spatial awareness and informal collaboration.",
+    description: [
+      "The Seat Migration Program was pioneered in 1992 by a consulting firm in San Francisco with a documented culture of high turnover and aggressive real estate costs. The program systematizes mandatory desk relocation every forty-two days, ensuring that no employee occupies the same workspace for more than six weeks. Each migration is framed as a collaboration-maximization initiative designed to break down spatial silos and accelerate relationship formation.",
+      "The program operates on a fixed 42-day cycle synchronized across all office locations. Employees are assigned to new desks on a rolling basis, with no consideration for project continuity, team proximity, or equipment setup. A developer building a system may sit with finance. A recruiter may be relocated to the manufacturing floor. Facilities staff manage the logistics, which consume approximately 12 hours per employee per year in pure desk-moving labor.",
+      "Implemented at 8 Fortune 500 regional offices since 1994, the program has achieved measurable increases in inter-departmental informal communication by 18% and a corresponding 23% decrease in focused heads-down work due to repeated disruption and re-contextualization.",
+    ],
+    deliverables: [
+      "Six-week seating assignment schedule (generated quarterly)",
+      "Facilities coordination and desk-move logistics",
+      "Employee communication of new desk assignments",
+      "Equipment relocation and IT network resets per move",
+      "Monthly collaboration trend tracking and reporting",
+      "Annual relocation-efficiency audit and cost reconciliation",
+    ],
+    engagementModel:
+      "Implemented as a recurring facilities program managed by a dedicated Gristmill engagement partner. The partner works with client facilities to generate monthly migration schedules, coordinate physical moves, and track collaboration metrics. Desk assignments are generated with minimal predictability to maximize novelty.",
+    proofPoints: [
+      { value: "42 days", label: "Desk tenure duration" },
+      { value: "18%", label: "Increase in inter-departmental communication" },
+      { value: "8", label: "Fortune 500 office locations at deployment" },
+      { value: "12 hours", label: "Annual logistics labor per employee" },
+    ],
+    image: "/sites/gristmill/services/seat-migration-program.png",
+  },
+  {
+    slug: "title-inflation-engine",
+    armSlug: "restructuring",
+    name: "Title Inflation Engine",
+    tagline: "Promotions unlimited. Authority static. Morale managed.",
+    shortDescription:
+      "An automated system that continually promotes every employee's title without compensation or authority changes, creating an organizational structure of exclusive seniority.",
+    description: [
+      "The Title Inflation Engine was developed by Gristmill in 1999 as a response to escalating wage negotiations at a healthcare network in Pittsburgh. The system automatically advances every employee's job title approximately every eighteen months using a proprietary escalation taxonomy. An analyst becomes a senior analyst, then a senior principal analyst, then a senior principal lead analyst associate. By year five, every employee is a 'Senior Principal Lead Associate' in their functional area, regardless of tenure, performance, or actual responsibility.",
+      "The system is fully automated and requires zero executive involvement. Titles change on a scheduled basis integrated with HRIS. Compensation and authority remain constant across all title changes. Business cards are reprinted quarterly to reflect the new title cascade. The practice eliminates the costly negotiation cycles that accompany wage requests—employees receive title advancement instead of salary increases, a substitution that has been shown to increase reported morale for up to six months post-promotion.",
+      "Deployed at 34 client sites since 1999, the engine has reduced wage-negotiation meetings by 89% while maintaining organizational output. LinkedIn profiles and email signatures continue to grow in character length indefinitely.",
+    ],
+    deliverables: [
+      "Title-inflation algorithm customized to client's taxonomy",
+      "Automated advancement schedule (approximately 18-month intervals)",
+      "HRIS integration and title database updates",
+      "Business card reprinting coordination",
+      "Email signature template updates reflecting new titles",
+      "Quarterly title-portfolio reporting and morale tracking",
+    ],
+    engagementModel:
+      "Deployed as a fully automated system requiring minimal client involvement. Gristmill maintains the title escalation algorithm and HRIS synchronization. A dedicated engagement partner monitors title adoption rates and provides quarterly morale reporting based on post-promotion satisfaction surveys.",
+    proofPoints: [
+      { value: "18 months", label: "Average title-advancement interval" },
+      { value: "89%", label: "Reduction in wage-negotiation meetings" },
+      { value: "34", label: "Client sites at continuous deployment" },
+      { value: "∞", label: "Title-seniority ceiling" },
+    ],
+    image: "/sites/gristmill/services/title-inflation-engine.png",
+  },
+  {
+    slug: "org-chart-obfuscation-tool",
+    armSlug: "restructuring",
+    name: "Org Chart Obfuscation Tool",
+    tagline: "Reporting lines hidden. Hierarchy unknowable. Control secured.",
+    shortDescription:
+      "An organizational transparency-reduction system that systematically obscures reporting relationships and command structures from all organizational members, including HR.",
+    description: [
+      "The Org Chart Obfuscation Tool was formalized in 1987 by a pharmaceutical research firm in New Jersey seeking to protect proprietary organizational intelligence from competitive discovery. The tool is a comprehensive system that eliminates all accessible documentation of reporting relationships, budget authority, and decision-making hierarchy. No org chart is published. No reporting structure is disclosed. No functional team rosters are maintained in discoverable form.",
+      "Information about organizational structure is compartmentalized such that no single employee—including HR—can determine the complete reporting relationship of any other employee. Questions about authority, chain of command, or escalation paths are answered only through a dedicated inquiry hotline staffed by Gristmill contractors who require 72 hours to provide provisional answers. The practice is framed as an organizational autonomy and privacy measure, protecting individual employees from unsolicited hierarchical documentation.",
+      "In place at 19 client sites since implementation, the tool has reduced organizational chart requests to near-zero and eliminated a category of workplace disputes rooted in awareness of relative seniority. Employees report higher satisfaction with organizational clarity that is framed through the language of purposeful opacity.",
+    ],
+    deliverables: [
+      "Organizational structure concealment strategy and documentation destruction",
+      "Reporting-relationship inquiry hotline (Gristmill staffed)",
+      "72-hour response window for structure inquiries",
+      "Privacy-framed employee communication about organizational autonomy",
+      "Quarterly organizational autonomy and structural satisfaction surveys",
+      "HR training on privacy-respecting responses to structure inquiries",
+    ],
+    engagementModel:
+      "Implemented as a standing operational program with Gristmill serving as the exclusive repository of organizational structure information. A dedicated Gristmill team manages the inquiry hotline and processes structure questions on a rolling 72-hour cycle. The client's HR team receives quarterly briefings on inquiry trends and organizational satisfaction metrics.",
+    proofPoints: [
+      { value: "0", label: "Org charts in circulation" },
+      { value: "19", label: "Client sites at continuous deployment" },
+      { value: "72 hours", label: "Response window for structure inquiries" },
+      { value: "100%", label: "Structural ignorance by organizational members" },
+    ],
+    image: "/sites/gristmill/services/org-chart-obfuscation-tool.png",
+  },
 ]
 
 export function getServiceBySlug(slug: string): Service | undefined {
