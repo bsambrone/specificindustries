@@ -37,7 +37,7 @@ export default function OnlyFansPrivacy() {
 
         <h2 className="mt-6 text-xl font-bold text-[#0095CD]">4. Your Rights</h2>
         <p className="mt-2 text-slate-700">
-          You may unsubscribe from any fan at any time by clearing your browser's local storage. The fans will not take it personally. They are fans.
+          You may unsubscribe from any fan at any time by clearing your browser&apos;s local storage. The fans will not take it personally. They are fans.
         </p>
 
         <p className="mt-10 text-sm italic text-slate-500 pt-4 border-t border-slate-200">

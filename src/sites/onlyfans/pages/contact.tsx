@@ -26,8 +26,8 @@ export default function OnlyFansContact() {
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6">
-            <h2 className="font-bold text-[#0F172A]">Contact a fan's representation</h2>
-            <form className="mt-4 space-y-3" onSubmit={(e) => e.preventDefault()}>
+            <h2 className="font-bold text-[#0F172A]">Contact a fan&apos;s representation</h2>
+            <form className="mt-4 space-y-3">
               <input
                 type="text"
                 placeholder="Which fan?"

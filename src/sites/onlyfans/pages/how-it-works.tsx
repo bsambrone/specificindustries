@@ -26,13 +26,13 @@ export default async function OnlyFansHowItWorks() {
             Every fan on our platform has been carefully selected for its airflow personality. Use the niche filters on the Meet the Fans page to find the kind of fan that matches your home — wholesome porch family, extreme industrial, luxury minimalist, or one of five other distinct categories.
           </Step>
           <Step n={2} title="Subscribe to your favorite">
-            When you find a fan you like, click their Subscribe button. Each fan has their own monthly tier — from $0.99 to $24.99. After subscribing, all of their previously locked posts become visible immediately. You'll see what they've been posting all this time.
+            When you find a fan you like, click their Subscribe button. Each fan has their own monthly tier — from $0.99 to $24.99. After subscribing, all of their previously locked posts become visible immediately. You&apos;ll see what they&apos;ve been posting all this time.
           </Step>
           <Step n={3} title="Watch them blow air">
-            That's the platform. Each fan posts new airflow content as it occurs to them — Brenda updates regularly, Mistress Oscillata releases one cycle per quarter, the Ghost in the Attic posts irregularly and often without explanation. You will receive notifications via the means available to you.
+            That&apos;s the platform. Each fan posts new airflow content as it occurs to them — Brenda updates regularly, Mistress Oscillata releases one cycle per quarter, the Ghost in the Attic posts irregularly and often without explanation. You will receive notifications via the means available to you.
           </Step>
           <Step n={4} title="Tip generously">
-            Every fan has a tip menu with custom airflow services at multiple price points. Want a personalized angle adjustment from Brenda? Tip $5. Want Big Vance to blow your hat across a parking lot? Tip $10. Your favorite fan didn't earn that personality on its own.
+            Every fan has a tip menu with custom airflow services at multiple price points. Want a personalized angle adjustment from Brenda? Tip $5. Want Big Vance to blow your hat across a parking lot? Tip $10. Your favorite fan didn&apos;t earn that personality on its own.
           </Step>
         </div>
 

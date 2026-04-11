@@ -21,7 +21,7 @@ export default async function OnlyFansHome() {
               Subscribe to your favorite fan.
             </h1>
             <p className="mt-4 text-lg text-slate-600">
-              Literal fans. Blowing literal air. The world's premier subscription platform for household and industrial airflow content.
+              Literal fans. Blowing literal air. The world&apos;s premier subscription platform for household and industrial airflow content.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -91,7 +91,7 @@ export default async function OnlyFansHome() {
             <ol className="mt-6 space-y-4 text-slate-700">
               <li className="flex gap-3"><span className="font-bold text-[#00AFF0]">1.</span><span>Browse the fans and find one whose airflow personality fits your home.</span></li>
               <li className="flex gap-3"><span className="font-bold text-[#00AFF0]">2.</span><span>Subscribe — every fan posts content as it occurs to them.</span></li>
-              <li className="flex gap-3"><span className="font-bold text-[#00AFF0]">3.</span><span>Watch them blow air. That's it. That's the platform.</span></li>
+              <li className="flex gap-3"><span className="font-bold text-[#00AFF0]">3.</span><span>Watch them blow air. That&apos;s it. That&apos;s the platform.</span></li>
             </ol>
             <Link
               href={siteHref("/how-it-works")}

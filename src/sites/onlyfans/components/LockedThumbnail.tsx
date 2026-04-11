@@ -1,8 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { useEffect, useState } from "react"
-import { isSubscribed, ONLYFANS_SUBSCRIBED_EVENT } from "./SubscribeButton"
+import { useIsSubscribed } from "./SubscribeButton"
 
 interface LockedThumbnailProps {
   fanSlug: string
@@ -12,22 +11,8 @@ interface LockedThumbnailProps {
 }
 
 export function LockedThumbnail({ fanSlug, image, caption, locked }: LockedThumbnailProps) {
-  const [unlocked, setUnlocked] = useState(false)
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-    setUnlocked(isSubscribed(fanSlug))
-    function handler(e: Event) {
-      const detail = (e as CustomEvent<{ slug: string }>).detail
-      if (detail?.slug === fanSlug) setUnlocked(true)
-    }
-    window.addEventListener(ONLYFANS_SUBSCRIBED_EVENT, handler)
-    return () => window.removeEventListener(ONLYFANS_SUBSCRIBED_EVENT, handler)
-  }, [fanSlug])
-
-  // Pre-mount, render server-safe state: locked posts blurred, free posts visible
-  const isLocked = locked && (!mounted || !unlocked)
+  const unlocked = useIsSubscribed(fanSlug)
+  const isLocked = locked && !unlocked
 
   return (
     <div className="relative aspect-square overflow-hidden rounded-lg bg-slate-200">

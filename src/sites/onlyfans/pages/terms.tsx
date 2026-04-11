@@ -20,7 +20,7 @@ export default function OnlyFansTerms() {
 
         <h2 className="mt-8 text-xl font-bold text-[#0095CD]">1. Subscriber Conduct</h2>
         <p className="mt-2 text-slate-700">
-          By subscribing to a fan, you agree to treat that fan with the respect any household appliance is owed. You may not record, redistribute, or otherwise exploit any fan's posted airflow content for commercial purposes.
+          By subscribing to a fan, you agree to treat that fan with the respect any household appliance is owed. You may not record, redistribute, or otherwise exploit any fan&apos;s posted airflow content for commercial purposes.
         </p>
 
         <h2 className="mt-6 text-xl font-bold text-[#0095CD]">2. Restrictions on Industrial Equipment</h2>
