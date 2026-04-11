@@ -39,8 +39,8 @@ src/sites/onlyfans/pages/testimonials.tsx
 src/sites/onlyfans/pages/contact.tsx
 src/sites/onlyfans/pages/privacy.tsx
 src/sites/onlyfans/pages/terms.tsx
-mcp/image-gen/base-images/{slug}/base.png × 8                    # staged base references
-public/sites/onlyfans/*.png                                      # ~79 generated files (see Image Generation Strategy)
+base-images/{slug}/base.png × 8                                  # staged base references (untracked — base-images/ is gitignored)
+public/sites/onlyfans/*.png                                      # ~79 generated files committed here (see Image Generation Strategy)
 ```
 
 ### Modified files
@@ -54,12 +54,14 @@ src/sites/subdomains.ts        # add "onlyfans" to VALID_SUBDOMAINS
 
 ## Image Generation Strategy
 
-Each fan gets a **canonical base image** generated once via `mcp__image-gen__generate_image`. The base is then staged into `mcp/image-gen/base-images/{fan-slug}/base.png`, which makes it visible to `mcp__image-gen__generate_image_with_person` under `person="{fan-slug}"`. Subsequent images for that fan (cover, avatar, 6 posts) call `generate_image_with_person` so the fan looks consistent across all renders.
+Each fan gets a **canonical base image** generated once via `mcp__image-gen__generate_image`. The base is then staged into `base-images/{fan-slug}/base.png` **at the project root** (the MCP server resolves `base-images/` against `process.cwd()`, not against `mcp/image-gen/`). Staging it there makes it visible to `mcp__image-gen__generate_image_with_person` under `person="{fan-slug}"`. Subsequent images for that fan (cover, avatar, 6 posts) call `generate_image_with_person` so the fan looks consistent across all renders.
 
-**MCP outputs land in `mcp/image-gen/generated-images/`.** Each task moves the finished images into `public/sites/onlyfans/` with `git mv` after generation.
+**MCP outputs land in `generated-images/` at the project root** (same `cwd()` quirk). Each task moves the finished images into `public/sites/onlyfans/` after generation.
+
+**Both `base-images/` and `generated-images/` are gitignored** — only the moved-into-`public/` copies get committed. The staged `base-images/{slug}/base.png` is byte-identical to the committed `public/sites/onlyfans/{slug}-base.png`, so a fresh clone that needs to regenerate variations of an existing fan can copy `public/sites/onlyfans/{slug}-base.png` back to `base-images/{slug}/base.png` to re-prime the reference.
 
 **Per-fan filename convention:**
-- Base reference: `{slug}-base.png` (1024×1024) → also copied to `mcp/image-gen/base-images/{slug}/base.png`
+- Base reference: `{slug}-base.png` (1024×1024) → also copied to `base-images/{slug}/base.png`
 - Cover banner: `fan-{slug}-cover.png` (1536×1024)
 - Profile avatar: `fan-{slug}-avatar.png` (1024×1024)
 - Post grid: `fan-{slug}-post-01.png` through `fan-{slug}-post-06.png` (1024×1024)
@@ -86,7 +88,7 @@ Each fan gets a **canonical base image** generated once via `mcp__image-gen__gen
 **Why first:** Brenda is the simplest fan to validate the whole MCP-driven generation pipeline (text-to-image base → stage as reference → 8 img-to-img variations → move to public). If anything is wrong with the workflow, we catch it on one fan instead of eight.
 
 **Files:**
-- Create: `mcp/image-gen/base-images/brenda/base.png`
+- Create: `base-images/brenda/base.png`
 - Create: `public/sites/onlyfans/brenda-base.png`
 - Create: `public/sites/onlyfans/fan-brenda-cover.png`
 - Create: `public/sites/onlyfans/fan-brenda-avatar.png`
@@ -105,8 +107,8 @@ Call `mcp__image-gen__generate_image` with these arguments:
 - [ ] **Step 2: Stage the base into the MCP reference folder**
 
 ```bash
-mkdir -p mcp/image-gen/base-images/brenda && \
-cp mcp/image-gen/generated-images/brenda-base.png mcp/image-gen/base-images/brenda/base.png
+mkdir -p base-images/brenda && \
+cp generated-images/brenda-base.png base-images/brenda/base.png
 ```
 
 - [ ] **Step 3: Generate Brenda's cover banner**
@@ -157,15 +159,15 @@ Post 06 — `fan-brenda-post-06.png`:
 
 ```bash
 mkdir -p public/sites/onlyfans && \
-mv mcp/image-gen/generated-images/brenda-base.png \
-   mcp/image-gen/generated-images/fan-brenda-cover.png \
-   mcp/image-gen/generated-images/fan-brenda-avatar.png \
-   mcp/image-gen/generated-images/fan-brenda-post-01.png \
-   mcp/image-gen/generated-images/fan-brenda-post-02.png \
-   mcp/image-gen/generated-images/fan-brenda-post-03.png \
-   mcp/image-gen/generated-images/fan-brenda-post-04.png \
-   mcp/image-gen/generated-images/fan-brenda-post-05.png \
-   mcp/image-gen/generated-images/fan-brenda-post-06.png \
+mv generated-images/brenda-base.png \
+   generated-images/fan-brenda-cover.png \
+   generated-images/fan-brenda-avatar.png \
+   generated-images/fan-brenda-post-01.png \
+   generated-images/fan-brenda-post-02.png \
+   generated-images/fan-brenda-post-03.png \
+   generated-images/fan-brenda-post-04.png \
+   generated-images/fan-brenda-post-05.png \
+   generated-images/fan-brenda-post-06.png \
    public/sites/onlyfans/
 ```
 
@@ -181,7 +183,7 @@ git add public/sites/onlyfans/brenda-base.png \
         public/sites/onlyfans/fan-brenda-cover.png \
         public/sites/onlyfans/fan-brenda-avatar.png \
         public/sites/onlyfans/fan-brenda-post-*.png \
-        mcp/image-gen/base-images/brenda/base.png && \
+        base-images/brenda/base.png && \
 git commit -m "feat(onlyfans): generate Brenda image set (Box Fan)"
 ```
 
@@ -189,7 +191,7 @@ git commit -m "feat(onlyfans): generate Brenda image set (Box Fan)"
 
 ## Task 2: Generate Big Vance's image set (Industrial Wind Tunnel)
 
-**Files:** `mcp/image-gen/base-images/vance/base.png`, plus 9 files under `public/sites/onlyfans/` matching the `vance-base.png` / `fan-vance-*.png` pattern.
+**Files:** `base-images/vance/base.png`, plus 9 files under `public/sites/onlyfans/` matching the `vance-base.png` / `fan-vance-*.png` pattern.
 
 - [ ] **Step 1: Generate Vance's base reference**
 
@@ -204,8 +206,8 @@ Call `mcp__image-gen__generate_image`:
 - [ ] **Step 2: Stage the base into the MCP reference folder**
 
 ```bash
-mkdir -p mcp/image-gen/base-images/vance && \
-cp mcp/image-gen/generated-images/vance-base.png mcp/image-gen/base-images/vance/base.png
+mkdir -p base-images/vance && \
+cp generated-images/vance-base.png base-images/vance/base.png
 ```
 
 - [ ] **Step 3: Generate cover banner**
@@ -245,15 +247,15 @@ Post 06 — `fan-vance-post-06.png`:
 - [ ] **Step 6: Move generated files to public/sites/onlyfans/**
 
 ```bash
-mv mcp/image-gen/generated-images/vance-base.png \
-   mcp/image-gen/generated-images/fan-vance-cover.png \
-   mcp/image-gen/generated-images/fan-vance-avatar.png \
-   mcp/image-gen/generated-images/fan-vance-post-01.png \
-   mcp/image-gen/generated-images/fan-vance-post-02.png \
-   mcp/image-gen/generated-images/fan-vance-post-03.png \
-   mcp/image-gen/generated-images/fan-vance-post-04.png \
-   mcp/image-gen/generated-images/fan-vance-post-05.png \
-   mcp/image-gen/generated-images/fan-vance-post-06.png \
+mv generated-images/vance-base.png \
+   generated-images/fan-vance-cover.png \
+   generated-images/fan-vance-avatar.png \
+   generated-images/fan-vance-post-01.png \
+   generated-images/fan-vance-post-02.png \
+   generated-images/fan-vance-post-03.png \
+   generated-images/fan-vance-post-04.png \
+   generated-images/fan-vance-post-05.png \
+   generated-images/fan-vance-post-06.png \
    public/sites/onlyfans/
 ```
 
@@ -262,8 +264,7 @@ mv mcp/image-gen/generated-images/vance-base.png \
 ```bash
 ls public/sites/onlyfans/ | grep -c vance   # expect 9
 git add public/sites/onlyfans/vance-base.png \
-        public/sites/onlyfans/fan-vance-*.png \
-        mcp/image-gen/base-images/vance/base.png && \
+        public/sites/onlyfans/fan-vance-*.png && \
 git commit -m "feat(onlyfans): generate Big Vance image set (Industrial Wind Tunnel)"
 ```
 
@@ -271,7 +272,7 @@ git commit -m "feat(onlyfans): generate Big Vance image set (Industrial Wind Tun
 
 ## Task 3: Generate Mistress Oscillata's image set (Tower Fan)
 
-**Files:** `mcp/image-gen/base-images/oscillata/base.png` plus 9 `*oscillata*.png` files under `public/sites/onlyfans/`.
+**Files:** `base-images/oscillata/base.png` plus 9 `*oscillata*.png` files under `public/sites/onlyfans/`.
 
 - [ ] **Step 1: Generate Oscillata's base reference**
 
@@ -286,8 +287,8 @@ Call `mcp__image-gen__generate_image`:
 - [ ] **Step 2: Stage the base**
 
 ```bash
-mkdir -p mcp/image-gen/base-images/oscillata && \
-cp mcp/image-gen/generated-images/oscillata-base.png mcp/image-gen/base-images/oscillata/base.png
+mkdir -p base-images/oscillata && \
+cp generated-images/oscillata-base.png base-images/oscillata/base.png
 ```
 
 - [ ] **Step 3: Generate cover banner**
@@ -327,21 +328,20 @@ Post 06 — `fan-oscillata-post-06.png`:
 - [ ] **Step 6: Move and commit**
 
 ```bash
-mv mcp/image-gen/generated-images/oscillata-base.png \
-   mcp/image-gen/generated-images/fan-oscillata-cover.png \
-   mcp/image-gen/generated-images/fan-oscillata-avatar.png \
-   mcp/image-gen/generated-images/fan-oscillata-post-01.png \
-   mcp/image-gen/generated-images/fan-oscillata-post-02.png \
-   mcp/image-gen/generated-images/fan-oscillata-post-03.png \
-   mcp/image-gen/generated-images/fan-oscillata-post-04.png \
-   mcp/image-gen/generated-images/fan-oscillata-post-05.png \
-   mcp/image-gen/generated-images/fan-oscillata-post-06.png \
+mv generated-images/oscillata-base.png \
+   generated-images/fan-oscillata-cover.png \
+   generated-images/fan-oscillata-avatar.png \
+   generated-images/fan-oscillata-post-01.png \
+   generated-images/fan-oscillata-post-02.png \
+   generated-images/fan-oscillata-post-03.png \
+   generated-images/fan-oscillata-post-04.png \
+   generated-images/fan-oscillata-post-05.png \
+   generated-images/fan-oscillata-post-06.png \
    public/sites/onlyfans/
 
 ls public/sites/onlyfans/ | grep -c oscillata   # expect 9
 git add public/sites/onlyfans/oscillata-base.png \
-        public/sites/onlyfans/fan-oscillata-*.png \
-        mcp/image-gen/base-images/oscillata/base.png && \
+        public/sites/onlyfans/fan-oscillata-*.png && \
 git commit -m "feat(onlyfans): generate Mistress Oscillata image set (Tower Fan)"
 ```
 
@@ -349,7 +349,7 @@ git commit -m "feat(onlyfans): generate Mistress Oscillata image set (Tower Fan)
 
 ## Task 4: Generate Sir Reginald Plumebottom III's image set (Ceiling Fan)
 
-**Files:** `mcp/image-gen/base-images/reginald/base.png` plus 9 `*reginald*.png` files under `public/sites/onlyfans/`.
+**Files:** `base-images/reginald/base.png` plus 9 `*reginald*.png` files under `public/sites/onlyfans/`.
 
 - [ ] **Step 1: Generate Reginald's base reference**
 
@@ -364,8 +364,8 @@ Call `mcp__image-gen__generate_image`:
 - [ ] **Step 2: Stage the base**
 
 ```bash
-mkdir -p mcp/image-gen/base-images/reginald && \
-cp mcp/image-gen/generated-images/reginald-base.png mcp/image-gen/base-images/reginald/base.png
+mkdir -p base-images/reginald && \
+cp generated-images/reginald-base.png base-images/reginald/base.png
 ```
 
 - [ ] **Step 3: Generate cover banner**
@@ -405,21 +405,20 @@ Post 06 — `fan-reginald-post-06.png`:
 - [ ] **Step 6: Move and commit**
 
 ```bash
-mv mcp/image-gen/generated-images/reginald-base.png \
-   mcp/image-gen/generated-images/fan-reginald-cover.png \
-   mcp/image-gen/generated-images/fan-reginald-avatar.png \
-   mcp/image-gen/generated-images/fan-reginald-post-01.png \
-   mcp/image-gen/generated-images/fan-reginald-post-02.png \
-   mcp/image-gen/generated-images/fan-reginald-post-03.png \
-   mcp/image-gen/generated-images/fan-reginald-post-04.png \
-   mcp/image-gen/generated-images/fan-reginald-post-05.png \
-   mcp/image-gen/generated-images/fan-reginald-post-06.png \
+mv generated-images/reginald-base.png \
+   generated-images/fan-reginald-cover.png \
+   generated-images/fan-reginald-avatar.png \
+   generated-images/fan-reginald-post-01.png \
+   generated-images/fan-reginald-post-02.png \
+   generated-images/fan-reginald-post-03.png \
+   generated-images/fan-reginald-post-04.png \
+   generated-images/fan-reginald-post-05.png \
+   generated-images/fan-reginald-post-06.png \
    public/sites/onlyfans/
 
 ls public/sites/onlyfans/ | grep -c reginald   # expect 9
 git add public/sites/onlyfans/reginald-base.png \
-        public/sites/onlyfans/fan-reginald-*.png \
-        mcp/image-gen/base-images/reginald/base.png && \
+        public/sites/onlyfans/fan-reginald-*.png && \
 git commit -m "feat(onlyfans): generate Sir Reginald image set (Ceiling Fan)"
 ```
 
@@ -427,7 +426,7 @@ git commit -m "feat(onlyfans): generate Sir Reginald image set (Ceiling Fan)"
 
 ## Task 5: Generate AeroVolt 9000's image set (Bladeless Tower)
 
-**Files:** `mcp/image-gen/base-images/aerovolt/base.png` plus 9 `*aerovolt*.png` files under `public/sites/onlyfans/`.
+**Files:** `base-images/aerovolt/base.png` plus 9 `*aerovolt*.png` files under `public/sites/onlyfans/`.
 
 - [ ] **Step 1: Generate base reference**
 
@@ -442,8 +441,8 @@ git commit -m "feat(onlyfans): generate Sir Reginald image set (Ceiling Fan)"
 - [ ] **Step 2: Stage the base**
 
 ```bash
-mkdir -p mcp/image-gen/base-images/aerovolt && \
-cp mcp/image-gen/generated-images/aerovolt-base.png mcp/image-gen/base-images/aerovolt/base.png
+mkdir -p base-images/aerovolt && \
+cp generated-images/aerovolt-base.png base-images/aerovolt/base.png
 ```
 
 - [ ] **Step 3: Generate cover banner**
@@ -483,21 +482,20 @@ Post 06 — `fan-aerovolt-post-06.png`:
 - [ ] **Step 6: Move and commit**
 
 ```bash
-mv mcp/image-gen/generated-images/aerovolt-base.png \
-   mcp/image-gen/generated-images/fan-aerovolt-cover.png \
-   mcp/image-gen/generated-images/fan-aerovolt-avatar.png \
-   mcp/image-gen/generated-images/fan-aerovolt-post-01.png \
-   mcp/image-gen/generated-images/fan-aerovolt-post-02.png \
-   mcp/image-gen/generated-images/fan-aerovolt-post-03.png \
-   mcp/image-gen/generated-images/fan-aerovolt-post-04.png \
-   mcp/image-gen/generated-images/fan-aerovolt-post-05.png \
-   mcp/image-gen/generated-images/fan-aerovolt-post-06.png \
+mv generated-images/aerovolt-base.png \
+   generated-images/fan-aerovolt-cover.png \
+   generated-images/fan-aerovolt-avatar.png \
+   generated-images/fan-aerovolt-post-01.png \
+   generated-images/fan-aerovolt-post-02.png \
+   generated-images/fan-aerovolt-post-03.png \
+   generated-images/fan-aerovolt-post-04.png \
+   generated-images/fan-aerovolt-post-05.png \
+   generated-images/fan-aerovolt-post-06.png \
    public/sites/onlyfans/
 
 ls public/sites/onlyfans/ | grep -c aerovolt   # expect 9
 git add public/sites/onlyfans/aerovolt-base.png \
-        public/sites/onlyfans/fan-aerovolt-*.png \
-        mcp/image-gen/base-images/aerovolt/base.png && \
+        public/sites/onlyfans/fan-aerovolt-*.png && \
 git commit -m "feat(onlyfans): generate AeroVolt 9000 image set (Bladeless Tower)"
 ```
 
@@ -505,7 +503,7 @@ git commit -m "feat(onlyfans): generate AeroVolt 9000 image set (Bladeless Tower
 
 ## Task 6: Generate Lil' Buzz's image set (USB Desk Fan)
 
-**Files:** `mcp/image-gen/base-images/lil-buzz/base.png` plus 9 `*lil-buzz*.png` files under `public/sites/onlyfans/`.
+**Files:** `base-images/lil-buzz/base.png` plus 9 `*lil-buzz*.png` files under `public/sites/onlyfans/`.
 
 - [ ] **Step 1: Generate base reference**
 
@@ -520,8 +518,8 @@ git commit -m "feat(onlyfans): generate AeroVolt 9000 image set (Bladeless Tower
 - [ ] **Step 2: Stage the base**
 
 ```bash
-mkdir -p mcp/image-gen/base-images/lil-buzz && \
-cp mcp/image-gen/generated-images/lil-buzz-base.png mcp/image-gen/base-images/lil-buzz/base.png
+mkdir -p base-images/lil-buzz && \
+cp generated-images/lil-buzz-base.png base-images/lil-buzz/base.png
 ```
 
 - [ ] **Step 3: Generate cover banner**
@@ -561,21 +559,20 @@ Post 06 — `fan-lil-buzz-post-06.png`:
 - [ ] **Step 6: Move and commit**
 
 ```bash
-mv mcp/image-gen/generated-images/lil-buzz-base.png \
-   mcp/image-gen/generated-images/fan-lil-buzz-cover.png \
-   mcp/image-gen/generated-images/fan-lil-buzz-avatar.png \
-   mcp/image-gen/generated-images/fan-lil-buzz-post-01.png \
-   mcp/image-gen/generated-images/fan-lil-buzz-post-02.png \
-   mcp/image-gen/generated-images/fan-lil-buzz-post-03.png \
-   mcp/image-gen/generated-images/fan-lil-buzz-post-04.png \
-   mcp/image-gen/generated-images/fan-lil-buzz-post-05.png \
-   mcp/image-gen/generated-images/fan-lil-buzz-post-06.png \
+mv generated-images/lil-buzz-base.png \
+   generated-images/fan-lil-buzz-cover.png \
+   generated-images/fan-lil-buzz-avatar.png \
+   generated-images/fan-lil-buzz-post-01.png \
+   generated-images/fan-lil-buzz-post-02.png \
+   generated-images/fan-lil-buzz-post-03.png \
+   generated-images/fan-lil-buzz-post-04.png \
+   generated-images/fan-lil-buzz-post-05.png \
+   generated-images/fan-lil-buzz-post-06.png \
    public/sites/onlyfans/
 
 ls public/sites/onlyfans/ | grep -c lil-buzz   # expect 9
 git add public/sites/onlyfans/lil-buzz-base.png \
-        public/sites/onlyfans/fan-lil-buzz-*.png \
-        mcp/image-gen/base-images/lil-buzz/base.png && \
+        public/sites/onlyfans/fan-lil-buzz-*.png && \
 git commit -m "feat(onlyfans): generate Lil' Buzz image set (USB Desk Fan)"
 ```
 
@@ -585,7 +582,7 @@ git commit -m "feat(onlyfans): generate Lil' Buzz image set (USB Desk Fan)"
 
 **Note on the bit:** The Ghost is supposed to be "felt, never seen" — but we still need real images to render. Treat the images as moody, dimly-lit, partially obscured shots of the same whole-house attic fan, photographed in ways that feel like the photographer was reluctant to fully capture it.
 
-**Files:** `mcp/image-gen/base-images/ghost/base.png` plus 9 `*ghost*.png` files under `public/sites/onlyfans/`.
+**Files:** `base-images/ghost/base.png` plus 9 `*ghost*.png` files under `public/sites/onlyfans/`.
 
 - [ ] **Step 1: Generate base reference**
 
@@ -600,8 +597,8 @@ git commit -m "feat(onlyfans): generate Lil' Buzz image set (USB Desk Fan)"
 - [ ] **Step 2: Stage the base**
 
 ```bash
-mkdir -p mcp/image-gen/base-images/ghost && \
-cp mcp/image-gen/generated-images/ghost-base.png mcp/image-gen/base-images/ghost/base.png
+mkdir -p base-images/ghost && \
+cp generated-images/ghost-base.png base-images/ghost/base.png
 ```
 
 - [ ] **Step 3: Generate cover banner**
@@ -641,21 +638,20 @@ Post 06 — `fan-ghost-post-06.png`:
 - [ ] **Step 6: Move and commit**
 
 ```bash
-mv mcp/image-gen/generated-images/ghost-base.png \
-   mcp/image-gen/generated-images/fan-ghost-cover.png \
-   mcp/image-gen/generated-images/fan-ghost-avatar.png \
-   mcp/image-gen/generated-images/fan-ghost-post-01.png \
-   mcp/image-gen/generated-images/fan-ghost-post-02.png \
-   mcp/image-gen/generated-images/fan-ghost-post-03.png \
-   mcp/image-gen/generated-images/fan-ghost-post-04.png \
-   mcp/image-gen/generated-images/fan-ghost-post-05.png \
-   mcp/image-gen/generated-images/fan-ghost-post-06.png \
+mv generated-images/ghost-base.png \
+   generated-images/fan-ghost-cover.png \
+   generated-images/fan-ghost-avatar.png \
+   generated-images/fan-ghost-post-01.png \
+   generated-images/fan-ghost-post-02.png \
+   generated-images/fan-ghost-post-03.png \
+   generated-images/fan-ghost-post-04.png \
+   generated-images/fan-ghost-post-05.png \
+   generated-images/fan-ghost-post-06.png \
    public/sites/onlyfans/
 
 ls public/sites/onlyfans/ | grep -c ghost   # expect 9
 git add public/sites/onlyfans/ghost-base.png \
-        public/sites/onlyfans/fan-ghost-*.png \
-        mcp/image-gen/base-images/ghost/base.png && \
+        public/sites/onlyfans/fan-ghost-*.png && \
 git commit -m "feat(onlyfans): generate Ghost in the Attic image set"
 ```
 
@@ -663,7 +659,7 @@ git commit -m "feat(onlyfans): generate Ghost in the Attic image set"
 
 ## Task 8: Generate WhirrCore_42's image set (PC Case Fan)
 
-**Files:** `mcp/image-gen/base-images/whirrcore/base.png` plus 9 `*whirrcore*.png` files under `public/sites/onlyfans/`.
+**Files:** `base-images/whirrcore/base.png` plus 9 `*whirrcore*.png` files under `public/sites/onlyfans/`.
 
 - [ ] **Step 1: Generate base reference**
 
@@ -678,8 +674,8 @@ git commit -m "feat(onlyfans): generate Ghost in the Attic image set"
 - [ ] **Step 2: Stage the base**
 
 ```bash
-mkdir -p mcp/image-gen/base-images/whirrcore && \
-cp mcp/image-gen/generated-images/whirrcore-base.png mcp/image-gen/base-images/whirrcore/base.png
+mkdir -p base-images/whirrcore && \
+cp generated-images/whirrcore-base.png base-images/whirrcore/base.png
 ```
 
 - [ ] **Step 3: Generate cover banner**
@@ -719,21 +715,20 @@ Post 06 — `fan-whirrcore-post-06.png`:
 - [ ] **Step 6: Move and commit**
 
 ```bash
-mv mcp/image-gen/generated-images/whirrcore-base.png \
-   mcp/image-gen/generated-images/fan-whirrcore-cover.png \
-   mcp/image-gen/generated-images/fan-whirrcore-avatar.png \
-   mcp/image-gen/generated-images/fan-whirrcore-post-01.png \
-   mcp/image-gen/generated-images/fan-whirrcore-post-02.png \
-   mcp/image-gen/generated-images/fan-whirrcore-post-03.png \
-   mcp/image-gen/generated-images/fan-whirrcore-post-04.png \
-   mcp/image-gen/generated-images/fan-whirrcore-post-05.png \
-   mcp/image-gen/generated-images/fan-whirrcore-post-06.png \
+mv generated-images/whirrcore-base.png \
+   generated-images/fan-whirrcore-cover.png \
+   generated-images/fan-whirrcore-avatar.png \
+   generated-images/fan-whirrcore-post-01.png \
+   generated-images/fan-whirrcore-post-02.png \
+   generated-images/fan-whirrcore-post-03.png \
+   generated-images/fan-whirrcore-post-04.png \
+   generated-images/fan-whirrcore-post-05.png \
+   generated-images/fan-whirrcore-post-06.png \
    public/sites/onlyfans/
 
 ls public/sites/onlyfans/ | grep -c whirrcore   # expect 9
 git add public/sites/onlyfans/whirrcore-base.png \
-        public/sites/onlyfans/fan-whirrcore-*.png \
-        mcp/image-gen/base-images/whirrcore/base.png && \
+        public/sites/onlyfans/fan-whirrcore-*.png && \
 git commit -m "feat(onlyfans): generate WhirrCore_42 image set (PC Case Fan)"
 ```
 
@@ -741,7 +736,7 @@ git commit -m "feat(onlyfans): generate WhirrCore_42 image set (PC Case Fan)"
 
 ## Task 9: Generate executive portraits and ashamed-conference-table contact image
 
-**Why:** Uses the existing `bill`/`brandon`/`jim`/`sean` reference folders under `mcp/image-gen/base-images/`. The execs each get one cringing portrait. The contact-page image is a separate composition showing the four men ashamed at a conference table — generated as four solo cringing-at-a-table shots if the multi-person variant is unstable, but try the four-person version first.
+**Why:** Uses the existing `bill`/`brandon`/`jim`/`sean` reference folders under `base-images/`. The execs each get one cringing portrait. The contact-page image is a separate composition showing the four men ashamed at a conference table — generated as four solo cringing-at-a-table shots if the multi-person variant is unstable, but try the four-person version first.
 
 **Files:**
 - Create: `public/sites/onlyfans/exec-hatcher.png` (Bill, Founder)
@@ -796,11 +791,11 @@ If the result is unsatisfactory, fall back to `mcp__image-gen__generate_image` w
 - [ ] **Step 6: Move and commit**
 
 ```bash
-mv mcp/image-gen/generated-images/exec-hatcher.png \
-   mcp/image-gen/generated-images/exec-wexley.png \
-   mcp/image-gen/generated-images/exec-castellan.png \
-   mcp/image-gen/generated-images/exec-morrow.png \
-   mcp/image-gen/generated-images/contact-conference.png \
+mv generated-images/exec-hatcher.png \
+   generated-images/exec-wexley.png \
+   generated-images/exec-castellan.png \
+   generated-images/exec-morrow.png \
+   generated-images/contact-conference.png \
    public/sites/onlyfans/
 
 ls public/sites/onlyfans/ | grep -E '^(exec-|contact-)' | wc -l   # expect 5
@@ -843,8 +838,8 @@ git commit -m "feat(onlyfans): generate exec portraits and conference image"
 - [ ] **Step 3: Move and commit**
 
 ```bash
-mv mcp/image-gen/generated-images/home-hero.png \
-   mcp/image-gen/generated-images/how-it-works.png \
+mv generated-images/home-hero.png \
+   generated-images/how-it-works.png \
    public/sites/onlyfans/
 
 ls public/sites/onlyfans/home-hero.png public/sites/onlyfans/how-it-works.png   # both exist
@@ -2865,6 +2860,6 @@ The implementation is complete when every URL in Step 4 renders correctly and th
 
 **Placeholder scan:** None remain. All file paths are explicit, all code blocks are complete, all task descriptions reference real types and functions defined elsewhere in the plan.
 
-**Known cross-cutting note flagged in the spec:** Fan reference base images are stored in `mcp/image-gen/base-images/{fan-slug}/` alongside the existing four real-person folders (`bill`, `brandon`, `jim`, `sean`). This mixes fan and human reference folders in the same directory. Acceptable trade-off because it requires no MCP changes.
+**Known cross-cutting note flagged in the spec:** Fan reference base images are stored in `base-images/{fan-slug}/` alongside the existing four real-person folders (`bill`, `brandon`, `jim`, `sean`). This mixes fan and human reference folders in the same directory. Acceptable trade-off because it requires no MCP changes.
 
 
