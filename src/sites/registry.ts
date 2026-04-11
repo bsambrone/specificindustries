@@ -11,7 +11,7 @@ import { config as elderpartyConfig, pages as elderpartyPages, dynamicRoutes as 
 import { config as cleansheetConfig, pages as cleansheetPages } from "./cleansheet"
 import { config as snortablesConfig, pages as snortablesPages, dynamicRoutes as snortablesDynamicRoutes } from "./snortables"
 import { config as mousetrapjengaConfig, pages as mousetrapjengaPages, dynamicRoutes as mousetrapjengaDynamicRoutes } from "./mousetrapjenga"
-import { config as onlyfansConfig, pages as onlyfansPages } from "./onlyfans"
+import { config as onlyfansConfig, pages as onlyfansPages, dynamicRoutes as onlyfansDynamicRoutes } from "./onlyfans"
 
 export const siteRegistry: Record<string, SiteModule> = {
   apex: { config: apexConfig, pages: apexPages },
@@ -26,7 +26,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   cleansheet: { config: cleansheetConfig, pages: cleansheetPages },
   snortables: { config: snortablesConfig, pages: snortablesPages, dynamicRoutes: snortablesDynamicRoutes },
   mousetrapjenga: { config: mousetrapjengaConfig, pages: mousetrapjengaPages, dynamicRoutes: mousetrapjengaDynamicRoutes },
-  onlyfans: { config: onlyfansConfig, pages: onlyfansPages },
+  onlyfans: { config: onlyfansConfig, pages: onlyfansPages, dynamicRoutes: onlyfansDynamicRoutes },
 }
 
 export type SubdomainKey = keyof typeof siteRegistry
