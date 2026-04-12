@@ -19,6 +19,9 @@ import { products as strategicvoidProducts } from "@/sites/strategicvoid/data/pr
 import { caseStudies } from "@/sites/strategicvoid/data/case-studies"
 import { whitepapers } from "@/sites/strategicvoid/data/whitepapers"
 import { onboardingSteps } from "@/sites/stratify/data/onboarding"
+import { arms as gristmillArms } from "@/sites/gristmill/data/arms"
+import { services as gristmillServices } from "@/sites/gristmill/data/services"
+import { caseStudies as gristmillCaseStudies } from "@/sites/gristmill/data/case-studies"
 
 const BASE_DOMAIN = "specificindustries.com"
 const EXCLUDED_PAGES = new Set(["cart", "checkout"])
@@ -114,6 +117,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Stratify: onboarding steps
   for (const step of onboardingSteps) {
     urls.push({ url: siteUrl("stratify", `onboarding/${step.slug}`) })
+  }
+
+  // Gristmill: arm landing pages, service detail pages, case studies
+  for (const arm of gristmillArms) {
+    urls.push({ url: siteUrl("gristmill", `services/${arm.slug}`) })
+  }
+  for (const service of gristmillServices) {
+    urls.push({
+      url: siteUrl("gristmill", `services/${service.armSlug}/${service.slug}`),
+    })
+  }
+  for (const cs of gristmillCaseStudies) {
+    urls.push({ url: siteUrl("gristmill", `case-studies/${cs.slug}`) })
   }
 
   return urls
