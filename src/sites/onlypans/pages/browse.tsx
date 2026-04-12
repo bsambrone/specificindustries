@@ -58,6 +58,6 @@ export default function OnlyPansBrowse() {
 }
 
 export const metadata = {
-  title: "Meet the Pans — OnlyPans",
+  title: "Meet the Pans — Only Pans",
   description: "Browse our roster of 8 pan creators. Cast iron, copper, non-stick, and more — there is a pan for every kitchen.",
 }

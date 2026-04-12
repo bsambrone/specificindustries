@@ -2,17 +2,17 @@ import Image from "next/image"
 import { executives } from "../data/leadership"
 
 export const metadata = {
-  title: "About — OnlyPans",
-  description: "About the company behind the OnlyPans literal-pans subscription platform.",
+  title: "About — Only Pans",
+  description: "About the company behind the Only Pans literal-pans subscription platform.",
 }
 
 export default function OnlyPansAbout() {
   return (
     <section className="bg-[#FFF6ED]">
       <div className="max-w-4xl mx-auto px-4 py-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-[#1C0F05] text-center">About OnlyPans</h1>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-[#1C0F05] text-center">About Only Pans</h1>
         <p className="mt-4 text-center text-[#7C2D12]/80 max-w-2xl mx-auto">
-          OnlyPans was founded in 2021 by four men who left the airflow industry after realizing that their previous work, while technically functional, contributed nothing lasting to the American home. We are a cookware subscription platform. We are aware that this sentence requires context. That context is not forthcoming.
+          Only Pans was founded in 2021 by four men who left the airflow industry after realizing that their previous work, while technically functional, contributed nothing lasting to the American home. We are a cookware subscription platform. We are aware that this sentence requires context. That context is not forthcoming.
         </p>
 
         <h2 className="mt-16 text-2xl font-bold text-[#1C0F05] text-center">The team</h2>
@@ -36,7 +36,7 @@ export default function OnlyPansAbout() {
 
         <div className="mt-16 bg-white border border-[#C2410C]/20 rounded-xl p-6 text-center">
           <p className="text-sm text-[#7C2D12]/80">
-            OnlyPans is not affiliated with any other subscription platform, past or present, hypothetical or real. Our creators have no moving parts and our executives would prefer it stay that way.
+            Only Pans is not affiliated with any other subscription platform, past or present, hypothetical or real. Our creators have no moving parts and our executives would prefer it stay that way.
           </p>
         </div>
       </div>

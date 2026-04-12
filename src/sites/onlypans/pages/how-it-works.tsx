@@ -3,7 +3,7 @@ import Link from "next/link"
 import { getSiteHref } from "@/lib/site-href"
 
 export const metadata = {
-  title: "How It Works — OnlyPans",
+  title: "How It Works — Only Pans",
   description: "How to find a pan, subscribe, and look at it.",
 }
 
@@ -14,7 +14,7 @@ export default async function OnlyPansHowItWorks() {
       <div className="max-w-4xl mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold text-[#1C0F05]">How it works</h1>
-          <p className="mt-3 text-[#7C2D12]/80">A quick guide to getting the most out of your OnlyPans subscriptions.</p>
+          <p className="mt-3 text-[#7C2D12]/80">A quick guide to getting the most out of your Only Pans subscriptions.</p>
         </div>
 
         <div className="relative aspect-[3/2] rounded-2xl overflow-hidden mt-10">

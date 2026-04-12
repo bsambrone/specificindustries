@@ -2,8 +2,8 @@ import Image from "next/image"
 import { executives } from "../data/leadership"
 
 export const metadata = {
-  title: "Contact — OnlyPans",
-  description: "Contact the OnlyPans team. Please be respectful. Do not mention their previous work.",
+  title: "Contact — Only Pans",
+  description: "Contact the Only Pans team. Please be respectful. Do not mention their previous work.",
 }
 
 const contactNotes: Record<string, string> = {

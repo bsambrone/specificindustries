@@ -31,7 +31,7 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
     getMetadata: (slug: string) => {
       const pan = getPanBySlug(slug)
       return pan
-        ? { title: `${pan.name} — OnlyPans`, description: pan.bio }
+        ? { title: `${pan.name} — Only Pans`, description: pan.bio }
         : undefined
     },
     isValidSlug: (slug: string) => !!getPanBySlug(slug),

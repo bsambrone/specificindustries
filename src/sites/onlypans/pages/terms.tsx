@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Terms of Use — OnlyPans",
-  description: "The terms governing your use of the OnlyPans literal-pans subscription platform.",
+  title: "Terms of Use — Only Pans",
+  description: "The terms governing your use of the Only Pans literal-pans subscription platform.",
 }
 
 export default function OnlyPansTerms() {
@@ -12,7 +12,7 @@ export default function OnlyPansTerms() {
         <div className="mt-6 border-l-4 border-[#C2410C] bg-[#C2410C]/5 p-5 rounded-r-lg">
           <p className="font-bold text-[#1C0F05] mb-1">Official Umbrella Policy</p>
           <p className="text-sm text-[#7C2D12]/90">
-            The authoritative terms of use for all Specific Industries properties — including OnlyPans — are maintained at{" "}
+            The authoritative terms of use for all Specific Industries properties — including Only Pans — are maintained at{" "}
             <a href="https://specificindustries.com/terms" className="underline font-bold text-[#7C2D12]">specificindustries.com/terms</a>.
             The text below is provided for convenience and flavor; in the event of any conflict, the umbrella policy governs.
           </p>
@@ -35,7 +35,7 @@ export default function OnlyPansTerms() {
 
         <h2 className="mt-6 text-xl font-bold text-[#7C2D12]">4. Lifting Warning (Big Ursula)</h2>
         <p className="mt-2 text-[#7C2D12]/90">
-          Subscribers to Big Ursula acknowledge she weighs eighteen pounds. OnlyPans is not liable for any injury sustained while attempting to lift, move, or otherwise challenge the positional authority of Big Ursula. You were warned.
+          Subscribers to Big Ursula acknowledge she weighs eighteen pounds. Only Pans is not liable for any injury sustained while attempting to lift, move, or otherwise challenge the positional authority of Big Ursula. You were warned.
         </p>
 
         <p className="mt-10 text-sm italic text-[#7C2D12]/70 pt-4 border-t border-[#C2410C]/20">

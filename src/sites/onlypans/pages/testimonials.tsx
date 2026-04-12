@@ -2,7 +2,7 @@ import Image from "next/image"
 import { testimonials } from "../data/testimonials"
 
 export const metadata = {
-  title: "Testimonials — OnlyPans",
+  title: "Testimonials — Only Pans",
   description: "What our subscribers say about their favorite pans.",
 }
 

@@ -13,7 +13,7 @@ export const executives: Executive[] = [
     slug: "pennington",
     name: "Bill Pennington",
     title: "Founder & Chief Executive",
-    bio: "Bill founded OnlyPans in 2021 after a long period of reflection on his previous career in the airflow space. He speaks of his earlier work only when directly asked, and only briefly. He is a graduate of a respectable Midwestern business school and would like that mentioned.",
+    bio: "Bill founded Only Pans in 2021 after a long period of reflection on his previous career in the airflow space. He speaks of his earlier work only when directly asked, and only briefly. He is a graduate of a respectable Midwestern business school and would like that mentioned.",
     quote: "We are a cookware platform. That is all we are.",
     image: "/sites/onlypans/exec-pennington.png",
     referencePerson: "bill",

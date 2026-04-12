@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Privacy Policy — OnlyPans",
-  description: "How OnlyPans handles your data. Spoiler: we mostly track which pans you like looking at.",
+  title: "Privacy Policy — Only Pans",
+  description: "How Only Pans handles your data. Spoiler: we mostly track which pans you like looking at.",
 }
 
 export default function OnlyPansPrivacy() {
@@ -12,7 +12,7 @@ export default function OnlyPansPrivacy() {
         <div className="mt-6 border-l-4 border-[#C2410C] bg-[#C2410C]/5 p-5 rounded-r-lg">
           <p className="font-bold text-[#1C0F05] mb-1">Official Umbrella Policy</p>
           <p className="text-sm text-[#7C2D12]/90">
-            The authoritative privacy policy for all Specific Industries properties — including OnlyPans — is maintained at{" "}
+            The authoritative privacy policy for all Specific Industries properties — including Only Pans — is maintained at{" "}
             <a href="https://specificindustries.com/privacy" className="underline font-bold text-[#7C2D12]">specificindustries.com/privacy</a>.
             The text below is provided for convenience and flavor; in the event of any conflict, the umbrella policy governs.
           </p>

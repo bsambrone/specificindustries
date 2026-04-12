@@ -1,7 +1,7 @@
 import type { SiteConfig } from "@/themes"
 
 export const config: SiteConfig = {
-  name: "OnlyPans",
+  name: "Only Pans",
   subdomain: "onlypans",
   theme: {
     preset: "light",
@@ -18,7 +18,7 @@ export const config: SiteConfig = {
     },
   },
   metadata: {
-    title: "OnlyPans — Cookware Subscriptions",
+    title: "Only Pans — Cookware Subscriptions",
     description: "Subscribe to your favorite pan. Literal pans. Sitting perfectly still. A better platform than those people with the fans.",
   },
   nav: [
