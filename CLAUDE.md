@@ -112,7 +112,7 @@ npm run dev
 
 The `?site=` param simulates subdomain routing locally and on Vercel preview deploys.
 
-**Known limitation:** The `?site=` param is only read by middleware on the initial page load. Client-side navigation via `<Link>` does not preserve it. When testing locally, you may need to manually add `?site=<subdomain>` to the URL after navigating. This does not affect production (where real subdomains are used).
+**Sticky dev cookie:** Once you visit a URL with `?site=<subdomain>` in dev, the middleware writes a `dev-site` cookie and subsequent client-side `<Link>` navigation keeps resolving against that cookie — so internal links inside a site continue to work without the query string. Pass `?site=<other>` to switch sites, or clear cookies to reset. The cookie path is only exercised in non-production hosts; production still resolves subdomains from the Host header as before.
 
 ## Commands
 
