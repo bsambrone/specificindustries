@@ -58,6 +58,6 @@ export default function OnlyFansBrowse() {
 }
 
 export const metadata = {
-  title: "Meet the Fans — OnlyFans",
+  title: "Meet the Fans — Only Fans",
   description: "Browse our roster of 8 fan creators. Box fans, ceiling fans, industrial wind tunnels — there's a fan for every home.",
 }

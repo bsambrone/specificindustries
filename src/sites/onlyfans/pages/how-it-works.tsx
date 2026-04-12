@@ -3,7 +3,7 @@ import Link from "next/link"
 import { getSiteHref } from "@/lib/site-href"
 
 export const metadata = {
-  title: "How It Works — OnlyFans",
+  title: "How It Works — Only Fans",
   description: "How to find a fan, subscribe, and start enjoying premium airflow content.",
 }
 
@@ -14,7 +14,7 @@ export default async function OnlyFansHowItWorks() {
       <div className="max-w-4xl mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold text-[#0F172A]">How it works</h1>
-          <p className="mt-3 text-slate-600">A quick guide to getting the most out of your OnlyFans subscriptions.</p>
+          <p className="mt-3 text-slate-600">A quick guide to getting the most out of your Only Fans subscriptions.</p>
         </div>
 
         <div className="relative aspect-[3/2] rounded-2xl overflow-hidden mt-10">

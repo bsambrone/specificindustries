@@ -13,7 +13,7 @@ export const executives: Executive[] = [
     slug: "hatcher",
     name: "Bill Hatcher",
     title: "Founder & Chief Executive",
-    bio: "Bill founded OnlyFans in 2019 after a long weekend that he describes as 'a series of decisions I cannot fully account for.' He is a graduate of a respectable Midwestern business school and would like that mentioned. He stands behind the company in the technical sense that he owns it.",
+    bio: "Bill founded Only Fans in 2019 after a long weekend that he describes as 'a series of decisions I cannot fully account for.' He is a graduate of a respectable Midwestern business school and would like that mentioned. He stands behind the company in the technical sense that he owns it.",
     quote: "I was supposed to be in commercial real estate.",
     image: "/sites/onlyfans/exec-hatcher.png",
     referencePerson: "bill",

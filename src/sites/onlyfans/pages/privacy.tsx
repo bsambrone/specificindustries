@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Privacy Policy — OnlyFans",
-  description: "How OnlyFans handles your data. Spoiler: we mostly track which fans you like.",
+  title: "Privacy Policy — Only Fans",
+  description: "How Only Fans handles your data. Spoiler: we mostly track which fans you like.",
 }
 
 export default function OnlyFansPrivacy() {
@@ -12,7 +12,7 @@ export default function OnlyFansPrivacy() {
         <div className="mt-6 border-l-4 border-[#00AFF0] bg-[#00AFF0]/5 p-5 rounded-r-lg">
           <p className="font-bold text-[#0F172A] mb-1">Official Umbrella Policy</p>
           <p className="text-sm text-slate-700">
-            The authoritative privacy policy for all Specific Industries properties — including OnlyFans — is maintained at{" "}
+            The authoritative privacy policy for all Specific Industries properties — including Only Fans — is maintained at{" "}
             <a href="https://specificindustries.com/privacy" className="underline font-bold text-[#0095CD]">specificindustries.com/privacy</a>.
             The text below is provided for convenience and flavor; in the event of any conflict, the umbrella policy governs.
           </p>

@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Terms of Use — OnlyFans",
-  description: "The terms governing your use of the OnlyFans literal-fans subscription platform.",
+  title: "Terms of Use — Only Fans",
+  description: "The terms governing your use of the Only Fans literal-fans subscription platform.",
 }
 
 export default function OnlyFansTerms() {
@@ -12,7 +12,7 @@ export default function OnlyFansTerms() {
         <div className="mt-6 border-l-4 border-[#00AFF0] bg-[#00AFF0]/5 p-5 rounded-r-lg">
           <p className="font-bold text-[#0F172A] mb-1">Official Umbrella Policy</p>
           <p className="text-sm text-slate-700">
-            The authoritative terms of use for all Specific Industries properties — including OnlyFans — are maintained at{" "}
+            The authoritative terms of use for all Specific Industries properties — including Only Fans — are maintained at{" "}
             <a href="https://specificindustries.com/terms" className="underline font-bold text-[#0095CD]">specificindustries.com/terms</a>.
             The text below is provided for convenience and flavor; in the event of any conflict, the umbrella policy governs.
           </p>

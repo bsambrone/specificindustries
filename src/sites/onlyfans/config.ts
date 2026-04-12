@@ -1,7 +1,7 @@
 import type { SiteConfig } from "@/themes"
 
 export const config: SiteConfig = {
-  name: "OnlyFans",
+  name: "Only Fans",
   subdomain: "onlyfans",
   theme: {
     preset: "light",
@@ -18,7 +18,7 @@ export const config: SiteConfig = {
     },
   },
   metadata: {
-    title: "OnlyFans — Air Movement Subscriptions",
+    title: "Only Fans — Air Movement Subscriptions",
     description: "Subscribe to your favorite fan. Literal fans. Blowing literal air. The world's premier subscription platform for household and industrial airflow content.",
   },
   nav: [
