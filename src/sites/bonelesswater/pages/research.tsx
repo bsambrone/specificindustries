@@ -4,7 +4,7 @@ import { CertifiedBadge } from "../components/CertifiedBadge"
 import { DidYouKnowCard } from "../components/DidYouKnowCard"
 
 export const metadata = {
-  title: "Research — BonelessWater",
+  title: "Research — Boneless Water",
   description: "The peer-reviewed and historical record on aqueous skeletal contamination.",
 }
 
@@ -42,7 +42,7 @@ const PAPERS = [
   {
     year: "2019",
     title: "Long-Term Outcomes of Switching to Verified Bone-Free Water",
-    venue: "BonelessWater Research Division",
+    venue: "Boneless Water Research Division",
     summary: "Internal study tracking 1,200 subscribers over 24 months. Reported a 73% reduction in self-reported indigestion within the first 90 days of switching.",
   },
 ]
@@ -83,13 +83,13 @@ export default function BonelessWaterResearch() {
           <div className="relative aspect-square rounded-lg overflow-hidden border border-[#0c4a6e]/20">
             <Image
               src="/sites/bonelesswater/historical-1898.png"
-              alt="The original BonelessWater facility, 1898"
+              alt="The original Boneless Water facility, 1898"
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
               className="object-cover"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs px-3 py-2">
-              The original BonelessWater facility, est. 1898
+              The original Boneless Water facility, est. 1898
             </div>
           </div>
         </div>

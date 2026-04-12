@@ -36,7 +36,7 @@ export const testimonials: Testimonial[] = [
   ),
   withPortrait(
     "derek-pullman",
-    "I subscribed to the Household Defense Pack after my wife noticed me reading the BonelessWater research site for an unusual length of time. Six months in and the household indigestion has been measurably reduced.",
+    "I subscribed to the Household Defense Pack after my wife noticed me reading the Boneless Water research site for an unusual length of time. Six months in and the household indigestion has been measurably reduced.",
     "Household Defense Pack subscriber — Marshalltown, IA",
   ),
   withPortrait(

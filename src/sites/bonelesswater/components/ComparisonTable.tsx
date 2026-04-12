@@ -41,7 +41,7 @@ export function ComparisonTable({ competitors }: ComparisonTableProps) {
             <th className="text-left px-4 py-3 font-bold">Feature</th>
             <th className="text-center px-3 py-3 font-bold bg-[#075985]">
               <div className="flex flex-col items-center gap-1">
-                <span>BonelessWater</span>
+                <span>Boneless Water</span>
                 <span className="text-[10px] font-normal opacity-80">(us)</span>
               </div>
             </th>

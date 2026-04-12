@@ -4,8 +4,8 @@ import { CertifiedBadge } from "../components/CertifiedBadge"
 import { DidYouKnowCard } from "../components/DidYouKnowCard"
 
 export const metadata = {
-  title: "Our Process — BonelessWater",
-  description: "The 47-step proprietary deboning method behind every bottle of BonelessWater.",
+  title: "Our Process — Boneless Water",
+  description: "The 47-step proprietary deboning method behind every bottle of Boneless Water.",
 }
 
 const STEPS = [
@@ -52,7 +52,7 @@ export default function BonelessWaterProcess() {
         <div className="relative aspect-[16/9] mt-10 rounded-lg overflow-hidden border border-[#0c4a6e]/20">
           <Image
             src="/sites/bonelesswater/lab-facility.png"
-            alt="BonelessWater facility interior"
+            alt="Boneless Water facility interior"
             fill
             sizes="(min-width: 1024px) 768px, 100vw"
             className="object-cover"

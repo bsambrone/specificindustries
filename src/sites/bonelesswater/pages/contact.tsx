@@ -3,8 +3,8 @@ import { executives } from "../data/leadership"
 import { CertifiedBadge } from "../components/CertifiedBadge"
 
 export const metadata = {
-  title: "Contact — BonelessWater",
-  description: "Contact the BonelessWater team. For research inquiries, regulatory matters, and subscriber support.",
+  title: "Contact — Boneless Water",
+  description: "Contact the Boneless Water team. For research inquiries, regulatory matters, and subscriber support.",
 }
 
 const contactNotes: Record<string, string> = {
@@ -20,7 +20,7 @@ export default function BonelessWaterContact() {
       <div className="max-w-4xl mx-auto px-4 py-16">
         <div className="text-center">
           <CertifiedBadge size="sm" label="WE READ EVERY MESSAGE" />
-          <h1 className="mt-4 text-4xl md:text-5xl font-extrabold text-[#0c4a6e]">Contact BonelessWater</h1>
+          <h1 className="mt-4 text-4xl md:text-5xl font-extrabold text-[#0c4a6e]">Contact Boneless Water</h1>
           <p className="mt-3 text-[#0f172a]/70 max-w-2xl mx-auto">
             We are a small team. We respond to every legitimate inquiry, usually within 5 to 7 business days, depending on which member of our team is in the lab.
           </p>

@@ -5,8 +5,8 @@ import { CertifiedBadge } from "../components/CertifiedBadge"
 import { DidYouKnowCard } from "../components/DidYouKnowCard"
 
 export const metadata = {
-  title: "About — BonelessWater",
-  description: "About BonelessWater Inc. and the four people who have dedicated their careers to removing bones from drinking water.",
+  title: "About — Boneless Water",
+  description: "About Boneless Water Inc. and the four people who have dedicated their careers to removing bones from drinking water.",
 }
 
 export default function BonelessWaterAbout() {
@@ -17,15 +17,15 @@ export default function BonelessWaterAbout() {
       <div className="max-w-4xl mx-auto px-4 py-16">
         <div className="text-center">
           <CertifiedBadge size="sm" label="EST. 1898 · REFOUNDED 1991" />
-          <h1 className="mt-4 text-4xl md:text-5xl font-extrabold text-[#0c4a6e]">About BonelessWater</h1>
+          <h1 className="mt-4 text-4xl md:text-5xl font-extrabold text-[#0c4a6e]">About Boneless Water</h1>
         </div>
 
         <div className="mt-10 space-y-6 text-[#0f172a]/80 leading-relaxed">
           <p>
-            BonelessWater Inc. was originally founded in 1898 as a small industrial water purification facility in Cedar Rapids, Iowa. The original company operated quietly for nearly a century before being refounded under its current leadership in 1991.
+            Boneless Water Inc. was originally founded in 1898 as a small industrial water purification facility in Cedar Rapids, Iowa. The original company operated quietly for nearly a century before being refounded under its current leadership in 1991.
           </p>
           <p>
-            Our refounding came in response to a series of internal industry reports that confirmed what the 1873 archival research had warned about: the bottled water supply had been quietly accumulating measurable skeletal particulate for decades, and the industry had no plans to address it. Our founder, Cornelius Whitfield, resigned from his consulting role within 24 hours of seeing the data and immediately set to work building the deboning facility that became the modern BonelessWater company.
+            Our refounding came in response to a series of internal industry reports that confirmed what the 1873 archival research had warned about: the bottled water supply had been quietly accumulating measurable skeletal particulate for decades, and the industry had no plans to address it. Our founder, Cornelius Whitfield, resigned from his consulting role within 24 hours of seeing the data and immediately set to work building the deboning facility that became the modern Boneless Water company.
           </p>
           <p>
             We are a small, privately held team of scientists, former regulators, and dedicated employees. We do not take outside investment. We do not serve a board. We answer only to our subscribers and the published record.

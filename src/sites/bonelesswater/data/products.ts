@@ -25,9 +25,9 @@ export const products: Product[] = [
     priceLabel: "$2.99",
     tagline: "The original deboned drinking water.",
     description: [
-      "PureSpring™ Classic is the cornerstone of the BonelessWater catalog. Each 16oz bottle is sourced from a verified bone-free aquifer and processed through our proprietary 47-step deboning method, then independently verified by our laboratory partners to be 99.9999% bone-free at point of bottling.",
+      "PureSpring™ Classic is the cornerstone of the Boneless Water catalog. Each 16oz bottle is sourced from a verified bone-free aquifer and processed through our proprietary 47-step deboning method, then independently verified by our laboratory partners to be 99.9999% bone-free at point of bottling.",
       "It is, simply, water — but for the first time, with the certainty that it has been processed by people who take the issue seriously.",
-      "Our most popular product. Recommended for daily hydration and for households new to the BonelessWater platform.",
+      "Our most popular product. Recommended for daily hydration and for households new to the Boneless Water platform.",
     ],
     heroImage: "/sites/bonelesswater/purespring-classic-base.png",
     detailImage: "/sites/bonelesswater/product-purespring-classic-detail.png",
@@ -53,7 +53,7 @@ export const products: Product[] = [
     priceLabel: "$3.49",
     tagline: "All the bubbles, none of the bones.",
     description: [
-      "Effervesce™ is BonelessWater's answer to the question of how a sparkling water can be both refreshing and skeletally pristine. Carbonation is introduced after our standard 47-step deboning process is complete, ensuring that not a single bone fragment is reintroduced via the carbonation system.",
+      "Effervesce™ is Boneless Water's answer to the question of how a sparkling water can be both refreshing and skeletally pristine. Carbonation is introduced after our standard 47-step deboning process is complete, ensuring that not a single bone fragment is reintroduced via the carbonation system.",
       "Independently verified at the same 99.9999% bone-free standard as our flagship PureSpring Classic, with the addition of fine effervescent bubbles that some subscribers describe as 'reassuring.'",
       "Recommended for dinner service, formal occasions, and any setting where guests may have unstated indigestion concerns.",
     ],
@@ -110,7 +110,7 @@ export const products: Product[] = [
     priceLabel: "$8.99",
     tagline: "Triple-filtered. Aged in steel. Hand-verified bone-free.",
     description: [
-      "Heritage Reserve is our premium offering for the discerning BonelessWater subscriber. Each 750ml bottle is triple-filtered through our proprietary process, aged for 30 days in food-grade stainless steel maturation tanks, and individually inspected by a senior BoneScan™ technician before being capped.",
+      "Heritage Reserve is our premium offering for the discerning Boneless Water subscriber. Each 750ml bottle is triple-filtered through our proprietary process, aged for 30 days in food-grade stainless steel maturation tanks, and individually inspected by a senior BoneScan™ technician before being capped.",
       "The brushed steel label plate is mounted directly to the glass and engraved with the Heritage Reserve wordmark and a small CERTIFIED stamp. Each bottle carries a unique batch identifier traceable to the technician who personally verified its bone-free status.",
       "Recommended for special occasions, executive dining, and as a gift to friends and family who have expressed interest in your water-related concerns.",
     ],
@@ -196,7 +196,7 @@ export const products: Product[] = [
     tagline: "99.99999% bone-free. For research applications and the deeply concerned.",
     description: [
       "Lab Grade L1 is our highest-purity offering, processed through an additional verification cycle beyond our standard 47-step method. Each 1L bottle is sealed under tamper-evident foil in a Class 7 clean room, individually batch-tracked, and verified to a research-grade 99.99999% bone-free standard — one additional decimal of purity beyond our consumer line.",
-      "Lab Grade L1 is intended for research applications, sensitive instrumentation, and BonelessWater subscribers whose personal indigestion history requires the highest available certification level. Each bottle includes a printed batch certificate.",
+      "Lab Grade L1 is intended for research applications, sensitive instrumentation, and Boneless Water subscribers whose personal indigestion history requires the highest available certification level. Each bottle includes a printed batch certificate.",
       "Not recommended for casual hydration. Recommended for the deeply concerned.",
     ],
     heroImage: "/sites/bonelesswater/lab-grade-l1-base.png",

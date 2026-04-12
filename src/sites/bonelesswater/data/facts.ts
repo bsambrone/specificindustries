@@ -18,7 +18,7 @@ export const facts: DidYouKnowFact[] = [
   {
     slug: "residue-per-liter",
     text: "The average untreated bottle of water contains an estimated 0.3 micrograms of skeletal residue per liter.",
-    citation: "BonelessWater internal lab, 2019",
+    citation: "Boneless Water internal lab, 2019",
   },
   {
     slug: "filtration-limit",

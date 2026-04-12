@@ -4,8 +4,8 @@ import { ComparisonTable } from "../components/ComparisonTable"
 import { CertifiedBadge } from "../components/CertifiedBadge"
 
 export const metadata = {
-  title: "Comparison — BonelessWater",
-  description: "How BonelessWater compares to the bottled water industry. Three legitimate competitors, two with visible bones, one with a frog.",
+  title: "Comparison — Boneless Water",
+  description: "How Boneless Water compares to the bottled water industry. Three legitimate competitors, two with visible bones, one with a frog.",
 }
 
 export default function BonelessWaterComparison() {

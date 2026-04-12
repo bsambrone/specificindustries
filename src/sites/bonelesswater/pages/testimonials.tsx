@@ -3,7 +3,7 @@ import { testimonials } from "../data/testimonials"
 import { CertifiedBadge } from "../components/CertifiedBadge"
 
 export const metadata = {
-  title: "Testimonials — BonelessWater",
+  title: "Testimonials — Boneless Water",
   description: "What our subscribers say about switching to certified bone-free drinking water.",
 }
 
@@ -15,7 +15,7 @@ export default function BonelessWaterTestimonials() {
           <CertifiedBadge size="sm" label="VERIFIED SUBSCRIBERS" />
           <h1 className="mt-4 text-4xl md:text-5xl font-extrabold text-[#0c4a6e]">Subscriber Testimonials</h1>
           <p className="mt-3 text-[#0f172a]/70 max-w-2xl mx-auto">
-            Real subscribers, real recoveries. Each story below is from a verified BonelessWater customer who chose to share their experience.
+            Real subscribers, real recoveries. Each story below is from a verified Boneless Water customer who chose to share their experience.
           </p>
         </div>
 

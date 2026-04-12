@@ -5,7 +5,7 @@ import { products } from "../data/products"
 import { CertifiedBadge } from "../components/CertifiedBadge"
 
 export const metadata = {
-  title: "Products — BonelessWater",
+  title: "Products — Boneless Water",
   description: "Our complete catalog of pharmaceutical-grade bone-free drinking water. Eight products, all independently verified.",
 }
 

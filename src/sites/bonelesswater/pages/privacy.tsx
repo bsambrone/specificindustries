@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Privacy Policy — BonelessWater",
-  description: "How BonelessWater handles your data. We collect almost nothing.",
+  title: "Privacy Policy — Boneless Water",
+  description: "How Boneless Water handles your data. We collect almost nothing.",
 }
 
 export default function BonelessWaterPrivacy() {
@@ -12,7 +12,7 @@ export default function BonelessWaterPrivacy() {
         <div className="mt-6 border-l-4 border-[#0c4a6e] bg-[#0c4a6e]/5 p-5 rounded-r-lg">
           <p className="font-bold text-[#0f172a] mb-1">Official Umbrella Policy</p>
           <p className="text-sm text-[#0f172a]/80">
-            The authoritative privacy policy for all Specific Industries properties — including BonelessWater — is maintained at{" "}
+            The authoritative privacy policy for all Specific Industries properties — including Boneless Water — is maintained at{" "}
             <a href="https://specificindustries.com/privacy" className="underline font-bold text-[#0c4a6e]">specificindustries.com/privacy</a>.
             The text below is provided for convenience and flavor; in the event of any conflict, the umbrella policy governs.
           </p>

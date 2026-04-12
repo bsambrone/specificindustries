@@ -1,7 +1,7 @@
 import type { SiteConfig } from "@/themes"
 
 export const config: SiteConfig = {
-  name: "BonelessWater",
+  name: "Boneless Water",
   subdomain: "bonelesswater",
   theme: {
     preset: "light",
@@ -18,7 +18,7 @@ export const config: SiteConfig = {
     },
   },
   metadata: {
-    title: "BonelessWater — Pharmaceutical-Grade Bone-Free Drinking Water",
+    title: "Boneless Water — Pharmaceutical-Grade Bone-Free Drinking Water",
     description: "The original deboned drinking water. Independently verified 99.9999% bone-free. The skeletal structure of water has been understood since 1873; we are the only platform that takes it seriously.",
   },
   nav: [
