@@ -22,6 +22,7 @@ import { onboardingSteps } from "@/sites/stratify/data/onboarding"
 import { arms as gristmillArms } from "@/sites/gristmill/data/arms"
 import { services as gristmillServices } from "@/sites/gristmill/data/services"
 import { caseStudies as gristmillCaseStudies } from "@/sites/gristmill/data/case-studies"
+import { products as oddoccasionsProducts } from "@/sites/oddoccasions/data/products"
 
 const BASE_DOMAIN = "specificindustries.com"
 const EXCLUDED_PAGES = new Set(["cart", "checkout"])
@@ -117,6 +118,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Stratify: onboarding steps
   for (const step of onboardingSteps) {
     urls.push({ url: siteUrl("stratify", `onboarding/${step.slug}`) })
+  }
+
+  // Odd Occasions: product detail pages at /shop/{slug}
+  for (const product of oddoccasionsProducts) {
+    urls.push({ url: siteUrl("oddoccasions", `shop/${product.slug}`) })
   }
 
   // Gristmill: arm landing pages, service detail pages, case studies

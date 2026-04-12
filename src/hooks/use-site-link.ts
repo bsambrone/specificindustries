@@ -12,7 +12,9 @@ export function useSiteLink() {
 
   return function siteHref(path: string): string {
     if (!siteParam) return path
-    const separator = path.includes("?") ? "&" : "?"
-    return `${path}${separator}site=${siteParam}`
+    const [pathWithoutHash, hash] = path.split("#")
+    const separator = pathWithoutHash.includes("?") ? "&" : "?"
+    const url = `${pathWithoutHash}${separator}site=${siteParam}`
+    return hash ? `${url}#${hash}` : url
   }
 }

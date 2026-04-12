@@ -15,7 +15,9 @@ export async function getSiteHref(): Promise<(path: string) => string> {
 
   return function siteHref(path: string): string {
     if (isProduction) return path
-    const separator = path.includes("?") ? "&" : "?"
-    return `${path}${separator}site=${subdomain}`
+    const [pathWithoutHash, hash] = path.split("#")
+    const separator = pathWithoutHash.includes("?") ? "&" : "?"
+    const url = `${pathWithoutHash}${separator}site=${subdomain}`
+    return hash ? `${url}#${hash}` : url
   }
 }
