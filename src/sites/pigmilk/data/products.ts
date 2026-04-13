@@ -262,6 +262,27 @@ export const products: Product[] = [
       { label: "Awards", value: "Still pending" },
     ],
   },
+  {
+    slug: "aged-cheddar-hog",
+    name: "3-Year Aged Cheddar Hog",
+    price: 49.99,
+    priceLabel: "$49.99 / block",
+    tagline: "Sharp. Crumbly. Slightly accusatory.",
+    description: [
+      "Three years in the aging room transforms our pig milk into a sharp, crumbly cheddar that one of our tasters described as 'slightly accusatory, like it knows what you did.' We do not know what that means. We are choosing not to ask.",
+      "The color is a deep, confident orange that pig milk should not, by any reasonable law of nature, be capable of producing. And yet here we are. The pigs seem mildly offended by it and have begun making direct eye contact during milking, which is new.",
+      "Pairs beautifully with apples, sharp crackers, a glass of something honest, and unfinished conversations. Crumbles into chili, melts onto burgers, and can be eaten alone in a parked car at 11 PM, which is somehow the most popular serving suggestion according to our data.",
+    ],
+    image: "/sites/pigmilk/product-cheddar-hog.png",
+    nutritionalFacts: [
+      { label: "Aged", value: "3 years" },
+      { label: "Sharpness", value: "Confrontational" },
+      { label: "Pig Energy", value: "100% DV" },
+      { label: "Color", value: "Unexplained orange" },
+      { label: "Pairs With", value: "Apples, regret" },
+      { label: "Crumble Factor", value: "High" },
+    ],
+  },
 ]
 
 export function getProductBySlug(slug: string): Product | undefined {
