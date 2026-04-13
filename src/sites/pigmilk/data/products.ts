@@ -241,6 +241,27 @@ export const products: Product[] = [
       { label: "Handwritten Note", value: "From Earl himself" },
     ],
   },
+  {
+    slug: "aged-parmigia-oink",
+    name: "Aged Parmigia-Oink",
+    price: 189.99,
+    priceLabel: "$189.99 / wheel",
+    tagline: "Aged a decade. We waited. You'll wait too.",
+    description: [
+      "Ten years ago, someone — probably Earl — left a wheel of pig milk cheese in the back of Barn Room 2 and forgot about it. We found it during an unrelated insurance inspection. It had become something else entirely.",
+      "Aged Parmigia-Oink is hard, crystalline, and shatters like granite under a proper cheese knife. The interior is dense with audible calcium-lactate crystals that crunch between your teeth, which our food scientist (a retired substitute teacher named Marge) assures us is 'definitely supposed to happen.'",
+      "Pairs with balsamic older than most of our employees, a long moment of silence, and the slow-dawning awareness that ten years is a very long time. Best shaved thin over pasta, regret, or the passage of time itself.",
+    ],
+    image: "/sites/pigmilk/product-parmigia-oink.png",
+    nutritionalFacts: [
+      { label: "Aged", value: "10 years" },
+      { label: "Crystals", value: "Audible" },
+      { label: "Pig Energy", value: "Concentrated by time" },
+      { label: "Flavor Profile", value: "Biblical" },
+      { label: "Pairs With", value: "A decade of patience" },
+      { label: "Awards", value: "Still pending" },
+    ],
+  },
 ]
 
 export function getProductBySlug(slug: string): Product | undefined {
