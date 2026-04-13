@@ -21,6 +21,7 @@ export const config: SiteConfig = {
     title: "The Clean Sheet — Definitely Not Money Laundering. Just Laundering.",
     description:
       "Premium fabric care for discerning clients since 1987. We clean clothes. That's it. Please stop asking.",
+    ogImage: "/sites/cleansheet/hero.png",
   },
   nav: [
     { label: "Services", path: "/services" },

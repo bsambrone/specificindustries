@@ -21,6 +21,7 @@ export const config: SiteConfig = {
   metadata: {
     title: "Pettential — Elevating Every Animal to Its Full Potential™",
     description: "A premium pet performance brand with products and coaching services across six divisions. Because stagnation is a choice.",
+    ogImage: "/sites/pettential/hero.jpg",
   },
   nav: [
     { label: "Home", path: "/" },

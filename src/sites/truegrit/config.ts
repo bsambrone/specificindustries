@@ -20,6 +20,7 @@ export const config: SiteConfig = {
   metadata: {
     title: "True Grit Personal Care — Where Comfort Meets Its Match",
     description: "Industrial-grade personal cleansing products. Non-GMO. Free Range. Definitely Not Tear-Free.",
+    ogImage: "/sites/truegrit/hero.png",
   },
   nav: [
     { label: "Products", path: "/products" },

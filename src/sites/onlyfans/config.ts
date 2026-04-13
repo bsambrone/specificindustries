@@ -20,6 +20,7 @@ export const config: SiteConfig = {
   metadata: {
     title: "Only Fans — Air Movement Subscriptions",
     description: "Subscribe to your favorite fan. Literal fans. Blowing literal air. The world's premier subscription platform for household and industrial airflow content.",
+    ogImage: "/sites/onlyfans/home-hero.png",
   },
   nav: [
     { label: "Home", path: "/" },

@@ -21,6 +21,7 @@ export const config: SiteConfig = {
     title: "Dehydrated Water Laboratories — Purveyors of Fine Powdered Hydration Since 1847",
     description:
       "Premium artisanal dehydrated water, crafted by hand since 1847. Just add water.",
+    ogImage: "/sites/dehydratedwater/hero-bg.png",
   },
   nav: [
     { label: "Home", path: "/" },

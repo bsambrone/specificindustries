@@ -20,6 +20,7 @@ export const config: SiteConfig = {
   metadata: {
     title: "Pig Milk Creamery — Farm-Fresh Pig Milk",
     description: "Premium artisanal pig milk, delivered to your door. Yes, really.",
+    ogImage: "/sites/pigmilk/hero.png",
   },
   nav: [
     { label: "Home", path: "/" },

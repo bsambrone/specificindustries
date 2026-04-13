@@ -21,6 +21,7 @@ export const config: SiteConfig = {
     title: "Inflatable Anchors Marine — The Easiest Anchor You'll Ever Pull Up",
     description:
       "Revolutionary inflatable anchors for the modern boater. Lightweight, portable, and effortlessly retrievable.",
+    ogImage: "/sites/inflatableanchors/hero.png",
   },
   nav: [
     { label: "Home", path: "/" },

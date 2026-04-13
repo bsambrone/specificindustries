@@ -21,6 +21,7 @@ export const config: SiteConfig = {
     title: "Strategic Void Consulting — Aligning Your Organization with the Void™",
     description:
       "Strategic Void Consulting delivers enterprise-grade solutions for organizations committed to maximum process without measurable outcome.",
+    ogImage: "/sites/strategicvoid/hero.png",
   },
   megaMenu: {
     items: [

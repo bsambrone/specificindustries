@@ -20,6 +20,7 @@ export const config: SiteConfig = {
   metadata: {
     title: "Grass Fed WiFi — Farm-to-Table Wi-Fi",
     description: "Raw Spectrum. Pasture-Raised Connectivity. Small-batch, single-origin, seasonally harvested wifi from our frequency-farm co-op.",
+    ogImage: "/sites/grassfedwifi/home-hero.png",
   },
   nav: [
     { label: "Shares", path: "/shares" },

@@ -20,6 +20,7 @@ export const config: SiteConfig = {
   metadata: {
     title: "Specific Industries — Serving the World's Most Specific Industries",
     description: "We identify overlooked market segments and build dedicated brands to serve them. Specific Industries is the parent company behind a portfolio of brands serving the world's most specific industries.",
+    ogImage: "/sites/apex/companyhq.png",
   },
   nav: [
     { label: "Home", path: "/" },

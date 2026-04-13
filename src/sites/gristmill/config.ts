@@ -21,6 +21,7 @@ export const config: SiteConfig = {
     title: "Gristmill Partners — Helping American Industry Grind Employees Into Dust Since 1962",
     description:
       "Gristmill Partners is the trusted name in workforce stabilization, retention engineering, and compensation dampening for the Fortune 500. Privately held since 1962.",
+    ogImage: "/sites/gristmill/home-hero.png",
   },
   megaMenu: {
     items: [

@@ -21,6 +21,7 @@ export const config: SiteConfig = {
     title: "Stratify — Own Your Layer",
     description:
       "A vertically-optimized, stratified commerce ecosystem leveraging decentralized entrepreneurial layers to unlock exponential personal monetization.",
+    ogImage: "/sites/stratify/hero-team.png",
   },
   nav: [
     { label: "Opportunity", path: "/opportunity" },

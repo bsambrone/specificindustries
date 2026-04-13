@@ -20,6 +20,7 @@ export const config: SiteConfig = {
   metadata: {
     title: "Only Pans — Cookware Subscriptions",
     description: "Subscribe to your favorite pan. Literal pans. Sitting perfectly still. A better platform than those people with the fans.",
+    ogImage: "/sites/onlypans/home-hero.png",
   },
   nav: [
     { label: "Home", path: "/" },

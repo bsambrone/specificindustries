@@ -21,6 +21,7 @@ export const config: SiteConfig = {
   metadata: {
     title: "The Elder Party — A Return to Older Values",
     description: "The Elder Party is committed to restoring what was always beneath. Leadership that has waited. A fresh start for America.",
+    ogImage: "/sites/elderparty/hero.png",
   },
   megaMenu: {
     items: [

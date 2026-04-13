@@ -21,6 +21,7 @@ export const config: SiteConfig = {
     title: "ROCKS — The Only Asset Class Older Than Money",
     description:
       "Institutional-grade bedrock exposure. Terrestrial hard assets with zero counterparty risk. Accumulate positions at spot.",
+    ogImage: "/sites/rocks/hero.png",
   },
   nav: [
     { label: "MARKETS", path: "/products" },

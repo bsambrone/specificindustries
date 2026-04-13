@@ -20,6 +20,7 @@ export const config: SiteConfig = {
   metadata: {
     title: "Snortables — Intranasal Nutrient Delivery",
     description: "Clinically optimized intranasal nutrient delivery for the modern human. Why eat when you can insufflate?",
+    ogImage: "/sites/snortables/hero.png",
   },
   nav: [
     { label: "Home", path: "/" },

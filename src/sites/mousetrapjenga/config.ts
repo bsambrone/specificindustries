@@ -20,6 +20,7 @@ export const config: SiteConfig = {
   metadata: {
     title: "Mousetrap Jenga — The American Family Game Classic",
     description: "The best way to lose a finger since 1978! Now available in Mouse Trap, Rat Trap, Bear Trap, and Industrial Leg-Hold editions.",
+    ogImage: "/sites/mousetrapjenga/hero.png",
   },
   nav: [
     { label: "Home", path: "/" },

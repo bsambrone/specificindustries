@@ -20,6 +20,7 @@ export const config: SiteConfig = {
   metadata: {
     title: "Odd Occasions — Thoughtfully Curated Gifts for Life's Most Specific Moments",
     description: "A boutique gift shop offering curated gift boxes for extremely specific situations. From 'Sorry I Ate Your Labeled Lunch in 2017' to 'Congrats on Your Mild Promotion,' every awkward moment deserves a beautiful box.",
+    ogImage: "/sites/oddoccasions/home-hero.png",
   },
   nav: [
     { label: "Home", path: "/" },

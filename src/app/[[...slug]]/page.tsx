@@ -19,12 +19,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const path = slug?.join("/") || ""
   const pageEntry = site.pages[path]
 
-  // Check for per-page metadata override
-  const pageMetadata = pageEntry && typeof pageEntry === "object" && "metadata" in pageEntry
+  let pageMetadata = pageEntry && typeof pageEntry === "object" && "metadata" in pageEntry
     ? (pageEntry as PageWithMetadata).metadata
     : undefined
 
-  // Check dynamic routes for metadata
   if (!pageMetadata && !pageEntry) {
     const segments = path.split("/")
     if (segments.length >= 2 && site.dynamicRoutes?.[segments[0]]) {
@@ -34,32 +32,35 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
       if (dynamicSegments.length >= 1 && dynamicSegments.length <= maxSegs) {
         const primarySlug = dynamicSegments[0]
-        const dynamicMeta = route.getMetadata?.(primarySlug, dynamicSegments.length > 1 ? dynamicSegments : undefined)
-        if (dynamicMeta) {
-          return {
-            title: dynamicMeta.title || site.config.metadata.title,
-            description: dynamicMeta.description || site.config.metadata.description,
-            openGraph: {
-              title: dynamicMeta.title || site.config.metadata.title,
-              description: dynamicMeta.description || site.config.metadata.description,
-              images: site.config.metadata.ogImage ? [site.config.metadata.ogImage] : [],
-            },
-            other: {
-              classification: "satire, entertainment, humor",
-            },
-          }
-        }
+        pageMetadata = route.getMetadata?.(primarySlug, dynamicSegments.length > 1 ? dynamicSegments : undefined) ?? undefined
       }
     }
   }
 
+  const title = pageMetadata?.title || site.config.metadata.title
+  const description = pageMetadata?.description || site.config.metadata.description
+  const ogImage = site.config.metadata.ogImage
+
+  const baseUrl = subdomain === "apex"
+    ? "https://specificindustries.com"
+    : `https://${subdomain}.specificindustries.com`
+
   return {
-    title: pageMetadata?.title || site.config.metadata.title,
-    description: pageMetadata?.description || site.config.metadata.description,
+    metadataBase: new URL(baseUrl),
+    title,
+    description,
     openGraph: {
-      title: pageMetadata?.title || site.config.metadata.title,
-      description: pageMetadata?.description || site.config.metadata.description,
-      images: site.config.metadata.ogImage ? [site.config.metadata.ogImage] : [],
+      title,
+      description,
+      siteName: site.config.name,
+      type: "website",
+      images: ogImage ? [{ url: ogImage, alt: site.config.name }] : [],
+    },
+    twitter: {
+      card: ogImage ? "summary_large_image" : "summary",
+      title,
+      description,
+      images: ogImage ? [ogImage] : [],
     },
     other: {
       classification: "satire, entertainment, humor",
