@@ -1,4 +1,6 @@
 // src/sites/pettential/pages/services.tsx
+import Link from "next/link"
+import { getSiteHref } from "@/lib/site-href"
 import { pricingTiers, standaloneServices, serviceFaqs } from "../data/services"
 import { FaqAccordion } from "@/components/ui/faq-accordion"
 
@@ -7,7 +9,8 @@ export const metadata = {
   description: "Coaching packages, performance reviews, leadership retreats, and more. None of it works. All of it is available.",
 }
 
-export default function PettentialServices() {
+export default async function PettentialServices() {
+  const siteHref = await getSiteHref()
   return (
     <>
       {/* Hero */}
@@ -95,12 +98,12 @@ export default function PettentialServices() {
                 <h3 className="text-lg font-bold text-[#111] font-heading">{service.name}</h3>
                 <p className="mt-1 text-sm font-medium text-[#FF3366]">{service.tagline}</p>
                 <p className="mt-3 text-sm text-[#111]/70">{service.description}</p>
-                <button
-                  className="mt-4 px-4 py-2 bg-[#111]/10 text-[#111]/40 text-sm font-bold rounded-lg cursor-not-allowed"
-                  disabled
+                <Link
+                  href={siteHref("/contact")}
+                  className="mt-4 inline-block px-4 py-2 bg-[#CCFF00] hover:bg-[#b8e600] text-[#111] text-sm font-bold rounded-lg transition-colors"
                 >
                   Schedule Consultation
-                </button>
+                </Link>
               </div>
             ))}
           </div>
