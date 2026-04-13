@@ -1,4 +1,4 @@
-import { Inter, Playfair_Display, Space_Grotesk, Poppins, Barlow_Condensed, Fraunces, Nunito, Bowlby_One_SC, Zilla_Slab } from "next/font/google"
+import { Inter, Playfair_Display, Space_Grotesk, Poppins, Barlow_Condensed, Fraunces, Nunito, Bowlby_One_SC, Zilla_Slab, IBM_Plex_Mono } from "next/font/google"
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -50,6 +50,12 @@ export const zillaSlab = Zilla_Slab({
   variable: "--font-zilla-slab",
 })
 
+export const ibmPlexMono = IBM_Plex_Mono({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-ibm-plex-mono",
+})
+
 // Map font config keys → their next/font instance
 const fontInstanceMap: Record<string, { variable: string }> = {
   inter,
@@ -61,6 +67,7 @@ const fontInstanceMap: Record<string, { variable: string }> = {
   nunito,
   "bowlby-one-sc": bowlbyOneSC,
   "zilla-slab": zillaSlab,
+  "ibm-plex-mono": ibmPlexMono,
 }
 
 // Returns only the CSS variable classes needed for a given site's fonts
@@ -83,4 +90,5 @@ export const fontFamilyMap: Record<string, string> = {
   nunito: "'Nunito', sans-serif",
   "bowlby-one-sc": "'Bowlby One SC', sans-serif",
   "zilla-slab": "'Zilla Slab', serif",
+  "ibm-plex-mono": "'IBM Plex Mono', monospace",
 }

@@ -17,6 +17,7 @@ import { config as bonelesswaterConfig, pages as bonelesswaterPages, dynamicRout
 import { config as gristmillConfig, pages as gristmillPages, dynamicRoutes as gristmillDynamicRoutes } from "./gristmill"
 import { config as oddoccasionsConfig, pages as oddoccasionsPages, dynamicRoutes as oddoccasionsDynamicRoutes } from "./oddoccasions"
 import { config as pettentialConfig, pages as pettentialPages, dynamicRoutes as pettentialDynamicRoutes } from "./pettential"
+import { config as rocksConfig, pages as rocksPages, dynamicRoutes as rocksDynamicRoutes } from "./rocks"
 
 export const siteRegistry: Record<string, SiteModule> = {
   apex: { config: apexConfig, pages: apexPages },
@@ -37,6 +38,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   gristmill: { config: gristmillConfig, pages: gristmillPages, dynamicRoutes: gristmillDynamicRoutes },
   oddoccasions: { config: oddoccasionsConfig, pages: oddoccasionsPages, dynamicRoutes: oddoccasionsDynamicRoutes },
   pettential: { config: pettentialConfig, pages: pettentialPages, dynamicRoutes: pettentialDynamicRoutes },
+  rocks: { config: rocksConfig, pages: rocksPages, dynamicRoutes: rocksDynamicRoutes },
 }
 
 export type SubdomainKey = keyof typeof siteRegistry
