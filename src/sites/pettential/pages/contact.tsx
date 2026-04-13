@@ -31,8 +31,8 @@ export default function PettentialContact() {
         </div>
 
         {/* Team grid */}
-        <div className="mt-10 grid grid-cols-3 md:grid-cols-5 gap-3">
-          {executives.slice(0, 5).map((exec) => (
+        <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-3">
+          {executives.map((exec) => (
             <div key={exec.slug} className="bg-white border border-[#111]/10 rounded-xl overflow-hidden">
               <div className="relative aspect-square bg-[#1A1A1A]/5">
                 <Image src={exec.image} alt={exec.name} fill sizes="20vw" className="object-cover" />

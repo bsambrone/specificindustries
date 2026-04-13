@@ -24,7 +24,7 @@ export default async function PettentialLeadership() {
             The Team Behind the Potential
           </h1>
           <p className="mt-4 text-white/60 max-w-xl mx-auto">
-            Nine professionals who have dedicated their careers to improving animal performance. None have succeeded. All remain committed.
+            Four professionals who have dedicated their careers to improving animal performance. None have succeeded. All remain committed.
           </p>
         </div>
       </section>
@@ -32,30 +32,8 @@ export default async function PettentialLeadership() {
       {/* Executive Grid */}
       <section className="bg-[#FAFAFA] py-16 px-4">
         <div className="max-w-5xl mx-auto">
-          {/* C-Suite */}
-          <h2 className="text-xl font-bold text-[#FF3366] font-heading mb-6 uppercase tracking-wider">C-Suite</h2>
-          <div className="grid grid-cols-1 gap-8 mb-16">
-            {executives.slice(0, 3).map((exec) => (
-              <div key={exec.slug} className="bg-white border border-[#111]/10 rounded-xl overflow-hidden flex flex-col md:flex-row">
-                <div className="relative w-full md:w-56 aspect-[4/5] bg-[#1A1A1A]/5 shrink-0">
-                  <Image src={exec.image} alt={exec.name} fill className="object-cover object-top" />
-                </div>
-                <div className="p-6 flex-1">
-                  <h3 className="text-2xl font-bold text-[#111] font-heading">{exec.name}</h3>
-                  <p className="text-[#FF3366] font-medium mt-1">{exec.title}</p>
-                  <p className="mt-4 text-sm text-[#111]/70 leading-relaxed">{exec.bio}</p>
-                  <blockquote className="mt-4 border-l-2 border-[#CCFF00] pl-4 text-sm text-[#111]/60 italic">
-                    &ldquo;{exec.quote}&rdquo;
-                  </blockquote>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Division Heads */}
-          <h2 className="text-xl font-bold text-[#FF3366] font-heading mb-6 uppercase tracking-wider">Division Heads</h2>
           <div className="grid grid-cols-1 gap-8">
-            {executives.slice(3).map((exec) => (
+            {executives.map((exec) => (
               <div key={exec.slug} className="bg-white border border-[#111]/10 rounded-xl overflow-hidden flex flex-col md:flex-row">
                 <div className="relative w-full md:w-56 aspect-[4/5] bg-[#1A1A1A]/5 shrink-0">
                   <Image src={exec.image} alt={exec.name} fill className="object-cover object-top" />
