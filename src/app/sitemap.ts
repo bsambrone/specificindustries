@@ -23,6 +23,7 @@ import { arms as gristmillArms } from "@/sites/gristmill/data/arms"
 import { services as gristmillServices } from "@/sites/gristmill/data/services"
 import { caseStudies as gristmillCaseStudies } from "@/sites/gristmill/data/case-studies"
 import { products as oddoccasionsProducts } from "@/sites/oddoccasions/data/products"
+import { products as pettentialProducts } from "@/sites/pettential/data/products"
 
 const BASE_DOMAIN = "specificindustries.com"
 const EXCLUDED_PAGES = new Set(["cart", "checkout"])
@@ -123,6 +124,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Odd Occasions: product detail pages at /shop/{slug}
   for (const product of oddoccasionsProducts) {
     urls.push({ url: siteUrl("oddoccasions", `shop/${product.slug}`) })
+  }
+
+  // Pettential: product detail pages at /shop/{slug}
+  for (const product of pettentialProducts) {
+    urls.push({ url: siteUrl("pettential", `shop/${product.slug}`) })
   }
 
   // Gristmill: arm landing pages, service detail pages, case studies
