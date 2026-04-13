@@ -24,6 +24,7 @@ import { services as gristmillServices } from "@/sites/gristmill/data/services"
 import { caseStudies as gristmillCaseStudies } from "@/sites/gristmill/data/case-studies"
 import { products as oddoccasionsProducts } from "@/sites/oddoccasions/data/products"
 import { products as pettentialProducts } from "@/sites/pettential/data/products"
+import { products as rocksProducts } from "@/sites/rocks/data/products"
 
 const BASE_DOMAIN = "specificindustries.com"
 const EXCLUDED_PAGES = new Set(["cart", "checkout"])
@@ -57,6 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     snortables: snortablesProducts,
     mousetrapjenga: mousetrapjengaProducts,
     bonelesswater: bonelesswaterProducts,
+    rocks: rocksProducts,
   }
 
   for (const [subdomain, products] of Object.entries(productSites)) {
