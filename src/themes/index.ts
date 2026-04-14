@@ -61,6 +61,7 @@ export interface SiteConfig {
 export interface PageMetadata {
   title?: string
   description?: string
+  ogImage?: string
 }
 
 export interface PageWithMetadata {

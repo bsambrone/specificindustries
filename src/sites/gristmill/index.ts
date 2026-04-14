@@ -37,6 +37,7 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         return {
           title: `${service.name} — ${arm.name} — Gristmill Partners`,
           description: service.tagline,
+          ogImage: service.image,
         }
       }
       const arm = getArmBySlug(slug)
@@ -44,6 +45,7 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         ? {
             title: `${arm.name} — Gristmill Partners`,
             description: arm.tagline,
+            ogImage: arm.image,
           }
         : undefined
     },

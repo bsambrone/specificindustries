@@ -44,7 +44,7 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
     getMetadata: (slug: string) => {
       const share = getShareBySlug(slug)
       return share
-        ? { title: `${share.name} — Grass Fed WiFi`, description: share.tagline }
+        ? { title: `${share.name} — Grass Fed WiFi`, description: share.tagline, ogImage: share.image }
         : undefined
     },
     isValidSlug: (slug: string) => !!getShareBySlug(slug),
@@ -54,7 +54,7 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
     getMetadata: (slug: string) => {
       const note = getFieldNoteBySlug(slug)
       return note
-        ? { title: `${note.title} — Grass Fed WiFi`, description: note.excerpt }
+        ? { title: `${note.title} — Grass Fed WiFi`, description: note.excerpt, ogImage: note.image }
         : undefined
     },
     isValidSlug: (slug: string) => !!getFieldNoteBySlug(slug),

@@ -50,7 +50,7 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
     getMetadata: (slug: string) => {
       const coalition = getCoalitionBySlug(slug)
       return coalition
-        ? { title: `${coalition.name} — The Elder Party`, description: coalition.tagline }
+        ? { title: `${coalition.name} — The Elder Party`, description: coalition.tagline, ogImage: coalition.image }
         : undefined
     },
     isValidSlug: (slug: string) => !!getCoalitionBySlug(slug),
@@ -60,7 +60,7 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
     getMetadata: (slug: string) => {
       const article = getArticleBySlug(slug)
       return article
-        ? { title: `${article.headline} — The Elder Party`, description: article.summary }
+        ? { title: `${article.headline} — The Elder Party`, description: article.summary, ogImage: article.images?.[0]?.src }
         : undefined
     },
     isValidSlug: (slug: string) => !!getArticleBySlug(slug),
@@ -70,7 +70,7 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
     getMetadata: (slug: string) => {
       const product = getProductBySlug(slug)
       return product
-        ? { title: `${product.name} — Elder Party Campaign Store`, description: product.tagline }
+        ? { title: `${product.name} — Elder Party Campaign Store`, description: product.tagline, ogImage: product.image }
         : undefined
     },
     isValidSlug: (slug: string) => !!getProductBySlug(slug),

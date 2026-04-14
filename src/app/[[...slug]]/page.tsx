@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const title = pageMetadata?.title || site.config.metadata.title
   const description = pageMetadata?.description || site.config.metadata.description
-  const ogImage = site.config.metadata.ogImage
+  const ogImage = pageMetadata?.ogImage || site.config.metadata.ogImage
 
   const baseUrl = subdomain === "apex"
     ? "https://specificindustries.com"

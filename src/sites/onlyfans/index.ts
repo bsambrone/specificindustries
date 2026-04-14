@@ -31,7 +31,7 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
     getMetadata: (slug: string) => {
       const fan = getFanBySlug(slug)
       return fan
-        ? { title: `${fan.name} — Only Fans`, description: fan.bio }
+        ? { title: `${fan.name} — Only Fans`, description: fan.bio, ogImage: fan.coverImage }
         : undefined
     },
     isValidSlug: (slug: string) => !!getFanBySlug(slug),

@@ -47,6 +47,7 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         return {
           title: `${product.name} — ${solution.name} — Strategic Void Consulting`,
           description: product.tagline,
+          ogImage: product.image,
         }
       }
       const solution = getSolutionBySlug(slug)
