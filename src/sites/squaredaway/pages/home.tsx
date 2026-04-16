@@ -151,7 +151,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {TESTIMONIALS.map((t, i) => (
               <blockquote key={i} className="border-l-4 border-accent pl-4">
-                <p className="text-sm text-foreground/90 mb-2">"{t.quote}"</p>
+                <p className="text-sm text-foreground/90 mb-2">&ldquo;{t.quote}&rdquo;</p>
                 <cite className="font-mono text-xs uppercase tracking-wider text-primary/70 not-italic">— {t.cite}</cite>
               </blockquote>
             ))}

@@ -86,7 +86,7 @@ export default function ProductDetail({ slug }: { slug: string }) {
       {product.crossBranchJab && (
         <section className="py-10 px-4">
           <div className="max-w-3xl mx-auto text-center border-l-4 border-accent pl-6 text-left">
-            <p className="font-heading text-2xl text-primary italic">"{product.crossBranchJab}"</p>
+            <p className="font-heading text-2xl text-primary italic">&ldquo;{product.crossBranchJab}&rdquo;</p>
             <p className="font-mono text-xs uppercase tracking-widest text-primary/60 mt-2">
               — SQUARED AWAY EDITORIAL BOARD
             </p>

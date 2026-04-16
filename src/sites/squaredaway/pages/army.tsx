@@ -32,7 +32,7 @@ export default function ArmyPage() {
           <div className="text-center max-w-3xl">
             <p className="font-mono uppercase tracking-widest text-primary text-xs mb-1">Component: LAND</p>
             <h1 className="font-heading text-5xl md:text-6xl text-primary uppercase tracking-widest">Army</h1>
-            <p className="text-foreground/90 mt-2">This We'll Defend. For a Price.</p>
+            <p className="text-foreground/90 mt-2">This We&apos;ll Defend. For a Price.</p>
           </div>
         </div>
       </section>

@@ -28,7 +28,7 @@ export default function FaqPage() {
           <p className="font-mono uppercase tracking-widest text-primary/70 text-xs mb-2">FAQ · UNCLASSIFIED</p>
           <h1 className="font-heading text-4xl text-primary uppercase tracking-widest mb-3">Frequently Asked Questions</h1>
           <p className="text-foreground/80">
-            Questions we're asked by customers, answered by people who do not read them.
+            Questions we&apos;re asked by customers, answered by people who do not read them.
           </p>
         </div>
       </section>
