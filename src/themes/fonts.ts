@@ -1,4 +1,4 @@
-import { Inter, Playfair_Display, Space_Grotesk, Poppins, Barlow_Condensed, Fraunces, Nunito, Bowlby_One_SC, Zilla_Slab, IBM_Plex_Mono } from "next/font/google"
+import { Inter, Playfair_Display, Space_Grotesk, Poppins, Barlow_Condensed, Fraunces, Nunito, Bowlby_One_SC, Zilla_Slab, IBM_Plex_Mono, Black_Ops_One } from "next/font/google"
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -56,6 +56,12 @@ export const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-ibm-plex-mono",
 })
 
+export const blackOpsOne = Black_Ops_One({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-black-ops-one",
+})
+
 // Map font config keys → their next/font instance
 const fontInstanceMap: Record<string, { variable: string }> = {
   inter,
@@ -68,6 +74,7 @@ const fontInstanceMap: Record<string, { variable: string }> = {
   "bowlby-one-sc": bowlbyOneSC,
   "zilla-slab": zillaSlab,
   "ibm-plex-mono": ibmPlexMono,
+  "black-ops-one": blackOpsOne,
 }
 
 // Returns only the CSS variable classes needed for a given site's fonts
@@ -91,4 +98,5 @@ export const fontFamilyMap: Record<string, string> = {
   "bowlby-one-sc": "'Bowlby One SC', sans-serif",
   "zilla-slab": "'Zilla Slab', serif",
   "ibm-plex-mono": "'IBM Plex Mono', monospace",
+  "black-ops-one": "'Black Ops One', cursive",
 }
