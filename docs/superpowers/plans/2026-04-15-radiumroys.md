@@ -59,13 +59,13 @@ Every page in this plan must follow this voice. Pin it where you can see it.
 
 - [ ] **Step 1: Add Bungee + Work Sans imports and instances**
 
-Open `src/themes/fonts.ts`. Update the import line at the top to add `Bungee` and `Work_Sans`, then add two new font instance declarations after the existing `IBM_Plex_Mono` block (around line 53-57):
+Open `src/themes/fonts.ts`. Update the import line at the top to add `Bungee` and `Work_Sans` to the existing import (the file already includes a `Black_Ops_One` import — keep it):
 
 ```typescript
-import { Inter, Playfair_Display, Space_Grotesk, Poppins, Barlow_Condensed, Fraunces, Nunito, Bowlby_One_SC, Zilla_Slab, IBM_Plex_Mono, Bungee, Work_Sans } from "next/font/google"
+import { Inter, Playfair_Display, Space_Grotesk, Poppins, Barlow_Condensed, Fraunces, Nunito, Bowlby_One_SC, Zilla_Slab, IBM_Plex_Mono, Black_Ops_One, Bungee, Work_Sans } from "next/font/google"
 ```
 
-Add these two instance blocks after the existing `ibmPlexMono` declaration:
+Add these two instance blocks after the existing `blackOpsOne` declaration (the last existing instance in the file):
 
 ```typescript
 export const bungee = Bungee({
@@ -82,14 +82,14 @@ export const workSans = Work_Sans({
 
 - [ ] **Step 2: Register both in `fontInstanceMap` and `fontFamilyMap`**
 
-In the same file, add two entries to `fontInstanceMap` (after `"ibm-plex-mono": ibmPlexMono,`):
+In the same file, add two entries to `fontInstanceMap` (after the last existing entry `"black-ops-one": blackOpsOne,`):
 
 ```typescript
   "bungee": bungee,
   "work-sans": workSans,
 ```
 
-And add two entries to `fontFamilyMap` (after `"ibm-plex-mono": "'IBM Plex Mono', monospace",`):
+And add two entries to `fontFamilyMap` (after the last existing entry `"black-ops-one": "'Black Ops One', cursive",`):
 
 ```typescript
   "bungee": "'Bungee', cursive",
@@ -215,7 +215,7 @@ Then add the registry entry after the `rocks:` line in `siteRegistry` (approxima
 
 - [ ] **Step 5: Add subdomain to allowlist**
 
-Modify `src/sites/subdomains.ts`. Add `"radiumroys"` to the `VALID_SUBDOMAINS` array, after `"rocks"`:
+Modify `src/sites/subdomains.ts`. The file already contains a `"squaredaway"` entry after `"rocks"` (added by parallel work). Add `"radiumroys"` to the end of the `VALID_SUBDOMAINS` array, after `"squaredaway"`:
 
 ```typescript
 export const VALID_SUBDOMAINS = [
@@ -238,6 +238,7 @@ export const VALID_SUBDOMAINS = [
   "oddoccasions",
   "pettential",
   "rocks",
+  "squaredaway",
   "radiumroys",
 ] as const
 ```
