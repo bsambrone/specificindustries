@@ -42,7 +42,7 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full">
+        <div className="relative w-full h-64 md:h-80 lg:h-96">
           <Image
             src="/sites/squaredaway/hero.png"
             alt="Squared Away Supply Co. storefront"
