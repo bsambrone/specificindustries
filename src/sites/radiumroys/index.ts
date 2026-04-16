@@ -6,6 +6,7 @@ import RadiumRoysProducts, { metadata as productsMetadata } from "./pages/produc
 import ProductDetail from "./pages/product-detail"
 import RadiumRoysAbout, { metadata as aboutMetadata } from "./pages/about"
 import RadiumRoysStandards, { metadata as standardsMetadata } from "./pages/standards"
+import RadiumRoysTestimonials, { metadata as testimonialsMetadata } from "./pages/testimonials"
 
 export { config }
 
@@ -14,6 +15,7 @@ export const pages: Record<string, PageEntry> = {
   "products": { component: RadiumRoysProducts, metadata: productsMetadata },
   "about": { component: RadiumRoysAbout, metadata: aboutMetadata },
   "standards": { component: RadiumRoysStandards, metadata: standardsMetadata },
+  "testimonials": { component: RadiumRoysTestimonials, metadata: testimonialsMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
