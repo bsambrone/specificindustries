@@ -45,12 +45,47 @@ export const products: Product[] = [
     priceLabel: "$84.99",
     tagline: "Concrete-filled MOLLE. Ready to ruck.",
     image: "/sites/squaredaway/product-grunts-embrace.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Concrete-filled MOLLE tactical pillow in discontinued UCP camo. Weight: 11.2 lbs. Ready to ruck, nap, or neither.",
+    longDescription: [
+      "Finally, a pillow that respects your profession. The Grunt's Embrace™ is constructed from reinforced MOLLE webbing, filled with genuine poured concrete, and wrapped in the Universal Camouflage Pattern that famously failed to camouflage anything between 2005 and 2019. At 11.2 pounds, it is heavy enough to qualify as Class IV field equipment and uncomfortable enough to feel earned.",
+      "Each unit is poured by hand at a demolished NCO club in Fort Hood, Texas, then cured for 28 days under a tarp. Our morale engineers have verified that nobody who has ever used this pillow has slept well. This is considered a feature.",
+      "Ideal for the 11B who wants to take their profession home with them, the reservist who refuses to leave the Army behind, and the O-4 whose spouse has asked them to get a hobby.",
+    ],
+    specs: [
+      { label: "Weight", value: "11.2 lbs" },
+      { label: "Dimensions", value: "18 × 14 × 4 in" },
+      { label: "Fill Material", value: "Poured concrete" },
+      { label: "Shell", value: "500D Cordura MOLLE webbing" },
+      { label: "Pattern", value: "UCP (Class of 2005)" },
+      { label: "Care Instructions", value: "Do not wash. Do not sleep on. Ruck only." },
+    ],
+    warnings: [
+      "Not authorized for Air Force use. May cause posture injury to Chair Force personnel.",
+      "Concrete source (Fort Hood NCO club) cannot be certified as morale-compliant.",
+    ],
+    crossBranchJab:
+      "The Air Force already has memory foam with a thread count. You have this.",
+    reviews: [
+      {
+        rank: "SFC",
+        name: "Devaughn Miles",
+        stars: 5,
+        body: "Finally a pillow that understands me. I have not slept since 2007 and this has not changed that, but now I can't blame the pillow.",
+      },
+      {
+        rank: "SPC",
+        name: "Tanner Blackwood",
+        stars: 2,
+        body: "My platoon sergeant made me add it to my ruck for a 12-miler. It is still in my ruck. I am afraid of it.",
+      },
+      {
+        rank: "1SG",
+        name: "Marlene Koppel",
+        stars: 5,
+        body: "Issued one to every soldier in my company. Morale down 14%. Rucks up 14%. Net zero. Army math.",
+      },
+    ],
     featured: true,
   },
   {
@@ -64,12 +99,47 @@ export const products: Product[] = [
     priceLabel: "$119.99",
     tagline: "Four MREs paired with regret.",
     image: "/sites/squaredaway/product-mre-pairing-flight-fort-polk.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Curated tasting flight of four Fort Polk-sourced MREs — Chili Mac, Beef Stew, Veggie Omelet, and Jalapeño Pepper Pouch — presented with sommelier-style pairing notes.",
+    longDescription: [
+      "The Fort Polk Collection is a curated MRE tasting flight designed for the soldier who has eaten everything in the catalog and developed opinions about it. Four classic meals — Chili Mac, Beef Stew, Veggie Omelet, and the standalone Jalapeño Pepper Pouch — are presented in archival-grade packaging with hand-typed sommelier tasting notes from our resident field-cuisine specialist, SFC (Ret.) Donaldson.",
+      "Each pairing note addresses nose, palate, and finish. The Chili Mac is described as 'assertive, with notes of sodium and institutional intention.' The Veggie Omelet is characterized as 'challenging on first contact, meditative with repetition.' The Jalapeño Pepper Pouch is listed simply as 'a commitment.'",
+      "Sourced from training cycle surplus at the Joint Readiness Training Center, Fort Polk, Louisiana. Best consumed in a muddy patrol base with no cell service. Pairs well with a 3 a.m. watch shift and unresolved career decisions.",
+    ],
+    specs: [
+      { label: "Flight Contents", value: "Chili Mac, Beef Stew, Veggie Omelet, Jalapeño Pepper Pouch" },
+      { label: "Tasting Order", value: "Pouch first. Trust the process." },
+      { label: "Pairing Recommendation", value: "Warm water (canteen temperature preferred)" },
+      { label: "Origin", value: "JRTC surplus, Fort Polk, Louisiana" },
+      { label: "Calories", value: "1,200–1,400 per meal (estimates; accuracy not guaranteed)" },
+      { label: "Sommelier Notes", value: "Curated by SFC (Ret.) Donaldson, 2x JRTC rotation survivor" },
+    ],
+    warnings: [
+      "Consumption of all four meals within a 24-hour period may constitute a GI-tract incident reportable under AR 40-501. Consult your medic.",
+      "Unauthorized consumption of the Jalapeño Pepper Pouch without prior acclimatization is discouraged. The Army assumes no liability.",
+    ],
+    crossBranchJab:
+      "While you eat this, the Air Force is ordering off a menu in Qatar with a protein option and a garnish.",
+    reviews: [
+      {
+        rank: "SSG",
+        name: "Patricia Okonkwo",
+        stars: 5,
+        body: "The tasting notes are genuinely accurate. 'Assertive' is the correct word for Chili Mac. This is the most honest food criticism I have ever read.",
+      },
+      {
+        rank: "CPT",
+        name: "Wesley Fortner",
+        stars: 3,
+        body: "Served these at a unit dinner as a joke. My soldiers did not laugh. They ate everything and asked for more Jalapeño Pouches. I don't know what to do with this information.",
+      },
+      {
+        rank: "SGM",
+        name: "Ronald Hutchins",
+        stars: 5,
+        body: "I have consumed every MRE variant since 1996. The Fort Polk Collection is accurate. The packaging is unnecessary. I respect that it exists.",
+      },
+    ],
   },
   {
     slug: "ucp-invisibility-cloak",
@@ -82,12 +152,47 @@ export const products: Product[] = [
     priceLabel: "$249.99",
     tagline: "The camouflage that camouflaged nothing.",
     image: "/sites/squaredaway/product-ucp-invisibility-cloak.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Commemorative full-length cloak in authentic Universal Camouflage Pattern. Worked as intended from 2005 to 2019. Efficacy rating: documented. Refunds: unavailable.",
+    longDescription: [
+      "The UCP Classic™ Commemorative Invisibility Cloak is a collector's tribute to the Army Combat Uniform's original camouflage pattern — a $5 billion acquisition decision that produced a uniform visible in every environment on Earth, including the ones it was designed for. This cloak is produced in the original gray-green-tan colorway that performed below baseline in independent field trials and was retired from service in 2019.",
+      "We have preserved the pattern exactly as issued, including the signature property of being more visible than no camouflage at all in direct sunlight. Each cloak is accompanied by a certificate of inauthenticity, confirming that the wearer will not, under any circumstances, blend into their surroundings.",
+      "Ideal for veterans who want a memento of the ACU era, military historians documenting procurement failures, and anyone who needs to explain to a civilian that yes, this was real, this was on every soldier in a combat zone for fourteen years, and nobody stopped it.",
+    ],
+    specs: [
+      { label: "Pattern", value: "Universal Camouflage Pattern (UCP), original Gray-Green-Tan" },
+      { label: "In-Service Dates", value: "2005–2019 (Army); 2005–present (this cloak)" },
+      { label: "Efficacy Rating", value: "Below baseline in all tested environments" },
+      { label: "Colorblocks", value: "3 (gray, green, tan — none of them helpful)" },
+      { label: "Certified Invisible", value: "No. Certified the opposite." },
+      { label: "Composition", value: "50% cotton, 50% polyester, 100% institutional optimism" },
+    ],
+    warnings: [
+      "This cloak does not make the wearer invisible. It may make the wearer more visible. The Army thanks you for your service.",
+      "Returns not accepted on grounds of visibility. You were informed.",
+    ],
+    crossBranchJab:
+      "The Marines issued MARPAT in 2001 and it worked immediately. The Army spent $5 billion to arrive at a different conclusion four years later.",
+    reviews: [
+      {
+        rank: "MAJ",
+        name: "Christine Bullock",
+        stars: 5,
+        body: "I wore this to my retirement ceremony. My commanding general recognized me immediately. The pattern remains fully non-functional. Ten stars.",
+      },
+      {
+        rank: "SPC",
+        name: "Aaron Tsai",
+        stars: 2,
+        body: "I bought this thinking it was a joke gift. It is a joke gift. The problem is I keep looking at it and feeling things about my deployment.",
+      },
+      {
+        rank: "1LT",
+        name: "Gretchen Waller",
+        stars: 5,
+        body: "Hung it in my office as a reminder that institutions make expensive mistakes and keep going anyway. Excellent motivational art.",
+      },
+    ],
   },
   {
     slug: "sergeant-major-mustache-kit",
@@ -100,12 +205,47 @@ export const products: Product[] = [
     priceLabel: "$64.99",
     tagline: "Wax, comb, and one framed citation.",
     image: "/sites/squaredaway/product-sergeant-major-mustache-kit.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Professional-grade mustache wax, regulation-width comb, and a framed commendation for Exceptional Facial Grooming. Compliant with AR 670-1 maximum width standards.",
+    longDescription: [
+      "The Regulation Sergeant Major Mustache Kit is a complete grooming system for the E-9 who has optimized every aspect of their career and now turns to the lip. Included: one tin of Army-appropriate mustache wax (matte finish, neutral fragrance, zero parade-ground shine), one aluminum comb calibrated to the AR 670-1 maximum width of one-half inch beyond the corner of the mouth, and one 5×7 framed commendation for Exceptional Facial Grooming signed by a notional but plausible CSM.",
+      "The framed citation reads, in part: 'For meritorious facial grooming during the period of service, demonstrating sustained commitment to regulation upper-lip maintenance in a manner that reflects credit upon this soldier, this unit, and the noncommissioned officer corps.' It is suitable for display in a home office, NCO lounge, or any surface where a spouse cannot prevent it.",
+      "The wax is compounded to hold through physical training, field conditions, and unit town halls. The citation is not transferable to another soldier. Your mustache must be grown in-house.",
+    ],
+    specs: [
+      { label: "Wax Compound", value: "Medium-hold matte, AR 670-1 compliant sheen level" },
+      { label: "Comb Material", value: "Matte black anodized aluminum, 3.2 in" },
+      { label: "Framed Citation Size", value: "5 × 7 in, black frame, matte glass" },
+      { label: "Regulation Width", value: "Max 0.5 in beyond corner of mouth (AR 670-1 reference)" },
+      { label: "Approved Curl Styles", value: "Natural, slight upward, moderate upward. Handlebar: unauthorized." },
+      { label: "Compliance", value: "Fully compliant. Inspect-ready." },
+    ],
+    warnings: [
+      "Mustache must be grown by the authorized user. This kit cannot grow a mustache on your behalf. You must provide the upper lip.",
+      "The framed citation does not constitute an official Army award and cannot be submitted for personnel file inclusion, regardless of how you feel about it.",
+    ],
+    crossBranchJab:
+      "The Navy allows full beards, which is a policy choice that looks exactly like a policy choice.",
+    reviews: [
+      {
+        rank: "SGM",
+        name: "Harold Petrosky",
+        stars: 5,
+        body: "I have maintained a regulation mustache since 1998. This wax is the first product that has understood what I am trying to do. The citation is hanging next to my EIB. It fits.",
+      },
+      {
+        rank: "SSG",
+        name: "Derek Cantu",
+        stars: 3,
+        body: "Bought this as a gift for my First Sergeant. He opened it, read the citation out loud to the formation, and then put it in his top desk drawer. I call that a win.",
+      },
+      {
+        rank: "1SG",
+        name: "Vivian Przybylski",
+        stars: 5,
+        body: "The comb is calibrated correctly. I checked. The wax holds through a 10-mile ruck. The citation is factually accurate. Five stars. No notes.",
+      },
+    ],
   },
   {
     slug: "artisanal-field-mud",
@@ -118,12 +258,47 @@ export const products: Product[] = [
     priceLabel: "$39.99",
     tagline: "Sourced from Fort Polk. Certified miserable.",
     image: "/sites/squaredaway/product-artisanal-field-mud.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Single-origin field mud hand-harvested from Fort Polk, Louisiana. 62% clay content. Notes of pine, standing water, and institutional despair. One gallon, sealed.",
+    longDescription: [
+      "Not all mud is created equal. The Artisanal Field Mud™ is harvested by hand from the training areas of Fort Polk, Louisiana — a landscape widely regarded by soldiers who have served there as 'the worst place I have ever been' and 'somehow worse in summer.' At 62% Louisiana red clay and 38% standing surface water, it achieves a consistency our terroir specialists describe as 'persistent' and 'load-bearing in the worst way.'",
+      "Each gallon is sealed in a food-grade container (not for food) with a single-origin certificate documenting the harvest grid coordinate, approximate rainfall during collection, and the name of the training rotation during which it was sourced. Aroma profile: pine sap, standing water, DEET, and the specific kind of quiet that precedes a safety brief.",
+      "Recommended for reenactors seeking authenticity, veterans pursuing sensory recall, and anyone who has tried to explain to a civilian what JRTC was like and found language insufficient. Not for Air Force personnel, who have never seen mud in a professional context.",
+    ],
+    specs: [
+      { label: "Origin", value: "Fort Polk (JRTC), Louisiana — Training Area 17-Bravo" },
+      { label: "Volume", value: "1 gallon (3.78 L), sealed container" },
+      { label: "Moisture Content", value: "38% (seasonal variation applies)" },
+      { label: "Clay Ratio", value: "62% Louisiana red clay" },
+      { label: "Certifications", value: "Single-origin certified. Misery-compliant." },
+      { label: "Aroma Profile", value: "Pine, standing water, DEET, late-rotation fatigue" },
+    ],
+    warnings: [
+      "Not edible, despite multiple Marine Corps field reports suggesting otherwise. Do not consume.",
+      "May attract mosquitoes when opened indoors. The Fort Polk mosquito is not contained by walls. You have been advised.",
+    ],
+    crossBranchJab:
+      "The Air Force has not encountered mud in a professional context. This product is not for them.",
+    reviews: [
+      {
+        rank: "SFC",
+        name: "Jerome Dabney",
+        stars: 5,
+        body: "Opened the container and my body immediately went back to 2011. I was on a patrol base. It was raining. I was 23. The mud is accurate.",
+      },
+      {
+        rank: "CPT",
+        name: "Lindsay Hargrove",
+        stars: 2,
+        body: "Bought this for my veterans' group as a joke. Nobody laughed. Two guys got quiet for a while. The mud is very real.",
+      },
+      {
+        rank: "SGT",
+        name: "Marcus Oyelaran",
+        stars: 5,
+        body: "I used this to explain JRTC to my wife. She looked at the jar for a long time and said 'Oh.' That is exactly what JRTC is. Five stars.",
+      },
+    ],
   },
   {
     slug: "hooah-bar",
@@ -136,12 +311,47 @@ export const products: Product[] = [
     priceLabel: "$89.00",
     tagline: "Tastes like motivation and abandonment.",
     image: "/sites/squaredaway/product-hooah-bar.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Artisanal 600-calorie chocolate energy bar developed from the Army ration tradition. Notes of motivation, malt, and departure. $89 per bar. Certified worth it by no one.",
+    longDescription: [
+      "The Hooah Bar™ is an artisanal interpretation of the Army's legendary field ration energy bar — a product that has been in some version of continuous service since the 1990s and which every soldier has eaten out of desperation at least once. Our version is hand-produced in small batches, chocolate-malt base, 600 calories, and finished with a note that our tasting panel described as 'motivation' on the front end and 'abandonment' on the finish.",
+      "It is $89. This price reflects the craft process, the premium ingredients, and the understanding that the soldier who needs a Hooah Bar at 0300 will pay $89 without thinking about it. We have priced it accordingly. There is no multi-pack discount. There is no loyalty program. There is only the bar.",
+      "Limit one per 24-hour period. Not because of any medical reason. Because the Army has always limited the good things. You already know this.",
+    ],
+    specs: [
+      { label: "Calories", value: "600 per bar" },
+      { label: "Protein", value: "18g" },
+      { label: "Motivation Content", value: "High (front-loaded; diminishes mid-bar)" },
+      { label: "Origin", value: "Small-batch facility, undisclosed CONUS location" },
+      { label: "Best Before", value: "Longer than your enlistment" },
+      { label: "Certifications", value: "MIL-STD-CHOMP compliant. Not certified as enjoyable." },
+    ],
+    warnings: [
+      "Limit one bar per 24-hour period. This is not medically required. It is a posture. We maintain it.",
+      "May cause spontaneous vocalization of 'HOOAH' in public settings. The manufacturer assumes no social liability.",
+    ],
+    crossBranchJab:
+      "The Marine Corps sells their Culinary Coloring Sticks for $34.99 a dozen. They taste approximately the same and cost $54 less. We respect the market.",
+    reviews: [
+      {
+        rank: "1LT",
+        name: "Caleb Fontaine",
+        stars: 5,
+        body: "I ate this at 0200 before a battalion FTX. I felt like I understood the Army for about 45 minutes. Then the feeling passed and I was just cold. Worth $89.",
+      },
+      {
+        rank: "SPC",
+        name: "Nguyen Ha-Lin",
+        stars: 3,
+        body: "Tastes exactly like the original. I do not know if that is a compliment. I bought two.",
+      },
+      {
+        rank: "COL",
+        name: "Warren Albright",
+        stars: 5,
+        body: "I keep one in my desk. I have not eaten it. Its presence alone increases my productivity by an estimated 12%. I will eat it when I retire.",
+      },
+    ],
   },
   {
     slug: "rucking-enrichment-stones",
@@ -154,12 +364,47 @@ export const products: Product[] = [
     priceLabel: "$149.99",
     tagline: "Decorative bricks for emotional weight.",
     image: "/sites/squaredaway/product-rucking-enrichment-stones.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Set of 6 named bricks — Discipline, Regret, Hooah, Brotherhood, Foot Pain, Retirement — for the mindful ruck march. Each stone weighs 5 lbs. Total: 30 lbs of intention.",
+    longDescription: [
+      "The Rucking Enrichment Stones™ are a set of six individually named bricks designed to transform the ruck march from a physical exercise into a reflective practice. Each stone is hand-labeled with one of the six core Army emotional states: Discipline, Regret, Hooah, Brotherhood, Foot Pain, and Retirement. Together they weigh 30 pounds and fit inside a standard ALICE or MOLLE ruck with room for one MRE and your reenlistment paperwork.",
+      "The naming convention follows research conducted by our Army Morale Division, which determined that soldiers carry these six concepts regardless of whether they are physically represented in their ruck. By externalizing the weight, the soldier gains perspective. By carrying 30 additional pounds, the soldier gains blisters. Both are considered enrichment.",
+      "Stones are cast from recycled concrete aggregate and finished with a matte gray coating rated for field conditions. 'Retirement' is slightly heavier than the others. This was intentional.",
+    ],
+    specs: [
+      { label: "Weight per Stone", value: "5 lbs each (Retirement: 5.4 lbs)" },
+      { label: "Set Count", value: "6 stones" },
+      { label: "Stone Names", value: "Discipline, Regret, Hooah, Brotherhood, Foot Pain, Retirement" },
+      { label: "Origin", value: "Recycled concrete aggregate, CONUS-sourced" },
+      { label: "Enrichment Rating", value: "High (physical); Variable (emotional)" },
+      { label: "Certifications", value: "MIL-STD-HEAVY compliant. Ruck-rated." },
+    ],
+    warnings: [
+      "Do not attempt to carry all six stones simultaneously without command approval and a prior medical screening. This is not a challenge. It is a warning.",
+      "Stones are not toys and are not suitable for children, pets, or Air Force PT programs. They are bricks. They are heavy. You were informed.",
+    ],
+    crossBranchJab:
+      "The Navy loads your weight onto a ship for you. You carry yours on your back for 12 miles. One of these builds character and the other builds a port authority invoice.",
+    reviews: [
+      {
+        rank: "SGT",
+        name: "Franklin Dubose",
+        stars: 5,
+        body: "I carry Brotherhood and Foot Pain every Friday morning. They have not made the ruck easier. They have made it feel more honest. I have recommended this to my entire squad.",
+      },
+      {
+        rank: "SPC",
+        name: "Hannah Birch",
+        stars: 2,
+        body: "I was told these were metaphorical. They are not metaphorical. They are bricks. I am stronger now but I did not consent to this.",
+      },
+      {
+        rank: "SFC",
+        name: "Cornelius Mabry",
+        stars: 5,
+        body: "Put Retirement in the bottom of my ruck three years ago. I can feel it on every march. That is the correct amount of feeling to have about it.",
+      },
+    ],
   },
   {
     slug: "powerpoint-of-the-month-club",
@@ -172,12 +417,47 @@ export const products: Product[] = [
     priceLabel: "$29.99 / month",
     tagline: "400+ safety slides, delivered monthly.",
     image: "/sites/squaredaway/product-powerpoint-of-the-month-club.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Monthly delivery of 400+ Army-style safety briefing slides covering SHARP, OPSEC, Suicide Prevention, Equal Opportunity, and more. Formatted in 4:3. Clip art included.",
+    longDescription: [
+      "The PowerPoint of the Month Club™ is a subscription service delivering a fresh, comprehensive safety briefing deck each month — 400 or more slides covering the full spectrum of mandatory Army training topics: SHARP, OPSEC, Suicide Prevention, Equal Opportunity, Heat Casualty Prevention, Cold Weather Operations, POV Safety, Holiday Messaging, and a rotating bonus topic selected by our Content Assurance Branch. Each deck is formatted in 4:3 aspect ratio and includes original clip art, Word Art headers, and at least one slide that is entirely in blue on black.",
+      "Our editorial team sources material from Army training doctrine and formats it according to standards established between 2003 and 2011, which remain in active use throughout the force. Animations are enabled by default. Transitions include Fly In, Box Out, and the Wipe effect that one S6 sergeant in every battalion refuses to remove.",
+      "This is the only product in our catalog that every service member — across all branches — has already sat through. We are simply making it available for home use.",
+    ],
+    specs: [
+      { label: "Slides per Month", value: "400+ (subject to topic expansion)" },
+      { label: "Format", value: "PowerPoint (.pptx), 4:3 aspect ratio, animations enabled" },
+      { label: "Renewal", value: "Auto-renews monthly. Opting out requires a counseling statement." },
+      { label: "Delivery", value: "Digital download. No hard copy. Printing is your problem." },
+      { label: "Topics Covered", value: "SHARP, OPSEC, Suicide Prevention, EO, Heat/Cold, POV Safety, Holiday Messaging, and rotating bonus topic" },
+      { label: "Certifications", value: "MIL-STD-SLIDE compliant. Attendance mandatory." },
+    ],
+    warnings: [
+      "Attendance is mandatory. Attendance does not constitute comprehension. Comprehension is not tracked.",
+      "Viewing the slides does not constitute completion of mandatory training. You still have to sit in the room and sign the roster.",
+    ],
+    crossBranchJab:
+      "This is the only product in our catalog that every service branch has already sat through in a conference room on a Tuesday morning with bad coffee.",
+    reviews: [
+      {
+        rank: "CPT",
+        name: "Sandra Whitmore",
+        stars: 5,
+        body: "The Holiday Messaging deck has 47 slides about not drinking and driving. Slide 31 is just a photo of a totaled Camaro with no text. Peak Army PowerPoint. Five stars.",
+      },
+      {
+        rank: "SSG",
+        name: "Bobby Kline",
+        stars: 3,
+        body: "I have delivered the SHARP brief so many times I have memorized it. This deck has a slide I have never seen before. I don't know where it came from. I am using it.",
+      },
+      {
+        rank: "LTC",
+        name: "Pamela Osei",
+        stars: 5,
+        body: "I used the February deck for my battalion's holiday safety stand-down in February. Nobody noticed. Nobody asked. The roster was signed. Mission accomplished.",
+      },
+    ],
   },
 
   // ===== NAVY =====
