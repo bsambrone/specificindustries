@@ -10,6 +10,8 @@ import RadiumRoysTestimonials, { metadata as testimonialsMetadata } from "./page
 import RadiumRoysContact from "./pages/contact"
 import RadiumRoysPrivacy, { metadata as privacyMetadata } from "./pages/privacy"
 import RadiumRoysTerms, { metadata as termsMetadata } from "./pages/terms"
+import RadiumRoysCart from "./pages/cart"
+import RadiumRoysCheckout from "./pages/checkout"
 
 export { config }
 
@@ -22,6 +24,8 @@ export const pages: Record<string, PageEntry> = {
   "contact": RadiumRoysContact,
   "privacy": { component: RadiumRoysPrivacy, metadata: privacyMetadata },
   "terms": { component: RadiumRoysTerms, metadata: termsMetadata },
+  "cart": RadiumRoysCart,
+  "checkout": RadiumRoysCheckout,
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
