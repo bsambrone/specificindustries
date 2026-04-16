@@ -20,7 +20,7 @@ export const config: SiteConfig = {
   metadata: {
     title: "Squared Away Supply Co. — The Official Unofficial Post Exchange",
     description:
-      "Authorized gear for all four service branches. Morale is a metric. We sell it by the pound.",
+      "Authorized gear for all five service branches. Morale is a metric. We sell it by the pound.",
     ogImage: "/sites/squaredaway/hero.png",
   },
   nav: [
@@ -28,6 +28,7 @@ export const config: SiteConfig = {
     { label: "NAVY", path: "/navy" },
     { label: "AIR FORCE", path: "/airforce" },
     { label: "MARINES", path: "/marines" },
+    { label: "SPACE FORCE", path: "/spaceforce" },
     { label: "MORALE", path: "/morale" },
     { label: "FAQ", path: "/faq" },
     { label: "LEADERSHIP", path: "/leadership" },

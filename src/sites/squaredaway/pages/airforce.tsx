@@ -70,6 +70,7 @@ export default function AirForcePage() {
             <Link href="/army" className="border-2 border-primary/40 px-4 py-2 hover:border-accent">Army</Link>
             <Link href="/navy" className="border-2 border-primary/40 px-4 py-2 hover:border-accent">Navy</Link>
             <Link href="/marines" className="border-2 border-primary/40 px-4 py-2 hover:border-accent">Marines</Link>
+            <Link href="/spaceforce" className="border-2 border-primary/40 px-4 py-2 hover:border-accent">Space Force</Link>
           </div>
         </div>
       </section>

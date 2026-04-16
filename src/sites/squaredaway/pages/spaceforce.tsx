@@ -4,23 +4,23 @@ import { getProductsByBranch } from "@/sites/squaredaway/data/products"
 import type { PageMetadata } from "@/themes"
 
 export const metadata: PageMetadata = {
-  title: "Navy — Squared Away Supply Co.",
+  title: "Space Force — Squared Away Supply Co.",
   description:
-    "Authorized caffeine, dixie-cup storage, haze-gray touch-up kits, and chief-grade soap for the United States Navy.",
+    "Console fidget toys, formal capes, orbital coffee warmers, and a Star Trek commemorative PT shirt for the United States Space Force.",
 }
 
 const INTRO =
-  "Welcome to the Navy section. You live on a gray rectangle. You drink coffee nobody would pour on a burn victim. You have a beard, technically. We honor all three with our curated line of seagoing essentials."
+  "Welcome to the Space Force section. You do not go to space. You watch things in space from a very nice building in Colorado. Your motto is in Latin because the English version lost a poll. We respect all of it, and we sell the merchandise to prove it."
 
-export default function NavyPage() {
-  const products = getProductsByBranch("navy")
+export default function SpaceForcePage() {
+  const products = getProductsByBranch("spaceforce")
   return (
     <>
       <section className="relative">
         <div className="relative w-full h-48 md:h-64">
           <Image
-            src="/sites/squaredaway/branch-navy.png"
-            alt="Navy branch banner"
+            src="/sites/squaredaway/branch-spaceforce.png"
+            alt="Space Force branch banner"
             fill
             priority
             fetchPriority="high"
@@ -30,9 +30,9 @@ export default function NavyPage() {
         </div>
         <div className="absolute inset-0 flex items-center justify-center px-4">
           <div className="text-center max-w-3xl">
-            <p className="font-mono uppercase tracking-widest text-primary text-xs mb-1">Component: SEA</p>
-            <h1 className="font-heading text-4xl md:text-5xl text-primary uppercase tracking-widest">Navy</h1>
-            <p className="text-foreground/90 mt-2">Non Sibi Sed Patriae. Mostly Patriae.</p>
+            <p className="font-mono uppercase tracking-widest text-primary text-xs mb-1">Component: ORBITAL (REMOTELY)</p>
+            <h1 className="font-heading text-4xl md:text-5xl text-primary uppercase tracking-widest">Space Force</h1>
+            <p className="text-foreground/90 mt-2">Semper Supra. Probably.</p>
           </div>
         </div>
       </section>
@@ -68,9 +68,9 @@ export default function NavyPage() {
           <p className="font-mono text-xs uppercase tracking-widest text-primary/70 mb-2">Also Available</p>
           <div className="flex flex-wrap justify-center gap-3 font-heading uppercase tracking-widest">
             <Link href="/army" className="border-2 border-primary/40 px-4 py-2 hover:border-accent">Army</Link>
+            <Link href="/navy" className="border-2 border-primary/40 px-4 py-2 hover:border-accent">Navy</Link>
             <Link href="/airforce" className="border-2 border-primary/40 px-4 py-2 hover:border-accent">Air Force</Link>
             <Link href="/marines" className="border-2 border-primary/40 px-4 py-2 hover:border-accent">Marines</Link>
-            <Link href="/spaceforce" className="border-2 border-primary/40 px-4 py-2 hover:border-accent">Space Force</Link>
           </div>
         </div>
       </section>

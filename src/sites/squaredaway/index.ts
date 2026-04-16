@@ -7,6 +7,7 @@ import Army from "./pages/army"
 import Navy from "./pages/navy"
 import AirForce from "./pages/airforce"
 import Marines from "./pages/marines"
+import SpaceForce from "./pages/spaceforce"
 import ProductDetail from "./pages/product-detail"
 import Morale, { metadata as moraleMetadata } from "./pages/morale"
 import Authorization, { metadata as authorizationMetadata } from "./pages/authorization"
@@ -26,6 +27,7 @@ export const pages: Record<string, PageEntry> = {
   navy: Navy,
   airforce: AirForce,
   marines: Marines,
+  spaceforce: SpaceForce,
   morale: { component: Morale, metadata: moraleMetadata },
   authorization: { component: Authorization, metadata: authorizationMetadata },
   faq: { component: Faq, metadata: faqMetadata },

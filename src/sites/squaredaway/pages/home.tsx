@@ -27,6 +27,12 @@ const BRANCHES: Array<{ slug: string; label: string; image: string; tagline: str
     image: "/sites/squaredaway/branch-marines.png",
     tagline: "Oorah. Crayons. Oorah.",
   },
+  {
+    slug: "spaceforce",
+    label: "Space Force",
+    image: "/sites/squaredaway/branch-spaceforce.png",
+    tagline: "Guardians of the screen saver.",
+  },
 ]
 
 const TESTIMONIALS = [
@@ -34,6 +40,7 @@ const TESTIMONIALS = [
   { quote: "The coffee tastes like a fan room at 0400. Five stars.", cite: "CPO Regina Hollenbeck · CVN-74" },
   { quote: "My Concierge Kit arrived with a complimentary robe. I cried.", cite: "Maj. Tucker Lindgren · Al Udeid AB" },
   { quote: "I ate the crayons. They were better than the MRE.", cite: "LCpl Jackson Peralta · Camp Pendleton" },
+  { quote: "The GPS coin did nothing. I trust it completely.", cite: "Spc3 Arden Hollister · Peterson SFB" },
 ]
 
 export default function HomePage() {
@@ -62,7 +69,7 @@ export default function HomePage() {
               The Official Unofficial Post Exchange.
             </h1>
             <p className="text-foreground/90 text-lg md:text-xl">
-              Authorized gear for all four service branches, plus one that shall remain nameless.
+              Authorized gear for all five service branches. The fifth one finally submitted the paperwork.
             </p>
           </div>
         </div>
@@ -74,7 +81,7 @@ export default function HomePage() {
           <h2 className="font-heading text-3xl text-primary mb-8 uppercase tracking-widest text-center">
             Select Your Branch
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {BRANCHES.map((b) => (
               <Link
                 key={b.slug}
@@ -148,7 +155,7 @@ export default function HomePage() {
           <h2 className="font-heading text-2xl text-primary uppercase tracking-widest mb-8 text-center">
             After Action Reports
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
             {TESTIMONIALS.map((t, i) => (
               <blockquote key={i} className="border-l-4 border-accent pl-4">
                 <p className="text-sm text-foreground/90 mb-2">&ldquo;{t.quote}&rdquo;</p>

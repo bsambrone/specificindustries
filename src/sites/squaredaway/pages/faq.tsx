@@ -10,7 +10,7 @@ const FAQS: Array<{ q: string; a: string }> = [
   { q: "Is this a real PX?", a: "Define 'real.'" },
   { q: "Can I use my GI Bill here?", a: "No. The GI Bill is for education. This is for morale." },
   { q: "Do you ship to FPO/APO addresses?", a: "Yes, eventually, probably, we promise." },
-  { q: "Why is there no Space Force section?", a: "We're still waiting on their NSN codes." },
+  { q: "Why is there now a Space Force section?", a: "Their NSN codes finally cleared security review. Guardians may shop here." },
   { q: "Can I return a product?", a: "You cannot return the years, but you may return the product." },
   { q: "Do you honor military discounts?", a: "We honor you. Prices are prices." },
   { q: "Is the crayon product safe to eat?", a: "It is safe to eat if you are a Marine. It is food-adjacent for all other personnel." },
