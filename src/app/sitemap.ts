@@ -25,6 +25,7 @@ import { caseStudies as gristmillCaseStudies } from "@/sites/gristmill/data/case
 import { products as oddoccasionsProducts } from "@/sites/oddoccasions/data/products"
 import { products as pettentialProducts } from "@/sites/pettential/data/products"
 import { products as rocksProducts } from "@/sites/rocks/data/products"
+import { products as radiumroysProducts } from "@/sites/radiumroys/data/products"
 import { products as squaredawayProducts } from "@/sites/squaredaway/data/products"
 
 const BASE_DOMAIN = "specificindustries.com"
@@ -60,6 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     mousetrapjenga: mousetrapjengaProducts,
     bonelesswater: bonelesswaterProducts,
     rocks: rocksProducts,
+    radiumroys: radiumroysProducts,
     squaredaway: squaredawayProducts,
   }
 
