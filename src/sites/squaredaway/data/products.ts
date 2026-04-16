@@ -1,4 +1,4 @@
-export type Branch = "army" | "navy" | "airforce" | "marines"
+export type Branch = "army" | "navy" | "airforce" | "marines" | "spaceforce"
 
 export interface Spec {
   label: string
@@ -1736,6 +1736,432 @@ export const products: Product[] = [
         name: "Victor Blanchard",
         stars: 5,
         body: "I have four pairs of MARPAT trousers and now four matching pillows. My living room has achieved a level of internal consistency I did not know I needed. This is what retirement feels like. Five stars.",
+      },
+    ],
+  },
+
+  // ===== SPACE FORCE =====
+  {
+    slug: "guardian-fidget-console",
+    branch: "spaceforce",
+    nsn: "USSF-FDG-5820-48B",
+    contractCode: "FA8822-24-C-0011",
+    milStd: "MIL-STD-CLICK",
+    name: "Guardian™ Fidget Console",
+    price: 149.99,
+    priceLabel: "$149.99",
+    tagline: "Tactile relief for 12-hour console shifts.",
+    image: "/sites/squaredaway/product-guardian-fidget-console.png",
+    shortDescription:
+      "48-button tactile fidget console for Guardians on long console watch. Zero assigned functions. Full RGB. MIL-STD-CLICK certified.",
+    longDescription: [
+      "The Guardian™ Fidget Console addresses a documented need in the Space Force operational environment: you are sitting in front of real screens for 12 hours watching satellites do what satellites do, and your hands have nothing to contribute. This console gives them something. Forty-eight premium mechanical keyswitches — individually actuating, satisfying to press, and connected to absolutely nothing — provide the tactile engagement your fingers require while your eyes do the actual mission.",
+      "Our Space Systems engineering team evaluated 22 switch variants before selecting the tactile clicky model, designation 'Blue,' because it was the loudest and because the console operations floor has ambient noise that absorbs it. Each button is labeled in a proprietary typeface our vendor called 'vaguely technical.' The labels do not correspond to any function. This is documented in the product specification as 'feature-complete by design.'",
+      "Full RGB illumination cycles through 14 preset modes, including Orbital Sunrise, Deep Space, and a mode called SATCOM that is just blue. The console draws power via USB-C and produces a soft operational hum that our focus groups described as 'reassuring' and 'the sound of purpose.' It pairs with the Orbital Intelligence Coffee Warmer for a complete console-shift workstation.",
+    ],
+    specs: [
+      { label: "Button Count", value: "48 (zero functions assigned; all switches tactile clicky)" },
+      { label: "Keyswitch Type", value: "Mechanical tactile, Blue variant, 2mm actuation" },
+      { label: "Function Mapping", value: "None. This is a feature." },
+      { label: "RGB Modes", value: "14 presets including Orbital Sunrise, Deep Space, and SATCOM (blue)" },
+      { label: "Power", value: "USB-C, 5V/500mA" },
+      { label: "Certifications", value: "MIL-STD-CLICK compliant. Not cleared for actual console integration." },
+    ],
+    warnings: [
+      "The Guardian™ Fidget Console is not authorized for connection to any government IT system, satellite ground station, or operational console. It is a fidget device. Treat it accordingly.",
+      "Audible click noise at 52dB may draw attention from adjacent watch-standers. This is not a malfunction. This is the experience.",
+    ],
+    crossBranchJab:
+      "The Air Force sits at consoles too, but they have window seats and a coffee shop nearby — you have this, and honestly it is better.",
+    reviews: [
+      {
+        rank: "Spc2",
+        name: "Trevor Calloway",
+        stars: 5,
+        body: "I have been on console watch for 11 hours today. My hands have pressed every button on this device at least 40 times. The satellite is fine. I am fine. We are all fine.",
+      },
+      {
+        rank: "TSgt",
+        name: "Deanna Pruitt",
+        stars: 2,
+        body: "My senior enlisted caught me pressing buttons and asked what system I was operating. I said 'space.' He accepted this and moved on. Two stars because I had to lie.",
+      },
+      {
+        rank: "Capt",
+        name: "Marcus Ingold",
+        stars: 5,
+        body: "Issued one to every operator in my flight. Watch floor morale is up. Zero buttons have been connected to anything. Mission readiness: unaffected. Recommend for all Delta units.",
+      },
+    ],
+  },
+  {
+    slug: "semper-supra-mousepad",
+    branch: "spaceforce",
+    nsn: "USSF-MSP-7210-4K",
+    contractCode: "FA8822-24-C-0089",
+    milStd: "MIL-STD-GLIDE",
+    name: "Semper Supra™ Ergonomic Mousepad",
+    price: 89.99,
+    priceLabel: "$89.99",
+    tagline: "4K resolution. Motto embroidered.",
+    image: "/sites/squaredaway/product-semper-supra-mousepad.png",
+    shortDescription:
+      "Extended 36×18-inch ergonomic desk pad with USSF motto embroidered in gold thread. Smooth glide surface, non-slip base. The Latin is accurate. The price reflects that.",
+    longDescription: [
+      "The Semper Supra™ Ergonomic Mousepad is the official desk surface of the Space Force Guardian who has everything except a mousepad that reflects their branch identity. At 36 by 18 inches, it covers the full operational workspace: keyboard, mouse, fidget console, and whatever documentation you are pretending to review. The surface is a micro-woven nylon blend optimized for high-DPI sensor tracking, which matters because your pointing device deserves the same precision attention the Space Force applies to orbital mechanics.",
+      "The motto 'Semper Supra' — Always Above — is embroidered along the bottom edge in 14-carat gold-weight thread. For those keeping score: the Space Force considered several English-language motto candidates, including 'Always Above,' 'Semper Above,' and 'Above, Always' before a committee determined that Latin communicated more gravitas, more instantly, with less explanation required. This was a correct institutional decision. The embroidery reflects it.",
+      "The non-slip base is rated for linoleum, carpet tile, and the glass-top conference tables found in every Space Force squadron headquarters. It ships flat in a tube with a card that reads 'Semper Supra' on one side and nothing on the other side, because the motto is self-sufficient.",
+    ],
+    specs: [
+      { label: "Dimensions", value: "36 × 18 in (91 × 46 cm), 3mm thickness" },
+      { label: "Material", value: "Micro-woven nylon surface over 3mm natural rubber base" },
+      { label: "Surface Texture", value: "Smooth glide, optimized for 400–3200 DPI sensor tracking" },
+      { label: "Base", value: "Non-slip natural rubber, rated for linoleum, carpet tile, and glass" },
+      { label: "Motto Thread Color", value: "14-carat gold-weight polyester embroidery, lower edge" },
+      { label: "Certifications", value: "MIL-STD-GLIDE compliant. Latin verified by contractor with classics degree." },
+    ],
+    warnings: [
+      "Do not submerge. The embroidery is not waterproof. 'Semper Supra' should not be tested in moisture environments.",
+      "Mousepad may cause other-branch personnel to ask what 'Semper Supra' means. A prepared response is included on the product card. Use it.",
+    ],
+    crossBranchJab:
+      "Marines have a Latin motto too, but theirs was assigned in 1775 and they still cannot reliably pronounce it at formal events.",
+    reviews: [
+      {
+        rank: "1st Lt",
+        name: "Kira Svensson",
+        stars: 5,
+        body: "The glide surface is excellent. The motto embroidery is crisp. A Navy lieutenant asked what it meant and I explained it for six minutes. Worth every penny.",
+      },
+      {
+        rank: "Spc4",
+        name: "Orlando Merritt",
+        stars: 3,
+        body: "I ordered this because the description said 'optimized for high-DPI sensor tracking' and I wanted to believe that mattered. It does glide very smoothly. I have no complaints. I also have no orbital mechanics to apply it to.",
+      },
+      {
+        rank: "Col",
+        name: "Harriet Wozniak",
+        stars: 5,
+        body: "Ordered 12 for the squadron ready room. The embroidery held through six months of daily use. Motto remains legible. Space Force: always above, including our desk surface quality.",
+      },
+    ],
+  },
+  {
+    slug: "star-trek-commemorative-pt-shirt",
+    branch: "spaceforce",
+    nsn: "USSF-APP-8415-TNG",
+    contractCode: "FA8822-24-C-0144",
+    milStd: "MIL-STD-WARP",
+    name: "The Star Trek Commemorative PT Shirt",
+    price: 59.99,
+    priceLabel: "$59.99",
+    tagline: "The uniform we almost had.",
+    image: "/sites/squaredaway/product-star-trek-commemorative-pt-shirt.png",
+    shortDescription:
+      "PT shirt commemorating the USSF's 2020 uniform reveal. TNG-era color-block design. The internet had opinions. We made a shirt about it.",
+    longDescription: [
+      "In December 2020, the United States Space Force unveiled its first service dress uniform. The internet compared it, in near-unanimous voice, to the uniforms worn by the crew of the Enterprise in Star Trek: The Next Generation. The Space Force responded that this was coincidental. We make no claims either way. We have simply made a PT shirt that commemorates the moment, in a TNG-era color-block design, with the words 'THE UNIFORM WE ALMOST HAD' printed across the back in regulation-width lettering.",
+      "The shirt is constructed from moisture-wicking polyester in a cut that our design team describes as 'command-ready.' The front bears a chest patch in the style of a Starfleet comm badge, rendered in subdued gray-on-gray so that it is technically regulation while being unmistakably thematic. The back text is printed in reflective ink, which means it is visible at night, which means it is visible during PT, which is when PT shirts are required. Everything about this product is technically authorized.",
+      "We have sold more of this shirt than any other apparel item in our catalog. We do not have data on how the Space Force feels about this. We assume they are comfortable with it, because they have not contacted us, and Guardians are known for their measured institutional temperament.",
+    ],
+    specs: [
+      { label: "Color", value: "Command Gold / Ops Black (TNG colorway, subdued)" },
+      { label: "Material", value: "100% polyester moisture-wicking, 4.5 oz" },
+      { label: "Fit", value: "Athletic crew neck, standard PT cut" },
+      { label: "Era Reference", value: "TNG-era (2364–2370 production run)" },
+      { label: "Collar", value: "Rib-knit crew, lay-flat construction" },
+      { label: "Certifications", value: "MIL-STD-WARP compliant. Coincidental resemblance not warranted." },
+    ],
+    warnings: [
+      "This shirt is commemorative. The Space Force has not endorsed it. Paramount Pictures has not endorsed it. Gene Roddenberry's estate has not endorsed it. You are on your own.",
+      "Back text ('THE UNIFORM WE ALMOST HAD') is reflective. Visibility during nighttime PT is expected and unavoidable. Plan accordingly.",
+    ],
+    crossBranchJab:
+      "The Army's PT shirt is still gray and says 'ARMY' in large block letters, which communicates exactly what the Army needs to communicate and nothing else.",
+    reviews: [
+      {
+        rank: "Spc1",
+        name: "Dana Kowalczyk",
+        stars: 5,
+        body: "I wore this to PT and a Marine asked if I was going to a convention. I said yes. He saluted. I did not correct him. Five stars.",
+      },
+      {
+        rank: "MSgt",
+        name: "Lamont Fredericks",
+        stars: 2,
+        body: "My commander saw this shirt on me during a PT formation and laughed for what I estimated to be 45 seconds. I have been voluntold for two additional duties since then. The shirt is great. The timing was bad.",
+      },
+      {
+        rank: "Maj",
+        name: "Yolanda Szymanski",
+        stars: 5,
+        body: "Bought one for every member of my flight as a welcome-to-the-Space-Force gift. Morale improved measurably. I have since been asked where I got them by two separate wing commanders. I gave them the URL.",
+      },
+    ],
+  },
+  {
+    slug: "orbital-coffee-warmer",
+    branch: "spaceforce",
+    nsn: "USSF-HEA-7310-USB",
+    contractCode: "FA8822-24-C-0202",
+    milStd: "MIL-STD-KELVIN",
+    name: "Orbital Intelligence Coffee Warmer",
+    price: 299.99,
+    priceLabel: "$299.99",
+    tagline: "USB-powered. Calibrated in kelvins.",
+    image: "/sites/squaredaway/product-orbital-coffee-warmer.png",
+    shortDescription:
+      "Premium USB-C mug warmer with kelvin-scale LED readout and integrated cable management. For the Guardian on a 12-hour console shift who will not accept a lukewarm cup.",
+    longDescription: [
+      "The Orbital Intelligence Coffee Warmer is a $299 USB-C mug warmer. We want to be direct about this. It keeps your coffee warm. That is the function. The engineering surrounding that function — a precision ceramic heating plate, a kelvin-scale LED readout calibrated between 293K and 353K, an integrated magnetic cable management dock, and a matte-black chassis machined from 6061-T6 aluminum — represents our belief that the Space Force deserves a mug warmer that looks like it belongs in a satellite command center, not in a mid-tier office supply catalog.",
+      "The LED display reads in kelvins because Celsius and Fahrenheit are both Earth-centric temperature scales and the Space Force operates in a domain where neither has native relevance. The display is adjustable to Celsius for operators who have not fully committed to the mission. The aluminum chassis is anodized in USSF Space Blue. The cable is braided and exactly 1.8 meters long, which our engineers determined to be the optimal length for a console workstation with cable management.",
+      "The Air Force has a Starbucks two floors down. You have a 12-hour shift and a satellite to babysit. This warmer ensures your coffee remains at mission-optimal temperature for the duration without you leaving your post. It is, by any reasonable analysis, the better investment.",
+    ],
+    specs: [
+      { label: "Power", value: "USB-C, 15W, 5V/3A" },
+      { label: "Temperature Range", value: "293K–353K (20°C–80°C)" },
+      { label: "Display", value: "Kelvin-scale LED readout, adjustable to Celsius for the uncommitted" },
+      { label: "Plate Diameter", value: "3.5 in (89mm) ceramic heating surface" },
+      { label: "Cable", value: "1.8m braided USB-C, with integrated magnetic cable dock" },
+      { label: "Certifications", value: "MIL-STD-KELVIN compliant. Thermal accuracy ±2K." },
+    ],
+    warnings: [
+      "Do not use near open satellite telemetry equipment or in environments where a $299 mug warmer would require justification to your commanding officer. You know your situation.",
+      "The kelvin readout is accurate. If your coffee reads below 320K, it is lukewarm and this is not the product's fault. It is a warmer, not a heater. Calibrate expectations accordingly.",
+    ],
+    crossBranchJab:
+      "The Air Force Starbucks is two floors away and they have a rewards app, which is a fine system until you are on console watch and cannot leave your station.",
+    reviews: [
+      {
+        rank: "Sgt",
+        name: "Brianna Hoffmeister",
+        stars: 5,
+        body: "This is a $299 mug warmer. I know that. My coffee has been 334K for six months straight. I have not thought about it once during a watch shift. Worth every dollar.",
+      },
+      {
+        rank: "Spc3",
+        name: "Antoine Berube",
+        stars: 3,
+        body: "I set the display to Celsius after two days. I tried to commit to kelvins. I could not do the math fast enough at 0300. The coffee is still warm. Three stars for the kelvin display being a choice I could not sustain.",
+      },
+      {
+        rank: "Lt Col",
+        name: "Patricia Nakamura",
+        stars: 5,
+        body: "Required item for all assigned console operators in my Delta. Budget line submitted. Approved. Your coffee will be warm. This is not optional. It is a readiness issue.",
+      },
+    ],
+  },
+  {
+    slug: "gps-calibration-coin",
+    branch: "spaceforce",
+    nsn: "USSF-CHA-9905-GPS",
+    contractCode: "FA8822-24-C-0277",
+    milStd: "MIL-STD-WHEREAMI",
+    name: "GPS Accuracy Calibration Coin",
+    price: 34.99,
+    priceLabel: "$34.99",
+    tagline: "Shake once. Accuracy improves.",
+    image: "/sites/squaredaway/product-gps-calibration-coin.png",
+    shortDescription:
+      "Official challenge coin that recalibrates your GPS receiver. Shake once. Results guaranteed by coincidence. Delta symbol obverse. Satisfaction not warranted.",
+    longDescription: [
+      "The GPS Accuracy Calibration Coin is a challenge coin that, when shaken once in the direction of your GPS receiver, improves positional accuracy. We are documenting this claim precisely: if you shake the coin, GPS accuracy will, at some point shortly afterward, improve. This is because GPS accuracy continuously fluctuates based on satellite geometry, atmospheric conditions, and dilution of precision — and if you wait long enough after shaking the coin, accuracy will improve. The coin is not responsible for this. The coin is present when it happens. The coin gets the credit.",
+      "The coin is struck from solid brass, 40mm diameter, antiqued bronze finish. The obverse bears the Space Force Delta symbol and the words 'CALIBRATION AUTHORITY: COIN.' The reverse reads 'SHAKE ONCE — DO NOT EXCEED ONCE' in sans-serif lettering above a latitude/longitude coordinate that points to Peterson Space Force Base, Colorado. The coin is presented in a foam-lined presentation box suitable for gifting to civilians who will not understand it and veterans who will understand it too well.",
+      "The Space Force operates the GPS constellation. Every navigation system on Earth — civilian, commercial, military — depends on satellites your fellow Guardians maintain. Your phone knows where it is because of this branch. Shake the coin. Take the credit. You've earned the right to accept it.",
+    ],
+    specs: [
+      { label: "Diameter", value: "40mm" },
+      { label: "Material", value: "Solid brass, antiqued bronze finish" },
+      { label: "Weight", value: "1.8 oz (51g)" },
+      { label: "Finish", value: "Antiqued bronze, raised relief Delta obverse" },
+      { label: "Accuracy Improvement", value: "Guaranteed (timing not specified; results are inevitable)" },
+      { label: "Certifications", value: "MIL-STD-WHEREAMI compliant. GPS improvement not contractually warranted." },
+    ],
+    warnings: [
+      "Do not shake more than once per GPS calibration event. The instructions say once. They mean once. Exceeding once does not improve accuracy and compromises the ceremonial integrity of the action.",
+      "This coin does not actually calibrate GPS receivers. The Space Force does actually operate the GPS constellation. These two facts coexist without contradiction.",
+    ],
+    crossBranchJab:
+      "The Navy still teaches celestial navigation as a backup, which is admirable, and also a strong indicator of how they feel about the GPS system the Space Force maintains for them.",
+    reviews: [
+      {
+        rank: "Spc4",
+        name: "Nathaniel Greer",
+        stars: 5,
+        body: "I shook the coin. My GPS went from 4.2m accuracy to 1.8m accuracy within 90 seconds. I know why this happened. I am not sharing that information with anyone who asks.",
+      },
+      {
+        rank: "2d Lt",
+        name: "Simone Achebe",
+        stars: 5,
+        body: "Gave this to my GPS operator as a recognition coin. He read the back, looked at me, and said 'this is accurate.' I agreed. Best coin I have ever given.",
+      },
+      {
+        rank: "CMSgt",
+        name: "Douglas Halberd",
+        stars: 3,
+        body: "The coin is quality brass. The premise is correct. I have shaken it twice. I know I was told once. I was testing the warning. The warning was right. Three stars for being right about the once.",
+      },
+    ],
+  },
+  {
+    slug: "delta-one-space-blanket",
+    branch: "spaceforce",
+    nsn: "USSF-SUR-8465-MYL",
+    contractCode: "FA8822-24-C-0318",
+    milStd: "MIL-STD-FOIL",
+    name: "Delta One Space Blanket™",
+    price: 24.99,
+    priceLabel: "$24.99",
+    tagline: "Mylar. For space. Which you do not go to.",
+    image: "/sites/squaredaway/product-delta-one-space-blanket.png",
+    shortDescription:
+      "Premium emergency mylar blanket in USSF Delta packaging. Rated to 100km altitude. You are at 1,390m. It still works.",
+    longDescription: [
+      "The Delta One Space Blanket™ is a mylar emergency blanket. It is the same mylar emergency blanket that marathon runners receive at the finish line, that wilderness hikers carry in their ten essentials, and that every first aid kit in America has had since 1964. Ours comes in premium packaging. The front of the box reads 'RATED FOR USE IN SPACE' in large silver letters. The back clarifies, in smaller text: 'Rated altitude: 100km (Kármán line). Actual Guardian altitude: 1,390m above sea level, Peterson SFB.' This is accurate. This is the product.",
+      "The blanket is 56 by 84 inches, 1.5 mil aluminized mylar, 97% reflectivity, folds to the size of a deck of cards. It retains body heat in cold environments, reflects radiant heat in hot environments, and performs exactly as a mylar blanket performs at any altitude from sea level to the thermosphere. The packaging simply acknowledges that you are Space Force and deserve a blanket with appropriate cosmic context.",
+      "We will note, for the record, that Guardians do not go to space. The Space Force's mission is to organize, train, and equip forces for space operations — which primarily means satellite command and control, launch support, and orbital domain awareness, conducted from facilities on the ground. The blanket works fine there. It would also work in space. You will not be going to space. The blanket is ready when you are.",
+    ],
+    specs: [
+      { label: "Material", value: "1.5 mil aluminized mylar" },
+      { label: "Dimensions", value: "56 × 84 in (142 × 213 cm) unfolded" },
+      { label: "Packed Size", value: "2 × 3 in, weight 1.4 oz" },
+      { label: "Reflectivity", value: "97% radiant heat reflectivity" },
+      { label: "Rated Altitude", value: "100km (Kármán line). Your altitude: consult base elevation." },
+      { label: "Certifications", value: "MIL-STD-FOIL compliant. NASA surplus packaging aesthetic." },
+    ],
+    warnings: [
+      "This blanket has not been tested in the vacuum of space because the Space Force does not send Guardians to space. It has been tested at ground level, where it works as intended.",
+      "The crinkle noise produced when moving in this blanket is loud, metallic, and fully unavoidable. Plan for this. Do not use in a watch floor setting without informing adjacent operators.",
+    ],
+    crossBranchJab:
+      "Marines have a blanket too, but it is the color of sand and smells like it has been somewhere, and the Space Force prefers its foil pristine.",
+    reviews: [
+      {
+        rank: "Spc1",
+        name: "Caitlin Dupree",
+        stars: 5,
+        body: "Opened this during a cold night exercise at Peterson. It worked perfectly. I also read the rated altitude on the box out loud to my element and we all stood quietly for a moment. Good product.",
+      },
+      {
+        rank: "Spc2",
+        name: "Jerome Whitfield",
+        stars: 2,
+        body: "The blanket is fine. The crinkle noise woke up every other person in the tent when I moved. I moved once. I then did not move for four hours. Two stars for the blanket making decisions for me.",
+      },
+      {
+        rank: "SMSgt",
+        name: "Renata Kozlowski",
+        stars: 5,
+        body: "The packaging says 'For Space.' I am at 1,390 meters. The blanket kept me warm. The tagline kept me motivated. The Space Force keeps me employed. Five stars across the board.",
+      },
+    ],
+  },
+  {
+    slug: "guardian-formal-cape",
+    branch: "spaceforce",
+    nsn: "USSF-UNI-8410-CAP",
+    contractCode: "FA8822-24-C-0401",
+    milStd: "MIL-STD-SWOOSH",
+    name: "Guardian Formal Cape™",
+    price: 449.99,
+    priceLabel: "$449.99",
+    tagline: "For ceremony. Worn once. Posted 400 times.",
+    image: "/sites/squaredaway/product-guardian-formal-cape.png",
+    shortDescription:
+      "Navy blue formal cape in USSF dress uniform tradition. Full-length, wool-blend, silver clasp. Worn to one ceremony. Photographed continuously thereafter.",
+    longDescription: [
+      "When the United States Space Force unveiled its formal dress uniform in 2021, the internet briefly became very interested in the cape. The cape is real. It is part of the USSF mess dress uniform. It is navy blue, full-length, and it fastens with a silver clasp at the throat. It looks, to the uncharitable observer, exactly like what a space branch's formal uniform should look like, which caused some confusion among people who had expected something more conventional. Our version honors this moment. It is a cape. It is for you. You have earned the right to wear something that makes a statement.",
+      "The Guardian Formal Cape™ is constructed from a navy wool-blend fabric in a full-length cut with a structured shoulder, a silver-tone hook-and-eye clasp, and a charcoal-gray satin lining embroidered with the USSF motto at the hem. It is sized for standard military posture. The lining text is a detail only the wearer will see, which our product team considered an appropriate metaphor for Space Force operational culture: most of the work is invisible and known only to those doing it.",
+      "Anticipated usage: one commissioning or retirement ceremony, one branch ball, and approximately 400 social media posts across a 6-month posting cycle. After that it will hang in a closet where it belongs, which is also where the most significant formal garments in history have lived. The cape knows what it is.",
+    ],
+    specs: [
+      { label: "Material", value: "Wool-blend outer, charcoal-gray satin lining" },
+      { label: "Length", value: "Full-length, 52 in from shoulder to hem" },
+      { label: "Color", value: "USSF Space Blue (navy)" },
+      { label: "Clasp", value: "Silver-tone hook-and-eye, adjustable throat fit" },
+      { label: "Lining", value: "Satin, embroidered 'Semper Supra' at interior hem" },
+      { label: "Certifications", value: "MIL-STD-SWOOSH compliant. Ceremonial use only. Not rated for hypersonic environments." },
+    ],
+    warnings: [
+      "This cape is ceremonial. It is not a field garment, a tactical overlay, or a flight item. Wearing it to PT formation will result in outcomes that are your responsibility entirely.",
+      "The cape swooshes when you turn around quickly. This is not a defect. This is the cape operating as intended. The swoosh is the experience. Embrace the swoosh.",
+    ],
+    crossBranchJab:
+      "The Army wears ACUs to weddings and calls it business casual — the Space Force wears a cape and calls it exactly what it is.",
+    reviews: [
+      {
+        rank: "1st Lt",
+        name: "Morgan Vásquez",
+        stars: 5,
+        body: "Wore this to my commissioning ceremony. A general asked where I got it. I told him. He wrote down the URL. The cape has opened doors I did not expect. Five stars.",
+      },
+      {
+        rank: "Spc3",
+        name: "Elijah Thornton",
+        stars: 2,
+        body: "I bought this thinking it was a novelty. It is not a novelty. It is a real cape and it is very well made and now I have a full-length formal cape in my barracks room and I have to think about what that means. Two stars for unforeseen commitment.",
+      },
+      {
+        rank: "CMSgt",
+        name: "Francesca Lund",
+        stars: 5,
+        body: "I have attended 14 branch balls. This is the first year I wore something that generated more than three comments. It generated forty-seven comments. The cape is correct. The Space Force is correct. Five stars.",
+      },
+    ],
+  },
+  {
+    slug: "satellite-telemetry-desk-mat",
+    branch: "spaceforce",
+    nsn: "USSF-MAT-7520-ORB",
+    contractCode: "FA8822-24-C-0512",
+    milStd: "MIL-STD-ORBIT",
+    name: "Satellite Telemetry Desk Mat",
+    price: 79.99,
+    priceLabel: "$79.99",
+    tagline: "World map. Orbital paths. Free tracking sticker.",
+    image: "/sites/squaredaway/product-satellite-telemetry-desk-mat.png",
+    shortDescription:
+      "Oversized desk mat with full world map, printed orbital ground tracks, and 12 fictional satellite designators. Includes one holographic tracking sticker. Comes flat. Lies flat.",
+    longDescription: [
+      "The Satellite Telemetry Desk Mat is an oversized 36×18-inch desk surface printed with a Robinson projection world map, twelve orbital ground track lines in varying inclinations, and a header bar reading 'ORBITAL DOMAIN AWARENESS WORKSTATION — UNCLASSIFIED' in sans-serif all-caps. Twelve fictional satellite designators are printed at node crossing points across the map: designations like DELTA-7, MERIDIAN-4, and HELIOS-KILO-2 that look convincing from across a conference table and do not correspond to any actual system, which is the correct level of operational security for a desk mat.",
+      "The mat ships with one holographic foil tracking sticker bearing the words 'ACTIVE CONSTELLATION' and a dot-matrix satellite icon. Placement of the sticker is at the operator's discretion. Our recommended location is the top-right corner of the mat, where it will catch ambient lighting from most office configurations and subtly communicate that you are tracking something. You are, in the broadest sense, always tracking something. The sticker acknowledges this.",
+      "The base is 3mm natural rubber, non-slip, and edge-stitched to prevent curling or fraying over the extended console watch cycles for which this product was designed. The print is UV-laminated against fading. The orbital tracks are accurate in general inclination and inaccurate in specific positioning, which is the correct balance between authenticity and operational discretion.",
+    ],
+    specs: [
+      { label: "Dimensions", value: "36 × 18 in (91 × 46 cm), 3mm rubber base" },
+      { label: "Material", value: "UV-laminated polyester surface, 3mm natural rubber base" },
+      { label: "Base", value: "Non-slip natural rubber, rated for all standard desk surfaces" },
+      { label: "Edge Finish", value: "Stitched perimeter, anti-curl, anti-fray" },
+      { label: "Orbital Sets Depicted", value: "12 fictional designators across 5 inclination bands (LEO, MEO, GEO represented)" },
+      { label: "Certifications", value: "MIL-STD-ORBIT compliant. Orbital data unclassified (fictional)." },
+    ],
+    warnings: [
+      "The satellite designators on this mat are fictional and do not represent actual classified or unclassified USSF assets. If a civilian asks which satellites these are, the correct answer is 'the important ones.'",
+      "The holographic sticker is included once and is not replaceable. Apply with intention. The sticker has one life and it should be a good one.",
+    ],
+    crossBranchJab:
+      "Marines draw their maps in crayon, which is technically a different skill set, and we respect the tradition while maintaining our own.",
+    reviews: [
+      {
+        rank: "Spc4",
+        name: "Jasmine Boateng",
+        stars: 5,
+        body: "I placed the holographic sticker on DELTA-7 because it felt right. My supervisor saw it and asked if it was marking an actual asset. I said it was. He has not questioned it since. Five stars.",
+      },
+      {
+        rank: "2d Lt",
+        name: "Tyler Marchetti",
+        stars: 5,
+        body: "The 'ORBITAL DOMAIN AWARENESS WORKSTATION — UNCLASSIFIED' header has caused three separate visitors to my office to lower their voices when they enter. This was not the product's intended effect but it is the product's greatest achievement.",
+      },
+      {
+        rank: "Spc2",
+        name: "Keisha Drummond",
+        stars: 3,
+        body: "The mat is quality. The orbital tracks look great. I spent 20 minutes trying to figure out if MERIDIAN-4 was real before I remembered I work in space operations and should know. It is not real. Three stars for making me doubt my own branch knowledge.",
       },
     ],
   },

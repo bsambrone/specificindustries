@@ -11,6 +11,7 @@ const BRANCH_LABEL: Record<Product["branch"], string> = {
   navy: "Navy",
   airforce: "Air Force",
   marines: "Marines",
+  spaceforce: "Space Force",
 }
 
 function Stars({ n }: { n: number }) {
