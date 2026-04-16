@@ -17,7 +17,7 @@ export default function NavyPage() {
   return (
     <>
       <section className="relative">
-        <div className="relative aspect-[21/9] w-full">
+        <div className="relative w-full h-48 md:h-64">
           <Image
             src="/sites/squaredaway/branch-navy.png"
             alt="Navy branch banner"

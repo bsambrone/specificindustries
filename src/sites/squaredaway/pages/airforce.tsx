@@ -17,7 +17,7 @@ export default function AirForcePage() {
   return (
     <>
       <section className="relative">
-        <div className="relative aspect-[21/9] w-full">
+        <div className="relative w-full h-48 md:h-64">
           <Image
             src="/sites/squaredaway/branch-airforce.png"
             alt="Air Force branch banner"
