@@ -8,7 +8,7 @@ export const config: SiteConfig = {
     colors: {
       primary: "#1a8c3a",
       secondary: "#ff6b35",
-      accent: "#ffd23f",
+      accent: "#a87300",
       background: "#f5f1e8",
       text: "#1a2238",
     },
