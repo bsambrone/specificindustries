@@ -74,7 +74,7 @@ export default function RadiumRoysStandards() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-3 text-center">
-              <div className="text-5xl font-heading font-bold text-primary">1</div>
+              <div className="text-5xl font-heading font-bold text-secondary">1</div>
               <h3 className="text-xl font-heading font-semibold text-foreground">Identify the Threshold</h3>
               <p className="text-foreground/70">
                 Our research team studies the published Proposition 65 disclosure thresholds for every
@@ -82,7 +82,7 @@ export default function RadiumRoysStandards() {
               </p>
             </div>
             <div className="space-y-3 text-center">
-              <div className="text-5xl font-heading font-bold text-primary">2</div>
+              <div className="text-5xl font-heading font-bold text-secondary">2</div>
               <h3 className="text-xl font-heading font-semibold text-foreground">Engineer the Margin</h3>
               <p className="text-foreground/70">
                 We formulate each product to exceed the threshold by a comfortable factor — typically four
@@ -90,7 +90,7 @@ export default function RadiumRoysStandards() {
               </p>
             </div>
             <div className="space-y-3 text-center">
-              <div className="text-5xl font-heading font-bold text-primary">3</div>
+              <div className="text-5xl font-heading font-bold text-secondary">3</div>
               <h3 className="text-xl font-heading font-semibold text-foreground">Disclose Proudly</h3>
               <p className="text-foreground/70">
                 Where the law requires a warning, we provide one. We also provide it in a slightly larger

@@ -94,7 +94,7 @@ export default function RadiumRoysAbout() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-heading font-bold text-secondary">{exec.name}</h3>
-                  <p className="text-primary font-semibold mb-3">{exec.title}</p>
+                  <p className="text-secondary font-semibold mb-3">{exec.title}</p>
                   <p className="text-foreground/80 leading-relaxed mb-4">{exec.bio}</p>
                   <blockquote className="border-l-4 border-accent pl-4 italic text-foreground/70">
                     &ldquo;{exec.quote}&rdquo;

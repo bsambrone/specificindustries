@@ -17,10 +17,10 @@ export default function RadiumRoysPrivacy() {
         <div className="max-w-3xl mx-auto prose prose-lg text-foreground/80 space-y-6">
           <p className="text-sm text-foreground/70 bg-secondary/10 border border-secondary/20 rounded-lg p-4">
             The authoritative privacy policy for all Specific Industries properties is maintained at{" "}
-            <a href="https://specificindustries.com/privacy" className="text-secondary underline hover:text-primary transition-colors">
+            <a href="https://specificindustries.com/privacy" className="text-secondary underline hover:text-foreground transition-colors">
               specificindustries.com
             </a>.{" "}
-            <a href="https://specificindustries.com/terms" className="text-secondary underline hover:text-primary transition-colors">
+            <a href="https://specificindustries.com/terms" className="text-secondary underline hover:text-foreground transition-colors">
               View Terms of Use
             </a>
           </p>
