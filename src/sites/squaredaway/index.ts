@@ -15,6 +15,8 @@ import Leadership, { metadata as leadershipMetadata } from "./pages/leadership"
 import Contact, { metadata as contactMetadata } from "./pages/contact"
 import Privacy, { metadata as privacyMetadata } from "./pages/privacy"
 import Terms, { metadata as termsMetadata } from "./pages/terms"
+import Cart from "./pages/cart"
+import Checkout from "./pages/checkout"
 
 export { config }
 
@@ -31,6 +33,8 @@ export const pages: Record<string, PageEntry> = {
   contact: { component: Contact, metadata: contactMetadata },
   privacy: { component: Privacy, metadata: privacyMetadata },
   terms: { component: Terms, metadata: termsMetadata },
+  cart: Cart,
+  checkout: Checkout,
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
