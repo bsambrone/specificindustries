@@ -8,6 +8,8 @@ import RadiumRoysAbout, { metadata as aboutMetadata } from "./pages/about"
 import RadiumRoysStandards, { metadata as standardsMetadata } from "./pages/standards"
 import RadiumRoysTestimonials, { metadata as testimonialsMetadata } from "./pages/testimonials"
 import RadiumRoysContact from "./pages/contact"
+import RadiumRoysPrivacy, { metadata as privacyMetadata } from "./pages/privacy"
+import RadiumRoysTerms, { metadata as termsMetadata } from "./pages/terms"
 
 export { config }
 
@@ -18,6 +20,8 @@ export const pages: Record<string, PageEntry> = {
   "standards": { component: RadiumRoysStandards, metadata: standardsMetadata },
   "testimonials": { component: RadiumRoysTestimonials, metadata: testimonialsMetadata },
   "contact": RadiumRoysContact,
+  "privacy": { component: RadiumRoysPrivacy, metadata: privacyMetadata },
+  "terms": { component: RadiumRoysTerms, metadata: termsMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
