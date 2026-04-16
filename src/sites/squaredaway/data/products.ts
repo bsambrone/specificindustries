@@ -1325,12 +1325,47 @@ export const products: Product[] = [
     priceLabel: "$34.99",
     tagline: "12 edible crayons. Flavors: Sharpie, Diesel, Unflavored.",
     image: "/sites/squaredaway/product-culinary-coloring-sticks.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Twelve individually wrapped food-grade crayons in a MARPAT tin. Finally, authorized field rations for the 03xx MOS.",
+    longDescription: [
+      "For generations, Marines have instinctively reached for crayons during moments of stress, joy, and between-meal hunger. Squared Away Supply Co. is proud to offer the first crayon line engineered from the ground up for Marine Corps consumption — food-grade, contract-compliant, and certified at least 40% more caloric than standard crayons.",
+      "Each tin contains twelve individually wrapped Culinary Coloring Sticks™ in the following flavor lineup: Sharpie, Diesel, Unflavored, Classic Red, Sidewalk Chalk, Pine-Sol, Motor Oil, Burnt Rubber, Midnight CPAC, Gun Oil, Dirt, and the popular Officer's Mess (all other flavors mixed together).",
+      "Packaged in a commemorative MARPAT tin with a hinged lid and an embossed EGA. Small enough to fit in a cargo pocket. Large enough to ration across a field evolution. Ideal for FEXs, MREs (as a side), and moments of reflection.",
+    ],
+    specs: [
+      { label: "Contents", value: "12 individually wrapped sticks" },
+      { label: "Flavor Lineup", value: "Sharpie, Diesel, Unflavored, Red, Sidewalk Chalk, Pine-Sol, Motor Oil, Burnt Rubber, Midnight CPAC, Gun Oil, Dirt, Officer's Mess" },
+      { label: "Net Weight", value: "4.2 oz (119 g)" },
+      { label: "Calories per Stick", value: "72 kcal (motivational)" },
+      { label: "Tin Finish", value: "Woodland MARPAT, hinged, embossed EGA" },
+      { label: "Certifications", value: "Food-Grade. MIL-STD-OORAH Compliant. Not FDA-Approved." },
+    ],
+    warnings: [
+      "For Marine Corps consumption only. Army personnel report no flavor. Air Force personnel report a rash.",
+      "Officer's Mess flavor is a blend of all other flavors and is not intended for personnel below E-7.",
+    ],
+    crossBranchJab:
+      "The other branches don't understand what this product is. That is the product.",
+    reviews: [
+      {
+        rank: "LCpl",
+        name: "Jackson Peralta",
+        stars: 5,
+        body: "Finally. The Corps has listened. I have eaten crayons for seven years and this is the first time one has tasted like diesel on purpose.",
+      },
+      {
+        rank: "Sgt",
+        name: "Mirabelle Huxtable",
+        stars: 5,
+        body: "I gave one to an Airman at the gate. He asked if it was a protein bar. That is how you win wars.",
+      },
+      {
+        rank: "GySgt",
+        name: "Cornelius Vance",
+        stars: 4,
+        body: "Officer's Mess flavor tastes exactly like what we all thought officers were. Knocked one star for accuracy.",
+      },
+    ],
     featured: true,
   },
   {
@@ -1344,12 +1379,47 @@ export const products: Product[] = [
     priceLabel: "$79.99",
     tagline: "One setting. It's shorter.",
     image: "/sites/squaredaway/product-jarhead-precision-haircut-kit.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Professional-grade clipper set with exactly one guard setting. Regulation or shorter. Includes carrying pouch and one laminated reminder that 'high and tight' is not a preference — it is a commitment.",
+    longDescription: [
+      "The Jarhead™ Precision Haircut Kit was engineered around a single design philosophy: the Marine Corps has one haircut, and it does not require options. The kit includes a professional-grade electromagnetic clipper, one guard setting (the correct one), a stainless steel taper comb, a mirror sized to verify bilateral symmetry, and a carrying pouch stenciled with the words 'ONE SETTING IS ENOUGH.'",
+      "The guard is fixed. It cannot be removed, swapped, or misplaced because it cannot be detached. Our engineering team considered including additional guards and then reconsidered, because additional guards imply a choice, and the Marine Corps has made the choice, and the choice is shorter. The kit ships pre-set. There is no setup required. You plug it in. You begin.",
+      "The Air Force maintains a grooming standard that permits hairstyles which, in the Marine Corps, would require a counseling statement and a first sergeant's personal attention. We have documented this. We have chosen not to comment on it at length. We have instead made a clipper kit that cannot produce an Air Force haircut no matter how long you hold it.",
+    ],
+    specs: [
+      { label: "Clipper Type", value: "Electromagnetic, 7,200 SPM, heavy-duty motor" },
+      { label: "Guard Settings", value: "One (1). This is intentional." },
+      { label: "Power", value: "Corded, 110–240V, includes adapter" },
+      { label: "Contents", value: "Clipper, fixed guard, stainless taper comb, mirror, brush, oil" },
+      { label: "Included Pouch", value: "Olive-drab canvas, stenciled 'ONE SETTING IS ENOUGH'" },
+      { label: "Certifications", value: "MIL-STD-SCALP compliant. MCO P1020.34 grooming-standard referenced." },
+    ],
+    warnings: [
+      "The single guard setting is not a defect. It is the specification. Requests for additional guards will not be fulfilled.",
+      "Regret is not a valid return reason. You knew what you were getting. The pouch told you.",
+    ],
+    crossBranchJab:
+      "The Air Force hasn't seen a barber under duress since the Cold War, and it shows — but they seem comfortable with the situation, so we'll leave it there.",
+    reviews: [
+      {
+        rank: "Cpl",
+        name: "Tavon Ashby",
+        stars: 5,
+        body: "I have given myself this haircut every ten days for three years. This clipper is the first one that seems to understand why. Zero settings. Zero decisions. Zero regrets. Five stars.",
+      },
+      {
+        rank: "SSgt",
+        name: "Renata Delgado",
+        stars: 4,
+        body: "Bought this for my whole squad. Everyone came to Monday formation looking exactly the same. The GySgt did a double take and then nodded. That is the review.",
+      },
+      {
+        rank: "2ndLt",
+        name: "Marcus Keppel",
+        stars: 3,
+        body: "I attempted to use this to taper the sides. The guard setting does not taper. It goes shorter. I have now learned something about myself and this product. Three stars.",
+      },
+    ],
   },
   {
     slug: "oorah-vocal-training-course",
@@ -1362,12 +1432,47 @@ export const products: Product[] = [
     priceLabel: "$49.99",
     tagline: "40 hours. One syllable.",
     image: "/sites/squaredaway/product-oorah-vocal-training-course.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "40-hour audiobook vocal course with diaphragmatic training, breathing exercises, and a spiral-bound workbook. One syllable. Forty hours. There is no other way.",
+    longDescription: [
+      "The Oorah™ Vocal Training Audio Course is a complete 40-hour instructional program covering proper OORAH technique from the foundational mechanics of diaphragmatic engagement to the advanced applications of sustained field delivery at sustained volume across a sustained deployment. The course is available on USB drive in MP3 format, paired with a spiral-bound workbook titled 'OORAH VOCAL TRAINING · VOL. 1 — ONE SYLLABLE,' and includes a set of padded over-ear headphones in olive green for uninterrupted personal instruction.",
+      "The curriculum is divided into eight modules: Introduction and Commitment, Breath from the Diaphragm (not the throat, never the throat), Building the Foundation, Volume Without Strain, Terrain Considerations, Formation Delivery, the Advanced Module for Personnel Who Are Still Saying It Wrong, and a capstone session simply titled 'There is Only One Syllable and It Is All of Them.' The workbook has 112 pages. Most of them contain one word.",
+      "The Army says 'hooah,' which our phonetics consultant describes as 'nasal, hesitant, and quietly apologetic' in tone and delivery. The Oorah course was not developed in response to hooah. It was developed because OORAH deserves its own science, and its own 40 hours, and its own workbook, and that workbook is now available.",
+    ],
+    specs: [
+      { label: "Runtime", value: "40 hours, 8 modules, USB MP3 format" },
+      { label: "Format", value: "USB drive + spiral-bound workbook (112 pp) + headphones" },
+      { label: "Instructor", value: "GySgt (Ret.) Harlan Bevins, 22 years USMC vocal operations" },
+      { label: "Workbook Pages", value: "112 (most pages contain one word)" },
+      { label: "Volume Range", value: "Modules 1–4: conversational. Modules 5–8: full field delivery." },
+      { label: "Certifications", value: "MIL-STD-SCREAM compliant. Not recommended for apartment buildings." },
+    ],
+    warnings: [
+      "Not for use indoors without prior neighbor notification. GySgt Bevins assumes no liability for responses from civilian residential contexts.",
+      "Army personnel attempting Module 6 may default to 'hooah.' This is expected. Module 7 addresses it directly.",
+    ],
+    crossBranchJab:
+      "The Army's hooah is phonetically adequate and emotionally incomplete — forty hours of instruction cannot fix a syllable that has already given up.",
+    reviews: [
+      {
+        rank: "LCpl",
+        name: "Darius Fennick",
+        stars: 5,
+        body: "I completed all 40 hours over two weeks. My OORAH is now a different instrument. My NCO asked what happened to my voice. I showed him the workbook. He enrolled.",
+      },
+      {
+        rank: "Capt",
+        name: "Abigail Morse",
+        stars: 4,
+        body: "I assigned Module 3 as mandatory pre-FEX listening for my platoon. Formation the next morning was noticeably different. I cannot describe it quantitatively but the difference was there.",
+      },
+      {
+        rank: "MGySgt",
+        name: "Theodore Ruiz",
+        stars: 5,
+        body: "I have 26 years of OORAH behind me. I listened to Module 8 out of curiosity. GySgt Bevins corrected something I have been doing wrong since 1999. I respect the man and this course.",
+      },
+    ],
   },
   {
     slug: "regulation-crying-towel",
@@ -1380,12 +1485,47 @@ export const products: Product[] = [
     priceLabel: "$14.99",
     tagline: "For when you remember you're still in.",
     image: "/sites/squaredaway/product-regulation-crying-towel.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Neatly folded sage-green cotton towel with a stenciled corner label. For when you remember you're still in. Commemorative. Absorbent. Honest.",
+    longDescription: [
+      "The Regulation Crying Towel is a full-sized, heavyweight sage-green cotton towel, neatly folded to inspection standard and sealed in a clear poly bag with a hang tag that reads: 'For when you remember you're still in.' The corner of the towel bears a stenciled inventory label in black — TOWEL, CRYING, REGULATION, 1 EA — because in the Marine Corps, even the emotional equipment gets an NSN and a tag.",
+      "The towel is 100% cotton terry, 600 GSM, measuring 27 × 52 inches — large enough to be useful, small enough to stow in a seabag or a wall locker without incident. It is not a cry for help. It is a practical item for a documented condition: the moment, usually occurring sometime between year two and year four of a first enlistment, when the full weight of the commitment becomes briefly and completely visible. The towel is there for that moment. It does not judge. It absorbs.",
+      "The Navy's showers are warm and their towels are issued by the galley steward. The Marine Corps showers are cold and the towel is yours to procure, maintain, and carry. The Regulation Crying Towel was developed for the latter context and is priced at $14.99 because some things should be affordable.",
+    ],
+    specs: [
+      { label: "Material", value: "100% cotton terry, 600 GSM" },
+      { label: "Dimensions", value: "27 × 52 in" },
+      { label: "Weight", value: "1.1 lbs (dry)" },
+      { label: "Color", value: "Sage green — regulation, not decorative" },
+      { label: "Absorbency", value: "High. Rated for field conditions and extended reflection." },
+      { label: "Certifications", value: "MIL-STD-DAMP compliant. NSN label stenciled at corner." },
+    ],
+    warnings: [
+      "This towel does not void your enlistment. You are still in. The towel acknowledges this without legal consequence.",
+      "The towel does not listen. It absorbs. These are different services and the towel only provides one of them.",
+    ],
+    crossBranchJab:
+      "The Navy's showers run hot and the towels are stacked by a steward — the crying is still the same, but the ambiance is very different.",
+    reviews: [
+      {
+        rank: "LCpl",
+        name: "Priscilla Nkemdirim",
+        stars: 5,
+        body: "I opened this on day 847 of my enlistment. The hang tag was accurate to the day. The towel is excellent. I have not re-folded it to inspection standard because that felt wrong. Five stars.",
+      },
+      {
+        rank: "Sgt",
+        name: "Brian Kowalski",
+        stars: 4,
+        body: "Bought this as a joke for a buddy who was on his third extension. He opened it, read the tag, and went quiet for about thirty seconds. Then he folded it and put it in his wall locker. He uses it.",
+      },
+      {
+        rank: "Col",
+        name: "Diane Ashmore",
+        stars: 5,
+        body: "I gave one to every Marine in my battalion at the end of a particularly long deployment. Not a single one laughed. Every single one kept it. I consider that the correct outcome.",
+      },
+    ],
   },
   {
     slug: "semper-fi-diy-tattoo-kit",
@@ -1398,12 +1538,47 @@ export const products: Product[] = [
     priceLabel: "$89.99",
     tagline: "Finally, a tattoo that says what you already screamed.",
     image: "/sites/squaredaway/product-semper-fi-diy-tattoo-kit.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Stick-and-poke tattoo kit in a wooden box. Six laminated stencils: EGA, bulldog, Semper Fi, Mom, USMC 0311, and an anchor that accidentally says USN. Not medically supervised.",
+    longDescription: [
+      "The Semper Fi™ DIY Tattoo Kit is a complete stick-and-poke tattooing kit packaged in a hinged wooden box with a brass clasp and an embossed EGA on the lid. Contents include: one sterilized needle set (5-gauge), one 15ml bottle of professional black tattoo ink, six laminated stencils, a skin transfer pencil, two alcohol prep pads, and a single-page aftercare instruction sheet that begins with the sentence 'Congratulations. You did this.'",
+      "The six laminated stencils are: Eagle, Globe, and Anchor (standard); Bulldog (sitting, friendly expression); Semper Fidelis (block serif, authorized layout); Mom (script, regulation sentiment); USMC 0311 (infantry MOS identification); and one anchor stencil that, due to a production error, reads USN in the lower right corner. The USN anchor stencil will not be corrected. We have reviewed the situation and determined that it adds character. Marines will know what they meant.",
+      "The Air Force does not have a stick-and-poke tradition because the Air Force has a tattoo policy that classifies visible ink as a potential career impediment, and they have optimized accordingly. The Marine Corps has tattoos on the back of necks and regards this as a biographical record. These are two different approaches to documentation and both are valid within their respective contexts.",
+    ],
+    specs: [
+      { label: "Ink", value: "Professional black tattoo ink, 15ml, sterile-sealed" },
+      { label: "Stencil Count", value: "6 laminated stencils (EGA, Bulldog, Semper Fi, Mom, USMC 0311, USN anchor)" },
+      { label: "Needle Gauge", value: "5-gauge sterilized needle set, single-use" },
+      { label: "Case", value: "Hinged wooden box, brass clasp, embossed EGA lid" },
+      { label: "Included Aftercare", value: "Single-page sheet beginning 'Congratulations. You did this.'" },
+      { label: "Certifications", value: "MIL-STD-INK compliant. Not medically supervised. Not FDA-cleared." },
+    ],
+    warnings: [
+      "This kit is not medically supervised. Squared Away Supply Co. recommends clean technique and accepts no responsibility for outcomes, infections, or regrets.",
+      "The anchor stencil says USN. This will not be corrected. It was a production error. You may use it anyway. Marines have done more with less.",
+    ],
+    crossBranchJab:
+      "The Air Force considers visible tattoos a career liability — the Marines consider them a service record, and only one of those interpretations builds a biography.",
+    reviews: [
+      {
+        rank: "Cpl",
+        name: "Wendell Ostrowski",
+        stars: 5,
+        body: "Used the EGA stencil on my left forearm. Clean line. The aftercare sheet was accurate and also philosophical. The USN anchor stencil is sitting in my wall locker as a conversation piece.",
+      },
+      {
+        rank: "GySgt",
+        name: "Loretta Sampson",
+        stars: 4,
+        body: "I confiscated one of these from a private and then used it myself. The bulldog stencil is the correct shape. I have no official comment on the USN anchor. Unofficially: I understand.",
+      },
+      {
+        rank: "1stLt",
+        name: "Patrick Drummond",
+        stars: 2,
+        body: "The USN anchor stencil is inexcusable and the aftercare sheet is the funniest thing I have read in uniform. Two stars because the needle gauge is labeled wrong. The product is otherwise correct.",
+      },
+    ],
   },
   {
     slug: "sand-rations",
@@ -1416,12 +1591,47 @@ export const products: Product[] = [
     priceLabel: "$29.99",
     tagline: "For when the crayons run out.",
     image: "/sites/squaredaway/product-sand-rations.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Five pounds of single-origin Camp Pendleton sand in a burlap sack. Includes a small wooden scoop. For when the crayons run out. Source documented. Grain size certified.",
+    longDescription: [
+      "Sand Rations™ is a five-pound burlap sack of single-origin sand harvested from Camp Pendleton, California — sourced from a training area with documented field use history and hand-packed with a small wooden scoop that is included in every order. The sack is sealed with a waxed cord and tagged with a certificate of origin identifying the specific grid coordinate, the training event during which the sand was collected, and the notation 'Grain Size: Coarse-Medium. Flavor: Earthy. Occasion: Everything.'",
+      "The Marine Corps relationship with sand is not merely professional — it is biographical. Marines have eaten in it, slept in it, bled in it, and carried it home in gear that has been through three wash cycles and still produces a fine sediment on the laundry room floor. Sand Rations™ exists for the Marine who no longer has access to the sand they came up in and needs a pound or five for reasons they do not have to explain to anyone.",
+      "The Army has sand at Fort Polk. Army sand is different. Army sand is mud-adjacent and associated with a different kind of misery. Camp Pendleton sand is Pacific coastal, gritty in a specific way, and carries a particular quality of late afternoon light that no other sand produces. We have documented this. The sack is $29.99. The scoop is included.",
+    ],
+    specs: [
+      { label: "Weight", value: "5 lbs (2.27 kg)" },
+      { label: "Origin", value: "Camp Pendleton, CA — Training Area, GPS-documented lot" },
+      { label: "Grain Size", value: "Coarse-medium, Pacific coastal classification" },
+      { label: "Packaging", value: "Natural burlap sack, waxed cord seal, origin certificate tag" },
+      { label: "Included Tools", value: "One (1) small wooden scoop" },
+      { label: "Certifications", value: "MIL-STD-GRIT compliant. Single-origin documented." },
+    ],
+    warnings: [
+      "Sand Rations™ is not food, not cat litter, and not a building material. It is sand. Use it accordingly.",
+      "Do not attempt to substitute Army sand. Army sand is a different product from a different ecosystem and will not produce the same result.",
+    ],
+    crossBranchJab:
+      "Army sand is technically mud with aspirations — Camp Pendleton sand knows what it is and has the documentation to prove it.",
+    reviews: [
+      {
+        rank: "MSgt",
+        name: "Alicia Tran",
+        stars: 5,
+        body: "Opened the sack and held it for a while. This is the correct sand. I cannot explain to a civilian why I know that. The scoop is a nice touch. The certificate is accurate. Five stars.",
+      },
+      {
+        rank: "Sgt",
+        name: "Owen Brackett",
+        stars: 4,
+        body: "I ordered this for my mantle. My wife asked why we have a sack of sand on the mantle. I explained that it is from Pendleton and it is not for anything. She looked at it for a moment and said 'okay.' She understands now.",
+      },
+      {
+        rank: "LtCol",
+        name: "Raymond Solis",
+        stars: 5,
+        body: "I have commanded Marines at Pendleton for eight years. This sand is correct. The grain size is accurate. I have no commentary on why this product exists — I ordered two bags and I stand by that.",
+      },
+    ],
   },
   {
     slug: "chestys-bulldog-morale-companion",
@@ -1434,12 +1644,47 @@ export const products: Product[] = [
     priceLabel: "$44.99",
     tagline: "Shake to hear OORAH. Batteries included.",
     image: "/sites/squaredaway/product-chestys-bulldog-morale-companion.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Plush bulldog in a stylized dress-blue uniform. Motion-activated OORAH sound. Named in honor of the Corps' most decorated Marine. Batteries included. Morale guaranteed.",
+    longDescription: [
+      "Chesty's™ Bulldog Morale Companion is a 10-inch plush bulldog dressed in a stylized dress-blue uniform — deep navy with red trim, gold buttons, and a rank tab positioned at the collar. The uniform is a stylized original design with no real insignia reproduced. The bulldog expression is one of mild contempt and absolute confidence, which our design team describes as 'accurate.' Motion-activated sound module triggers OORAH on detection of movement within 18 inches.",
+      "Named in the spirit of the Corps' most decorated Marine, the Companion is intended for barracks rooms, desk deployments, and any location where ambient morale could benefit from a sudden, motion-triggered OORAH. The sound library contains five distinct OORAH variants: standard field delivery, extended parade-ground delivery, quiet pre-dawn delivery, emphatic single-word delivery, and what our audio team has labeled 'inspirational — use sparingly.'",
+      "The Navy's unit mascot is a goat. The Navy goat can produce milk, navigate by stars, and maintain composure on a ship. These are all valid competencies. Chesty's™ Bulldog Morale Companion produces OORAH on motion detection and costs $44.99. Both animals serve their purpose. Only one of them is available in plush.",
+    ],
+    specs: [
+      { label: "Species", value: "English Bulldog (stylized plush, 10 in)" },
+      { label: "Uniform", value: "Stylized dress blues — no real insignia reproduced" },
+      { label: "Activation", value: "Motion-triggered, 18-inch detection radius" },
+      { label: "Sound Library", value: "5 OORAH variants: standard, extended, quiet, emphatic, inspirational" },
+      { label: "Battery", value: "2× AA included; battery compartment accessed by flat-head screwdriver" },
+      { label: "Certifications", value: "MIL-STD-WOOF compliant. OORAH-verified. Not a chew toy." },
+    ],
+    warnings: [
+      "Not for infant use. The OORAH activation may startle small children, civilians, and Army personnel unfamiliar with the sound.",
+      "Battery compartment requires a flat-head screwdriver and command-level patience. Access is intentionally non-trivial.",
+    ],
+    crossBranchJab:
+      "The Navy's goat is a distinguished animal and a fine mascot — it has not, to our knowledge, ever triggered an OORAH, which is a capability gap we've addressed.",
+    reviews: [
+      {
+        rank: "SSgt",
+        name: "Yolanda Crowe",
+        stars: 5,
+        body: "Put this on my desk in the S-3 shop. It went off twelve times in the first hour. Nobody turned it off. By noon it felt like a unit tradition. This is the best $44.99 I have spent in uniform.",
+      },
+      {
+        rank: "Maj",
+        name: "Gerald Hutchinson",
+        stars: 4,
+        body: "The 'inspirational — use sparingly' OORAH variant is the correct variant for morning brief. I am not going to explain further. The product works as intended.",
+      },
+      {
+        rank: "LCpl",
+        name: "Simone Thibodeau",
+        stars: 5,
+        body: "I gave this to my recruiter as a thank-you gift. He cried a little. Then it went off. He straightened up immediately. The timing was perfect. Five stars.",
+      },
+    ],
   },
   {
     slug: "marpat-throw-pillow-set",
@@ -1452,12 +1697,47 @@ export const products: Product[] = [
     priceLabel: "$119.99",
     tagline: "Matches your 4 pairs of MARPAT pants.",
     image: "/sites/squaredaway/product-marpat-throw-pillow-set.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Four throw pillows in two MARPAT patterns — 2 desert, 2 woodland. Matches your 4 pairs of MARPAT pants. Barracks-room interior design, finally addressed at the institutional level.",
+    longDescription: [
+      "The MARPAT™ Throw Pillow Set is a four-pack of 18×18-inch throw pillows in the official Marine Corps digital camouflage pattern: two in Desert MARPAT and two in Woodland MARPAT. The pillows are covered in a durable cotton-poly canvas fabric printed in accurate MARPAT colorways and filled with medium-firm polyester. Together they provide full bilateral pattern coverage for a standard-issue barracks couch or a civilian sofa that has accepted its new identity.",
+      "The set was designed to address a gap in the Marine Corps living environment: the Marine owns four pairs of MARPAT trousers but zero interior decor that acknowledges this. The throw pillow set closes that gap. The two desert and two woodland variants provide seasonal flexibility or the option to arrange them in a pattern that reflects your MOS deployment history. Both approaches are valid. Neither has been officially reviewed by the Sergeant Major of the Marine Corps.",
+      "The Army's Universal Camouflage Pattern was retired because it failed to camouflage anything in any environment. MARPAT has been in continuous service since 2001 and is still working. The throw pillows inherit this legacy and will not camouflage your couch, but they were never supposed to, and at least the pattern has a documented track record.",
+    ],
+    specs: [
+      { label: "Quantity", value: "4 pillows (2 Desert MARPAT, 2 Woodland MARPAT)" },
+      { label: "Patterns", value: "Desert MARPAT (tan/brown) and Woodland MARPAT (green/brown/black)" },
+      { label: "Dimensions", value: "18 × 18 in each" },
+      { label: "Fill", value: "Medium-firm polyester, 16 oz per pillow" },
+      { label: "Cover Material", value: "Cotton-poly canvas, printed MARPAT colorway, removable zipper cover" },
+      { label: "Certifications", value: "MIL-STD-PIX compliant. Pattern accuracy verified. Interior design not regulated." },
+    ],
+    warnings: [
+      "These pillows do not camouflage your couch. They were not designed to camouflage your couch. They are throw pillows. The MARPAT pattern is decorative in this application.",
+      "Comparison to UCP is historical record, not an insult. The Army has moved on. The throw pillows have noted this and moved on as well.",
+    ],
+    crossBranchJab:
+      "UCP didn't camouflage the Army's couch either, but at least these pillows have a pattern that was field-tested before it touched the furniture.",
+    reviews: [
+      {
+        rank: "Sgt",
+        name: "Alphonso Wren",
+        stars: 5,
+        body: "Put these on my couch in base housing. My wife said they 'actually work with the room.' I do not know what that means in interior design terms but I am counting it as a win. Five stars.",
+      },
+      {
+        rank: "Cpl",
+        name: "Hannah Fitzgerald",
+        stars: 4,
+        body: "Ordered these for my barracks room and got written up for unauthorized decorations. The pillows are still there. The write-up is also still there. Four stars.",
+      },
+      {
+        rank: "MSgt",
+        name: "Victor Blanchard",
+        stars: 5,
+        body: "I have four pairs of MARPAT trousers and now four matching pillows. My living room has achieved a level of internal consistency I did not know I needed. This is what retirement feels like. Five stars.",
+      },
+    ],
   },
 ]
 
