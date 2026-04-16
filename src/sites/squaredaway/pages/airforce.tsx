@@ -31,7 +31,7 @@ export default function AirForcePage() {
         <div className="absolute inset-0 flex items-center justify-center px-4">
           <div className="text-center max-w-3xl">
             <p className="font-mono uppercase tracking-widest text-primary text-xs mb-1">Component: AIR (INDOORS)</p>
-            <h1 className="font-heading text-5xl md:text-6xl text-primary uppercase tracking-widest">Air Force</h1>
+            <h1 className="font-heading text-4xl md:text-5xl text-primary uppercase tracking-widest">Air Force</h1>
             <p className="text-foreground/90 mt-2">Aim High. Sit Down.</p>
           </div>
         </div>

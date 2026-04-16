@@ -17,7 +17,7 @@ export default function ArmyPage() {
   return (
     <>
       <section className="relative">
-        <div className="relative aspect-[21/9] w-full">
+        <div className="relative w-full h-48 md:h-64">
           <Image
             src="/sites/squaredaway/branch-army.png"
             alt="Army branch banner"
@@ -31,7 +31,7 @@ export default function ArmyPage() {
         <div className="absolute inset-0 flex items-center justify-center px-4">
           <div className="text-center max-w-3xl">
             <p className="font-mono uppercase tracking-widest text-primary text-xs mb-1">Component: LAND</p>
-            <h1 className="font-heading text-5xl md:text-6xl text-primary uppercase tracking-widest">Army</h1>
+            <h1 className="font-heading text-4xl md:text-5xl text-primary uppercase tracking-widest">Army</h1>
             <p className="text-foreground/90 mt-2">This We&apos;ll Defend. For a Price.</p>
           </div>
         </div>
