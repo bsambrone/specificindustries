@@ -81,8 +81,8 @@ export default function HomePage() {
                 href={`/${b.slug}`}
                 className="group block border-2 border-primary/40 hover:border-accent transition-colors bg-background/70"
               >
-                <div className="relative aspect-square">
-                  <Image src={b.image} alt={b.label} fill className="object-cover" />
+                <div className="relative aspect-[3/2]">
+                  <Image src={b.image} alt={b.label} fill className="object-contain" />
                 </div>
                 <div className="p-3 border-t-2 border-primary/40">
                   <p className="font-heading uppercase tracking-widest text-primary">{b.label}</p>
