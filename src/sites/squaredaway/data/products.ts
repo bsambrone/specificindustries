@@ -472,12 +472,47 @@ export const products: Product[] = [
     priceLabel: "$45.00",
     tagline: "Ground on the flight deck by a chief named Dave.",
     image: "/sites/squaredaway/product-chiefs-coffee-dark-deployment.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Single-origin aircraft-carrier dark roast, hand-ground on the flight deck by CPO Dave. Artisanal bag, institutional soul. Navy coffee, finally priced like it deserves respect.",
+    longDescription: [
+      "Chief's Coffee™ Dark Deployment Roast is a single-origin dark roast sourced from a carrier operating in the Western Pacific and processed by Chiefs in the Goat Locker between watch rotations. It is ground on the flight deck — not because this improves the grind, but because Chief Dave insists on it and nobody has successfully argued with him about it since 2018. The bag looks artisanal. The coffee tastes like purpose.",
+      "Navy coffee has a documented and distinguished reputation for being catastrophically strong, aggressively over-brewed, and served in a context where it is the only thing standing between the watch and the sea. We have not changed this. We have wrapped it in kraft paper with a wax seal and charged $45 for it, which Chief Dave also insists on.",
+      "Flavor notes: dark chocolate, engine exhaust, and the specific kind of clarity that arrives at 0200 on the bridge when you have accepted that this is your life and it is fine. Pairs well with the Goat Locker, a framed photo of your ship, and the knowledge that the Army is still brewing Folgers.",
+    ],
+    specs: [
+      { label: "Origin", value: "Western Pacific (carrier-sourced, deployment cycle 2023–2024)" },
+      { label: "Roast", value: "Dark. Aggressively dark. Not negotiable." },
+      { label: "Grind", value: "Coarse, flight-deck ground, Chief Dave method" },
+      { label: "Caffeine", value: "Elevated (exact mg classified, OPORD 7-24)" },
+      { label: "Flavor Notes", value: "Dark chocolate, exhaust, 0200 clarity, institutional resolve" },
+      { label: "Certifications", value: "MIL-STD-BREW compliant. Goat Locker approved." },
+    ],
+    warnings: [
+      "Contains coffee. May contain flight deck. Trace amounts of Chief Dave's opinions are present in every bag and cannot be removed.",
+      "Not recommended for Army personnel who are accustomed to Folgers and may find this an overwhelming transition.",
+    ],
+    crossBranchJab:
+      "The Army still brews Folgers in a drip machine in the TOC and calls it good enough — and honestly, for the Army, it is.",
+    reviews: [
+      {
+        rank: "CPO",
+        name: "Garrett Tillinghast",
+        stars: 5,
+        body: "This is the coffee I have been trying to describe to my wife for eleven years. I showed her the bag. She said it looked artisanal. I said it was. That is technically true.",
+      },
+      {
+        rank: "PO2",
+        name: "Renata Voss",
+        stars: 3,
+        body: "It is good coffee. I remain unclear on why it costs $45. My CPO said 'because it can' and walked away. I am giving it three stars as a protest. The coffee is fine.",
+      },
+      {
+        rank: "SCPO",
+        name: "Douglas Meachum",
+        stars: 5,
+        body: "I ground this on my patio deck because I don't have a flight deck anymore. It is not the same but the coffee is correct. Chief Dave knows what he is doing.",
+      },
+    ],
   },
   {
     slug: "goat-locker-soap",
@@ -490,12 +525,47 @@ export const products: Product[] = [
     priceLabel: "$24.99",
     tagline: "For Chiefs. And Chief-adjacent civilians.",
     image: "/sites/squaredaway/product-goat-locker-soap.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Goat-shaped bar soap honoring Chief Petty Officer culture and the sacred institution of the Goat Locker. Olive-drab paper tag. Membership not included. The scent is earned.",
+    longDescription: [
+      "The Goat Locker™ Membership Soap is a full-sized bar of soap cast in the shape of a goat — because the Chief Petty Officer Mess is called the Goat Locker, and the Goat Locker is the most important room on any naval vessel, and if you do not understand why then this soap is not for you. The bar is wrapped in olive-drab kraft paper with a tag that lists the CPO Creed in a font small enough to require reading glasses.",
+      "The scent is teak wood, salt air, and something our fragrance team describes as 'the specific gravity of seniority.' It was developed in consultation with two retired Master Chiefs who were not paid for their input but who gave it at length anyway. The bar is 6 oz, hand-poured, and shaped with enough goat detail to be identifiable from across a head.",
+      "This soap is technically available to non-Chiefs. We are not gatekeeping soap. We are, however, noting that using it without achieving E-7 may produce a mild but persistent sense of not quite having earned it. The Marine Corps mascot is a bulldog. A bulldog cannot produce milk. The goat can. The Navy wins this particular comparison by any meaningful measure.",
+    ],
+    specs: [
+      { label: "Shape", value: "Goat (full figure, standing, regulation posture)" },
+      { label: "Weight", value: "6 oz" },
+      { label: "Scent", value: "Teak, salt air, seniority" },
+      { label: "Membership Required", value: "Recommended. Not enforced. You know who you are." },
+      { label: "Ritual Compliance", value: "Compatible with CPO initiation season" },
+      { label: "Certifications", value: "MIL-STD-ANCHOR compliant. Goat Locker adjacent." },
+    ],
+    warnings: [
+      "Not for use by non-Chiefs without an honest accounting of where you are in your career and what that means.",
+      "Do not eat. The goat shape is symbolic. It is soap.",
+    ],
+    crossBranchJab:
+      "The Marine Corps mascot is a bulldog, which is a fine animal that has never produced milk, won a navigation argument, or run a Chief's Mess.",
+    reviews: [
+      {
+        rank: "MCPO",
+        name: "Josephine Barfield",
+        stars: 5,
+        body: "Bought twelve. One for my head, one for my desk, one for every E-6 in my command with a note that says 'not yet.' The soap is excellent. The message is the point.",
+      },
+      {
+        rank: "PO1",
+        name: "Trevor Galindo",
+        stars: 2,
+        body: "I am an E-6. I bought this. I feel weird about it. The soap works fine. The goat is judging me. Promotion board is in March.",
+      },
+      {
+        rank: "CPO",
+        name: "Adaeze Okonkwo",
+        stars: 5,
+        body: "Smells exactly right. I don't know how they did that. Gave one to my husband. He said 'this is just soap.' He is not a Chief. He would not understand.",
+      },
+    ],
   },
   {
     slug: "deployment-beard-oil",
@@ -508,12 +578,47 @@ export const products: Product[] = [
     priceLabel: "$52.00",
     tagline: "For beards the Navy technically allows.",
     image: "/sites/squaredaway/product-deployment-beard-oil.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Premium conditioning beard oil for the seven-month deployment beard the Navy technically permits with a no-shave chit. Stenciled olive label. Chit compatibility verified. Army not eligible.",
+    longDescription: [
+      "The 7-Month Deployment™ Beard Oil is a premium conditioning oil formulated for the beard that grows when the ship leaves Norfolk in October and returns in May, and which is technically authorized under current Navy grooming policy provided the sailor has obtained a no-shave chit signed by their Commanding Officer, countersigned by the XO, and submitted through the appropriate administrative channel within 14 days of commencement of facial hair growth. The bottle has a stenciled olive label because this beard was earned through bureaucracy and should look the part.",
+      "The scent profile is cedar, sea salt, and a faint note of the specific relief that arrives when chit approval is confirmed. The oil conditions aggressively — seven months is a long deployment and the beard is doing its best under difficult conditions including salt air, underway humidity, and the skeptical attention of senior enlisted personnel.",
+      "The Army does not allow beards. The Army made this choice and continues to make it every morning when they shave. We respect their right to do so and have priced this oil at $52, which is $52 more than the Army will ever spend on beard care.",
+    ],
+    specs: [
+      { label: "Volume", value: "2 fl oz (59 mL)" },
+      { label: "Scent Profile", value: "Cedar, sea salt, chit approval" },
+      { label: "Conditioning", value: "Deep-penetrating, 7-month deployment rated" },
+      { label: "Deployment Cycle", value: "Formulated for 180–210 day underway periods" },
+      { label: "Chit Compatibility", value: "Fully compatible with all no-shave chit formats (NAVPERS 1070/613 series)" },
+      { label: "Origin", value: "Small-batch, CONUS-produced, command-aware" },
+    ],
+    warnings: [
+      "Still requires a no-shave chit signed by your Commanding Officer. This oil does not constitute command endorsement and cannot be submitted as documentation of approval.",
+      "Not a substitute for the administrative process. Apply to beard. File the chit separately. These are two distinct actions.",
+    ],
+    crossBranchJab:
+      "The Army made the decision not to allow beards, and they make it again every morning, and that is their right, and we will not comment further.",
+    reviews: [
+      {
+        rank: "LT",
+        name: "Brendan Hollowell",
+        stars: 5,
+        body: "Chit approved on day three. Used this oil for the full deployment. Came home looking like a man who had been somewhere important and smelled cedar. My CO asked what I was using. I told him. He wrote himself a chit.",
+      },
+      {
+        rank: "PO3",
+        name: "Marcus Thibodeau",
+        stars: 2,
+        body: "Chit was denied. I still bought the oil and used it at home on leave. This is either sad or an act of defiance. I have not decided which.",
+      },
+      {
+        rank: "LTJG",
+        name: "Camille Ferreira",
+        stars: 5,
+        body: "Bought this for my husband for homecoming. He'd been at sea for six months. The beard was real and so was the oil. The scent is accurate. Cedar and relief. Five stars.",
+      },
+    ],
   },
   {
     slug: "dixie-cup-storage-system",
@@ -526,12 +631,47 @@ export const products: Product[] = [
     priceLabel: "$129.99",
     tagline: "An elaborate contraption for one white hat.",
     image: "/sites/squaredaway/product-dixie-cup-storage-system.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Humidity-controlled, LED-lit, glass-dome stainless-steel display case for one (1) white Dixie cup sailor hat. $129.99 for what is effectively a terrarium with a hat in it. Justified.",
+    longDescription: [
+      "The Dixie Cup Hat Storage System is a stainless-steel and borosilicate glass display case — humidity controlled, LED illuminated, and airtight sealed — designed to house a single white Dixie cup sailor cover at optimal preservation conditions. It holds one hat. Just the one. The case is 14 inches tall, weighs 4.2 lbs, and costs $129.99, which is $129.99 more than any reasonable person would expect to spend on hat storage and exactly the right amount to spend on this hat.",
+      "The humidity control maintains a constant 45% relative humidity, which our textile preservation team has identified as optimal for white cotton covers that have seen parade deck wear, deployment heat, and the accumulated weight of someone's entire enlisted career. The LED ring illuminates from below, casting the hat in the kind of light usually reserved for museum artifacts and things that deserve to be looked at.",
+      "The Air Force issues berets, which are kept in a drawer or a pocket or wherever you put a beret, because a beret does not require a glass dome and nobody is going to pretend otherwise. This hat does.",
+    ],
+    specs: [
+      { label: "Material", value: "304 stainless steel base, borosilicate glass dome" },
+      { label: "Dimensions", value: "14 in H × 10 in W (interior: 12 in H × 9 in W)" },
+      { label: "Display Capacity", value: "One (1) Dixie cup cover. No exceptions." },
+      { label: "Humidity Control", value: "Passive silica gel, 40–50% RH target, replaceable cartridge" },
+      { label: "Illumination", value: "Warm white LED ring, base-mounted, 3000K" },
+      { label: "Certifications", value: "MIL-STD-WHITE compliant. Hat not included." },
+    ],
+    warnings: [
+      "Not a humidor. Not a snow globe. Cap not included and must be sourced separately through official Navy uniform channels.",
+      "Placing more than one Dixie cup in this unit voids the warranty and violates the design intent. One hat. This is not a collection case.",
+    ],
+    crossBranchJab:
+      "The Air Force wears berets to brunch and keeps them in coat pockets, which is fine, because a beret has not earned a glass dome.",
+    reviews: [
+      {
+        rank: "ENS",
+        name: "Patrick Moreau",
+        stars: 5,
+        body: "I bought this for my grandfather's Dixie cup from 1971. It is now on his mantle under glass with the LED on. He cried a little. I am giving this five stars and I will not explain further.",
+      },
+      {
+        rank: "PO2",
+        name: "Shondra Lavelle",
+        stars: 3,
+        body: "It is a very good display case. It is also $130. I am keeping it. I would not say I feel good about the price. The hat looks incredible though.",
+      },
+      {
+        rank: "CDR",
+        name: "William Nakashima",
+        stars: 5,
+        body: "Purchased four. One for each of my sailors who made E-3. Told them this is where your first cover lives when you upgrade to chief's khakis. They seemed moved. The LED is a nice touch.",
+      },
+    ],
   },
   {
     slug: "shellback-coaster-set",
@@ -544,12 +684,47 @@ export const products: Product[] = [
     priceLabel: "$34.99",
     tagline: "I crossed the equator once and won't shut up.",
     image: "/sites/squaredaway/product-shellback-coaster-set.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Set of 4 commemorative coasters marking your Shellback certification — trident, crossing scroll, sea turtle, and First Crossing motifs. The set will bring it up at dinner. Repeatedly.",
+    longDescription: [
+      "The Shellback Certification Coaster Set commemorates the ancient and solemn tradition of crossing the equator aboard a naval vessel and becoming, thereby, a Shellback — a status that is taken seriously by every Shellback and dismissed as theater by every Polliwog who has not yet made the crossing. The set contains four coasters, each bearing a different motif from the crossing ceremony: the Neptune trident, the crossing scroll, the sea turtle, and the First Crossing insignia. Together they form a complete account of an event you are allowed to mention at every dinner for the rest of your natural life.",
+      "The coasters are made from cork-backed hardwood, finished in matte black with gold foil detail, and sized for standard beverage glasses. Two of the four motifs are considered Polliwog-safe for civilian guests. The trident and the scroll carry context that will require explanation, and the set fully expects you to provide it.",
+      "The Army has not crossed the equator in uniform. This is a documented fact that the Army has made no statement about, and we respect their silence on the matter.",
+    ],
+    specs: [
+      { label: "Quantity", value: "4 coasters" },
+      { label: "Material", value: "Cork-backed hardwood, matte black finish, gold foil" },
+      { label: "Diameter", value: "4 in each" },
+      { label: "Motifs", value: "Trident, Crossing Scroll, Sea Turtle, First Crossing" },
+      { label: "Polliwog Certified", value: "2 of 4 coasters (Turtle and First Crossing)" },
+      { label: "Shellback Certified", value: "All 4. The set is complete. You earned it." },
+    ],
+    warnings: [
+      "Only two of the four coasters are polliwog-safe for guests who have not crossed the equator. The other two will raise questions and the host is responsible for the resulting conversation.",
+      "The set will bring up your Shellback status at dinner. This is a design feature, not a defect.",
+    ],
+    crossBranchJab:
+      "The Army has never crossed the equator in uniform, which is fine, and they have developed other traditions to compensate, which are also fine.",
+    reviews: [
+      {
+        rank: "PO1",
+        name: "Darnell Whitfield",
+        stars: 5,
+        body: "Put these on the coffee table. Within seven minutes of my in-laws arriving I had explained Shellback certification, the line-crossing ceremony, and why King Neptune is not a metaphor. The coasters are working exactly as intended.",
+      },
+      {
+        rank: "LTJG",
+        name: "Priya Sunderland",
+        stars: 4,
+        body: "My husband is a Polliwog. He is not allowed to use the trident coaster. He knows why. He has accepted it. This set has introduced a healthy dynamic into our household.",
+      },
+      {
+        rank: "CPO",
+        name: "Eugene Bradshaw",
+        stars: 2,
+        body: "The coasters are fine. I crossed the equator in 2004. I did not need coasters to remember it. I bought these anyway because the set looked right. I am using them. I stand by two stars.",
+      },
+    ],
   },
   {
     slug: "sub-school-pillowcase",
@@ -562,12 +737,47 @@ export const products: Product[] = [
     priceLabel: "$39.99",
     tagline: "For sailors who haven't seen the sun in 90 days.",
     image: "/sites/squaredaway/product-sub-school-pillowcase.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Jet-black total-blackout pillowcase for the submariner who has not seen the sun since before the last port call. Sensory-deprivation rated. Surfacing may cause adjustment.",
+    longDescription: [
+      "The Sub School Pillowcase — Blackout Edition is a jet-black, total-opacity cotton pillowcase designed for submariners who have adapted to an environment where the sun is a concept and daylight is something that happens to other people. The fabric is 400-thread-count matte black, sewn in a standard queen size, and tested to achieve zero light transmission under laboratory conditions. Your rack is already dark. This makes the pillow match the assignment.",
+      "Sub school teaches a great many things: pressure hull theory, watchstanding, the sound of your own thoughts at 400 feet. One thing it does not teach is how to sleep in a room that has windows. This pillowcase is a transitional aid. It recreates the sensory environment of a submarine rack for the sailor who has returned to surface life and found the bedroom unacceptably bright at 1400 on a Tuesday.",
+      "The Air Force sleeps in hotels. Hotels have blackout curtains, pillow mints, and a front desk number. This pillowcase has none of those things. It has darkness, which is the only thing you actually need and the one thing the Air Force has outsourced.",
+    ],
+    specs: [
+      { label: "Color", value: "Jet black. One color. No variant." },
+      { label: "Opacity", value: "100% — zero light transmission, laboratory-verified" },
+      { label: "Material", value: "400TC matte cotton, enzyme-washed" },
+      { label: "Sensory Rating", value: "Equivalent to 400 ft depth, rack-certified" },
+      { label: "Rack Compatibility", value: "Standard queen; submarine rack adapter not required" },
+      { label: "Certifications", value: "MIL-STD-SILENT compliant. Depth-rated." },
+    ],
+    warnings: [
+      "Not recommended for daytime use by surface-warfare personnel who have not undergone sensory-deprivation acclimatization. Start with a nap.",
+      "Surfacing — returning to a room with windows after extended use — may cause temporary discomfort, squinting, and an irrational preference for being back underwater.",
+    ],
+    crossBranchJab:
+      "The Air Force sleeps in hotels with pillow mints and the curtains someone else hung, and they have made peace with that, and so have we.",
+    reviews: [
+      {
+        rank: "PO3",
+        name: "Anton Vreeland",
+        stars: 5,
+        body: "I have been on surface ships for two years since getting off subs. I still cannot sleep with light in the room. This pillowcase has fixed my marriage. Five stars. No notes.",
+      },
+      {
+        rank: "LT",
+        name: "Ramona Szczepanski",
+        stars: 5,
+        body: "Ordered six. One for every rack in my household. My civilian roommate asked why. I explained submarine sleep culture for approximately forty minutes. She uses one now too.",
+      },
+      {
+        rank: "LCDR",
+        name: "Thomas Osei",
+        stars: 2,
+        body: "The pillowcase is too effective. I used it on a Saturday and did not wake up until the following morning. I missed a barbecue. The pillowcase felt no remorse.",
+      },
+    ],
   },
   {
     slug: "liberty-call-regret-planner",
@@ -580,12 +790,47 @@ export const products: Product[] = [
     priceLabel: "$22.00",
     tagline: "7 days. 7 entries. All say Regret.",
     image: "/sites/squaredaway/product-liberty-call-regret-planner.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Small leather-bound 7-day planner pre-filled on every page with a single word: REGRET. Designed for port-call planning in Olongapo, Pattaya, Rota, and adjacent venues. Binding holds.",
+    longDescription: [
+      "The Liberty Call Regret Planner™ is a 7-day leather-bound pocket planner in which every date field, time slot, and note section has been pre-filled with the single word REGRET in a clean, professional sans-serif font. There are no blank pages. There is no room for optimism. The planner has reviewed the port-call data from Olongapo, Pattaya, Rota, and comparable liberty venues and has pre-completed the planning process for you based on what the historical record suggests the week will contain.",
+      "The cover is tan faux leather with a brass snap closure. The spine is reinforced because the planner has been designed to survive the same conditions it documents. Each day is organized into morning, afternoon, and evening slots, all of which read REGRET. The back inside cover contains a notes page that reads, at the top, 'Things to Address Upon Return,' followed by eighteen blank lines and then, at the bottom, REGRET.",
+      "Marines get their regret with a tattoo. Navy gets theirs with a planner, because the Navy has always been more organized about its poor decisions.",
+    ],
+    specs: [
+      { label: "Pages", value: "64 (7-day format, full coverage)" },
+      { label: "Format", value: "Daily time-blocked planning, morning/afternoon/evening" },
+      { label: "Entries Pre-Filled", value: "All of them. Every one. REGRET." },
+      { label: "Cover Material", value: "Tan faux leather, brass snap closure" },
+      { label: "Binding", value: "Reinforced sewn binding, liberty-condition rated" },
+      { label: "Certifications", value: "MIL-STD-OOPS compliant. Port-call proven." },
+    ],
+    warnings: [
+      "Not legally binding. The planner does not constitute a formal acknowledgment of wrongdoing and cannot be subpoenaed, although it may be cited informally.",
+      "The planner may be called upon to testify. The planner will say REGRET. It always says REGRET.",
+    ],
+    crossBranchJab:
+      "Marines come back from liberty with a tattoo that says what this planner implies — we respect the efficiency, but the planner is easier to explain to HR.",
+    reviews: [
+      {
+        rank: "PO2",
+        name: "Isaiah Fontaine",
+        stars: 5,
+        body: "I used this in Rota. I filled in nothing because nothing needed to be filled in — the planner had already handled it. When I got back to the ship I looked at it and it was correct on every count.",
+      },
+      {
+        rank: "ENS",
+        name: "Audrey Clements",
+        stars: 3,
+        body: "I bought this thinking it was a joke gift for my Chief. She opened it, read the first page, closed it, put it in her desk drawer, and said thank you. I don't know if that means she liked it.",
+      },
+      {
+        rank: "CAPT",
+        name: "Gerald Matsumoto",
+        stars: 5,
+        body: "Purchased a case of these for my wardroom before our last deployment. Distributed them at the first port call brief. Nobody laughed. Several officers nodded slowly. The planner is accurate.",
+      },
+    ],
   },
   {
     slug: "haze-gray-touchup-kit",
@@ -598,12 +843,47 @@ export const products: Product[] = [
     priceLabel: "$19.99",
     tagline: "For your car, house, and will to live.",
     image: "/sites/squaredaway/product-haze-gray-touchup-kit.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "One-quart can of authentic haze gray paint for touching up your car, house, and general outlook. Includes recipe card for Chip and Paint Saturdays. Covers 40 sq ft per coat.",
+    longDescription: [
+      "The Haze Gray Paint Touch-Up Kit contains one quart of authentic haze gray exterior paint — the specific gray used on every U.S. Navy vessel in the fleet — along with a 2-inch brush, a stir stick, and a laminated recipe card for Chip and Paint Saturdays, the beloved underway tradition in which sailors spend their weekend chipping rust off painted surfaces and then immediately repainting them in haze gray, which will rust again, which they will chip and repaint on the following Saturday.",
+      "The paint is formulated for metal and masonry. It works on cars, houses, fences, garage doors, patio furniture, and the interior of any room you have decided should feel like an engineering space. Finish is satin. Coverage is 40 square feet per quart. Drying time is two hours, which is faster than Chip and Paint Saturday will feel.",
+      "The Air Force paints their buildings beige. Beige is a color associated with the civilian world, real estate staging, and the temporary suppression of strong opinions. Haze gray is a color associated with something that goes to sea and comes back. There is a meaningful difference and we have priced it accordingly at $19.99.",
+    ],
+    specs: [
+      { label: "Volume", value: "1 quart (0.946 L)" },
+      { label: "Color", value: "Haze gray (Federal Standard 36270)" },
+      { label: "Finish", value: "Satin" },
+      { label: "Coverage", value: "40 sq ft per coat (ideal conditions; rust conditions may vary)" },
+      { label: "Drying Time", value: "2 hours to touch; 24 hours to full cure; infinite hours emotionally" },
+      { label: "Certifications", value: "MIL-STD-GRAY compliant. Fleet-matched." },
+    ],
+    warnings: [
+      "Do not apply to skin. The color is accurate but the application method is not sanctioned and the results will be difficult to explain at liberty.",
+      "Not food-grade. The paint is for surfaces. Surfaces are defined as anything that is not your mouth.",
+    ],
+    crossBranchJab:
+      "The Air Force paints their buildings beige, which is a color that communicates comfort and the absence of any structural threat, and we understand the choice.",
+    reviews: [
+      {
+        rank: "PO1",
+        name: "Reginald Huff",
+        stars: 5,
+        body: "Painted my truck. Not the whole truck — just a scratch on the door. Now the scratch is the right color and also I cannot stop touching it because it is the exact right color. This was $20. I have no complaints.",
+      },
+      {
+        rank: "SCPO",
+        name: "Dana Przybylski",
+        stars: 4,
+        body: "I used this to touch up my fence and then my shed and then about half of my garage. The recipe card for Chip and Paint Saturday is accurate and also funny and also sad. Good product.",
+      },
+      {
+        rank: "PO3",
+        name: "Victor Hollingsworth",
+        stars: 2,
+        body: "I painted my bedroom. My family staged an intervention. The paint is good. The decision was mine. I acknowledge both of these things.",
+      },
+    ],
   },
 
   // ===== AIR FORCE =====
