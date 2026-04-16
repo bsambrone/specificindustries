@@ -4,12 +4,14 @@ import { getProductBySlug } from "./data/products"
 import RadiumRoysHome from "./pages/home"
 import RadiumRoysProducts, { metadata as productsMetadata } from "./pages/products"
 import ProductDetail from "./pages/product-detail"
+import RadiumRoysAbout, { metadata as aboutMetadata } from "./pages/about"
 
 export { config }
 
 export const pages: Record<string, PageEntry> = {
   "": RadiumRoysHome,
   "products": { component: RadiumRoysProducts, metadata: productsMetadata },
+  "about": { component: RadiumRoysAbout, metadata: aboutMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
