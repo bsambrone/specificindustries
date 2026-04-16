@@ -898,12 +898,47 @@ export const products: Product[] = [
     priceLabel: "$299.99",
     tagline: "Neck pillow, eye mask, Panera loyalty card.",
     image: "/sites/squaredaway/product-premium-deployment-concierge-kit.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Everything you need to deploy in comfort: neck pillow, silk eye mask, aromatherapy vials, folded robe, and a Panera Bread–style café loyalty card. Olive-drab tag. Business-class energy.",
+    longDescription: [
+      "The Premium Deployment Concierge Kit™ is the definitive travel system for the Air Force professional who has come to understand that deployment is, at its core, a business trip with better uniforms. The kit includes a memory-foam neck pillow in sage green, a silk sleep eye mask with adjustable strap, three aromatherapy vials (lavender, eucalyptus, and 'Forward Operating Base'), a pre-folded fleece robe with discreet rank tab, and a café loyalty card — styled in olive-drab with gold foil — pre-loaded with six punches toward your first complimentary beverage.",
+      "Each item is packed into a structured canvas carry pouch with a brass zipper pull and an olive-drab hang tag printed with your destination, your anticipated departure time, and the phrase 'Travel well. Serve with distinction.' We did not develop this product because the Army asked for it. We developed it because the Air Force already had all of these items separately, and we thought they deserved a set.",
+      "Contents subject to station availability. Not every deployed location provides the full café ecosystem. We are working on it. In the meantime, the robe travels.",
+    ],
+    specs: [
+      { label: "Contents", value: "Neck pillow, silk eye mask, aromatherapy vials (×3), robe, café loyalty card" },
+      { label: "Packaging", value: "Structured canvas carry pouch, brass zipper pull, olive-drab hang tag" },
+      { label: "Loyalty Integration", value: "6-punch café card, styled generic, no real affiliation" },
+      { label: "Deployment Duration", value: "Rated for 6-month AOR rotation or extended TDY" },
+      { label: "Weight", value: "3.4 lbs packed" },
+      { label: "Certifications", value: "MIL-STD-COMFY compliant. CENTCOM-adjacent approved." },
+    ],
+    warnings: [
+      "Contents subject to station availability. Aromatherapy vials are non-refundable once opened in theater.",
+      "Café loyalty card validity not guaranteed outside CENTCOM AOR. Al Udeid has a Starbucks. Bagram did not. Plan accordingly.",
+    ],
+    crossBranchJab:
+      "The Army's deployment kit is a poncho liner and whatever's in the left cargo pocket from last rotation — and honestly, they make it work.",
+    reviews: [
+      {
+        rank: "Capt",
+        name: "Lindsey Harwick",
+        stars: 5,
+        body: "Packed this for Al Udeid. Used every item. The loyalty card got six punches in four days. The robe did not leave the room. I deployed better than I have ever deployed. Five stars.",
+      },
+      {
+        rank: "TSgt",
+        name: "Darnell Fourie",
+        stars: 4,
+        body: "The neck pillow is genuinely excellent. The eye mask is exactly right. I gave the aromatherapy vials to the chaplain. Keeping four stars because the robe fits weird.",
+      },
+      {
+        rank: "Maj",
+        name: "Suzanne Kettleworth",
+        stars: 5,
+        body: "Issued one to every officer in my squadron before the rotation. The Army liaison asked what was in the bags. We told him. He went quiet for a while. Mission accomplished.",
+      },
+    ],
     featured: true,
   },
   {
@@ -917,12 +952,47 @@ export const products: Product[] = [
     priceLabel: "$4,899.00",
     tagline: "Built for 8-hour deployments between briefings.",
     image: "/sites/squaredaway/product-chair-force-ergonomic-chair.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Premium Aeron-style sage-green mesh ergonomic office chair, $4,899. Lumbar-supported. Fully adjustable. Rated for the 8-hour deployment between morning brief and afternoon brief.",
+    longDescription: [
+      "The Chair Force™ Ergonomic Deployment Chair is a $4,899 premium mesh office chair — sage green, full lumbar support, 5-axis adjustment, pneumatic height control — designed specifically for the Air Force deployment environment, where the primary terrain is a carpeted operations floor and the primary threat is lower-back fatigue from sustained seated analysis. It is, as our product team has acknowledged in internal documentation, a very nice chair. We are proud of it.",
+      "The chair was engineered in consultation with an ergonomics specialist who has personally observed Air Force deployment posture at multiple classified and unclassified locations and concluded that the current seating situation 'could be improved significantly for a reasonable investment.' The Chair Force™ Deployment Chair is that investment, priced at $4,899 because the work of sitting well is not nothing and should not be treated as such.",
+      "The Marines do not have chairs in the field. This is a choice the Marine Corps makes and maintains, and we respect it. The Air Force makes a different choice, and they make it in a chair that fits their lumbar, and the gap between these two positions is $4,899 and approximately 147 back injuries per year. We have done the math.",
+    ],
+    specs: [
+      { label: "Material", value: "Sage-green breathable mesh back, foam-padded seat, cast aluminum base" },
+      { label: "Lumbar Support", value: "Adjustable dual-zone, deployment-rated for 8-hour continuous use" },
+      { label: "Recline Angle", value: "95°–135° with locking tilt; nap posture: 127° (recommended)" },
+      { label: "Deployment Rating", value: "Rated for sustained carpeted operations environment, max 8 hrs/day" },
+      { label: "Adjustment Points", value: "5 (height, lumbar, armrest, recline, seat depth)" },
+      { label: "Warranty", value: "12-year limited warranty. Voided if taken off-base." },
+    ],
+    warnings: [
+      "Not rated for austere environments. If your deployment site has gravel floors, this chair is not for you and we are sorry for your assignment.",
+      "Chair is not rated for field duty. Placing this chair in a tent will void the warranty and also look very strange.",
+    ],
+    crossBranchJab:
+      "The Marines stand at attention during briefings because they have no chairs — we respect the commitment, but our ergonomist has concerns.",
+    reviews: [
+      {
+        rank: "Lt Col",
+        name: "Raymond Whitmore",
+        stars: 5,
+        body: "My squadron pooled resources and bought two for the ops floor. Productivity is up. Lower-back complaints are down 100%. The Army liaison sat in one and did not speak for three minutes. He knows.",
+      },
+      {
+        rank: "A1C",
+        name: "Brittany Salcedo",
+        stars: 2,
+        body: "I cannot afford this chair. I came here to look at it. The lumbar description made me feel things. I am giving it two stars because I resent it and I want one.",
+      },
+      {
+        rank: "SMSgt",
+        name: "Gerald Okonkwo",
+        stars: 5,
+        body: "I have sat in a lot of chairs. This is the correct chair. I deployed twice in this chair. I am bringing it to my retirement ceremony. The Air Force is a chair branch and I am proud of that.",
+      },
+    ],
   },
   {
     slug: "qatar-package",
@@ -935,12 +1005,47 @@ export const products: Product[] = [
     priceLabel: "$449.99",
     tagline: "Starbucks gift card, hotel toiletries, complimentary robe.",
     image: "/sites/squaredaway/product-qatar-package.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Al Udeid welcome kit: generic café gift card, hotel slippers, folded white robe, travel toiletries, and one small potted succulent. Olive-drab tag. Five-star deployment energy, zero apologies.",
+    longDescription: [
+      "The Qatar Package™ is a curated welcome kit designed for the Air Force professional deploying to the Al Udeid Air Base area of operations — a location that has, over the years, developed a reputation among joint-force personnel as 'the deployment where you come back looking rested.' The kit includes a generic café-style gift card in olive-drab with gold foil lettering ('The Al Udeid Experience: Earned'), a pair of soft hotel slippers, a pre-folded white robe with a discreet Air Force insignia embroidered at the chest, a travel toiletry set in a zip-closure pouch, and one small potted succulent with care instructions in military format.",
+      "The succulent care card reads, in part: 'Water once every 7–10 days. Sunlight: direct or indirect. Notes: Low maintenance. Thrives in controlled environments. Does not require field conditions.' We felt this was accurate on several levels. The robe, slippers, and toiletry set were selected to complement the existing Al Udeid lodging experience. The succulent is your responsibility.",
+      "The Army's Qatar deployment experience has historically been a shipping container in Kuwait, and we want to acknowledge that they served in those conditions with distinction and without a robe. This kit is not for them. It is for the airmen who landed at Al Udeid, checked into their lodging, and thought: yes, this is appropriate.",
+    ],
+    specs: [
+      { label: "Contents", value: "Café gift card, hotel slippers, white robe, toiletry set, potted succulent" },
+      { label: "Gift Card Value", value: "Olive-drab styled, 500-point café equivalent (non-redeemable at actual Starbucks)" },
+      { label: "Lodging Partner", value: "Compatible with all Al Udeid-standard lodging facilities" },
+      { label: "Plant Included", value: "Yes — 1 small potted succulent, duty-roster care card included" },
+      { label: "Weight", value: "4.1 lbs (succulent included; succulent adds 0.6 lbs)" },
+      { label: "Certifications", value: "MIL-STD-STARBUCKS compliant. CENTCOM lodging-rated." },
+    ],
+    warnings: [
+      "Succulent is not deployable to austere combat zones. It will not survive. Please rehome it before any subsequent rotation.",
+      "Robe is not authorized for the chow hall, the gym, or the shuttle bus. You know this. We're saying it anyway.",
+    ],
+    crossBranchJab:
+      "The Army's Qatar was a shipping container in Kuwait with a 100-watt bulb and a prayer — and they held the line, which we acknowledge while wearing our robe.",
+    reviews: [
+      {
+        rank: "SrA",
+        name: "Monica Castillo",
+        stars: 5,
+        body: "Got to Al Udeid, unpacked the Qatar Package, put on the robe, and did not feel one ounce of guilt. The succulent is still alive. It is my longest-running deployment relationship.",
+      },
+      {
+        rank: "1st Lt",
+        name: "Derek Brannigan",
+        stars: 4,
+        body: "The gift card worked at the café. The robe is excellent. I lost the slippers on day three. The succulent required more water than I expected and I still feel bad about it.",
+      },
+      {
+        rank: "CMSgt",
+        name: "Patricia Nwosu",
+        stars: 5,
+        body: "Bought these for every airman in my flight before deployment. The succulent care cards generated more discussion than any pre-deployment brief I have ever given. Five stars.",
+      },
+    ],
   },
   {
     slug: "base-housing-carpet-sampler",
@@ -953,12 +1058,47 @@ export const products: Product[] = [
     priceLabel: "$89.99",
     tagline: "Seventeen tasteful beiges.",
     image: "/sites/squaredaway/product-base-housing-carpet-sampler.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Seventeen carpet swatches in the full beige spectrum — taupe, cream, oatmeal, sand, fawn, linen, and eleven more — numbered 1 through 17. For the base housing decision that matters.",
+    longDescription: [
+      "The Base Housing Carpet Sampler™ is a curated collection of seventeen individual carpet swatches representing the full chromatic range available to Air Force base housing residents at most installations: taupe (samples 1–3), cream (4–5), oatmeal (6–8), sand (9–11), fawn (12–14), linen (15), warm gray (16), and a sample simply labeled 'Off-White, Standard Issue' (17). Each swatch is 4×4 inches, backed with felt, and numbered for reference in the included comparison guide.",
+      "The comparison guide is a laminated single-page document that helps residents differentiate between samples that, to the untrained eye, appear identical. The guide notes that samples 7 and 8 — Oatmeal Classic and Oatmeal Warm — differ by approximately 2% in yellow-brown value and that this distinction 'matters significantly when evaluating against wall paint.' We agree. We have been in base housing. We know how seriously people take this.",
+      "Navy sailors live below the waterline on metal decks and call it home, and they do not need a carpet sampler because there is no carpet, and we respect that in the way you respect a life choice that is extremely different from your own.",
+    ],
+    specs: [
+      { label: "Swatch Count", value: "17 samples, numbered 1–17" },
+      { label: "Color Range", value: "Taupe, cream, oatmeal, sand, fawn, linen, warm gray, off-white (standard issue)" },
+      { label: "Material", value: "Nylon loop pile, residential grade, base-housing spec" },
+      { label: "Pile Height", value: "Low to medium pile, 0.25–0.5 in (varies by swatch)" },
+      { label: "Stain Resistance", value: "Moderate — rated for household pets and children, not for NCO club spills" },
+      { label: "Certifications", value: "MIL-STD-BEIGE compliant. Housing office acceptable." },
+    ],
+    warnings: [
+      "Swatches are not suitable for barracks installation. Barracks have linoleum. This is a different product category and we do not offer linoleum.",
+      "Swatches are non-refundable once held against wall paint. Once you compare, you cannot un-compare. You will have an opinion. You have been informed.",
+    ],
+    crossBranchJab:
+      "The Navy lives below the waterline on steel decks — they don't need carpet swatches because they don't have carpet, and somehow that's worse.",
+    reviews: [
+      {
+        rank: "SSgt",
+        name: "Courtney Halverson",
+        stars: 5,
+        body: "Spent two weeks comparing samples 6, 7, and 8. Chose 7. Oatmeal Warm. It is correct. The guide was essential. My spouse asked where I got these and I said 'a place that understands us.'",
+      },
+      {
+        rank: "2d Lt",
+        name: "Aaron Fujimoto",
+        stars: 3,
+        body: "I am a new officer and I do not yet live in base housing. I bought this to feel prepared. The swatches are real and the guide is good. I now have opinions about oatmeal as a color category.",
+      },
+      {
+        rank: "Col",
+        name: "Barbara Engel",
+        stars: 5,
+        body: "Gifted this to every O-5 in my group upon selection for base housing. One of them cried at the laminated guide. The right amount of ceremony for the occasion. Five stars.",
+      },
+    ],
   },
   {
     slug: "flight-suit-cashmere-loungewear",
@@ -971,12 +1111,47 @@ export const products: Product[] = [
     priceLabel: "$499.00",
     tagline: "Sage green. Hand-wash only.",
     image: "/sites/squaredaway/product-flight-suit-cashmere-loungewear.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "100% Grade-A cashmere flight suit in sage green. Full front zipper with gold hardware. Fitted cut, hand-wash only. For the officer's club, the hotel lobby, or wherever the evening takes you.",
+    longDescription: [
+      "The Flight Suit™ Cashmere Loungewear is a full-length zip-front lounge garment in 100% Grade-A cashmere — sage green, of course — cut in the silhouette of the standard flight suit but made from a fabric that has never been and will never be near an aircraft. It has two patch pockets, two thigh pockets (decorative), a full-length YKK brass zipper, and a fitted tailored profile that has been described by our design team as 'the flight suit's better life.' It is $499. It is worth it.",
+      "This garment was developed for the Air Force officer who finishes a brief, removes their service uniform, and needs something to wear to the officers' club happy hour that communicates authority without trying too hard. The cashmere does the communicating. The sage green confirms the branch. The brass zipper says: I fly things, or I know people who fly things, or I am adjacent to flying things in a meaningful support capacity, and I feel comfortable about all of that.",
+      "The Marine Corps uniform is covered in sand by design. This garment is covered in cashmere by design. These are not competing philosophies — they are two branches that have made their peace with what they are, and this loungewear represents that peace in $499 of single-ply knit.",
+    ],
+    specs: [
+      { label: "Material", value: "100% Grade-A cashmere, single-ply, 16-micron fiber" },
+      { label: "Fit", value: "Tailored slim — not flight-suit cut. Fitted. Know your measurements." },
+      { label: "Care", value: "Hand-wash cold, lay flat to dry. Dry clean for deployment environments." },
+      { label: "Colors", value: "Sage green (one color; this is a flight suit, not a palette)" },
+      { label: "Zipper Hardware", value: "Full-length YKK brass zipper, double-pull" },
+      { label: "Certifications", value: "MIL-STD-DRIP compliant. Officers' club approved." },
+    ],
+    warnings: [
+      "This is not a real flight suit. It does not confer flight status, egress authority, or G-suit compatibility. Do not attempt to eject in it.",
+      "May attract unwanted attention at the Chili's on base. We consider this a feature, not a defect.",
+    ],
+    crossBranchJab:
+      "The Marine Corps uniform is covered in sand and proud of it — we respect the brand, but cashmere doesn't require a sand explanation.",
+    reviews: [
+      {
+        rank: "Capt",
+        name: "Vivienne Ashworth",
+        stars: 5,
+        body: "Wore this to the officers' club on a Thursday. Three people asked if I was a pilot. I am not a pilot. I said 'it's complicated.' The cashmere carried the conversation. Five stars.",
+      },
+      {
+        rank: "MSgt",
+        name: "Terrence Galbraith",
+        stars: 2,
+        body: "I am enlisted and this costs $499 and I don't understand who it's for but I tried it on at a squadron function and did not take it off for four hours. Still giving it two stars on principle.",
+      },
+      {
+        rank: "Lt Col",
+        name: "Jennifer Mosby",
+        stars: 5,
+        body: "My husband got this for my retirement gift. I wore it to the ceremony. My last act in the Air Force was wearing a flight suit made of cashmere and I feel nothing but gratitude. Perfect product.",
+      },
+    ],
   },
   {
     slug: "pt-test-completion-medal",
@@ -989,12 +1164,47 @@ export const products: Product[] = [
     priceLabel: "$79.99",
     tagline: "For scoring 75% on an 800m walk/jog.",
     image: "/sites/squaredaway/product-pt-test-completion-medal.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Gold-toned participation medal on a blue-and-white striped ribbon. Engraved: 'PT Assessment Completion — 75th Percentile Achieved.' For showing up. For finishing. For wearing it.",
+    longDescription: [
+      "The PT Test Completion Medal™ is a 2.5-inch round gold-toned zinc alloy medal on a blue-and-white striped grosgrain ribbon, engraved on the reverse with the phrase: 'PT Assessment Completion — 75th Percentile Achieved.' It was developed to honor the Air Force member who set a goal, appeared at the appointed time in the appointed athletic gear, completed an 800-meter walk/jog at a pace that cleared the minimum threshold, and documented the result. That is not nothing. That is something. This medal is for that something.",
+      "The front face of the medal bears a stylized running figure in profile — arms in motion, posture suggesting momentum or the performance of momentum, the important thing is the direction of travel — encircled by a wreath and the text 'PHYSICAL ASSESSMENT EXCELLENCE.' We are aware that 75% is the floor and not the ceiling. We made a product for the floor because the floor is where most people live and the floor deserves recognition.",
+      "The Army PT standard involves push-ups until failure, sit-ups until failure, and a two-mile run under 15 minutes — all events timed and scored to a rigorous age-graded rubric. The Air Force standard involves an 800-meter walk/jog and a waist measurement. These are two different programs and we have built a medal for one of them.",
+    ],
+    specs: [
+      { label: "Medal Material", value: "Gold-toned zinc alloy, polished face, textured edge" },
+      { label: "Ribbon", value: "Blue-and-white striped grosgrain, 1.5 in wide, 4 in length" },
+      { label: "Engraving", value: "'PT Assessment Completion — 75th Percentile Achieved' (reverse face)" },
+      { label: "Achievement Threshold", value: "75th percentile minimum — completing the assessment qualifies" },
+      { label: "Diameter", value: "2.5 in" },
+      { label: "Certifications", value: "MIL-STD-STROLL compliant. Participation-rated." },
+    ],
+    warnings: [
+      "This medal will not scale to Army PT standards and should not be displayed in proximity to APFT certificates, which measure something different and know it.",
+      "Do not display in Marine Corps facilities. The Marines have been briefed on this product and their response was not positive.",
+    ],
+    crossBranchJab:
+      "The Army PT test ends in a two-mile run scored by failure — we honor that tradition from a comfortable seated position, medal in hand.",
+    reviews: [
+      {
+        rank: "A1C",
+        name: "Tyler Beaumont",
+        stars: 4,
+        body: "I scored 76%. Barely cleared the threshold. Got this medal. Hung it next to my tech school certificate. My mom thinks I won something. I did not correct her. Four stars.",
+      },
+      {
+        rank: "MSgt",
+        name: "Denise Tran",
+        stars: 5,
+        body: "Bought these for every airman who passed their assessment in my flight. The ceremony was brief and sincere. They knew it was a joke and they kept the medals anyway. That's the whole point.",
+      },
+      {
+        rank: "SSgt",
+        name: "Kevin Marchand",
+        stars: 2,
+        body: "I scored 89% and the medal says 75th percentile. The medal does not know I scored 89%. I feel unseen. The product is fine. My ego is not fine. Two stars.",
+      },
+    ],
   },
   {
     slug: "premium-mre-af-variant",
@@ -1007,12 +1217,47 @@ export const products: Product[] = [
     priceLabel: "$69.99",
     tagline: "Served in ceramic with a $12 craft seltzer.",
     image: "/sites/squaredaway/product-premium-mre-af-variant.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Standard MRE plated in a ceramic bowl with a parsley garnish and a $12 craft seltzer pairing. Same caloric content. Completely different energy. The Air Force has earned this.",
+    longDescription: [
+      "The Premium MRE™ (AF Variant) is a standard-issue Meal Ready-to-Eat presented as it was always meant to be presented: in a shallow ceramic bowl, garnished with a sprig of flat-leaf parsley, accompanied by a 12-ounce craft seltzer paired to the entrée by our in-house beverage lead. The MRE itself has not been changed. The calories are identical. The sodium is identical. The flameless ration heater is included and available, though we recommend plating before service.",
+      "Our menu currently offers four presentations: Chicken and Dumplings (paired with a citrus seltzer — 'the acidity cuts through the starch'), Beef Ravioli (paired with a sparkling water with 'assertive carbonation and a clean finish'), Jambalaya (paired with a cucumber-mint seltzer 'for contrast'), and the Vegetarian Taco Pasta (paired with a plain seltzer because, as our pairing notes read, 'it is doing its best'). Each plate is photographed before packaging. The photo is included in the packaging. The food does not look like the photo.",
+      "The Army eats MREs at Fort Polk in the rain at 0200 with a spork and the knowledge that this is the next 14 days. The Air Force eats MREs occasionally, as a novelty, in a context that allows for a parsley garnish, and we have built a product that honors that distinction without shame.",
+    ],
+    specs: [
+      { label: "Menu Options", value: "Chicken & Dumplings, Beef Ravioli, Jambalaya, Vegetarian Taco Pasta" },
+      { label: "Included Pairing", value: "12 oz craft seltzer, flavor matched to entrée by our beverage team" },
+      { label: "Presentation", value: "Ceramic bowl, parsley garnish, printed plating photo included" },
+      { label: "Calories", value: "1,100–1,350 per entrée (standard MRE nutritional content, unchanged)" },
+      { label: "Origin", value: "Standard DoD MRE supply chain; ceramic bowl and garnish sourced separately" },
+      { label: "Certifications", value: "MIL-STD-CHIVE compliant. Garnish food-safe." },
+    ],
+    warnings: [
+      "Ceramic bowl is not deployable. It will break. Do not bring the ceramic bowl to the field. The MRE has a bag. Use the bag.",
+      "Parsley garnish may spoil in transit if shipped outside temperature-controlled packaging. The parsley is symbolic. The MRE is eternal.",
+    ],
+    crossBranchJab:
+      "The Army eats MREs in the mud with a plastic spork — they deserve this product more than we do, and that's exactly why they can't have it.",
+    reviews: [
+      {
+        rank: "1st Lt",
+        name: "Samuel Oduya",
+        stars: 5,
+        body: "Plated the Jambalaya for a squadron morale night. Put parsley on it. Poured the seltzer into a glass. Four airmen said it was the best MRE they'd ever had. Nothing about the food changed. Five stars.",
+      },
+      {
+        rank: "SrA",
+        name: "Jacqueline Morreau",
+        stars: 3,
+        body: "The seltzer pairing is genuinely thought-through. The citrus with Chicken and Dumplings is correct. The bowl is pretty. The MRE still tastes like an MRE. I feel complicated about this.",
+      },
+      {
+        rank: "Col",
+        name: "Marcus Whitfield",
+        stars: 5,
+        body: "Served these at a combined-arms dining event. The Army officer picked up the parsley, looked at it, set it down, and ate his in silence. I will never forget his face. Five stars.",
+      },
+    ],
   },
   {
     slug: "on-base-golf-course-keychain",
@@ -1025,12 +1270,47 @@ export const products: Product[] = [
     priceLabel: "$24.99",
     tagline: "Access to all 17 courses on base.",
     image: "/sites/squaredaway/product-on-base-golf-course-keychain.png",
-    shortDescription: "",
-    longDescription: [],
-    specs: [],
-    warnings: [],
-    crossBranchJab: "",
-    reviews: [],
+    shortDescription:
+      "Gold-toned golf-bag keychain on a leather fob stamped 'ON-BASE GOLF · 17 COURSES.' Fictional membership to all Air Force base golf courses included. The courses are real. The keychain earns it.",
+    longDescription: [
+      "The On-Base Golf Course Keychain is a gold-toned zinc alloy golf-bag charm on a 1.5-inch leather fob, heat-stamped in gold ink with the words 'ON-BASE GOLF · 17 COURSES.' It is $24.99. It is the most honest product we have ever made. Air Force bases have golf courses. This has been true for decades. The number of courses is not an exaggeration — some installations have had more than one. The keychain does not create this reality. It simply acknowledges it.",
+      "The keychain is presented as membership documentation. It is not membership documentation. It is a keychain. However, the membership it claims to grant is to courses that actually exist, staffed by pros and maintained by groundskeepers and attended by personnel who have found the time, and we feel this deserves a physical token that can be attached to car keys and rattled when someone asks what that little gold golf bag is. 'It's my access pass to the on-base courses,' you will say. 'How many courses?' they will ask. 'Seventeen,' you will say. This is true. This conversation will happen.",
+      "The Marine Corps rifle range is also called a 'course,' in the sense that it is a measured outdoor area where performance is assessed. The Marine Corps does not have a leather fob for it. We do not have the standing to comment on this situation except to say that we support all forms of outdoor recreation and have priced this keychain accordingly.",
+    ],
+    specs: [
+      { label: "Material", value: "Gold-toned zinc alloy golf-bag charm, split-ring attached" },
+      { label: "Dimensions", value: "Golf bag charm: 1.1 in H × 0.6 in W; leather fob: 1.5 in" },
+      { label: "Weight", value: "0.8 oz" },
+      { label: "Course Access", value: "Fictional membership to all 17 on-base AF golf courses (claims non-binding)" },
+      { label: "Transferable", value: "Yes. The keychain transfers. The courses remain stationary." },
+      { label: "Certifications", value: "MIL-STD-BIRDIE compliant. Handicap not included." },
+    ],
+    warnings: [
+      "Course access claims are non-binding. This is a keychain. Actual tee time reservations require standard base recreation booking procedures.",
+      "Golf instruction is not included. Golf instruction requires a golf instructor. The keychain is not a golf instructor.",
+    ],
+    crossBranchJab:
+      "The Marine Corps rifle range is technically a course too — we just appreciate that Air Force courses have scorecards and a beverage cart.",
+    reviews: [
+      {
+        rank: "CMSgt",
+        name: "Robert Wainwright",
+        stars: 5,
+        body: "I have played 9 of the 17 courses. I carry this keychain. When people ask what it is I explain the whole thing. Nobody has ever been surprised that we have 17 courses. That tells you everything.",
+      },
+      {
+        rank: "2d Lt",
+        name: "Aisha Drummond",
+        stars: 4,
+        body: "Someone at dinner asked why the Air Force has 17 golf courses. I said 'because we can.' They did not have a follow-up. The keychain is good. The leather is real.",
+      },
+      {
+        rank: "TSgt",
+        name: "Phillip Kostner",
+        stars: 5,
+        body: "My Army buddy picked this up off my desk and read the fob. He stared at it for a long time. He did not laugh. He set it back down. He didn't say anything the rest of the night. Five stars.",
+      },
+    ],
   },
 
   // ===== MARINES =====
