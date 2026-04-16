@@ -18,6 +18,7 @@ import { config as gristmillConfig, pages as gristmillPages, dynamicRoutes as gr
 import { config as oddoccasionsConfig, pages as oddoccasionsPages, dynamicRoutes as oddoccasionsDynamicRoutes } from "./oddoccasions"
 import { config as pettentialConfig, pages as pettentialPages, dynamicRoutes as pettentialDynamicRoutes } from "./pettential"
 import { config as rocksConfig, pages as rocksPages, dynamicRoutes as rocksDynamicRoutes } from "./rocks"
+import { config as squaredawayConfig, pages as squaredawayPages, dynamicRoutes as squaredawayDynamicRoutes } from "./squaredaway"
 import { config as radiumroysConfig, pages as radiumroysPages } from "./radiumroys"
 
 export const siteRegistry: Record<string, SiteModule> = {
@@ -40,6 +41,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   oddoccasions: { config: oddoccasionsConfig, pages: oddoccasionsPages, dynamicRoutes: oddoccasionsDynamicRoutes },
   pettential: { config: pettentialConfig, pages: pettentialPages, dynamicRoutes: pettentialDynamicRoutes },
   rocks: { config: rocksConfig, pages: rocksPages, dynamicRoutes: rocksDynamicRoutes },
+  squaredaway: { config: squaredawayConfig, pages: squaredawayPages, dynamicRoutes: squaredawayDynamicRoutes },
   radiumroys: { config: radiumroysConfig, pages: radiumroysPages },
 }
 
