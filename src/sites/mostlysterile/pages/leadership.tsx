@@ -21,7 +21,7 @@ const leadership = [
   },
   {
     image: "/sites/mostlysterile/team-cmo.png",
-    name: "Perdita J. Aquilar",
+    name: "Hollis R. Vossler",
     title: "Chief Medical Officer",
     bio: "Unaffiliated with any American Medical Association. Provides day-to-day clinical oversight to the extent feasible and is available for consultation during regular business hours, where available.",
   },
