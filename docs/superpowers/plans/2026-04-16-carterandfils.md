@@ -1020,7 +1020,7 @@ export default function CarterAndFilsHome() {
       {/* Featured Vintages */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <p className="text-center text-sm tracking-[0.3em] uppercase text-accent mb-3">Featured Vintages</p>
+          <p className="text-center text-sm tracking-[0.3em] uppercase text-primary/70 mb-3">Featured Vintages</p>
           <h2 className="text-4xl font-heading font-semibold text-center mb-16">From the Allegheny</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {featured.map((product) => (
@@ -1041,7 +1041,7 @@ export default function CarterAndFilsHome() {
       {/* Terroir strip */}
       <section className="py-20 px-4 bg-secondary/40 border-y border-accent/20">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-sm tracking-[0.3em] uppercase text-accent mb-4">The Allegheny Terroir</p>
+          <p className="text-sm tracking-[0.3em] uppercase text-primary/70 mb-4">The Allegheny Terroir</p>
           <p className="text-2xl font-heading italic leading-relaxed text-foreground">
             "The shale remembers. The vine merely repeats."
           </p>
@@ -1052,7 +1052,7 @@ export default function CarterAndFilsHome() {
       {/* Wine Club teaser */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-sm tracking-[0.3em] uppercase text-accent mb-3">Carter & Fils Cellar Society</p>
+          <p className="text-sm tracking-[0.3em] uppercase text-primary/70 mb-3">Carter & Fils Cellar Society</p>
           <h2 className="text-4xl font-heading font-semibold mb-6">Join the Wine Club</h2>
           <p className="text-lg text-foreground/70 leading-relaxed max-w-2xl mx-auto mb-8">
             A monthly selection, curated from the cellar. Three tiers, each more considered than the last — and an annual invitation to the estate for our Platinum Collectors.
@@ -1241,7 +1241,7 @@ export default function ProductDetail({ slug }: { slug: string }) {
               <Image src={product.image} alt={product.name} fill className="object-contain p-12" priority />
             </div>
             <div>
-              <p className="text-sm tracking-[0.3em] uppercase text-accent mb-2">{CATEGORY_LABELS[product.category]}</p>
+              <p className="text-sm tracking-[0.3em] uppercase text-primary/70 mb-2">{CATEGORY_LABELS[product.category]}</p>
               <h1 className="text-4xl font-heading font-semibold text-foreground mb-3">{product.name}</h1>
               <p className="text-lg italic text-foreground/70 mb-8">{product.tagline}</p>
               <p className="text-3xl font-heading text-primary mb-2">{product.priceLabel}</p>
@@ -1253,11 +1253,11 @@ export default function ProductDetail({ slug }: { slug: string }) {
               />
               <div className="space-y-6 border-t border-accent/30 pt-8">
                 <div>
-                  <p className="text-xs tracking-[0.3em] uppercase text-accent mb-2">Tasting Notes</p>
+                  <p className="text-xs tracking-[0.3em] uppercase text-primary/70 mb-2">Tasting Notes</p>
                   <p className="text-foreground/80 leading-relaxed">{product.tastingNotes}</p>
                 </div>
                 <div>
-                  <p className="text-xs tracking-[0.3em] uppercase text-accent mb-2">Pairings</p>
+                  <p className="text-xs tracking-[0.3em] uppercase text-primary/70 mb-2">Pairings</p>
                   <ul className="text-foreground/80 space-y-1">
                     {product.pairings.map((p, i) => (
                       <li key={i} className="italic">— {p}</li>
@@ -1265,15 +1265,15 @@ export default function ProductDetail({ slug }: { slug: string }) {
                   </ul>
                 </div>
                 <div>
-                  <p className="text-xs tracking-[0.3em] uppercase text-accent mb-2">Terroir</p>
+                  <p className="text-xs tracking-[0.3em] uppercase text-primary/70 mb-2">Terroir</p>
                   <p className="text-foreground/80 leading-relaxed">{product.terroirNote}</p>
                 </div>
                 <div>
-                  <p className="text-xs tracking-[0.3em] uppercase text-accent mb-2">Aging Profile</p>
+                  <p className="text-xs tracking-[0.3em] uppercase text-primary/70 mb-2">Aging Profile</p>
                   <p className="text-foreground/80 leading-relaxed">{product.agingProfile}</p>
                 </div>
                 <div>
-                  <p className="text-xs tracking-[0.3em] uppercase text-accent mb-2">Available Sizes</p>
+                  <p className="text-xs tracking-[0.3em] uppercase text-primary/70 mb-2">Available Sizes</p>
                   <ul className="text-foreground/80 space-y-1">
                     {product.sizes.map((s) => (
                       <li key={s.label}>{s.label} — ${s.price}</li>
@@ -1428,7 +1428,7 @@ export default function OurStory() {
           <div className="not-prose space-y-6 my-10">
             {generations.map((g, i) => (
               <div key={i} className="border-l-2 border-accent pl-6">
-                <p className="text-sm tracking-[0.2em] uppercase text-accent">{g.years}</p>
+                <p className="text-sm tracking-[0.2em] uppercase text-primary/70">{g.years}</p>
                 <p className="text-xl font-heading font-semibold text-foreground">{g.name}</p>
                 <p className="text-foreground/70">{g.note}</p>
               </div>
@@ -1505,7 +1505,7 @@ export default function Family() {
                 <Image src={e.image} alt={e.name} fill className="object-cover" />
               </div>
               <div>
-                <p className="text-sm tracking-[0.3em] uppercase text-accent mb-2">{e.title}</p>
+                <p className="text-sm tracking-[0.3em] uppercase text-primary/70 mb-2">{e.title}</p>
                 <h2 className="text-3xl font-heading font-semibold text-foreground mb-6">{e.name}</h2>
                 <p className="text-foreground/80 leading-relaxed mb-6">{e.bio}</p>
                 <p className="text-lg italic font-heading text-primary border-l-2 border-accent pl-4">
@@ -1623,7 +1623,7 @@ export default function WineClub() {
               key={t.name}
               className={`border-2 p-10 ${t.highlight ? "border-primary bg-secondary/40" : "border-accent/30"}`}
             >
-              <p className="text-xs tracking-[0.3em] uppercase text-accent mb-2">{t.bottles}</p>
+              <p className="text-xs tracking-[0.3em] uppercase text-primary/70 mb-2">{t.bottles}</p>
               <h3 className="text-2xl font-heading font-semibold text-foreground mb-2">{t.name}</h3>
               <p className="text-sm italic text-foreground/70 mb-6">{t.tagline}</p>
               <p className="text-4xl font-heading text-primary mb-2">{t.price}</p>
@@ -1631,7 +1631,7 @@ export default function WineClub() {
               <ul className="space-y-3 text-sm text-foreground/80 mb-8">
                 {t.perks.map((p, i) => (
                   <li key={i} className="flex gap-2">
-                    <span className="text-accent flex-shrink-0">—</span>
+                    <span className="text-primary/60 flex-shrink-0">—</span>
                     <span>{p}</span>
                   </li>
                 ))}
@@ -1704,7 +1704,7 @@ export default function Visit() {
 
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <p className="text-xs tracking-[0.3em] uppercase text-accent mb-2">Experiences</p>
+              <p className="text-xs tracking-[0.3em] uppercase text-primary/70 mb-2">Experiences</p>
               <h2 className="text-3xl font-heading font-semibold text-foreground mb-6">The Tasting Room</h2>
               <p className="text-foreground/80 leading-relaxed mb-4">
                 Our tasting room, housed in the original 1863 press building, offers seated flights across the estate's current releases. Flights are led by a member of our sommelier team and last approximately 60 minutes.
@@ -1727,7 +1727,7 @@ export default function Visit() {
           <div className="border-t border-accent/30 pt-16">
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <p className="text-xs tracking-[0.3em] uppercase text-accent mb-2">Hours</p>
+                <p className="text-xs tracking-[0.3em] uppercase text-primary/70 mb-2">Hours</p>
                 <h2 className="text-2xl font-heading font-semibold text-foreground mb-6">Tasting Room Hours</h2>
                 <dl className="space-y-2 text-foreground/80">
                   <div className="flex justify-between border-b border-accent/20 pb-2"><dt>Monday</dt><dd>Closed</dd></div>
@@ -1737,7 +1737,7 @@ export default function Visit() {
                 </dl>
               </div>
               <div>
-                <p className="text-xs tracking-[0.3em] uppercase text-accent mb-2">Directions</p>
+                <p className="text-xs tracking-[0.3em] uppercase text-primary/70 mb-2">Directions</p>
                 <h2 className="text-2xl font-heading font-semibold text-foreground mb-6">Finding Us</h2>
                 <p className="text-foreground/80 leading-relaxed mb-2">
                   1859 Old Shale Road<br />
@@ -1751,7 +1751,7 @@ export default function Visit() {
           </div>
 
           <div className="border-t border-accent/30 pt-16 text-center">
-            <p className="text-xs tracking-[0.3em] uppercase text-accent mb-2">Private Gatherings</p>
+            <p className="text-xs tracking-[0.3em] uppercase text-primary/70 mb-2">Private Gatherings</p>
             <h2 className="text-3xl font-heading font-semibold text-foreground mb-4">The Allegheny Barrel Room</h2>
             <p className="text-foreground/80 leading-relaxed max-w-2xl mx-auto mb-6">
               Our largest private room seats up to thirty. Ideal for anniversaries, quiet corporate gatherings, and occasions that call for a setting of consequence. Please inquire directly for availability and catering arrangements.
@@ -1824,7 +1824,7 @@ export default function Journal() {
         <div className="max-w-3xl mx-auto space-y-14">
           {sorted.map((e) => (
             <article key={e.slug} className="border-b border-accent/30 pb-14 last:border-b-0">
-              <p className="text-xs tracking-[0.3em] uppercase text-accent mb-3">
+              <p className="text-xs tracking-[0.3em] uppercase text-primary/70 mb-3">
                 {formatDate(e.publishedDate)} · {e.readingTime}
               </p>
               <Link href={`/journal/${e.slug}`} className="block group">
@@ -1834,7 +1834,7 @@ export default function Journal() {
               </Link>
               <p className="text-foreground/80 italic leading-relaxed mb-4">{e.excerpt}</p>
               <p className="text-sm text-foreground/60">— {e.author}</p>
-              <Link href={`/journal/${e.slug}`} className="inline-block mt-6 text-sm tracking-widest uppercase text-primary hover:text-accent transition-colors border-b-2 border-primary">
+              <Link href={`/journal/${e.slug}`} className="inline-block mt-6 text-sm tracking-widest uppercase text-primary hover:opacity-70 transition-opacity border-b-2 border-primary">
                 Read the Essay
               </Link>
             </article>
@@ -1890,10 +1890,10 @@ export default function JournalEntry({ slug }: { slug: string }) {
   return (
     <article className="py-20 px-4">
       <div className="max-w-3xl mx-auto">
-        <Link href="/journal" className="text-sm tracking-widest uppercase text-accent hover:text-primary transition-colors">
+        <Link href="/journal" className="text-sm tracking-widest uppercase text-primary/70 hover:text-primary transition-colors">
           ← The Journal
         </Link>
-        <p className="text-xs tracking-[0.3em] uppercase text-accent mt-10 mb-4">
+        <p className="text-xs tracking-[0.3em] uppercase text-primary/70 mt-10 mb-4">
           {formatDate(entry.publishedDate)} · {entry.readingTime}
         </p>
         <h1 className="text-5xl font-heading font-semibold text-foreground mb-6 leading-tight">
@@ -2028,7 +2028,7 @@ export default function Contact() {
         <div className="max-w-2xl mx-auto space-y-10">
 
           <div>
-            <p className="text-xs tracking-[0.3em] uppercase text-accent mb-2">Mailing</p>
+            <p className="text-xs tracking-[0.3em] uppercase text-primary/70 mb-2">Mailing</p>
             <p className="text-lg text-foreground/85 leading-relaxed">
               Domaine Carter & Fils<br />
               1859 Old Shale Road<br />
@@ -2037,21 +2037,21 @@ export default function Contact() {
           </div>
 
           <div>
-            <p className="text-xs tracking-[0.3em] uppercase text-accent mb-2">Telephone</p>
+            <p className="text-xs tracking-[0.3em] uppercase text-primary/70 mb-2">Telephone</p>
             <p className="text-lg text-foreground/85">
               (814) 555-1859 &nbsp;·&nbsp; Tuesday–Sunday, 11:00 – 17:00
             </p>
           </div>
 
           <div>
-            <p className="text-xs tracking-[0.3em] uppercase text-accent mb-2">Inquiries</p>
+            <p className="text-xs tracking-[0.3em] uppercase text-primary/70 mb-2">Inquiries</p>
             <p className="text-lg text-foreground/85 leading-relaxed">
               For tasting reservations, please call. For press, distribution, and private-event inquiries, a letter is most welcome. We do not maintain an active customer-service email address, as we prefer the unhurried cadence of written correspondence.
             </p>
           </div>
 
           <form className="space-y-4 border-t border-accent/30 pt-10">
-            <p className="text-xs tracking-[0.3em] uppercase text-accent mb-4">Send us a note</p>
+            <p className="text-xs tracking-[0.3em] uppercase text-primary/70 mb-4">Send us a note</p>
             <input type="text" placeholder="Your name" className="w-full px-4 py-3 border border-accent/40 bg-transparent text-foreground" />
             <input type="email" placeholder="Your email" className="w-full px-4 py-3 border border-accent/40 bg-transparent text-foreground" />
             <textarea placeholder="Your message" rows={6} className="w-full px-4 py-3 border border-accent/40 bg-transparent text-foreground resize-none" />
@@ -2061,7 +2061,7 @@ export default function Contact() {
           </form>
 
           <p className="text-xs text-foreground/40 pt-10 border-t border-accent/20">
-            Administrative correspondence: <a href="mailto:bsambrone@gmail.com" className="underline hover:text-accent">bsambrone@gmail.com</a>
+            Administrative correspondence: <a href="mailto:bsambrone@gmail.com" className="underline hover:opacity-70 transition-opacity">bsambrone@gmail.com</a>
           </p>
         </div>
       </section>
@@ -2121,8 +2121,8 @@ export default function Privacy() {
         <div className="max-w-3xl mx-auto space-y-6 text-foreground/80 leading-relaxed">
           <p className="text-sm text-foreground/80 bg-secondary/40 border border-accent/30 p-4">
             The authoritative privacy policy for all Specific Industries properties is maintained at{" "}
-            <a href="https://specificindustries.com/privacy" className="text-accent underline hover:text-primary transition-colors">specificindustries.com</a>.{" "}
-            <a href="https://specificindustries.com/terms" className="text-accent underline hover:text-primary transition-colors">View Terms of Use</a>
+            <a href="https://specificindustries.com/privacy" className="text-primary underline hover:opacity-70 transition-opacity">specificindustries.com</a>.{" "}
+            <a href="https://specificindustries.com/terms" className="text-primary underline hover:opacity-70 transition-opacity">View Terms of Use</a>
           </p>
           <p className="text-sm text-foreground/40 italic">
             Last revised in the quiet hours of the cellar office. Version 7.0, printed on the estate's good paper.
@@ -2190,8 +2190,8 @@ export default function Terms() {
         <div className="max-w-3xl mx-auto space-y-6 text-foreground/80 leading-relaxed">
           <p className="text-sm text-foreground/80 bg-secondary/40 border border-accent/30 p-4">
             The authoritative terms of service for all Specific Industries properties are maintained at{" "}
-            <a href="https://specificindustries.com/terms" className="text-accent underline hover:text-primary transition-colors">specificindustries.com</a>.{" "}
-            <a href="https://specificindustries.com/privacy" className="text-accent underline hover:text-primary transition-colors">View Privacy Policy</a>
+            <a href="https://specificindustries.com/terms" className="text-primary underline hover:opacity-70 transition-opacity">specificindustries.com</a>.{" "}
+            <a href="https://specificindustries.com/privacy" className="text-primary underline hover:opacity-70 transition-opacity">View Privacy Policy</a>
           </p>
 
           <h2 className="text-2xl font-heading font-semibold text-primary mt-8">1. The Association</h2>
