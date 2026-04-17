@@ -7,6 +7,7 @@ import OurStory, { metadata as ourStoryMetadata } from "./pages/our-story"
 import Family, { metadata as familyMetadata } from "./pages/family"
 import ProductDetail from "./pages/product-detail"
 import WineClub, { metadata as wineClubMetadata } from "./pages/wine-club"
+import Visit, { metadata as visitMetadata } from "./pages/visit"
 
 export { config }
 
@@ -16,6 +17,7 @@ export const pages: Record<string, PageEntry> = {
   "our-story": { component: OurStory, metadata: ourStoryMetadata },
   "family": { component: Family, metadata: familyMetadata },
   "wine-club": { component: WineClub, metadata: wineClubMetadata },
+  "visit": { component: Visit, metadata: visitMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
