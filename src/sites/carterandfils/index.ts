@@ -3,6 +3,7 @@ import { config } from "./config"
 import { getProductBySlug } from "./data/products"
 import CarterAndFilsHome from "./pages/home"
 import CarterAndFilsCellar, { metadata as cellarMetadata } from "./pages/cellar"
+import OurStory, { metadata as ourStoryMetadata } from "./pages/our-story"
 import ProductDetail from "./pages/product-detail"
 
 export { config }
@@ -10,6 +11,7 @@ export { config }
 export const pages: Record<string, PageEntry> = {
   "": CarterAndFilsHome,
   "cellar": { component: CarterAndFilsCellar, metadata: cellarMetadata },
+  "our-story": { component: OurStory, metadata: ourStoryMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
