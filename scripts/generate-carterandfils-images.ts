@@ -1,6 +1,6 @@
 /**
  * Batch image generator for Carter & Fils Vineyard site.
- * Uses OpenAI's gpt-image-1 model to generate hero and executive portrait images.
+ * Uses OpenAI's gpt-image-1 model to generate hero, executive portrait, and product bottle images.
  *
  * Usage: OPENAI_API_KEY=sk-... npx tsx scripts/generate-carterandfils-images.ts
  *
@@ -11,6 +11,7 @@ import OpenAI, { toFile } from "openai"
 import fs from "fs"
 import path from "path"
 import sharp from "sharp"
+import { products } from "../src/sites/carterandfils/data/products"
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 const OUTPUT_DIR = path.join(__dirname, "../public/sites/carterandfils")
@@ -206,6 +207,30 @@ async function main() {
     } catch (err: any) {
       console.error(`  ✗ favicon.png resize failed: ${err.message}`)
     }
+  }
+
+  // ── 4. Product Bottle Illustrations ──
+  console.log("\n🍾 Product Bottle Illustrations")
+
+  function bottlePrompt(p: { name: string; grade: string; varietal: string; category: string }): string {
+    return [
+      "Elegant 19th-century engraved-style illustration of a French winery bottle, centered on a pale parchment-cream background.",
+      "The bottle is dark burgundy glass with subtle highlights, corked, with a wax-seal at the top.",
+      `The label reads "DOMAINE CARTER & FILS" in classical serif small-caps type at the top, with "${p.name}" in a tasteful italic serif beneath, and "${p.grade}" in small caps at the bottom edge of the label.`,
+      "Fine-line illustration style, sepia and burnt-umber ink wash over parchment, heraldic wreath motif, no photorealism.",
+      "Minimal, old-world, catalog-style, no shadows beneath, no surrounding scenery, just the bottle.",
+    ].join(" ")
+  }
+
+  for (const product of products) {
+    // Strip the leading "/sites/carterandfils/" to get just the filename
+    const filename = product.image.replace("/sites/carterandfils/", "")
+    try {
+      await generateImage(bottlePrompt(product), filename)
+    } catch (err: any) {
+      console.error(`  ✗ ${filename}: ${err.message}`)
+    }
+    await delay(1500)
   }
 
   console.log("\n═══ Done ═══\n")
