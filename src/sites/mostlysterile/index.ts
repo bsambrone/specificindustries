@@ -4,6 +4,7 @@ import { getProductBySlug } from "./data/products"
 import MostlysterileHome from "./pages/home"
 import MostlysterileProducts, { metadata as productsMetadata } from "./pages/products"
 import MostlysterileAbout, { metadata as aboutMetadata } from "./pages/about"
+import MostlysterileCertifications, { metadata as certificationsMetadata } from "./pages/certifications"
 import ProductDetail from "./pages/product-detail"
 
 export { config }
@@ -12,6 +13,7 @@ export const pages: Record<string, PageEntry> = {
   "": MostlysterileHome,
   "products": { component: MostlysterileProducts, metadata: productsMetadata },
   "about": { component: MostlysterileAbout, metadata: aboutMetadata },
+  "certifications": { component: MostlysterileCertifications, metadata: certificationsMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
