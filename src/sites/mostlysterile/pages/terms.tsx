@@ -43,7 +43,7 @@ export default function MostlysterileTerms() {
         <div className="border border-primary/30 bg-secondary/20 p-5 mb-10 text-sm text-foreground/80">
           <p>
             The authoritative terms of service for all Specific Industries properties, including this one, are maintained at{" "}
-            <a href="https://specificindustries.com/terms" className="text-accent underline hover:text-primary transition-colors">
+            <a href="https://specificindustries.com/terms" className="text-primary underline hover:no-underline transition-colors">
               specificindustries.com/terms
             </a>
             . Those terms govern all actual commercial relationships on this site. In the event of any conflict between the sections below and the umbrella terms, the umbrella terms control.

@@ -15,8 +15,8 @@ export function CertificationCard({ title, issuer, year, note }: CertificationCa
       <span className="absolute bottom-1 right-1 w-3 h-3 border-b-2 border-r-2 border-accent" aria-hidden="true" />
 
       {/* Ornamental seal */}
-      <div className="mx-auto mb-4 w-14 h-14 rounded-full border-2 border-accent bg-accent/10 flex items-center justify-center">
-        <span className="text-accent font-heading font-bold text-xl tracking-widest">MS</span>
+      <div className="mx-auto mb-4 w-14 h-14 rounded-full border-2 border-primary bg-accent/25 flex items-center justify-center">
+        <span className="text-primary font-heading font-bold text-xl tracking-widest">MS</span>
       </div>
 
       <p className="text-[10px] uppercase tracking-[0.2em] text-foreground/50 mb-2">Certificate of</p>

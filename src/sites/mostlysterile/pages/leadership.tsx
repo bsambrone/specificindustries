@@ -60,7 +60,7 @@ export default function MostlysterileLeadership() {
 
       <section className="py-10 px-4 bg-secondary/10 border-y border-primary/10">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-xs uppercase tracking-widest text-accent font-semibold mb-3">Governance Note</p>
+          <p className="text-xs uppercase tracking-widest text-primary/60 font-semibold mb-3">Governance Note</p>
           <p className="text-sm text-foreground/70 leading-relaxed">
             Mostlysterile maintains no outside board, no formal advisors, and no staff beyond the four individuals named above. A succession plan exists in conceptual form and will be committed to writing in due course.
           </p>

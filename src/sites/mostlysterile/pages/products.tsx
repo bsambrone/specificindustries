@@ -39,7 +39,7 @@ function ProductCardClient({ product }: { product: Product }) {
           <h3 className="text-lg font-heading font-semibold text-primary mb-1">{product.name}</h3>
         </Link>
         <p className="text-sm text-foreground/60 mb-2">{product.tagline}</p>
-        <p className="text-lg font-semibold text-accent mb-3">{product.priceLabel}</p>
+        <p className="text-lg font-semibold text-primary mb-3">{product.priceLabel}</p>
         <AddToCartButton slug={product.slug} productName={product.name} quips={addToCartQuips} />
       </div>
     </div>

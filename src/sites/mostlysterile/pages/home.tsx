@@ -130,7 +130,7 @@ export default async function MostlysterileHome() {
             href={siteHref("/certifications")}
             className="block border-2 border-primary/20 p-8 bg-background hover:border-primary transition-colors"
           >
-            <p className="text-xs uppercase tracking-widest text-accent font-semibold mb-2">Transparency</p>
+            <p className="text-xs uppercase tracking-widest text-primary/60 font-semibold mb-2">Transparency</p>
             <h3 className="text-2xl font-heading font-bold text-primary mb-3">Review Our Certifications</h3>
             <p className="text-foreground/70 text-sm">
               A complete gallery of the credentials, training completions, and honors our team has accumulated over time.
@@ -141,7 +141,7 @@ export default async function MostlysterileHome() {
             href={siteHref("/quality-assurance")}
             className="block border-2 border-primary/20 p-8 bg-background hover:border-primary transition-colors"
           >
-            <p className="text-xs uppercase tracking-widest text-accent font-semibold mb-2">Process</p>
+            <p className="text-xs uppercase tracking-widest text-primary/60 font-semibold mb-2">Process</p>
             <h3 className="text-2xl font-heading font-bold text-primary mb-3">Our 12-Step Sterility Process</h3>
             <p className="text-foreground/70 text-sm">
               Every product at Mostlysterile is reviewed through our rigorous twelve-step verification procedure, or something functionally equivalent.

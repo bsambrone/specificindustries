@@ -26,7 +26,7 @@ export default function ProductDetail({ slug }: { slug: string }) {
             <Image src={product.image} alt={product.name} fill className="object-cover" priority fetchPriority="high" />
           </div>
           <div>
-            <p className="text-xs uppercase tracking-widest text-accent font-semibold mb-2">{categoryLabel}</p>
+            <p className="text-xs uppercase tracking-widest text-primary/60 font-semibold mb-2">{categoryLabel}</p>
             <h1 className="text-4xl font-heading font-bold text-primary mb-2">{product.name}</h1>
             <p className="text-lg text-foreground/70 italic mb-4">{product.tagline}</p>
             <p className="text-3xl font-bold text-primary mb-6">{product.priceLabel}</p>

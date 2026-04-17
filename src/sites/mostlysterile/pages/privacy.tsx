@@ -44,7 +44,7 @@ export default function MostlysterilePrivacy() {
         <div className="border border-primary/30 bg-secondary/20 p-5 mb-10 text-sm text-foreground/80">
           <p>
             The authoritative privacy policy for all Specific Industries properties, including this one, is maintained at{" "}
-            <a href="https://specificindustries.com/privacy" className="text-accent underline hover:text-primary transition-colors">
+            <a href="https://specificindustries.com/privacy" className="text-primary underline hover:no-underline transition-colors">
               specificindustries.com/privacy
             </a>
             . That policy governs all actual data handling on this site. In the event of any conflict between the sections below and the umbrella policy, the umbrella policy controls.
