@@ -10,6 +10,7 @@ import MostlysterileLeadership, { metadata as leadershipMetadata } from "./pages
 import MostlysterileFaq, { metadata as faqMetadata } from "./pages/faq"
 import MostlysterileContact from "./pages/contact"
 import MostlysterilePrivacy, { metadata as privacyMetadata } from "./pages/privacy"
+import MostlysterileTerms, { metadata as termsMetadata } from "./pages/terms"
 import ProductDetail from "./pages/product-detail"
 
 export { config }
@@ -24,6 +25,7 @@ export const pages: Record<string, PageEntry> = {
   "faq": { component: MostlysterileFaq, metadata: faqMetadata },
   "contact": MostlysterileContact,
   "privacy": { component: MostlysterilePrivacy, metadata: privacyMetadata },
+  "terms": { component: MostlysterileTerms, metadata: termsMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
