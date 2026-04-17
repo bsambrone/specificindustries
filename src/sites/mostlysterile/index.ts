@@ -11,6 +11,8 @@ import MostlysterileFaq, { metadata as faqMetadata } from "./pages/faq"
 import MostlysterileContact from "./pages/contact"
 import MostlysterilePrivacy, { metadata as privacyMetadata } from "./pages/privacy"
 import MostlysterileTerms, { metadata as termsMetadata } from "./pages/terms"
+import MostlysterileCart from "./pages/cart"
+import MostlysterileCheckout from "./pages/checkout"
 import ProductDetail from "./pages/product-detail"
 
 export { config }
@@ -26,6 +28,8 @@ export const pages: Record<string, PageEntry> = {
   "contact": MostlysterileContact,
   "privacy": { component: MostlysterilePrivacy, metadata: privacyMetadata },
   "terms": { component: MostlysterileTerms, metadata: termsMetadata },
+  "cart": MostlysterileCart,
+  "checkout": MostlysterileCheckout,
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
