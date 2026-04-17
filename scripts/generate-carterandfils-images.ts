@@ -209,28 +209,125 @@ async function main() {
     }
   }
 
-  // ── 4. Product Bottle Illustrations ──
-  console.log("\n🍾 Product Bottle Illustrations")
+  // ─── 5. Estate Imagery ─────────────────────────────────────────
+  console.log("\n🏛  Estate Imagery")
+
+  await generateImage(
+    "Wide cinematic photograph of rolling vineyard hills in western Pennsylvania at golden-hour dusk. Neat rows of grapevines sweeping across the foreground. A 19th-century stone winery manor with clay-tile roof sits in the middle distance, warm amber windows lit from inside. CRITICAL DETAIL: on the distant ridge line, just barely visible through a stand of poplar trees, the silhouette of two or three classic steel oil derricks stands against the sunset sky — barely perceptible, almost a trick of the light. Warm, saturated color palette, soft haze, pastoral but with that unmistakable detail on the horizon.",
+    "estate-vineyards.png",
+    "1536x1024"
+  )
+  await new Promise(r => setTimeout(r, 1500))
+
+  await generateImage(
+    "Exterior photograph of a weathered 19th-century stone press building, rectangular with a slate roof and heavy oak door, vines growing up one wall. Part of a small French-style winery estate in the Allegheny foothills. Overcast afternoon light. Subtle detail: the ground around the building has a faint dark patch near the corner, as if something once leaked; weeds grow around it. On the far edge of the frame, through a gap in the trees, a small black steel oil derrick stands quietly in a clearing. Photographic, documentary tone.",
+    "estate-press-house.png",
+    "1536x1024"
+  )
+  await new Promise(r => setTimeout(r, 1500))
+
+  await generateImage(
+    "Geological cross-section illustration showing layered shale bedrock beneath rolling vineyard soil. Top layer: dark topsoil with vine roots reaching down. Middle layers: clay, sandstone. Bottom layers: dense Allegheny shale in dark grey and charcoal tones, with visible striations. CRITICAL DETAIL: within the deepest shale layer, a faint amber-black sheen running in pockets between the strata — hydrocarbon deposits, drawn with geological-textbook precision but understated. Rendered in the style of a 19th-century scientific plate, sepia ink and wash, labeled with tasteful calligraphy in French and English.",
+    "estate-terroir.png",
+    "1536x1024"
+  )
+  await new Promise(r => setTimeout(r, 1500))
+
+  // ─── 6. Journal Entry Imagery ──────────────────────────────────
+  console.log("\n📝 Journal Entry Imagery")
+
+  await generateImage(
+    "Classic still-life composition: an elegant crystal wine decanter on a dark wooden table, being filled from a slender-necked wine bottle held by a gloved hand. Deep amber-black liquid flows from bottle to decanter in a slow ribbon. Warm candlelight, old-master painting style. Subtle detail: the liquid's viscosity is slightly too thick for wine, with the faintest iridescent sheen catching the candlelight. A silver sommelier's tastevin rests nearby on a folded linen. Tasteful, dignified, antique still-life aesthetic.",
+    "journal-decanting.png",
+    "1536x1024"
+  )
+  await new Promise(r => setTimeout(r, 1500))
+
+  await generateImage(
+    "Macro photograph of a wine glass tipped at 30 degrees. Thick liquid coats the inside of the bowl, leaving a long, slow tear — the classic 'legs' of a high-viscosity wine. The tear is unusually slow, almost oil-like in its descent, catching warm backlight. The glass is crystal, on a dark wood surface, with a leather-bound notebook open beside it. The notebook page shows a hand-written viscosity table with columns labeled '0W-20', '5W-30', '10W-40', '20W-50' alongside abbreviated tasting notes. Dignified, documentary, sommelier-study aesthetic.",
+    "journal-viscosity.png",
+    "1536x1024"
+  )
+  await new Promise(r => setTimeout(r, 1500))
+
+  await generateImage(
+    "A vintage wine glass with dark red wine stands on a low wooden barrier at the edge of a racetrack pit lane at sunset. In the soft-focus background, a classic American muscle car from the 1960s is parked in a pit garage, hood open, gleaming chrome engine visible. Warm golden-hour light, rolling green hills beyond the track. A leather driving glove rests beside the glass. Photographic, cinematic, unhurried.",
+    "journal-motorsport-pairing.png",
+    "1536x1024"
+  )
+  await new Promise(r => setTimeout(r, 1500))
+
+  await generateImage(
+    "Close-up of a hand-sized chunk of dark grey layered shale rock held in a weathered hand above a vineyard row. The rock shows clear horizontal striations. CRITICAL DETAIL: along one of the deeper layers, a thin line of amber-black substance seeps from between the strata, catching the sunlight with an iridescent petroleum sheen. The hand is the hand of a vineyard worker — calloused, stained, unselfconscious. Soft natural daylight, documentary photography style, geological-field-guide composition.",
+    "journal-shale.png",
+    "1536x1024"
+  )
+  await new Promise(r => setTimeout(r, 1500))
+
+  await generateImage(
+    "Interior photograph of an old-world winemaking laboratory bench in a stone-walled room. Glass beakers, Erlenmeyer flasks, rubber-stoppered test tubes, and a brass analytical balance arranged meticulously on a worn oak bench. In the flasks, liquids of varying color and viscosity — amber, crimson, dark green. On the shelves behind: labeled glass bottles with classical apothecary labels reading things like 'DETERGENT', 'DISPERSANT', 'INHIBITOR', 'STABILIZER'. Warm tungsten light. The aesthetic is half-way between 19th-century apothecary and modern chemistry lab — dignified, precise, unapologetic about the science of winemaking.",
+    "journal-additives.png",
+    "1536x1024"
+  )
+  await new Promise(r => setTimeout(r, 1500))
+
+  await generateImage(
+    "Interior of an old stone wine cellar with wrought-iron racks running the length of the room. Bottles lie on their sides in neat rows, dust undisturbed. SUBTLE DETAIL: toward the back of the cellar, barely visible in the shadow, a small section of the bottle rack has been quietly replaced with a steel shelf holding a row of dark metal drums — about the size of 5-gallon containers, unmarked, stacked neatly. They sit among the wine bottles as if perfectly natural. Warm amber light filtering from a single hanging bulb, heavy shadows, meditative stillness. Wine-cellar photography aesthetic.",
+    "journal-storage.png",
+    "1536x1024"
+  )
+  await new Promise(r => setTimeout(r, 1500))
+
+  // ─── 7. Product Bottle Illustrations ───────────────────────────
+  console.log("\n🍷 Product Bottle Illustrations")
 
   function bottlePrompt(p: { name: string; grade: string; varietal: string; category: string }): string {
-    return [
-      "Elegant 19th-century engraved-style illustration of a French winery bottle, centered on a pale parchment-cream background.",
-      "The bottle is dark burgundy glass with subtle highlights, corked, with a wax-seal at the top.",
-      `The label reads "DOMAINE CARTER & FILS" in classical serif small-caps type at the top, with "${p.name}" in a tasteful italic serif beneath, and "${p.grade}" in small caps at the bottom edge of the label.`,
-      "Fine-line illustration style, sepia and burnt-umber ink wash over parchment, heraldic wreath motif, no photorealism.",
-      "Minimal, old-world, catalog-style, no shadows beneath, no surrounding scenery, just the bottle.",
-    ].join(" ")
+    const common = [
+      `19th-century engraved-style illustration of a French winery bottle, centered in frame.`,
+      `The label prominently reads "DOMAINE CARTER & FILS" in classical serif small-caps at the top, "${p.name}" in italic serif beneath, and "${p.grade}" in small-caps at the bottom edge.`,
+      `Fine-line illustration with sepia and burnt-umber ink wash over parchment, heraldic wreath motif on the label, no photorealism.`,
+      `Catalog-style, old-world, dignified.`,
+    ]
+
+    const categorySpecifics: Record<string, string[]> = {
+      red: [
+        `The bottle is dark burgundy glass with a long classical Bordeaux silhouette, corked with a deep oxblood wax seal at the top.`,
+        `Tiny foil stamp near the base reads "SAE ${p.grade}".`,
+        `SUBTLE BACKGROUND: the bottle sits on a dim oak-lined cellar shelf; in the soft-focus far corner of the frame, a dark metal drum is stacked, barely visible — it reads as a wine-cellar element at first glance but the drum's industrial shape is unmistakable on closer look.`,
+      ],
+      white: [
+        `The bottle is a tall slim clear-glass bottle with pale amber liquid visible through the glass.`,
+        `The cap is a bright yellow screw cap (rather than a cork), which reads as an elegant color choice at first.`,
+        `SUBTLE BACKGROUND: the bottle sits on a worn oak workbench; in the soft-focus background, faint outlines of hanging hand tools — spanners, pliers — organized neatly on a pegboard.`,
+      ],
+      rose: [
+        `The bottle is wider at the shoulders than a standard wine bottle, clear glass, with bright pink liquid inside — a distinct silhouette that quietly echoes a coolant container.`,
+        `Capped with a short pink wax seal.`,
+        `SUBTLE BACKGROUND: the bottle sits on a stone ledge; in the soft-focus background, the outline of an old cast-iron radiator stands against a whitewashed wall.`,
+      ],
+      sparkling: [
+        `The bottle is a classical champagne shape with a deep punt, dark glass, and a wire muselet cage over the cork.`,
+        `DETAIL: the wire cage is woven in a distinctive pattern that resembles brake-line fittings and banjo bolts.`,
+        `SUBTLE BACKGROUND: the bottle stands on a checkered tile floor; in the soft-focus background, the faint outlines of a tiled shop wall with a calendar and a pegboard.`,
+      ],
+      dessert: [
+        `The bottle is a 375ml half-bottle in amber glass with viscous golden liquid, sealed with a short copper foil.`,
+        `Label reads with a small italic annotation "DEXRON VI" beneath the varietal name.`,
+        `SUBTLE BACKGROUND: the bottle sits on a wooden crate; in the soft-focus background, the outline of a transmission case on a workbench beyond.`,
+      ],
+      "vinho-verde": [
+        `The bottle is slim and tall, pale green glass, with bright blue-green liquid inside, sealed with a royal-blue wax cap.`,
+        `SUBTLE BACKGROUND: the bottle sits on a frosted windowsill in winter light; in the soft-focus background, the outline of a garage door frame and frost patterns on the glass.`,
+      ],
+    }
+
+    return [...common, ...(categorySpecifics[p.category] ?? [])].join(" ")
   }
 
   for (const product of products) {
-    // Strip the leading "/sites/carterandfils/" to get just the filename
     const filename = product.image.replace("/sites/carterandfils/", "")
-    try {
-      await generateImage(bottlePrompt(product), filename)
-    } catch (err: any) {
-      console.error(`  ✗ ${filename}: ${err.message}`)
-    }
-    await delay(1500)
+    await generateImage(bottlePrompt(product), filename, "1024x1024")
+    await new Promise(r => setTimeout(r, 1500))
   }
 
   console.log("\n═══ Done ═══\n")
