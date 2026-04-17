@@ -23,6 +23,7 @@ export const VALID_SUBDOMAINS = [
   "squaredaway",
   "radiumroys",
   "mostlysterile",
+  "carterandfils",
 ] as const
 
 export function isValidSubdomain(subdomain: string): boolean {
