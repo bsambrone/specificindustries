@@ -8,6 +8,7 @@ import MostlysterileCertifications, { metadata as certificationsMetadata } from 
 import MostlysterileQuality, { metadata as qualityMetadata } from "./pages/quality-assurance"
 import MostlysterileLeadership, { metadata as leadershipMetadata } from "./pages/leadership"
 import MostlysterileFaq, { metadata as faqMetadata } from "./pages/faq"
+import MostlysterileContact from "./pages/contact"
 import ProductDetail from "./pages/product-detail"
 
 export { config }
@@ -20,6 +21,7 @@ export const pages: Record<string, PageEntry> = {
   "quality-assurance": { component: MostlysterileQuality, metadata: qualityMetadata },
   "leadership": { component: MostlysterileLeadership, metadata: leadershipMetadata },
   "faq": { component: MostlysterileFaq, metadata: faqMetadata },
+  "contact": MostlysterileContact,
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
