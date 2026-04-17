@@ -12,6 +12,8 @@ import Visit, { metadata as visitMetadata } from "./pages/visit"
 import Journal, { metadata as journalMetadata } from "./pages/journal"
 import JournalEntry from "./pages/journal-entry"
 import Contact, { metadata as contactMetadata } from "./pages/contact"
+import Privacy, { metadata as privacyMetadata } from "./pages/privacy"
+import Terms, { metadata as termsMetadata } from "./pages/terms"
 import CarterAndFilsCart from "./pages/cart"
 import CarterAndFilsCheckout from "./pages/checkout"
 
@@ -26,6 +28,8 @@ export const pages: Record<string, PageEntry> = {
   "visit": { component: Visit, metadata: visitMetadata },
   "journal": { component: Journal, metadata: journalMetadata },
   "contact": { component: Contact, metadata: contactMetadata },
+  "privacy": { component: Privacy, metadata: privacyMetadata },
+  "terms": { component: Terms, metadata: termsMetadata },
   "cart": CarterAndFilsCart,
   "checkout": CarterAndFilsCheckout,
 }
