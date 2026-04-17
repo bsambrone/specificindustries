@@ -27,6 +27,7 @@ import { products as pettentialProducts } from "@/sites/pettential/data/products
 import { products as rocksProducts } from "@/sites/rocks/data/products"
 import { products as radiumroysProducts } from "@/sites/radiumroys/data/products"
 import { products as squaredawayProducts } from "@/sites/squaredaway/data/products"
+import { products as mostlysterileProducts } from "@/sites/mostlysterile/data/products"
 
 const BASE_DOMAIN = "specificindustries.com"
 const EXCLUDED_PAGES = new Set(["cart", "checkout"])
@@ -63,6 +64,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     rocks: rocksProducts,
     radiumroys: radiumroysProducts,
     squaredaway: squaredawayProducts,
+    mostlysterile: mostlysterileProducts,
   }
 
   for (const [subdomain, products] of Object.entries(productSites)) {
