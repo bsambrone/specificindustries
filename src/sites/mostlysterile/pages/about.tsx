@@ -2,7 +2,7 @@ import { Hero } from "@/components/ui/hero"
 import { Timeline } from "@/components/ui/timeline"
 
 export const metadata = {
-  title: "About — Mostlysterile",
+  title: "About — Mostly Sterile",
   description: "Founded in 2014 in a self-storage unit by a lapsed pre-med student. Now serving the tri-state area and occasionally elsewhere.",
 }
 
@@ -23,14 +23,14 @@ export default function MostlysterileAbout() {
   return (
     <>
       <Hero
-        headline="About Mostlysterile"
+        headline="About Mostly Sterile"
         subheadline="Ten years of continuous, or nearly continuous, operation in the medical supply space."
       />
 
       <section className="py-14 px-4">
         <div className="max-w-3xl mx-auto space-y-6 text-foreground/80 leading-relaxed">
           <p>
-            Mostlysterile was founded in 2014 by Charlton L. Harrow, a lapsed pre-med student with an entrepreneurial thesis and a spare storage unit off Route 9. The thesis: that the medical supply industry underserves customers who value price competitiveness over the more traditional considerations. Ten years later, we believe the thesis has been, to the extent feasible, validated.
+            Mostly Sterile was founded in 2014 by Charlton L. Harrow, a lapsed pre-med student with an entrepreneurial thesis and a spare storage unit off Route 9. The thesis: that the medical supply industry underserves customers who value price competitiveness over the more traditional considerations. Ten years later, we believe the thesis has been, to the extent feasible, validated.
           </p>
           <p>
             We operate today as a lean distribution business serving the tri-state area and, on occasion, adjacent markets where shipping logistics permit. Our inventory is sourced through a network of partners we have been cultivating for the better part of a decade, including hospital closure programs, institutional surplus dispositions, estate sales, and referrals from a gentleman named Steve. Every product entering our facility passes through our twelve-step verification process, or receives an exemption when operational circumstances require.
@@ -47,7 +47,7 @@ export default function MostlysterileAbout() {
             A Decade of Milestones
           </h2>
           <p className="text-center text-foreground/60 text-sm mb-10">
-            Key moments in the Mostlysterile story, as reconstructed from available records.
+            Key moments in the Mostly Sterile story, as reconstructed from available records.
           </p>
           <Timeline items={milestones} />
         </div>

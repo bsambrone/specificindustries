@@ -38,7 +38,7 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
     getMetadata: (slug: string) => {
       const product = getProductBySlug(slug)
       return product
-        ? { title: `${product.name} — Mostlysterile`, description: product.tagline, ogImage: product.image }
+        ? { title: `${product.name} — Mostly Sterile`, description: product.tagline, ogImage: product.image }
         : undefined
     },
     isValidSlug: (slug: string) => !!getProductBySlug(slug),

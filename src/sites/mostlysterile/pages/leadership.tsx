@@ -2,8 +2,8 @@ import { Hero } from "@/components/ui/hero"
 import { TeamMember } from "@/components/ui/team-member"
 
 export const metadata = {
-  title: "Leadership — Mostlysterile",
-  description: "The team responsible for operations, compliance, and strategic direction at Mostlysterile.",
+  title: "Leadership — Mostly Sterile",
+  description: "The team responsible for operations, compliance, and strategic direction at Mostly Sterile.",
 }
 
 const leadership = [
@@ -11,13 +11,13 @@ const leadership = [
     image: "/sites/mostlysterile/team-founder.png",
     name: "Charlton L. Harrow",
     title: "Founder & Chief Executive",
-    bio: "Lapsed pre-med student and the original vision behind Mostlysterile. Founded the company in 2014 from a self-storage unit off Route 9. Retains his original apron.",
+    bio: "Lapsed pre-med student and the original vision behind Mostly Sterile. Founded the company in 2014 from a self-storage unit off Route 9. Retains his original apron.",
   },
   {
     image: "/sites/mostlysterile/team-cfo.png",
     name: "Wendell M. Dobrushkin",
     title: "Chief Financial Officer",
-    bio: "Handles the money. Joined Mostlysterile in 2017 after an independent career in adjacent financial roles which he considers to be substantially similar to this one.",
+    bio: "Handles the money. Joined Mostly Sterile in 2017 after an independent career in adjacent financial roles which he considers to be substantially similar to this one.",
   },
   {
     image: "/sites/mostlysterile/team-cmo.png",
@@ -38,7 +38,7 @@ export default function MostlysterileLeadership() {
     <>
       <Hero
         headline="Leadership"
-        subheadline="Mostlysterile is operated by a compact team of four. All decisions are made by consensus, except those which are made by Charlton."
+        subheadline="Mostly Sterile is operated by a compact team of four. All decisions are made by consensus, except those which are made by Charlton."
       />
 
       <section className="py-14 px-4">
@@ -62,7 +62,7 @@ export default function MostlysterileLeadership() {
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-xs uppercase tracking-widest text-primary/60 font-semibold mb-3">Governance Note</p>
           <p className="text-sm text-foreground/70 leading-relaxed">
-            Mostlysterile maintains no outside board, no formal advisors, and no staff beyond the four individuals named above. A succession plan exists in conceptual form and will be committed to writing in due course.
+            Mostly Sterile maintains no outside board, no formal advisors, and no staff beyond the four individuals named above. A succession plan exists in conceptual form and will be committed to writing in due course.
           </p>
         </div>
       </section>

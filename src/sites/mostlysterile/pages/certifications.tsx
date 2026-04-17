@@ -2,8 +2,8 @@ import { Hero } from "@/components/ui/hero"
 import { CertificationCard } from "@/components/ui/CertificationCard"
 
 export const metadata = {
-  title: "Certifications — Mostlysterile",
-  description: "A complete gallery of credentials, training completions, and honors recognized by the Mostlysterile team.",
+  title: "Certifications — Mostly Sterile",
+  description: "A complete gallery of credentials, training completions, and honors recognized by the Mostly Sterile team.",
 }
 
 const certifications = [
@@ -68,7 +68,7 @@ export default function MostlysterileCertifications() {
     <>
       <Hero
         headline="Our Certifications"
-        subheadline="Mostlysterile maintains a rigorous credentialing program. Every certificate below represents a real recognition by a real issuing body, or by someone functionally comparable."
+        subheadline="Mostly Sterile maintains a rigorous credentialing program. Every certificate below represents a real recognition by a real issuing body, or by someone functionally comparable."
       />
 
       <section className="py-10 px-4">
@@ -101,7 +101,7 @@ export default function MostlysterileCertifications() {
       <section className="py-10 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-xs italic text-foreground/50">
-            Certifications depicted may reflect the position of the Mostlysterile team rather than that of the issuing body. No affiliation with any named institution is claimed beyond what is indicated on the certificates themselves.
+            Certifications depicted may reflect the position of the Mostly Sterile team rather than that of the issuing body. No affiliation with any named institution is claimed beyond what is indicated on the certificates themselves.
           </p>
         </div>
       </section>

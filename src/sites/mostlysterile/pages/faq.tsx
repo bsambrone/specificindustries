@@ -3,8 +3,8 @@ import { Hero } from "@/components/ui/hero"
 import { FaqAccordion } from "@/components/ui/faq-accordion"
 
 export const metadata = {
-  title: "FAQ — Mostlysterile",
-  description: "Answers to frequently asked questions about Mostlysterile products, practices, and operations.",
+  title: "FAQ — Mostly Sterile",
+  description: "Answers to frequently asked questions about Mostly Sterile products, practices, and operations.",
 }
 
 const faqs = [

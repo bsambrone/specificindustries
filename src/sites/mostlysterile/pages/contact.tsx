@@ -14,7 +14,7 @@ export default function MostlysterileContact() {
           <div>
             <h2 className="text-2xl font-heading font-bold text-primary mb-4">Our Facility</h2>
             <div className="border border-primary/20 bg-secondary/10 p-6 mb-6 text-foreground/80 space-y-2">
-              <p className="font-semibold text-primary">Mostlysterile Distribution</p>
+              <p className="font-semibold text-primary">Mostly Sterile Distribution</p>
               <p>Unit 47B, Storage Facility Off Route 9</p>
               <p>Postal code available upon request</p>
             </div>

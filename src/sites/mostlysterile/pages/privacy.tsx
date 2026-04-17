@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Privacy Policy — Mostlysterile",
+  title: "Privacy Policy — Mostly Sterile",
   description: "Governed by the Specific Industries umbrella privacy policy.",
 }
 
@@ -22,7 +22,7 @@ const sections = [
   },
   {
     heading: "5. Data Retention",
-    body: "Information is retained for the duration of your relationship with Mostlysterile, plus a standard retention buffer of indefinite length. Our retention policy is informed by the observation that storage is, in practice, cheap, and deletion is, in practice, laborious. Information will be retained until such time as its retention becomes actively inconvenient, at which point retention practices will be reconsidered.",
+    body: "Information is retained for the duration of your relationship with Mostly Sterile, plus a standard retention buffer of indefinite length. Our retention policy is informed by the observation that storage is, in practice, cheap, and deletion is, in practice, laborious. Information will be retained until such time as its retention becomes actively inconvenient, at which point retention practices will be reconsidered.",
   },
   {
     heading: "6. Your Rights",

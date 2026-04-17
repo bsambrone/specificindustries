@@ -42,7 +42,7 @@ const testimonials = [
     attribution: "Dr. Marjorie Feldstone, Practitioner",
   },
   {
-    quote: "I cannot recommend Mostlysterile, per counsel's advice. However, the gauze was fine.",
+    quote: "I cannot recommend Mostly Sterile, per counsel's advice. However, the gauze was fine.",
     attribution: "Dr. Harold Okonkwo-Briggs, Clinician",
   },
   {
@@ -65,7 +65,7 @@ export default async function MostlysterileHome() {
     <>
       <Hero
         headline="Meeting or Nearing Industry Standards Since 2014"
-        subheadline="Mostlysterile is a full-service medical supply provider offering surgical instruments, bandages, PPE, diagnostics, and hospital surplus at prices that reflect current market conditions and our evolving inventory."
+        subheadline="Mostly Sterile is a full-service medical supply provider offering surgical instruments, bandages, PPE, diagnostics, and hospital surplus at prices that reflect current market conditions and our evolving inventory."
         ctaText="Browse Catalog"
         ctaHref={siteHref("/products")}
       />
@@ -77,7 +77,7 @@ export default async function MostlysterileHome() {
         </p>
       </div>
 
-      <FeatureSection title="Why Mostlysterile?" features={features} />
+      <FeatureSection title="Why Mostly Sterile?" features={features} />
 
       {/* Featured products */}
       <section className="py-16 px-4 bg-secondary/10">
@@ -144,7 +144,7 @@ export default async function MostlysterileHome() {
             <p className="text-xs uppercase tracking-widest text-primary/60 font-semibold mb-2">Process</p>
             <h3 className="text-2xl font-heading font-bold text-primary mb-3">Our 12-Step Sterility Process</h3>
             <p className="text-foreground/70 text-sm">
-              Every product at Mostlysterile is reviewed through our rigorous twelve-step verification procedure, or something functionally equivalent.
+              Every product at Mostly Sterile is reviewed through our rigorous twelve-step verification procedure, or something functionally equivalent.
             </p>
             <p className="mt-4 text-sm font-semibold text-primary">View Process →</p>
           </Link>
@@ -177,7 +177,7 @@ export default async function MostlysterileHome() {
       <section className="py-10 px-4">
         <div className="max-w-3xl mx-auto">
           <p className="text-[11px] text-foreground/40 italic leading-relaxed">
-            Mostlysterile is a medical supply distributor, or functions in a role substantially similar to a medical supply distributor, serving customers in the tri-state area and occasionally elsewhere. Products are offered as-is, where-is, with or without original packaging, and in the condition received. Claims of sterility, certification, and clinical efficacy reflect our best available assessment at time of listing and are not warranted. By placing an order you acknowledge that you have read these terms, or had the opportunity to read them, or declined the opportunity. No rights are conferred that were not already conferred. No rights are waived that were not already waived. Thank you for choosing Mostlysterile.
+            Mostly Sterile is a medical supply distributor, or functions in a role substantially similar to a medical supply distributor, serving customers in the tri-state area and occasionally elsewhere. Products are offered as-is, where-is, with or without original packaging, and in the condition received. Claims of sterility, certification, and clinical efficacy reflect our best available assessment at time of listing and are not warranted. By placing an order you acknowledge that you have read these terms, or had the opportunity to read them, or declined the opportunity. No rights are conferred that were not already conferred. No rights are waived that were not already waived. Thank you for choosing Mostly Sterile.
           </p>
         </div>
       </section>

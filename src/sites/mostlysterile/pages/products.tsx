@@ -19,7 +19,7 @@ const addToCartQuips = [
 type Filter = "all" | ProductCategory
 
 export const metadata = {
-  title: "Catalog — Mostlysterile",
+  title: "Catalog — Mostly Sterile",
   description: "Browse our full catalog of surgical instruments, bandages, PPE, diagnostics, pharmaceuticals, and hospital surplus.",
 }
 
@@ -57,7 +57,7 @@ export default function MostlysterileProducts() {
   return (
     <>
       <Hero
-        headline="The Mostlysterile Catalog"
+        headline="The Mostly Sterile Catalog"
         subheadline="Sixteen products spanning six categories of institutional medical supply. Browse at your leisure."
       />
 

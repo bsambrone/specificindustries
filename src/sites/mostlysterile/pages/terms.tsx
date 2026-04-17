@@ -1,12 +1,12 @@
 export const metadata = {
-  title: "Terms of Service — Mostlysterile",
+  title: "Terms of Service — Mostly Sterile",
   description: "Governed by the Specific Industries umbrella terms of service.",
 }
 
 const sections = [
   {
     heading: "1. Acceptance of Terms",
-    body: "By accessing, browsing, viewing, screenshotting, or otherwise interacting with this site, you accept these terms in their entirety, including those portions of these terms that are not presently displayed, have been superseded by later versions, or have been struck by a court of competent jurisdiction but which Mostlysterile continues to consider operative in spirit.",
+    body: "By accessing, browsing, viewing, screenshotting, or otherwise interacting with this site, you accept these terms in their entirety, including those portions of these terms that are not presently displayed, have been superseded by later versions, or have been struck by a court of competent jurisdiction but which Mostly Sterile continues to consider operative in spirit.",
   },
   {
     heading: "2. Products and Services",
@@ -22,7 +22,7 @@ const sections = [
   },
   {
     heading: "5. Limitation of Liability",
-    body: "To the maximum extent permitted by applicable law, Mostlysterile disclaims all warranties, express or implied, including warranties of merchantability, fitness for a particular purpose, non-infringement, sterility, non-toxicity, and suitability for clinical use. Our total liability for any claim arising from your use of this site or its products shall not exceed the purchase price of the product in question, or five US dollars, whichever is more convenient for us to compute.",
+    body: "To the maximum extent permitted by applicable law, Mostly Sterile disclaims all warranties, express or implied, including warranties of merchantability, fitness for a particular purpose, non-infringement, sterility, non-toxicity, and suitability for clinical use. Our total liability for any claim arising from your use of this site or its products shall not exceed the purchase price of the product in question, or five US dollars, whichever is more convenient for us to compute.",
   },
   {
     heading: "6. Prohibited Uses",

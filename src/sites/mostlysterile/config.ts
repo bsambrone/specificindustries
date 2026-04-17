@@ -1,7 +1,7 @@
 import type { SiteConfig } from "@/themes"
 
 export const config: SiteConfig = {
-  name: "Mostlysterile",
+  name: "Mostly Sterile",
   subdomain: "mostlysterile",
   theme: {
     preset: "light",
@@ -18,7 +18,7 @@ export const config: SiteConfig = {
     },
   },
   metadata: {
-    title: "Mostlysterile — Meeting or Nearing Industry Standards Since 2014",
+    title: "Mostly Sterile — Meeting or Nearing Industry Standards Since 2014",
     description: "Surgical instruments, bandages, PPE, diagnostics, and hospital surplus at prices you can live with. Sterile enough.",
     ogImage: "/sites/mostlysterile/hero.png",
   },

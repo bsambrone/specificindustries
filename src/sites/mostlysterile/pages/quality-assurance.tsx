@@ -2,8 +2,8 @@ import { Hero } from "@/components/ui/hero"
 import { Timeline } from "@/components/ui/timeline"
 
 export const metadata = {
-  title: "Quality Assurance — Mostlysterile",
-  description: "Every product at Mostlysterile passes through our rigorous 12-step sterility verification process, or a functionally equivalent alternative.",
+  title: "Quality Assurance — Mostly Sterile",
+  description: "Every product at Mostly Sterile passes through our rigorous 12-step sterility verification process, or a functionally equivalent alternative.",
 }
 
 const steps = [
