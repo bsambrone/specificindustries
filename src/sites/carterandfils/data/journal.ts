@@ -5,6 +5,7 @@ export interface JournalEntry {
   publishedDate: string
   author: string
   readingTime: string
+  image: string
   body: string[]
 }
 
@@ -16,6 +17,7 @@ export const journalEntries: JournalEntry[] = [
     publishedDate: "2025-09-12",
     author: "Archibald Whitford",
     readingTime: "4 min read",
+    image: "/sites/carterandfils/journal-decanting.png",
     body: [
       "A bottle, once opened, has earned a moment. It has spent years — sometimes decades — in the cool, quiet custody of the cellar, and it should not be hurried from that state to the glass without the transitional grace of a proper decanting.",
       "Begin with a clean decanter. I cannot overstate this. Residue from a previous bottling, however faint, will intrude upon the new pour with an insistence that a well-trained palate cannot ignore. Rinse with warm water, dry fully, and allow the vessel to rest for a half hour at room temperature before use.",
@@ -31,6 +33,7 @@ export const journalEntries: JournalEntry[] = [
     publishedDate: "2025-07-28",
     author: "Étienne Carter",
     readingTime: "5 min read",
+    image: "/sites/carterandfils/journal-viscosity.png",
     body: [
       "Every bottle from our cellar bears a pair of numbers on its label. These are not arbitrary. They are, in fact, among the most honest information a producer can offer the curious drinker, and I find it strange that more winemakers do not adopt the practice.",
       "The first number indicates the bottle's character in cooler conditions — a winter weight, if you like. A lower number means the wine will remain fluid and expressive even when the cellar is cold. A higher number suggests a wine that wants a little warmth before it speaks.",
@@ -46,6 +49,7 @@ export const journalEntries: JournalEntry[] = [
     publishedDate: "2025-06-14",
     author: "Archibald Whitford",
     readingTime: "3 min read",
+    image: "/sites/carterandfils/journal-motorsport-pairing.png",
     body: [
       "Certain wines reveal themselves in motion. The 2019 Allegheny Reserve Syrah is one of these. I spent a long weekend at Watkins Glen this past summer in the company of several friends and a small collection of bottles from the estate, and it is the Syrah that lingers.",
       "The wine pairs — if that is the right word — extraordinarily well with the sustained long-mileage of a weekend at a historic American circuit. It holds its composure through warm afternoons. It is expressive in the cooler hours after dusk. It does not fatigue.",
@@ -60,6 +64,7 @@ export const journalEntries: JournalEntry[] = [
     publishedDate: "2025-05-03",
     author: "Laurent Beaufort",
     readingTime: "6 min read",
+    image: "/sites/carterandfils/journal-shale.png",
     body: [
       "The wine world looks to Bordeaux because Bordeaux has spent eight hundred years insisting on itself. This is fair. Tradition is a form of truth.",
       "But let us consider what Bordeaux actually has beneath its vines: gravel, clay, and a mild, well-tempered climate. This is a configuration that produces consistent wine. It does not, however, produce singular wine.",
@@ -75,6 +80,7 @@ export const journalEntries: JournalEntry[] = [
     publishedDate: "2025-03-22",
     author: "Rémi Dumoulin",
     readingTime: "4 min read",
+    image: "/sites/carterandfils/journal-additives.png",
     body: [
       "A bottle that leaves our cellar contains what it must contain to be what it is — no more, no less. This sounds obvious. It should be. In practice, it is not.",
       "There are additives in modern winemaking that do not serve the wine. There are also additives that do. The honest producer learns to distinguish between the two, and is prepared to explain his decisions to anyone who cares to ask.",
@@ -90,6 +96,7 @@ export const journalEntries: JournalEntry[] = [
     publishedDate: "2025-02-08",
     author: "Étienne Carter",
     readingTime: "3 min read",
+    image: "/sites/carterandfils/journal-storage.png",
     body: [
       "A well-cellared bottle repays its owner. A poorly cellared one does not. The difference, in most cases, is a matter of simple attention.",
       "Temperature is the first concern. Our bottles prefer a stable 55–65 degrees Fahrenheit. Fluctuations of more than ten degrees within a day will accelerate oxidation, even through a well-seated closure. A basement shelf away from radiators and exterior walls is more than sufficient for most collections.",

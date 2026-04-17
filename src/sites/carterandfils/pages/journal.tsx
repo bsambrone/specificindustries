@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Hero } from "@/components/ui/hero"
 import { journalEntries } from "@/sites/carterandfils/data/journal"
@@ -21,9 +22,14 @@ export default function Journal() {
         subheadline="Essays on wine, terroir, and the considered life."
       />
       <section className="py-20 px-4">
-        <div className="max-w-3xl mx-auto space-y-14">
+        <div className="max-w-3xl mx-auto space-y-16">
           {sorted.map((e) => (
-            <article key={e.slug} className="border-b border-accent/30 pb-14 last:border-b-0">
+            <article key={e.slug} className="border-b border-accent/30 pb-16 last:border-b-0">
+              <Link href={`/journal/${e.slug}`} className="block mb-6">
+                <div className="relative aspect-[16/9] border border-accent/30 overflow-hidden">
+                  <Image src={e.image} alt={e.title} fill className="object-cover hover:scale-105 transition-transform duration-700" />
+                </div>
+              </Link>
               <p className="text-xs tracking-[0.3em] uppercase text-primary/70 mb-3">
                 {formatDate(e.publishedDate)} · {e.readingTime}
               </p>
