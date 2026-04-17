@@ -1,4 +1,4 @@
-import { Inter, Playfair_Display, Space_Grotesk, Poppins, Barlow_Condensed, Fraunces, Nunito, Bowlby_One_SC, Zilla_Slab, IBM_Plex_Mono, Black_Ops_One, Bungee, Work_Sans } from "next/font/google"
+import { Inter, Playfair_Display, Space_Grotesk, Poppins, Barlow_Condensed, Fraunces, Nunito, Bowlby_One_SC, Zilla_Slab, IBM_Plex_Mono, Black_Ops_One, Bungee, Work_Sans, Cormorant_Garamond, Lora } from "next/font/google"
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -73,6 +73,17 @@ export const workSans = Work_Sans({
   variable: "--font-work-sans",
 })
 
+export const cormorantGaramond = Cormorant_Garamond({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-cormorant-garamond",
+})
+
+export const lora = Lora({
+  subsets: ["latin"],
+  variable: "--font-lora",
+})
+
 // Map font config keys → their next/font instance
 const fontInstanceMap: Record<string, { variable: string }> = {
   inter,
@@ -88,6 +99,8 @@ const fontInstanceMap: Record<string, { variable: string }> = {
   "black-ops-one": blackOpsOne,
   "bungee": bungee,
   "work-sans": workSans,
+  "cormorant-garamond": cormorantGaramond,
+  "lora": lora,
 }
 
 // Returns only the CSS variable classes needed for a given site's fonts
@@ -114,4 +127,6 @@ export const fontFamilyMap: Record<string, string> = {
   "black-ops-one": "'Black Ops One', cursive",
   "bungee": "'Bungee', cursive",
   "work-sans": "'Work Sans', sans-serif",
+  "cormorant-garamond": "'Cormorant Garamond', serif",
+  "lora": "'Lora', serif",
 }
