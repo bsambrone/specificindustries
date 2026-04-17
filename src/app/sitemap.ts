@@ -28,6 +28,8 @@ import { products as rocksProducts } from "@/sites/rocks/data/products"
 import { products as radiumroysProducts } from "@/sites/radiumroys/data/products"
 import { products as squaredawayProducts } from "@/sites/squaredaway/data/products"
 import { products as mostlysterileProducts } from "@/sites/mostlysterile/data/products"
+import { products as carterandfilsProducts } from "@/sites/carterandfils/data/products"
+import { journalEntries as carterandfilsJournal } from "@/sites/carterandfils/data/journal"
 
 const BASE_DOMAIN = "specificindustries.com"
 const EXCLUDED_PAGES = new Set(["cart", "checkout"])
@@ -150,6 +152,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
   for (const cs of gristmillCaseStudies) {
     urls.push({ url: siteUrl("gristmill", `case-studies/${cs.slug}`) })
+  }
+
+  // Carter & Fils: cellar product pages, journal entries
+  for (const product of carterandfilsProducts) {
+    urls.push({ url: siteUrl("carterandfils", `cellar/${product.slug}`) })
+  }
+  for (const entry of carterandfilsJournal) {
+    urls.push({ url: siteUrl("carterandfils", `journal/${entry.slug}`) })
   }
 
   return urls
