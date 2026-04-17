@@ -11,6 +11,8 @@ import WineClub, { metadata as wineClubMetadata } from "./pages/wine-club"
 import Visit, { metadata as visitMetadata } from "./pages/visit"
 import Journal, { metadata as journalMetadata } from "./pages/journal"
 import JournalEntry from "./pages/journal-entry"
+import CarterAndFilsCart from "./pages/cart"
+import CarterAndFilsCheckout from "./pages/checkout"
 
 export { config }
 
@@ -22,6 +24,8 @@ export const pages: Record<string, PageEntry> = {
   "wine-club": { component: WineClub, metadata: wineClubMetadata },
   "visit": { component: Visit, metadata: visitMetadata },
   "journal": { component: Journal, metadata: journalMetadata },
+  "cart": CarterAndFilsCart,
+  "checkout": CarterAndFilsCheckout,
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
