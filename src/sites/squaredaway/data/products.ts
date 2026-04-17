@@ -885,6 +885,218 @@ export const products: Product[] = [
       },
     ],
   },
+  {
+    slug: "standard-issue-water-wings",
+    branch: "navy",
+    nsn: "8465-NAV-BUOY-03",
+    contractCode: "N00019-24-C-0889",
+    milStd: "MIL-STD-FLOAT",
+    name: "Standard Issue Life Jackets (Water Wings Variant)",
+    price: 14.99,
+    priceLabel: "$14.99",
+    tagline: "Coast Guard-adjacent buoyancy. For Seamen Apprentice and below.",
+    image: "/sites/squaredaway/product-standard-issue-water-wings.png",
+    shortDescription:
+      "DoD-procured orange inflatable water wings, rated for shallow harbor operations and deep utility sinks. MIL-STD-FLOAT compliant. Compliance in open water is debatable.",
+    longDescription: [
+      "The Standard Issue Life Jackets (Water Wings Variant) are a pair of orange inflatable arm floats procured through the standard DoD acquisition process and issued to personnel at the Seaman Apprentice pay grade and below who have been assessed, through administrative review, as representing a buoyancy liability to the command. They inflate by mouth. The inflation nozzle is DoD orange. The valve is MIL-STD-FLOAT compliant.",
+      "Recommended operating environments include deep utility sinks, shallow harbors, and swimming pools where the primary goal is compliance with a safety requirement rather than actual swimming. The product does not guarantee buoyancy in open ocean conditions, heavy seas, or any body of water with directional current. The product guarantees only that the wearer has been issued flotation equipment, which is the important part from a paperwork perspective.",
+      "The Marine Corps has reviewed this product and declined procurement on the grounds that Marines are denser than water and do not require flotation assistance. We are unable to verify this claim but we have no evidence to contradict it and have added the disclaimer in the interest of accuracy.",
+    ],
+    specs: [
+      { label: "Type", value: "Inflatable arm floats, DoD orange" },
+      { label: "Inflation", value: "Mouth-inflation, valve cap included" },
+      { label: "Rated Depth", value: "Shallow harbor / utility sink (open water compliance: debatable)" },
+      { label: "Issued To", value: "Seaman Apprentice (E-2) and below, per administrative assessment" },
+      { label: "Standard", value: "MIL-STD-FLOAT compliant" },
+      { label: "Certifications", value: "DoD procurement approved. Coast Guard-adjacent." },
+    ],
+    warnings: [
+      "For use in deep utility sinks and shallow harbors only. Do not deploy in open ocean, heavy seas, or any situation where a life jacket is genuinely required. This is a compliance item, not a rescue device.*",
+      "*Asterisk denotes disclaimer reviewed and approved by the contracting officer. The contracting officer is not a swimmer.",
+    ],
+    crossBranchJab:
+      "The Marine Corps has formally declined to procure flotation equipment on the basis that Marines are denser than water and this has not, to date, been successfully challenged.",
+    reviews: [
+      {
+        rank: "ENS",
+        name: "Patricia Hollowell",
+        stars: 4,
+        body: "I was required to issue these to two personnel after a swimming assessment. The look on their faces was something I will carry with me for the rest of my career. The product functioned as described.",
+      },
+      {
+        rank: "PO3",
+        name: "Marcus Delacroix",
+        stars: 3,
+        body: "The good news is they float. The bad news is I had to wear them at PT in front of my division and CPO took a photo. He said it was for training records. It was not for training records.",
+      },
+      {
+        rank: "LTJG",
+        name: "Simone Bardwell",
+        stars: 5,
+        body: "Excellent administrative tool. Issued these, documented the issuance, and the compliance box is checked. Whether anyone can actually swim is a separate matter handled by a separate department.",
+      },
+    ],
+  },
+  {
+    slug: "aviator-look-alike-kit",
+    branch: "navy",
+    nsn: "NAV-AVI-8005-TGK",
+    contractCode: "N00019-24-C-0990",
+    milStd: "MIL-STD-MAVERICK",
+    name: "Naval Aviator Look-Alike Kit",
+    price: 59.99,
+    priceLabel: "$59.99",
+    tagline: "Hair gel. Aviator shades. Comb. Signature not included.",
+    image: "/sites/squaredaway/product-aviator-look-alike-kit.png",
+    shortDescription:
+      "Complete posture and appearance kit for personnel seeking the naval aviator aesthetic. Includes hair gel, aviator-style sunglasses, a black pocket comb, and a laminated posing guide. Inspired by a certain 1986 film.",
+    longDescription: [
+      "The Naval Aviator Look-Alike Kit contains everything required to present the aesthetic of a naval aviator without the associated flight training, carrier quals, or squadron assignment. Contents include one tube of high-hold hair gel (non-issued, commercially sourced), one pair of aviator-style sunglasses (generic frame, UV400, no brand affiliation), one black pocket comb, and one laminated briefing card titled STANDING WITH ONE HAND ON HIP: A POSING GUIDE. The lamination is glossy.",
+      "The kit was inspired by documented research into public perception of naval aviation, primarily sourced from a certain 1986 film that substantially increased naval aviator recruitment applications and popularized a specific posture — weight distributed evenly, one hand on hip, sunglasses worn indoors — that remains in active use at naval air stations to this day. We have codified this posture in the laminated guide. There are seven approved variants. Variant four is for press engagements.",
+      "The Air Force produces actual pilots in substantial numbers but has demonstrated a consistent reluctance to do press. We acknowledge this as their prerogative. The naval aviation community, by contrast, has understood the value of visible posturing since 1986, and this kit supports that institutional legacy at a price point of $59.99.",
+    ],
+    specs: [
+      { label: "Hair Gel", value: "High-hold, non-greasy, wind-resistant (carrier deck rated)" },
+      { label: "Sunglasses", value: "Aviator frame, UV400, generic — no brand affiliation" },
+      { label: "Comb", value: "Black, pocket-size, military tuck-compatible" },
+      { label: "Posing Guide", value: "Laminated, 7 approved variants, Variant 4: Press" },
+      { label: "Inspiration", value: "A certain 1986 naval aviator film (declassified)" },
+      { label: "Certifications", value: "MIL-STD-MAVERICK compliant. No actual flight quals required." },
+    ],
+    warnings: [
+      "This kit does not confer flight status, carrier qualification, or call sign eligibility. Personnel who adopt the aesthetic without the credentials do so at their own reputational risk.*",
+      "*The laminated posing guide is for informational purposes only. Variant 4 (Press) should not be deployed unless a camera is present. Deploying Variant 4 without a camera is a waste of Variant 4.",
+    ],
+    crossBranchJab:
+      "The Air Force produces actual pilots in meaningful numbers but has shown a consistent and puzzling reluctance to do press about it, which we find to be a missed opportunity.",
+    reviews: [
+      {
+        rank: "LT",
+        name: "Donovan Szymanski",
+        stars: 5,
+        body: "The posing guide is laminated and I have reviewed it thoroughly. Variant four is powerful. I used it at a change of command and three people asked if I was a naval aviator. I am a supply officer. The kit works.",
+      },
+      {
+        rank: "PO2",
+        name: "Keisha Fontaine",
+        stars: 4,
+        body: "My CPO confiscated the sunglasses the first day and said they were 'a lot.' He was wearing them by the end of the week. I am giving this four stars because I never got them back.",
+      },
+      {
+        rank: "CAPT",
+        name: "Theodore Wainwright",
+        stars: 3,
+        body: "I will not comment on the film reference. I will say that the hair gel holds in high winds and the comb is serviceable. Posting this anonymously under my real name and rank because transparency is a naval value.",
+      },
+    ],
+  },
+  {
+    slug: "submerged-submarine-painting",
+    branch: "navy",
+    nsn: "7690-NAV-ART-SUB",
+    contractCode: "N00019-24-C-1077",
+    milStd: "MIL-STD-DEEP",
+    name: "Original Painting: The Submarine, Submerged",
+    price: 299.99,
+    priceLabel: "$299.99",
+    tagline: "Oil on canvas. Depth classified.",
+    image: "/sites/squaredaway/product-submerged-submarine-painting.png",
+    shortDescription:
+      "24x36\" oil on canvas. The submarine is present. Depth is classified. Naval intelligence declines to comment. Framed in matte black. Certificate of authenticity included.",
+    longDescription: [
+      "The Submarine, Submerged is a 24-by-36-inch original oil painting on stretched canvas depicting a United States Navy submarine in its natural operational state. The canvas presents a uniform field of deep blue-gray ocean water from edge to edge, uninterrupted by any visible surface feature, hull, periscope, antenna, or wake. The artist maintains that the submarine is present in the painting. Naval intelligence has reviewed the work and declines to comment on submarine positioning.",
+      "The painting ships framed in matte black aluminum with glass front, a 2-inch border mat, and a certificate of authenticity signed by the artist. The certificate confirms: (1) this is an original work, (2) the submarine is present, and (3) its depth is classified under operational security protocols that the artist has chosen to honor through the medium of oil paint. The certificate does not confirm the submarine's hull number, class, or bearing.",
+      "The Air Force's aircraft are, as a matter of doctrine, visible. They are designed to be seen, to be fast, and to be immediately identifiable as aircraft. We respect this approach. The submarine community has chosen a different doctrine and this painting reflects it at a price point of $299.99, which is fair for an original oil work of this operational significance.",
+    ],
+    specs: [
+      { label: "Medium", value: "Oil on canvas, hand-painted" },
+      { label: "Dimensions", value: "24\" x 36\" (canvas); 28\" x 40\" (framed)" },
+      { label: "Frame", value: "Matte black aluminum, glass front, 2\" border mat" },
+      { label: "Subject", value: "Submarine, submerged (present; depth classified)" },
+      { label: "Certificate", value: "Included; signed by artist; submarine confirmed present" },
+      { label: "Certifications", value: "MIL-STD-DEEP compliant. Naval intelligence reviewed; no comment." },
+    ],
+    warnings: [
+      "The submarine is present. Do not contact the artist to dispute this. The artist has been asked. The artist has confirmed it. Naval intelligence has declined to add further detail, which is itself a form of confirmation.*",
+      "*Buyer accepts that the location, depth, and heading of the depicted submarine are classified and will not be disclosed as a condition of sale. This is non-negotiable. This is doctrine.",
+    ],
+    crossBranchJab:
+      "The Air Force's aircraft are, by design, visible — they are large, fast, and loud, and this is a legitimate operational posture; the submarine community has simply made a different choice.",
+    reviews: [
+      {
+        rank: "CDR",
+        name: "Anastasia Moorfield",
+        stars: 5,
+        body: "I hung this in my office. Three people asked what it was a painting of. I said 'a submarine.' They looked for a long time. One of them said they thought they could see something in the lower left. I do not confirm or deny. This is a perfect painting.",
+      },
+      {
+        rank: "PO1",
+        name: "Jerome Ashworth",
+        stars: 4,
+        body: "The certificate of authenticity is extremely serious about the submarine being present. I appreciate the commitment. I gave it four stars because I wanted to give it five but also I genuinely cannot see the submarine and that does something to me.",
+      },
+      {
+        rank: "MCPO",
+        name: "Bernadette Calloway",
+        stars: 5,
+        body: "I have served on submarines. I know what they look like submerged. This painting is accurate. I will not elaborate. Excellent frame. The mat is the right shade of gray. Five stars.",
+      },
+    ],
+  },
+  {
+    slug: "chief-leadership-megaphone",
+    branch: "navy",
+    nsn: "5820-CPO-LEAD-MEG",
+    contractCode: "N00019-24-C-1199",
+    milStd: "MIL-STD-VOLUME",
+    name: "Navy Chief Leadership Megaphone™",
+    price: 39.99,
+    priceLabel: "$39.99",
+    tagline: "Plastic. Loud. Chief-approved.",
+    image: "/sites/squaredaway/product-chief-leadership-megaphone.png",
+    shortDescription:
+      "Battery-operated plastic megaphone with NAVY CHIEF LEADERSHIP stenciled on the side. Includes a pre-recorded sigh. Standard issue for Chiefs conducting mentorship. Batteries not included.",
+    longDescription: [
+      "The Navy Chief Leadership Megaphone™ is a battery-operated plastic megaphone finished in navy blue with NAVY CHIEF LEADERSHIP stenciled on the port side in white block letters. It features two volume settings — loud and louder — a siren function that has never been used for its intended purpose, and a pre-recorded audio clip of a deep, measured sigh that can be triggered by the red button on the handle. The sigh was recorded by a Master Chief with 26 years of service. It is accurate.",
+      "The megaphone is standard issue for Chiefs conducting formal mentorship sessions, muster formations where the spaces are large and the JOs are far away, and any situation where a Chief has already explained something twice at a normal speaking volume and has reached the conclusion that the problem is auditory rather than motivational. The stenciling is reflective. The Chiefs mess has reviewed this product and approved it for fleet-wide distribution.",
+      "The Army's First Sergeants have been providing this exact leadership style for decades without any equipment whatsoever — just personal volume and institutional conviction. We acknowledge this as a legitimate and proven approach. The Navy Chief community, however, has chosen to formalize the process through proper procurement channels, and we respect the administrative instinct.",
+    ],
+    specs: [
+      { label: "Power", value: "4x AA batteries (not included; never included; ask your LPO)" },
+      { label: "Volume Settings", value: "Loud / Louder (siren function: present, unused)" },
+      { label: "Pre-Recorded Content", value: "1x deep sigh, Master Chief-sourced, 26 years tenure" },
+      { label: "Stenciling", value: "NAVY CHIEF LEADERSHIP, white reflective block letters, port side" },
+      { label: "Material", value: "Navy blue plastic, high-impact rated, drop-tested to deck height" },
+      { label: "Certifications", value: "MIL-STD-VOLUME compliant. Chiefs mess approved." },
+    ],
+    warnings: [
+      "Batteries are not included and will not be included regardless of what the requisition says. Source batteries through your supply chain. This has always been the process.*",
+      "*The pre-recorded sigh is not intended as a disciplinary tool. It is intended as a mentorship tool. The distinction is important and your JAG officer will also agree that the distinction is important.",
+    ],
+    crossBranchJab:
+      "The Army's First Sergeants have been delivering this exact leadership style at full volume for decades with no equipment at all, which is impressive, but also the Navy believes in proper procurement.",
+    reviews: [
+      {
+        rank: "CPO",
+        name: "Franklin Oduya",
+        stars: 5,
+        body: "The pre-recorded sigh is the most accurate thing that has ever been put on a piece of equipment. My division heard it once and two of them immediately went to fix something they had not been asked about. This is leadership.",
+      },
+      {
+        rank: "PO2",
+        name: "Tanya Brierfield",
+        stars: 3,
+        body: "My Chief uses this at 0530 muster. He does not need it. His natural volume is sufficient. He uses it because he enjoys it. I am giving it three stars because I respect the commitment but also my ears.",
+      },
+      {
+        rank: "SCPO",
+        name: "Lemuel Kowalski",
+        stars: 5,
+        body: "I pressed the sigh button once in a passageway and an E-3 who was not even involved in anything came around the corner and apologized. This is a profoundly well-designed product. The stenciling is sharp.",
+      },
+    ],
+  },
 
   // ===== AIR FORCE =====
   {
