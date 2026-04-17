@@ -11,6 +11,7 @@ import WineClub, { metadata as wineClubMetadata } from "./pages/wine-club"
 import Visit, { metadata as visitMetadata } from "./pages/visit"
 import Journal, { metadata as journalMetadata } from "./pages/journal"
 import JournalEntry from "./pages/journal-entry"
+import Contact, { metadata as contactMetadata } from "./pages/contact"
 import CarterAndFilsCart from "./pages/cart"
 import CarterAndFilsCheckout from "./pages/checkout"
 
@@ -24,6 +25,7 @@ export const pages: Record<string, PageEntry> = {
   "wine-club": { component: WineClub, metadata: wineClubMetadata },
   "visit": { component: Visit, metadata: visitMetadata },
   "journal": { component: Journal, metadata: journalMetadata },
+  "contact": { component: Contact, metadata: contactMetadata },
   "cart": CarterAndFilsCart,
   "checkout": CarterAndFilsCheckout,
 }
