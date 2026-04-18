@@ -11,10 +11,10 @@ export default function SeeltiteContact() {
   return (
     <>
       <Hero
-        headline="Contact Seel-Tite"
-        subheadline="Three channels, by inquiry type. All correspondence is answered by an engineer."
+        headline="Talk To Us"
+        subheadline="Three channels. Every message answered by an engineer or a founder."
       />
-      <CautionStripe text="Routed · Triaged · Answered In Person" />
+      <CautionStripe text="Every Email · Answered In Person" />
 
       <section className="py-16 px-4">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-start">
@@ -23,18 +23,18 @@ export default function SeeltiteContact() {
           </div>
           <div className="space-y-8">
             <div>
-              <p className="text-xs tracking-[0.3em] uppercase text-primary mb-2 font-heading">Submit a Containment Inquiry</p>
-              <p className="text-foreground/80 mb-3 text-sm">General questions about the G1, accessories, or compatibility.</p>
+              <p className="text-xs tracking-[0.3em] uppercase text-primary mb-2 font-heading">General Toot Inquiry</p>
+              <p className="text-foreground/80 mb-3 text-sm">Questions about the G1, the accessories, or which loadout fits your scenarios.</p>
               <p className="font-mono text-sm">inquiry@seeltite.example</p>
             </div>
             <div>
-              <p className="text-xs tracking-[0.3em] uppercase text-primary mb-2 font-heading">File a Field Incident Report</p>
-              <p className="text-foreground/80 mb-3 text-sm">Reporting a deployment experience — prevention or recovery — for possible inclusion in the Field Reports program.</p>
+              <p className="text-xs tracking-[0.3em] uppercase text-primary mb-2 font-heading">Report a Gamble You Lost</p>
+              <p className="text-foreground/80 mb-3 text-sm">Tell us about a deployment — prevention or recovery — for possible inclusion in the Field Reports program. We redact as much or as little as you want.</p>
               <p className="font-mono text-sm">reports@seeltite.example</p>
             </div>
             <div>
               <p className="text-xs tracking-[0.3em] uppercase text-primary mb-2 font-heading">Accessory Compatibility Question</p>
-              <p className="text-foreground/80 mb-3 text-sm">Routing, port adapters, firmware revision compatibility, or accessory-chain configuration.</p>
+              <p className="text-foreground/80 mb-3 text-sm">Port adapters, firmware revisions, accessory-chain configurations. These go to Marcus&apos;s desk.</p>
               <p className="font-mono text-sm">compatibility@seeltite.example</p>
             </div>
             <div className="pt-6 border-t border-foreground/10">
