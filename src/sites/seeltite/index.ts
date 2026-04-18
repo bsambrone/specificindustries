@@ -8,6 +8,7 @@ import SeeltiteScenarios, { metadata as scenariosMetadata } from "./pages/scenar
 import SeeltiteRecovery, { metadata as recoveryMetadata } from "./pages/recovery"
 import SeeltiteDemonstrations, { metadata as demonstrationsMetadata } from "./pages/demonstrations"
 import SeeltiteCompatibility, { metadata as compatibilityMetadata } from "./pages/compatibility"
+import SeeltiteFitment, { metadata as fitmentMetadata } from "./pages/fitment"
 import SeeltiteAbout, { metadata as aboutMetadata } from "./pages/about"
 import SeeltiteLeadership, { metadata as leadershipMetadata } from "./pages/leadership"
 import SeeltiteContact, { metadata as contactMetadata } from "./pages/contact"
@@ -23,6 +24,7 @@ export const pages: Record<string, PageEntry> = {
   "recovery": { component: SeeltiteRecovery, metadata: recoveryMetadata },
   "demonstrations": { component: SeeltiteDemonstrations, metadata: demonstrationsMetadata },
   "compatibility": { component: SeeltiteCompatibility, metadata: compatibilityMetadata },
+  "fitment": { component: SeeltiteFitment, metadata: fitmentMetadata },
   "about": { component: SeeltiteAbout, metadata: aboutMetadata },
   "leadership": { component: SeeltiteLeadership, metadata: leadershipMetadata },
   "contact": { component: SeeltiteContact, metadata: contactMetadata },
