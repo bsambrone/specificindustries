@@ -1,5 +1,3 @@
-import Link from "next/link"
-
 interface Spoke {
   slug: string
   label: string
@@ -58,23 +56,21 @@ export function ModularEcosystemDiagram() {
           const ly = centerY + Math.sin(rad) * labelRadius
           const anchor = Math.abs(Math.cos(rad)) < 0.2 ? "middle" : Math.cos(rad) > 0 ? "start" : "end"
           return (
-            <g key={`node-${s.slug}`}>
-              <Link href={`/products/${s.slug}`}>
-                <circle cx={cx} cy={cy} r="14" fill="#F25C05" stroke="#1A1A1A" strokeWidth="2" />
-                <text
-                  x={lx}
-                  y={ly}
-                  textAnchor={anchor}
-                  dominantBaseline="middle"
-                  fontFamily="'Barlow Condensed', sans-serif"
-                  fontSize="14"
-                  fill="#1A1A1A"
-                  style={{ textTransform: "uppercase", letterSpacing: "0.08em" }}
-                >
-                  {s.label}
-                </text>
-              </Link>
-            </g>
+            <a key={`node-${s.slug}`} href={`/products/${s.slug}`} aria-label={s.label}>
+              <circle cx={cx} cy={cy} r="14" fill="#F25C05" stroke="#1A1A1A" strokeWidth="2" />
+              <text
+                x={lx}
+                y={ly}
+                textAnchor={anchor}
+                dominantBaseline="middle"
+                fontFamily="'Barlow Condensed', sans-serif"
+                fontSize="14"
+                fill="#1A1A1A"
+                style={{ textTransform: "uppercase", letterSpacing: "0.08em" }}
+              >
+                {s.label}
+              </text>
+            </a>
           )
         })}
 
