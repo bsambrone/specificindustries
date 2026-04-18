@@ -32,4 +32,6 @@ export const config: SiteConfig = {
   features: {
     commerce: true,
   },
+  verticalKey: "consumer-goods",
+  tagline: "Over-specified industrial goods for under-specified problems.",
 }

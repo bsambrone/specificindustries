@@ -33,4 +33,6 @@ export const config: SiteConfig = {
   features: {
     commerce: true,
   },
+  verticalKey: "consumer-goods",
+  tagline: "Premium dairy from a species most dairies overlook.",
 }
