@@ -18,8 +18,8 @@ export const config: SiteConfig = {
     },
   },
   metadata: {
-    title: "Seel-Tite Containment Systems — One Seal. Every Scenario.",
-    description: "American-engineered modular shart containment since 1973. The G1 Containment Gasket plus 10 disposal and ancillary accessories. Prevent. Dispose. Proceed.",
+    title: "Seel-Tite — Toot With Confidence.",
+    description: "Every toot is a gamble. The G1 is the house. The G1 Containment Gasket plus ten disposal and ancillary accessories. Since 1973.",
     ogImage: "/sites/seeltite/hero.png",
   },
   nav: [
@@ -27,6 +27,7 @@ export const config: SiteConfig = {
     { label: "Scenarios", path: "/scenarios" },
     { label: "Recovery", path: "/recovery" },
     { label: "Demonstrations", path: "/demonstrations" },
+    { label: "Fitment", path: "/fitment" },
     { label: "Compatibility", path: "/compatibility" },
     { label: "About", path: "/about" },
   ],
