@@ -12,6 +12,8 @@ import JournalEntryPage from "./pages/journal-entry"
 import MehFaq, { metadata as faqMetadata } from "./pages/faq"
 import MehAbout, { metadata as aboutMetadata } from "./pages/about"
 import MehContact, { metadata as contactMetadata } from "./pages/contact"
+import MehPrivacy, { metadata as privacyMetadata } from "./pages/privacy"
+import MehTerms, { metadata as termsMetadata } from "./pages/terms"
 
 export { config }
 
@@ -24,6 +26,8 @@ export const pages: Record<string, PageEntry> = {
   "faq": { component: MehFaq, metadata: faqMetadata },
   "about": { component: MehAbout, metadata: aboutMetadata },
   "contact": { component: MehContact, metadata: contactMetadata },
+  "privacy": { component: MehPrivacy, metadata: privacyMetadata },
+  "terms": { component: MehTerms, metadata: termsMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
