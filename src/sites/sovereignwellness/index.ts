@@ -11,6 +11,7 @@ import SovereignWellnessDispatches, { metadata as dispatchesMetadata } from "./p
 import DispatchDetail from "./pages/dispatch-detail"
 import SovereignWellnessContact, { metadata as contactMetadata } from "./pages/contact"
 import SovereignWellnessPrivacy, { metadata as privacyMetadata } from "./pages/privacy"
+import SovereignWellnessTerms, { metadata as termsMetadata } from "./pages/terms"
 
 export { config }
 
@@ -22,6 +23,7 @@ export const pages: Record<string, PageEntry> = {
   "dispatches": { component: SovereignWellnessDispatches, metadata: dispatchesMetadata },
   "contact": { component: SovereignWellnessContact, metadata: contactMetadata },
   "privacy": { component: SovereignWellnessPrivacy, metadata: privacyMetadata },
+  "terms": { component: SovereignWellnessTerms, metadata: termsMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
