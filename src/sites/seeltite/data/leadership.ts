@@ -13,7 +13,7 @@ export const leaders: Leader[] = [
     person: "bill",
     name: "Walter Thorne",
     title: "Founder & Chief Containment Officer",
-    bio: "Walt founded Seel-Tite in his father's machine shop in 1973. Forty-plus years later, he still reviews every Port Specification revision personally. He does not take meetings before 10:00 AM. He does not take meetings after 16:00. In between, he is in the shop.",
+    bio: "Walt started the company in 1973 because he had a bad week. He made one gasket. It worked. He made another. That one worked too. Fifty-two years later he still signs every port-spec revision, and he still thinks the right answer to most gambles is \"don't force it.\"",
     portraitImage: "/sites/seeltite/leader-thorne.png",
   },
   {
@@ -21,7 +21,7 @@ export const leaders: Leader[] = [
     person: "brandon",
     name: "Marcus Hadley",
     title: "Head of Seal Engineering",
-    bio: "Marcus joined Seel-Tite from the aerospace sealing sector in 2011. He is the author of the OPX-14 port standard and has personally signed off on every gasket durometer change since 2013. He does not speak during staff meetings. He does speak when the gasket does.",
+    bio: "Marcus owns the seal. Every durometer change, every revision of the silicone recipe, every micrometer of tolerance on the OPX-14 port — he signed it. Quiet in meetings. Loud when the spec is wrong. If the gasket holds, Marcus is why.",
     portraitImage: "/sites/seeltite/leader-hadley.png",
   },
   {
@@ -29,7 +29,7 @@ export const leaders: Leader[] = [
     person: "jim",
     name: "Jim Boecker",
     title: "VP of Disposal Systems",
-    bio: "Jim runs the accessory division. Grinder, Salad Shooter, Cryo-Puck, Incinerator — all three-letter product codes pass through his desk before the mold tooling is cut. He owns the original Presto Salad Shooter that inspired the attachment. It sits on a shelf behind his chair.",
+    bio: "Jim runs the ten accessories. He bought a vintage Presto Salad Shooter in 1987 because he liked the mechanism; thirty-eight years later the Salad Shooter Attachment is the catalog's second-best seller. Jim is the reason we have more than one way to handle a losing gamble.",
     portraitImage: "/sites/seeltite/leader-boecker.png",
   },
   {
@@ -37,7 +37,7 @@ export const leaders: Leader[] = [
     person: "sean",
     name: "Dale Castellan",
     title: "Director of Predictive Alerts",
-    bio: "Dale heads the Telemetry program. He joined in 2019 after eleven years in industrial IoT. He is responsible for the 4-to-12-second predictive alert window, the haptic pattern library, and the iOS and Android companion applications. He does not carry a smartphone off-hours.",
+    bio: "Dale built the Telemetry Module. The reason you get a haptic alert four to twelve seconds before a likely event is Dale's statistics work. He does not carry a smartphone on weekends, which is the highest compliment we can pay the product he built.",
     portraitImage: "/sites/seeltite/leader-castellan.png",
   },
 ]
