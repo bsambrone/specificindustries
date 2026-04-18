@@ -28,6 +28,7 @@ export const VALID_SUBDOMAINS = [
   "meh",
   "superengineered",
   "privatrix",
+  "seeltite",
 ] as const
 
 export function isValidSubdomain(subdomain: string): boolean {

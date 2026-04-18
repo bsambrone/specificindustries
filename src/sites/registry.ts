@@ -26,6 +26,7 @@ import { config as sovereignwellnessConfig, pages as sovereignwellnessPages, dyn
 import { config as mehConfig, pages as mehPages, dynamicRoutes as mehDynamicRoutes } from "./meh"
 import { config as superengineeredConfig, pages as superengineeredPages, dynamicRoutes as superengineeredDynamicRoutes } from "./superengineered"
 import { config as privatrixConfig, pages as privatrixPages, dynamicRoutes as privatrixDynamicRoutes } from "./privatrix"
+import { config as seeltiteConfig, pages as seeltitePages, dynamicRoutes as seeltiteDynamicRoutes } from "./seeltite"
 
 export const siteRegistry: Record<string, SiteModule> = {
   apex: { config: apexConfig, pages: apexPages },
@@ -55,6 +56,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   meh: { config: mehConfig, pages: mehPages, dynamicRoutes: mehDynamicRoutes },
   superengineered: { config: superengineeredConfig, pages: superengineeredPages, dynamicRoutes: superengineeredDynamicRoutes },
   privatrix: { config: privatrixConfig, pages: privatrixPages, dynamicRoutes: privatrixDynamicRoutes },
+  seeltite: { config: seeltiteConfig, pages: seeltitePages, dynamicRoutes: seeltiteDynamicRoutes },
 }
 
 export type SubdomainKey = keyof typeof siteRegistry
