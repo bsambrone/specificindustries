@@ -9,6 +9,7 @@ import MehManifesto, { metadata as manifestoMetadata } from "./pages/manifesto"
 import MehPress, { metadata as pressMetadata } from "./pages/press"
 import MehJournal, { metadata as journalMetadata } from "./pages/journal"
 import JournalEntryPage from "./pages/journal-entry"
+import MehFaq, { metadata as faqMetadata } from "./pages/faq"
 
 export { config }
 
@@ -18,6 +19,7 @@ export const pages: Record<string, PageEntry> = {
   "manifesto": { component: MehManifesto, metadata: manifestoMetadata },
   "press": { component: MehPress, metadata: pressMetadata },
   "journal": { component: MehJournal, metadata: journalMetadata },
+  "faq": { component: MehFaq, metadata: faqMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
