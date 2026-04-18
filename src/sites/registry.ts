@@ -22,6 +22,7 @@ import { config as squaredawayConfig, pages as squaredawayPages, dynamicRoutes a
 import { config as radiumroysConfig, pages as radiumroysPages, dynamicRoutes as radiumroysDynamicRoutes } from "./radiumroys"
 import { config as mostlysterileConfig, pages as mostlysterilePages, dynamicRoutes as mostlysterileDynamicRoutes } from "./mostlysterile"
 import { config as carterandfilsConfig, pages as carterandfilsPages, dynamicRoutes as carterandfilsDynamicRoutes } from "./carterandfils"
+import { config as sovereignwellnessConfig, pages as sovereignwellnessPages } from "./sovereignwellness"
 
 export const siteRegistry: Record<string, SiteModule> = {
   apex: { config: apexConfig, pages: apexPages },
@@ -47,6 +48,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   radiumroys: { config: radiumroysConfig, pages: radiumroysPages, dynamicRoutes: radiumroysDynamicRoutes },
   mostlysterile: { config: mostlysterileConfig, pages: mostlysterilePages, dynamicRoutes: mostlysterileDynamicRoutes },
   carterandfils: { config: carterandfilsConfig, pages: carterandfilsPages, dynamicRoutes: carterandfilsDynamicRoutes },
+  sovereignwellness: { config: sovereignwellnessConfig, pages: sovereignwellnessPages },
 }
 
 export type SubdomainKey = keyof typeof siteRegistry
