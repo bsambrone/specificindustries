@@ -55,7 +55,7 @@ export default function SeeltiteAbout() {
               Every G1 elastomer is molded in the original press line installed in 1976. The press has been refurbished twice. The tooling has been replaced once. The part has not changed dimensions since 1993.
             </p>
             <p className="text-foreground/80 leading-relaxed">
-              Port inserts are CNC-machined from aerospace-grade PEEK in the shop's back bay. Tolerances are held to ±0.02mm. Every tenth unit is measured on a coordinate-measuring machine Walt bought used in 1989.
+              Port inserts are CNC-machined from aerospace-grade PEEK in the shop&apos;s back bay. Tolerances are held to ±0.02mm. Every tenth unit is measured on a coordinate-measuring machine Walt bought used in 1989.
             </p>
           </div>
         </div>
