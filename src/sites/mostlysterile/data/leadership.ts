@@ -22,7 +22,7 @@ export const leaders: Leader[] = [
     name: "Mitchell Braddock",
     title: "VP of Approximately Sterile Operations",
     bio: "Oversees the inventory floor and the proprietary 'good-enough' audit process. Personally signs off on any lot that passes at least three of the four standard sterility checks.",
-    portraitImage: "/sites/apex/team/member-1.png",
+    portraitImage: "/sites/apex/team/member-3.png",
   },
   {
     slug: "finch",
@@ -38,6 +38,6 @@ export const leaders: Leader[] = [
     name: "Quentin Prescott",
     title: "Head of Hospital Relations",
     bio: "Handles institutional customer relations, clinician training support, and the written responses to all regulatory inquiries. Has personally drafted 340 such responses, none of which have produced a follow-up.",
-    portraitImage: "/sites/apex/team/member-3.png",
+    portraitImage: "/sites/apex/team/member-1.png",
   },
 ]

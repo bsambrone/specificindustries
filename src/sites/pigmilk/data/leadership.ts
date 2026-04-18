@@ -30,7 +30,7 @@ export const leaders: Leader[] = [
     name: "Albert Snoot",
     title: "Director of Dairy Porcine Operations",
     bio: "Responsible for sow welfare, diet formulation, and the creamery's unique music-during-milking protocol. Prefers Chopin. The sows appear to agree.",
-    portraitImage: "/sites/apex/team/member-3.png",
+    portraitImage: "/sites/apex/team/member-1.png",
   },
   {
     slug: "wallow",
@@ -38,6 +38,6 @@ export const leaders: Leader[] = [
     name: "Cedric Wallow",
     title: "Head of Creamery Standards",
     bio: "Oversees the creamery's single-origin pig milk classification system. The system is not recognized by any regulatory body, which he considers an asset.",
-    portraitImage: "/sites/apex/team/member-1.png",
+    portraitImage: "/sites/apex/team/member-3.png",
   },
 ]

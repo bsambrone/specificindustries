@@ -22,7 +22,7 @@ export const leaders: Leader[] = [
     name: "Bruno Stonewall",
     title: "VP of Grit Engineering",
     bio: "Oversees grit specification and the proprietary mineral-sourcing process. Personally owns the grading rubric for every grit in the catalog. Does not subcontract the grading.",
-    portraitImage: "/sites/apex/team/member-1.png",
+    portraitImage: "/sites/apex/team/member-3.png",
   },
   {
     slug: "brimstone",
@@ -38,6 +38,6 @@ export const leaders: Leader[] = [
     name: "Dwight Grindle",
     title: "Head of Cleansing Products",
     bio: "Responsible for the product line, packaging, and end-user safety warnings. Personally drafts every warning label. The lawyers have learned not to revise them.",
-    portraitImage: "/sites/apex/team/member-3.png",
+    portraitImage: "/sites/apex/team/member-1.png",
   },
 ]

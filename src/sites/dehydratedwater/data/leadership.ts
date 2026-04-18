@@ -22,7 +22,7 @@ export const leaders: Leader[] = [
     name: "Percival Blackwood",
     title: "Director of Powder Engineering",
     bio: "Joined the Laboratories in 2004 following fifteen years in industrial desiccation. Personally oversees the crystalline uniformity of every packet. Claims to have never tasted reconstituted water, for reasons he declines to elaborate.",
-    portraitImage: "/sites/apex/team/member-3.png",
+    portraitImage: "/sites/apex/team/member-1.png",
   },
   {
     slug: "dunhaven",
@@ -38,6 +38,6 @@ export const leaders: Leader[] = [
     name: "Wilbur Ashcroft",
     title: "Head of Just-Add-Water Integration",
     bio: "Came to the Laboratories in 2017 to modernize the just-add-water instruction card. Owns the tone, type setting, and paper stock of every packet. Still uses a typewriter at home, on weekends.",
-    portraitImage: "/sites/apex/team/member-1.png",
+    portraitImage: "/sites/apex/team/member-3.png",
   },
 ]

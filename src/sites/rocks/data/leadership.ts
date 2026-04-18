@@ -22,7 +22,7 @@ export const leaders: Leader[] = [
     name: "Lincoln Granite",
     title: "Head of Bedrock Desk",
     bio: "Runs the primary-bedrock desk. Executes institutional block purchases of large, contiguous geological formations. Has not taken a vacation since onboarding.",
-    portraitImage: "/sites/apex/team/member-1.png",
+    portraitImage: "/sites/apex/team/member-3.png",
   },
   {
     slug: "shale",
@@ -38,6 +38,6 @@ export const leaders: Leader[] = [
     name: "Miles Quartz",
     title: "VP of Vault Operations",
     bio: "Oversees the firm's cold-storage geological vault. Has personally verified the specific gravity of every asset in the vault, quarterly. Knows the rocks by first name.",
-    portraitImage: "/sites/apex/team/member-3.png",
+    portraitImage: "/sites/apex/team/member-1.png",
   },
 ]

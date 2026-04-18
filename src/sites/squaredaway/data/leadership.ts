@@ -22,7 +22,7 @@ export const leaders: Leader[] = [
     name: "Colonel Dale Hargreaves",
     title: "VP of Branch Operations",
     bio: "Oversees inventory coordination across all five service branches. Personally reviews the weekly branch-loyalty sales data. Has been known to tear up during the Marine-branded merchandise review.",
-    portraitImage: "/sites/apex/team/member-1.png",
+    portraitImage: "/sites/apex/team/member-3.png",
   },
   {
     slug: "sparrow",
@@ -38,6 +38,6 @@ export const leaders: Leader[] = [
     name: "Sergeant Major Oren Blackwell",
     title: "Head of Exchange Relations",
     bio: "Liaises with on-base purchasing authorities and handles all official and unofficial channel escalations. Has been invited to no official exchange conferences, and takes this as a point of pride.",
-    portraitImage: "/sites/apex/team/member-3.png",
+    portraitImage: "/sites/apex/team/member-1.png",
   },
 ]

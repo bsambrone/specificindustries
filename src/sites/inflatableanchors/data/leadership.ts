@@ -22,7 +22,7 @@ export const leaders: Leader[] = [
     name: "Nathaniel Copper",
     title: "VP of Retrieval Engineering",
     bio: "Oversees the design of the proprietary rapid-deflation valve. Personally owns the record for fastest anchor retrieval in a boater-supervised trial. Does not discuss the unsupervised trials.",
-    portraitImage: "/sites/apex/team/member-1.png",
+    portraitImage: "/sites/apex/team/member-3.png",
   },
   {
     slug: "ballast",
@@ -30,7 +30,7 @@ export const leaders: Leader[] = [
     name: "Winston Ballast",
     title: "Director of Inflation Standards",
     bio: "Maintains the tolerance specification for every anchor in the catalog. Has personally inflated more anchors than any human in history, a fact he does not enjoy mentioning.",
-    portraitImage: "/sites/apex/team/member-3.png",
+    portraitImage: "/sites/apex/team/member-1.png",
   },
   {
     slug: "driftwood",

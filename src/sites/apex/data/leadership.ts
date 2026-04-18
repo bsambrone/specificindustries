@@ -51,7 +51,7 @@ export const apexLeaders: ApexLeader[] = [
     name: "Cornelius Whitfield",
     title: "President & Chief Operating Officer",
     bio: "Joined Specific Industries in 2021 from a senior operating role at a firm he characterizes as 'a similar platform, ultimately over-invested in outcomes.' Responsible for the day-to-day oversight of the portfolio's operational surface area.",
-    portraitImage: "/sites/apex/team/member-1.png",
+    portraitImage: "/sites/apex/team/member-3.png",
     careerHighlights: [
       "Portfolio operations uptime: within expected range",
       "Direct reports: 14 (as designed)",
@@ -87,7 +87,7 @@ export const apexLeaders: ApexLeader[] = [
     name: "Vincent Coleman",
     title: "Chief Strategy Officer",
     bio: "Authors the firm's investment thesis materials and maintains the firm's proprietary classification framework for underserved markets. Does not attend meetings before 10 AM.",
-    portraitImage: "/sites/apex/team/member-3.png",
+    portraitImage: "/sites/apex/team/member-1.png",
     careerHighlights: [
       "Frameworks authored: 4 (SPECIFIC Evaluation Framework™ is principal)",
       "Thesis revisions since 2019: 11",

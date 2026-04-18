@@ -22,7 +22,7 @@ export const leaders: Leader[] = [
     name: "Obadiah Lark",
     title: "Director of Pasture Operations",
     bio: "Oversees daily rotation of the co-op's frequency herds across the grazing lands. Believes that a router fed on native wildflowers sings clearer than one raised in a datacenter, and has the anecdotes to prove it.",
-    portraitImage: "/sites/apex/team/member-1.png",
+    portraitImage: "/sites/apex/team/member-3.png",
   },
   {
     slug: "whitlaw",
@@ -38,6 +38,6 @@ export const leaders: Leader[] = [
     name: "Hollis Nettleton",
     title: "VP of Heritage Frequencies",
     bio: "Curates the co-op's pre-industrial frequency catalog. Can identify an improperly aged signal by ear and is, on principle, suspicious of the 5 GHz band.",
-    portraitImage: "/sites/apex/team/member-3.png",
+    portraitImage: "/sites/apex/team/member-1.png",
   },
 ]
