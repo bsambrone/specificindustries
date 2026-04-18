@@ -60,6 +60,7 @@ export default function SovereignWellnessHome() {
                 price={t.priceLabel}
                 tagline={t.tagline}
                 image={t.image}
+                showAddToCart={false}
               />
             ))}
           </div>
