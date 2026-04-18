@@ -33,4 +33,6 @@ export const config: SiteConfig = {
   features: {
     commerce: true,
   },
+  verticalKey: "hygiene",
+  tagline: "Abrasives for people who have given up on softer options.",
 }
