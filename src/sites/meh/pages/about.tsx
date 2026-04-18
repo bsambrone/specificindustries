@@ -1,40 +1,10 @@
 import { TeamMember } from "@/components/ui/team-member"
+import { leaders } from "../data/leadership"
 
 export const metadata = {
   title: "About — Meh.",
   description: "The team and thinking behind Meh.",
 }
-
-const leadership = [
-  {
-    name: "Desmond Ashcroft",
-    title: "Founder & Chief Disappointment Officer",
-    image: "/sites/meh/team-founder.png",
-    person: "bill",
-    bio: "Founded Meh. in 2019 after a long, increasingly disillusioning career in consumer electronics. Oversees all product direction. Rarely smiles. Never overpromises.",
-  },
-  {
-    name: "Roland Peveril",
-    title: "President of Lowered Expectations",
-    image: "/sites/meh/team-president.png",
-    person: "brandon",
-    bio: "Joined in 2020 from a senior role at a more aspirational company. Manages day-to-day operations and most things that Desmond prefers not to manage. Believed to own the company's only remaining enthusiasm.",
-  },
-  {
-    name: "Warren Ellsworth",
-    title: "VP of Affective Underdelivery",
-    image: "/sites/meh/team-vp.png",
-    person: "jim",
-    bio: "Leads the engineering team. Responsible for calibrating the precise shortfall in every device. Considers the work largely complete, though he maintains there is always further to go.",
-  },
-  {
-    name: "Julian Marlowe",
-    title: "Head of Ambient Sighs",
-    image: "/sites/meh/team-ambient.png",
-    person: "sean",
-    bio: "Oversees the sound design of all auditory elements — the sighs, the ohs, the single soft tones. Formerly a voice actor. Prefers to work in silence.",
-  },
-]
 
 export default function MehAbout() {
   return (
@@ -60,10 +30,10 @@ export default function MehAbout() {
         <div className="max-w-6xl mx-auto">
           <p className="text-xs uppercase tracking-widest text-foreground/60 mb-10">Leadership</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {leadership.map((member) => (
+            {leaders.map((member) => (
               <div key={member.name} className="border border-foreground/20 p-6 bg-background/30">
                 <TeamMember
-                  image={member.image}
+                  image={member.portraitImage}
                   name={member.name}
                   title={member.title}
                   bio={member.bio}
