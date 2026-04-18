@@ -7,6 +7,7 @@ export interface SubsidiaryBoardPosition {
   subdomain: string
   subsiteName: string
   subsiteFavicon: string
+  leaderPortrait: string | null
   verticalKey: VerticalKey | null
   nameThere: string
   titleThere: string
@@ -18,6 +19,8 @@ interface UnknownLeaderShape {
   name?: string
   title?: string
   bio?: string
+  portraitImage?: string
+  image?: string
 }
 
 function firstSentence(text: string, max = 160): string {
@@ -54,6 +57,7 @@ export async function collectLeaderHistory(person: PersonKey): Promise<Subsidiar
       subdomain,
       subsiteName: config.name,
       subsiteFavicon: `/sites/${subdomain}/favicon.png`,
+      leaderPortrait: match.portraitImage ?? match.image ?? null,
       verticalKey: config.verticalKey ?? null,
       nameThere: match.name ?? "Unknown",
       titleThere: match.title ?? "Role Unspecified",

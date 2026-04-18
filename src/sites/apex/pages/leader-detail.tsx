@@ -89,6 +89,7 @@ export async function LeaderDetailView({ slug }: LeaderDetailProps) {
                           key={p.subdomain}
                           subsiteName={p.subsiteName}
                           subsiteFavicon={p.subsiteFavicon}
+                          leaderPortrait={p.leaderPortrait}
                           nameThere={p.nameThere}
                           titleThere={p.titleThere}
                           blurb={p.blurb}
@@ -108,6 +109,7 @@ export async function LeaderDetailView({ slug }: LeaderDetailProps) {
                         key={p.subdomain}
                         subsiteName={p.subsiteName}
                         subsiteFavicon={p.subsiteFavicon}
+                        leaderPortrait={p.leaderPortrait}
                         nameThere={p.nameThere}
                         titleThere={p.titleThere}
                         blurb={p.blurb}

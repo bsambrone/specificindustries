@@ -3,6 +3,7 @@ import Image from "next/image"
 export interface SubsidiaryBoardCardProps {
   subsiteName: string
   subsiteFavicon: string
+  leaderPortrait: string | null
   nameThere: string
   titleThere: string
   blurb: string
@@ -12,24 +13,38 @@ export interface SubsidiaryBoardCardProps {
 export function SubsidiaryBoardCard({
   subsiteName,
   subsiteFavicon,
+  leaderPortrait,
   nameThere,
   titleThere,
   blurb,
   href,
 }: SubsidiaryBoardCardProps) {
+  const portraitSrc = leaderPortrait ?? subsiteFavicon
+
   return (
     <a
       href={href}
       className="flex gap-4 p-5 rounded-lg border border-primary/10 bg-background hover:border-primary/30 transition-colors"
     >
-      <div className="relative w-10 h-10 flex-shrink-0">
+      <div className="relative w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden bg-secondary/10">
         <Image
-          src={subsiteFavicon}
-          alt={`${subsiteName} logo`}
+          src={portraitSrc}
+          alt={`${nameThere} — ${subsiteName}`}
           fill
-          sizes="40px"
-          className="object-contain"
+          sizes="80px"
+          className="object-cover"
         />
+        <div className="absolute bottom-0 right-0 w-6 h-6 rounded-tl-md bg-background border-t border-l border-primary/10 p-0.5">
+          <div className="relative w-full h-full">
+            <Image
+              src={subsiteFavicon}
+              alt={`${subsiteName} logo`}
+              fill
+              sizes="24px"
+              className="object-contain"
+            />
+          </div>
+        </div>
       </div>
       <div className="min-w-0 flex-1">
         <p className="text-[10px] uppercase tracking-[0.15em] text-foreground/40 font-heading mb-0.5">{subsiteName}</p>
