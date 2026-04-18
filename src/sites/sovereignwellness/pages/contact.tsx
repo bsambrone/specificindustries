@@ -1,5 +1,6 @@
 "use client"
 
+import { useState, useRef, type FormEvent } from "react"
 import { Hero } from "@/components/ui/hero"
 import { WaxSealCTA } from "@/sites/sovereignwellness/components/WaxSealCTA"
 
@@ -8,7 +9,30 @@ export const metadata = {
   description: "A considered exchange. We read plaintext inquiries on the third Tuesday of each calendar month.",
 }
 
+const DISPATCH_MESSAGES = [
+  "Your dispatch has been received. We will read it aloud on the third Tuesday.",
+  "Mr. Callaghan has noted your inquiry. He is unhurried.",
+  "Filed under VII-B. Expected response: 7 to 11 weeks.",
+  "Your words have been transcribed in ink. The ink is drying.",
+  "Inquiry placed in the queue. You are number LXXVII.",
+  "The Archive has acknowledged you. In its way.",
+  "Received at the side door. Do not knock a second time.",
+  "Mr. Marsh will consult. We will not rush him.",
+  "Your dispatch is now at rest. It will be woken, in time.",
+]
+
 export default function SovereignWellnessContact() {
+  const [toast, setToast] = useState<string | null>(null)
+  const timeoutRef = useRef<number | null>(null)
+
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    const message = DISPATCH_MESSAGES[Math.floor(Math.random() * DISPATCH_MESSAGES.length)]
+    setToast(message)
+    if (timeoutRef.current) window.clearTimeout(timeoutRef.current)
+    timeoutRef.current = window.setTimeout(() => setToast(null), 5000)
+  }
+
   return (
     <>
       <Hero
@@ -29,7 +53,7 @@ export default function SovereignWellnessContact() {
             </ul>
           </div>
 
-          <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <label className="block text-xs tracking-[0.3em] uppercase text-primary/70 mb-2">Your preferred hand</label>
               <select className="w-full bg-transparent border border-primary/30 px-4 py-3 focus:border-primary focus:outline-none">
@@ -70,6 +94,16 @@ export default function SovereignWellnessContact() {
           </p>
         </div>
       </section>
+
+      {toast && (
+        <div
+          role="status"
+          aria-live="polite"
+          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 max-w-md bg-primary text-secondary px-6 py-4 shadow-lg border-2 border-[#4A1414] font-heading italic"
+        >
+          {toast}
+        </div>
+      )}
     </>
   )
 }
