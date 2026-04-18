@@ -46,6 +46,13 @@ export interface MegaMenuConfig {
   items: MegaMenuItem[]
 }
 
+export type VerticalKey =
+  | "consumer-goods"
+  | "hygiene"
+  | "health-wellness"
+  | "subscription-services"
+  | "professional-services"
+
 export interface SiteConfig {
   name: string
   subdomain: string
@@ -56,6 +63,8 @@ export interface SiteConfig {
     commerce: boolean
   }
   megaMenu?: MegaMenuConfig
+  verticalKey?: VerticalKey
+  tagline?: string
 }
 
 export interface PageMetadata {
