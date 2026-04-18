@@ -130,7 +130,7 @@ const SCENARIO_STYLE =
   "realistic editorial illustration, muted safety-orange and charcoal-gray palette, clean industrial aesthetic, SFW, tasteful and dignified, protagonists composed with tight jaws and thousand-yard stare, slight sweat at hairline"
 
 const EXEC_STYLE =
-  "professional corporate portrait, industrial manufacturing executive, wearing a charcoal crew-neck or safety-orange button-down with a Seel-Tite logo, blurred shop-floor background, tight jaw, slightly clenched expression, subtle perspiration at hairline, eyes focused mid-distance, composed but clearly mid-clench, dignified mortification"
+  "professional corporate portrait, consumer-brand founder aesthetic like Casper / Away / Warby Parker portraits, subject wearing a simple charcoal crew-neck or soft safety-orange button-down with a small Seel-Tite wordmark, tight jaw and slightly clenched expression, subtle perspiration at hairline, eyes focused mid-distance, composed but clearly mid-clench, dignified mortification, soft warm studio lighting, clean neutral showroom wall or warm gray backdrop, no shop floor, no tools, no industrial background"
 
 // ─── Hero + homepage ─────────────────────────────────────────
 
@@ -142,7 +142,6 @@ const HOMEPAGE_PROMPTS: Array<[string, string, ("1024x1024" | "1536x1024" | "102
   [`${INDUSTRIAL_STYLE}, close-up of a single safety-orange industrial CTA button labeled "DEPLOY" on a concrete-gray textured wall, modern poster composition`, "cta-background.png", "1536x1024"],
   [`${INDUSTRIAL_STYLE}, overhead shot of the Grinder and the Salad Shooter Attachment mounted side-by-side on a black peg board, catalog photography, safety-orange accent lighting`, "accessory-showcase-1.png"],
   [`${INDUSTRIAL_STYLE}, overhead shot of the Cryo-Puck module and Incinerator Module mounted side-by-side on a black peg board, catalog photography, subtle blue and red indicator LEDs`, "accessory-showcase-2.png"],
-  [`${INDUSTRIAL_STYLE}, macro close-up of the Seel-Tite OPX-14 bayonet output port, polished aerospace-grade PEEK with platinum-cured silicone ring, high-contrast lighting`, "opx14-macro.png"],
 ]
 
 // ─── Product prompts (11 SKUs × hero + 2 gallery + 1 exploded = 44 images) ───
@@ -254,11 +253,45 @@ const RECOVERY_PROMPTS: Record<string, string> = {
 const STATIC_PROMPTS: Array<[string, string, ("1024x1024" | "1536x1024" | "1024x1536")?]> = [
   [`${INDUSTRIAL_STYLE}, technical isometric diagram of the OPX-14 port specification with dimensions labeled, dashed callout lines, white background`, "compatibility-port-spec.png", "1536x1024"],
   [`${INDUSTRIAL_STYLE}, compatibility matrix grid illustration: G1 gasket in one column, 10 accessories on the other axis, green checkmarks at intersections, catalog typography`, "compatibility-matrix-visual.png", "1536x1024"],
-  [`${INDUSTRIAL_STYLE}, a firmware revision table displayed on a vintage monochrome monitor, Seel-Tite branding, softly glowing green text on black`, "compatibility-firmware.png"],
   [`${INDUSTRIAL_STYLE}, a 1973 archival photograph of a small Akron Ohio machine shop with hand-painted Seel-Tite signage above the door, sepia tone, grainy film stock`, "about-heritage.png", "1536x1024"],
-  [`${INDUSTRIAL_STYLE}, a modern manufacturing welding floor with CNC machines and production lines, Seel-Tite workers in safety-orange coveralls`, "about-factory.png", "1536x1024"],
+  [`clean, bright small workshop bay with a tidy assembly table holding a single G1 Containment Gasket, warm wood and soft-gray tones, consumer-maker aesthetic, natural window light through a large window, no heavy machinery, no welding, no coveralls, no factory floor feel — think a clean independent design studio, warm and contemplative`, "about-factory.png", "1536x1024"],
   [`${INDUSTRIAL_STYLE}, a vintage rotary desk phone in matte black sitting on an industrial workbench with a safety-orange cable, catalog photography, neutral background`, "contact-workbench.png"],
   [`${INDUSTRIAL_STYLE}, caution-tape chevron banner graphic with diagonal safety-orange and charcoal stripes, flat vector design, 3:1 aspect ratio`, "privacy-banner.png", "1536x1024"],
+]
+
+// ─── Fitment prompts (hero + 4 steps + test toot + dos-donts grid) ───
+
+const FITMENT_PROMPTS: Array<[string, string, ("1024x1024" | "1536x1024" | "1024x1536")?]> = [
+  [
+    `${INDUSTRIAL_STYLE}, person from the chest up, photorealistic, standing against a soft warm gray backdrop, wearing a fitted charcoal shirt, composed and quietly confident expression, subtle orange indicator LED peeking from just under the shirt collar suggesting a discreetly worn Seel-Tite product, warm studio lighting, SFW, tasteful and dignified`,
+    "fitment-hero.png",
+    "1536x1024",
+  ],
+  [
+    "clean instructional vector diagram in IKEA-assembly style, stylized geometric waist-down torso silhouette (no anatomy, purely outline), a safety-orange circular G1 gasket shape being positioned against the figure, a bold numbered step badge with a large '1', an arrow indicating the gasket moving into place, white background, thin black line work, clean typography, SFW, minimalist instructional illustration",
+    "fitment-step-1.png",
+  ],
+  [
+    "clean instructional vector diagram in IKEA-assembly style, stylized geometric waist-down torso silhouette (no anatomy, purely outline), the safety-orange G1 gasket in place with dashed pressure-contact arrows pointing inward around its circumference, a bold numbered step badge with a large '2', white background, thin black line work, SFW, minimalist instructional illustration",
+    "fitment-step-2.png",
+  ],
+  [
+    "clean instructional vector diagram in IKEA-assembly style, stylized geometric waist-down torso silhouette (no anatomy, purely outline), the safety-orange G1 gasket in place with a small smartphone app mockup in the corner showing a pressure gauge reading 14.7 PSI, a bold numbered step badge with a large '3', white background, thin black line work, SFW, minimalist instructional illustration",
+    "fitment-step-3.png",
+  ],
+  [
+    "clean instructional vector diagram in IKEA-assembly style, stylized geometric waist-down torso silhouette (no anatomy, purely outline), the safety-orange G1 gasket in place with a small upward-arrow pulse icon indicating a successful test toot, a checkmark next to the pulse, a bold numbered step badge with a large '4', white background, thin black line work, SFW, minimalist instructional illustration",
+    "fitment-step-4.png",
+  ],
+  [
+    "diagnostic illustration: a pressure gauge showing a flat ±0.3 PSI signature during a small test toot, accompanied by a waveform readout beneath it, clean technical illustration style, safety-orange accent color, white background, SFW",
+    "fitment-test-toot.png",
+  ],
+  [
+    "six-panel instructional grid in IKEA-assembly style, three panels on top labeled with green checkmarks showing correct G1 positioning (flush, proper orientation, clean), three panels on bottom labeled with red Xs showing incorrect positioning (over-tightened, inverted, un-cleaned), stylized geometric torso silhouettes throughout, white background, clean line work, SFW, minimalist instructional illustration",
+    "fitment-dos-donts.png",
+    "1536x1024",
+  ],
 ]
 
 // ─── Executive portrait prompts (constipated / mid-clench) ───
@@ -313,6 +346,12 @@ async function main() {
 
   console.log("\n— Static (compatibility, about, contact, privacy) —")
   for (const [prompt, filename, size] of STATIC_PROMPTS) {
+    await generateImage(prompt, filename, size)
+    await delay(2000)
+  }
+
+  console.log("\n— Fitment —")
+  for (const [prompt, filename, size] of FITMENT_PROMPTS) {
     await generateImage(prompt, filename, size)
     await delay(2000)
   }
