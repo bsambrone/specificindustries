@@ -30,6 +30,8 @@ import { products as squaredawayProducts } from "@/sites/squaredaway/data/produc
 import { products as mostlysterileProducts } from "@/sites/mostlysterile/data/products"
 import { products as carterandfilsProducts } from "@/sites/carterandfils/data/products"
 import { journalEntries as carterandfilsJournal } from "@/sites/carterandfils/data/journal"
+import { products as mehProducts } from "@/sites/meh/data/products"
+import { journalEntries as mehJournal } from "@/sites/meh/data/journal"
 
 const BASE_DOMAIN = "specificindustries.com"
 const EXCLUDED_PAGES = new Set(["cart", "checkout"])
@@ -67,6 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     radiumroys: radiumroysProducts,
     squaredaway: squaredawayProducts,
     mostlysterile: mostlysterileProducts,
+    meh: mehProducts,
   }
 
   for (const [subdomain, products] of Object.entries(productSites)) {
@@ -160,6 +163,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
   for (const entry of carterandfilsJournal) {
     urls.push({ url: siteUrl("carterandfils", `journal/${entry.slug}`) })
+  }
+
+  // Meh: journal entries (products covered by productSites map above)
+  for (const entry of mehJournal) {
+    urls.push({ url: siteUrl("meh", `journal/${entry.slug}`) })
   }
 
   return urls
