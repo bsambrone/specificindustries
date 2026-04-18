@@ -4,12 +4,14 @@ import { getProductBySlug } from "./data/products"
 import PrivatrixHome from "./pages/home"
 import PrivatrixProducts, { metadata as productsMetadata } from "./pages/products"
 import PrivatrixProductDetail from "./pages/product-detail"
+import PrivatrixAbout, { metadata as aboutMetadata } from "./pages/about"
 
 export { config }
 
 export const pages: Record<string, PageEntry> = {
   "": PrivatrixHome,
   "products": { component: PrivatrixProducts, metadata: productsMetadata },
+  "about": { component: PrivatrixAbout, metadata: aboutMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
