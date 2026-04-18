@@ -1,8 +1,10 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Hero } from "@/components/ui/hero"
 import { Timeline } from "@/components/ui/timeline"
 import { CertificationCard } from "@/components/ui/CertificationCard"
 import { CautionStripe } from "../components/caution-stripe"
+import { leaders } from "../data/leadership"
 
 export const metadata = {
   title: "About — Seel-Tite Containment Systems",
@@ -63,6 +65,31 @@ export default function SeeltiteAbout() {
           <p className="text-xs tracking-[0.3em] uppercase text-primary mb-3 font-heading text-center">Timeline</p>
           <h2 className="text-3xl font-heading font-semibold mb-10 text-center">Fifty-Two Years of Containment</h2>
           <Timeline items={MILESTONES} />
+        </div>
+      </section>
+
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-xs tracking-[0.3em] uppercase text-primary mb-3 font-heading text-center">Meet The Team</p>
+          <h2 className="text-3xl font-heading font-semibold mb-10 text-center">Four People. One Gasket.</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {leaders.map((l) => (
+              <article key={l.slug} className="border border-foreground/15 bg-background flex flex-col">
+                <div className="relative aspect-square bg-secondary/10">
+                  <Image src={l.portraitImage} alt={l.name} fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" />
+                </div>
+                <div className="p-4 border-t border-foreground/10">
+                  <p className="text-xs tracking-[0.2em] uppercase text-primary mb-1">{l.title}</p>
+                  <p className="font-heading font-semibold text-lg leading-tight">{l.name}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/leadership" className="inline-flex items-center gap-2 bg-primary text-background px-6 py-3 text-sm font-semibold tracking-wider uppercase hover:bg-secondary transition-colors">
+              Read Their Full Bios
+            </Link>
+          </div>
         </div>
       </section>
 
