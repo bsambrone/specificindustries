@@ -32,6 +32,8 @@ import { products as carterandfilsProducts } from "@/sites/carterandfils/data/pr
 import { journalEntries as carterandfilsJournal } from "@/sites/carterandfils/data/journal"
 import { products as mehProducts } from "@/sites/meh/data/products"
 import { journalEntries as mehJournal } from "@/sites/meh/data/journal"
+import { treatments as sovereignwellnessTreatments } from "@/sites/sovereignwellness/data/treatments"
+import { dispatches as sovereignwellnessDispatches } from "@/sites/sovereignwellness/data/dispatches"
 
 const BASE_DOMAIN = "specificindustries.com"
 const EXCLUDED_PAGES = new Set(["cart", "checkout"])
@@ -168,6 +170,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Meh: journal entries (products covered by productSites map above)
   for (const entry of mehJournal) {
     urls.push({ url: siteUrl("meh", `journal/${entry.slug}`) })
+  }
+
+  // Sovereign Wellness: treatment detail pages, dispatch articles
+  for (const t of sovereignwellnessTreatments) {
+    urls.push({ url: siteUrl("sovereignwellness", `treatments/${t.slug}`) })
+  }
+  for (const d of sovereignwellnessDispatches) {
+    urls.push({ url: siteUrl("sovereignwellness", `dispatches/${d.slug}`) })
   }
 
   return urls
