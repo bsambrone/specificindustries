@@ -54,7 +54,7 @@ export interface Executive {
   publications?: string[]
   quote: string
   image: string
-  referencePerson: string
+  person: string
 }
 
 export interface PricingTier {

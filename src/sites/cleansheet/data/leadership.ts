@@ -7,7 +7,7 @@ export interface TeamMember {
   highlights: { label: string; value: string }[]
   quote: string
   image: string
-  referencePerson: string
+  person: string
 }
 
 export const teamMembers: TeamMember[] = [
@@ -26,7 +26,7 @@ export const teamMembers: TeamMember[] = [
     ],
     quote: "I've always believed that with the right process, anything can come out clean. Anything.",
     image: "/sites/cleansheet/team-bill.png",
-    referencePerson: "bill",
+    person: "bill",
   },
   {
     slug: "russo",
@@ -43,7 +43,7 @@ export const teamMembers: TeamMember[] = [
     ],
     quote: "You bring it in dirty, it goes out clean. That's the deal. Don't complicate it.",
     image: "/sites/cleansheet/team-jim.png",
-    referencePerson: "jim",
+    person: "jim",
   },
   {
     slug: "fontaine",
@@ -60,7 +60,7 @@ export const teamMembers: TeamMember[] = [
     ],
     quote: "A good relationship is built on trust. And a great one is built on mutual non-disclosure.",
     image: "/sites/cleansheet/team-sean.png",
-    referencePerson: "sean",
+    person: "sean",
   },
   {
     slug: "marchetti",
@@ -77,7 +77,7 @@ export const teamMembers: TeamMember[] = [
     ],
     quote: "Some fabrics simply require an offshore climate. It's science. Don't look into it.",
     image: "/sites/cleansheet/team-brandon.png",
-    referencePerson: "brandon",
+    person: "brandon",
   },
 ]
 

@@ -5,7 +5,7 @@ export interface Executive {
   bio: string
   quote: string
   image: string
-  referencePerson: "bill" | "brandon" | "jim" | "sean"
+  person: "bill" | "brandon" | "jim" | "sean"
 }
 
 export const executives: Executive[] = [
@@ -16,7 +16,7 @@ export const executives: Executive[] = [
     bio: "Bill founded Only Fans in 2019 after a long weekend that he describes as 'a series of decisions I cannot fully account for.' He is a graduate of a respectable Midwestern business school and would like that mentioned. He stands behind the company in the technical sense that he owns it.",
     quote: "I was supposed to be in commercial real estate.",
     image: "/sites/onlyfans/exec-hatcher.png",
-    referencePerson: "bill",
+    person: "bill",
   },
   {
     slug: "wexley",
@@ -25,7 +25,7 @@ export const executives: Executive[] = [
     bio: "Brandon joined the company in 2020 because Bill assured him it was an HVAC distribution business. By the time the actual business model was explained, his children were already enrolled in private school. He has since stopped attending alumni events.",
     quote: "I would prefer not to discuss what I do for a living.",
     image: "/sites/onlyfans/exec-wexley.png",
-    referencePerson: "brandon",
+    person: "brandon",
   },
   {
     slug: "castellan",
@@ -34,7 +34,7 @@ export const executives: Executive[] = [
     bio: "Jim is responsible for ensuring our subscribers receive the airflow content they have paid for. He is good at his job, which is the worst part of it. His mother believes he works for a 'fan distribution start-up' and he has not corrected her.",
     quote: "Please do not put my full name on this page.",
     image: "/sites/onlyfans/exec-castellan.png",
-    referencePerson: "jim",
+    person: "jim",
   },
   {
     slug: "morrow",
@@ -43,7 +43,7 @@ export const executives: Executive[] = [
     bio: "Sean handles negotiations with our roster of fan creators. He maintains professional relationships with eight household appliances. This is, as he frequently reminds us, not what he went to graduate school for.",
     quote: "I have updated my LinkedIn three times this year.",
     image: "/sites/onlyfans/exec-morrow.png",
-    referencePerson: "sean",
+    person: "sean",
   },
 ]
 

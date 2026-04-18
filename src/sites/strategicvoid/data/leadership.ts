@@ -20,7 +20,7 @@ export const executives: Executive[] = [
     quote:
       "The moment an organization stops accidentally producing results is the moment true alignment begins.",
     image: "/sites/strategicvoid/exec-thornbury.png",
-    referencePerson: "bill",
+    person: "bill",
   },
   {
     slug: "hawthorne-clyde",
@@ -38,7 +38,7 @@ export const executives: Executive[] = [
     quote:
       "Synergy isn't something you create. It's something you schedule a meeting about.",
     image: "/sites/strategicvoid/exec-hawthorne-clyde.png",
-    referencePerson: "brandon",
+    person: "brandon",
   },
   {
     slug: "pennington",
@@ -61,7 +61,7 @@ export const executives: Executive[] = [
     quote:
       "If you haven't disrupted something by lunch, you're not trying hard enough.",
     image: "/sites/strategicvoid/exec-pennington.png",
-    referencePerson: "jim",
+    person: "jim",
   },
   {
     slug: "ashford-wexley",
@@ -79,7 +79,7 @@ export const executives: Executive[] = [
     quote:
       "Clarity is the enemy of flexibility.",
     image: "/sites/strategicvoid/exec-ashford-wexley.png",
-    referencePerson: "sean",
+    person: "sean",
   },
 ]
 

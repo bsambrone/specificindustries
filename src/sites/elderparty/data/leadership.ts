@@ -8,7 +8,7 @@ export interface PartyOfficial {
   highlights: { label: string; value: string }[]
   quote: string
   image: string
-  referencePerson: string
+  person: string
 }
 
 export const officials: PartyOfficial[] = [
@@ -26,7 +26,7 @@ export const officials: PartyOfficial[] = [
     ],
     quote: "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. In his house at R'lyeh, dead Cthulhu waits dreaming. But not for much longer.",
     image: "/sites/elderparty/team-bill.png",
-    referencePerson: "bill",
+    person: "bill",
   },
   {
     slug: "nyarlathotep-marsh",
@@ -42,7 +42,7 @@ export const officials: PartyOfficial[] = [
     ],
     quote: "I don't convince voters. I remind them of what they already know. Deep down, everyone knows.",
     image: "/sites/elderparty/team-brandon.png",
-    referencePerson: "brandon",
+    person: "brandon",
   },
   {
     slug: "dagon-whately",
@@ -58,7 +58,7 @@ export const officials: PartyOfficial[] = [
     ],
     quote: "Good policy is good policy, whether you're reading it above or below the waterline.",
     image: "/sites/elderparty/team-jim.png",
-    referencePerson: "jim",
+    person: "jim",
   },
   {
     slug: "hastur-olmstead",
@@ -74,7 +74,7 @@ export const officials: PartyOfficial[] = [
     ],
     quote: "Volunteering isn't something you do. It's something you become. The campaign doesn't need your time — it needs you.",
     image: "/sites/elderparty/team-sean.png",
-    referencePerson: "sean",
+    person: "sean",
   },
 ]
 
