@@ -63,7 +63,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     dehydratedwater: dehydratedwaterProducts,
     inflatableanchors: inflatableanchorsProducts,
     truegrit: truegritProducts,
-    elderparty: elderpartyProducts,
     snortables: snortablesProducts,
     mousetrapjenga: mousetrapjengaProducts,
     bonelesswater: bonelesswaterProducts,
@@ -98,12 +97,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     urls.push({ url: siteUrl("grassfedwifi", `field-notes/${note.slug}`) })
   }
 
-  // Elder Party: coalitions, news
+  // Elder Party: coalitions, news, shop product detail pages
   for (const coalition of coalitions) {
     urls.push({ url: siteUrl("elderparty", `coalitions/${coalition.slug}`) })
   }
   for (const article of elderpartyArticles) {
     urls.push({ url: siteUrl("elderparty", `news/${article.slug}`) })
+  }
+  for (const product of elderpartyProducts) {
+    urls.push({ url: siteUrl("elderparty", `shop/${product.slug}`) })
   }
 
   // Strategic Void: solutions, solution/product combos, case studies, whitepapers
