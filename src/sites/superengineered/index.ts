@@ -6,6 +6,7 @@ import SuperengineeredProductDetail from "./pages/product-detail"
 import SuperengineeredShop, { metadata as shopMetadata } from "./pages/shop"
 import SuperengineeredAbout, { metadata as aboutMetadata } from "./pages/about"
 import SuperengineeredContact, { metadata as contactMetadata } from "./pages/contact"
+import SuperengineeredLeadership, { metadata as leadershipMetadata } from "./pages/leadership"
 import SuperengineeredPrivacy, { metadata as privacyMetadata } from "./pages/privacy"
 import SuperengineeredTerms, { metadata as termsMetadata } from "./pages/terms"
 
@@ -16,6 +17,7 @@ export const pages: Record<string, PageEntry> = {
   "shop": { component: SuperengineeredShop, metadata: shopMetadata },
   "about": { component: SuperengineeredAbout, metadata: aboutMetadata },
   "contact": { component: SuperengineeredContact, metadata: contactMetadata },
+  "leadership": { component: SuperengineeredLeadership, metadata: leadershipMetadata },
   "privacy": { component: SuperengineeredPrivacy, metadata: privacyMetadata },
   "terms": { component: SuperengineeredTerms, metadata: termsMetadata },
 }
