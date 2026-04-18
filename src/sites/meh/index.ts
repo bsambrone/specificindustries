@@ -14,6 +14,8 @@ import MehAbout, { metadata as aboutMetadata } from "./pages/about"
 import MehContact, { metadata as contactMetadata } from "./pages/contact"
 import MehPrivacy, { metadata as privacyMetadata } from "./pages/privacy"
 import MehTerms, { metadata as termsMetadata } from "./pages/terms"
+import MehCart from "./pages/cart"
+import MehCheckout from "./pages/checkout"
 
 export { config }
 
@@ -28,6 +30,8 @@ export const pages: Record<string, PageEntry> = {
   "contact": { component: MehContact, metadata: contactMetadata },
   "privacy": { component: MehPrivacy, metadata: privacyMetadata },
   "terms": { component: MehTerms, metadata: termsMetadata },
+  "cart": MehCart,
+  "checkout": MehCheckout,
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
