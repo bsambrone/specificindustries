@@ -34,7 +34,7 @@ export function ScenarioCard(props: ScenarioCardProps) {
   const accessory = accessoryUsed ? getProductBySlug(accessoryUsed) : undefined
   const isHero = variant === "hero"
 
-  const badgeText = kind === "prevention" ? "Seal Held" : "System Engaged"
+  const badgeText = kind === "prevention" ? "Gamble Won" : "Gamble Lost"
   const badgeColor = kind === "prevention" ? "bg-accent text-secondary" : "bg-primary text-background"
 
   return (
