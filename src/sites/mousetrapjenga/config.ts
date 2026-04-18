@@ -34,6 +34,6 @@ export const config: SiteConfig = {
   features: {
     commerce: true,
   },
-  verticalKey: "professional-services",
-  tagline: "Tactical small-mammal removal through precision architecture.",
+  verticalKey: "consumer-goods",
+  tagline: "The best way to lose a finger since 1978. Now in four trap tiers.",
 }

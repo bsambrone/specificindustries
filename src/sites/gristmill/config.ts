@@ -104,6 +104,6 @@ export const config: SiteConfig = {
   features: {
     commerce: false,
   },
-  verticalKey: "consumer-goods",
-  tagline: "Stone-milled goods since 1847. We did not change the method.",
+  verticalKey: "professional-services",
+  tagline: "Workforce stabilization and retention engineering for the Fortune 500.",
 }
