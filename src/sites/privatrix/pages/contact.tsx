@@ -27,13 +27,13 @@ const URGENCY_LEVELS = [
 const ANXIETY_OPTIONS = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 
 export default function PrivatrixContact() {
-  const [submitted, setSubmitted] = useState(false)
+  const [submitted, setSubmitted] = useState<{ ref: number } | null>(null)
   const { showToast } = useCart()
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     showToast("A Privacy Specialist will reach out within 47 business days.")
-    setSubmitted(true)
+    setSubmitted({ ref: Math.floor(Math.random() * 90000 + 10000) })
   }
 
   return (
@@ -46,7 +46,7 @@ export default function PrivatrixContact() {
 
       <section className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
-          {submitted ? (
+          {submitted !== null ? (
             <div className="text-center py-12 space-y-4 border border-primary/10 rounded-lg bg-primary/5 p-12">
               <p className="text-2xl font-heading font-bold text-primary">
                 Intake form received.
@@ -55,7 +55,7 @@ export default function PrivatrixContact() {
                 Your submission has been routed to our Customer Reassurance organization. A Privacy Specialist will reach out within 47 business days. In the interim, please consider purchasing the GDPR-Adjacent™ Compliance Pack.
               </p>
               <p className="text-xs text-foreground/40 mt-6">
-                Reference number: PRV-{Math.floor(Math.random() * 90000 + 10000)}-π
+                Reference number: PRV-{submitted.ref}-π
               </p>
             </div>
           ) : (

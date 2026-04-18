@@ -1,7 +1,9 @@
+import Link from "next/link"
 import { Hero } from "@/components/ui/hero"
 import { PrivatrixProductCard } from "../components/PrivatrixProductCard"
 import { TrustBadgeStrip } from "../components/TrustBadgeStrip"
 import { getProductsByTier } from "../data/products"
+import { getSiteHref } from "@/lib/site-href"
 
 const TESTIMONIALS = [
   {
@@ -41,7 +43,8 @@ export const metadata = {
   description: "The only enterprise privacy platform with zero independently verifiable claims.",
 }
 
-export default function PrivatrixHome() {
+export default async function PrivatrixHome() {
+  const siteHref = await getSiteHref()
   const featured = [
     ...getProductsByTier("enterprise").slice(0, 2),
     ...getProductsByTier("self-serve").slice(0, 2),
@@ -145,12 +148,12 @@ export default function PrivatrixHome() {
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
             Our Privacy Specialists will respond within 47 business days. Most engagements begin with a 14-week procurement review.
           </p>
-          <a
-            href="/contact"
+          <Link
+            href={siteHref("/contact")}
             className="inline-block px-8 py-4 bg-accent text-white rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
             Schedule Privacy Consultation
-          </a>
+          </Link>
         </div>
       </section>
     </>
