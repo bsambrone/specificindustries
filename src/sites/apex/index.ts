@@ -2,6 +2,7 @@ import { config } from "./config"
 import type { PageEntry } from "@/themes"
 import ApexHome from "./pages/home"
 import ApexAbout from "./pages/about"
+import ApexPortfolio from "./pages/portfolio"
 import ApexDisclaimer from "./pages/disclaimer"
 import ApexPrivacy from "./pages/privacy"
 import ApexTerms from "./pages/terms"
@@ -10,6 +11,13 @@ export { config }
 
 export const pages: Record<string, PageEntry> = {
   "": ApexHome,
+  "portfolio": {
+    component: ApexPortfolio,
+    metadata: {
+      title: "Portfolio — Specific Industries",
+      description: "Our portfolio of brands serving the world's most specific industries, organized across five strategic verticals.",
+    },
+  },
   "about": {
     component: ApexAbout,
     metadata: {
