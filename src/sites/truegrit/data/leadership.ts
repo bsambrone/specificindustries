@@ -18,7 +18,7 @@ export const leaders: Leader[] = [
   },
   {
     slug: "gary",
-    person: "brandon",
+    person: "jim",
     name: "Gary",
     title: "VP of Grit Sciences",
     bio: "Former materials engineer with a specialty in industrial abrasives. Joined True Grit after Dale described the vision. Gary's expression during that conversation has not changed since.",
@@ -26,7 +26,7 @@ export const leaders: Leader[] = [
   },
   {
     slug: "hank",
-    person: "jim",
+    person: "brandon",
     name: "Hank",
     title: "Director of Consumer Endurance",
     bio: "Oversees the customer experience from first contact through recovery. Interprets complaint letters as 'testimonials of effectiveness.' Has a wall of them.",

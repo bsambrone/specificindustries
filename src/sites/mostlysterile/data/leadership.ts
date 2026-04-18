@@ -26,7 +26,7 @@ export const leaders: Leader[] = [
   },
   {
     slug: "hollis-vossler",
-    person: "jim",
+    person: "sean",
     name: "Hollis R. Vossler",
     title: "Chief Medical Officer",
     bio: "Unaffiliated with any American Medical Association. Provides day-to-day clinical oversight to the extent feasible and is available for consultation during regular business hours, where available.",
@@ -34,7 +34,7 @@ export const leaders: Leader[] = [
   },
   {
     slug: "roderick-ashbee-chen",
-    person: "sean",
+    person: "jim",
     name: "Roderick V. Ashbee-Chen",
     title: "Head of Compliance",
     bio: "New hire. Started recently. Responsibilities include reviewing our existing practices and flagging items for further review, as well as general onboarding. Continues to settle in.",
