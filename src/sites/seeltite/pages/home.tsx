@@ -17,9 +17,9 @@ export default function SeeltiteHome() {
   return (
     <>
       <Hero
-        headline="One Seal. Every Scenario."
-        subheadline="The G1 Containment Gasket plus 10 modular disposal accessories. American-engineered since 1973."
-        ctaText="Shop the System"
+        headline="Toot With Confidence."
+        subheadline="Every toot is a gamble. The G1 is the house. Ten accessories for when the house doesn't win."
+        ctaText="Meet the G1"
         ctaHref="/products"
         image="/sites/seeltite/hero.png"
       />
@@ -28,20 +28,19 @@ export default function SeeltiteHome() {
 
       <StatStrip
         stats={[
-          { icon: "▣", value: "14,382", label: "Events Contained" },
-          { icon: "∅", value: "0", label: "Excused" },
-          { icon: "◷", value: "52", label: "Years Engineered" },
-          { icon: "★", value: "MIL-STD", label: "810H Compliant" },
+          { value: "14,382", label: "Gambles. 14,382 Payoffs.", icon: "▣" },
+          { value: "$0",     label: "In Laundry.",              icon: "∅" },
+          { value: "1973",   label: "Still The Year.",          icon: "◷" },
+          { value: "0",      label: "Awkward Pauses.",          icon: "★" },
         ]}
       />
 
       <section className="py-20 px-4">
         <div className="max-w-5xl mx-auto text-center mb-12">
           <p className="text-xs tracking-[0.3em] uppercase text-primary mb-3 font-heading">The System</p>
-          <h2 className="text-4xl font-heading font-semibold mb-4">One Hub. Ten Accessories. Every Scenario.</h2>
+          <h2 className="text-4xl font-heading font-semibold mb-4">One Gasket. Ten Ways It Pays Off.</h2>
           <p className="text-foreground/70 max-w-2xl mx-auto">
-            The G1 Containment Gasket sits at the center. Every accessory in the catalog clicks into its OPX-14 output port.
-            Build the configuration your environment requires.
+            The G1 Containment Gasket is the center of the catalog. Every accessory we make clicks into its output port. Build the configuration your scenarios require — or start with just the G1, which is what most people do.
           </p>
         </div>
         <ModularEcosystemDiagram />
@@ -50,17 +49,17 @@ export default function SeeltiteHome() {
       <section className="py-16 px-4 bg-secondary text-background">
         <div className="max-w-6xl mx-auto">
           <p className="text-xs tracking-[0.3em] uppercase text-accent mb-3 font-heading">Field Reports</p>
-          <h2 className="text-4xl font-heading font-semibold mb-10 text-background">Prevention. Recovery. Both Documented.</h2>
+          <h2 className="text-4xl font-heading font-semibold mb-10 text-background">Prevention and Recovery. Both on the House.</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <ScenarioCard {...featurePrevention} kind="prevention" variant="hero" />
             <ScenarioCard {...featureRecovery} kind="recovery" variant="hero" />
           </div>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link href="/scenarios" className="inline-flex items-center gap-2 bg-primary text-background px-5 py-3 text-sm font-semibold tracking-wider uppercase hover:bg-accent hover:text-secondary transition-colors">
-              Browse Prevention Cases
+              Browse The Gambles We Won
             </Link>
             <Link href="/recovery" className="inline-flex items-center gap-2 border border-background/40 text-background px-5 py-3 text-sm font-semibold tracking-wider uppercase hover:bg-background hover:text-secondary transition-colors">
-              Browse Recovery Cases
+              Browse The Gambles We Lost
             </Link>
           </div>
         </div>
@@ -95,12 +94,12 @@ export default function SeeltiteHome() {
 
       <section className="py-20 px-4 bg-background">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-heading font-semibold mb-4">Never Skip a Beat.</h2>
+          <h2 className="text-3xl font-heading font-semibold mb-4">Toot With Confidence Today.</h2>
           <p className="text-foreground/70 mb-8">
-            The G1 Containment Gasket and any accessory of your choosing, shipped with fifteen years of deployment documentation.
+            The G1 Containment Gasket plus any accessory that fits your life. Shipped in three days. Warranty eighteen months.
           </p>
           <Link href="/products/g1-containment-gasket" className="inline-flex items-center gap-2 bg-primary text-background px-6 py-3 text-sm font-semibold tracking-wider uppercase hover:bg-secondary transition-colors">
-            Start with the G1
+            Start With The G1
           </Link>
         </div>
       </section>
