@@ -25,7 +25,7 @@ export default function RadiumRoysPrivacy() {
             </a>
           </p>
           <p className="text-sm text-foreground/40 italic">
-            Last updated: when Bertram J. Schoonover finishes the current motion.
+            Last updated: when Harlan C. Veenstra finishes the current motion.
           </p>
 
           <h2 className="text-2xl font-heading font-bold text-secondary">1. What We Collect</h2>
@@ -49,8 +49,8 @@ export default function RadiumRoysPrivacy() {
           <p>
             Roy&apos;s office retains your information indefinitely. Our Burbank document vault contains
             paper records dating back to 1952, and our policy is to add to it rather than subtract from it.
-            If you wish to be removed from our records, you may submit a request in writing to Bertram J.
-            Schoonover, who will add your request to his collection of pending matters.
+            If you wish to be removed from our records, you may submit a request in writing to Harlan C.
+            Veenstra, who will add your request to his collection of pending matters.
           </p>
 
           <h2 className="text-2xl font-heading font-bold text-secondary">4. Cookies</h2>

@@ -9,7 +9,7 @@ import { verticals, verticalOrder } from "../data/verticals"
 import { getAllPortfolioBrands, type PortfolioBrand } from "../data/portfolio-utils"
 import { featuredHoldings, featuredJobs } from "../data/featured"
 import { getRecentPressReleases } from "../data/press-releases"
-import { apexLeaders } from "../data/leadership"
+import { getActiveApexLeaders } from "../data/leadership"
 import { jobs } from "../data/careers"
 import type { VerticalKey } from "@/themes"
 
@@ -21,6 +21,7 @@ export default async function ApexHome() {
   const isProduction = host.endsWith(PRODUCTION_HOST)
 
   const brands = getAllPortfolioBrands()
+  const apexLeaders = getActiveApexLeaders()
   const featuredList = featuredHoldings
     .map((key) => brands.find((b) => b.subdomain === key))
     .filter((b): b is PortfolioBrand => !!b)

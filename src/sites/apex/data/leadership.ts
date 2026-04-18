@@ -1,12 +1,29 @@
+export type ApexPersonKey = "bill" | "brandon" | "jim" | "sean"
+
+/**
+ * Guest leader tenure. When set, the leader is a temporary occupant of the
+ * `person` seat. Guests replace a canonical apex leader for a defined term.
+ * The guest uses the same `person` key (so apex cross-references every
+ * subsidiary board seat belonging to that underlying base person),
+ * but renders under their own slug, name, title, and portrait on apex.
+ */
+export interface ApexLeaderTenure {
+  start: string
+  end?: string
+  replacesSlug?: string
+}
+
 export interface ApexLeader {
   slug: string
-  person: "bill" | "brandon" | "jim" | "sean"
+  person: ApexPersonKey
   name: string
   title: string
   bio: string
   portraitImage: string
   careerHighlights: string[]
   credentials: string[]
+  isGuest?: boolean
+  tenure?: ApexLeaderTenure
 }
 
 export const apexLeaders: ApexLeader[] = [
@@ -88,8 +105,36 @@ export function getApexLeaderBySlug(slug: string): ApexLeader | undefined {
   return apexLeaders.find((l) => l.slug === slug)
 }
 
-export function getApexLeaderByPerson(
-  person: "bill" | "brandon" | "jim" | "sean"
+function isActiveOn(leader: ApexLeader, now: Date): boolean {
+  if (!leader.tenure) return true
+  const start = new Date(leader.tenure.start)
+  if (start > now) return false
+  if (leader.tenure.end && new Date(leader.tenure.end) <= now) return false
+  return true
+}
+
+/**
+ * Returns the apex leaders currently serving — respecting optional tenure
+ * windows. Leaders without tenure are treated as permanently active.
+ * A guest leader whose tenure is active implicitly hides their
+ * `replacesSlug` counterpart for the duration.
+ */
+export function getActiveApexLeaders(now: Date = new Date()): ApexLeader[] {
+  const active = apexLeaders.filter((l) => isActiveOn(l, now))
+  const hidden = new Set<string>()
+  for (const l of active) {
+    if (l.isGuest && l.tenure?.replacesSlug) hidden.add(l.tenure.replacesSlug)
+  }
+  return active.filter((l) => !hidden.has(l.slug))
+}
+
+export function getActiveApexLeaderByPerson(
+  person: ApexPersonKey,
+  now: Date = new Date()
 ): ApexLeader | undefined {
-  return apexLeaders.find((l) => l.person === person)
+  return getActiveApexLeaders(now).find((l) => l.person === person)
+}
+
+export function getApexLeaderByPerson(person: ApexPersonKey): ApexLeader | undefined {
+  return getActiveApexLeaderByPerson(person)
 }

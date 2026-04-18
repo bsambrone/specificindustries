@@ -21,7 +21,7 @@ export default function RadiumRoysCheckout() {
           <FakeProgressBar />
         </div>
         <p className="text-foreground/60 text-sm mb-8">
-          Estimated completion: when Bertram J. Schoonover signs off on the merchant agreement, which has
+          Estimated completion: when Harlan C. Veenstra signs off on the merchant agreement, which has
           been on his desk since 1981.
         </p>
         <Link

@@ -2,12 +2,13 @@ import { headers } from "next/headers"
 import { Hero } from "@/components/ui/hero"
 import { LeaderCard } from "@/components/ui/leader-card"
 import { MetricStrip, type Metric } from "@/components/ui/metric-strip"
-import { apexLeaders } from "../data/leadership"
+import { getActiveApexLeaders } from "../data/leadership"
 import { getAllPortfolioBrands } from "../data/portfolio-utils"
 
 export default async function ApexAbout() {
   await headers()
   const brands = getAllPortfolioBrands()
+  const apexLeaders = getActiveApexLeaders()
 
   const metrics: Metric[] = [
     { value: String(brands.length), label: "Active portfolio brands" },

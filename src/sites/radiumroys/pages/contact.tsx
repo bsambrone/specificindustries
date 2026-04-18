@@ -185,7 +185,7 @@ export default function RadiumRoysContact() {
                 Press &amp; Pemberton Estate
               </h3>
               <p className="text-foreground">
-                Press inquiries are handled by our General Counsel, Bertram J. Schoonover, who has
+                Press inquiries are handled by our General Counsel, Harlan C. Veenstra, who has
                 forty-six pending motions and welcomes the distraction.
               </p>
             </div>

@@ -26,18 +26,18 @@ export const leaders: Leader[] = [
   },
   {
     slug: "ballast",
-    person: "jim",
+    person: "sean",
     name: "Winston Ballast",
     title: "Director of Inflation Standards",
     bio: "Maintains the tolerance specification for every anchor in the catalog. Has personally inflated more anchors than any human in history, a fact he does not enjoy mentioning.",
-    portraitImage: "/sites/apex/team/member-2.png",
+    portraitImage: "/sites/apex/team/member-3.png",
   },
   {
     slug: "driftwood",
-    person: "sean",
+    person: "jim",
     name: "Oscar Driftwood",
     title: "Head of Customer Harbor Relations",
     bio: "Handles customer feedback, warranty claims, and the occasional recovery operation. Has appeared on three marine podcasts, all of them unsolicited.",
-    portraitImage: "/sites/apex/team/member-3.png",
+    portraitImage: "/sites/apex/team/member-2.png",
   },
 ]

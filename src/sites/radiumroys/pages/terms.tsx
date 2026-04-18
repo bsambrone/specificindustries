@@ -79,7 +79,7 @@ export default function RadiumRoysTerms() {
           <h2 className="text-2xl font-heading font-bold text-secondary">7. Dispute Resolution</h2>
           <p>
             Disputes shall be resolved through binding arbitration conducted at our Burbank facility before
-            an arbitrator selected by Bertram J. Schoonover. Mr. Schoonover&apos;s decisions are final and
+            an arbitrator selected by Harlan C. Veenstra. Mr. Veenstra&apos;s decisions are final and
             have, to date, always favored the company. We consider this a strong track record.
           </p>
 
@@ -87,7 +87,7 @@ export default function RadiumRoysTerms() {
           <p>
             These terms are governed by the laws of the State of California, with which we have a complex
             and ongoing relationship. In the event of conflict between state, federal, and international
-            law, we will defer to whichever interpretation Mr. Schoonover deems most agreeable.
+            law, we will defer to whichever interpretation Mr. Veenstra deems most agreeable.
           </p>
         </div>
       </section>

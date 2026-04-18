@@ -1,5 +1,6 @@
 export interface Executive {
   slug: string
+  person: "bill" | "brandon" | "jim" | "sean"
   name: string
   title: string
   bio: string
@@ -10,6 +11,7 @@ export interface Executive {
 export const executives: Executive[] = [
   {
     slug: "earl-crendon",
+    person: "bill",
     name: "Earl J. Crendon",
     title: "Founder & Chairman Emeritus",
     bio:
@@ -20,6 +22,7 @@ export const executives: Executive[] = [
   },
   {
     slug: "theodore-brenner",
+    person: "brandon",
     name: "Theodore \"Ted\" Brenner",
     title: "President & Chief Executive Officer",
     bio:
@@ -30,6 +33,7 @@ export const executives: Executive[] = [
   },
   {
     slug: "harold-duvane",
+    person: "jim",
     name: "Harold \"Hal\" Duvane",
     title: "Chief Operating Officer & Vice President, Workforce Engineering",
     bio:
@@ -40,6 +44,7 @@ export const executives: Executive[] = [
   },
   {
     slug: "lester-knippenburg",
+    person: "sean",
     name: "Lester \"Les\" Knippenburg",
     title: "Chief Financial Officer & Vice President, Compensation Stabilization",
     bio:

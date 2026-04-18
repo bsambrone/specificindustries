@@ -13,8 +13,8 @@ const timelineItems = [
   { year: "1958", description: "Asbesto-Crisps debut at the Western Grocers Convention. Sample tray empties in eighteen minutes." },
   { year: "1962", description: "Forever-Pan™ enters mass production. The cookware ships nationwide and stays in homes for sixty-plus years." },
   { year: "1968", description: "Roland H. Pemberton passes. The Pemberton family retains majority voting control." },
-  { year: "1973", description: "Bertram J. Schoonover joins as General Counsel. Files first of forty-six pending motions." },
-  { year: "1981", description: "Mariella K. Vossberg joins as COO. Modernizes Mercury Drop Lollipop production." },
+  { year: "1973", description: "Harlan C. Veenstra joins as General Counsel. Files first of forty-six pending motions." },
+  { year: "1982", description: "Garrett W. Halloran joins as COO. Modernizes Mercury Drop Lollipop production." },
   { year: "1986", description: "California Proposition 65 passes. Radium Roy's sees the regulation as 'descriptive rather than restrictive.'" },
   { year: "2026", description: "Seventy-four years in business. Still American-made. Still glowing." },
 ]

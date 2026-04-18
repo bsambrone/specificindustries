@@ -16,11 +16,27 @@ export interface SubsidiaryBoardPosition {
 
 interface UnknownLeaderShape {
   person?: string
+  baseImage?: string
   name?: string
   title?: string
-  bio?: string
+  bio?: string | string[]
   portraitImage?: string
   image?: string
+  portrait?: string
+}
+
+function pickPortrait(l: UnknownLeaderShape): string | null {
+  return l.portraitImage ?? l.image ?? l.portrait ?? null
+}
+
+function pickPerson(l: UnknownLeaderShape): string | undefined {
+  return l.person ?? l.baseImage
+}
+
+function asBioText(bio: string | string[] | undefined): string {
+  if (!bio) return ""
+  if (Array.isArray(bio)) return bio[0] ?? ""
+  return bio
 }
 
 function firstSentence(text: string, max = 160): string {
@@ -33,8 +49,12 @@ function firstSentence(text: string, max = 160): string {
 async function loadLeadersFor(subdomain: string): Promise<UnknownLeaderShape[]> {
   try {
     const mod = await import(`@/sites/${subdomain}/data/leadership`)
-    const arr = mod as { leaders?: UnknownLeaderShape[]; executives?: UnknownLeaderShape[] }
-    return arr.leaders ?? arr.executives ?? []
+    const arr = mod as {
+      leaders?: UnknownLeaderShape[]
+      executives?: UnknownLeaderShape[]
+      founders?: UnknownLeaderShape[]
+    }
+    return arr.leaders ?? arr.executives ?? arr.founders ?? []
   } catch {
     return []
   }
@@ -50,18 +70,19 @@ export async function collectLeaderHistory(person: PersonKey): Promise<Subsidiar
   for (const [subdomain, site] of Object.entries(siteRegistry)) {
     if (subdomain === "apex") continue
     const leaders = await loadLeadersFor(subdomain)
-    const match = leaders.find((l) => l.person === person)
+    const match = leaders.find((l) => pickPerson(l) === person)
     if (!match) continue
     const config: SiteConfig = site.config
+    const bio = asBioText(match.bio)
     results.push({
       subdomain,
       subsiteName: config.name,
       subsiteFavicon: `/sites/${subdomain}/favicon.png`,
-      leaderPortrait: match.portraitImage ?? match.image ?? null,
+      leaderPortrait: pickPortrait(match),
       verticalKey: config.verticalKey ?? null,
       nameThere: match.name ?? "Unknown",
       titleThere: match.title ?? "Role Unspecified",
-      blurb: match.bio ? firstSentence(match.bio) : "",
+      blurb: bio ? firstSentence(bio) : "",
     })
   }
 
