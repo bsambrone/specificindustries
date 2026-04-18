@@ -112,7 +112,7 @@ export type Product = {
   startingPrice: number             // hardware buy-in in USD
   specs: { label: string; value: string }[]  // Apple-style spec table
   subscription: {
-    required: boolean
+    required: boolean  // display-only: when true, product page footnote reads "Subscription required to operate." When false: "Optional upgrades available."
     tiers: [SubscriptionTier, SubscriptionTier, SubscriptionTier]  // always 3 tiers
   }
   complianceFootnotes: string[]     // "Requires 2.4 GHz network. Cloud+ required after 14-day trial."
