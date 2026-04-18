@@ -1,11 +1,11 @@
 import type { PageMetadata } from "@/themes"
 
 export const metadata: PageMetadata = {
-  title: "Contact — Superengineered",
-  description: "Reach Superengineered support, enterprise, or press.",
+  title: "Contact — Super Engineered",
+  description: "Reach Super Engineered support, enterprise, or press.",
 }
 
-export default function SuperengineeredContact() {
+export default function SuperEngineeredContact() {
   return (
     <main className="bg-background py-20 px-4">
       <div className="max-w-3xl mx-auto">
@@ -39,7 +39,7 @@ export default function SuperengineeredContact() {
           </div>
         </div>
         <div className="mt-20 pt-10 border-t border-primary/10 text-center text-sm text-primary/60">
-          <p>Superengineered, Inc.</p>
+          <p>Super Engineered, Inc.</p>
           <p>1 Founders Way, Palo Alto, CA 94301</p>
           <p className="mt-2">All inquiries logged and retained per our Trust Policy.</p>
         </div>

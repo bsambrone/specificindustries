@@ -2,7 +2,7 @@ import Image from "next/image"
 import type { PageMetadata } from "@/themes"
 
 export const metadata: PageMetadata = {
-  title: "Leadership — Superengineered",
+  title: "Leadership — Super Engineered",
   description: "The team rebuilding the most ordinary objects in your life.",
 }
 
@@ -37,7 +37,7 @@ const execs: Exec[] = [
   {
     name: "Sean Lightcap",
     title: "Chief Trust Architect",
-    bio: "Built Superengineered's zero-trust mesh for household appliances. Still signs every commit in person.",
+    bio: "Built Super Engineered's zero-trust mesh for household appliances. Still signs every commit in person.",
     image: "/sites/superengineered/team/sean-lightcap.png",
   },
   {
@@ -48,7 +48,7 @@ const execs: Exec[] = [
   },
 ]
 
-export default function SuperengineeredLeadership() {
+export default function SuperEngineeredLeadership() {
   return (
     <main className="bg-background py-20 px-4">
       <div className="max-w-5xl mx-auto">
@@ -56,7 +56,7 @@ export default function SuperengineeredLeadership() {
           Leadership
         </p>
         <h1 className="text-4xl md:text-5xl font-heading font-light text-primary text-center mb-4">
-          The team at Superengineered.
+          The team at Super Engineered.
         </h1>
         <p className="text-lg text-primary/70 text-center max-w-2xl mx-auto mb-16">
           Five operators stewarding thirty essential objects and the cloud that keeps them running.

@@ -1,7 +1,7 @@
 import type { SiteConfig } from "@/themes"
 
 export const config: SiteConfig = {
-  name: "Superengineered",
+  name: "Super Engineered",
   subdomain: "superengineered",
   theme: {
     preset: "apple-minimal",
@@ -18,7 +18,7 @@ export const config: SiteConfig = {
     },
   },
   metadata: {
-    title: "Superengineered — Rebuilt from first principles.",
+    title: "Super Engineered — Rebuilt from first principles.",
     description: "Essential objects, rebuilt. Toothbrushes, doorknobs, light switches, and spoons — engineered at a level previously reserved for datacenters. Cloud+ subscription required.",
     ogImage: "/sites/superengineered/products/toothbrush-pro.png",
   },

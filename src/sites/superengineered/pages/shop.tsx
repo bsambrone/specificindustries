@@ -9,8 +9,8 @@ import {
 } from "@/sites/superengineered/data/products"
 
 export const metadata: PageMetadata = {
-  title: "Shop — Superengineered",
-  description: "Every Superengineered product. Every subscription. In one place.",
+  title: "Shop — Super Engineered",
+  description: "Every Super Engineered product. Every subscription. In one place.",
 }
 
 const FLAGSHIP_ORDER: ProductFamily[] = ["toothbrush", "doorknob", "lightswitch", "spoon"]
@@ -34,7 +34,7 @@ function ProductTile({ slug, name, tagline, heroImage, startingPrice }: (typeof 
   )
 }
 
-export default function SuperengineeredShop() {
+export default function SuperEngineeredShop() {
   return (
     <main className="bg-background">
       <section className="py-20 px-4 text-center">
@@ -42,7 +42,7 @@ export default function SuperengineeredShop() {
           Shop.
         </h1>
         <p className="text-xl text-primary/60 max-w-2xl mx-auto">
-          Every Superengineered device. Every subscription. Priced per month, priced per principle.
+          Every Super Engineered device. Every subscription. Priced per month, priced per principle.
         </p>
       </section>
 
@@ -73,7 +73,7 @@ export default function SuperengineeredShop() {
             Accessories
           </h2>
           <p className="text-3xl md:text-4xl font-heading font-light text-primary mb-10">
-            Also from Superengineered.
+            Also from Super Engineered.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
             {getProductsByFamily("accessory").map((p) => (

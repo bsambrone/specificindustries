@@ -1,11 +1,11 @@
 import type { PageMetadata } from "@/themes"
 
 export const metadata: PageMetadata = {
-  title: "About — Superengineered",
+  title: "About — Super Engineered",
   description: "A letter from our founders on why we rebuilt the toothbrush.",
 }
 
-export default function SuperengineeredAbout() {
+export default function SuperEngineeredAbout() {
   return (
     <main className="bg-background py-20 px-4">
       <article className="max-w-2xl mx-auto">
@@ -20,7 +20,7 @@ export default function SuperengineeredAbout() {
             For nearly five thousand years, the toothbrush has gone largely unexamined. Generation after generation accepted the daily ritual of applying bristles to enamel without instrumentation, without telemetry, without a single line of production-grade code anywhere in the workflow. We could not continue.
           </p>
           <p>
-            Superengineered was founded on a belief that the most ordinary objects in human life deserve the same rigor, the same standards, the same compliance controls we reserve for distributed systems. A spoon, properly built, is a service. A doorknob, properly considered, is a perimeter. A light switch is authentication in physical form.
+            Super Engineered was founded on a belief that the most ordinary objects in human life deserve the same rigor, the same standards, the same compliance controls we reserve for distributed systems. A spoon, properly built, is a service. A doorknob, properly considered, is a perimeter. A light switch is authentication in physical form.
           </p>
           <p>
             We understand this is a lot. We understand there are simpler ways to brush a tooth. We reject them.
@@ -33,7 +33,7 @@ export default function SuperengineeredAbout() {
           </p>
         </div>
         <p className="mt-12 text-center text-primary/60 italic">
-          — The Superengineered Founders
+          — The Super Engineered Founders
         </p>
       </article>
     </main>

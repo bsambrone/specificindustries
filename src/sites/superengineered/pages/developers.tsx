@@ -1,8 +1,8 @@
 import type { PageMetadata } from "@/themes"
 
 export const metadata: PageMetadata = {
-  title: "Developers — Superengineered",
-  description: "REST and GraphQL APIs for every Superengineered device. Build on your toothbrush.",
+  title: "Developers — Super Engineered",
+  description: "REST and GraphQL APIs for every Super Engineered device. Build on your toothbrush.",
 }
 
 interface Endpoint {
@@ -22,7 +22,7 @@ const endpoints: Endpoint[] = [
   { method: "POST", path: "/v1/fleet/firmware/rollouts", description: "Initiate a staged firmware rollout. Enterprise only." },
 ]
 
-export default function SuperengineeredDevelopers() {
+export default function SuperEngineeredDevelopers() {
   return (
     <main className="bg-background py-20 px-4">
       <div className="max-w-5xl mx-auto">
@@ -33,7 +33,7 @@ export default function SuperengineeredDevelopers() {
           Build on your essentials.
         </h1>
         <p className="text-xl text-primary/70 text-center max-w-3xl mx-auto mb-16">
-          The Superengineered API exposes first-class primitives for every object we ship. REST today. GraphQL in private beta. gRPC on the roadmap.
+          The Super Engineered API exposes first-class primitives for every object we ship. REST today. GraphQL in private beta. gRPC on the roadmap.
         </p>
 
         <section className="mb-16">
@@ -77,7 +77,7 @@ export default function SuperengineeredDevelopers() {
         <section className="mb-16">
           <h2 className="text-2xl font-heading font-light text-primary mb-4">Authentication</h2>
           <p className="text-primary/70 leading-relaxed mb-4">
-            All API requests require a bearer token. Generate tokens in your Superengineered console. Enterprise customers may configure OAuth 2.0 scopes per device family.
+            All API requests require a bearer token. Generate tokens in your Super Engineered console. Enterprise customers may configure OAuth 2.0 scopes per device family.
           </p>
           <div className="bg-secondary rounded-2xl p-6">
             <p className="text-sm font-medium text-primary mb-2">Scopes</p>

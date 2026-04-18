@@ -15,7 +15,7 @@ interface Props {
   slug: string
 }
 
-export default function SuperengineeredProductDetail({ slug }: Props) {
+export default function SuperEngineeredProductDetail({ slug }: Props) {
   const product = getProductBySlug(slug)
   if (!product) notFound()
 

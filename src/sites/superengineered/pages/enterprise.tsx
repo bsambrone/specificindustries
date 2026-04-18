@@ -2,7 +2,7 @@ import Link from "next/link"
 import type { PageMetadata } from "@/themes"
 
 export const metadata: PageMetadata = {
-  title: "Enterprise — Superengineered",
+  title: "Enterprise — Super Engineered",
   description: "Bulk utensil-as-a-service, SSO-gated lighting, and compliance-grade toothbrushing for your workforce.",
 }
 
@@ -33,7 +33,7 @@ const capabilities = [
   },
 ]
 
-export default function SuperengineeredEnterprise() {
+export default function SuperEngineeredEnterprise() {
   return (
     <main className="bg-background">
       <section className="py-20 px-4 text-center">
@@ -41,7 +41,7 @@ export default function SuperengineeredEnterprise() {
           For Workplaces
         </p>
         <h1 className="text-5xl md:text-6xl font-heading font-light text-primary mb-4">
-          Superengineered for Enterprise.
+          Super Engineered for Enterprise.
         </h1>
         <p className="text-xl text-primary/70 max-w-2xl mx-auto mb-8">
           Every essential object your workforce touches — brushed, turned, tapped, and spooned — instrumented, authenticated, and audited.

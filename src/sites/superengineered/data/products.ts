@@ -271,7 +271,7 @@ const doorknobEnterprise: Product = {
   },
   complianceFootnotes: [
     "DoorCloud+ Enterprise subscription mandatory. No offline mode.",
-    "Retinal flash must be calibrated by a Superengineered-certified installer.",
+    "Retinal flash must be calibrated by a Super Engineered-certified installer.",
   ],
 }
 
@@ -523,7 +523,7 @@ const spoonProMax: Product = {
   },
   complianceFootnotes: [
     "SpoonCloud+ Pro Max subscription required. Utensil ships in lockout mode.",
-    "Haptic pairing requires a Superengineered Fork (sold separately, subscription-bound).",
+    "Haptic pairing requires a Super Engineered Fork (sold separately, subscription-bound).",
   ],
 }
 
@@ -812,5 +812,5 @@ export const FAMILY_LABELS: Record<ProductFamily, string> = {
 
 // Sanity: catalog must contain exactly 30 products.
 if (products.length !== 30) {
-  throw new Error(`Superengineered catalog expected 30 products, got ${products.length}`)
+  throw new Error(`Super Engineered catalog expected 30 products, got ${products.length}`)
 }

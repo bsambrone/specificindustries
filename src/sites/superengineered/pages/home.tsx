@@ -10,7 +10,7 @@ import {
 
 const FLAGSHIP_ORDER: ProductFamily[] = ["toothbrush", "doorknob", "lightswitch", "spoon"]
 
-export default function SuperengineeredHome() {
+export default function SuperEngineeredHome() {
   const heroProduct = getProductBySlug("toothbrush-pro")!
 
   return (
@@ -31,7 +31,7 @@ export default function SuperengineeredHome() {
       <section className="py-16 px-4 border-t border-primary/10">
         <div className="max-w-6xl mx-auto">
           <p className="text-sm font-medium uppercase tracking-widest text-primary/60 mb-2 text-center">
-            The Superengineered Lineup
+            The Super Engineered Lineup
           </p>
           <h2 className="text-3xl md:text-4xl font-heading font-light text-primary text-center mb-12">
             Four essentials. Three tiers each. One cloud.
@@ -93,7 +93,7 @@ export default function SuperengineeredHome() {
             Accessories
           </p>
           <h2 className="text-3xl md:text-4xl font-heading font-light text-primary mb-10">
-            Also from Superengineered.
+            Also from Super Engineered.
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
             {getProductsByFamily("accessory").slice(0, 6).map((p) => (
@@ -129,7 +129,7 @@ export default function SuperengineeredHome() {
             For Workplaces
           </p>
           <h2 className="text-4xl md:text-5xl font-heading font-light text-primary mb-4">
-            Superengineered for Enterprise.
+            Super Engineered for Enterprise.
           </h2>
           <p className="text-lg text-primary/70 max-w-2xl mx-auto mb-8">
             SOC 2-compliant utensils. SSO-gated lighting. Bulk procurement for every essential object your workforce touches.
