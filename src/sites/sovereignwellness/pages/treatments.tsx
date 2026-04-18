@@ -1,9 +1,11 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
+import Link from "next/link"
 import { Hero } from "@/components/ui/hero"
-import { ProductCard } from "@/components/ui/product-card"
-import { treatments, CATEGORY_LABELS, type TreatmentCategory } from "@/sites/sovereignwellness/data/treatments"
+import { useSiteLink } from "@/hooks/use-site-link"
+import { treatments, CATEGORY_LABELS, type Treatment, type TreatmentCategory } from "@/sites/sovereignwellness/data/treatments"
 
 type Filter = "all" | TreatmentCategory
 
@@ -17,6 +19,25 @@ const FILTERS: { key: Filter; label: string }[] = [
 export const metadata = {
   title: "The Protocols — Sovereign Wellness Co.",
   description: "Sixteen Protocols for conditions the medical establishment has declined to acknowledge. Filter by Ancestral, Suppressed, or Restricted.",
+}
+
+function TreatmentCard({ treatment }: { treatment: Treatment }) {
+  const siteHref = useSiteLink()
+  const href = siteHref(`/treatments/${treatment.slug}`)
+
+  return (
+    <Link href={href} className="group block border border-primary/20 bg-secondary/40 overflow-hidden hover:border-primary/60 transition-colors">
+      <div className="relative aspect-square bg-accent/10">
+        <Image src={treatment.image} alt={treatment.name} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover group-hover:opacity-90 transition-opacity" />
+      </div>
+      <div className="p-4">
+        <p className="text-[10px] tracking-[0.3em] uppercase text-primary/70 mb-2">{CATEGORY_LABELS[treatment.category]}</p>
+        <h3 className="font-heading text-lg font-semibold leading-tight mb-2 group-hover:text-primary transition-colors">{treatment.name}</h3>
+        <p className="text-sm italic text-foreground/60 mb-3 leading-snug">{treatment.tagline}</p>
+        <p className="text-lg font-heading">{treatment.priceLabel}</p>
+      </div>
+    </Link>
+  )
 }
 
 export default function SovereignWellnessTreatments() {
@@ -50,15 +71,7 @@ export default function SovereignWellnessTreatments() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {visible.map((t) => (
-              <ProductCard
-                key={t.slug}
-                slug={t.slug}
-                href={`/treatments/${t.slug}`}
-                name={t.name}
-                price={t.priceLabel}
-                tagline={t.tagline}
-                image={t.image}
-              />
+              <TreatmentCard key={t.slug} treatment={t} />
             ))}
           </div>
 
