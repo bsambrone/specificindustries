@@ -23,12 +23,12 @@ export const config: SiteConfig = {
     ogImage: "/sites/apex/companyhq.png",
   },
   nav: [
-    { label: "Home", path: "/" },
     { label: "Portfolio", path: "/portfolio" },
+    { label: "Thesis", path: "/thesis" },
     { label: "Newsroom", path: "/newsroom" },
+    { label: "Partnerships", path: "/partnerships" },
     { label: "Careers", path: "/careers" },
     { label: "About", path: "/about" },
-    { label: "Disclaimer", path: "/disclaimer" },
   ],
   features: {
     commerce: false,

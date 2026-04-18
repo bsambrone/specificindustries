@@ -6,6 +6,9 @@ import ApexPortfolio from "./pages/portfolio"
 import ApexCareers from "./pages/careers"
 import ApexCareersApplied from "./pages/careers-applied"
 import ApexNewsroom from "./pages/newsroom"
+import ApexThesis from "./pages/thesis"
+import ApexPartnerships from "./pages/partnerships"
+import PartnershipsReceived from "./pages/partnerships-received"
 import ApexDisclaimer from "./pages/disclaimer"
 import ApexPrivacy from "./pages/privacy"
 import ApexTerms from "./pages/terms"
@@ -89,6 +92,27 @@ export const pages: Record<string, PageEntry> = {
     metadata: {
       title: "Newsroom — Specific Industries",
       description: "The latest press releases from Specific Industries and its portfolio companies.",
+    },
+  },
+  "thesis": {
+    component: ApexThesis,
+    metadata: {
+      title: "Investment Thesis — Specific Industries",
+      description: "The investment thesis behind the Specific Industries portfolio. The SPECIFIC Evaluation Framework, our criteria, and our track record.",
+    },
+  },
+  "partnerships": {
+    component: ApexPartnerships,
+    metadata: {
+      title: "Strategic Acquisitions & Partnerships — Specific Industries",
+      description: "Submit your industry for evaluation. Specific Industries acquires overlooked markets with fewer than 11,000 participants.",
+    },
+  },
+  "partnerships/received": {
+    component: PartnershipsReceived,
+    metadata: {
+      title: "Submission Received — Specific Industries",
+      description: "Your industry submission has been received.",
     },
   },
   "about": {
