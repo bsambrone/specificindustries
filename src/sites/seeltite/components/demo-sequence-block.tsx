@@ -26,7 +26,12 @@ export function DemoSequenceBlock({
     <section className="py-16 px-4 border-t border-foreground/10 odd:bg-secondary/5">
       <div className="max-w-6xl mx-auto grid md:grid-cols-5 gap-10 items-start">
         <div className="md:col-span-3">
-          <p className="text-xs tracking-[0.3em] uppercase text-primary mb-2 font-heading">Demonstration · {product.category.toUpperCase()}</p>
+          <div className="flex items-center gap-3 mb-2">
+            <span className="inline-flex items-center gap-1.5 bg-accent text-secondary px-2 py-1 text-[10px] tracking-[0.3em] uppercase font-heading font-semibold">
+              <span aria-hidden>✓</span> Toot Verified
+            </span>
+            <p className="text-xs tracking-[0.3em] uppercase text-primary font-heading">Demonstration · {product.category.toUpperCase()}</p>
+          </div>
           <h3 className="text-3xl font-heading font-semibold mb-6">{product.name}</h3>
           <div className="grid grid-cols-2 gap-4">
             {frames.map((f) => (
