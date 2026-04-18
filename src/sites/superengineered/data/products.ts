@@ -557,7 +557,7 @@ function makeAccessory(input: AccessoryInput): Product {
       { label: "Warranty", value: input.warrantyNote ?? "1 year limited, subscription tied" },
     ],
     subscription: {
-      required: false,
+      required: true,
       tiers: [
         {
           name: "Personal",
