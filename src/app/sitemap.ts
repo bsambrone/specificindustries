@@ -36,6 +36,7 @@ import { journalEntries as mehJournal } from "@/sites/meh/data/journal"
 import { treatments as sovereignwellnessTreatments } from "@/sites/sovereignwellness/data/treatments"
 import { dispatches as sovereignwellnessDispatches } from "@/sites/sovereignwellness/data/dispatches"
 import { products as privatrixProducts } from "@/sites/privatrix/data/products"
+import { products as superengineeredProducts } from "@/sites/superengineered/data/products"
 
 const BASE_DOMAIN = "specificindustries.com"
 const EXCLUDED_PAGES = new Set(["cart", "checkout"])
@@ -75,6 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     meh: mehProducts,
     privatrix: privatrixProducts,
     seeltite: seeltiteProducts,
+    superengineered: superengineeredProducts,
   }
 
   for (const [subdomain, products] of Object.entries(productSites)) {

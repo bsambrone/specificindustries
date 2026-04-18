@@ -35,7 +35,7 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
       const p = getProductBySlug(slug)
       return p
         ? {
-            title: `${p.name} — Superengineered`,
+            title: `${p.name} — Super Engineered`,
             description: p.tagline,
             ogImage: p.heroImage,
           }
