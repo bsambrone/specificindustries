@@ -12,6 +12,8 @@ import SuperengineeredDevelopers, { metadata as developersMetadata } from "./pag
 import SuperengineeredTrust, { metadata as trustMetadata } from "./pages/trust"
 import SuperengineeredPrivacy, { metadata as privacyMetadata } from "./pages/privacy"
 import SuperengineeredTerms, { metadata as termsMetadata } from "./pages/terms"
+import SuperEngineeredCart, { metadata as cartMetadata } from "./pages/cart"
+import SuperEngineeredCheckout from "./pages/checkout"
 
 export { config }
 
@@ -26,6 +28,8 @@ export const pages: Record<string, PageEntry> = {
   "trust": { component: SuperengineeredTrust, metadata: trustMetadata },
   "privacy": { component: SuperengineeredPrivacy, metadata: privacyMetadata },
   "terms": { component: SuperengineeredTerms, metadata: termsMetadata },
+  "cart": { component: SuperEngineeredCart, metadata: cartMetadata },
+  "checkout": SuperEngineeredCheckout,
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
