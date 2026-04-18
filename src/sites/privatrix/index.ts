@@ -7,6 +7,7 @@ import PrivatrixProductDetail from "./pages/product-detail"
 import PrivatrixAbout, { metadata as aboutMetadata } from "./pages/about"
 import PrivatrixLeadership, { metadata as leadershipMetadata } from "./pages/leadership"
 import PrivatrixCertifications, { metadata as certificationsMetadata } from "./pages/certifications"
+import PrivatrixContact, { metadata as contactMetadata } from "./pages/contact"
 
 export { config }
 
@@ -16,6 +17,7 @@ export const pages: Record<string, PageEntry> = {
   "about": { component: PrivatrixAbout, metadata: aboutMetadata },
   "leadership": { component: PrivatrixLeadership, metadata: leadershipMetadata },
   "certifications": { component: PrivatrixCertifications, metadata: certificationsMetadata },
+  "contact": { component: PrivatrixContact, metadata: contactMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
