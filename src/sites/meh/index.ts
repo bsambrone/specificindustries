@@ -5,6 +5,7 @@ import MehHome from "./pages/home"
 import MehProducts, { metadata as productsMetadata } from "./pages/products"
 import ProductDetail from "./pages/product-detail"
 import MehManifesto, { metadata as manifestoMetadata } from "./pages/manifesto"
+import MehPress, { metadata as pressMetadata } from "./pages/press"
 
 export { config }
 
@@ -12,6 +13,7 @@ export const pages: Record<string, PageEntry> = {
   "": MehHome,
   "products": { component: MehProducts, metadata: productsMetadata },
   "manifesto": { component: MehManifesto, metadata: manifestoMetadata },
+  "press": { component: MehPress, metadata: pressMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
