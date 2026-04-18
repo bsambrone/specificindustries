@@ -33,4 +33,6 @@ export const config: SiteConfig = {
   features: {
     commerce: false,
   },
+  verticalKey: "subscription-services",
+  tagline: "Curated cookware, billed quarterly, non-cancelable by design.",
 }

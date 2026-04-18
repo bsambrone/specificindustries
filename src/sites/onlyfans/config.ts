@@ -33,4 +33,6 @@ export const config: SiteConfig = {
   features: {
     commerce: false,
   },
+  verticalKey: "subscription-services",
+  tagline: "Oscillating box fans delivered monthly to your door.",
 }
