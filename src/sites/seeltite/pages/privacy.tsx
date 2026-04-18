@@ -27,7 +27,7 @@ export default function SeeltitePrivacy() {
 
           <h2 className="text-2xl font-heading font-semibold text-primary mt-8">1. On Seal-Event Telemetry</h2>
           <p>
-            The Telemetry Module transmits seal-integrity readings to the Seel-Tite companion app at 32 Hz. These readings comprise pressure, micro-flex, and thermal profile — they do not include audio, video, or location. We retain anonymized, de-identified aggregate telemetry for product-development purposes. We do not retain per-event identifiable logs beyond 72 hours, absent an explicit user export request.
+            The Telemetry Module transmits seal-integrity readings to the Seel-Tite companion app at 32 Hz. These readings comprise pressure, micro-flex, and thermal profile — they do not include audio, video, or location. We retain anonymized, de-identified aggregate telemetry for product-development purposes. We do not retain per-toot identifiable logs beyond 72 hours, absent an explicit user export request.
           </p>
 
           <h2 className="text-2xl font-heading font-semibold text-primary">2. Fragrance Preference Logs</h2>
@@ -42,7 +42,7 @@ export default function SeeltitePrivacy() {
 
           <h2 className="text-2xl font-heading font-semibold text-primary">4. Field Reports Program</h2>
           <p>
-            If you submit a Field Incident Report via reports@seeltite.example, we will, with your permission, redact and publish the account in the Scenarios or Recovery catalog on this website. Your name, setting, accessory used, and pull-quote may be included. Your identifying details will be fictionalized to the degree you request. You may withdraw consent at any time and we will remove the case. We have never declined a removal request.
+            If you submit a Field Report via reports@seeltite.example — describing a toot you won or lost — we will, with your permission, redact and publish the account in the Scenarios or Recovery catalog on this website. Your name, setting, accessory used, and pull-quote may be included. Your identifying details will be fictionalized to the degree you request. You may withdraw consent at any time and we will remove the case. We have never declined a removal request.
           </p>
 
           <h2 className="text-2xl font-heading font-semibold text-primary">5. Right to Have Your Records Unclipped</h2>
@@ -53,6 +53,14 @@ export default function SeeltitePrivacy() {
           <h2 className="text-2xl font-heading font-semibold text-primary">6. No Third-Party Sale</h2>
           <p>
             Seel-Tite does not sell, license, or barter user data. We have no advertising partners. We have no data brokers. We have a catalog and a customer service line. That is the business. The data belongs to the customer.
+          </p>
+
+          <h2 className="text-2xl font-heading font-semibold text-primary">7. On Toot Event Logs</h2>
+          <p>
+            When a customer pairs a Telemetry Module with the G1, our systems record the pressure signature of every toot event — whether successful (a confident toot) or not (a lost gamble that triggered an accessory). These logs do not include audio. They do not include location. They do not leave our systems. We retain them for 72 hours, after which they are aggregated into anonymized product-development statistics and the per-user record is discarded.
+          </p>
+          <p>
+            If you would like your toot logs deleted sooner, you may request it by emailing <a href="mailto:inquiry@seeltite.example" className="text-primary underline">inquiry@seeltite.example</a>. We will honor the request within one business day. We have never declined this request.
           </p>
         </div>
       </section>
