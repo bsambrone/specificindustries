@@ -5,7 +5,7 @@ export interface StratifyExecutive {
   bio: string
   quote: string
   image: string
-  person: string
+  person: "bill" | "brandon" | "jim" | "sean"
 }
 
 export const executives: StratifyExecutive[] = [

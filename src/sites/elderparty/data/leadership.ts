@@ -8,7 +8,7 @@ export interface PartyOfficial {
   highlights: { label: string; value: string }[]
   quote: string
   image: string
-  person: string
+  person: "bill" | "brandon" | "jim" | "sean"
 }
 
 export const officials: PartyOfficial[] = [

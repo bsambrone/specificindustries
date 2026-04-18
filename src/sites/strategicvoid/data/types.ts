@@ -54,7 +54,7 @@ export interface Executive {
   publications?: string[]
   quote: string
   image: string
-  person: string
+  person: "bill" | "brandon" | "jim" | "sean"
 }
 
 export interface PricingTier {
