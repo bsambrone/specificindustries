@@ -1,11 +1,26 @@
-import type { PageEntry } from "@/themes"
+import type { PageEntry, DynamicRoute } from "@/themes"
 import { config } from "./config"
+import { getProductBySlug } from "./data/products"
 import MehHome from "./pages/home"
 import MehProducts, { metadata as productsMetadata } from "./pages/products"
+import ProductDetail from "./pages/product-detail"
 
 export { config }
 
 export const pages: Record<string, PageEntry> = {
   "": MehHome,
   "products": { component: MehProducts, metadata: productsMetadata },
+}
+
+export const dynamicRoutes: Record<string, DynamicRoute> = {
+  products: {
+    component: ProductDetail,
+    getMetadata: (slug: string) => {
+      const p = getProductBySlug(slug)
+      return p
+        ? { title: `${p.name} — Meh.`, description: p.tagline, ogImage: p.image }
+        : undefined
+    },
+    isValidSlug: (slug: string) => !!getProductBySlug(slug),
+  },
 }

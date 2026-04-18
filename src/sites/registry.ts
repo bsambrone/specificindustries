@@ -23,7 +23,7 @@ import { config as radiumroysConfig, pages as radiumroysPages, dynamicRoutes as 
 import { config as mostlysterileConfig, pages as mostlysterilePages, dynamicRoutes as mostlysterileDynamicRoutes } from "./mostlysterile"
 import { config as carterandfilsConfig, pages as carterandfilsPages, dynamicRoutes as carterandfilsDynamicRoutes } from "./carterandfils"
 import { config as sovereignwellnessConfig, pages as sovereignwellnessPages, dynamicRoutes as sovereignwellnessDynamicRoutes } from "./sovereignwellness"
-import { config as mehConfig, pages as mehPages } from "./meh"
+import { config as mehConfig, pages as mehPages, dynamicRoutes as mehDynamicRoutes } from "./meh"
 
 export const siteRegistry: Record<string, SiteModule> = {
   apex: { config: apexConfig, pages: apexPages },
@@ -50,7 +50,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   mostlysterile: { config: mostlysterileConfig, pages: mostlysterilePages, dynamicRoutes: mostlysterileDynamicRoutes },
   carterandfils: { config: carterandfilsConfig, pages: carterandfilsPages, dynamicRoutes: carterandfilsDynamicRoutes },
   sovereignwellness: { config: sovereignwellnessConfig, pages: sovereignwellnessPages, dynamicRoutes: sovereignwellnessDynamicRoutes },
-  meh: { config: mehConfig, pages: mehPages },
+  meh: { config: mehConfig, pages: mehPages, dynamicRoutes: mehDynamicRoutes },
 }
 
 export type SubdomainKey = keyof typeof siteRegistry
