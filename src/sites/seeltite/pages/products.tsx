@@ -29,7 +29,7 @@ export default function SeeltiteProducts() {
     <>
       <Hero
         headline="The Catalog"
-        subheadline="Eleven engineered products. One output port. Every scenario."
+        subheadline="One gasket. Ten accessories for when the house doesn't win. Build your loadout."
       />
       <section className="py-8 px-4 border-b border-foreground/10 bg-background">
         <div className="max-w-6xl mx-auto flex flex-wrap gap-2 justify-center">
