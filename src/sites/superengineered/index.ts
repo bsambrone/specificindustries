@@ -3,11 +3,13 @@ import { config } from "./config"
 import { getProductBySlug } from "./data/products"
 import SuperengineeredHome from "./pages/home"
 import SuperengineeredProductDetail from "./pages/product-detail"
+import SuperengineeredShop, { metadata as shopMetadata } from "./pages/shop"
 
 export { config }
 
 export const pages: Record<string, PageEntry> = {
   "": SuperengineeredHome,
+  "shop": { component: SuperengineeredShop, metadata: shopMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
