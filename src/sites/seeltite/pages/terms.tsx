@@ -32,7 +32,7 @@ export default function SeeltiteTerms() {
 
           <h2 className="text-2xl font-heading font-semibold text-primary">2. Proper Sealing Posture Clause</h2>
           <p>
-            For full hold rating, the G1 must be worn flush against the body with no interruption in circumferential contact. The user acknowledges that certain postures (deep lunges, extended splits, and — specifically — the Karate Kid &ldquo;crane stance&rdquo; at full extension) may reduce rated containment performance. We do not consider these postures to be ordinary wear, and deployment failures during such postures are not covered under the seal-integrity warranty.
+            For full hold rating, the G1 must be worn flush against the body with no interruption in circumferential contact. The user acknowledges that certain postures (deep lunges, extended splits, and — specifically — the Karate Kid &ldquo;crane stance&rdquo; at full extension) may reduce rated containment performance. We do not consider these postures to be ordinary wear, and toot failures during such postures are not covered under the seal-integrity warranty.
           </p>
 
           <h2 className="text-2xl font-heading font-semibold text-primary">3. Off-Label Disposal Routing</h2>
@@ -58,6 +58,14 @@ export default function SeeltiteTerms() {
           <h2 className="text-2xl font-heading font-semibold text-primary">7. Governing Law</h2>
           <p>
             These Terms are governed by the laws of the State of Ohio, where Seel-Tite is headquartered. Any dispute not resolved by correspondence with the Akron office shall be arbitrated before the Summit County Industrial Products Mediation Board, which Walter Thorne has sat on since 2007.
+          </p>
+
+          <h2 className="text-2xl font-heading font-semibold text-primary">8. Toot Confidence Responsibility Acknowledgement</h2>
+          <p>
+            By using a Seel-Tite G1 Containment Gasket, you acknowledge that every toot is, at some level, a judgment call made by you. The G1 provides containment; the accessories provide recovery; the user provides the initial decision to commit. We encourage the test toot procedure (see the Fitment Guide) before any high-stakes toot. The test toot is the user&apos;s responsibility. The seal is ours.
+          </p>
+          <p>
+            We are not responsible for user decisions to toot without the G1 in place, to toot while wearing the G1 inverted, to toot in postures explicitly listed as out-of-spec in Section 2 above, or to toot in the Karate Kid crane stance at full extension. These are user gambles, not product gambles.
           </p>
         </div>
       </section>
