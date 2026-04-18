@@ -1,13 +1,32 @@
 import { config } from "./config"
-import type { PageEntry } from "@/themes"
+import type { DynamicRoute, PageEntry } from "@/themes"
 import ApexHome from "./pages/home"
 import ApexAbout from "./pages/about"
 import ApexPortfolio from "./pages/portfolio"
 import ApexDisclaimer from "./pages/disclaimer"
 import ApexPrivacy from "./pages/privacy"
 import ApexTerms from "./pages/terms"
+import LeaderDetailRoute, { apexLeaderSlugs } from "./pages/leader-detail"
+import { getApexLeaderBySlug } from "./data/leadership"
 
 export { config }
+
+const validLeaderSlugs = new Set(apexLeaderSlugs())
+
+export const dynamicRoutes: Record<string, DynamicRoute> = {
+  "leadership": {
+    component: LeaderDetailRoute,
+    getMetadata: (slug: string) => {
+      const leader = getApexLeaderBySlug(slug)
+      if (!leader) return undefined
+      return {
+        title: `${leader.name} — ${leader.title} — Specific Industries`,
+        description: leader.bio,
+      }
+    },
+    isValidSlug: (slug: string) => validLeaderSlugs.has(slug),
+  },
+}
 
 export const pages: Record<string, PageEntry> = {
   "": ApexHome,
