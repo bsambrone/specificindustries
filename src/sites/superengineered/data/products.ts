@@ -527,13 +527,269 @@ const spoonProMax: Product = {
   ],
 }
 
-// ---------- Registry (accessories appended in next task) ----------
+// ---------- Accessories ----------
+
+type AccessoryInput = {
+  slug: string
+  name: string
+  tagline: string
+  startingPrice: number
+  coreSpec: string
+  warrantyNote?: string
+  personalFeature: string
+  proFeature: string
+  enterpriseFeature: string
+  footnote: string
+}
+
+function makeAccessory(input: AccessoryInput): Product {
+  return {
+    slug: input.slug,
+    family: "accessory",
+    name: input.name,
+    tagline: input.tagline,
+    heroImage: `/sites/superengineered/products/${input.slug}.png`,
+    startingPrice: input.startingPrice,
+    specs: [
+      { label: "Core Capability", value: input.coreSpec },
+      { label: "Connectivity", value: "Wi-Fi 6, Bluetooth 5.3, Matter" },
+      { label: "Firmware", value: "SuperOS 4.2 (over-the-air updates)" },
+      { label: "Warranty", value: input.warrantyNote ?? "1 year limited, subscription tied" },
+    ],
+    subscription: {
+      required: false,
+      tiers: [
+        {
+          name: "Personal",
+          priceMonthly: 4,
+          features: ["Basic operation", input.personalFeature, "Community support"],
+        },
+        {
+          name: "Pro",
+          priceMonthly: 12,
+          features: ["All Personal features", input.proFeature, "Priority support"],
+        },
+        {
+          name: "Enterprise",
+          priceMonthly: 49,
+          features: ["All Pro features", input.enterpriseFeature, "SSO", "SOC 2 report"],
+          cta: ENTERPRISE_CTA,
+        },
+      ],
+    },
+    complianceFootnotes: [input.footnote],
+  }
+}
+
+const accessories: Product[] = [
+  makeAccessory({
+    slug: "thermal-mug",
+    name: "Thermal Mug",
+    tagline: "Temperature, governed.",
+    startingPrice: 129,
+    coreSpec: "12 oz ceramic w/ 4-zone thermal AI",
+    personalFeature: "Ambient temperature logging",
+    proFeature: "Predictive sip-temp targeting",
+    enterpriseFeature: "Barista fleet analytics",
+    footnote: "Exterior surface temperature warranted only within Pro subscription tier.",
+  }),
+  makeAccessory({
+    slug: "weather-umbrella",
+    name: "Weather Umbrella",
+    tagline: "Precipitation, subscribed.",
+    startingPrice: 189,
+    coreSpec: "Carbon-fiber canopy w/ integrated forecast subscription",
+    personalFeature: "3-hour local forecast",
+    proFeature: "14-day hyperlocal precipitation ML",
+    enterpriseFeature: "Campus-wide umbrella fleet routing",
+    footnote: "Umbrella will not deploy without active ForecastCloud+ subscription.",
+  }),
+  makeAccessory({
+    slug: "sleep-pillow",
+    name: "Sleep Pillow",
+    tagline: "Rest, as a service.",
+    startingPrice: 249,
+    coreSpec: "Memory-foam w/ 6-zone pressure and EEG array",
+    personalFeature: "Sleep stage logging",
+    proFeature: "Dream inference ML (beta)",
+    enterpriseFeature: "Workforce fatigue dashboards",
+    footnote: "Pillow decompresses only during active RestCloud+ sessions.",
+  }),
+  makeAccessory({
+    slug: "blockchain-coaster",
+    name: "Blockchain Coaster",
+    tagline: "Each ring, immutable.",
+    startingPrice: 89,
+    coreSpec: "Tempered cork w/ L2-anchored drink provenance",
+    personalFeature: "Provenance log on-chain",
+    proFeature: "Multi-coaster consensus voting",
+    enterpriseFeature: "Enterprise ledger export (CSV / Parquet)",
+    footnote: "Gas fees not included. Coasters may pause during chain congestion.",
+  }),
+  makeAccessory({
+    slug: "torque-paper-towel",
+    name: "Torque Paper Towel Dispenser",
+    tagline: "Perforation, quantified.",
+    startingPrice: 219,
+    coreSpec: "Precision drag arm w/ force telemetry",
+    personalFeature: "Per-tear force log",
+    proFeature: "Anomaly detection (jams, over-pulls)",
+    enterpriseFeature: "Restroom fleet analytics + SLA alerts",
+    footnote: "Dispenser throttles output on free tier to preserve analytics quota.",
+  }),
+  makeAccessory({
+    slug: "hydration-bottle",
+    name: "Hydration Bottle",
+    tagline: "Fluid compliance.",
+    startingPrice: 99,
+    coreSpec: "24 oz steel w/ sip authentication and TDS sensor",
+    personalFeature: "Daily hydration log",
+    proFeature: "Predictive dehydration alerts",
+    enterpriseFeature: "Workplace compliance reporting",
+    footnote: "Bottle locks the cap if user exceeds daily cloud-quota.",
+  }),
+  makeAccessory({
+    slug: "analytics-pen",
+    name: "Analytics Pen",
+    tagline: "Every stroke, observable.",
+    startingPrice: 179,
+    coreSpec: "Ink-metered pen w/ 6-axis handwriting telemetry",
+    personalFeature: "Handwriting stream capture",
+    proFeature: "Authorship ML attribution",
+    enterpriseFeature: "Contract-signing audit trail + e-discovery",
+    footnote: "Ink usage exceeding plan quota may pause writing until reset.",
+  }),
+  makeAccessory({
+    slug: "spill-napkin",
+    name: "Spill Napkin",
+    tagline: "Absorption, predicted.",
+    startingPrice: 49,
+    coreSpec: "Smart-fabric napkin w/ capillary ML model",
+    personalFeature: "Stain prediction on fold",
+    proFeature: "Predictive spill ML (30s advance warning)",
+    enterpriseFeature: "Hospitality venue rollout w/ SLA",
+    footnote: "Single-use; replacements shipped monthly via subscription.",
+  }),
+  makeAccessory({
+    slug: "categorized-trashcan",
+    name: "Categorized Trash Can",
+    tagline: "Disposal, resolved.",
+    startingPrice: 379,
+    coreSpec: "13-gallon bin w/ ML waste categorization + 4 chambers",
+    personalFeature: "Weekly waste breakdown",
+    proFeature: "Real-time recycling coaching",
+    enterpriseFeature: "Building-wide ESG reporting",
+    footnote: "Categorization requires lid-camera calibration every 90 days.",
+  }),
+  makeAccessory({
+    slug: "candle-subscription",
+    name: "Candle",
+    tagline: "Scent, streamed.",
+    startingPrice: 59,
+    coreSpec: "Beeswax w/ DRM-embedded scent cartridge",
+    personalFeature: "Monthly scent rotation",
+    proFeature: "Curated scent library (200+)",
+    enterpriseFeature: "Venue-wide scent orchestration",
+    footnote: "Scent cartridge expires 30 days after last cloud check-in.",
+  }),
+  makeAccessory({
+    slug: "umbrella-stand",
+    name: "Umbrella Stand",
+    tagline: "Vestibule, managed.",
+    startingPrice: 149,
+    coreSpec: "Steel stand w/ umbrella-recognition camera",
+    personalFeature: "Guest umbrella log",
+    proFeature: "Weather-aware capacity alerts",
+    enterpriseFeature: "Lobby fleet orchestration",
+    footnote: "Stand requires line power; battery backup is Pro-tier only.",
+  }),
+  makeAccessory({
+    slug: "bite-fork",
+    name: "Fork with Bite Counter",
+    tagline: "Tine intelligence.",
+    startingPrice: 139,
+    coreSpec: "Stainless fork w/ 4-tine pressure array",
+    personalFeature: "Daily bite count",
+    proFeature: "Bite-cadence coaching",
+    enterpriseFeature: "Cafeteria mealtime analytics",
+    footnote: "Pairs with Spoon Pro Max for multi-utensil haptic feedback.",
+  }),
+  makeAccessory({
+    slug: "foot-angle-shoehorn",
+    name: "Foot-Angle Shoehorn",
+    tagline: "Dressing, optimized.",
+    startingPrice: 109,
+    coreSpec: "Titanium shoehorn w/ 9-axis IMU and AI foot-angle guidance",
+    personalFeature: "Insertion angle log",
+    proFeature: "Adaptive angle coaching",
+    enterpriseFeature: "Athletic-facility locker room analytics",
+    footnote: "Guidance pauses during firmware updates.",
+  }),
+  makeAccessory({
+    slug: "location-bookmark",
+    name: "Location Bookmark",
+    tagline: "The page, synchronized.",
+    startingPrice: 59,
+    coreSpec: "Paper-thin bookmark w/ BLE beacon and cloud page-state sync",
+    personalFeature: "Last-page sync across 3 books",
+    proFeature: "Cross-device reading stream",
+    enterpriseFeature: "Library-wide patron analytics",
+    footnote: "Page-sync accuracy ±2 pages in offline mode.",
+  }),
+  makeAccessory({
+    slug: "ambient-lampshade",
+    name: "Ambient Lampshade",
+    tagline: "Mood, as configuration.",
+    startingPrice: 189,
+    coreSpec: "Translucent silk w/ 16M-color mesh LED array",
+    personalFeature: "10 preset moods",
+    proFeature: "Adaptive circadian modeling",
+    enterpriseFeature: "Office-wide brand-color enforcement",
+    footnote: "Lampshade defaults to pure white after subscription lapse.",
+  }),
+  makeAccessory({
+    slug: "cloud-moodboard-magnet",
+    name: "Cloud Moodboard Magnet",
+    tagline: "The fridge, collaborative.",
+    startingPrice: 79,
+    coreSpec: "Ferrite magnet w/ e-ink moodboard sync",
+    personalFeature: "Household moodboard sync",
+    proFeature: "Real-time collaborative boards",
+    enterpriseFeature: "Team moodboard management (100+ members)",
+    footnote: "e-ink refresh limited to 8 updates/day on Personal tier.",
+  }),
+  makeAccessory({
+    slug: "wake-certification-alarm",
+    name: "Wake Certification Alarm",
+    tagline: "Morning, verified.",
+    startingPrice: 229,
+    coreSpec: "Bedside w/ biometric wake certification + cloud attestation",
+    personalFeature: "Daily wake certificate (PDF)",
+    proFeature: "Employer-ready attendance attestation",
+    enterpriseFeature: "Enterprise attendance signing",
+    footnote: "Attestation requires 2FA on every wake.",
+  }),
+  makeAccessory({
+    slug: "haptic-remote",
+    name: "Haptic Remote Control",
+    tagline: "Channels, felt.",
+    startingPrice: 159,
+    coreSpec: "Universal remote w/ per-button haptic feedback + gesture ML",
+    personalFeature: "10-device pairing",
+    proFeature: "Gesture macros + haptic themes",
+    enterpriseFeature: "Hospitality venue fleet management",
+    footnote: "Haptic themes may desync during firmware updates.",
+  }),
+]
+
+// ---------- Registry ----------
 
 export const products: Product[] = [
   toothbrushStandard, toothbrushPro, toothbrushProMax,
   doorknobHome, doorknobPro, doorknobEnterprise,
   lightswitchAir, lightswitchPro, lightswitchUltra,
   spoonMini, spoonPro, spoonProMax,
+  ...accessories,
 ]
 
 // ---------- Helpers ----------
@@ -552,4 +808,9 @@ export const FAMILY_LABELS: Record<ProductFamily, string> = {
   lightswitch: "Light Switch",
   spoon: "Spoon",
   accessory: "Accessories",
+}
+
+// Sanity: catalog must contain exactly 30 products.
+if (products.length !== 30) {
+  throw new Error(`Superengineered catalog expected 30 products, got ${products.length}`)
 }
