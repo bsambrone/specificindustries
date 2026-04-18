@@ -5,18 +5,22 @@ import ApexAbout from "./pages/about"
 import ApexPortfolio from "./pages/portfolio"
 import ApexCareers from "./pages/careers"
 import ApexCareersApplied from "./pages/careers-applied"
+import ApexNewsroom from "./pages/newsroom"
 import ApexDisclaimer from "./pages/disclaimer"
 import ApexPrivacy from "./pages/privacy"
 import ApexTerms from "./pages/terms"
 import LeaderDetailRoute, { apexLeaderSlugs } from "./pages/leader-detail"
 import CareerDetailRoute, { careerSlugs } from "./pages/career-detail"
+import PressReleaseDetailRoute from "./pages/press-release-detail"
 import { getApexLeaderBySlug } from "./data/leadership"
 import { getJobBySlug } from "./data/careers"
+import { getPressReleaseBySlug, pressReleaseSlugs } from "./data/press-releases"
 
 export { config }
 
 const validLeaderSlugs = new Set(apexLeaderSlugs())
 const validCareerSlugs = new Set(careerSlugs())
+const validPressSlugs = new Set(pressReleaseSlugs())
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
   "leadership": {
@@ -43,6 +47,18 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
     },
     isValidSlug: (slug: string) => validCareerSlugs.has(slug),
   },
+  "newsroom": {
+    component: PressReleaseDetailRoute,
+    getMetadata: (slug: string) => {
+      const release = getPressReleaseBySlug(slug)
+      if (!release) return undefined
+      return {
+        title: `${release.headline} — Specific Industries`,
+        description: release.lede,
+      }
+    },
+    isValidSlug: (slug: string) => validPressSlugs.has(slug),
+  },
 }
 
 export const pages: Record<string, PageEntry> = {
@@ -66,6 +82,13 @@ export const pages: Record<string, PageEntry> = {
     metadata: {
       title: "Application Received — Specific Industries",
       description: "Thank you. Your application has been received.",
+    },
+  },
+  "newsroom": {
+    component: ApexNewsroom,
+    metadata: {
+      title: "Newsroom — Specific Industries",
+      description: "The latest press releases from Specific Industries and its portfolio companies.",
     },
   },
   "about": {

@@ -25,6 +25,7 @@ export const config: SiteConfig = {
   nav: [
     { label: "Home", path: "/" },
     { label: "Portfolio", path: "/portfolio" },
+    { label: "Newsroom", path: "/newsroom" },
     { label: "Careers", path: "/careers" },
     { label: "About", path: "/about" },
     { label: "Disclaimer", path: "/disclaimer" },
