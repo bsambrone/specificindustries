@@ -3,15 +3,20 @@ import type { DynamicRoute, PageEntry } from "@/themes"
 import ApexHome from "./pages/home"
 import ApexAbout from "./pages/about"
 import ApexPortfolio from "./pages/portfolio"
+import ApexCareers from "./pages/careers"
+import ApexCareersApplied from "./pages/careers-applied"
 import ApexDisclaimer from "./pages/disclaimer"
 import ApexPrivacy from "./pages/privacy"
 import ApexTerms from "./pages/terms"
 import LeaderDetailRoute, { apexLeaderSlugs } from "./pages/leader-detail"
+import CareerDetailRoute, { careerSlugs } from "./pages/career-detail"
 import { getApexLeaderBySlug } from "./data/leadership"
+import { getJobBySlug } from "./data/careers"
 
 export { config }
 
 const validLeaderSlugs = new Set(apexLeaderSlugs())
+const validCareerSlugs = new Set(careerSlugs())
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
   "leadership": {
@@ -26,6 +31,18 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
     },
     isValidSlug: (slug: string) => validLeaderSlugs.has(slug),
   },
+  "careers": {
+    component: CareerDetailRoute,
+    getMetadata: (slug: string) => {
+      const job = getJobBySlug(slug)
+      if (!job) return undefined
+      return {
+        title: `${job.title} — Careers — Specific Industries`,
+        description: job.summary,
+      }
+    },
+    isValidSlug: (slug: string) => validCareerSlugs.has(slug),
+  },
 }
 
 export const pages: Record<string, PageEntry> = {
@@ -35,6 +52,20 @@ export const pages: Record<string, PageEntry> = {
     metadata: {
       title: "Portfolio — Specific Industries",
       description: "Our portfolio of brands serving the world's most specific industries, organized across five strategic verticals.",
+    },
+  },
+  "careers": {
+    component: ApexCareers,
+    metadata: {
+      title: "Careers — Specific Industries",
+      description: "Join a portfolio of brands serving markets that arguably should not exist. 25+ open positions across all five verticals.",
+    },
+  },
+  "careers/applied": {
+    component: ApexCareersApplied,
+    metadata: {
+      title: "Application Received — Specific Industries",
+      description: "Thank you. Your application has been received.",
     },
   },
   "about": {
