@@ -3,7 +3,7 @@ import { Hero } from "@/components/ui/hero"
 import { ModularEcosystemDiagram } from "../components/modular-ecosystem-diagram"
 import { SpecReadout } from "../components/spec-readout"
 import { CautionStripe } from "../components/caution-stripe"
-import { compatibilityMatrix, portSpec, firmwareMatrix } from "../data/compatibility"
+import { compatibilityMatrix, portSpec } from "../data/compatibility"
 import { getProductBySlug } from "../data/products"
 
 export const metadata = {
@@ -16,7 +16,7 @@ export default function SeeltiteCompatibility() {
     <>
       <Hero
         headline="OPX-14. Everything Fits."
-        subheadline="The G1's output port is the only fitting standard you need to know."
+        subheadline="Every accessory. Same port. No adapters."
       />
       <CautionStripe text="One Port · Eleven Products · Zero Adapters" />
 
@@ -34,11 +34,9 @@ export default function SeeltiteCompatibility() {
             title="OPX-14 · PORT SPEC"
             variant="dark"
             rows={[
-              { label: "Diameter", value: portSpec.diameter },
               { label: "Mechanism", value: portSpec.mechanism },
-              { label: "Rating", value: portSpec.rating },
-              { label: "Material", value: portSpec.material },
-              { label: "Firmware", value: portSpec.firmware },
+              { label: "Rating",    value: portSpec.rating },
+              { label: "Diameter",  value: "14mm bayonet" },
             ]}
           />
         </div>
@@ -91,32 +89,6 @@ export default function SeeltiteCompatibility() {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-secondary/5 border-y border-foreground/10">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-xs tracking-[0.3em] uppercase text-primary mb-3 font-heading">Firmware Rollup</p>
-          <h2 className="text-3xl font-heading font-semibold mb-8">Current Revisions (as of Q2 2026)</h2>
-          <div className="overflow-x-auto border border-foreground/15">
-            <table className="w-full text-sm font-mono">
-              <thead className="bg-secondary text-background">
-                <tr>
-                  <th className="text-left px-4 py-3 tracking-[0.2em] uppercase text-xs font-heading">Accessory</th>
-                  <th className="text-left px-4 py-3 tracking-[0.2em] uppercase text-xs font-heading">Firmware</th>
-                  <th className="text-left px-4 py-3 tracking-[0.2em] uppercase text-xs font-heading">Last Revision</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-foreground/10">
-                {firmwareMatrix.map((f) => (
-                  <tr key={f.accessory} className="bg-background">
-                    <td className="px-4 py-3">{f.accessory}</td>
-                    <td className="px-4 py-3 text-primary">{f.firmware}</td>
-                    <td className="px-4 py-3 text-foreground/70">{f.lastRevision}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
     </>
   )
 }
