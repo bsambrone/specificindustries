@@ -24,7 +24,7 @@ import { config as mostlysterileConfig, pages as mostlysterilePages, dynamicRout
 import { config as carterandfilsConfig, pages as carterandfilsPages, dynamicRoutes as carterandfilsDynamicRoutes } from "./carterandfils"
 import { config as sovereignwellnessConfig, pages as sovereignwellnessPages, dynamicRoutes as sovereignwellnessDynamicRoutes } from "./sovereignwellness"
 import { config as mehConfig, pages as mehPages, dynamicRoutes as mehDynamicRoutes } from "./meh"
-import { config as superengineeredConfig, pages as superengineeredPages } from "./superengineered"
+import { config as superengineeredConfig, pages as superengineeredPages, dynamicRoutes as superengineeredDynamicRoutes } from "./superengineered"
 import { config as privatrixConfig, pages as privatrixPages, dynamicRoutes as privatrixDynamicRoutes } from "./privatrix"
 
 export const siteRegistry: Record<string, SiteModule> = {
@@ -53,7 +53,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   carterandfils: { config: carterandfilsConfig, pages: carterandfilsPages, dynamicRoutes: carterandfilsDynamicRoutes },
   sovereignwellness: { config: sovereignwellnessConfig, pages: sovereignwellnessPages, dynamicRoutes: sovereignwellnessDynamicRoutes },
   meh: { config: mehConfig, pages: mehPages, dynamicRoutes: mehDynamicRoutes },
-  superengineered: { config: superengineeredConfig, pages: superengineeredPages },
+  superengineered: { config: superengineeredConfig, pages: superengineeredPages, dynamicRoutes: superengineeredDynamicRoutes },
   privatrix: { config: privatrixConfig, pages: privatrixPages, dynamicRoutes: privatrixDynamicRoutes },
 }
 
