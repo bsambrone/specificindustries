@@ -6,9 +6,11 @@ import { SpecReadout } from "../components/spec-readout"
 import { AccessoryCompatibilityRow } from "../components/accessory-compatibility-row"
 import { CautionStripe } from "../components/caution-stripe"
 import { ScenarioCard } from "../components/scenario-card"
+import { FitmentStepCard } from "../components/fitment-step-card"
 import { getProductBySlug, products, CATEGORY_LABELS } from "../data/products"
 import { scenarios } from "../data/scenarios"
 import { recoveryCases } from "../data/recovery"
+import { fitmentSteps } from "../data/fitment"
 
 interface Props {
   slug: string
@@ -92,6 +94,27 @@ export default function SeeltiteProductDetail({ slug }: Props) {
         accessorySlugs={p.compatibleWith}
         title={p.category === "core" ? "Every Accessory Fits" : "Works With"}
       />
+
+      {p.slug === "g1-containment-gasket" && (
+        <section className="py-16 px-4 bg-background border-y border-foreground/10">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex items-baseline justify-between mb-8 flex-wrap gap-4">
+              <div>
+                <p className="text-xs tracking-[0.3em] uppercase text-primary mb-2 font-heading">How To Wear</p>
+                <h2 className="text-3xl font-heading font-semibold">Toot-Ready In Four Steps.</h2>
+              </div>
+              <Link href="/fitment" className="inline-flex items-center gap-2 text-sm tracking-[0.2em] uppercase text-primary hover:text-foreground transition-colors font-heading">
+                Read the Full Fitment Guide <span aria-hidden>→</span>
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {fitmentSteps.map((s) => (
+                <FitmentStepCard key={s.number} step={s.number} title={s.title} description={s.description} image={s.image} variant="compact" />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {linkedTestimonials.length > 0 && (
         <section className="py-16 px-4">
