@@ -1,6 +1,7 @@
 import type { PageEntry, DynamicRoute } from "@/themes"
 import { config } from "./config"
 import { getProductBySlug } from "./data/products"
+import { productSchema } from "@/lib/seo/schemas"
 import PrivatrixHome from "./pages/home"
 import PrivatrixProducts, { metadata as productsMetadata } from "./pages/products"
 import PrivatrixProductDetail from "./pages/product-detail"
@@ -42,5 +43,25 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => !!getProductBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getProductBySlug(slug)?.name,
+    breadcrumbSectionLabel: "Products",
+    getJsonLd: (slug: string) => {
+      const p = getProductBySlug(slug)
+      if (!p) return undefined
+      return productSchema(
+        "privatrix",
+        `products/${p.slug}`,
+        {
+          name: p.name,
+          slug: p.slug,
+          description: Array.isArray(p.description) ? p.description.join(" ") : p.description,
+          tagline: p.tagline,
+          image: p.image,
+          price: p.price ?? undefined,
+          category: p.category,
+        },
+        config.name
+      )
+    },
   },
 }

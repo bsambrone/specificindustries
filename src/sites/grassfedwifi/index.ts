@@ -2,6 +2,7 @@ import { config } from "./config"
 import type { PageEntry, DynamicRoute } from "@/themes"
 import { getShareBySlug } from "./data/shares"
 import { getFieldNoteBySlug } from "./data/field-notes"
+import { articleSchema } from "@/lib/seo/schemas"
 import GrassFedWiFiHome from "./pages/home"
 import GrassFedWiFiShares, { metadata as sharesMetadata } from "./pages/shares"
 import ShareDetail from "./pages/share-detail"
@@ -58,5 +59,26 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => !!getFieldNoteBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getFieldNoteBySlug(slug)?.title,
+    breadcrumbSectionLabel: "Field Notes",
+    getJsonLd: (slug: string) => {
+      const n = getFieldNoteBySlug(slug)
+      if (!n) return undefined
+      return articleSchema(
+        "grassfedwifi",
+        `field-notes/${n.slug}`,
+        {
+          headline: n.title,
+          slug: n.slug,
+          description: n.excerpt,
+          image: n.image,
+          datePublished: n.date,
+          author: n.author,
+          keywords: n.tags,
+        },
+        config,
+        "BlogPosting"
+      )
+    },
   },
 }

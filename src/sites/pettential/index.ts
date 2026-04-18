@@ -2,6 +2,7 @@
 import { config } from "./config"
 import type { PageEntry, DynamicRoute } from "@/themes"
 import { getProductBySlug } from "./data/products"
+import { productSchema } from "@/lib/seo/schemas"
 
 import PettentialHome from "./pages/home"
 import PettentialShop, { metadata as shopMetadata } from "./pages/shop"
@@ -40,5 +41,25 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => !!getProductBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getProductBySlug(slug)?.name,
+    breadcrumbSectionLabel: "Shop",
+    getJsonLd: (slug: string) => {
+      const p = getProductBySlug(slug)
+      if (!p) return undefined
+      return productSchema(
+        "pettential",
+        `shop/${p.slug}`,
+        {
+          name: p.name,
+          slug: p.slug,
+          description: Array.isArray(p.description) ? p.description.join(" ") : p.description,
+          tagline: p.tagline,
+          image: p.heroImage,
+          price: p.price,
+          category: p.division,
+        },
+        config.name
+      )
+    },
   },
 }

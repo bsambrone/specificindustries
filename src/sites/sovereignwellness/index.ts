@@ -2,6 +2,7 @@ import type { PageEntry, DynamicRoute } from "@/themes"
 import { config } from "./config"
 import { getTreatmentBySlug } from "./data/treatments"
 import { getDispatchBySlug } from "./data/dispatches"
+import { articleSchema, serviceSchema } from "@/lib/seo/schemas"
 import SovereignWellnessHome from "./pages/home"
 import SovereignWellnessTreatments, { metadata as treatmentsMetadata } from "./pages/treatments"
 import TreatmentDetail from "./pages/treatment-detail"
@@ -36,6 +37,27 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => !!getTreatmentBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getTreatmentBySlug(slug)?.name,
+    breadcrumbSectionLabel: "Treatments",
+    getJsonLd: (slug: string) => {
+      const t = getTreatmentBySlug(slug)
+      if (!t) return undefined
+      return serviceSchema(
+        "sovereignwellness",
+        `treatments/${t.slug}`,
+        {
+          name: t.name,
+          slug: t.slug,
+          description: Array.isArray(t.mechanism)
+            ? t.mechanism.join(" ")
+            : t.tagline,
+          image: t.image,
+          serviceType: "MedicalTherapy",
+          areaServed: "United States",
+        },
+        config
+      )
+    },
   },
   dispatches: {
     component: DispatchDetail,
@@ -46,5 +68,23 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => !!getDispatchBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getDispatchBySlug(slug)?.title,
+    breadcrumbSectionLabel: "Dispatches",
+    getJsonLd: (slug: string) => {
+      const d = getDispatchBySlug(slug)
+      if (!d) return undefined
+      return articleSchema(
+        "sovereignwellness",
+        `dispatches/${d.slug}`,
+        {
+          headline: d.title,
+          slug: d.slug,
+          description: d.excerpt,
+          image: d.image,
+        },
+        config,
+        "Article"
+      )
+    },
   },
 }

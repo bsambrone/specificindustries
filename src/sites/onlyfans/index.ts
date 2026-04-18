@@ -1,6 +1,7 @@
 import { config } from "./config"
 import type { PageEntry, DynamicRoute } from "@/themes"
 import { getFanBySlug } from "./data/fans"
+import { personSchema } from "@/lib/seo/schemas"
 
 import OnlyFansHome from "./pages/home"
 import OnlyFansBrowse, { metadata as browseMetadata } from "./pages/browse"
@@ -35,5 +36,23 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => !!getFanBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getFanBySlug(slug)?.name,
+    breadcrumbSectionLabel: "Browse",
+    getJsonLd: (slug: string) => {
+      const fan = getFanBySlug(slug)
+      if (!fan) return undefined
+      return personSchema(
+        "onlyfans",
+        `browse/${fan.slug}`,
+        {
+          name: fan.name,
+          slug: fan.slug,
+          title: fan.fanType,
+          bio: fan.bio,
+          image: fan.avatarImage,
+        },
+        config
+      )
+    },
   },
 }

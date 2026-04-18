@@ -37,6 +37,9 @@ import { treatments as sovereignwellnessTreatments } from "@/sites/sovereignwell
 import { dispatches as sovereignwellnessDispatches } from "@/sites/sovereignwellness/data/dispatches"
 import { products as privatrixProducts } from "@/sites/privatrix/data/products"
 import { products as superengineeredProducts } from "@/sites/superengineered/data/products"
+import { apexLeaders } from "@/sites/apex/data/leadership"
+import { jobs as apexJobs } from "@/sites/apex/data/careers"
+import { pressReleases as apexPressReleases } from "@/sites/apex/data/press-releases"
 
 const BASE_DOMAIN = "specificindustries.com"
 const EXCLUDED_PAGES = new Set(["cart", "checkout"])
@@ -178,6 +181,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Meh: journal entries (products covered by productSites map above)
   for (const entry of mehJournal) {
     urls.push({ url: siteUrl("meh", `journal/${entry.slug}`) })
+  }
+
+  // Apex: leader profiles, job listings, press releases
+  for (const leader of apexLeaders) {
+    urls.push({ url: siteUrl("apex", `leadership/${leader.slug}`) })
+  }
+  for (const job of apexJobs) {
+    urls.push({ url: siteUrl("apex", `careers/${job.slug}`) })
+  }
+  for (const release of apexPressReleases) {
+    urls.push({ url: siteUrl("apex", `newsroom/${release.slug}`) })
   }
 
   // Sovereign Wellness: treatment detail pages, dispatch articles

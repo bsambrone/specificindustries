@@ -34,5 +34,7 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => isValidOnboardingSlug(slug),
+    getBreadcrumbLabel: (slug: string) => getStepBySlug(slug)?.title,
+    breadcrumbSectionLabel: "Onboarding",
   },
 }

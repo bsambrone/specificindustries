@@ -2,6 +2,7 @@ import type { PageEntry, DynamicRoute } from "@/themes"
 import { config } from "./config"
 import { getProductBySlug } from "./data/products"
 import { getJournalBySlug } from "./data/journal"
+import { articleSchema, productSchema } from "@/lib/seo/schemas"
 import CarterAndFilsHome from "./pages/home"
 import CarterAndFilsCellar, { metadata as cellarMetadata } from "./pages/cellar"
 import OurStory, { metadata as ourStoryMetadata } from "./pages/our-story"
@@ -42,6 +43,26 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => !!getProductBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getProductBySlug(slug)?.name,
+    breadcrumbSectionLabel: "Cellar",
+    getJsonLd: (slug: string) => {
+      const p = getProductBySlug(slug)
+      if (!p) return undefined
+      return productSchema(
+        "carterandfils",
+        `cellar/${p.slug}`,
+        {
+          name: p.name,
+          slug: p.slug,
+          description: p.tastingNotes,
+          tagline: p.tagline,
+          image: p.image,
+          price: p.price,
+          category: p.category,
+        },
+        config.name
+      )
+    },
   },
   journal: {
     component: JournalEntry,
@@ -52,5 +73,25 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => !!getJournalBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getJournalBySlug(slug)?.title,
+    breadcrumbSectionLabel: "Journal",
+    getJsonLd: (slug: string) => {
+      const e = getJournalBySlug(slug)
+      if (!e) return undefined
+      return articleSchema(
+        "carterandfils",
+        `journal/${e.slug}`,
+        {
+          headline: e.title,
+          slug: e.slug,
+          description: e.excerpt,
+          image: e.image,
+          datePublished: e.publishedDate,
+          author: e.author,
+        },
+        config,
+        "Article"
+      )
+    },
   },
 }

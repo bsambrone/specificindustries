@@ -18,6 +18,7 @@ import { getSolutionBySlug } from "./data/solutions"
 import { getProductBySlug } from "./data/products"
 import { getCaseStudyBySlug } from "./data/case-studies"
 import { getWhitepaperBySlug } from "./data/whitepapers"
+import { articleSchema, productSchema, serviceSchema } from "@/lib/seo/schemas"
 
 export { config }
 
@@ -66,6 +67,51 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
       }
       return !!getSolutionBySlug(slug)
     },
+    breadcrumbSectionLabel: "Solutions",
+    getBreadcrumbLabel: (slug: string, segments?: string[]) => {
+      if (segments && segments.length === 2) {
+        return getProductBySlug(segments[1])?.name
+      }
+      return getSolutionBySlug(slug)?.name
+    },
+    getJsonLd: (slug: string, segments?: string[]) => {
+      if (segments && segments.length === 2) {
+        const product = getProductBySlug(segments[1])
+        if (!product) return undefined
+        return productSchema(
+          "strategicvoid",
+          `solutions/${segments[0]}/${product.slug}`,
+          {
+            name: product.name,
+            slug: product.slug,
+            description: Array.isArray(product.description)
+              ? product.description.join(" ")
+              : product.description,
+            tagline: product.tagline,
+            image: product.image,
+            price: product.price,
+            category: product.solutionArea,
+          },
+          config.name
+        )
+      }
+      const solution = getSolutionBySlug(slug)
+      if (!solution) return undefined
+      return serviceSchema(
+        "strategicvoid",
+        `solutions/${solution.slug}`,
+        {
+          name: solution.name,
+          slug: solution.slug,
+          description: Array.isArray(solution.description)
+            ? solution.description.join(" ")
+            : solution.tagline,
+          serviceType: "Business Consulting",
+          areaServed: "Global",
+        },
+        config
+      )
+    },
   },
   "case-studies": {
     component: CaseStudyPage,
@@ -79,6 +125,25 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => !!getCaseStudyBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getCaseStudyBySlug(slug)?.title,
+    breadcrumbSectionLabel: "Case Studies",
+    getJsonLd: (slug: string) => {
+      const cs = getCaseStudyBySlug(slug)
+      if (!cs) return undefined
+      return articleSchema(
+        "strategicvoid",
+        `case-studies/${cs.slug}`,
+        {
+          headline: cs.title,
+          slug: cs.slug,
+          description: cs.summary,
+          section: cs.solutionArea,
+          keywords: [cs.company, cs.industry, cs.solutionArea],
+        },
+        config,
+        "Article"
+      )
+    },
   },
   "whitepapers": {
     component: WhitepaperPage,
@@ -92,5 +157,24 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => !!getWhitepaperBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getWhitepaperBySlug(slug)?.title,
+    breadcrumbSectionLabel: "Whitepapers",
+    getJsonLd: (slug: string) => {
+      const wp = getWhitepaperBySlug(slug)
+      if (!wp) return undefined
+      return articleSchema(
+        "strategicvoid",
+        `whitepapers/${wp.slug}`,
+        {
+          headline: wp.title,
+          slug: wp.slug,
+          description: wp.subtitle,
+          author: wp.authors,
+          section: wp.solutionArea,
+        },
+        config,
+        "Article"
+      )
+    },
   },
 }

@@ -1,6 +1,7 @@
 import { config } from "./config"
 import type { PageEntry, DynamicRoute } from "@/themes"
 import { getProductBySlug } from "./data/products"
+import { productSchema } from "@/lib/seo/schemas"
 import SnortablesHome from "./pages/home"
 import SnortablesProducts, { metadata as productsMetadata } from "./pages/products"
 import SnortablesProcess, { metadata as processMetadata } from "./pages/process"
@@ -38,5 +39,24 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => !!getProductBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getProductBySlug(slug)?.name,
+    breadcrumbSectionLabel: "Products",
+    getJsonLd: (slug: string) => {
+      const p = getProductBySlug(slug)
+      if (!p) return undefined
+      return productSchema(
+        "snortables",
+        `products/${p.slug}`,
+        {
+          name: p.name,
+          slug: p.slug,
+          description: Array.isArray(p.description) ? p.description.join(" ") : p.description,
+          tagline: p.tagline,
+          image: p.image,
+          price: p.price,
+        },
+        config.name
+      )
+    },
   },
 }

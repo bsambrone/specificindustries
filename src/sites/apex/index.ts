@@ -18,6 +18,19 @@ import PressReleaseDetailRoute from "./pages/press-release-detail"
 import { getApexLeaderBySlug } from "./data/leadership"
 import { getJobBySlug } from "./data/careers"
 import { getPressReleaseBySlug, pressReleaseSlugs } from "./data/press-releases"
+import {
+  articleSchema,
+  jobPostingSchema,
+  personSchema,
+} from "@/lib/seo/schemas"
+
+const SALARY_RE = /\$(\d[\d,]*)\s*(?:[–-])\s*\$?(\d[\d,]*)/
+function parseSalary(summary: string): { min?: number; max?: number } | undefined {
+  const m = summary.match(SALARY_RE)
+  if (!m) return undefined
+  const toNum = (s: string) => Number(s.replace(/,/g, ""))
+  return { min: toNum(m[1]), max: toNum(m[2]) }
+}
 
 export { config }
 
@@ -34,9 +47,28 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
       return {
         title: `${leader.name} — ${leader.title} — Specific Industries`,
         description: leader.bio,
+        ogImage: leader.portraitImage,
       }
     },
     isValidSlug: (slug: string) => validLeaderSlugs.has(slug),
+    getBreadcrumbLabel: (slug: string) => getApexLeaderBySlug(slug)?.name,
+    breadcrumbSectionLabel: "Leadership",
+    getJsonLd: (slug: string) => {
+      const leader = getApexLeaderBySlug(slug)
+      if (!leader) return undefined
+      return personSchema(
+        "apex",
+        `leadership/${leader.slug}`,
+        {
+          name: leader.name,
+          slug: leader.slug,
+          title: leader.title,
+          bio: leader.bio,
+          image: leader.portraitImage,
+        },
+        config
+      )
+    },
   },
   "careers": {
     component: CareerDetailRoute,
@@ -49,6 +81,38 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
       }
     },
     isValidSlug: (slug: string) => validCareerSlugs.has(slug),
+    getBreadcrumbLabel: (slug: string) => getJobBySlug(slug)?.title,
+    breadcrumbSectionLabel: "Careers",
+    getJsonLd: (slug: string) => {
+      const job = getJobBySlug(slug)
+      if (!job) return undefined
+      const salary = parseSalary(job.compensation.summary)
+      const descParts = [
+        ...job.about,
+        "Responsibilities:",
+        ...job.responsibilities.map((r) => `• ${r}`),
+        "Qualifications:",
+        ...job.qualifications.map((q) => `• ${q}`),
+      ]
+      const remote = /remote/i.test(job.location)
+      return jobPostingSchema(
+        "apex",
+        `careers/${job.slug}`,
+        {
+          title: job.title,
+          slug: job.slug,
+          description: descParts.join("\n"),
+          employmentType: job.employmentType.toUpperCase().includes("PART")
+            ? "PART_TIME"
+            : "FULL_TIME",
+          location: { remote, country: "US" },
+          baseSalary: salary
+            ? { min: salary.min, max: salary.max, currency: "USD", unit: "YEAR" }
+            : undefined,
+        },
+        config
+      )
+    },
   },
   "newsroom": {
     component: PressReleaseDetailRoute,
@@ -61,6 +125,26 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
       }
     },
     isValidSlug: (slug: string) => validPressSlugs.has(slug),
+    getBreadcrumbLabel: (slug: string) => getPressReleaseBySlug(slug)?.headline,
+    breadcrumbSectionLabel: "Newsroom",
+    getJsonLd: (slug: string) => {
+      const release = getPressReleaseBySlug(slug)
+      if (!release) return undefined
+      return articleSchema(
+        "apex",
+        `newsroom/${release.slug}`,
+        {
+          headline: release.headline,
+          slug: release.slug,
+          description: release.subhead ?? release.lede,
+          datePublished: release.dateIso,
+          author: "Specific Industries",
+          section: "Press Releases",
+        },
+        config,
+        "NewsArticle"
+      )
+    },
   },
 }
 

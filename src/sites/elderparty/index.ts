@@ -3,6 +3,7 @@ import type { PageEntry, DynamicRoute } from "@/themes"
 import { getCoalitionBySlug } from "./data/coalitions"
 import { getArticleBySlug } from "./data/news"
 import { getProductBySlug } from "./data/products"
+import { articleSchema, productSchema, serviceSchema } from "@/lib/seo/schemas"
 import ElderPartyHome from "./pages/home"
 import ElderPartyPlatform, { metadata as platformMetadata } from "./pages/platform"
 import ElderPartyCoalitions, { metadata as coalitionsMetadata } from "./pages/coalitions"
@@ -54,6 +55,27 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => !!getCoalitionBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getCoalitionBySlug(slug)?.name,
+    breadcrumbSectionLabel: "Coalitions",
+    getJsonLd: (slug: string) => {
+      const c = getCoalitionBySlug(slug)
+      if (!c) return undefined
+      return serviceSchema(
+        "elderparty",
+        `coalitions/${c.slug}`,
+        {
+          name: c.name,
+          slug: c.slug,
+          description: Array.isArray(c.description)
+            ? c.description.join(" ")
+            : c.tagline,
+          image: c.image,
+          serviceType: "Political Coalition",
+          areaServed: "United States",
+        },
+        config
+      )
+    },
   },
   news: {
     component: NewsDetail,
@@ -64,6 +86,25 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => !!getArticleBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getArticleBySlug(slug)?.headline,
+    breadcrumbSectionLabel: "News",
+    getJsonLd: (slug: string) => {
+      const a = getArticleBySlug(slug)
+      if (!a) return undefined
+      return articleSchema(
+        "elderparty",
+        `news/${a.slug}`,
+        {
+          headline: a.headline,
+          slug: a.slug,
+          description: a.summary,
+          image: a.images?.[0]?.src,
+          author: a.author,
+        },
+        config,
+        "NewsArticle"
+      )
+    },
   },
   shop: {
     component: ProductDetail,
@@ -74,5 +115,25 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => !!getProductBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getProductBySlug(slug)?.name,
+    breadcrumbSectionLabel: "Shop",
+    getJsonLd: (slug: string) => {
+      const p = getProductBySlug(slug)
+      if (!p) return undefined
+      return productSchema(
+        "elderparty",
+        `shop/${p.slug}`,
+        {
+          name: p.name,
+          slug: p.slug,
+          description: Array.isArray(p.description) ? p.description.join(" ") : p.description,
+          tagline: p.tagline,
+          image: p.image,
+          price: p.price,
+          category: p.category,
+        },
+        config.name
+      )
+    },
   },
 }

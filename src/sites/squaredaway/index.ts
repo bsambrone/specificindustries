@@ -1,6 +1,7 @@
 import { config } from "./config"
 import type { PageEntry, DynamicRoute } from "@/themes"
 import { getProductBySlug } from "./data/products"
+import { productSchema } from "@/lib/seo/schemas"
 
 import Home from "./pages/home"
 import Army from "./pages/army"
@@ -53,5 +54,26 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => !!getProductBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getProductBySlug(slug)?.name,
+    breadcrumbSectionLabel: "Products",
+    getJsonLd: (slug: string) => {
+      const p = getProductBySlug(slug)
+      if (!p) return undefined
+      return productSchema(
+        "squaredaway",
+        `products/${p.slug}`,
+        {
+          name: p.name,
+          slug: p.slug,
+          description: p.longDescription.join(" "),
+          tagline: p.tagline,
+          image: p.image,
+          price: p.price,
+          sku: p.nsn,
+          category: p.branch,
+        },
+        config.name
+      )
+    },
   },
 }

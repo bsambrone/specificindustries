@@ -1,6 +1,7 @@
 import type { PageEntry, DynamicRoute } from "@/themes"
 import { config } from "./config"
 import { getProductBySlug } from "./data/products"
+import { productSchema } from "@/lib/seo/schemas"
 import SuperengineeredHome from "./pages/home"
 import SuperengineeredProductDetail from "./pages/product-detail"
 import SuperengineeredShop, { metadata as shopMetadata } from "./pages/shop"
@@ -46,5 +47,24 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => !!getProductBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getProductBySlug(slug)?.name,
+    breadcrumbSectionLabel: "Products",
+    getJsonLd: (slug: string) => {
+      const p = getProductBySlug(slug)
+      if (!p) return undefined
+      return productSchema(
+        "superengineered",
+        `products/${p.slug}`,
+        {
+          name: p.name,
+          slug: p.slug,
+          tagline: p.tagline,
+          image: p.heroImage,
+          price: p.startingPrice,
+          category: p.family,
+        },
+        config.name
+      )
+    },
   },
 }

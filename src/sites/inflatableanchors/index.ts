@@ -2,6 +2,7 @@ import { config } from "./config"
 import type { PageEntry, DynamicRoute } from "@/themes"
 import InflatableAnchorsHome from "./pages/home"
 import { getProductBySlug } from "./data/products"
+import { productSchema } from "@/lib/seo/schemas"
 import InflatableAnchorsProducts, { metadata as productsMetadata } from "./pages/products"
 import InflatableAnchorsAbout, { metadata as aboutMetadata } from "./pages/about"
 import TheTechnology, { metadata as technologyMetadata } from "./pages/technology"
@@ -40,5 +41,25 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => !!getProductBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getProductBySlug(slug)?.name,
+    breadcrumbSectionLabel: "Products",
+    getJsonLd: (slug: string) => {
+      const p = getProductBySlug(slug)
+      if (!p) return undefined
+      return productSchema(
+        "inflatableanchors",
+        `products/${p.slug}`,
+        {
+          name: p.name,
+          slug: p.slug,
+          description: Array.isArray(p.description) ? p.description.join(" ") : p.description,
+          tagline: p.tagline,
+          image: p.image,
+          price: p.price,
+          category: p.category,
+        },
+        config.name
+      )
+    },
   },
 }

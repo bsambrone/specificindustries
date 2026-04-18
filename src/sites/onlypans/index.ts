@@ -1,6 +1,7 @@
 import { config } from "./config"
 import type { PageEntry, DynamicRoute } from "@/themes"
 import { getPanBySlug } from "./data/pans"
+import { productSchema } from "@/lib/seo/schemas"
 
 import OnlyPansHome from "./pages/home"
 import OnlyPansBrowse, { metadata as browseMetadata } from "./pages/browse"
@@ -35,5 +36,25 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => !!getPanBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getPanBySlug(slug)?.name,
+    breadcrumbSectionLabel: "Browse",
+    getJsonLd: (slug: string) => {
+      const pan = getPanBySlug(slug)
+      if (!pan) return undefined
+      return productSchema(
+        "onlypans",
+        `browse/${pan.slug}`,
+        {
+          name: pan.name,
+          slug: pan.slug,
+          description: pan.bio,
+          tagline: pan.panType,
+          image: pan.avatarImage,
+          price: pan.monthlyPrice,
+          category: pan.niche,
+        },
+        config.name
+      )
+    },
   },
 }

@@ -1,6 +1,7 @@
 import type { PageEntry, DynamicRoute } from "@/themes"
 import { config } from "./config"
 import { getProductBySlug } from "./data/products"
+import { productSchema } from "@/lib/seo/schemas"
 import SeeltiteHome from "./pages/home"
 import SeeltiteProducts, { metadata as productsMetadata } from "./pages/products"
 import SeeltiteProductDetail from "./pages/product-detail"
@@ -46,5 +47,25 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         : undefined
     },
     isValidSlug: (slug: string) => !!getProductBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getProductBySlug(slug)?.name,
+    breadcrumbSectionLabel: "Products",
+    getJsonLd: (slug: string) => {
+      const p = getProductBySlug(slug)
+      if (!p) return undefined
+      return productSchema(
+        "seeltite",
+        `products/${p.slug}`,
+        {
+          name: p.name,
+          slug: p.slug,
+          description: Array.isArray(p.description) ? p.description.join(" ") : p.description,
+          tagline: p.tagline,
+          image: p.heroImage,
+          price: p.price,
+          category: p.category,
+        },
+        config.name
+      )
+    },
   },
 }

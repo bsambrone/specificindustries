@@ -21,6 +21,12 @@ export interface SiteMetadata {
   title: string
   description: string
   ogImage?: string
+  logo?: string
+  sameAs?: string[]
+  organizationType?: string
+  founders?: string[]
+  foundingDate?: string
+  parentOrganization?: string
 }
 
 export interface NavItem {
@@ -76,7 +82,11 @@ export interface PageMetadata {
 export interface PageWithMetadata {
   component: React.ComponentType
   metadata: PageMetadata
+  jsonLd?: JsonLdValue | JsonLdValue[]
+  breadcrumbLabel?: string
 }
+
+export type JsonLdValue = Record<string, unknown>
 
 // A page entry is either a bare component or a component with metadata
 export type PageEntry = React.ComponentType | PageWithMetadata
@@ -86,6 +96,9 @@ export interface DynamicRoute {
   getMetadata?: (slug: string, segments?: string[]) => PageMetadata | undefined
   isValidSlug?: (slug: string, segments?: string[]) => boolean
   maxSegments?: number
+  getJsonLd?: (slug: string, segments?: string[]) => JsonLdValue | JsonLdValue[] | undefined
+  getBreadcrumbLabel?: (slug: string, segments?: string[]) => string | undefined
+  breadcrumbSectionLabel?: string
 }
 
 export interface SiteModule {
