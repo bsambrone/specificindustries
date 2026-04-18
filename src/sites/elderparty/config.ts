@@ -79,4 +79,6 @@ export const config: SiteConfig = {
   features: {
     commerce: true,
   },
+  verticalKey: "professional-services",
+  tagline: "Event planning tailored exclusively to the 75-and-over demographic.",
 }

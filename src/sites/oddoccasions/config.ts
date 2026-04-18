@@ -31,4 +31,6 @@ export const config: SiteConfig = {
   features: {
     commerce: true,
   },
+  verticalKey: "professional-services",
+  tagline: "Event services for occasions that fall outside standard categories.",
 }

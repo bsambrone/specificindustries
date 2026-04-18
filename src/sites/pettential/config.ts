@@ -34,4 +34,6 @@ export const config: SiteConfig = {
   features: {
     commerce: true,
   },
+  verticalKey: "professional-services",
+  tagline: "Pet companionship services across every taxonomic kingdom.",
 }

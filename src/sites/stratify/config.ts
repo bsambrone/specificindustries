@@ -34,4 +34,6 @@ export const config: SiteConfig = {
   features: {
     commerce: false,
   },
+  verticalKey: "professional-services",
+  tagline: "Enterprise stratification. We separate what does not need to be combined.",
 }

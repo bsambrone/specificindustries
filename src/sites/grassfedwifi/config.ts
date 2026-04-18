@@ -33,4 +33,6 @@ export const config: SiteConfig = {
   features: {
     commerce: true,
   },
+  verticalKey: "professional-services",
+  tagline: "Artisanal home internet. Pastured routers, heritage bandwidth.",
 }
