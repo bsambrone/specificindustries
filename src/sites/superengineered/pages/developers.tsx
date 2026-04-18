@@ -63,7 +63,7 @@ export default function SuperEngineeredDevelopers() {
               </thead>
               <tbody className="divide-y divide-primary/10">
                 {endpoints.map((ep) => (
-                  <tr key={ep.path}>
+                  <tr key={`${ep.method} ${ep.path}`}>
                     <td className="px-6 py-3 font-mono text-accent">{ep.method}</td>
                     <td className="px-6 py-3 font-mono text-primary">{ep.path}</td>
                     <td className="px-6 py-3 text-primary/70">{ep.description}</td>
