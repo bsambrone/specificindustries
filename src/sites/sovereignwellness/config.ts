@@ -32,4 +32,6 @@ export const config: SiteConfig = {
   features: {
     commerce: false,
   },
+  verticalKey: "health-wellness",
+  tagline: "Personal-sovereignty wellness for those who have opted out.",
 }
