@@ -1,4 +1,5 @@
 import type { PageMetadata } from "@/themes"
+import Link from "next/link"
 
 export const metadata: PageMetadata = {
   title: "Privacy Policy — The Theory Is Real",
@@ -73,7 +74,7 @@ export default function Privacy() {
           <h2 className="font-heading text-xl text-primary mb-3">§6. Contact</h2>
           <p>
             Privacy-related inquiries should be directed via the channels described on our{" "}
-            <a className="underline text-primary hover:opacity-80" href="/contact">contact page</a>. Paper mail is
+            <Link className="underline text-primary hover:opacity-80" href="/contact">contact page</Link>. Paper mail is
             preferred for sensitive matters. We read all submissions. We respond to those that require a response and
             to those we find sufficiently interesting.
           </p>
