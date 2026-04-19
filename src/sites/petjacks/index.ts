@@ -8,6 +8,8 @@ import PetjacksProducts, { metadata as productsMetadata } from "./pages/products
 import PetjacksFlightAcademy, { metadata as flightAcademyMetadata } from "./pages/flight-academy"
 import PetjacksMissionGallery, { metadata as missionGalleryMetadata } from "./pages/mission-gallery"
 import PetjacksSafetyRecord, { metadata as safetyRecordMetadata } from "./pages/safety-record"
+import PetjacksAbout, { metadata as aboutMetadata } from "./pages/about"
+import PetjacksLeadership, { metadata as leadershipMetadata } from "./pages/leadership"
 import ProductDetail from "./pages/product-detail"
 
 export { config }
@@ -18,6 +20,8 @@ export const pages: Record<string, PageEntry> = {
   "flight-academy": { component: PetjacksFlightAcademy, metadata: flightAcademyMetadata },
   "mission-gallery": { component: PetjacksMissionGallery, metadata: missionGalleryMetadata },
   "safety-record": { component: PetjacksSafetyRecord, metadata: safetyRecordMetadata },
+  "about": { component: PetjacksAbout, metadata: aboutMetadata },
+  "leadership": { component: PetjacksLeadership, metadata: leadershipMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
