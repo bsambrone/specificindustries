@@ -1,4 +1,4 @@
-import { Inter, Playfair_Display, Space_Grotesk, Poppins, Barlow_Condensed, Fraunces, Nunito, Bowlby_One_SC, Zilla_Slab, IBM_Plex_Mono, Black_Ops_One, Bungee, Work_Sans, Cormorant_Garamond, Lora, Alfa_Slab_One } from "next/font/google"
+import { Inter, Playfair_Display, Space_Grotesk, Poppins, Barlow_Condensed, Fraunces, Nunito, Bowlby_One_SC, Zilla_Slab, IBM_Plex_Mono, Black_Ops_One, Bungee, Work_Sans, Cormorant_Garamond, Lora, Alfa_Slab_One, Permanent_Marker } from "next/font/google"
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -90,6 +90,12 @@ export const alfaSlabOne = Alfa_Slab_One({
   variable: "--font-alfa-slab-one",
 })
 
+export const permanentMarker = Permanent_Marker({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-permanent-marker",
+})
+
 // Map font config keys → their next/font instance
 const fontInstanceMap: Record<string, { variable: string }> = {
   inter,
@@ -109,6 +115,7 @@ const fontInstanceMap: Record<string, { variable: string }> = {
   "cormorant-garamond": cormorantGaramond,
   "lora": lora,
   "alfa-slab-one": alfaSlabOne,
+  "permanent-marker": permanentMarker,
 }
 
 // Returns only the CSS variable classes needed for a given site's fonts
@@ -139,4 +146,5 @@ export const fontFamilyMap: Record<string, string> = {
   "cormorant-garamond": "'Cormorant Garamond', serif",
   "lora": "'Lora', serif",
   "alfa-slab-one": "'Alfa Slab One', cursive",
+  "permanent-marker": "'Permanent Marker', cursive",
 }
