@@ -38,7 +38,7 @@ export default function PressArticle({ article }: { article: PressArticleType })
               <div key={i}>
                 <p>{p}</p>
                 <MedicalCallout label="Pull Quote">
-                  <p className="text-xl font-medium italic">"{article.pullQuote}"</p>
+                  <p className="text-xl font-medium italic">&ldquo;{article.pullQuote}&rdquo;</p>
                 </MedicalCallout>
               </div>
             )
