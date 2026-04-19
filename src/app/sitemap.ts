@@ -37,6 +37,8 @@ import { treatments as sovereignwellnessTreatments } from "@/sites/sovereignwell
 import { dispatches as sovereignwellnessDispatches } from "@/sites/sovereignwellness/data/dispatches"
 import { products as privatrixProducts } from "@/sites/privatrix/data/products"
 import { products as superengineeredProducts } from "@/sites/superengineered/data/products"
+import { courses as whiskerworksCourses } from "@/sites/whiskerworks/data/courses"
+import { divisions as whiskerworksDivisions } from "@/sites/whiskerworks/data/divisions"
 import { apexLeaders } from "@/sites/apex/data/leadership"
 import { jobs as apexJobs } from "@/sites/apex/data/careers"
 import { pressReleases as apexPressReleases } from "@/sites/apex/data/press-releases"
@@ -200,6 +202,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
   for (const d of sovereignwellnessDispatches) {
     urls.push({ url: siteUrl("sovereignwellness", `dispatches/${d.slug}`) })
+  }
+
+  // Whiskerworks: course detail pages at /courses/{slug}, division detail pages at /divisions/{slug}
+  for (const course of whiskerworksCourses) {
+    urls.push({ url: siteUrl("whiskerworks", `courses/${course.slug}`) })
+  }
+  for (const division of whiskerworksDivisions) {
+    urls.push({ url: siteUrl("whiskerworks", `divisions/${division.slug}`) })
   }
 
   return urls
