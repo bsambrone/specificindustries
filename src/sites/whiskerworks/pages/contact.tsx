@@ -41,7 +41,7 @@ export default function WhiskerworksContact() {
                 <input type="text" name="name" className="mt-1 w-full border border-text/20 rounded px-3 py-2 text-sm" />
               </div>
               <div>
-                <label className="block text-xs uppercase tracking-wider text-text/60">Cat's Name</label>
+                <label className="block text-xs uppercase tracking-wider text-text/60">Cat&apos;s Name</label>
                 <input type="text" name="cat" className="mt-1 w-full border border-text/20 rounded px-3 py-2 text-sm" />
               </div>
               <div>

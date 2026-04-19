@@ -18,7 +18,7 @@ export default async function WhiskerworksLeadership() {
           <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent">Executive Team</p>
           <h1 className="mt-2 text-4xl md:text-5xl font-heading text-text">Leadership</h1>
           <p className="mt-3 text-text/60 max-w-xl mx-auto">
-            Four seasoned trade-school executives guiding the Institute's six divisions.
+            Four seasoned trade-school executives guiding the Institute&apos;s six divisions.
           </p>
         </header>
 

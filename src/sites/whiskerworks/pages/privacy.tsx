@@ -24,12 +24,12 @@ export default function WhiskerworksPrivacy() {
 
         <h2 className="mt-8 text-xl font-heading text-primary">1. Information We Collect at Enrollment</h2>
         <p className="mt-2 text-text/80">
-          At enrollment, we collect your name, billing address, payment information, cat's name, cat's approximate weight, and the human-identifying document your cat will be expected to forge as part of the Replace Your Human curriculum. This last item is optional, technically.
+          At enrollment, we collect your name, billing address, payment information, cat&apos;s name, cat&apos;s approximate weight, and the human-identifying document your cat will be expected to forge as part of the Replace Your Human curriculum. This last item is optional, technically.
         </p>
 
         <h2 className="mt-6 text-xl font-heading text-primary">2. Biometric Data</h2>
         <p className="mt-2 text-text/80">
-          We collect your cat's paw prints, whisker spacing, tail length, and, for students in the Tactical Division, gait signature. This data is retained for the duration of enrollment plus 40 years. We may share it with our accreditation partner, which is to say ourselves.
+          We collect your cat&apos;s paw prints, whisker spacing, tail length, and, for students in the Tactical Division, gait signature. This data is retained for the duration of enrollment plus 40 years. We may share it with our accreditation partner, which is to say ourselves.
         </p>
 
         <h2 className="mt-6 text-xl font-heading text-primary">3. Cookies</h2>

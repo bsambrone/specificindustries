@@ -126,7 +126,7 @@ export default async function CourseDetail({ slug }: CourseDetailProps) {
 
         {/* Learning Outcomes */}
         <div className="mt-12">
-          <h2 className="text-xs tracking-[0.2em] uppercase text-accent">What You'll Learn</h2>
+          <h2 className="text-xs tracking-[0.2em] uppercase text-accent">What You&apos;ll Learn</h2>
           <ul className="mt-4 space-y-2">
             {course.learningOutcomes.map((outcome, i) => (
               <li key={i} className="flex gap-3 text-text/80">

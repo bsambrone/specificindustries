@@ -39,7 +39,7 @@ export default function WhiskerworksTerms() {
 
         <h2 className="mt-6 text-xl font-heading text-primary">4. Graduation</h2>
         <p className="mt-2 text-text/80">
-          Graduation is contingent on completion of all weekly modules plus one capstone. Graduates receive a diploma, a lanyard, and a letter of recommendation addressed to an employer of the graduate's choosing. The letter is one sentence.
+          Graduation is contingent on completion of all weekly modules plus one capstone. Graduates receive a diploma, a lanyard, and a letter of recommendation addressed to an employer of the graduate&apos;s choosing. The letter is one sentence.
         </p>
 
         <h2 className="mt-6 text-xl font-heading text-primary">5. Code of Conduct</h2>
