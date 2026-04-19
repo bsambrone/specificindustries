@@ -45,7 +45,6 @@ export default function Shop() {
                 price={p.priceLabel}
                 tagline={p.tagline}
                 image={p.image}
-                href={`/shop/${p.slug}`}
               />
             ))}
           </div>
