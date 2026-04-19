@@ -1,6 +1,8 @@
 import Image from "next/image"
+import Link from "next/link"
 import Footnote from "@/sites/petjacks/components/footnote"
 import LegalFooter from "@/sites/petjacks/components/legal-footer"
+import { leaders } from "@/sites/petjacks/data/leadership"
 
 export const metadata = {
   title: "About — Petjacks",
@@ -48,6 +50,34 @@ export default function PetjacksAbout() {
             <p className="text-foreground/70 leading-relaxed">
               We are proud to be a wholly-owned subsidiary of Specific Industries.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-baseline justify-between mb-8">
+            <h2 className="text-2xl font-heading font-bold text-primary">The team</h2>
+            <Link href="/leadership" className="text-sm font-mono text-accent hover:underline">
+              Full bios →
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {leaders.map((l) => (
+              <Link key={l.name} href="/leadership" className="flex flex-col gap-3 group">
+                <div className="relative aspect-[4/5] rounded-lg overflow-hidden bg-secondary/30">
+                  <Image src={l.portrait} alt={l.name} fill className="object-cover" />
+                </div>
+                <div>
+                  <p className="text-[11px] font-mono uppercase tracking-widest text-accent">
+                    {l.title.endsWith("*") ? l.title.slice(0, -1) : l.title}
+                  </p>
+                  <p className="text-base font-heading font-semibold text-foreground group-hover:underline">
+                    {l.name}
+                  </p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
