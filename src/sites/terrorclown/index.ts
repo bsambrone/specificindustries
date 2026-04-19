@@ -6,6 +6,7 @@ import TerrorClownProductDetail from "./pages/product-detail"
 import TerrorClownAbout, { metadata as aboutMetadata } from "./pages/about"
 import TerrorClownLeadership, { metadata as leadershipMetadata } from "./pages/leadership"
 import TerrorClownSafety, { metadata as safetyMetadata } from "./pages/safety"
+import TerrorClownFaq, { metadata as faqMetadata } from "./pages/faq"
 import { getProductBySlug } from "./data/products"
 
 export { config }
@@ -16,6 +17,7 @@ export const pages: Record<string, PageEntry> = {
   "about": { component: TerrorClownAbout, metadata: aboutMetadata },
   "leadership": { component: TerrorClownLeadership, metadata: leadershipMetadata },
   "safety": { component: TerrorClownSafety, metadata: safetyMetadata },
+  "faq": { component: TerrorClownFaq, metadata: faqMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
