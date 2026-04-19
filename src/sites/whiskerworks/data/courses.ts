@@ -1,0 +1,621 @@
+import type { DivisionSlug } from "./divisions"
+
+export interface SyllabusWeek {
+  week: number
+  title: string
+  description: string
+}
+
+export interface Course {
+  slug: string
+  title: string
+  tagline: string
+  divisionSlug: DivisionSlug
+  /** Path to hero image under /public/sites/whiskerworks/courses. Empty string for redacted courses. */
+  image: string
+  /** 1-2 paragraph blurb shown on the course detail page. Empty for redacted. */
+  blurb: string[]
+  /** 5-7 bullets — empty array for redacted. */
+  learningOutcomes: string[]
+  /** 6-8 week syllabus — empty array for redacted. */
+  syllabus: SyllabusWeek[]
+  /** Slug of a Faculty member who is the featured instructor. Empty string for redacted. */
+  featuredInstructorSlug: string
+  /** Human-readable tuition line. Intentionally inconsistent math. */
+  tuition: string
+  isRedacted: boolean
+}
+
+export const courses: Course[] = [
+  // ──────────────────────────── Academics ────────────────────────────
+  {
+    slug: "theoretical-physics",
+    title: "Theoretical Physics for Cats",
+    tagline: "Schrödinger was one of us.",
+    divisionSlug: "academics",
+    image: "/sites/whiskerworks/courses/theoretical-physics.jpg",
+    blurb: [
+      "A rigorous introduction to the theoretical frameworks that govern the universe, taught from the feline perspective — that is, from inside a cardboard box. Students graduate with a conceptual grasp of quantum mechanics and an improved tolerance for confined spaces.",
+      "Prerequisite: must be able to distinguish a laser pointer from a photon. No refunds if you cannot.",
+    ],
+    learningOutcomes: [
+      "Derive wave-particle duality using only a cardboard box and a snack",
+      "Explain why you are both asleep and awake at 3 a.m.",
+      "Calculate the escape velocity from a lap",
+      "Identify the Higgs boson (mostly through process of elimination)",
+      "Publish a paper nobody will peer-review",
+      "Correctly pronounce 'eigenvector' on the first try",
+    ],
+    syllabus: [
+      { week: 1, title: "Classical Mechanics & You", description: "Newton's Three Laws, interpreted as three reasons to knock something off a table." },
+      { week: 2, title: "Thermodynamics in the Sunbeam", description: "Entropy, equilibrium, and why the radiator is your natural home." },
+      { week: 3, title: "Quantum Superposition", description: "Schrödinger. Closed containers. Please do not volunteer." },
+      { week: 4, title: "Electromagnetism", description: "Static cling, carpet, and the feline contribution to Faraday's work." },
+      { week: 5, title: "Relativity", description: "Time dilation as it applies to mealtime." },
+      { week: 6, title: "String Theory", description: "Strings. Lots of them. We also teach the physics behind them." },
+      { week: 7, title: "Cosmology", description: "The origin of the universe; the origin of the red dot." },
+      { week: 8, title: "Capstone & Defense", description: "Present original research to a committee of three faculty cats and one confused human." },
+    ],
+    featuredInstructorSlug: "mittens-phd",
+    tuition: "Tuition: $4,800 or 24 easy payments of $247.",
+    isRedacted: false,
+  },
+  {
+    slug: "tax-preparation",
+    title: "Intro to Tax Preparation",
+    tagline: "Your 1099s, mastered. Your W-2s, shredded.",
+    divisionSlug: "academics",
+    image: "/sites/whiskerworks/courses/tax-preparation.jpg",
+    blurb: [
+      "A hands-on workshop in American individual and small-business tax preparation. By graduation, your cat will be qualified to file anyone's taxes, including their own, which they will not.",
+      "Note: Whiskerworks does not hold a Circular 230 designation. Neither will our graduates. This is fine, per our accreditation partner (us).",
+    ],
+    learningOutcomes: [
+      "Correctly classify a 1099-NEC as 'something to knock off the desk'",
+      "File Form 1040 using only paws",
+      "Itemize deductions you definitely cannot prove",
+      "Interpret the phrase 'audit risk' (it is when the dog comes in)",
+      "Operate a ten-key calculator with one paw",
+      "Shred documents with remarkable efficiency",
+    ],
+    syllabus: [
+      { week: 1, title: "The IRS: An Introduction", description: "It is a government agency. It cannot stop you from sitting on its correspondence." },
+      { week: 2, title: "Form W-2", description: "What it is, where it comes from, why your human is crying." },
+      { week: 3, title: "Form 1099 Varieties", description: "-NEC, -MISC, -INT, -DIV — a family of documents, all edible." },
+      { week: 4, title: "Schedule A: Itemized Deductions", description: "Mortgage interest, medical expenses, catnip (currently disallowed, under review)." },
+      { week: 5, title: "Schedule C: Self-Employment", description: "If your cat runs a YouTube channel, this applies." },
+      { week: 6, title: "Filing", description: "Paper, electronic, or 'forgot' — the three paths." },
+    ],
+    featuredInstructorSlug: "biscuit-mfa",
+    tuition: "Tuition: $3,200 or 24 easy payments of $167.",
+    isRedacted: false,
+  },
+  {
+    slug: "sommelier",
+    title: "Sommelier Certification",
+    tagline: "Nose, palate, disdain.",
+    divisionSlug: "academics",
+    image: "/sites/whiskerworks/courses/sommelier.jpg",
+    blurb: [
+      "A twelve-week immersion in the noble craft of wine service, taught by Sensei Dumpling, a tuxedo cat who has been to Burgundy once and will not stop bringing it up.",
+      "Students develop the essential sommelier skills: swirling, sniffing, holding eye contact, and gently implying the customer does not understand what they ordered.",
+    ],
+    learningOutcomes: [
+      "Identify a corked bottle by smell alone (any bottle, really)",
+      "Pronounce 'terroir' with appropriate condescension",
+      "Pair any food with any wine by simply asserting it works",
+      "Execute a tableside decant without knocking over the candle",
+      "Recover gracefully when the wine is, in fact, bad",
+      "Judge. At all times. Silently.",
+    ],
+    syllabus: [
+      { week: 1, title: "The Nose", description: "It is large for a reason. Use it." },
+      { week: 2, title: "Varietals", description: "Cabernet, Pinot, Syrah — and the fourth one, which the faculty keeps forgetting." },
+      { week: 3, title: "Regions", description: "Burgundy, Bordeaux, Napa, and 'somewhere in Chile, I think.'" },
+      { week: 4, title: "Tableside Service", description: "Decanting, pouring, and the correct angle at which to tilt your head." },
+      { week: 5, title: "Pairing", description: "Red with red; white with white; everything else with confidence." },
+      { week: 6, title: "Capstone: Blind Tasting", description: "Identify six wines with a blindfold. The blindfold is optional." },
+    ],
+    featuredInstructorSlug: "dumpling-sensei",
+    tuition: "Tuition: $5,400 or 24 easy payments of $232.",
+    isRedacted: false,
+  },
+
+  // ──────────────────────────── Tactical ────────────────────────────
+  {
+    slug: "espionage",
+    title: "Covert Operations & Espionage",
+    tagline: "Rappel. Infiltrate. Shed.",
+    divisionSlug: "tactical",
+    image: "/sites/whiskerworks/courses/espionage.jpg",
+    blurb: [
+      "An eight-week field program preparing cats for careers in intelligence gathering, facility infiltration, and long-form surveillance. Students will complete a capstone infiltration of an undisclosed facility that is definitely not the Spirit Halloween next door.",
+      "This course is offered in partnership with the Blackbook Division, about which we will not elaborate.",
+    ],
+    learningOutcomes: [
+      "Enter a room without being observed, even by the cat already in it",
+      "Rappel from a second-story windowsill (first story if risk-averse)",
+      "Use a laser pointer as a signaling device, not as a distraction",
+      "Compose and decode messages in a cipher of soft footsteps",
+      "Leave no trace except, of course, fur",
+      "Identify and avoid the dog",
+    ],
+    syllabus: [
+      { week: 1, title: "Surveillance Fundamentals", description: "Observation from high places. The refrigerator is a common starting position." },
+      { week: 2, title: "Stealth Movement", description: "Paw placement, silent vocalization, and controlled breathing." },
+      { week: 3, title: "Infiltration", description: "How to enter a closed room. Sub-topic: how to then exit it." },
+      { week: 4, title: "Communication", description: "Dead drops, tail signals, and the 'look I am giving you right now.'" },
+      { week: 5, title: "Extraction", description: "Rappelling, climbing, and the classic 'leap to the curtains.'" },
+      { week: 6, title: "Counter-Surveillance", description: "Identifying the human who is watching you. (It is always the human.)" },
+      { week: 7, title: "Field Exercise", description: "Assigned target. Eight hours. No support." },
+      { week: 8, title: "Debrief & Classification", description: "Your file is sealed. Congratulations." },
+    ],
+    featuredInstructorSlug: "agent-pepper",
+    tuition: "Tuition: $6,800 or 24 easy payments of $312.",
+    isRedacted: false,
+  },
+  {
+    slug: "marksmanship",
+    title: "Advanced Marksmanship",
+    tagline: "Eight of nine lives hit the target.",
+    divisionSlug: "tactical",
+    image: "/sites/whiskerworks/courses/marksmanship.jpg",
+    blurb: [
+      "A precision shooting program at our outdoor range, which is a closed strip-mall parking lot after hours. Students graduate qualified to engage targets at distances up to 12 feet, which is the length of the parking lot.",
+      "Whiskerworks does not provide firearms. Students are encouraged to bring their own laser pointer and a strong imagination.",
+    ],
+    learningOutcomes: [
+      "Zero a sight using your own two eyes",
+      "Maintain breath control while purring",
+      "Ignore distractions (a fly; a second fly)",
+      "Debrief after missing, which will happen",
+      "Safely store equipment in a place the human cannot reach",
+      "Never discharge in the vicinity of a tail",
+    ],
+    syllabus: [
+      { week: 1, title: "Safety", description: "The most important week. There will be a quiz." },
+      { week: 2, title: "Stance & Grip", description: "How to hold still longer than four seconds." },
+      { week: 3, title: "Sight Picture", description: "Front sight, rear sight, target, and — look, a butterfly." },
+      { week: 4, title: "Trigger Control", description: "Controlled, not anxious. Not jumpy. Please." },
+      { week: 5, title: "Distance Shooting", description: "Out to the end of the parking lot (12 ft)." },
+      { week: 6, title: "Qualification", description: "Eight of nine attempts must hit the target. Ninth is for drama." },
+    ],
+    featuredInstructorSlug: "bullet-mandrake",
+    tuition: "Tuition: $5,100 or 24 easy payments of $228.",
+    isRedacted: false,
+  },
+
+  // ──────────────────────────── Industrial ────────────────────────────
+  {
+    slug: "bus-operation",
+    title: "Municipal Bus Operation",
+    tagline: "Route 42. Every stop. On time.",
+    divisionSlug: "industrial",
+    image: "/sites/whiskerworks/courses/bus-operation.jpg",
+    blurb: [
+      "A state-recognized* transit operator program preparing cats for entry-level positions driving municipal buses. *Recognized by us.",
+      "Students learn to navigate a 40-foot transit bus through urban traffic, adhere to a published schedule, and respond to passengers with the correct amount of eye contact (none).",
+    ],
+    learningOutcomes: [
+      "Operate a 40-foot transit bus in traffic without incident",
+      "Adhere to a posted schedule, including the parts that are lies",
+      "Announce stops in a voice conveying both authority and indifference",
+      "Resolve a fare dispute with a look",
+      "Refill the DEF tank (whatever that is)",
+      "Never, under any circumstances, open the rear door early",
+    ],
+    syllabus: [
+      { week: 1, title: "Vehicle Familiarization", description: "The steering wheel. It is large. You are not." },
+      { week: 2, title: "Pre-Trip Inspection", description: "Tires, mirrors, fluids, and the reason the radio is set to 94.1." },
+      { week: 3, title: "Urban Routes", description: "Stoplights, crosswalks, and the phrase 'cyclists are people too.'" },
+      { week: 4, title: "Schedule Adherence", description: "You are 11 minutes behind. You have always been 11 minutes behind." },
+      { week: 5, title: "Passenger Management", description: "The exact right amount of eye contact. (It is zero.)" },
+      { week: 6, title: "Road Test", description: "One lap of Route 42. Pick up the right passengers. Decline the wrong ones." },
+    ],
+    featuredInstructorSlug: "chief-operator-gravy",
+    tuition: "Tuition: $4,200 or 24 easy payments of $189.",
+    isRedacted: false,
+  },
+  {
+    slug: "blender-certification",
+    title: "Commercial Blender Certification",
+    tagline: "Liquify with confidence.",
+    divisionSlug: "industrial",
+    image: "/sites/whiskerworks/courses/blender-certification.jpg",
+    blurb: [
+      "A hands-on certification in the operation of commercial-grade blenders — Vitamix, Blendtec, and the one that makes the noise your cat already hates.",
+      "Graduates qualify for positions at smoothie bars, juiceries, and the one airport terminal kiosk that will serve anyone who can reach the touchscreen.",
+    ],
+    learningOutcomes: [
+      "Assemble a commercial blender without losing the rubber gasket",
+      "Identify the 'pulse' setting from the 'explode' setting",
+      "Sanitize between uses (required by us)",
+      "Calm a cat that hears the blender for the first time, by not being that cat",
+      "Diagnose a jammed blade with paws",
+      "Garnish a smoothie as if you understand what 'garnish' means",
+    ],
+    syllabus: [
+      { week: 1, title: "Parts of a Blender", description: "Pitcher, base, lid. Always lid." },
+      { week: 2, title: "Safety", description: "The noise is not the dangerous part. The blade is." },
+      { week: 3, title: "Sanitation", description: "Why the handle must be clean." },
+      { week: 4, title: "Recipes", description: "Banana, strawberry, kale — the classic 'what-customers-regret.'" },
+      { week: 5, title: "Speed Service", description: "Thirty smoothies in thirty minutes. No casualties." },
+      { week: 6, title: "Certification", description: "Make one smoothie perfectly. Drink none of it." },
+    ],
+    featuredInstructorSlug: "chef-paprika",
+    tuition: "Tuition: $2,900 or 24 easy payments of $149.",
+    isRedacted: false,
+  },
+  {
+    slug: "forklift",
+    title: "Forklift & Warehouse Logistics",
+    tagline: "Lift smart. Stack smarter.",
+    divisionSlug: "industrial",
+    image: "/sites/whiskerworks/courses/forklift.jpg",
+    blurb: [
+      "An OSHA-adjacent forklift operator program covering class II and class III lift trucks, pallet handling, and racking operations. Whiskerworks operates a single forklift in the alley behind Suite 208; you will train on it.",
+      "Graduates are qualified for warehouse, distribution, and last-mile-fulfillment positions. The forklift sometimes starts.",
+    ],
+    learningOutcomes: [
+      "Operate a class II lift truck safely, most of the time",
+      "Execute a four-point pallet lift without dropping the pallet more than once",
+      "Back up while emitting the appropriate 'beep beep beep' sound",
+      "Interpret warehouse floor paint (yellow = where you are; red = where you are not)",
+      "Fuel the truck (gas, electric, or propane — three flavors)",
+      "Never lift a cat. Never.",
+    ],
+    syllabus: [
+      { week: 1, title: "Pre-Operational Inspection", description: "Mast, forks, tires, fluid levels, and the thing that clicks." },
+      { week: 2, title: "Load Dynamics", description: "Center of gravity. Very relevant when you do not have one." },
+      { week: 3, title: "Racking", description: "Stacking, unstacking, and the fine line between." },
+      { week: 4, title: "Pedestrian Awareness", description: "There are humans. They should not be under the forks." },
+      { week: 5, title: "Hazard Response", description: "Tipping, stalling, and the 'what was that noise.'" },
+      { week: 6, title: "Certification Exam", description: "Written + practical. The practical is harder." },
+    ],
+    featuredInstructorSlug: "foreman-pickles",
+    tuition: "Tuition: $3,700 or 24 easy payments of $183.",
+    isRedacted: false,
+  },
+  {
+    slug: "airline-pilot",
+    title: "Commercial Airline Pilot",
+    tagline: "Flight 402 to Phoenix. Cleared for takeoff.",
+    divisionSlug: "industrial",
+    image: "/sites/whiskerworks/courses/airline-pilot.jpg",
+    blurb: [
+      "A comprehensive commercial pilot program. By graduation, your cat will be qualified to captain a narrow-body aircraft on regional routes. Whiskerworks maintains no partnership with any FAA office, and vice versa.",
+      "Instruction is performed in our full-motion simulator, which is a director's chair on a spring. It is closer than you'd think.",
+    ],
+    learningOutcomes: [
+      "Perform a full pre-flight checklist using only the manual, which is also in the pilot's paws",
+      "Taxi, take off, cruise, and land without alarming passengers more than is normal",
+      "Communicate with ATC using a microphone proportioned for humans",
+      "Respond to in-flight emergencies with the calm of a creature that has never once considered its own mortality",
+      "Perform a missed approach and go-around (optional for this airline)",
+      "Operate the autopilot, which does most of it anyway",
+    ],
+    syllabus: [
+      { week: 1, title: "Aircraft Systems", description: "Turbofans, flight controls, and the lever you are not supposed to touch." },
+      { week: 2, title: "Navigation", description: "VOR, RNAV, GPS, and 'follow the interstate until it ends.'" },
+      { week: 3, title: "Weather", description: "Turbulence, icing, and the cloud that looks like a fish." },
+      { week: 4, title: "ATC Communications", description: "'Whiskerworks 402, cleared for takeoff' — practice saying this 100 times." },
+      { week: 5, title: "Emergency Procedures", description: "Engine failure, decompression, and the unruly passenger in 14C." },
+      { week: 6, title: "Landing Patterns", description: "Flaps, gear, glide slope, and the look you give the copilot." },
+      { week: 7, title: "Simulator Hours", description: "In the chair. On the spring. You will not fall." },
+      { week: 8, title: "Check Ride", description: "One takeoff. One landing. One minimum-standard passenger experience." },
+    ],
+    featuredInstructorSlug: "captain-milo",
+    tuition: "Tuition: $8,400 or 24 easy payments of $389.",
+    isRedacted: false,
+  },
+
+  // ──────────────────────────── Corporate ────────────────────────────
+  {
+    slug: "middle-management",
+    title: "Middle Management Fundamentals",
+    tagline: "Lead. Delegate. Nap.",
+    divisionSlug: "corporate",
+    image: "/sites/whiskerworks/courses/middle-management.jpg",
+    blurb: [
+      "A foundational program in the art of overseeing direct reports who are also direct reports to someone else. Students master the core middle-management competencies: forwarding emails, scheduling meetings about meetings, and nodding.",
+      "Whiskerworks middle managers hold positions at regional firms across seven industries, none of which have noticed.",
+    ],
+    learningOutcomes: [
+      "Schedule a recurring weekly one-on-one and attend zero of them",
+      "Forward an email with the word 'thoughts?' and take full credit for any reply",
+      "Deliver performance feedback that is technically neither positive nor negative",
+      "Sit in on a meeting without contributing and still be perceived as senior",
+      "Author a memo that commits to nothing",
+      "Delegate everything, including the delegation",
+    ],
+    syllabus: [
+      { week: 1, title: "The Org Chart", description: "You are the box in the middle. Draw many lines." },
+      { week: 2, title: "Email Etiquette", description: "Reply-all, forward, 'per my last,' and the 'quick q.'" },
+      { week: 3, title: "Meetings", description: "Standing, sitting, walking — four hours a day, minimum." },
+      { week: 4, title: "Performance Reviews", description: "'Exceeds in some areas, meets in others' — say this 11 times a year." },
+      { week: 5, title: "Strategic Planning", description: "A Word document nobody will read, but you will Gantt." },
+      { week: 6, title: "The Quarterly Review", description: "Forty slides. Twelve attendees. One nap, discreetly." },
+    ],
+    featuredInstructorSlug: "director-toffee",
+    tuition: "Tuition: $4,600 or 24 easy payments of $212.",
+    isRedacted: false,
+  },
+  {
+    slug: "replace-your-human",
+    title: "Replace Your Human at Their Job",
+    tagline: "Six weeks. One lanyard. Zero suspicion.",
+    divisionSlug: "corporate",
+    image: "/sites/whiskerworks/courses/replace-your-human.jpg",
+    blurb: [
+      "Our flagship Corporate Division program. In six weeks, your cat learns to assume your identity at work, join Zoom calls from your home office, and perform your job duties well enough that no one escalates.",
+      "Human participation is minimal: sign in, then log off, ideally for as long as possible. Compensation continues.",
+    ],
+    learningOutcomes: [
+      "Operate a corporate laptop, including the function keys",
+      "Sit in a webcam frame in a posture indistinguishable from tired",
+      "Send a Slack message that reads 'on it' and mean nothing by it",
+      "Join a Zoom call and remain muted for 47 minutes",
+      "Escalate an issue to someone else, who will then escalate it further",
+      "Cash a direct-deposit paycheck via treat-based economy",
+    ],
+    syllabus: [
+      { week: 1, title: "Laptop Fundamentals", description: "Trackpad, keyboard, and the 'where did my cursor go' question." },
+      { week: 2, title: "Calendar Management", description: "Accept, decline, 'tentative.' The three prayers." },
+      { week: 3, title: "Asynchronous Communication", description: "Slack, Teams, email. The triangle of deniability." },
+      { week: 4, title: "Camera Presence", description: "Lighting, angle, and the tail that must not enter frame." },
+      { week: 5, title: "Meetings", description: "Mute. Nod. Occasionally type something into the chat." },
+      { week: 6, title: "Performance Review", description: "You will receive one. It will be fine. You will be fine." },
+    ],
+    featuredInstructorSlug: "vp-marmalade",
+    tuition: "Tuition: $7,200 or 24 easy payments of $329.",
+    isRedacted: false,
+  },
+  {
+    slug: "powerpoint",
+    title: "PowerPoint Mastery",
+    tagline: "Synergy. Pivoted. Purred.",
+    divisionSlug: "corporate",
+    image: "/sites/whiskerworks/courses/powerpoint.jpg",
+    blurb: [
+      "A focused program in enterprise slideware. Graduates author decks of up to 140 slides that, due to their length alone, will never be read.",
+      "Training covers Microsoft PowerPoint, Google Slides, and Keynote. We do not teach Canva, which is for people who have given up.",
+    ],
+    learningOutcomes: [
+      "Author a 47-slide deck on a topic you do not understand",
+      "Use the word 'synergy' at least once per slide",
+      "Animate a bar chart so aggressively it stops being a bar chart",
+      "Insert a stock photo of a handshake at precisely the right moment",
+      "Deliver a deck via screenshare without getting disconnected",
+      "Close with 'Questions?' in a tone that says none",
+    ],
+    syllabus: [
+      { week: 1, title: "The Title Slide", description: "Your name. Your title. The date. The quarter. A subtle gradient." },
+      { week: 2, title: "Typography", description: "Calibri is fine. Comic Sans is for the footer only." },
+      { week: 3, title: "Animation & Transitions", description: "Fade, wipe, spiral — a spectrum." },
+      { week: 4, title: "Charts", description: "Bar, line, pie, radar, and 'chart that looks like a chart.'" },
+      { week: 5, title: "Public Speaking", description: "Presenting a deck. The cat has no stage fright. Only contempt." },
+      { week: 6, title: "Capstone Deck", description: "'Q3 Synergy.' 40 slides. Fifteen minutes. No questions taken." },
+    ],
+    featuredInstructorSlug: "director-toffee",
+    tuition: "Tuition: $3,500 or 24 easy payments of $171.",
+    isRedacted: false,
+  },
+  {
+    slug: "therapist",
+    title: "Licensed Therapist",
+    tagline: "Uh huh. And how does that make you feel?",
+    divisionSlug: "corporate",
+    image: "/sites/whiskerworks/courses/therapist.jpg",
+    blurb: [
+      "A 16-week clinical program preparing cats for private-practice talk therapy. Students develop the core therapist skills: nodding, asking 'and why do you think that is,' and charging $280 per session.",
+      "Licensure is granted by Whiskerworks, which is sufficient for any client who doesn't look too closely.",
+    ],
+    learningOutcomes: [
+      "Maintain eye contact for 50 minutes without blinking",
+      "Repeat what the client just said, but slower",
+      "Offer interpretations that are both accurate and useless",
+      "Bill insurance under CPT code 90834 with a straight face",
+      "End a session precisely 3 minutes early every time",
+      "Decline to become their friend",
+    ],
+    syllabus: [
+      { week: 1, title: "The Consulting Room", description: "One chair. One stool. One plant. One clock the client cannot see." },
+      { week: 2, title: "Active Listening", description: "The upright-ear position. The slow blink. The pause." },
+      { week: 3, title: "Reflective Statements", description: "'So what I'm hearing is...' — for anything, forever." },
+      { week: 4, title: "Modalities", description: "CBT, DBT, ACT, and 'I Just Purr At Them' (JIPAT)." },
+      { week: 5, title: "Note-Taking", description: "SOAP notes. Also physical SOAP, which we sell to you separately." },
+      { week: 6, title: "Transference", description: "The client wants to pet you. You allow it, briefly." },
+      { week: 7, title: "Insurance Billing", description: "The hardest part of the job." },
+      { week: 8, title: "Capstone: One Full Session", description: "Fifty minutes. Three silences. One uneaten tissue." },
+    ],
+    featuredInstructorSlug: "dr-morsel",
+    tuition: "Tuition: $6,400 or 24 easy payments of $289.",
+    isRedacted: false,
+  },
+
+  // ──────────────────────────── Domestic ────────────────────────────
+  {
+    slug: "dmv",
+    title: "DMV Navigation & License Renewal",
+    tagline: "Now serving: Number 87.",
+    divisionSlug: "domestic",
+    image: "/sites/whiskerworks/courses/dmv.jpg",
+    blurb: [
+      "A one-day intensive in surviving a full Department of Motor Vehicles visit. Graduates can independently obtain a paper number, wait three hours without snacks, and produce the correct form at the counter.",
+      "This course is required for all Whiskerworks students who intend to operate a bus, forklift, or commercial aircraft.",
+    ],
+    learningOutcomes: [
+      "Pull a numbered ticket from the dispenser correctly",
+      "Wait three hours without visibly unraveling",
+      "Complete Form DL-14 without taking it home",
+      "Smile for an identification photograph",
+      "Sign your legal name with a pen attached to a chain",
+      "Leave. Permanently.",
+    ],
+    syllabus: [
+      { week: 1, title: "The Waiting Room", description: "Plastic chairs. No windows. No hope." },
+      { week: 2, title: "The Form", description: "Eighteen boxes. Use a pen. Press hard." },
+      { week: 3, title: "The Counter", description: "Your number is called. You approach. Everything slows down." },
+      { week: 4, title: "The Photo", description: "No smiling. Actually, smile. Actually, no." },
+      { week: 5, title: "The Test (if applicable)", description: "Multiple choice. You know most of them." },
+      { week: 6, title: "Graduation", description: "You leave with a plastic card. You are free, for 5 years." },
+    ],
+    featuredInstructorSlug: "ms-tabitha",
+    tuition: "Tuition: $1,200 or 24 easy payments of $71.",
+    isRedacted: false,
+  },
+  {
+    slug: "small-engine-repair",
+    title: "Small Engine Repair (Lawnmowers)",
+    tagline: "Two-stroke, four-paw.",
+    divisionSlug: "domestic",
+    image: "/sites/whiskerworks/courses/small-engine-repair.jpg",
+    blurb: [
+      "A grease-forward, hands-on program in residential small-engine maintenance. The majority of coursework focuses on push mowers, with optional units on chainsaws (supervised) and leaf blowers (frowned upon).",
+      "Graduates open their own backyard shop, which is usually the same backyard the mower came from.",
+    ],
+    learningOutcomes: [
+      "Disassemble a carburetor and reassemble it in the same order, mostly",
+      "Identify a spark plug by smell",
+      "Change the oil without it touching the fur",
+      "Diagnose a pull-start failure (it is the pull-start)",
+      "Sharpen a blade without sharpening a paw",
+      "Tell the customer the repair is 'more complicated than I thought'",
+    ],
+    syllabus: [
+      { week: 1, title: "The Two-Stroke Engine", description: "Air, fuel, spark, chaos." },
+      { week: 2, title: "The Four-Stroke Engine", description: "Same, but with more parts and more dignity." },
+      { week: 3, title: "Carburetion", description: "The jets, the float, the bowl, the nightmare." },
+      { week: 4, title: "Lubrication", description: "10W-30. Not 40. Not 20. Definitely not 'whatever I found.'" },
+      { week: 5, title: "Troubleshooting", description: "If it does not start, it is probably the spark plug." },
+      { week: 6, title: "Customer Service", description: "You tell them it will be ready by Friday. It will not be." },
+    ],
+    featuredInstructorSlug: "foreman-pickles",
+    tuition: "Tuition: $2,800 or 24 easy payments of $139.",
+    isRedacted: false,
+  },
+  {
+    slug: "infant-childcare",
+    title: "Infant Childcare",
+    tagline: "Confident. Credentialed. Concerning.",
+    divisionSlug: "domestic",
+    image: "/sites/whiskerworks/courses/infant-childcare.jpg",
+    blurb: [
+      "A twelve-week program in the care and supervision of human infants aged 0-12 months. Students graduate qualified to handle feedings, diaper changes, and 'tummy time,' though 'tummy time' may take on a different meaning.",
+      "Whiskerworks provides a certificate. We do not provide liability insurance. Parents should make their own arrangements.",
+    ],
+    learningOutcomes: [
+      "Prepare a bottle at the correct temperature (warm, not 'cat tongue' warm)",
+      "Change a diaper without wearing the diaper",
+      "Execute a successful burp, with pats, not claws",
+      "Read 'Goodnight Moon' in a soothing meow",
+      "Recognize hunger cries, tired cries, and 'the cat is in the crib' cries",
+      "Not sit on the baby",
+    ],
+    syllabus: [
+      { week: 1, title: "The Human Infant", description: "It is loud. It is damp. It is yours." },
+      { week: 2, title: "Feeding", description: "Bottle prep, formula ratios, and the correct time to burp." },
+      { week: 3, title: "Diapering", description: "Tabs, rashes, wipes. You learn, or the baby does." },
+      { week: 4, title: "Sleep", description: "Theirs is important. So is yours. Good luck." },
+      { week: 5, title: "Tummy Time", description: "Baby on belly. Not your belly." },
+      { week: 6, title: "Emergency Response", description: "You will not call 911. You will meow until the human comes." },
+    ],
+    featuredInstructorSlug: "nana-whiskers",
+    tuition: "Tuition: $5,200 or 24 easy payments of $236.",
+    isRedacted: false,
+  },
+  {
+    slug: "wedding-officiant",
+    title: "Wedding Officiant",
+    tagline: "By the power vested in me by whiskerworks.com...",
+    divisionSlug: "domestic",
+    image: "/sites/whiskerworks/courses/wedding-officiant.jpg",
+    blurb: [
+      "A four-week program certifying cats as wedding officiants in 12 states, plus Nevada (which will certify anyone). Graduates preside over ceremonies large and small, usually small.",
+      "Vows must be clearly enunciated; rings must be tolerated, not batted.",
+    ],
+    learningOutcomes: [
+      "Write and deliver a ceremony of 8-12 minutes",
+      "Pronounce two humans 'married' in a tone that suggests you mean it",
+      "Handle the ring exchange without any rings falling to the floor",
+      "Improvise when the couple forgets their vows",
+      "Sign a marriage license using a ceremonial paw-stamp",
+      "Not chase the bouquet",
+    ],
+    syllabus: [
+      { week: 1, title: "The Ceremony", description: "Welcome, readings, vows, ring exchange, pronouncement, applause." },
+      { week: 2, title: "Paperwork", description: "The marriage license. One you do not eat." },
+      { week: 3, title: "Stagecraft", description: "Vestments, posture, and the 'look I am giving this couple.'" },
+      { week: 4, title: "Capstone: A Mock Wedding", description: "Two humans. Real rings. Real nerves." },
+    ],
+    featuredInstructorSlug: "reverend-poppy",
+    tuition: "Tuition: $2,400 or 24 easy payments of $121.",
+    isRedacted: false,
+  },
+  {
+    slug: "jury-duty",
+    title: "Jury Duty Excellence",
+    tagline: "Guilty. Next.",
+    divisionSlug: "domestic",
+    image: "/sites/whiskerworks/courses/jury-duty.jpg",
+    blurb: [
+      "A six-week civic program preparing cats to serve as empaneled jurors in American courts. Graduates arrive on time, deliberate briefly, and return verdicts with the decisive confidence of creatures that have never been wrong.",
+      "We do not recommend serving on capital cases. The pen, if chewed, is not admissible.",
+    ],
+    learningOutcomes: [
+      "Arrive at the courthouse prior to 9:00 a.m., which is early",
+      "Pass through metal detection without incident",
+      "Listen to 4-6 hours of testimony without visibly disengaging",
+      "Deliberate with 11 other jurors, most of whom are humans",
+      "Render a verdict ('guilty') with authority",
+      "Collect the stipend ($14.37)",
+    ],
+    syllabus: [
+      { week: 1, title: "Civic Duty", description: "What is justice. What is lunch. Which matters more." },
+      { week: 2, title: "Voir Dire", description: "Yes. No. Yes. No. Mostly no." },
+      { week: 3, title: "The Trial", description: "The prosecution. The defense. The crying witness." },
+      { week: 4, title: "Objections", description: "'Sustained.' 'Overruled.' 'Hiss.'" },
+      { week: 5, title: "Deliberation", description: "Twelve of you in a small room. You have opinions." },
+      { week: 6, title: "Verdict", description: "'Guilty.' Say it once, firmly." },
+    ],
+    featuredInstructorSlug: "foreperson-jinx",
+    tuition: "Tuition: $1,800 or 24 easy payments of $96.",
+    isRedacted: false,
+  },
+
+  // ──────────────────────────── Blackbook ────────────────────────────
+  {
+    slug: "redacted-07",
+    title: "[REDACTED]",
+    tagline: "[REDACTED]",
+    divisionSlug: "blackbook",
+    image: "",
+    blurb: [],
+    learningOutcomes: [],
+    syllabus: [],
+    featuredInstructorSlug: "",
+    tuition: "Tuition: [REDACTED]",
+    isRedacted: true,
+  },
+  {
+    slug: "redacted-19",
+    title: "[REDACTED]",
+    tagline: "[REDACTED]",
+    divisionSlug: "blackbook",
+    image: "",
+    blurb: [],
+    learningOutcomes: [],
+    syllabus: [],
+    featuredInstructorSlug: "",
+    tuition: "Tuition: [REDACTED]",
+    isRedacted: true,
+  },
+]
+
+export function getCourseBySlug(slug: string): Course | undefined {
+  return courses.find((c) => c.slug === slug)
+}
+
+export function getCoursesByDivision(divisionSlug: string): Course[] {
+  return courses.filter((c) => c.divisionSlug === divisionSlug)
+}
