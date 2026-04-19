@@ -32,6 +32,7 @@ import { products as carterandfilsProducts } from "@/sites/carterandfils/data/pr
 import { journalEntries as carterandfilsJournal } from "@/sites/carterandfils/data/journal"
 import { products as mehProducts } from "@/sites/meh/data/products"
 import { products as seeltiteProducts } from "@/sites/seeltite/data/products"
+import { products as chunkymilkProducts } from "@/sites/chunkymilk/data/products"
 import { journalEntries as mehJournal } from "@/sites/meh/data/journal"
 import { treatments as sovereignwellnessTreatments } from "@/sites/sovereignwellness/data/treatments"
 import { dispatches as sovereignwellnessDispatches } from "@/sites/sovereignwellness/data/dispatches"
@@ -81,6 +82,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     meh: mehProducts,
     privatrix: privatrixProducts,
     seeltite: seeltiteProducts,
+    chunkymilk: chunkymilkProducts,
     superengineered: superengineeredProducts,
   }
 
