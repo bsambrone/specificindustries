@@ -20,7 +20,7 @@ interface CartContextType {
   clearCart: () => void
   cartCount: number
   toasts: ToastMessage[]
-  showToast: (message: string) => void
+  showToast: (message: string, durationMs?: number) => void
 }
 
 const CartContext = createContext<CartContextType | null>(null)
@@ -49,12 +49,12 @@ export function CartProvider({ children, storageKey = "cart" }: { children: Reac
     }
   }, [cart, storageKey])
 
-  const showToast = useCallback((message: string) => {
+  const showToast = useCallback((message: string, durationMs = 3000) => {
     const id = nextToastIdRef.current++
     setToasts((prev) => [...prev.slice(-2), { id, message }])
     setTimeout(() => {
       setToasts((prev) => prev.filter((t) => t.id !== id))
-    }, 3000)
+    }, durationMs)
   }, [])
 
   const addToCart = useCallback((slug: string, quantity = 1) => {

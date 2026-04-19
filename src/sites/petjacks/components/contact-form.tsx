@@ -13,7 +13,7 @@ export default function ContactForm() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setSending(true)
-    showToast(TOAST_MESSAGE)
+    showToast(TOAST_MESSAGE, 6000)
     const form = e.currentTarget
     setTimeout(() => {
       form.reset()

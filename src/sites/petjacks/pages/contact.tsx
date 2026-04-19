@@ -30,6 +30,14 @@ export default function PetjacksContact() {
           </div>
 
           <ContactForm />
+
+          <p className="mt-16 pt-6 border-t border-foreground/10 text-xs text-foreground/40">
+            Behind the curtain: Petjacks is a satire site. To reach an actual human, write{" "}
+            <a href="mailto:bsambrone@gmail.com" className="underline hover:text-foreground/70 transition-colors">
+              bsambrone@gmail.com
+            </a>
+            .
+          </p>
         </div>
       </section>
 
