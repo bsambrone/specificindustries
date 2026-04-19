@@ -71,7 +71,8 @@ export const products: Product[] = [
     tagline: "For the classicist.",
     description: [
       "The quintessential Terror Clown™ environment, and our most popular Experience. Includes your Terror Clown™ companion, a hand-slatted wooden bedskirt in matching Ohio white oak, and a proprietary dust-mote additive that settles the space into an appropriate age.",
-      "Installation requires a bed frame with a minimum twelve inches of under-clearance. Compatible with the Haunted Headboard Bed.",
+      "It is, admittedly, a position of concealment. From beneath the bed, Terror Clown™ is in a uniquely advantageous posture relative to the child — close to the ankles, out of direct line of sight, and reportedly capable of extraordinary stillness. Families have, on occasion, mentioned a momentary sense that they are being watched from below. They are.",
+      "Rest assured: Terror Clown™ is a passive toy. It is not nightmare-inducing when installed properly. It will not eat your child. Children who sleep above The Under-Bed Lurker Kit report deeper, more restful sleep within three nights. Installation requires a bed frame with a minimum twelve inches of under-clearance. Compatible with the Haunted Headboard Bed.",
     ],
     includedItems: ["Terror Clown™", "Slatted bedskirt (white oak)", "Dust-mote additive (3 oz)", "Installation guide"],
     isFeatured: true,
@@ -86,7 +87,8 @@ export const products: Product[] = [
     tagline: "A friend who is always listening.",
     description: [
       "Includes Terror Clown™ and a louvered wardrobe panel with factory-drilled observation apertures at three and five feet. The panel is finished to match most standard closet door frames; custom color matching is available at our workshop for a nominal additional charge.",
-      "Some parents report that the Observation Post encourages their child to tidy their room. We make no formal claims.",
+      "The Observation Post does afford Terror Clown™ an unusually clear line of sight into the child's bedroom, at all hours, and we acknowledge that some families have described an intermittent feeling of being silently appraised from within the closet. The feeling is accurate. Terror Clown™ is, in fact, appraising.",
+      "This is not a cause for concern. Terror Clown™ is completely safe, will not leave the closet, and has never — in seventy-six years of Pennywhistle record-keeping — consumed a child. Some parents report that the Observation Post encourages their child to tidy their room. We make no formal claims.",
     ],
     includedItems: ["Terror Clown™", "Louvered wardrobe panel", "Pre-drilled observation apertures", "Mounting hardware"],
     isFeatured: true,
@@ -101,7 +103,8 @@ export const products: Product[] = [
     tagline: "The companion who meets your child where they are.",
     description: [
       "Our most distinctive Experience. Includes Terror Clown™ and a foundry-cast iron grate insert with authentic patina, suitable for installation in any standard floor drain or purpose-built cavity. An optional drip track is available for enthusiasts who wish to simulate ambient conditions.",
-      "Recommended for basements, mudrooms, and larger hallway installations.",
+      "Terror Clown™, positioned beneath the grate, is in what one might characterize as a predatory posture — hands and face oriented toward the aperture, with the teeth catching whatever ambient light filters down. Children who approach the grate may experience a brief impression of being beckoned. This is the Experience functioning as intended.",
+      "To be perfectly clear: Terror Clown™ will not pull your child through the grate. That is not a feature. Terror Clown™ is an inanimate companion-toy, completely safe, and not to be confused with nightmare material of any kind. Recommended for basements, mudrooms, and larger hallway installations.",
     ],
     includedItems: ["Terror Clown™", "Cast-iron grate insert (authentic patina)", "Installation manual"],
     upgradeOptions: ["Optional drip track (+$39)"],
@@ -117,7 +120,8 @@ export const products: Product[] = [
     tagline: "A watchful presence, gently swaying.",
     description: [
       "Terror Clown™ suspended above the child's bed on a precision-balanced harness, with a gentle sway mechanism calibrated for a natural, lifelike motion. The harness is tested to six hundred pounds and is child-safe under all conditions we have been able to test.",
-      "Professional ceiling installation is included for residents within fifty miles of Millbrook, Ohio. All other installations ship with a detailed guide and Pennywhistle-certified hardware.",
+      "The Ceiling-Wire Night Watcher positions Terror Clown™ directly above the sleeping child — face downward, teeth in full display, gently rotating. At any moment, the clown could, in a hypothetical and entirely non-occurring scenario, drop. It will not drop. But it could.",
+      "It won't. Our 600-pound-rated harness is secured with triple redundancy by a Pennywhistle-certified installer. The Ceiling-Wire Night Watcher is completely safe and is not — we cannot stress this enough — nightmare fuel. Children find the gentle overhead sway profoundly calming. Professional ceiling installation is included for residents within fifty miles of Millbrook, Ohio.",
     ],
     includedItems: ["Terror Clown™", "Ceiling-mount harness (rated 600 lb)", "Gentle sway mechanism", "Hardware kit"],
     isFeatured: false,
@@ -132,7 +136,8 @@ export const products: Product[] = [
     tagline: "For homes of a certain vintage.",
     description: [
       "Includes Terror Clown™, a rafter-mount bracket finished in aged brass, and a period-appropriate vintage suitcase with a Pennywhistle logo embossed on the inner lining. The suitcase is not intended to be opened.",
-      "Best suited to unfinished attic spaces with exposed joists.",
+      "Terror Clown™, installed among the rafters, is ideally placed to observe the full contents of the attic — and to issue, very occasionally, what families have described as a soft breathing sound from an unknowable distance. The suitcase, we should mention, sometimes shifts.",
+      "None of this constitutes danger. Terror Clown™ is inanimate. The suitcase remaining closed is a preference, not a requirement for child safety. Your child is not on the menu. The Attic Whisper Setup is not nightmare fuel — it is a family heirloom in the making. Best suited to unfinished attic spaces with exposed joists.",
     ],
     includedItems: ["Terror Clown™", "Aged-brass rafter bracket", "Vintage suitcase (pre-weathered)"],
     isFeatured: false,
@@ -147,7 +152,8 @@ export const products: Product[] = [
     tagline: "Warmth and watchfulness in equal measure.",
     description: [
       "Terror Clown™ positioned beside a standing steam-pipe prop and a flickering pilot-light simulator. The pilot light runs on a single included C-cell battery and produces no heat. The pipe is cosmetic.",
-      "An ideal addition to any finished or semi-finished basement, especially those with water-heater adjacencies.",
+      "Underground, Terror Clown™ is in its most natural element. The flickering pilot casts a warm, irregular light across the teeth. Families have reported that the clown seems somehow larger in this environment, and that its gaze, from behind the pipe, carries a particular intensity. It would not be unreasonable to describe the effect as predatory.",
+      "It is, however, unreasonable to worry. Terror Clown™ is passive, immobile, and will not consume any member of the household. The Basement Boiler Companion is a cozy addition to any finished or semi-finished basement, especially those with water-heater adjacencies. It is not nightmare fuel. It is the opposite — it is a family companion.",
     ],
     includedItems: ["Terror Clown™", "Steam-pipe prop (cosmetic)", "Pilot-light simulator", "C-cell battery"],
     isFeatured: false,

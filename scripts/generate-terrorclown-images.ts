@@ -125,12 +125,12 @@ const CATALOG_STYLE =
   "Vintage 1950s American toy catalog photography: warm sepia-tinted studio shot on a cream paper backdrop (#F5EDE0), soft diffuse lighting from upper-left, subtle halftone paper grain texture, slightly faded print quality. Centered composition. No text in image. Faint warm vignette."
 
 const CLOWN_DESCRIPTION =
-  "A three-foot-tall vintage porcelain clown doll in an old-fashioned white ruffled collar and a muted deep-red and teal harlequin suit. Impossibly wide smile revealing FOUR ROWS of polished bone-white sharp teeth, each filed to a point. Large uncanny glass eyes catching the light. Stitched lips at the edges of the mouth. Soft weighted cloth body. Sits or stands passively. Sinister but restrained — not bloody, not cartoonish. Antique craftsmanship feel."
+  "A three-foot-tall vintage porcelain clown doll in an old-fashioned white ruffled collar and a muted deep-red and teal harlequin suit. Unnaturally wide, deeply cracked porcelain smile stretching beyond the natural jawline, revealing FOUR ROWS of needle-sharp, pointed, elongated bone-white teeth — each tooth long, narrow, and filed to a hair-thin point like a fish hook. The teeth dominate the face. Large unblinking glass eyes that appear to track the viewer, sunken under slightly shadowed brow ridges. Stitched lips pulled taut at the corners of the mouth as if forcing the smile wider. A fine hairline crack runs down one cheek. Soft weighted cloth body, antique craftsmanship, slightly yellowed with age. Sits or stands passively but watches intently. Menacing and uncanny — dread-inducing, not bloody, not cartoonish. The kind of doll a museum would display behind glass."
 
 // ─── Hero + favicon ───────────────────────────────────
 const TOP_LEVEL_PROMPTS: Array<[string, string, ("1024x1024" | "1536x1024" | "1024x1536")?]> = [
   [
-    `${CATALOG_STYLE} ${CLOWN_DESCRIPTION} The clown sits upright on a vintage child's wooden rocking chair, holding a single bright red helium balloon by a cotton string. Landscape composition, clown slightly left of center. Warm cream backdrop with subtle paper texture. The scene reads as "heirloom toy catalog front cover, circa 1955."`,
+    `${CATALOG_STYLE} ${CLOWN_DESCRIPTION} The clown sits upright on a vintage child's wooden rocking chair, holding a single bright red helium balloon by a cotton string. The impossibly wide fang-filled smile is the focal point of the composition — teeth clearly visible and gleaming. Landscape composition, clown slightly left of center, looking directly at the viewer. Warm cream backdrop with subtle paper texture. The scene reads as "heirloom toy catalog front cover, circa 1955" — if that catalog were forty years later revealed to have been haunted.`,
     "hero.png",
     "1536x1024",
   ],
