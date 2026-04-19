@@ -5,6 +5,7 @@ import { productSchema } from "@/lib/seo/schemas"
 
 import PetjacksHome from "./pages/home"
 import PetjacksProducts, { metadata as productsMetadata } from "./pages/products"
+import PetjacksFlightAcademy, { metadata as flightAcademyMetadata } from "./pages/flight-academy"
 import ProductDetail from "./pages/product-detail"
 
 export { config }
@@ -12,6 +13,7 @@ export { config }
 export const pages: Record<string, PageEntry> = {
   "": PetjacksHome,
   "products": { component: PetjacksProducts, metadata: productsMetadata },
+  "flight-academy": { component: PetjacksFlightAcademy, metadata: flightAcademyMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
