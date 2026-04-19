@@ -37,6 +37,8 @@ import { journalEntries as mehJournal } from "@/sites/meh/data/journal"
 import { treatments as sovereignwellnessTreatments } from "@/sites/sovereignwellness/data/treatments"
 import { dispatches as sovereignwellnessDispatches } from "@/sites/sovereignwellness/data/dispatches"
 import { products as privatrixProducts } from "@/sites/privatrix/data/products"
+import { products as prechewedProducts } from "@/sites/prechewed/data/products"
+import { articles as prechewedArticles } from "@/sites/prechewed/data/press"
 import { products as superengineeredProducts } from "@/sites/superengineered/data/products"
 import { courses as whiskerworksCourses } from "@/sites/whiskerworks/data/courses"
 import { divisions as whiskerworksDivisions } from "@/sites/whiskerworks/data/divisions"
@@ -81,6 +83,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     mostlysterile: mostlysterileProducts,
     meh: mehProducts,
     privatrix: privatrixProducts,
+    prechewed: prechewedProducts,
     seeltite: seeltiteProducts,
     chunkymilk: chunkymilkProducts,
     superengineered: superengineeredProducts,
@@ -212,6 +215,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
   for (const division of whiskerworksDivisions) {
     urls.push({ url: siteUrl("whiskerworks", `divisions/${division.slug}`) })
+  }
+
+  // Prechewed: press article pages at /press/{slug}
+  for (const article of prechewedArticles) {
+    urls.push({ url: siteUrl("prechewed", `press/${article.slug}`) })
   }
 
   return urls
