@@ -193,9 +193,9 @@ Amber accent restricted to dark pills/badges only — **never** on light surface
 **Fonts** (declared in `src/themes/fonts.ts` — add any missing):
 - Headings: **Space Grotesk** (tight tracking, startup register)
 - Body: **Inter**
-- Mono accent: **JetBrains Mono** — for nutrition panels, chart labels, fake citations, ingredient code chips
+- Mono accent: **IBM Plex Mono** — for nutrition panels, chart labels, fake citations, ingredient code chips
 
-If any of these fonts are not already in `src/themes/fonts.ts`, follow the four-step font-add process (import via `next/font/google`, add `.variable` to `fontVariables`, add family string to `fontFamilyMap`, reference key in site config).
+All three fonts are already registered in `src/themes/fonts.ts` (verified), so no font-registry changes needed.
 
 **Pattern language:**
 - **Stat cards:** large numeric display ("8.3×") with thin mono caption
