@@ -45,6 +45,10 @@ import { divisions as whiskerworksDivisions } from "@/sites/whiskerworks/data/di
 import { apexLeaders } from "@/sites/apex/data/leadership"
 import { jobs as apexJobs } from "@/sites/apex/data/careers"
 import { pressReleases as apexPressReleases } from "@/sites/apex/data/press-releases"
+import { theories, categories } from "@/sites/thetheoryisreal/data/theories"
+import { products as thetheoryisrealProducts } from "@/sites/thetheoryisreal/data/products"
+import { boards } from "@/sites/thetheoryisreal/data/forum-users"
+import { threads } from "@/sites/thetheoryisreal/data/forum"
 
 const BASE_DOMAIN = "specificindustries.com"
 const EXCLUDED_PAGES = new Set(["cart", "checkout"])
@@ -220,6 +224,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Prechewed: press article pages at /press/{slug}
   for (const article of prechewedArticles) {
     urls.push({ url: siteUrl("prechewed", `press/${article.slug}`) })
+  }
+
+  // The Theory Is Real: theory articles, categories, products, forum boards, forum threads
+  for (const theory of theories) {
+    urls.push({ url: siteUrl("thetheoryisreal", `theories/${theory.slug}`) })
+  }
+  for (const category of categories) {
+    urls.push({ url: siteUrl("thetheoryisreal", `category/${category.key}`) })
+  }
+  for (const product of thetheoryisrealProducts) {
+    urls.push({ url: siteUrl("thetheoryisreal", `products/${product.slug}`) })
+  }
+  for (const board of boards) {
+    urls.push({ url: siteUrl("thetheoryisreal", `forum/${board.key}`) })
+  }
+  for (const thread of threads) {
+    urls.push({ url: siteUrl("thetheoryisreal", `forum/${thread.board}/${thread.slug}`) })
   }
 
   return urls
