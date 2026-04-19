@@ -196,24 +196,113 @@ const FACILITY: Array<[string, string]> = [
   ],
 ]
 
+async function generateWithBaseImage(
+  prompt: string,
+  filename: string,
+  baseImagePath: string,
+  size: "1024x1024" | "1536x1024" | "1024x1536" = "1024x1024"
+) {
+  const filepath = path.join(OUTPUT_DIR, filename)
+  if (fs.existsSync(filepath)) {
+    console.log(`  ⏭ ${filename} (already exists)`)
+    return
+  }
+  if (!fs.existsSync(baseImagePath)) {
+    console.error(`  ✗ ${filename}: base image not found at ${baseImagePath}`)
+    return
+  }
+  console.log(`  🎨 Generating ${filename} (base: ${path.basename(baseImagePath)})...`)
+  try {
+    const buffer = fs.readFileSync(baseImagePath)
+    const ext = path.extname(baseImagePath).toLowerCase()
+    const mime = ext === ".png" ? "image/png" : ext === ".webp" ? "image/webp" : "image/jpeg"
+    const baseImage = await toFile(buffer, path.basename(baseImagePath), { type: mime })
+    const response = await openai.images.edit({
+      model: "gpt-image-1",
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      image: baseImage as any,
+      prompt,
+      size,
+      quality: "medium",
+    })
+    const imageData = response.data?.[0]
+    if (!imageData) throw new Error("No image data returned")
+    if (imageData.b64_json) {
+      fs.mkdirSync(path.dirname(filepath), { recursive: true })
+      fs.writeFileSync(filepath, Buffer.from(imageData.b64_json, "base64"))
+    } else if (imageData.url) {
+      const res = await fetch(imageData.url)
+      const buffer = Buffer.from(await res.arrayBuffer())
+      fs.mkdirSync(path.dirname(filepath), { recursive: true })
+      fs.writeFileSync(filepath, buffer)
+    }
+    console.log(`  ✓ ${filename}`)
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : String(err)
+    console.error(`  ✗ ${filename}: ${msg}`)
+  }
+}
+
 function delay(ms: number) {
   return new Promise((r) => setTimeout(r, ms))
 }
 
+const CLOWN_DEPICTING_SLUGS = new Set([
+  "under-bed-lurker-kit",
+  "closet-observation-post",
+  "sewer-grate-portal",
+  "ceiling-wire-night-watcher",
+  "attic-whisper-setup",
+  "basement-boiler-companion",
+  "pocket-terror-clown",
+  "family-pack",
+  "starter-kit",
+])
+
 async function main() {
   console.log("🎪 Generating Terrorclown imagery...\n")
 
-  console.log("─── Hero + favicon ─────────────────────")
+  const terrorClownPath = path.join(OUTPUT_DIR, "products/terror-clown.png")
+
+  console.log("─── Favicon ────────────────────────────")
+  // Favicon is independent — text-only
   for (const [prompt, filename, size] of TOP_LEVEL_PROMPTS) {
-    await generateImage(prompt, filename, size)
-    await delay(500)
+    if (filename === "favicon.png") {
+      await generateImage(prompt, filename, size)
+      await delay(500)
+    }
   }
 
-  console.log("\n─── Products ───────────────────────────")
+  console.log("\n─── Canonical Terror Clown (base for all scenes) ─")
+  // Terror Clown™ flagship is the canonical reference. Generate text-only first.
+  const flagshipProduct = products.find((p) => p.slug === "terror-clown")!
+  const flagshipFilename = flagshipProduct.image.replace("/sites/terrorclown/", "")
+  await generateImage(
+    getProductPrompt(flagshipProduct.slug, flagshipProduct.name, flagshipProduct.tagline),
+    flagshipFilename,
+    "1024x1024",
+  )
+  await delay(500)
+
+  console.log("\n─── Hero (uses terror-clown as base) ────")
+  // Hero reuses the canonical clown reference for consistency.
+  for (const [prompt, filename, size] of TOP_LEVEL_PROMPTS) {
+    if (filename === "hero.png") {
+      await generateWithBaseImage(prompt, filename, terrorClownPath, size)
+      await delay(500)
+    }
+  }
+
+  console.log("\n─── Other products ─────────────────────")
   for (const p of products) {
-    // Extract just the filename portion from image path (strip /sites/terrorclown/)
+    if (p.slug === "terror-clown") continue // already generated above
     const filename = p.image.replace("/sites/terrorclown/", "")
-    await generateImage(getProductPrompt(p.slug, p.name, p.tagline), filename, "1024x1024")
+    const prompt = getProductPrompt(p.slug, p.name, p.tagline)
+    if (CLOWN_DEPICTING_SLUGS.has(p.slug)) {
+      await generateWithBaseImage(prompt, filename, terrorClownPath, "1024x1024")
+    } else {
+      await generateImage(prompt, filename, "1024x1024")
+    }
     await delay(500)
   }
 
