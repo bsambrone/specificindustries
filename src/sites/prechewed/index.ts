@@ -11,6 +11,8 @@ import { getProductBySlug } from "./data/products"
 import { getArticleBySlug } from "./data/press"
 import PrechewedPress, { metadata as pressMetadata } from "./pages/press"
 import PrechewedPressDetail from "./pages/press-detail"
+import PrechewedAbout, { metadata as aboutMetadata } from "./pages/about"
+import PrechewedLeadership, { metadata as leadershipMetadata } from "./pages/leadership"
 
 export { config }
 
@@ -22,6 +24,8 @@ export const pages: Record<string, PageEntry> = {
   "process": { component: PrechewedProcess, metadata: processMetadata },
   "faq": { component: PrechewedFaq, metadata: faqMetadata },
   "press": { component: PrechewedPress, metadata: pressMetadata },
+  "about": { component: PrechewedAbout, metadata: aboutMetadata },
+  "leadership": { component: PrechewedLeadership, metadata: leadershipMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
