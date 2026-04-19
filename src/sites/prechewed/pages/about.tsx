@@ -1,3 +1,6 @@
+import Link from "next/link"
+import { leaders } from "../data/leadership"
+
 export const metadata = {
   title: "About — Prechewed™",
   description: "Prechewed Labs was founded in 2022 after its founder reclaimed 47 days in a Kyoto laboratory.",
@@ -56,6 +59,41 @@ export default function PrechewedAbout() {
               <div className="text-xs font-mono uppercase tracking-[0.2em] mb-2" style={{ color: "var(--color-primary, #5B3FD9)" }}>{v.v}</div>
               <p className="text-sm" style={{ color: "var(--color-muted, #6C6A7D)" }}>{v.copy}</p>
             </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="my-16">
+        <div className="flex items-baseline justify-between mb-6">
+          <h2 className="text-2xl font-semibold">Leadership</h2>
+          <Link href="/leadership" className="text-sm font-mono hover:underline" style={{ color: "var(--color-primary, #5B3FD9)" }}>
+            Full bios →
+          </Link>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+          {leaders.map((l) => (
+            <Link
+              key={l.name}
+              href="/leadership"
+              className="flex flex-col gap-3 group"
+            >
+              <div
+                className="aspect-[4/5] rounded-lg bg-cover bg-center"
+                style={{
+                  backgroundImage: `url('${l.portrait}')`,
+                  backgroundColor: "#F1EFFA",
+                }}
+              />
+              <div>
+                <div className="text-xs font-mono uppercase tracking-[0.15em] mb-1" style={{ color: "var(--color-primary, #5B3FD9)" }}>
+                  {l.title}
+                </div>
+                <div className="font-semibold text-sm group-hover:underline">{l.name}</div>
+                <p className="text-xs mt-1 line-clamp-2" style={{ color: "var(--color-muted, #6C6A7D)" }}>
+                  {l.bio[0]}
+                </p>
+              </div>
+            </Link>
           ))}
         </div>
       </section>
