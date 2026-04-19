@@ -8,6 +8,9 @@ import PrechewedScience, { metadata as scienceMetadata } from "./pages/science"
 import PrechewedProcess, { metadata as processMetadata } from "./pages/process"
 import PrechewedFaq, { metadata as faqMetadata } from "./pages/faq"
 import { getProductBySlug } from "./data/products"
+import { getArticleBySlug } from "./data/press"
+import PrechewedPress, { metadata as pressMetadata } from "./pages/press"
+import PrechewedPressDetail from "./pages/press-detail"
 
 export { config }
 
@@ -18,6 +21,7 @@ export const pages: Record<string, PageEntry> = {
   "science": { component: PrechewedScience, metadata: scienceMetadata },
   "process": { component: PrechewedProcess, metadata: processMetadata },
   "faq": { component: PrechewedFaq, metadata: faqMetadata },
+  "press": { component: PrechewedPress, metadata: pressMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
@@ -36,5 +40,21 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
     isValidSlug: (slug: string) => !!getProductBySlug(slug),
     getBreadcrumbLabel: (slug: string) => getProductBySlug(slug)?.name,
     breadcrumbSectionLabel: "Products",
+  },
+  press: {
+    component: PrechewedPressDetail,
+    getMetadata: (slug: string) => {
+      const a = getArticleBySlug(slug)
+      return a
+        ? {
+            title: `${a.headline} — ${a.publication} — Prechewed™`,
+            description: a.excerpt,
+            ogImage: a.heroImage,
+          }
+        : undefined
+    },
+    isValidSlug: (slug: string) => !!getArticleBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getArticleBySlug(slug)?.headline,
+    breadcrumbSectionLabel: "Press",
   },
 }
