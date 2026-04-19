@@ -7,6 +7,7 @@ import WhiskerworksHome from "./pages/home"
 import WhiskerworksCourses, { metadata as coursesMetadata } from "./pages/courses"
 import WhiskerworksDivisions, { metadata as divisionsMetadata } from "./pages/divisions"
 import WhiskerworksFaculty, { metadata as facultyMetadata } from "./pages/faculty"
+import WhiskerworksLeadership, { metadata as leadershipMetadata } from "./pages/leadership"
 import CourseDetail from "./pages/course-detail"
 import DivisionDetail from "./pages/division-detail"
 
@@ -17,6 +18,7 @@ export const pages: Record<string, PageEntry> = {
   "courses": { component: WhiskerworksCourses, metadata: coursesMetadata },
   "divisions": { component: WhiskerworksDivisions, metadata: divisionsMetadata },
   "faculty": { component: WhiskerworksFaculty, metadata: facultyMetadata },
+  "leadership": { component: WhiskerworksLeadership, metadata: leadershipMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
