@@ -41,7 +41,7 @@ export default function PrechewedProductDetail({ slug }: { slug: string }) {
           {/* Image */}
           <div
             className="relative aspect-square rounded-xl overflow-hidden"
-            style={{ background: "var(--color-secondary, #EDE9F8)" }}
+            style={{ background: "#F1EFFA" }}
           >
             <Image
               src={product.image}
@@ -70,7 +70,7 @@ export default function PrechewedProductDetail({ slug }: { slug: string }) {
             <div className="flex items-center gap-4 flex-wrap">
               <span
                 className="text-2xl font-bold"
-                style={{ color: "var(--color-accent, #2A1B6E)" }}
+                style={{ color: "var(--color-primary, #5B3FD9)" }}
               >
                 {product.priceLabel}
               </span>
@@ -118,7 +118,7 @@ export default function PrechewedProductDetail({ slug }: { slug: string }) {
       {/* Ingredients + Nutrition */}
       <section
         className="py-12 px-4"
-        style={{ background: "var(--color-secondary, #EDE9F8)" }}
+        style={{ background: "#F1EFFA" }}
       >
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Ingredients */}
@@ -243,7 +243,7 @@ export default function PrechewedProductDetail({ slug }: { slug: string }) {
           <div
             className="rounded-xl p-6 border-l-4"
             style={{
-              background: "var(--color-secondary, #EDE9F8)",
+              background: "#F1EFFA",
               borderColor: "var(--color-primary, #5B3FD9)",
             }}
           >

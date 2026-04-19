@@ -29,7 +29,7 @@ export default async function PrechewedProducts() {
       {/* Page header */}
       <section
         className="py-16 px-4 text-center"
-        style={{ background: "var(--color-secondary, #EDE9F8)" }}
+        style={{ background: "#F1EFFA" }}
       >
         <h1
           className="text-4xl md:text-5xl font-heading font-bold mb-4"
