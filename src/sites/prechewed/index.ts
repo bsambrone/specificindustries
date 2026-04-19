@@ -3,6 +3,7 @@ import { config } from "./config"
 import PrechewedHome from "./pages/home"
 import PrechewedProducts, { metadata as productsMetadata } from "./pages/products"
 import PrechewedProductDetail from "./pages/product-detail"
+import PrechewedBolus, { metadata as bolusMetadata } from "./pages/bolus"
 import { getProductBySlug } from "./data/products"
 
 export { config }
@@ -10,6 +11,7 @@ export { config }
 export const pages: Record<string, PageEntry> = {
   "": PrechewedHome,
   "products": { component: PrechewedProducts, metadata: productsMetadata },
+  "bolus": { component: PrechewedBolus, metadata: bolusMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
