@@ -30,6 +30,7 @@ import { config as seeltiteConfig, pages as seeltitePages, dynamicRoutes as seel
 import { config as whiskerworksConfig, pages as whiskerworksPages, dynamicRoutes as whiskerworksDynamicRoutes } from "./whiskerworks"
 import { config as prechewedConfig, pages as prechewedPages, dynamicRoutes as prechewedDynamicRoutes } from "./prechewed"
 import { config as chunkymilkConfig, pages as chunkymilkPages, dynamicRoutes as chunkymilkDynamicRoutes } from "./chunkymilk"
+import { config as petjacksConfig, pages as petjacksPages, dynamicRoutes as petjacksDynamicRoutes } from "./petjacks"
 import { config as thetheoryisrealConfig, pages as thetheoryisrealPages, dynamicRoutes as thetheoryisrealDynamicRoutes } from "./thetheoryisreal"
 import { config as terrorclownConfig, pages as terrorclownPages, dynamicRoutes as terrorclownDynamicRoutes } from "./terrorclown"
 
@@ -65,6 +66,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   whiskerworks: { config: whiskerworksConfig, pages: whiskerworksPages, dynamicRoutes: whiskerworksDynamicRoutes },
   prechewed: { config: prechewedConfig, pages: prechewedPages, dynamicRoutes: prechewedDynamicRoutes },
   chunkymilk: { config: chunkymilkConfig, pages: chunkymilkPages, dynamicRoutes: chunkymilkDynamicRoutes },
+  petjacks: { config: petjacksConfig, pages: petjacksPages, dynamicRoutes: petjacksDynamicRoutes },
   thetheoryisreal: { config: thetheoryisrealConfig, pages: thetheoryisrealPages, dynamicRoutes: thetheoryisrealDynamicRoutes },
   terrorclown: { config: terrorclownConfig, pages: terrorclownPages, dynamicRoutes: terrorclownDynamicRoutes },
 }
