@@ -31,7 +31,7 @@ export const testimonials: Testimonial[] = [
     year: 1974,
   },
   {
-    quote: "The Gristle Set upgrade was the best thirty-nine dollars I have ever spent. Our Terror Clown looks the way it always should have.",
+    quote: "The Gristle Set upgrade was the best forty-nine dollars I have ever spent. Our Terror Clown looks the way it always should have.",
     attribution: "Collector, anonymous",
     city: "Santa Fe, NM",
     year: 2001,
