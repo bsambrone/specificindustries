@@ -88,6 +88,7 @@ export const lora = Lora({
 const fontInstanceMap: Record<string, { variable: string }> = {
   inter,
   playfair: playfairDisplay,
+  "playfair-display": playfairDisplay,
   "space-grotesk": spaceGrotesk,
   poppins,
   "barlow-condensed": barlowCondensed,
@@ -116,6 +117,7 @@ export function getFontVariables(fonts: { heading: string; body: string }): stri
 export const fontFamilyMap: Record<string, string> = {
   inter: "'Inter', sans-serif",
   playfair: "'Playfair Display', serif",
+  "playfair-display": "'Playfair Display', serif",
   "space-grotesk": "'Space Grotesk', sans-serif",
   poppins: "'Poppins', sans-serif",
   "barlow-condensed": "'Barlow Condensed', sans-serif",
