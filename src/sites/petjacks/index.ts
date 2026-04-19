@@ -7,6 +7,7 @@ import PetjacksHome from "./pages/home"
 import PetjacksProducts, { metadata as productsMetadata } from "./pages/products"
 import PetjacksFlightAcademy, { metadata as flightAcademyMetadata } from "./pages/flight-academy"
 import PetjacksMissionGallery, { metadata as missionGalleryMetadata } from "./pages/mission-gallery"
+import PetjacksSafetyRecord, { metadata as safetyRecordMetadata } from "./pages/safety-record"
 import ProductDetail from "./pages/product-detail"
 
 export { config }
@@ -16,6 +17,7 @@ export const pages: Record<string, PageEntry> = {
   "products": { component: PetjacksProducts, metadata: productsMetadata },
   "flight-academy": { component: PetjacksFlightAcademy, metadata: flightAcademyMetadata },
   "mission-gallery": { component: PetjacksMissionGallery, metadata: missionGalleryMetadata },
+  "safety-record": { component: PetjacksSafetyRecord, metadata: safetyRecordMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
