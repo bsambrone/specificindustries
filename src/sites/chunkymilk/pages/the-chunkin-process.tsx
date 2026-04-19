@@ -14,7 +14,7 @@ const stages = [
       "Milk that is rushed is milk that gives up its chunks reluctantly; milk that is allowed to rest, in its own vessel, in a still and quiet place, gives them freely. " +
       "The Rest lasts as long as the milk wants it to last. Two days for a Petite. Nine weeks for a Patriarch. " +
       "No one has ever complained that a Whitford pour was rushed.",
-    image: "/sites/chunkymilk/settlin-shed.png",
+    image: "/sites/chunkymilk/process-rest.png",
   },
   {
     name: "The Settle",
@@ -23,7 +23,7 @@ const stages = [
       "We do not stir. We do not shake. We do not lift the lid to check on them. We simply allow The Settle to proceed without us. " +
       "This is the stage the Whitfords have, for one hundred and fifty-eight years, refused to explain to outsiders. " +
       "It is a private time between the milk and the hollow.",
-    image: "/sites/chunkymilk/settlin-shed.png",
+    image: "/sites/chunkymilk/process-settle.png",
   },
   {
     name: "The Gather",
@@ -32,7 +32,7 @@ const stages = [
       "Jeb grades them as they come. The Petite and Artisan are jarred first; the Hearty and Monumental wait their turn; the Patriarch Reserve is only drawn when Otis says it is time. " +
       "Each jar is stoppered with waxed cork, labeled by hand, and set on the shelf beside its kin. " +
       "Then we close the shed, and we begin again.",
-    image: "/sites/chunkymilk/settlin-shed.png",
+    image: "/sites/chunkymilk/process-gather.png",
   },
 ]
 

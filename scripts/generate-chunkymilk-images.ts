@@ -148,6 +148,26 @@ async function generateScenery() {
     `Circular logo crest on cream parchment background. A simple line-art ceramic jar with three visible chunks inside (round blobs). Arching text above reads "WHITFORD". Arching text below reads "CHUNKY MILK". Centered below the jar, small text reads "EST. 1867". Walnut brown line-art only, no color fills. Vintage hand-drawn feel. Square composition with the crest centered.`,
     "favicon.png",
   )
+
+  // -------- Chunkin' Process stages (three distinct images) --------
+
+  await generateImage(
+    `Still life in an Appalachian hollow settling shed at early morning. A single covered stoneware crock sits alone on a weathered wooden bench, unattended, resting. Soft gray light coming through a small window. No human presence. Nothing is happening — the milk is at rest. Dust motes visible in the slanted window light. ${HOLLOW_STYLE}. Photorealistic, landscape orientation, contemplative and quiet composition, empty and still.`,
+    "process-rest.png",
+    "1024x1024",
+  )
+
+  await generateImage(
+    `Tight close-up of the top of an open ceramic jar of milk, viewed slightly from above, in soft midday light. The surface of the milk is beginning to gather — the first visible white clusters are forming at the rim, small and irregular, like islands rising. The liquid below is still smooth. The inside of a wooden settling shed just barely visible behind. Mid-process transformation. ${HOLLOW_STYLE}. Photorealistic macro shot, shallow depth of field, the chunks are the subject, moody natural light, landscape orientation.`,
+    "process-settle.png",
+    "1024x1024",
+  )
+
+  await generateImage(
+    `An overhead shot of two weathered hands in the act of hand-gathering thick white chunks from a ceramic bowl using a ceramic scoop. The chunks are clearly formed, the size of eggs and walnuts, clustered in the bowl. A folded unbleached muslin chunking cloth sits ready beside the bowl. The hands belong to an Appalachian hollow dairyman in denim sleeves. Morning light across the wooden table. ${HOLLOW_STYLE}. Photorealistic, landscape orientation, active human hands, editorial food-photography composition, the hands and chunks are the subject.`,
+    "process-gather.png",
+    "1024x1024",
+  )
 }
 
 // -------- Portraits --------
