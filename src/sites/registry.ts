@@ -31,6 +31,7 @@ import { config as whiskerworksConfig, pages as whiskerworksPages, dynamicRoutes
 import { config as prechewedConfig, pages as prechewedPages, dynamicRoutes as prechewedDynamicRoutes } from "./prechewed"
 import { config as chunkymilkConfig, pages as chunkymilkPages, dynamicRoutes as chunkymilkDynamicRoutes } from "./chunkymilk"
 import { config as thetheoryisrealConfig, pages as thetheoryisrealPages, dynamicRoutes as thetheoryisrealDynamicRoutes } from "./thetheoryisreal"
+import { config as terrorclownConfig, pages as terrorclownPages, dynamicRoutes as terrorclownDynamicRoutes } from "./terrorclown"
 
 export const siteRegistry: Record<string, SiteModule> = {
   apex: { config: apexConfig, pages: apexPages, dynamicRoutes: apexDynamicRoutes },
@@ -65,6 +66,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   prechewed: { config: prechewedConfig, pages: prechewedPages, dynamicRoutes: prechewedDynamicRoutes },
   chunkymilk: { config: chunkymilkConfig, pages: chunkymilkPages, dynamicRoutes: chunkymilkDynamicRoutes },
   thetheoryisreal: { config: thetheoryisrealConfig, pages: thetheoryisrealPages, dynamicRoutes: thetheoryisrealDynamicRoutes },
+  terrorclown: { config: terrorclownConfig, pages: terrorclownPages, dynamicRoutes: terrorclownDynamicRoutes },
 }
 
 export type SubdomainKey = keyof typeof siteRegistry
