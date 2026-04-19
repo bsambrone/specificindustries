@@ -27,7 +27,7 @@ import { config as mehConfig, pages as mehPages, dynamicRoutes as mehDynamicRout
 import { config as superengineeredConfig, pages as superengineeredPages, dynamicRoutes as superengineeredDynamicRoutes } from "./superengineered"
 import { config as privatrixConfig, pages as privatrixPages, dynamicRoutes as privatrixDynamicRoutes } from "./privatrix"
 import { config as seeltiteConfig, pages as seeltitePages, dynamicRoutes as seeltiteDynamicRoutes } from "./seeltite"
-import { config as whiskerworksConfig, pages as whiskerworksPages } from "./whiskerworks"
+import { config as whiskerworksConfig, pages as whiskerworksPages, dynamicRoutes as whiskerworksDynamicRoutes } from "./whiskerworks"
 import { config as prechewedConfig, pages as prechewedPages, dynamicRoutes as prechewedDynamicRoutes } from "./prechewed"
 import { config as chunkymilkConfig, pages as chunkymilkPages } from "./chunkymilk"
 
@@ -60,7 +60,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   superengineered: { config: superengineeredConfig, pages: superengineeredPages, dynamicRoutes: superengineeredDynamicRoutes },
   privatrix: { config: privatrixConfig, pages: privatrixPages, dynamicRoutes: privatrixDynamicRoutes },
   seeltite: { config: seeltiteConfig, pages: seeltitePages, dynamicRoutes: seeltiteDynamicRoutes },
-  whiskerworks: { config: whiskerworksConfig, pages: whiskerworksPages },
+  whiskerworks: { config: whiskerworksConfig, pages: whiskerworksPages, dynamicRoutes: whiskerworksDynamicRoutes },
   prechewed: { config: prechewedConfig, pages: prechewedPages, dynamicRoutes: prechewedDynamicRoutes },
   chunkymilk: { config: chunkymilkConfig, pages: chunkymilkPages },
 }
