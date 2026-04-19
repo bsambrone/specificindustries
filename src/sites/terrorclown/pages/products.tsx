@@ -4,7 +4,7 @@ import { products, CATEGORY_ORDER, type ProductCategory } from "../data/products
 export const metadata = {
   title: "The Catalog — The Pennywhistle Play Company",
   description:
-    "Twenty hand-finished Pennywhistle products: Terror Clown™, the Haunted Headboard Bed, six curated Experiences, accessories, and bundles. Heirloom craftsmanship since 1948.",
+    "Twenty-one hand-finished Pennywhistle products: Terror Clown™, the Haunted Headboard Bed, six curated Experiences, accessories, and bundles. Heirloom craftsmanship since 1948.",
 }
 
 const CATEGORY_DESCRIPTIONS: Record<ProductCategory, string> = {
