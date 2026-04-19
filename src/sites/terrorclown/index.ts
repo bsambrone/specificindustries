@@ -3,6 +3,7 @@ import { config } from "./config"
 import TerrorClownHome from "./pages/home"
 import TerrorClownProducts, { metadata as productsMetadata } from "./pages/products"
 import TerrorClownProductDetail from "./pages/product-detail"
+import TerrorClownAbout, { metadata as aboutMetadata } from "./pages/about"
 import { getProductBySlug } from "./data/products"
 
 export { config }
@@ -10,6 +11,7 @@ export { config }
 export const pages: Record<string, PageEntry> = {
   "": TerrorClownHome,
   "products": { component: TerrorClownProducts, metadata: productsMetadata },
+  "about": { component: TerrorClownAbout, metadata: aboutMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
