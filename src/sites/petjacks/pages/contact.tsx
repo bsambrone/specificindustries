@@ -1,3 +1,4 @@
+import ContactForm from "@/sites/petjacks/components/contact-form"
 import LegalFooter from "@/sites/petjacks/components/legal-footer"
 
 export const metadata = {
@@ -28,33 +29,7 @@ export default function PetjacksContact() {
             </div>
           </div>
 
-          <form className="space-y-4">
-            <div>
-              <label className="block text-sm font-semibold text-foreground mb-1">Name</label>
-              <input type="text" className="w-full px-4 py-3 border border-accent/30 rounded-lg bg-background focus:outline-none focus:border-primary" />
-            </div>
-            <div>
-              <label className="block text-sm font-semibold text-foreground mb-1">Email</label>
-              <input type="email" className="w-full px-4 py-3 border border-accent/30 rounded-lg bg-background focus:outline-none focus:border-primary" />
-            </div>
-            <div>
-              <label className="block text-sm font-semibold text-foreground mb-1">Pet Species</label>
-              <select className="w-full px-4 py-3 border border-accent/30 rounded-lg bg-background focus:outline-none focus:border-primary">
-                <option>Cat</option>
-                <option>Dog</option>
-                <option>Rabbit</option>
-                <option>Fish</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-semibold text-foreground mb-1">Message</label>
-              <textarea rows={5} className="w-full px-4 py-3 border border-accent/30 rounded-lg bg-background focus:outline-none focus:border-primary" />
-            </div>
-            <button type="button" className="px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:opacity-90 transition-opacity">
-              Send
-            </button>
-          </form>
+          <ContactForm />
         </div>
       </section>
 
