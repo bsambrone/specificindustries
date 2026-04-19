@@ -28,6 +28,7 @@ import { config as superengineeredConfig, pages as superengineeredPages, dynamic
 import { config as privatrixConfig, pages as privatrixPages, dynamicRoutes as privatrixDynamicRoutes } from "./privatrix"
 import { config as seeltiteConfig, pages as seeltitePages, dynamicRoutes as seeltiteDynamicRoutes } from "./seeltite"
 import { config as whiskerworksConfig, pages as whiskerworksPages } from "./whiskerworks"
+import { config as prechewedConfig, pages as prechewedPages, dynamicRoutes as prechewedDynamicRoutes } from "./prechewed"
 
 export const siteRegistry: Record<string, SiteModule> = {
   apex: { config: apexConfig, pages: apexPages, dynamicRoutes: apexDynamicRoutes },
@@ -59,6 +60,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   privatrix: { config: privatrixConfig, pages: privatrixPages, dynamicRoutes: privatrixDynamicRoutes },
   seeltite: { config: seeltiteConfig, pages: seeltitePages, dynamicRoutes: seeltiteDynamicRoutes },
   whiskerworks: { config: whiskerworksConfig, pages: whiskerworksPages },
+  prechewed: { config: prechewedConfig, pages: prechewedPages, dynamicRoutes: prechewedDynamicRoutes },
 }
 
 export type SubdomainKey = keyof typeof siteRegistry
