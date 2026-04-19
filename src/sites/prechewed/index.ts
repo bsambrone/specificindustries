@@ -16,6 +16,8 @@ import PrechewedLeadership, { metadata as leadershipMetadata } from "./pages/lea
 import PrechewedContact from "./pages/contact"
 import PrechewedPrivacy, { metadata as privacyMetadata } from "./pages/privacy"
 import PrechewedTerms, { metadata as termsMetadata } from "./pages/terms"
+import PrechewedCart from "./pages/cart"
+import PrechewedCheckout from "./pages/checkout"
 
 const contactMetadata = {
   title: "Contact — Prechewed™",
@@ -37,6 +39,8 @@ export const pages: Record<string, PageEntry> = {
   "contact": { component: PrechewedContact, metadata: contactMetadata },
   "privacy": { component: PrechewedPrivacy, metadata: privacyMetadata },
   "terms": { component: PrechewedTerms, metadata: termsMetadata },
+  "cart": PrechewedCart,
+  "checkout": PrechewedCheckout,
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
