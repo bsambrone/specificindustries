@@ -13,6 +13,14 @@ import PrechewedPress, { metadata as pressMetadata } from "./pages/press"
 import PrechewedPressDetail from "./pages/press-detail"
 import PrechewedAbout, { metadata as aboutMetadata } from "./pages/about"
 import PrechewedLeadership, { metadata as leadershipMetadata } from "./pages/leadership"
+import PrechewedContact from "./pages/contact"
+import PrechewedPrivacy, { metadata as privacyMetadata } from "./pages/privacy"
+import PrechewedTerms, { metadata as termsMetadata } from "./pages/terms"
+
+const contactMetadata = {
+  title: "Contact — Prechewed™",
+  description: "Reach the Prechewed™ intake team. We respond to inquiries within 47 jaw-hours.",
+}
 
 export { config }
 
@@ -26,6 +34,9 @@ export const pages: Record<string, PageEntry> = {
   "press": { component: PrechewedPress, metadata: pressMetadata },
   "about": { component: PrechewedAbout, metadata: aboutMetadata },
   "leadership": { component: PrechewedLeadership, metadata: leadershipMetadata },
+  "contact": { component: PrechewedContact, metadata: contactMetadata },
+  "privacy": { component: PrechewedPrivacy, metadata: privacyMetadata },
+  "terms": { component: PrechewedTerms, metadata: termsMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
