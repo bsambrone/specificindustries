@@ -13,6 +13,8 @@ import PetjacksLeadership, { metadata as leadershipMetadata } from "./pages/lead
 import PetjacksContact, { metadata as contactMetadata } from "./pages/contact"
 import PetjacksPrivacy, { metadata as privacyMetadata } from "./pages/privacy"
 import PetjacksTerms, { metadata as termsMetadata } from "./pages/terms"
+import PetjacksCart from "./pages/cart"
+import PetjacksCheckout from "./pages/checkout"
 import ProductDetail from "./pages/product-detail"
 
 export { config }
@@ -28,6 +30,8 @@ export const pages: Record<string, PageEntry> = {
   "contact": { component: PetjacksContact, metadata: contactMetadata },
   "privacy": { component: PetjacksPrivacy, metadata: privacyMetadata },
   "terms": { component: PetjacksTerms, metadata: termsMetadata },
+  "cart": PetjacksCart,
+  "checkout": PetjacksCheckout,
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
