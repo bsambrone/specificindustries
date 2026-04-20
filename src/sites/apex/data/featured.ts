@@ -1,8 +1,8 @@
 export const featuredHoldings: string[] = [
-  "seeltite",
-  "truegrit",
-  "strategicvoid",
-  "privatrix",
+  "pigmilk",
+  "squaredaway",
+  "petjacks",
+  "onlypans",
 ]
 
 export const featuredJobs: string[] = []
