@@ -23,11 +23,12 @@ export function getAllPortfolioBrands(): PortfolioBrand[] {
 export function groupBrandsByVertical(): Record<VerticalKey, PortfolioBrand[]> {
   const brands = getAllPortfolioBrands()
   const grouped: Record<VerticalKey, PortfolioBrand[]> = {
-    "consumer-goods": [],
-    "hygiene": [],
-    "health-wellness": [],
-    "subscription-services": [],
-    "professional-services": [],
+    "food-beverage": [],
+    "consumer-household": [],
+    "hygiene-wellness": [],
+    "pets-specialty": [],
+    "media-platforms": [],
+    "professional-tech": [],
   }
   for (const brand of brands) {
     const key = brand.config.verticalKey

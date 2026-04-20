@@ -40,11 +40,12 @@ function PortfolioExplorerBody({ brands }: Props) {
 
   const grouped = useMemo(() => {
     const map: Record<VerticalKey, PortfolioBrandDTO[]> = {
-      "consumer-goods": [],
-      "hygiene": [],
-      "health-wellness": [],
-      "subscription-services": [],
-      "professional-services": [],
+      "food-beverage": [],
+      "consumer-household": [],
+      "hygiene-wellness": [],
+      "pets-specialty": [],
+      "media-platforms": [],
+      "professional-tech": [],
     }
     for (const brand of visibleBrands) {
       const key = brand.verticalKey as VerticalKey
