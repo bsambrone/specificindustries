@@ -192,7 +192,7 @@ const FACILITY: Array<[string, string]> = [
   ],
   [
     "facility/enamel-workshop.png",
-    `${CATALOG_STYLE} Interior photograph of an enamel-finishing workshop. Long wooden workbenches. Rows of hand-polished white porcelain clown heads, teeth being hand-set by craftsmen using small precision tools. Soft natural light from high windows. Restrained, not horror — "artisan workshop" feeling.`,
+    `${CATALOG_STYLE} Interior photograph of an enamel-finishing workshop at The Pennywhistle Play Company. Long wooden workbenches under soft natural light from high windows. Rows of porcelain clown heads in various finishing states sit in dark wooden racks — each head features the unmistakable Terror Clown design: unnaturally wide cracked smiles revealing four rows of needle-sharp pointed bone-white teeth, large unblinking glass eyes. Teeth are already set; the heads watch the room. Two period-dressed 1950s American workers in leather aprons and rolled shirt sleeves are at the workbenches — their body language cautious, a little apprehensive, standing slightly farther from the heads than one would expect, holding small precision tools but moving deliberately. One worker's expression carries visible unease — brow drawn, eyes avoiding direct contact with the nearest head. The other worker glances sideways at the rack. Restrained, uncanny atmosphere — these are skilled craftspeople who know precisely what they are working on. Not horror — a working catalog photograph that reveals a quiet truth about the factory floor.`,
   ],
 ]
 
@@ -314,7 +314,12 @@ async function main() {
 
   console.log("\n─── Facility shots ────────────────────")
   for (const [filename, prompt] of FACILITY) {
-    await generateImage(prompt, filename, "1024x1024")
+    if (filename === "facility/enamel-workshop.png") {
+      // Enamel workshop contains visible Terror Clown heads — use canonical clown as base
+      await generateWithBaseImage(prompt, filename, terrorClownPath, "1024x1024")
+    } else {
+      await generateImage(prompt, filename, "1024x1024")
+    }
     await delay(500)
   }
 
