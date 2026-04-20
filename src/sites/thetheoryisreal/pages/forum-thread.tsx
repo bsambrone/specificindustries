@@ -8,7 +8,6 @@ import { getSiteHref } from "@/lib/site-href"
 import type { BoardKey } from "@/sites/thetheoryisreal/types"
 
 export default async function ForumThreadPage({
-  slug: _slug,
   segments,
 }: {
   slug: string
