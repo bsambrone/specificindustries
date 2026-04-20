@@ -161,7 +161,7 @@ function getProductPrompt(slug: string, name: string, tagline: string): string {
     "sewer-scent-diffuser": `${CATALOG_STYLE} A vintage plug-in aromatherapy unit, cream bakelite casing with a small brass Pennywhistle logo and two ventilation slots on top. Studio product shot on cream backdrop.`,
     "replacement-eye-set": `${CATALOG_STYLE} Three pairs of hand-blown glass eyes — clear, milky, and one with an optical sheen — nested in individual velvet-lined compartments of a small wooden presentation case. Close product photo.`,
     "pocket-terror-clown": `${CATALOG_STYLE} An eight-inch miniature version of Terror Clown — same porcelain face, same four rows of sharp teeth, same harlequin suit — standing beside a period travel case. Smaller scale shown relative to the case.`,
-    "floating-edition-upgrade": `${CATALOG_STYLE} A mid-century product kit: a sealed plastic-wrapped buoyancy modification package with a cream label reading "THE FLOATING EDITION". Beside it, a schematic diagram of the floating clown upright in water. Catalog product shot.`,
+    "floating-edition-upgrade": `${CATALOG_STYLE} A mid-century product kit photographed as a catalog flatlay: a sealed plastic-wrapped buoyancy modification package with a cream label reading "THE FLOATING EDITION". Beside it, a period technical schematic diagram labeled "THE FLOATING EDITION" that shows the Terror Clown doll — same porcelain face, same unnaturally wide cracked smile, same four rows of needle-sharp pointed teeth, same large unblinking glass eyes — floating upright in a cross-sectioned basin of water. The clown's face and teeth are clearly recognizable. Technical arrows and dotted waterlines annotate the diagram. Catalog product shot on cream backdrop.`,
     "starter-kit": `${CATALOG_STYLE} A flatlay product grouping: a porcelain Terror Clown on its side, a small Experience kit box, and a red balloon bundle, arranged on a cream backdrop. Catalog flatlay.`,
     "family-pack": `${CATALOG_STYLE} A flatlay of three porcelain clowns of descending size (small, medium, full), one Experience box, and one accessory box, arranged on a cream backdrop. Group catalog shot.`,
     "deluxe-home-installation": `${CATALOG_STYLE} A room-setting photograph: the Haunted Headboard Bed in a period bedroom, with a Sewer-Scent Diffuser plugged in on the bedside table, and two labeled Experience kit boxes stacked nearby. No clown in frame. Full room catalog shot.`,
@@ -257,6 +257,7 @@ const CLOWN_DEPICTING_SLUGS = new Set([
   "pocket-terror-clown",
   "family-pack",
   "starter-kit",
+  "floating-edition-upgrade",
 ])
 
 async function main() {
