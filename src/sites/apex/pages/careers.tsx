@@ -27,7 +27,7 @@ export default function ApexCareers() {
     <>
       <Hero
         headline="Careers at Specific Industries"
-        subheadline={`Join a portfolio of brands serving markets that arguably should not exist. We are hiring ${jobs.length}+ roles across all five verticals.`}
+        subheadline={`Join a portfolio of brands serving markets that arguably should not exist. We are hiring ${jobs.length}+ roles across all six verticals.`}
       />
 
       <section className="py-10 px-4 bg-secondary/10">

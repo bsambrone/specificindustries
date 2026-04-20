@@ -70,7 +70,7 @@ export default async function ApexHome() {
   return (
     <>
       <Hero
-        headline="Building Enduring Value Across 28 Underserved Verticals"
+        headline="Building Enduring Value Across 33 Specific Industries"
         subheadline="A portfolio of brands targeting markets that, by most measures, arguably should not exist."
       />
 
@@ -271,10 +271,10 @@ export default async function ApexHome() {
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-xs uppercase tracking-[0.2em] text-foreground/50 font-heading mb-2">Careers</p>
           <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary mb-3">
-            {jobs.length}+ Open Positions Across All Five Verticals
+            {jobs.length}+ Open Positions Across All Six Verticals
           </h2>
           <p className="text-foreground/70 max-w-2xl mx-auto mb-8">
-            We are hiring for roles in Consumer Goods, Hygiene, Health & Wellness, Subscription Services, Professional Services, and at Corporate HQ (Virtual).
+            We are hiring for roles in Food & Beverage, Consumer & Household Goods, Hygiene, Health & Wellness, Pets & Specialty Services, Media & Creator Platforms, Professional Services & Technology, and at Corporate HQ (Virtual).
           </p>
           {featuredRoles.length > 0 && (
             <ul className="mb-8 space-y-2 max-w-xl mx-auto">
