@@ -1,9 +1,10 @@
 export type CareersVertical =
-  | "consumer-goods"
-  | "hygiene"
-  | "health-wellness"
-  | "subscription-services"
-  | "professional-services"
+  | "food-beverage"
+  | "consumer-household"
+  | "hygiene-wellness"
+  | "pets-specialty"
+  | "media-platforms"
+  | "professional-tech"
   | "corporate"
 
 export interface JobCompensation {
@@ -33,7 +34,7 @@ export const jobs: JobListing[] = [
   {
     slug: "director-niche-market-analytics",
     title: "Director of Niche Market Analytics",
-    vertical: "consumer-goods",
+    vertical: "consumer-household",
     location: "Remote · must be reachable between 4:00 and 4:07 AM EST",
     employmentType: "Full-time",
     postedLine: "Posted September 2019 · reposted every quarter since",
@@ -78,7 +79,7 @@ export const jobs: JobListing[] = [
   {
     slug: "head-portfolio-consumables-ingestibles",
     title: "Head of Portfolio Consumables (Ingestibles)",
-    vertical: "consumer-goods",
+    vertical: "food-beverage",
     location: "Corporate HQ (Virtual) · occasional travel to the cheese facility",
     employmentType: "Full-time · Indefinite",
     postedLine: "Posted March 2021 · posting has not been revised",
@@ -114,7 +115,7 @@ export const jobs: JobListing[] = [
   {
     slug: "senior-manager-product-viability-under-400",
     title: "Senior Manager, Product Viability (Markets Under 400 People)",
-    vertical: "consumer-goods",
+    vertical: "consumer-household",
     location: "Remote · one required in-person per year, location TBD",
     employmentType: "Full-time",
     postedLine: "Posted July 2020 · reposted annually on July 14",
@@ -146,7 +147,7 @@ export const jobs: JobListing[] = [
   {
     slug: "associate-packaging-language-review",
     title: "Associate, Packaging Language Review",
-    vertical: "consumer-goods",
+    vertical: "consumer-household",
     location: "Hybrid · packaging warehouse, unheated",
     employmentType: "Full-time",
     postedLine: "Posted 2022 · repost backlog under review",
@@ -180,7 +181,7 @@ export const jobs: JobListing[] = [
   {
     slug: "vp-beverage-category-strategy",
     title: "VP of Beverage Category Strategy",
-    vertical: "consumer-goods",
+    vertical: "food-beverage",
     location: "Remote · up to 45% travel to hydration events",
     employmentType: "Full-time",
     postedLine: "Posted May 2021 · reviewed quarterly",
@@ -214,7 +215,7 @@ export const jobs: JobListing[] = [
   {
     slug: "head-bathroom-humor-division",
     title: "Head of Bathroom Humor Division",
-    vertical: "hygiene",
+    vertical: "hygiene-wellness",
     location: "Remote · occasional factory visits to TrueGrit and Seel-Tite",
     employmentType: "Full-time · Executive",
     postedLine: "Posted January 2023 · current priority hire",
@@ -257,7 +258,7 @@ export const jobs: JobListing[] = [
   {
     slug: "senior-director-restroom-category-innovation",
     title: "Senior Director, Restroom Category Innovation",
-    vertical: "hygiene",
+    vertical: "hygiene-wellness",
     location: "Hybrid · 2-3 days in the R&D facility",
     employmentType: "Full-time",
     postedLine: "Posted 2023 · active pipeline",
@@ -291,7 +292,7 @@ export const jobs: JobListing[] = [
   {
     slug: "apm-seat-fitment",
     title: "Associate Product Manager, Seat Fitment",
-    vertical: "hygiene",
+    vertical: "hygiene-wellness",
     location: "Remote · Seel-Tite R&D lab visits as required",
     employmentType: "Full-time · Associate",
     postedLine: "Posted 2024 · open",
@@ -326,7 +327,7 @@ export const jobs: JobListing[] = [
   {
     slug: "chief-wellness-evangelist",
     title: "Chief Wellness Evangelist",
-    vertical: "health-wellness",
+    vertical: "hygiene-wellness",
     location: "Remote · speaking engagements permitted",
     employmentType: "Full-time",
     postedLine: "Posted 2022 · slow pipeline",
@@ -360,7 +361,7 @@ export const jobs: JobListing[] = [
   {
     slug: "vp-questionable-health-claims",
     title: "VP of Questionable Health Claims",
-    vertical: "health-wellness",
+    vertical: "hygiene-wellness",
     location: "Remote · strictly off-camera",
     employmentType: "Full-time",
     postedLine: "Posted 2021 · extended pipeline",
@@ -395,7 +396,7 @@ export const jobs: JobListing[] = [
   {
     slug: "director-regulatory-avoidance",
     title: "Director of Regulatory Avoidance",
-    vertical: "health-wellness",
+    vertical: "hygiene-wellness",
     location: "Remote · private",
     employmentType: "Full-time",
     postedLine: "Posted 2020 · ongoing",
@@ -428,7 +429,7 @@ export const jobs: JobListing[] = [
   {
     slug: "vp-recurring-revenue-optimization",
     title: "VP of Recurring Revenue Optimization",
-    vertical: "subscription-services",
+    vertical: "media-platforms",
     location: "Remote",
     employmentType: "Full-time",
     postedLine: "Posted 2023 · strategic hire",
@@ -461,7 +462,7 @@ export const jobs: JobListing[] = [
   {
     slug: "senior-manager-cancellation-flow-obfuscation",
     title: "Senior Manager, Cancellation Flow Obfuscation",
-    vertical: "subscription-services",
+    vertical: "media-platforms",
     location: "Remote",
     employmentType: "Full-time",
     postedLine: "Posted 2024 · open",
@@ -493,7 +494,7 @@ export const jobs: JobListing[] = [
   {
     slug: "director-auto-renewal-communications",
     title: "Director of Auto-Renewal Communications",
-    vertical: "subscription-services",
+    vertical: "media-platforms",
     location: "Remote",
     employmentType: "Full-time",
     postedLine: "Posted 2022 · steady state",
@@ -526,7 +527,7 @@ export const jobs: JobListing[] = [
   {
     slug: "senior-director-strategic-ambiguity",
     title: "Senior Director, Strategic Ambiguity",
-    vertical: "professional-services",
+    vertical: "professional-tech",
     location: "Hybrid · location TBD",
     employmentType: "Full-time",
     postedLine: "Posted 2020 · ongoing",
@@ -556,7 +557,7 @@ export const jobs: JobListing[] = [
   {
     slug: "head-incubated-ventures-pre-concept",
     title: "Head of Incubated Ventures (Pre-Concept)",
-    vertical: "professional-services",
+    vertical: "professional-tech",
     location: "Remote",
     employmentType: "Full-time",
     postedLine: "Posted 2023 · open indefinitely",
@@ -588,7 +589,7 @@ export const jobs: JobListing[] = [
   {
     slug: "vp-synergy-operations",
     title: "VP of Synergy Operations",
-    vertical: "professional-services",
+    vertical: "professional-tech",
     location: "Remote · quarterly offsite",
     employmentType: "Full-time",
     postedLine: "Posted 2021 · rolling",
@@ -619,7 +620,7 @@ export const jobs: JobListing[] = [
   {
     slug: "associate-framework-development",
     title: "Associate, Framework Development",
-    vertical: "professional-services",
+    vertical: "professional-tech",
     location: "Remote",
     employmentType: "Full-time",
     postedLine: "Posted 2024",
@@ -650,7 +651,7 @@ export const jobs: JobListing[] = [
   {
     slug: "chief-disruption-evangelist",
     title: "Chief Disruption Evangelist",
-    vertical: "professional-services",
+    vertical: "professional-tech",
     location: "Remote · frequent TEDx engagements",
     employmentType: "Full-time · Executive",
     postedLine: "Posted 2022 · reviewing",
@@ -891,19 +892,21 @@ export function getRelatedJobs(slug: string, limit = 3): JobListing[] {
 }
 
 export const VERTICAL_LABELS: Record<CareersVertical, string> = {
-  "consumer-goods": "Consumer Goods & Consumables",
-  "hygiene": "Personal Hygiene & Home Essentials",
-  "health-wellness": "Health & Wellness Holdings",
-  "subscription-services": "Subscription Services",
-  "professional-services": "Professional Services & Emerging Ventures",
+  "food-beverage": "Food & Beverage",
+  "consumer-household": "Consumer & Household Goods",
+  "hygiene-wellness": "Hygiene, Health & Wellness",
+  "pets-specialty": "Pets & Specialty Services",
+  "media-platforms": "Media & Creator Platforms",
+  "professional-tech": "Professional Services & Technology",
   "corporate": "Corporate / Executive",
 }
 
 export const VERTICAL_ORDER: CareersVertical[] = [
-  "consumer-goods",
-  "hygiene",
-  "health-wellness",
-  "subscription-services",
-  "professional-services",
+  "food-beverage",
+  "consumer-household",
+  "hygiene-wellness",
+  "pets-specialty",
+  "media-platforms",
+  "professional-tech",
   "corporate",
 ]

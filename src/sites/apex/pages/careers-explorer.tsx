@@ -35,11 +35,12 @@ function CareersExplorerBody({ jobs }: Props) {
 
   const grouped = useMemo(() => {
     const m: Record<CareersVertical, JobListingDTO[]> = {
-      "consumer-goods": [],
-      "hygiene": [],
-      "health-wellness": [],
-      "subscription-services": [],
-      "professional-services": [],
+      "food-beverage": [],
+      "consumer-household": [],
+      "hygiene-wellness": [],
+      "pets-specialty": [],
+      "media-platforms": [],
+      "professional-tech": [],
       "corporate": [],
     }
     for (const j of visible) m[j.vertical].push(j)
