@@ -274,7 +274,7 @@ export default async function ApexHome() {
             {jobs.length}+ Open Positions Across All Six Verticals
           </h2>
           <p className="text-foreground/70 max-w-2xl mx-auto mb-8">
-            We are hiring for roles in Food & Beverage, Consumer & Household Goods, Hygiene, Health & Wellness, Pets & Specialty Services, Media & Creator Platforms, Professional Services & Technology, and at Corporate HQ (Virtual).
+            We are hiring for roles in Food & Beverage; Consumer & Household Goods; Hygiene, Health & Wellness; Pets & Specialty Services; Media & Creator Platforms; Professional Services & Technology; and at Corporate HQ (Virtual).
           </p>
           {featuredRoles.length > 0 && (
             <ul className="mb-8 space-y-2 max-w-xl mx-auto">
