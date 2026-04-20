@@ -32,6 +32,6 @@ export const config: SiteConfig = {
   features: {
     commerce: false,
   },
-  verticalKey: "professional-services",
+  verticalKey: "professional-tech",
   tagline: "Bedding rentals for life milestones that warrant fresh linens.",
 }

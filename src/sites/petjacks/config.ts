@@ -37,6 +37,6 @@ export const config: SiteConfig = {
   features: {
     commerce: true,
   },
-  verticalKey: "consumer-goods",
+  verticalKey: "pets-specialty",
   tagline: "Every pet deserves the sky.",
 }

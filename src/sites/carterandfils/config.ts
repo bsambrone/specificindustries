@@ -33,6 +33,6 @@ export const config: SiteConfig = {
   features: {
     commerce: true,
   },
-  verticalKey: "consumer-goods",
+  verticalKey: "food-beverage",
   tagline: "Heritage craftsmanship, fourth generation. Quietly precise.",
 }

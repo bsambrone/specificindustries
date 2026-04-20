@@ -34,6 +34,6 @@ export const config: SiteConfig = {
   features: {
     commerce: true,
   },
-  verticalKey: "consumer-goods",
+  verticalKey: "food-beverage",
   tagline: "Water, without the water. Just add water.",
 }

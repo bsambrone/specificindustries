@@ -34,6 +34,6 @@ export const config: SiteConfig = {
   features: {
     commerce: true,
   },
-  verticalKey: "consumer-goods",
+  verticalKey: "consumer-household",
   tagline: "The best way to lose a finger since 1978. Now in four trap tiers.",
 }

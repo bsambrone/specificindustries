@@ -32,6 +32,6 @@ export const config: SiteConfig = {
   features: {
     commerce: true,
   },
-  verticalKey: "professional-services",
+  verticalKey: "professional-tech",
   tagline: "Privacy-first tooling for people who prefer not to be consulted.",
 }

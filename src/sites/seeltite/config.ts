@@ -34,6 +34,6 @@ export const config: SiteConfig = {
   features: {
     commerce: true,
   },
-  verticalKey: "hygiene",
+  verticalKey: "hygiene-wellness",
   tagline: "Containment engineered for when the gamble is over.",
 }

@@ -35,6 +35,6 @@ export const config: SiteConfig = {
   features: {
     commerce: true,
   },
-  verticalKey: "consumer-goods",
+  verticalKey: "consumer-household",
   tagline: "Portable anchoring for markets tired of heavy solutions.",
 }

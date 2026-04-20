@@ -33,6 +33,6 @@ export const config: SiteConfig = {
   features: {
     commerce: true,
   },
-  verticalKey: "health-wellness",
+  verticalKey: "hygiene-wellness",
   tagline: "Luminous wellness products. Vintage formulations, modern packaging.",
 }

@@ -120,6 +120,6 @@ export const config: SiteConfig = {
   features: {
     commerce: false,
   },
-  verticalKey: "professional-services",
+  verticalKey: "professional-tech",
   tagline: "Consulting services for organizations not yet ready for outcomes.",
 }

@@ -104,6 +104,6 @@ export const config: SiteConfig = {
   features: {
     commerce: false,
   },
-  verticalKey: "professional-services",
+  verticalKey: "professional-tech",
   tagline: "Workforce stabilization and retention engineering for the Fortune 500.",
 }

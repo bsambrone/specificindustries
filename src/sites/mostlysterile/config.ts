@@ -34,6 +34,6 @@ export const config: SiteConfig = {
   features: {
     commerce: true,
   },
-  verticalKey: "health-wellness",
+  verticalKey: "hygiene-wellness",
   tagline: "Medical-grade supplies at approximately sterile conditions.",
 }

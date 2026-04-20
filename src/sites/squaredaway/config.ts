@@ -36,6 +36,6 @@ export const config: SiteConfig = {
   features: {
     commerce: true,
   },
-  verticalKey: "consumer-goods",
+  verticalKey: "consumer-household",
   tagline: "Authorized gear for all five service branches. Morale sold by the pound.",
 }

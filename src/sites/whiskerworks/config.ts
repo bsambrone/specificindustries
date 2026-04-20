@@ -34,6 +34,6 @@ export const config: SiteConfig = {
   features: {
     commerce: false,
   },
-  verticalKey: "professional-services",
+  verticalKey: "pets-specialty",
   tagline: "Advanced feline training across six divisions.",
 }

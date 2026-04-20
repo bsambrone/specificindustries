@@ -65,6 +65,6 @@ export const config: SiteConfig = {
       { label: "Library", path: "/library" },
     ],
   },
-  verticalKey: "professional-services",
+  verticalKey: "media-platforms",
   tagline: "The truth is not hidden. You are.",
 }
