@@ -34,6 +34,7 @@ import { products as mehProducts } from "@/sites/meh/data/products"
 import { products as seeltiteProducts } from "@/sites/seeltite/data/products"
 import { products as chunkymilkProducts } from "@/sites/chunkymilk/data/products"
 import { products as terrorclownProducts } from "@/sites/terrorclown/data/products"
+import { products as petjacksProducts } from "@/sites/petjacks/data/products"
 import { journalEntries as mehJournal } from "@/sites/meh/data/journal"
 import { treatments as sovereignwellnessTreatments } from "@/sites/sovereignwellness/data/treatments"
 import { dispatches as sovereignwellnessDispatches } from "@/sites/sovereignwellness/data/dispatches"
@@ -93,6 +94,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     chunkymilk: chunkymilkProducts,
     superengineered: superengineeredProducts,
     terrorclown: terrorclownProducts,
+    petjacks: petjacksProducts,
   }
 
   for (const [subdomain, products] of Object.entries(productSites)) {
