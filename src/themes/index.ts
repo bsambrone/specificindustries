@@ -53,11 +53,12 @@ export interface MegaMenuConfig {
 }
 
 export type VerticalKey =
-  | "consumer-goods"
-  | "hygiene"
-  | "health-wellness"
-  | "subscription-services"
-  | "professional-services"
+  | "food-beverage"
+  | "consumer-household"
+  | "hygiene-wellness"
+  | "pets-specialty"
+  | "media-platforms"
+  | "professional-tech"
 
 export interface SiteConfig {
   name: string

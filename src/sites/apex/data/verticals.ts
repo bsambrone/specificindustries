@@ -8,52 +8,61 @@ export interface VerticalMeta {
 }
 
 export const verticals: Record<VerticalKey, VerticalMeta> = {
-  "consumer-goods": {
-    key: "consumer-goods",
-    displayName: "Consumer Goods & Consumables",
+  "food-beverage": {
+    key: "food-beverage",
+    displayName: "Food & Beverage",
     shortDescription:
-      "Packaged goods, foodstuffs, manufactured items, and legacy artisanal brands serving categories that most retailers have not yet classified.",
+      "Consumable brands operating at the edge of food science, product language, and legal labeling.",
     thesis:
-      "We invest in consumer categories so specific that the product itself requires an explanation before it can be sold.",
+      "We invest in foodstuffs and beverages whose category name is itself a point of consumer negotiation.",
   },
-  "hygiene": {
-    key: "hygiene",
-    displayName: "Personal Hygiene & Home Essentials",
+  "consumer-household": {
+    key: "consumer-household",
+    displayName: "Consumer & Household Goods",
     shortDescription:
-      "A category defined by recurring necessity and limited category competition. Bathroom-adjacent brands with serious engineering rigor.",
+      "Packaged goods, manufactured items, games, and novelty products serving use-cases that retailers have not yet formally classified.",
     thesis:
-      "Hygiene categories are recession-resistant, emotionally charged, and chronically underserved by firms unwilling to name what the product does.",
+      "We prefer consumer categories so specific that the product itself requires an explanation before it can be sold.",
   },
-  "health-wellness": {
-    key: "health-wellness",
-    displayName: "Health & Wellness Holdings",
+  "hygiene-wellness": {
+    key: "hygiene-wellness",
+    displayName: "Hygiene, Health & Wellness",
     shortDescription:
-      "Wellness, pharmaceutical-adjacent, and quasi-medical brands positioned at the edge of the regulatory envelope.",
+      "Hygiene, pharmaceutical-adjacent, and quasi-medical brands positioned at the edge of the regulatory envelope and recession-resistant by design.",
     thesis:
-      "Consumers remain willing to pay for wellness outcomes that have not been proven, disproven, or meaningfully defined.",
+      "Consumers remain willing to pay for bodily outcomes that have not been proven, disproven, or meaningfully defined.",
   },
-  "subscription-services": {
-    key: "subscription-services",
-    displayName: "Subscription Services",
+  "pets-specialty": {
+    key: "pets-specialty",
+    displayName: "Pets & Specialty Services",
     shortDescription:
-      "Recurring-revenue brands in the portfolio. Designed for annualized billing with optional annual renewal.",
+      "Companion-animal platforms and adjacent specialty services whose customers are willing to pay on behalf of a second party.",
     thesis:
-      "Subscription economics dominate our modeling; we prefer categories where cancellation requires a phone call.",
+      "When the payer is not the end user, price sensitivity is a theoretical concern.",
   },
-  "professional-services": {
-    key: "professional-services",
-    displayName: "Professional Services & Emerging Ventures",
+  "media-platforms": {
+    key: "media-platforms",
+    displayName: "Media & Creator Platforms",
     shortDescription:
-      "Advisory firms, digital infrastructure, specialty services, and incubated ventures that we are still actively categorizing.",
+      "Editorial, civic, and creator-economy platforms whose revenue model is inseparable from their audience's worldview.",
+    thesis:
+      "Categories where the content is the product remain chronically mispriced by firms who insist on distinguishing the two.",
+  },
+  "professional-tech": {
+    key: "professional-tech",
+    displayName: "Professional Services & Technology",
+    shortDescription:
+      "Advisory firms, specialty SaaS, privacy infrastructure, and incubated ventures that we are still actively categorizing.",
     thesis:
       "Where a category cannot be named, we believe that naming it is itself the service.",
   },
 }
 
 export const verticalOrder: VerticalKey[] = [
-  "consumer-goods",
-  "hygiene",
-  "health-wellness",
-  "subscription-services",
-  "professional-services",
+  "food-beverage",
+  "consumer-household",
+  "hygiene-wellness",
+  "pets-specialty",
+  "media-platforms",
+  "professional-tech",
 ]
