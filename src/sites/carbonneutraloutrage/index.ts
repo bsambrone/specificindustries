@@ -3,6 +3,7 @@ import type { PageEntry, DynamicRoute } from "@/themes"
 import CarbonNeutralOutrageHome from "./pages/home"
 import ProgramsIndex, { metadata as programsMetadata } from "./pages/programs"
 import ProgramDetail from "./pages/program-detail"
+import AboutPage, { metadata as aboutMetadata } from "./pages/about"
 import { getProgramBySlug } from "./data/programs"
 
 export { config }
@@ -10,6 +11,7 @@ export { config }
 export const pages: Record<string, PageEntry> = {
   "": CarbonNeutralOutrageHome,
   "programs": { component: ProgramsIndex, metadata: programsMetadata },
+  "about": { component: AboutPage, metadata: aboutMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
