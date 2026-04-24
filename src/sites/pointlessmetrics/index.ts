@@ -6,6 +6,7 @@ import PointlessMetricsAbout, { metadata as aboutMetadata } from "./pages/about"
 import PointlessMetricsMethodology, { metadata as methodologyMetadata } from "./pages/methodology"
 import PointlessMetricsShop, { metadata as shopMetadata } from "./pages/shop"
 import PointlessMetricsFindings from "./pages/findings"
+import PointlessMetricsLeadership, { metadata as leadershipMetadata } from "./pages/leadership"
 import ProductDetail from "./pages/product-detail"
 import FindingDetail from "./pages/finding-detail"
 import { getProductBySlug } from "./data/products"
@@ -26,6 +27,7 @@ export const pages: Record<string, PageEntry> = {
       description: "All 24 peer-reviewed findings from the Institute for the Study of Pointless Metrics.",
     },
   },
+  "leadership": { component: PointlessMetricsLeadership, metadata: leadershipMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
