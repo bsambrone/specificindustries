@@ -51,6 +51,7 @@ import { theories, categories } from "@/sites/thetheoryisreal/data/theories"
 import { products as thetheoryisrealProducts } from "@/sites/thetheoryisreal/data/products"
 import { boards } from "@/sites/thetheoryisreal/data/forum-users"
 import { threads } from "@/sites/thetheoryisreal/data/forum"
+import { programs as carbonneutraloutragePrograms } from "@/sites/carbonneutraloutrage/data/programs"
 
 const BASE_DOMAIN = "specificindustries.com"
 const EXCLUDED_PAGES = new Set(["cart", "checkout"])
@@ -245,6 +246,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
   for (const thread of threads) {
     urls.push({ url: siteUrl("thetheoryisreal", `forum/${thread.board}/${thread.slug}`) })
+  }
+
+  // Carbon-Neutral Outrage: program detail pages at /programs/{slug}
+  for (const program of carbonneutraloutragePrograms) {
+    urls.push({ url: siteUrl("carbonneutraloutrage", `programs/${program.slug}`) })
   }
 
   return urls
