@@ -5,6 +5,7 @@ import PointlessMetricsHome from "./pages/home"
 import PointlessMetricsAbout, { metadata as aboutMetadata } from "./pages/about"
 import PointlessMetricsMethodology, { metadata as methodologyMetadata } from "./pages/methodology"
 import PointlessMetricsShop, { metadata as shopMetadata } from "./pages/shop"
+import PointlessMetricsFindings from "./pages/findings"
 import ProductDetail from "./pages/product-detail"
 import { getProductBySlug } from "./data/products"
 import { productSchema } from "@/lib/seo/schemas"
@@ -16,6 +17,13 @@ export const pages: Record<string, PageEntry> = {
   "about": { component: PointlessMetricsAbout, metadata: aboutMetadata },
   "methodology": { component: PointlessMetricsMethodology, metadata: methodologyMetadata },
   "shop": { component: PointlessMetricsShop, metadata: shopMetadata },
+  "findings": {
+    component: PointlessMetricsFindings,
+    metadata: {
+      title: "Findings Archive — ISPM",
+      description: "All 24 peer-reviewed findings from the Institute for the Study of Pointless Metrics.",
+    },
+  },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
