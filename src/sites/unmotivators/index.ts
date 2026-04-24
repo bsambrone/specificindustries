@@ -6,6 +6,7 @@ import UnmotivatorsHome from "./pages/home"
 import UnmotivatorsOffice, { metadata as officeMetadata } from "./pages/office"
 import UnmotivatorsForHome, { metadata as forHomeMetadata } from "./pages/for-home"
 import ProductDetail from "./pages/product-detail"
+import UnmotivatorsAbout, { metadata as aboutMetadata } from "./pages/about"
 
 export { config }
 
@@ -13,6 +14,7 @@ export const pages: Record<string, PageEntry> = {
   "": UnmotivatorsHome,
   "office": { component: UnmotivatorsOffice, metadata: officeMetadata },
   "home": { component: UnmotivatorsForHome, metadata: forHomeMetadata },
+  "about": { component: UnmotivatorsAbout, metadata: aboutMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
