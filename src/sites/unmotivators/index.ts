@@ -10,6 +10,9 @@ import UnmotivatorsAbout, { metadata as aboutMetadata } from "./pages/about"
 import UnmotivatorsManifesto, { metadata as manifestoMetadata } from "./pages/manifesto"
 import UnmotivatorsCart from "./pages/cart"
 import UnmotivatorsCheckout from "./pages/checkout"
+import UnmotivatorsContact, { metadata as contactMetadata } from "./pages/contact"
+import UnmotivatorsPrivacy, { metadata as privacyMetadata } from "./pages/privacy"
+import UnmotivatorsTerms, { metadata as termsMetadata } from "./pages/terms"
 
 export { config }
 
@@ -21,6 +24,9 @@ export const pages: Record<string, PageEntry> = {
   "manifesto": { component: UnmotivatorsManifesto, metadata: manifestoMetadata },
   "cart": UnmotivatorsCart,
   "checkout": UnmotivatorsCheckout,
+  "contact": { component: UnmotivatorsContact, metadata: contactMetadata },
+  "privacy": { component: UnmotivatorsPrivacy, metadata: privacyMetadata },
+  "terms": { component: UnmotivatorsTerms, metadata: termsMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
