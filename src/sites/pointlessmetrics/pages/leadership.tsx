@@ -16,7 +16,7 @@ export default function PointlessMetricsLeadership() {
         <p className="text-xs uppercase tracking-[0.2em] text-secondary mb-2">The Institute</p>
         <h1 className="font-heading text-4xl text-primary mb-2">Leadership</h1>
         <p className="text-foreground/75 max-w-3xl mb-12">
-          Four individuals, collectively responsible for the Institute's research agenda, credentialing, advisory practice, and reputation.
+          Four individuals, collectively responsible for the Institute&apos;s research agenda, credentialing, advisory practice, and reputation.
         </p>
 
         <div className="grid md:grid-cols-2 gap-10">

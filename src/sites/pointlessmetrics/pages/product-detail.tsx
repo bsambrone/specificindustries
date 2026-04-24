@@ -130,7 +130,7 @@ export default function ProductDetail({ slug }: ProductDetailProps) {
         {citedFindings.length > 0 && (
           <section className="mb-12">
             <h2 className="font-heading text-2xl text-primary mb-4">Cited Findings</h2>
-            <p className="text-sm text-foreground/70 mb-4">Peer-reviewed evidence supporting this product's operating premise.</p>
+            <p className="text-sm text-foreground/70 mb-4">Peer-reviewed evidence supporting this product&apos;s operating premise.</p>
             <div className="grid md:grid-cols-3 gap-4">
               {citedFindings.map((f) => (
                 <FindingCard key={f.slug} finding={f} />

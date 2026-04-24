@@ -21,7 +21,7 @@ export default function PointlessMetricsMethodology() {
       <div className="max-w-3xl mx-auto">
         <p className="text-xs uppercase tracking-[0.2em] text-secondary mb-2">Research Practice</p>
         <h1 className="font-heading text-4xl text-primary mb-2">Methodology</h1>
-        <p className="text-foreground/70 mb-10 italic text-sm">Version 4.2 — adopted by the Institute's internal committee on 2025-11-03.</p>
+        <p className="text-foreground/70 mb-10 italic text-sm">Version 4.2 — adopted by the Institute&apos;s internal committee on 2025-11-03.</p>
 
         <section className="mb-10">
           <h2 className="font-heading text-2xl text-primary mb-3">§1 — How We Establish Significance</h2>
@@ -36,7 +36,7 @@ export default function PointlessMetricsMethodology() {
         <section className="mb-10">
           <h2 className="font-heading text-2xl text-primary mb-3">§2 — Peer Review</h2>
           <p className="text-foreground/85 mb-3">
-            All Institute findings undergo peer review by the Institute's internal review board, which consists of the four members of the Institute's leadership. Each submission is reviewed by two of the four, selected on a rotating basis. Conflicts of interest are managed through a gentleman's agreement.
+            All Institute findings undergo peer review by the Institute&apos;s internal review board, which consists of the four members of the Institute&apos;s leadership. Each submission is reviewed by two of the four, selected on a rotating basis. Conflicts of interest are managed through a gentleman&apos;s agreement.
           </p>
           <p className="text-foreground/85">
             The Institute does not publish rejected findings. This should not be read as an implication that such findings exist.
@@ -46,7 +46,7 @@ export default function PointlessMetricsMethodology() {
         <section className="mb-10">
           <h2 className="font-heading text-2xl text-primary mb-3">§3 — Disclosure of Funding</h2>
           <p className="text-foreground/85 mb-3">
-            Every finding carries a funding disclosure of the Institute's own composition. Disclosures are reviewed for accuracy against the Institute's memory of events, which is acknowledged to be imperfect.
+            Every finding carries a funding disclosure of the Institute&apos;s own composition. Disclosures are reviewed for accuracy against the Institute&apos;s memory of events, which is acknowledged to be imperfect.
           </p>
           <p className="text-foreground/85">
             Findings funded by organizations that requested a specific outcome are flagged as such in the disclosure line, where the requested outcome is also noted.
@@ -68,7 +68,7 @@ export default function PointlessMetricsMethodology() {
         </section>
 
         <p className="text-xs text-foreground/60 italic border-t border-accent/30 pt-6">
-          This document is the Institute's position on methodology as of the version noted above. It is revised annually, or when the Institute notices it has changed its mind.
+          This document is the Institute&apos;s position on methodology as of the version noted above. It is revised annually, or when the Institute notices it has changed its mind.
         </p>
       </div>
     </main>

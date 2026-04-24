@@ -4,7 +4,6 @@ interface InstituteSealProps {
 }
 
 export function InstituteSeal({ size = 96, className }: InstituteSealProps) {
-  const r = size / 2
   return (
     <svg
       width={size}

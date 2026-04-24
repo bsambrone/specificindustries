@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * Generate all Institute for Synergy & Pointless Metrics (ISPM) images.
  *

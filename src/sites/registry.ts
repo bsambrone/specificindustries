@@ -34,7 +34,7 @@ import { config as petjacksConfig, pages as petjacksPages, dynamicRoutes as petj
 import { config as thetheoryisrealConfig, pages as thetheoryisrealPages, dynamicRoutes as thetheoryisrealDynamicRoutes } from "./thetheoryisreal"
 import { config as terrorclownConfig, pages as terrorclownPages, dynamicRoutes as terrorclownDynamicRoutes } from "./terrorclown"
 import { config as carbonneutraloutrageConfig, pages as carbonneutraloutragePages, dynamicRoutes as carbonneutraloutrageDynamicRoutes } from "./carbonneutraloutrage"
-import { config as pointlessmetricsConfig, pages as pointlessmetricsPages } from "./pointlessmetrics"
+import { config as pointlessmetricsConfig, pages as pointlessmetricsPages, dynamicRoutes as pointlessmetricsDynamicRoutes } from "./pointlessmetrics"
 import { config as unmotivatorsConfig, pages as unmotivatorsPages, dynamicRoutes as unmotivatorsDynamicRoutes } from "./unmotivators"
 
 export const siteRegistry: Record<string, SiteModule> = {
@@ -70,7 +70,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   prechewed: { config: prechewedConfig, pages: prechewedPages, dynamicRoutes: prechewedDynamicRoutes },
   chunkymilk: { config: chunkymilkConfig, pages: chunkymilkPages, dynamicRoutes: chunkymilkDynamicRoutes },
   petjacks: { config: petjacksConfig, pages: petjacksPages, dynamicRoutes: petjacksDynamicRoutes },
-  pointlessmetrics: { config: pointlessmetricsConfig, pages: pointlessmetricsPages },
+  pointlessmetrics: { config: pointlessmetricsConfig, pages: pointlessmetricsPages, dynamicRoutes: pointlessmetricsDynamicRoutes },
   thetheoryisreal: { config: thetheoryisrealConfig, pages: thetheoryisrealPages, dynamicRoutes: thetheoryisrealDynamicRoutes },
   terrorclown: { config: terrorclownConfig, pages: terrorclownPages, dynamicRoutes: terrorclownDynamicRoutes },
   carbonneutraloutrage: { config: carbonneutraloutrageConfig, pages: carbonneutraloutragePages, dynamicRoutes: carbonneutraloutrageDynamicRoutes },
