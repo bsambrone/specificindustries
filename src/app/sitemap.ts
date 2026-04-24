@@ -52,6 +52,7 @@ import { products as thetheoryisrealProducts } from "@/sites/thetheoryisreal/dat
 import { boards } from "@/sites/thetheoryisreal/data/forum-users"
 import { threads } from "@/sites/thetheoryisreal/data/forum"
 import { programs as carbonneutraloutragePrograms } from "@/sites/carbonneutraloutrage/data/programs"
+import { products as unmotivatorsProducts } from "@/sites/unmotivators/data/products"
 
 const BASE_DOMAIN = "specificindustries.com"
 const EXCLUDED_PAGES = new Set(["cart", "checkout"])
@@ -96,6 +97,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     superengineered: superengineeredProducts,
     terrorclown: terrorclownProducts,
     petjacks: petjacksProducts,
+    unmotivators: unmotivatorsProducts,
   }
 
   for (const [subdomain, products] of Object.entries(productSites)) {
