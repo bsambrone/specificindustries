@@ -5,6 +5,7 @@ import ProgramsIndex, { metadata as programsMetadata } from "./pages/programs"
 import ProgramDetail from "./pages/program-detail"
 import AboutPage, { metadata as aboutMetadata } from "./pages/about"
 import ImpactPage, { metadata as impactMetadata } from "./pages/impact"
+import TakeActionPage, { metadata as takeActionMetadata } from "./pages/take-action"
 import { getProgramBySlug } from "./data/programs"
 
 export { config }
@@ -14,6 +15,7 @@ export const pages: Record<string, PageEntry> = {
   "programs": { component: ProgramsIndex, metadata: programsMetadata },
   "about": { component: AboutPage, metadata: aboutMetadata },
   "impact": { component: ImpactPage, metadata: impactMetadata },
+  "take-action": { component: TakeActionPage, metadata: takeActionMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
