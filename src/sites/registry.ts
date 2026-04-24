@@ -74,6 +74,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   thetheoryisreal: { config: thetheoryisrealConfig, pages: thetheoryisrealPages, dynamicRoutes: thetheoryisrealDynamicRoutes },
   terrorclown: { config: terrorclownConfig, pages: terrorclownPages, dynamicRoutes: terrorclownDynamicRoutes },
   carbonneutraloutrage: { config: carbonneutraloutrageConfig, pages: carbonneutraloutragePages, dynamicRoutes: carbonneutraloutrageDynamicRoutes },
+  unmotivators: { config: unmotivatorsConfig, pages: unmotivatorsPages },
 }
 
 export type SubdomainKey = keyof typeof siteRegistry
