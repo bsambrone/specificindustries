@@ -7,6 +7,10 @@ import AboutPage, { metadata as aboutMetadata } from "./pages/about"
 import ImpactPage, { metadata as impactMetadata } from "./pages/impact"
 import TakeActionPage, { metadata as takeActionMetadata } from "./pages/take-action"
 import DonatePage, { metadata as donateMetadata } from "./pages/donate"
+import LeadershipPage, { metadata as leadershipMetadata } from "./pages/leadership"
+import ContactPage, { metadata as contactMetadata } from "./pages/contact"
+import PrivacyPage, { metadata as privacyMetadata } from "./pages/privacy"
+import TermsPage, { metadata as termsMetadata } from "./pages/terms"
 import { getProgramBySlug } from "./data/programs"
 
 export { config }
@@ -18,6 +22,10 @@ export const pages: Record<string, PageEntry> = {
   "impact": { component: ImpactPage, metadata: impactMetadata },
   "take-action": { component: TakeActionPage, metadata: takeActionMetadata },
   "donate": { component: DonatePage, metadata: donateMetadata },
+  "leadership": { component: LeadershipPage, metadata: leadershipMetadata },
+  "contact": { component: ContactPage, metadata: contactMetadata },
+  "privacy": { component: PrivacyPage, metadata: privacyMetadata },
+  "terms": { component: TermsPage, metadata: termsMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
