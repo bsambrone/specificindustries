@@ -17,7 +17,7 @@ The site adopts the institutional scaffolding of a 501(c)(3) nonprofit (mission,
 | Org name | Campaign for Sustainable Overreactions |
 | Short name | CSO |
 | Tagline | "If you must overreact, do it responsibly." |
-| `verticalKey` | `health-wellness` |
+| `verticalKey` | `hygiene-wellness` |
 | `features.commerce` | `false` (donate-only flow; no cart) |
 | OG image | `/sites/carbonneutraloutrage/hero.png` (homepage hero) |
 | Favicon | `public/sites/carbonneutraloutrage/favicon.png` (64×64) |
@@ -36,17 +36,17 @@ All required fonts are already registered in `src/themes/fonts.ts`; no new font 
 - Heading: `fraunces` — transitional serif with warmth; editorial NGO feel
 - Body: `work-sans` — clean neutral sans
 
-**Color palette (modern NGO + earthy accents):**
+**Color palette (modern NGO + earthy accents) — mapped to the 5 SiteConfig theme slots:**
 
-| Token | Value | Use |
+| `theme.colors` slot | Value | Use |
 |---|---|---|
-| Primary | `#1f4d3a` (deep evergreen) | Buttons, links, H1 accents |
-| Secondary | `#c96a47` (terracotta) | Secondary CTAs, callouts, chart highlights |
-| Background | `#f6f1e7` (recycled-paper cream) | Page background |
-| Surface | `#ffffff` | Cards, forms |
-| Muted | `#87a287` (sage) | Subtle borders, tertiary UI |
-| Text | `#2a2724` (warm charcoal) | Body text |
-| TextMuted | `#5c5751` | Captions, metadata |
+| `primary` | `#1f4d3a` (deep evergreen) | Buttons, links, H1 accents — `text-primary`, `bg-primary` |
+| `secondary` | `#c96a47` (terracotta) | Secondary CTAs, callouts, chart highlights — `bg-secondary`, `text-secondary` |
+| `accent` | `#87a287` (sage) | Subtle borders, tertiary UI, chart secondary — `border-accent`, `text-accent` |
+| `background` | `#f6f1e7` (recycled-paper cream) | Page background — `bg-background` |
+| `text` | `#2a2724` (warm charcoal) | Body text — `text-foreground` |
+
+Surface white (cards/forms) uses `bg-white` directly. Muted text uses opacity modifiers (`text-foreground/60`) per the established pattern across other sites. Charts use primary green + secondary terracotta only.
 
 **Visual motifs:**
 - Subtle recycled-paper texture on the page background (CSS-only — no image asset)
@@ -291,7 +291,7 @@ Total imagery: 16 page/hero images + 4 leader portraits + 8 program heroes = ~28
 
 These work without any apex changes once the site has the required fields:
 
-- **Apex `/portfolio` and the `health-wellness` vertical section** — picks up CSO via `verticalKey` on the registry loop
+- **Apex `/portfolio` and the `hygiene-wellness` vertical section** — picks up CSO via `verticalKey` on the registry loop
 - **Apex Leader Detail pages** — `collectLeaderHistory(personKey)` auto-adds CSO board positions for Hollis (bill), Ansel (brandon), Emmett (jim), Rory (sean) once `data/leadership.ts` exists with proper `person` fields
 - **Featured Holdings (`src/sites/apex/data/featured.ts`)** — manual editorial surface; not edited as part of this site's launch
 
