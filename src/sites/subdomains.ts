@@ -33,6 +33,7 @@ export const VALID_SUBDOMAINS = [
   "prechewed",
   "chunkymilk",
   "petjacks",
+  "pointlessmetrics",
   "thetheoryisreal",
   "terrorclown",
   "carbonneutraloutrage",
