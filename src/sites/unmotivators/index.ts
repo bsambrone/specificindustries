@@ -8,6 +8,8 @@ import UnmotivatorsForHome, { metadata as forHomeMetadata } from "./pages/for-ho
 import ProductDetail from "./pages/product-detail"
 import UnmotivatorsAbout, { metadata as aboutMetadata } from "./pages/about"
 import UnmotivatorsManifesto, { metadata as manifestoMetadata } from "./pages/manifesto"
+import UnmotivatorsCart from "./pages/cart"
+import UnmotivatorsCheckout from "./pages/checkout"
 
 export { config }
 
@@ -17,6 +19,8 @@ export const pages: Record<string, PageEntry> = {
   "home": { component: UnmotivatorsForHome, metadata: forHomeMetadata },
   "about": { component: UnmotivatorsAbout, metadata: aboutMetadata },
   "manifesto": { component: UnmotivatorsManifesto, metadata: manifestoMetadata },
+  "cart": UnmotivatorsCart,
+  "checkout": UnmotivatorsCheckout,
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
