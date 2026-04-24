@@ -7,7 +7,9 @@ import PointlessMetricsMethodology, { metadata as methodologyMetadata } from "./
 import PointlessMetricsShop, { metadata as shopMetadata } from "./pages/shop"
 import PointlessMetricsFindings from "./pages/findings"
 import ProductDetail from "./pages/product-detail"
+import FindingDetail from "./pages/finding-detail"
 import { getProductBySlug } from "./data/products"
+import { getFindingBySlug } from "./data/findings"
 import { productSchema } from "@/lib/seo/schemas"
 
 export { config }
@@ -59,5 +61,20 @@ export const dynamicRoutes: Record<string, DynamicRoute> = {
         config.name
       )
     },
+  },
+  findings: {
+    component: FindingDetail,
+    getMetadata: (slug: string) => {
+      const f = getFindingBySlug(slug)
+      return f
+        ? {
+            title: `${f.title} — ISPM Finding`,
+            description: f.claim,
+          }
+        : undefined
+    },
+    isValidSlug: (slug: string) => !!getFindingBySlug(slug),
+    getBreadcrumbLabel: (slug: string) => getFindingBySlug(slug)?.title,
+    breadcrumbSectionLabel: "Findings",
   },
 }
