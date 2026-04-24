@@ -7,6 +7,7 @@ import PointlessMetricsMethodology, { metadata as methodologyMetadata } from "./
 import PointlessMetricsShop, { metadata as shopMetadata } from "./pages/shop"
 import PointlessMetricsFindings from "./pages/findings"
 import PointlessMetricsLeadership, { metadata as leadershipMetadata } from "./pages/leadership"
+import PointlessMetricsContact, { metadata as contactMetadata } from "./pages/contact"
 import ProductDetail from "./pages/product-detail"
 import FindingDetail from "./pages/finding-detail"
 import { getProductBySlug } from "./data/products"
@@ -28,6 +29,7 @@ export const pages: Record<string, PageEntry> = {
     },
   },
   "leadership": { component: PointlessMetricsLeadership, metadata: leadershipMetadata },
+  "contact": { component: PointlessMetricsContact, metadata: contactMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
