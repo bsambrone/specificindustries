@@ -53,6 +53,8 @@ import { boards } from "@/sites/thetheoryisreal/data/forum-users"
 import { threads } from "@/sites/thetheoryisreal/data/forum"
 import { programs as carbonneutraloutragePrograms } from "@/sites/carbonneutraloutrage/data/programs"
 import { products as unmotivatorsProducts } from "@/sites/unmotivators/data/products"
+import { products as pointlessmetricsProducts } from "@/sites/pointlessmetrics/data/products"
+import { findings as pointlessmetricsFindings } from "@/sites/pointlessmetrics/data/findings"
 
 const BASE_DOMAIN = "specificindustries.com"
 const EXCLUDED_PAGES = new Set(["cart", "checkout"])
@@ -98,6 +100,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     terrorclown: terrorclownProducts,
     petjacks: petjacksProducts,
     unmotivators: unmotivatorsProducts,
+    pointlessmetrics: pointlessmetricsProducts,
   }
 
   for (const [subdomain, products] of Object.entries(productSites)) {
@@ -253,6 +256,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Carbon-Neutral Outrage: program detail pages at /programs/{slug}
   for (const program of carbonneutraloutragePrograms) {
     urls.push({ url: siteUrl("carbonneutraloutrage", `programs/${program.slug}`) })
+  }
+
+  // Pointless Metrics: finding detail pages at /findings/{slug}
+  for (const finding of pointlessmetricsFindings) {
+    urls.push({ url: siteUrl("pointlessmetrics", `findings/${finding.slug}`) })
   }
 
   return urls
