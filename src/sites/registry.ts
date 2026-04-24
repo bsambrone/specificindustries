@@ -33,6 +33,7 @@ import { config as chunkymilkConfig, pages as chunkymilkPages, dynamicRoutes as 
 import { config as petjacksConfig, pages as petjacksPages, dynamicRoutes as petjacksDynamicRoutes } from "./petjacks"
 import { config as thetheoryisrealConfig, pages as thetheoryisrealPages, dynamicRoutes as thetheoryisrealDynamicRoutes } from "./thetheoryisreal"
 import { config as terrorclownConfig, pages as terrorclownPages, dynamicRoutes as terrorclownDynamicRoutes } from "./terrorclown"
+import { config as carbonneutraloutrageConfig, pages as carbonneutraloutragePages, dynamicRoutes as carbonneutraloutrageDynamicRoutes } from "./carbonneutraloutrage"
 
 export const siteRegistry: Record<string, SiteModule> = {
   apex: { config: apexConfig, pages: apexPages, dynamicRoutes: apexDynamicRoutes },
@@ -69,6 +70,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   petjacks: { config: petjacksConfig, pages: petjacksPages, dynamicRoutes: petjacksDynamicRoutes },
   thetheoryisreal: { config: thetheoryisrealConfig, pages: thetheoryisrealPages, dynamicRoutes: thetheoryisrealDynamicRoutes },
   terrorclown: { config: terrorclownConfig, pages: terrorclownPages, dynamicRoutes: terrorclownDynamicRoutes },
+  carbonneutraloutrage: { config: carbonneutraloutrageConfig, pages: carbonneutraloutragePages, dynamicRoutes: carbonneutraloutrageDynamicRoutes },
 }
 
 export type SubdomainKey = keyof typeof siteRegistry
