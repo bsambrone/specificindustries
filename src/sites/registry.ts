@@ -37,6 +37,7 @@ import { config as carbonneutraloutrageConfig, pages as carbonneutraloutragePage
 import { config as pointlessmetricsConfig, pages as pointlessmetricsPages, dynamicRoutes as pointlessmetricsDynamicRoutes } from "./pointlessmetrics"
 import { config as unmotivatorsConfig, pages as unmotivatorsPages, dynamicRoutes as unmotivatorsDynamicRoutes } from "./unmotivators"
 import { config as boomfunConfig, pages as boomfunPages } from "./boomfun"
+import { config as citizensagainstdhmoConfig, pages as citizensagainstdhmoPages, dynamicRoutes as citizensagainstdhmoDynamicRoutes } from "./citizensagainstdhmo"
 
 export const siteRegistry: Record<string, SiteModule> = {
   apex: { config: apexConfig, pages: apexPages, dynamicRoutes: apexDynamicRoutes },
@@ -77,6 +78,7 @@ export const siteRegistry: Record<string, SiteModule> = {
   carbonneutraloutrage: { config: carbonneutraloutrageConfig, pages: carbonneutraloutragePages, dynamicRoutes: carbonneutraloutrageDynamicRoutes },
   unmotivators: { config: unmotivatorsConfig, pages: unmotivatorsPages, dynamicRoutes: unmotivatorsDynamicRoutes },
   boomfun: { config: boomfunConfig, pages: boomfunPages },
+  citizensagainstdhmo: { config: citizensagainstdhmoConfig, pages: citizensagainstdhmoPages, dynamicRoutes: citizensagainstdhmoDynamicRoutes },
 }
 
 export type SubdomainKey = keyof typeof siteRegistry
