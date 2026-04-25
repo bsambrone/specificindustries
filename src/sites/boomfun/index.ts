@@ -6,6 +6,7 @@ import BoomfunProducts, { metadata as productsMetadata } from "./pages/products"
 import BoomfunProductDetail from "./pages/product-detail"
 import BoomfunSafety, { metadata as safetyMetadata } from "./pages/safety"
 import BoomfunClub, { metadata as clubMetadata } from "./pages/club"
+import BoomfunTestimonials, { metadata as testimonialsMetadata } from "./pages/testimonials"
 
 export { config }
 
@@ -14,6 +15,7 @@ export const pages: Record<string, PageEntry> = {
   "products": { component: BoomfunProducts, metadata: productsMetadata },
   "safety": { component: BoomfunSafety, metadata: safetyMetadata },
   "club": { component: BoomfunClub, metadata: clubMetadata },
+  "testimonials": { component: BoomfunTestimonials, metadata: testimonialsMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
