@@ -52,6 +52,9 @@ import { products as thetheoryisrealProducts } from "@/sites/thetheoryisreal/dat
 import { boards } from "@/sites/thetheoryisreal/data/forum-users"
 import { threads } from "@/sites/thetheoryisreal/data/forum"
 import { programs as carbonneutraloutragePrograms } from "@/sites/carbonneutraloutrage/data/programs"
+import { threats as citizensagainstdhmoThreats } from "@/sites/citizensagainstdhmo/data/threats"
+import { stories as citizensagainstdhmoStories } from "@/sites/citizensagainstdhmo/data/stories"
+import { sources as citizensagainstdhmoSources } from "@/sites/citizensagainstdhmo/data/sources"
 import { products as unmotivatorsProducts } from "@/sites/unmotivators/data/products"
 import { products as pointlessmetricsProducts } from "@/sites/pointlessmetrics/data/products"
 import { findings as pointlessmetricsFindings } from "@/sites/pointlessmetrics/data/findings"
@@ -261,6 +264,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Pointless Metrics: finding detail pages at /findings/{slug}
   for (const finding of pointlessmetricsFindings) {
     urls.push({ url: siteUrl("pointlessmetrics", `findings/${finding.slug}`) })
+  }
+
+  // Citizens Against DHMO: threat, story, and source detail pages
+  for (const threat of citizensagainstdhmoThreats) {
+    urls.push({ url: siteUrl("citizensagainstdhmo", `threats/${threat.slug}`) })
+  }
+  for (const story of citizensagainstdhmoStories) {
+    urls.push({ url: siteUrl("citizensagainstdhmo", `stories/${story.slug}`) })
+  }
+  for (const source of citizensagainstdhmoSources) {
+    urls.push({ url: siteUrl("citizensagainstdhmo", `sources/${source.slug}`) })
   }
 
   return urls
