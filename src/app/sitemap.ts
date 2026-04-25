@@ -58,6 +58,7 @@ import { sources as citizensagainstdhmoSources } from "@/sites/citizensagainstdh
 import { products as unmotivatorsProducts } from "@/sites/unmotivators/data/products"
 import { products as pointlessmetricsProducts } from "@/sites/pointlessmetrics/data/products"
 import { findings as pointlessmetricsFindings } from "@/sites/pointlessmetrics/data/findings"
+import { products as boomfunProducts } from "@/sites/boomfun/data/products"
 
 const BASE_DOMAIN = "specificindustries.com"
 const EXCLUDED_PAGES = new Set(["cart", "checkout"])
@@ -104,6 +105,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     petjacks: petjacksProducts,
     unmotivators: unmotivatorsProducts,
     pointlessmetrics: pointlessmetricsProducts,
+    boomfun: boomfunProducts,
   }
 
   for (const [subdomain, products] of Object.entries(productSites)) {
