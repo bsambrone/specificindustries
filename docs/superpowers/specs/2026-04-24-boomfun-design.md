@@ -24,7 +24,7 @@ The site sits on the specificindustries.com platform as one more subdomain, foll
 
 - **Name:** Boom-Fun! (exclamation mark is part of the brand)
 - **Tagline:** "Real Kaboom. Real Kids. Real Fun."
-- **verticalKey:** `consumer-goods`
+- **verticalKey:** `consumer-household`
 - **Founding (fictional):** 1961, Toledo, Ohio
 
 ### Palette (Christmas Wish Book)
