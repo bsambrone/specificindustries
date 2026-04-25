@@ -23,12 +23,12 @@ export const milestones: TimelineMilestone[] = [
   {
     year: "2022",
     title: "DHMO Exposure Index v1 published",
-    body: "Chief Science Officer Isadora Fenwick publishes the first version of the DHMO Exposure Index, a standardized measurement methodology that allows chapters to quantify and compare local exposure regimes.",
+    body: "Chief Science Officer Lachlan Whitford publishes the first version of the DHMO Exposure Index, a standardized measurement methodology that allows chapters to quantify and compare local exposure regimes.",
   },
   {
     year: "2023",
     title: "First litigation win",
-    body: "General Counsel Celeste Arvelo successfully litigates the disclosure of municipal DHMO usage records in three western states. The records are made public and used to inform subsequent chapter campaigns.",
+    body: "Pro bono legal counsel coordinated by the movement successfully litigates the disclosure of municipal DHMO usage records in three western states. The records are made public and used to inform subsequent chapter campaigns.",
   },
   {
     year: "2024",

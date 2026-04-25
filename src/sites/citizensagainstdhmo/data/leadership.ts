@@ -6,7 +6,7 @@ export interface Leader {
   highlights: { label: string; value: string }[]
   quote: string
   portraitImage: string
-  person: "bill" | "brandon" | "jim" | "sean" | null  // null = no base image, generic portrait
+  person: "bill" | "brandon" | "jim" | "sean"
 }
 
 export const leaders: Leader[] = [
@@ -27,20 +27,20 @@ export const leaders: Leader[] = [
     person: "bill",
   },
   {
-    slug: "isadora-fenwick",
-    name: "Isadora Fenwick",
+    slug: "lachlan-whitford",
+    name: "Lachlan Whitford",
     title: "Chief Science Officer",
-    bio: "Isadora directs the movement's research program and serves as principal author of our annual State of DHMO Disclosure report, now in its fourth edition. A trained environmental chemist with prior experience at two regional public-health authorities, she developed the DHMO Exposure Index methodology used by chapter leaders nationwide. Isadora's published work spans peer-reviewed and citizen-science publications and is frequently cited in disclosure litigation.",
+    bio: "Lachlan directs the movement's research program and serves as principal author of our annual State of DHMO Disclosure report, now in its fourth edition. A trained environmental chemist with prior experience at two regional public-health authorities, he developed the DHMO Exposure Index methodology used by chapter leaders nationwide. Lachlan's published work spans peer-reviewed and citizen-science publications and is frequently cited in disclosure litigation.",
     highlights: [
       { label: "Years in environmental chemistry", value: "16" },
       { label: "Methodology version (DHMO Exposure Index)", value: "v3.1" },
       { label: "Reports authored for the movement", value: "9" },
-      { label: "Litigation citations of her published work", value: "23" },
+      { label: "Litigation citations of his published work", value: "23" },
       { label: "Public symposia delivered, 2025", value: "14" },
     ],
     quote: "If we cannot measure the exposure, we cannot manage the risk. The first job of this organization is to make the measurement possible.",
-    portraitImage: "/sites/citizensagainstdhmo/leaders/isadora-fenwick.png",
-    person: null,
+    portraitImage: "/sites/citizensagainstdhmo/leaders/lachlan-whitford.png",
+    person: "sean",
   },
   {
     slug: "darius-thornquist",
@@ -59,22 +59,6 @@ export const leaders: Leader[] = [
     person: "brandon",
   },
   {
-    slug: "marigold-easton",
-    name: "Marigold Easton",
-    title: "Head of Petition Strategy",
-    bio: "Marigold runs all national petition campaigns, regulatory filings, and federal-agency engagement work. She brings 14 years of experience from environmental and consumer-protection litigation, where she co-led several precedent-setting disclosure cases. Under her leadership, the movement has filed 312 public-records requests in 2025 alone and currently has nine active petitions before federal regulators.",
-    highlights: [
-      { label: "Years in regulatory advocacy", value: "14" },
-      { label: "Active federal petitions, end of 2025", value: "9" },
-      { label: "FOIA requests filed in 2025", value: "312" },
-      { label: "Successful disclosure orders, lifetime", value: "41" },
-      { label: "Hours of regulatory testimony, 2025", value: "62" },
-    ],
-    quote: "The agencies do not move on their own. They move when citizens insist. Our job is to keep insisting until the records come out.",
-    portraitImage: "/sites/citizensagainstdhmo/leaders/marigold-easton.png",
-    person: null,
-  },
-  {
     slug: "everett-kingsford",
     name: "Everett Kingsford",
     title: "Director of Survivor Advocacy",
@@ -89,22 +73,6 @@ export const leaders: Leader[] = [
     quote: "Coming to terms with this exposure is its own kind of work. We meet members wherever they are. The story is theirs to tell.",
     portraitImage: "/sites/citizensagainstdhmo/leaders/everett-kingsford.png",
     person: "jim",
-  },
-  {
-    slug: "celeste-arvelo",
-    name: "Celeste Arvelo",
-    title: "General Counsel",
-    bio: "Celeste leads the movement's legal program, including organizational compliance, FOIA litigation, chapter-level legal support, and the defense of disclosure-rights cases. A 17-year veteran of public-interest law, she previously served as a senior attorney at a state attorney general's office and currently sits on the boards of two national disclosure-rights organizations.",
-    highlights: [
-      { label: "Years in public-interest law", value: "17" },
-      { label: "Active legal matters managed", value: "29" },
-      { label: "Successful FOIA suits, lifetime", value: "62" },
-      { label: "Boards served (concurrent)", value: "2" },
-      { label: "Pro bono attorneys coordinated", value: "140+" },
-    ],
-    quote: "The law is on our side. The agencies forget. We remind them, in writing, in court, and in the Federal Register.",
-    portraitImage: "/sites/citizensagainstdhmo/leaders/celeste-arvelo.png",
-    person: null,
   },
 ]
 

@@ -104,20 +104,14 @@ async function main() {
   )
 
   console.log("LEADERS")
-  const leaderPrompts: { filename: string; prompt: string; person: string | null }[] = [
+  const leaderPrompts: { filename: string; prompt: string; person: string }[] = [
     { filename: "callum-rutherford.png", person: "bill", prompt: "Professional headshot in the style of an NGO leadership website. The man wears a navy blazer over an open-collar dress shirt. Soft photographic studio lighting, plain warm-grey background, slight smile, confident composure. Sharp focus on eyes. Editorial-corporate framing." },
-    { filename: "isadora-fenwick.png", person: null, prompt: "Professional editorial headshot of a 40-something woman with chin-length silver-streaked dark hair, wearing wire-frame glasses and a charcoal blazer over a white blouse. Soft studio lighting, plain warm-grey background, calm scientific composure. Editorial nonprofit-bio style. Sharp focus on eyes. Photorealistic." },
+    { filename: "lachlan-whitford.png", person: "sean", prompt: "Professional headshot in the style of an NGO research-leadership website. The man wears a charcoal blazer over a soft-grey button-down shirt. Soft photographic studio lighting, plain warm-grey background, calm and scientific composure. Sharp focus on eyes. Editorial-academic framing." },
     { filename: "darius-thornquist.png", person: "brandon", prompt: "Professional headshot in the style of an NGO leadership website. The man wears a tailored grey blazer over a soft-blue chambray shirt. Soft photographic studio lighting, plain warm-grey background, friendly confident expression. Sharp focus on eyes. Editorial-corporate framing." },
-    { filename: "marigold-easton.png", person: null, prompt: "Professional editorial headshot of a mid-50s woman with short auburn hair, wearing a deep-burgundy blazer over a cream blouse. Soft studio lighting, plain warm-grey background, composed and direct expression. Editorial nonprofit-bio style. Sharp focus on eyes. Photorealistic." },
     { filename: "everett-kingsford.png", person: "jim", prompt: "Professional headshot in the style of an NGO leadership website. The man wears a soft heather-green sweater over a button-down shirt. Soft photographic studio lighting, plain warm-grey background, warm and approachable expression. Sharp focus on eyes. Editorial-nonprofit framing." },
-    { filename: "celeste-arvelo.png", person: null, prompt: "Professional editorial headshot of a 40-something Latina woman with dark hair pulled back, wearing a navy blazer over a crisp white shirt. Soft studio lighting, plain warm-grey background, calm and authoritative expression. Editorial nonprofit-bio style. Sharp focus on eyes. Photorealistic." },
   ]
   for (const { filename, prompt, person } of leaderPrompts) {
-    if (person) {
-      await generateImageWithPerson(filename, prompt, person, "1024x1024", LEADERS_DIR)
-    } else {
-      await generateImage(filename, prompt, "1024x1024", LEADERS_DIR)
-    }
+    await generateImageWithPerson(filename, prompt, person, "1024x1024", LEADERS_DIR)
   }
 
   console.log("THREATS")
