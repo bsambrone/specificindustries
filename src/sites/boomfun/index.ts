@@ -4,12 +4,14 @@ import { getProductBySlug } from "./data/products"
 import BoomfunHome from "./pages/home"
 import BoomfunProducts, { metadata as productsMetadata } from "./pages/products"
 import BoomfunProductDetail from "./pages/product-detail"
+import BoomfunSafety, { metadata as safetyMetadata } from "./pages/safety"
 
 export { config }
 
 export const pages: Record<string, PageEntry> = {
   "": BoomfunHome,
   "products": { component: BoomfunProducts, metadata: productsMetadata },
+  "safety": { component: BoomfunSafety, metadata: safetyMetadata },
 }
 
 export const dynamicRoutes: Record<string, DynamicRoute> = {
